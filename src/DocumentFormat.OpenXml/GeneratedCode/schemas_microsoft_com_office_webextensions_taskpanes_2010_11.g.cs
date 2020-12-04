@@ -26,6 +26,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     ///   <item><description>WebExtensionTaskpane &lt;wetp:taskpane></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(70, "taskpanes")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Taskpanes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -111,6 +114,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:webextensionref.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(70, "webextensionref")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionPartReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -161,6 +167,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(70, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -228,6 +237,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>OfficeArtExtensionList &lt;wetp:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(70, "taskpane")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     {
         /// <summary>

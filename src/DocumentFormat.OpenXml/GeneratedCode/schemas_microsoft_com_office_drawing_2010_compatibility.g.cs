@@ -18,6 +18,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is com14:compatSp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(63, "compatSp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CompatibilityShape : OpenXmlLeafElement
     {
         /// <summary>

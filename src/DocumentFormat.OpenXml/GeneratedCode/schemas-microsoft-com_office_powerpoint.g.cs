@@ -17,6 +17,9 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pvml:iscomment.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(30, "iscomment")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InkAnnotationFlag : OpenXmlLeafElement
     {
         /// <summary>
@@ -41,6 +44,9 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pvml:textdata.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(30, "textdata")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextData : OpenXmlLeafElement
     {
         /// <summary>

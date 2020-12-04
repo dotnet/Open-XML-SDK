@@ -19,6 +19,9 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15ac:absPath.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(74, "absPath")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AbsolutePath : OpenXmlLeafElement
     {
         /// <summary>

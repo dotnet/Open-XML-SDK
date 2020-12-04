@@ -33,6 +33,9 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     ///   <item><description>DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(15, "lockedCanvas")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LockedCanvas : OpenXmlCompositeElement
     {
         /// <summary>

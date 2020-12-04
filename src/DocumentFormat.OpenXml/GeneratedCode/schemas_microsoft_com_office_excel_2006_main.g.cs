@@ -50,6 +50,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(32, "macrosheet")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Macrosheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -245,6 +248,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description>ColumnSortMap &lt;xne:colSortMap></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(32, "worksheetSortMap")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WorksheetSortMap : OpenXmlPartRootElement
     {
         /// <summary>
@@ -357,6 +363,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:sqref.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(32, "sqref")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ReferenceSequence : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -396,6 +405,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:f.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(32, "f")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Formula : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -440,6 +452,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description>RowSortMapItem &lt;xne:row></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(32, "rowSortMap")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowSortMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -528,6 +543,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
     ///   <item><description>ColumnSortMapItem &lt;xne:col></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(32, "colSortMap")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnSortMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -610,6 +628,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:row.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(32, "row")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowSortMapItem : SortMapItemType
     {
         /// <summary>
@@ -634,6 +655,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:col.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(32, "col")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnSortMapItem : SortMapItemType
     {
         /// <summary>
@@ -658,6 +682,9 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(32, null)]
+#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class SortMapItemType : OpenXmlLeafElement
     {
         /// <summary>

@@ -28,6 +28,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description>RevExHeader &lt;xr:hdr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "revHdrs")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExHeaders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -158,6 +161,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>RevGroup &lt;xr:xrrg></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "revStream")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExStream : OpenXmlCompositeElement
     {
         /// <summary>
@@ -250,6 +256,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "dxf")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DifferentialFormatType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -407,6 +416,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:revisionPtr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "revisionPtr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevisionPtr : OpenXmlLeafElement
     {
         /// <summary>
@@ -472,6 +484,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>pivotTableDefinition &lt;xr:pivotTableDefinition></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "objectState")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StateBasedObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -614,6 +629,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hdr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "hdr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExHeader : OpenXmlLeafElement
     {
         /// <summary>
@@ -699,6 +717,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>RevExTest &lt;xr:xrrtest></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrftr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExFuture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -834,6 +855,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrUspt.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrUspt")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExUnsupported : OpenXmlLeafElement
     {
         /// <summary>
@@ -929,6 +953,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrTrim.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrTrim")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExTrimmed : OpenXmlLeafElement
     {
         /// <summary>
@@ -1024,6 +1051,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrrc.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrrc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExRowColumn : OpenXmlLeafElement
     {
         /// <summary>
@@ -1158,6 +1188,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrm.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrm")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExMove : OpenXmlLeafElement
     {
         /// <summary>
@@ -1302,6 +1335,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description>ChangeCellSubEdit &lt;xr:ccse></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExChangeCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1496,6 +1532,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ExtensionList &lt;xr:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrf")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1815,6 +1854,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description>ExtensionList &lt;xr:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrDefName")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExDefinedName : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2097,6 +2139,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>StateBasedHeader &lt;xr:hdr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrdo")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExDelObj : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2242,6 +2287,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description>RevisionState &lt;xr:body></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrco")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExChgObj : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2386,6 +2434,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrSheet.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrSheet")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExSheetOp : OpenXmlLeafElement
     {
         /// <summary>
@@ -2528,6 +2579,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrList.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrList")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevisionList : OpenXmlLeafElement
     {
         /// <summary>
@@ -2717,6 +2771,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrListExpR.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrListExpR")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevListAutoExpandRw : OpenXmlLeafElement
     {
         /// <summary>
@@ -2859,6 +2916,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description>RevListAutoExpandRw &lt;xr:xrrListExpR></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrg")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3007,6 +3067,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrtest.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "xrrtest")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevExTest : OpenXmlLeafElement
     {
         /// <summary>
@@ -3040,6 +3103,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description>RstType &lt;xr:is></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "c")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3188,6 +3254,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description>RevCell &lt;xr:c></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "ccse")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3296,6 +3365,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Extension &lt;x:ext></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3356,6 +3428,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:formula.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "formula")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FormulaFormula : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3394,6 +3469,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:f.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "f")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FFormula : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3438,6 +3516,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>RefMap &lt;xr:refmap></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "hdr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StateBasedHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3568,6 +3649,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:link.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "link")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevisionStateLink : OpenXmlLeafElement
     {
         /// <summary>
@@ -3621,6 +3705,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>Outlines &lt;xr:outlines></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "body")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RevisionState : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3758,6 +3845,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>RefTest &lt;xr:test></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "refmap")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RefMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3820,6 +3910,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:rowColVisualOps.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "rowColVisualOps")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowColVisualOps : OpenXmlLeafElement
     {
         /// <summary>
@@ -3896,6 +3989,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hideUnhideSheet.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "hideUnhideSheet")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideUnhideSheet : OpenXmlLeafElement
     {
         /// <summary>
@@ -3936,6 +4032,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:showGridlinesHeadings.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "showGridlinesHeadings")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowGridlinesHeadings : OpenXmlLeafElement
     {
         /// <summary>
@@ -3990,6 +4089,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:freezePanes.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "freezePanes")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FreezePanes : OpenXmlLeafElement
     {
         /// <summary>
@@ -4036,6 +4138,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description>Outline &lt;xr:outline></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "outlines")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Outlines : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4105,6 +4210,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:outline.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "outline")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Outline : OpenXmlLeafElement
     {
         /// <summary>
@@ -4159,6 +4267,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:v.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "v")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Xstring : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -4206,6 +4317,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties &lt;x:phoneticPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "is")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RstType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4279,6 +4393,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:ref.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "ref")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RefCell : OpenXmlLeafElement
     {
         /// <summary>
@@ -4397,6 +4514,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:sheetUid.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "sheetUid")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SheetXluid : OpenXmlLeafElement
     {
         /// <summary>
@@ -4488,6 +4608,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:oartAnchor.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "oartAnchor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RefOartAnchor : OpenXmlLeafElement
     {
         /// <summary>
@@ -4701,6 +4824,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:future.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "future")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RefFuture : OpenXmlLeafElement
     {
         /// <summary>
@@ -4726,6 +4852,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:test.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "test")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RefTest : OpenXmlLeafElement
     {
         /// <summary>
@@ -4810,6 +4939,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.Formula2 &lt;x:formula2></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "dataValidation")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataValidation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5054,6 +5186,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hyperlink.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "hyperlink")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Hyperlink : OpenXmlLeafElement
     {
         /// <summary>
@@ -5156,6 +5291,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Sparklines &lt;x14:sparklines></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "sparklineGroup")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SparklineGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5554,6 +5692,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "comments")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Comments : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5659,6 +5800,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.ExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "autoFilter")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AutoFilter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5751,6 +5895,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList &lt;x:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(83, "pivotTableDefinition")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class pivotTableDefinition : OpenXmlCompositeElement
     {
         /// <summary>

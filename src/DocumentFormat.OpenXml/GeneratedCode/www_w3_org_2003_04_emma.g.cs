@@ -19,6 +19,9 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:derived-from.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "derived-from")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DerivedFrom : OpenXmlLeafElement
     {
         /// <summary>
@@ -70,6 +73,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:info.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "info")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Info : OpenXmlCompositeElement
     {
         /// <summary>
@@ -144,6 +150,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>Node &lt;emma:node></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "lattice")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Lattice : OpenXmlCompositeElement
     {
         /// <summary>
@@ -257,6 +266,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:literal.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "literal")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Literal : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -304,6 +316,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Ink.ContextNode &lt;msink:context></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "interpretation")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Interpretation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -753,6 +768,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>Sequence &lt;emma:sequence></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "one-of")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OneOf : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1187,6 +1205,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>Sequence &lt;emma:sequence></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "group")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1610,6 +1631,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>Sequence &lt;emma:sequence></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "sequence")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Sequence : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2020,6 +2044,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:group-info.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "group-info")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2096,6 +2123,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>Group &lt;emma:group></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "derivation")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Derivation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2155,6 +2185,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:grammar.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "grammar")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Grammar : OpenXmlLeafElement
     {
         /// <summary>
@@ -2210,6 +2243,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:model.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "model")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Model : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2298,6 +2334,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>EndPoint &lt;emma:endpoint></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "endpoint-info")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EndPointInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2367,6 +2406,9 @@ aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), I
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:endpoint.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "endpoint")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EndPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2581,6 +2623,9 @@ aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), I
     ///   <item><description>Info &lt;emma:info></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "node")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Node : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2690,6 +2735,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>Info &lt;emma:info></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "arc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Arc : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2934,6 +2982,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>Sequence &lt;emma:sequence></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(44, "emma")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Emma : OpenXmlCompositeElement
     {
         /// <summary>

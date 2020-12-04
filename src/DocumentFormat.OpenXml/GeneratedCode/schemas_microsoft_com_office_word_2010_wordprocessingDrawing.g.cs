@@ -18,6 +18,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctPosHOffset.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(51, "pctPosHOffset")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -57,6 +60,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctPosVOffset.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(51, "pctPosVOffset")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -102,6 +108,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     ///   <item><description>PercentageWidth &lt;wp14:pctWidth></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(51, "sizeRelH")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RelativeWidth : OpenXmlCompositeElement
     {
         /// <summary>
@@ -191,6 +200,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>PercentageHeight &lt;wp14:pctHeight></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(51, "sizeRelV")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RelativeHeight : OpenXmlCompositeElement
     {
         /// <summary>
@@ -274,6 +286,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctWidth.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(51, "pctWidth")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PercentageWidth : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -313,6 +328,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctHeight.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(51, "pctHeight")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PercentageHeight : OpenXmlLeafTextElement
     {
         /// <summary>

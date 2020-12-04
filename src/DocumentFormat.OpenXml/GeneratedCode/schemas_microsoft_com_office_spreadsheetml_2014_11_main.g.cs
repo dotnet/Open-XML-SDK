@@ -24,6 +24,9 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     ///   <item><description>ModelTimeGrouping &lt;x16:modelTimeGrouping></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(84, "modelTimeGroupings")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ModelTimeGroupings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -84,6 +87,9 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     ///   <item><description>CalculatedTimeColumn &lt;x16:calculatedTimeColumn></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(84, "modelTimeGrouping")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ModelTimeGrouping : OpenXmlCompositeElement
     {
         /// <summary>
@@ -181,6 +187,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x16:calculatedTimeColumn.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(84, "calculatedTimeColumn")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CalculatedTimeColumn : OpenXmlLeafElement
     {
         /// <summary>

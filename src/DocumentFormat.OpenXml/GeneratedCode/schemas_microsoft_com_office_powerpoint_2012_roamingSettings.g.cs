@@ -17,6 +17,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pRoam:key.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(76, "key")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Key : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -55,6 +58,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pRoam:value.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(76, "value")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Value : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -100,6 +106,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     ///   <item><description>Value &lt;pRoam:value></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(76, "props")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RoamingProperty : OpenXmlCompositeElement
     {
         /// <summary>

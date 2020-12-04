@@ -25,6 +25,9 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     ///   <item><description>OfficeArtExtensionList &lt;thm15:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(73, "themeFamily")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThemeFamily : OpenXmlCompositeElement
     {
         /// <summary>
@@ -144,6 +147,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(73, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -210,6 +216,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     ///   <item><description>OfficeArtExtensionList &lt;thm15:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(73, "themeVariant")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThemeVariant : OpenXmlCompositeElement
     {
         /// <summary>
@@ -360,6 +369,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ThemeVariant &lt;thm15:themeVariant></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(73, "themeVariantLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThemeVariantList : OpenXmlCompositeElement
     {
         /// <summary>

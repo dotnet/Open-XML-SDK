@@ -30,6 +30,9 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description>TraceView &lt;inkml:traceView></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "ink")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Ink : OpenXmlPartRootElement
     {
         /// <summary>
@@ -110,6 +113,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:bind.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "bind")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Bind : OpenXmlLeafElement
     {
         /// <summary>
@@ -179,6 +185,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:table.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "table")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Table : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -253,6 +262,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:matrix.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "matrix")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Matrix : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -314,6 +326,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>Mapping &lt;inkml:mapping></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "mapping")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Mapping : OpenXmlCompositeElement
     {
         /// <summary>
@@ -428,6 +443,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>Mapping &lt;inkml:mapping></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "channel")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Channel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -625,6 +643,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>Channel &lt;inkml:channel></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "intermittentChannels")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class IntermittentChannels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -678,6 +699,9 @@ union.AddValidator(StringValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:channelProperty.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "channelProperty")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChannelProperty : OpenXmlLeafElement
     {
         /// <summary>
@@ -790,6 +814,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>IntermittentChannels &lt;inkml:intermittentChannels></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "traceFormat")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TraceFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -860,6 +887,9 @@ union.AddValidator(StringValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:sampleRate.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "sampleRate")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SampleRate : OpenXmlLeafElement
     {
         /// <summary>
@@ -910,6 +940,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:latency.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "latency")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Latency : OpenXmlLeafElement
     {
         /// <summary>
@@ -949,6 +982,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:activeArea.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "activeArea")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ActiveArea : OpenXmlLeafElement
     {
         /// <summary>
@@ -1035,6 +1071,9 @@ union.AddValidator(StringValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:srcProperty.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "srcProperty")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SourceProperty : OpenXmlLeafElement
     {
         /// <summary>
@@ -1122,6 +1161,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>ChannelProperty &lt;inkml:channelProperty></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "channelProperties")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChannelProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1175,6 +1217,9 @@ union.AddValidator(StringValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:annotation.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "annotation")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Annotation : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1241,6 +1286,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.EMMA.Emma &lt;emma:emma></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "annotationXML")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AnnotationXml : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1351,6 +1399,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>AnnotationXml &lt;inkml:annotationXML></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "brushProperty")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BrushProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1482,6 +1533,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>TraceFormat &lt;inkml:traceFormat></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "canvas")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Canvas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1583,6 +1637,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>Mapping &lt;inkml:mapping></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "canvasTransform")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CanvasTransform : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1673,6 +1730,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>ChannelProperties &lt;inkml:channelProperties></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "inkSource")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InkSource : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1872,6 +1932,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>BrushProperty &lt;inkml:brushProperty></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "brush")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Brush : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1958,6 +2021,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:timestamp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "timestamp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Timestamp : OpenXmlLeafElement
     {
         /// <summary>
@@ -2047,6 +2113,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:trace.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "trace")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Trace : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2194,6 +2263,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>TraceGroup &lt;inkml:traceGroup></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "traceGroup")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TraceGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2304,6 +2376,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>TraceView &lt;inkml:traceView></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "traceView")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TraceView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2437,6 +2512,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>Timestamp &lt;inkml:timestamp></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "context")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Context : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2707,6 +2785,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>TraceView &lt;inkml:traceView></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "definitions")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Definitions : OpenXmlCompositeElement
     {
         /// <summary>

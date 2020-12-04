@@ -30,6 +30,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description>DropZonesVisible &lt;c14:dropZonesVisible></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, "pivotOptions")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -164,6 +167,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description>ShowSketchButton &lt;c14:showSketchBtn></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, "sketchOptions")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SketchOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -252,6 +258,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description>ShapeProperties &lt;c14:spPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, "invertSolidFillFmt")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -319,6 +328,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:style.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, "style")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Style : OpenXmlLeafElement
     {
         /// <summary>
@@ -380,6 +392,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusiv
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, "spPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -508,6 +523,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneFilter.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, "dropZoneFilter")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZoneFilter : BooleanFalseType
     {
         /// <summary>
@@ -533,6 +551,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneCategories.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, "dropZoneCategories")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZoneCategories : BooleanFalseType
     {
         /// <summary>
@@ -558,6 +579,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneData.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, "dropZoneData")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZoneData : BooleanFalseType
     {
         /// <summary>
@@ -583,6 +607,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneSeries.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, "dropZoneSeries")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZoneSeries : BooleanFalseType
     {
         /// <summary>
@@ -608,6 +635,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZonesVisible.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, "dropZonesVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropZonesVisible : BooleanFalseType
     {
         /// <summary>
@@ -633,6 +663,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:inSketchMode.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, "inSketchMode")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InSketchMode : BooleanFalseType
     {
         /// <summary>
@@ -658,6 +691,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, null)]
+#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class BooleanFalseType : OpenXmlLeafElement
     {
         /// <summary>
@@ -690,6 +726,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:showSketchBtn.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(46, "showSketchBtn")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowSketchButton : OpenXmlLeafElement
     {
         /// <summary>

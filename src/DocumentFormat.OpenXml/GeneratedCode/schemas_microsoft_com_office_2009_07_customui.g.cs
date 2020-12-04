@@ -18,6 +18,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:control.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "control")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ControlCloneRegular : OpenXmlLeafElement
     {
         /// <summary>
@@ -396,6 +399,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "button")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ButtonRegular : OpenXmlLeafElement
     {
         /// <summary>
@@ -831,6 +837,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:checkBox.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "checkBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CheckBox : OpenXmlLeafElement
     {
         /// <summary>
@@ -1194,6 +1203,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ButtonRegular &lt;mso14:button></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "gallery")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GalleryRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1919,6 +1931,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "toggleButton")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ToggleButtonRegular : OpenXmlLeafElement
     {
         /// <summary>
@@ -2367,6 +2382,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menuSeparator.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "menuSeparator")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MenuSeparator : OpenXmlLeafElement
     {
         /// <summary>
@@ -2527,6 +2545,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>MenuRegular &lt;mso14:menu></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "splitButton")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SplitButtonRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2821,6 +2842,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>DynamicMenuRegular &lt;mso14:dynamicMenu></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "menu")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MenuRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3315,6 +3339,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:dynamicMenu.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "dynamicMenu")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DynamicMenuRegular : OpenXmlLeafElement
     {
         /// <summary>
@@ -3769,6 +3796,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>MenuWithTitle &lt;mso14:menu></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "splitButton")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4063,6 +4093,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>DynamicMenuRegular &lt;mso14:dynamicMenu></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "menu")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MenuWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4557,6 +4590,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menuSeparator.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "menuSeparator")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     {
         /// <summary>
@@ -4681,6 +4717,9 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:control.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "control")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ControlClone : OpenXmlLeafElement
     {
         /// <summary>
@@ -5113,6 +5152,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:labelControl.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "labelControl")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LabelControl : OpenXmlLeafElement
     {
         /// <summary>
@@ -5410,6 +5452,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "button")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Button : OpenXmlLeafElement
     {
         /// <summary>
@@ -5870,6 +5915,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "toggleButton")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ToggleButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -6343,6 +6391,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:editBox.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "editBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EditBox : OpenXmlLeafElement
     {
         /// <summary>
@@ -6797,6 +6848,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>Item &lt;mso14:item></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "comboBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ComboBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7390,6 +7444,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ButtonRegular &lt;mso14:button></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "dropDown")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropDownRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7985,6 +8042,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ButtonRegular &lt;mso14:button></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "gallery")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Gallery : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8752,6 +8812,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>DynamicMenuRegular &lt;mso14:dynamicMenu></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "menu")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Menu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9274,6 +9337,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:dynamicMenu.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "dynamicMenu")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DynamicMenu : OpenXmlLeafElement
     {
         /// <summary>
@@ -9753,6 +9819,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>MenuRegular &lt;mso14:menu></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "splitButton")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SplitButton : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10080,6 +10149,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ButtonGroup &lt;mso14:buttonGroup></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "box")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Box : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10311,6 +10383,9 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
     ///   <item><description>Separator &lt;mso14:separator></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "buttonGroup")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ButtonGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10506,6 +10581,9 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "button")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageMenuButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -10775,6 +10853,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:checkBox.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "checkBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     {
         /// <summary>
@@ -11011,6 +11092,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>BackstageMenuGroup &lt;mso14:menuGroup></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "menu")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageSubMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11290,6 +11374,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "toggleButton")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -11562,6 +11649,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "button")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageGroupButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -11881,6 +11971,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:checkBox.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "checkBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageCheckBox : OpenXmlLeafElement
     {
         /// <summary>
@@ -12178,6 +12271,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:editBox.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "editBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageEditBox : OpenXmlLeafElement
     {
         /// <summary>
@@ -12436,6 +12532,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ItemBackstageItem &lt;mso14:item></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "dropDown")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageDropDown : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12807,6 +12906,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>RadioButtonBackstageItem &lt;mso14:radioButton></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "radioGroup")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RadioGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13108,6 +13210,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ItemBackstageItem &lt;mso14:item></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "comboBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageComboBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13417,6 +13522,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:hyperlink.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "hyperlink")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Hyperlink : OpenXmlLeafElement
     {
         /// <summary>
@@ -13753,6 +13861,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:labelControl.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "labelControl")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageLabelControl : OpenXmlLeafElement
     {
         /// <summary>
@@ -13948,6 +14059,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ImageControl &lt;mso14:imageControl></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "groupBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14126,6 +14240,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ImageControl &lt;mso14:imageControl></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "layoutContainer")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LayoutContainer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14282,6 +14399,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:imageControl.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "imageControl")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ImageControl : OpenXmlLeafElement
     {
         /// <summary>
@@ -14478,6 +14598,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>BottomItemsGroupControls &lt;mso14:bottomItems></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "group")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14789,6 +14912,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>TaskGroupCategory &lt;mso14:category></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "taskGroup")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15087,6 +15213,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>DynamicMenuRegular &lt;mso14:dynamicMenu></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "menu")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MenuRoot : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15221,6 +15350,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ContextMenus &lt;mso14:contextMenus></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "customUI")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomUI : OpenXmlPartRootElement
     {
         /// <summary>
@@ -15393,6 +15525,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:item.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "item")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Item : OpenXmlLeafElement
     {
         /// <summary>
@@ -15503,6 +15638,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "button")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VisibleButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -15912,6 +16050,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "toggleButton")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VisibleToggleButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -16335,6 +16476,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:separator.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "separator")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Separator : OpenXmlLeafElement
     {
         /// <summary>
@@ -16490,6 +16634,9 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
     ///   <item><description>ButtonRegular &lt;mso14:button></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "dialogBoxLauncher")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DialogBoxLauncher : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16578,6 +16725,9 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
     ///   <item><description>DialogBoxLauncher &lt;mso14:dialogBoxLauncher></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "group")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16988,6 +17138,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:control.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "control")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ControlCloneQat : OpenXmlLeafElement
     {
         /// <summary>
@@ -17428,6 +17581,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>Separator &lt;mso14:separator></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "sharedControls")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SharedControlsQatItems : QatItemsType
     {
         /// <summary>
@@ -17494,6 +17650,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>Separator &lt;mso14:separator></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "documentControls")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocumentControlsQatItems : QatItemsType
     {
         /// <summary>
@@ -17560,6 +17719,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>Separator &lt;mso14:separator></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, null)]
+#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class QatItemsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17613,6 +17775,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>Group &lt;mso14:group></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "tab")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Tab : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17870,6 +18035,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>Tab &lt;mso14:tab></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "tabSet")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TabSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17965,6 +18133,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:command.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "command")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Command : OpenXmlLeafElement
     {
         /// <summary>
@@ -18051,6 +18222,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     ///   <item><description>DocumentControlsQatItems &lt;mso14:documentControls></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "qat")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class QuickAccessToolbar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18139,6 +18313,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     ///   <item><description>Tab &lt;mso14:tab></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "tabs")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Tabs : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18199,6 +18376,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     ///   <item><description>TabSet &lt;mso14:tabSet></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "contextualTabs")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContextualTabs : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18267,6 +18447,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     ///   <item><description>MenuSeparatorNoTitle &lt;mso14:menuSeparator></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "contextMenu")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContextMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18361,6 +18544,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:item.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "item")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ItemBackstageItem : BackstageItemType
     {
         /// <summary>
@@ -18386,6 +18572,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:radioButton.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "radioButton")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RadioButtonBackstageItem : BackstageItemType
     {
         /// <summary>
@@ -18411,6 +18600,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, null)]
+#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class BackstageItemType : OpenXmlLeafElement
     {
         /// <summary>
@@ -18474,6 +18666,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "button")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageRegularButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -18777,6 +18972,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>BackstageMenuGroup &lt;mso14:menuGroup></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "menu")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19093,6 +19291,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>BackstageMenuToggleButton &lt;mso14:toggleButton></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "menuGroup")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageMenuGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19251,6 +19452,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>BackstagePrimaryMenu &lt;mso14:menu></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "primaryItem")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PrimaryItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19349,6 +19553,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ImageControl &lt;mso14:imageControl></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "topItems")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TopItemsGroupControls : GroupControlsType
     {
         /// <summary>
@@ -19434,6 +19641,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ImageControl &lt;mso14:imageControl></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "bottomItems")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BottomItemsGroupControls : GroupControlsType
     {
         /// <summary>
@@ -19519,6 +19729,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ImageControl &lt;mso14:imageControl></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, null)]
+#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class GroupControlsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19580,6 +19793,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>TaskGroupTask &lt;mso14:task></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "category")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskGroupCategory : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19800,6 +20016,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:task.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "task")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskGroupTask : OpenXmlLeafElement
     {
         /// <summary>
@@ -20145,6 +20364,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>TaskFormGroupTask &lt;mso14:task></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "category")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20371,6 +20593,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>BackstageGroup &lt;mso14:group></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "task")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskFormGroupTask : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20720,6 +20945,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>TaskFormGroupCategory &lt;mso14:category></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "taskFormGroup")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TaskFormGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20956,6 +21184,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>TaskGroup &lt;mso14:taskGroup></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "firstColumn")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21033,6 +21264,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>TaskGroup &lt;mso14:taskGroup></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "secondColumn")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SimpleGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21102,6 +21336,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>SimpleGroups &lt;mso14:secondColumn></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "tab")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageTab : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21501,6 +21738,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "button")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BackstageFastCommandButton : OpenXmlLeafElement
     {
         /// <summary>
@@ -21818,6 +22058,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>Command &lt;mso14:command></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "commands")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Commands : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21880,6 +22123,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ContextualTabs &lt;mso14:contextualTabs></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "ribbon")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Ribbon : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21996,6 +22242,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>BackstageFastCommandButton &lt;mso14:button></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "backstage")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Backstage : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22090,6 +22339,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ContextMenu &lt;mso14:contextMenu></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(57, "contextMenus")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContextMenus : OpenXmlCompositeElement
     {
         /// <summary>

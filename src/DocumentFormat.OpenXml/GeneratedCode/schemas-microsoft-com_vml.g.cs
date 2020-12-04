@@ -23,6 +23,9 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:path.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "path")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Path : OpenXmlLeafElement
     {
         /// <summary>
@@ -232,6 +235,9 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>Formula &lt;v:f></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "formulas")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Formulas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -291,6 +297,9 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>ShapeHandle &lt;v:h></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "handles")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeHandles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -350,6 +359,9 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties &lt;o:fill></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "fill")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Fill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -738,6 +750,9 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.ColumnStroke &lt;o:column></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "stroke")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Stroke : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1193,6 +1208,9 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:shadow.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "shadow")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shadow : OpenXmlLeafElement
     {
         /// <summary>
@@ -1346,6 +1364,9 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.TextBoxContent &lt;w:txbxContent></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "textbox")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1449,6 +1470,9 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:textpath.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "textpath")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextPath : OpenXmlLeafElement
     {
         /// <summary>
@@ -1563,6 +1587,9 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:imagedata.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "imagedata")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ImageData : OpenXmlLeafElement
     {
         /// <summary>
@@ -1853,6 +1880,9 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag &lt;pvml:iscomment></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "shape")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2717,6 +2747,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Complex &lt;o:complex></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "shapetype")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shapetype : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3550,6 +3583,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData &lt;xvml:ClientData></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "group")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4086,6 +4122,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>Fill &lt;v:fill></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "background")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4274,6 +4313,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "arc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Arc : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5106,6 +5148,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "curve")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Curve : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5966,6 +6011,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ImageFile : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6881,6 +6929,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "line")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Line : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7717,6 +7768,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "oval")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Oval : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8534,6 +8588,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>DocumentFormat.OpenXml.Vml.Office.Ink &lt;o:ink></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "polyline")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PolyLine : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9362,6 +9419,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "rect")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Rectangle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10178,6 +10238,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>DocumentFormat.OpenXml.Vml.Presentation.TextData &lt;pvml:textdata></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "roundrect")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RoundRectangle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10966,6 +11029,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:h.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "h")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeHandle : OpenXmlLeafElement
     {
         /// <summary>
@@ -11090,6 +11156,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:f.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(26, "f")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Formula : OpenXmlLeafElement
     {
         /// <summary>

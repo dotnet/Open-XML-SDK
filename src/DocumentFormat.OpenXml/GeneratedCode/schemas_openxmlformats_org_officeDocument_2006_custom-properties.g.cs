@@ -25,6 +25,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
     ///   <item><description>CustomDocumentProperty &lt;op:property></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(4, "Properties")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Properties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -148,6 +151,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
     ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTClipboardData &lt;vt:cf></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(4, "property")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomDocumentProperty : OpenXmlCompositeElement
     {
         /// <summary>

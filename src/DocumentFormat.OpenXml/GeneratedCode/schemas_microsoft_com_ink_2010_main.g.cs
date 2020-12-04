@@ -25,6 +25,9 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     ///   <item><description>DestinationLink &lt;msink:destinationLink></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(45, "context")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContextNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -375,6 +378,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") })
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:property.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(45, "property")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContextNodeProperty : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -427,6 +433,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:sourceLink.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(45, "sourceLink")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SourceLink : ContextLinkType
     {
         /// <summary>
@@ -451,6 +460,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:destinationLink.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(45, "destinationLink")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DestinationLink : ContextLinkType
     {
         /// <summary>
@@ -475,6 +487,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(45, null)]
+#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class ContextLinkType : OpenXmlLeafElement
     {
         /// <summary>

@@ -20,6 +20,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:prstTrans.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(68, "prstTrans")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PresetTransition : OpenXmlLeafElement
     {
         /// <summary>
@@ -79,6 +82,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:presenceInfo.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(68, "presenceInfo")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PresenceInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -141,6 +147,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ParentCommentIdentifier &lt;p15:parentCm></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(68, "threadingInfo")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThreadingInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -227,6 +236,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ExtensionList &lt;p15:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(68, "sldGuideLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SlideGuideList : ExtendedGuideList
     {
         /// <summary>
@@ -288,6 +300,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ExtensionList &lt;p15:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(68, "notesGuideLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NotesGuideList : ExtendedGuideList
     {
         /// <summary>
@@ -349,6 +364,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ExtensionList &lt;p15:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(68, null)]
+#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class ExtendedGuideList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -395,6 +413,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:chartTrackingRefBased.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(68, "chartTrackingRefBased")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
     {
         /// <summary>
@@ -435,6 +456,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:parentCm.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(68, "parentCm")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParentCommentIdentifier : OpenXmlLeafElement
     {
         /// <summary>
@@ -494,6 +518,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.PresetColor &lt;a:prstClr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(68, "clr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -648,6 +675,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Presentation.Extension &lt;p:ext></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(68, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -715,6 +745,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ExtensionList &lt;p15:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(68, "guide")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtendedGuide : OpenXmlCompositeElement
     {
         /// <summary>

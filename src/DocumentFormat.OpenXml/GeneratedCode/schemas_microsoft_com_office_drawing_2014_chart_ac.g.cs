@@ -26,6 +26,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.ExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(81, "multiLvlStrLit")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MultiLvlStrData : OpenXmlCompositeElement
     {
         /// <summary>

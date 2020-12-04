@@ -24,6 +24,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     ///   <item><description>OfficeArtExtensionList &lt;tsle:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(77, "timeslicer")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TimeSlicer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -112,6 +115,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(77, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

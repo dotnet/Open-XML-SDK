@@ -31,6 +31,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "colorStyle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColorStyle : OpenXmlPartRootElement
     {
         /// <summary>
@@ -204,6 +207,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "chartStyle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChartStyle : OpenXmlPartRootElement
     {
         /// <summary>
@@ -812,6 +818,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.InverseGamma &lt;a:invGamma></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "variation")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColorStyleVariation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -932,6 +941,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1025,6 +1037,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.InverseGamma &lt;a:invGamma></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "styleClr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1171,6 +1186,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "lnRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineReference : StyleReference
     {
         /// <summary>
@@ -1248,6 +1266,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "fillRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FillReference : StyleReference
     {
         /// <summary>
@@ -1325,6 +1346,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "effectRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EffectReference : StyleReference
     {
         /// <summary>
@@ -1402,6 +1426,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, null)]
+#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class StyleReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1479,6 +1506,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:lineWidthScale.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "lineWidthScale")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineWidthScale : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1530,6 +1560,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "fontRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FontReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1649,6 +1682,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "spPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1804,6 +1840,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "defRPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2178,6 +2217,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "bodyPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextBodyProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2502,6 +2544,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:categoryAxis.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "categoryAxis")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CategoryAxisProperties : AxisProperties
     {
         /// <summary>
@@ -2527,6 +2572,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:seriesAxis.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "seriesAxis")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeriesAxisProperties : AxisProperties
     {
         /// <summary>
@@ -2552,6 +2600,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:valueAxis.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "valueAxis")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ValueAxisProperties : AxisProperties
     {
         /// <summary>
@@ -2577,6 +2628,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, null)]
+#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class AxisProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -2696,6 +2750,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataSeries.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataSeries")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataSeries : OpenXmlLeafElement
     {
         /// <summary>
@@ -2834,6 +2891,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataLabels.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataLabels")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabels : OpenXmlLeafElement
     {
         /// <summary>
@@ -2944,6 +3004,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataTable.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataTable")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataTable : OpenXmlLeafElement
     {
         /// <summary>
@@ -3026,6 +3089,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:legend.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "legend")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Legend : OpenXmlLeafElement
     {
         /// <summary>
@@ -3094,6 +3160,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:title.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Title : OpenXmlLeafElement
     {
         /// <summary>
@@ -3134,6 +3203,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:trendline.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "trendline")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Trendline : OpenXmlLeafElement
     {
         /// <summary>
@@ -3202,6 +3274,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:view3D.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "view3D")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class View3DProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -3326,6 +3401,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "axisTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AxisTitle : StyleEntry
     {
         /// <summary>
@@ -3401,6 +3479,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "categoryAxis")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CategoryAxis : StyleEntry
     {
         /// <summary>
@@ -3476,6 +3557,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "chartArea")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChartArea : StyleEntry
     {
         /// <summary>
@@ -3551,6 +3635,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabel : StyleEntry
     {
         /// <summary>
@@ -3626,6 +3713,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataLabelCallout")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabelCallout : StyleEntry
     {
         /// <summary>
@@ -3701,6 +3791,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataPoint")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPoint : StyleEntry
     {
         /// <summary>
@@ -3776,6 +3869,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataPoint3D")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPoint3D : StyleEntry
     {
         /// <summary>
@@ -3851,6 +3947,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataPointLine")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPointLine : StyleEntry
     {
         /// <summary>
@@ -3926,6 +4025,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataPointMarker")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPointMarker : StyleEntry
     {
         /// <summary>
@@ -4001,6 +4103,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataPointWireframe")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPointWireframe : StyleEntry
     {
         /// <summary>
@@ -4076,6 +4181,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataTable")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataTableStyle : StyleEntry
     {
         /// <summary>
@@ -4151,6 +4259,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "downBar")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DownBar : StyleEntry
     {
         /// <summary>
@@ -4226,6 +4337,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dropLine")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropLine : StyleEntry
     {
         /// <summary>
@@ -4301,6 +4415,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "errorBar")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ErrorBar : StyleEntry
     {
         /// <summary>
@@ -4376,6 +4493,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "floor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Floor : StyleEntry
     {
         /// <summary>
@@ -4451,6 +4571,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "gridlineMajor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GridlineMajor : StyleEntry
     {
         /// <summary>
@@ -4526,6 +4649,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "gridlineMinor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GridlineMinor : StyleEntry
     {
         /// <summary>
@@ -4601,6 +4727,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "hiLoLine")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HiLoLine : StyleEntry
     {
         /// <summary>
@@ -4676,6 +4805,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "leaderLine")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LeaderLine : StyleEntry
     {
         /// <summary>
@@ -4751,6 +4883,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "legend")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LegendStyle : StyleEntry
     {
         /// <summary>
@@ -4826,6 +4961,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "plotArea")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PlotArea : StyleEntry
     {
         /// <summary>
@@ -4901,6 +5039,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "plotArea3D")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PlotArea3D : StyleEntry
     {
         /// <summary>
@@ -4976,6 +5117,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "seriesAxis")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeriesAxis : StyleEntry
     {
         /// <summary>
@@ -5051,6 +5195,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "seriesLine")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeriesLine : StyleEntry
     {
         /// <summary>
@@ -5126,6 +5273,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TitleStyle : StyleEntry
     {
         /// <summary>
@@ -5201,6 +5351,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "trendline")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TrendlineStyle : StyleEntry
     {
         /// <summary>
@@ -5276,6 +5429,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "trendlineLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TrendlineLabel : StyleEntry
     {
         /// <summary>
@@ -5351,6 +5507,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "upBar")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UpBar : StyleEntry
     {
         /// <summary>
@@ -5426,6 +5585,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "valueAxis")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ValueAxis : StyleEntry
     {
         /// <summary>
@@ -5501,6 +5663,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "wall")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Wall : StyleEntry
     {
         /// <summary>
@@ -5576,6 +5741,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, null)]
+#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class StyleEntry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5758,6 +5926,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     /// <para>This class is available in Office 2013 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPointMarkerLayout.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataPointMarkerLayout")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MarkerLayoutProperties : OpenXmlLeafElement
     {
         /// <summary>

@@ -17,6 +17,9 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ma:DummyContentTypeElement.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(41, "DummyContentTypeElement")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Dummy : OpenXmlLeafElement
     {
         /// <summary>

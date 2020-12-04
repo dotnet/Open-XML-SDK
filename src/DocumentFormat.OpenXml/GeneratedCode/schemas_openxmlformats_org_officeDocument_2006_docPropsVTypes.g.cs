@@ -58,6 +58,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description>VTClipboardData &lt;vt:cf></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "variant")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Variant : OpenXmlCompositeElement
     {
         /// <summary>
@@ -660,6 +663,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description>VTClipboardData &lt;vt:cf></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "vector")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTVector : OpenXmlCompositeElement
     {
         /// <summary>
@@ -804,6 +810,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>VTCurrency &lt;vt:cy></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "array")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTArray : OpenXmlCompositeElement
     {
         /// <summary>
@@ -932,6 +941,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:blob.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "blob")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTBlob : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -970,6 +982,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:oblob.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "oblob")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTOBlob : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1008,6 +1023,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:stream.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "stream")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTStreamData : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1046,6 +1064,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ostream.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "ostream")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTOStreamData : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1084,6 +1105,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:storage.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "storage")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTStorage : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1122,6 +1146,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ostorage.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "ostorage")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTOStorage : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1160,6 +1187,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:empty.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "empty")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTEmpty : OpenXmlLeafElement
     {
         /// <summary>
@@ -1184,6 +1214,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:null.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "null")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTNull : OpenXmlLeafElement
     {
         /// <summary>
@@ -1208,6 +1241,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i1.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "i1")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTByte : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1246,6 +1282,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i2.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "i2")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTShort : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1284,6 +1323,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i4.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "i4")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTInt32 : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1322,6 +1364,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:int.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "int")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTInteger : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1360,6 +1405,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i8.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "i8")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTInt64 : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1398,6 +1446,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui1.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "ui1")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedByte : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1436,6 +1487,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui2.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "ui2")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedShort : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1474,6 +1528,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui4.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "ui4")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1512,6 +1569,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:uint.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "uint")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedInteger : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1550,6 +1610,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui8.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "ui8")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1588,6 +1651,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:r4.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "r4")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTFloat : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1626,6 +1692,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:r8.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "r8")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTDouble : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1664,6 +1733,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:decimal.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "decimal")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTDecimal : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1702,6 +1774,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:lpstr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "lpstr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTLPSTR : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1739,6 +1814,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:lpwstr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "lpwstr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTLPWSTR : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1776,6 +1854,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:bstr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "bstr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTBString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1813,6 +1894,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:date.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "date")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTDate : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1851,6 +1935,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:filetime.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "filetime")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTFileTime : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1889,6 +1976,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:bool.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "bool")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTBool : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1927,6 +2017,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:cy.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "cy")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTCurrency : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1965,6 +2058,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:error.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "error")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTError : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2003,6 +2099,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:vstream.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "vstream")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTVStreamData : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2057,6 +2156,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:clsid.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "clsid")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTClassId : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2095,6 +2197,9 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:cf.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "cf")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTClipboardData : OpenXmlLeafTextElement
     {
         /// <summary>
