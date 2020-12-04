@@ -5,7 +5,9 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System.IO;
 using System.IO.Packaging;
+using System.Linq;
 using System.Xml.Linq;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -54,5 +56,24 @@ namespace DocumentFormat.OpenXml.Tests
         protected override WordprocessingDocument Open(Package package) => WordprocessingDocument.Open(package);
 
         protected override WordprocessingDocument Open(string path, bool isEditable) => WordprocessingDocument.Open(path, isEditable);
+
+        [Fact]
+        public void CanSaveSvgToFlatOpc()
+        {
+            var ns = XNamespace.Get("http://schemas.microsoft.com/office/2006/xmlPackage");
+
+            using (var data = TestAssets.GetStream(TestAssets.TestFiles.Svg))
+            using (var resultDoc = WordprocessingDocument.Open(data, false))
+            {
+                var r = resultDoc.ToFlatOpcString();
+                var xml = XDocument.Parse(r);
+                var xmlData = xml.Descendants(ns + "part")
+                    .Where(n => n.Attribute(ns + "name").Value == "/word/media/image2.svg")
+                    .SelectMany(n => n.Descendants(ns + "xmlData"));
+                var svg = Assert.IsType<XElement>(Assert.Single(xmlData).FirstNode);
+
+                Assert.Equal(XName.Get("svg", "http://www.w3.org/2000/svg"), svg.Name);
+            }
+        }
     }
 }
