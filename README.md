@@ -48,34 +48,7 @@ Package currently supports the following targets:
 How to install the NuGet package
 ---------------------------------
 
-The package you want to install is DocumentFormat.OpenXml.
-
-NuGet packages are available for [release builds](https://www.nuget.org/packages/DocumentFormat.OpenXml) or [CI Builds](https://dotnet.myget.org/gallery/open-xml-sdk) and follow [semantic versioning](http://www.semver.org/).
-
-The package feed or the package source is specified by the feed URL. Depending on your version of Visual Studio, choose the appropriate feed URL from the table below.
-
-**Table 1:** The latest builds are available via a MyGet feed.
-
-| Client | Feed URL |
-| ------ | -------- |
-| NuGet V3 (Visual Studio 2015+) | [https://dotnet.myget.org/F/open-xml-sdk/api/v3/index.json](https://dotnet.myget.org/F/open-xml-sdk/api/v3/index.json) |
-| NuGet V2 (Visual Studio 2012+) | [https://dotnet.myget.org/F/open-xml-sdk/api/v2](https://dotnet.myget.org/F/open-xml-sdk/api/v2) |
-
-The `Install-Package` command considers the package source either via configuration or argument. Also, the package version can vary. For the latest version info, see the [feed for the DocumentFormat.OpenXml package](https://dotnet.myget.org/feed/open-xml-sdk/package/nuget/DocumentFormat.OpenXml).
-
-- To specify the package source via a configuration option, see [Configuring NuGet behavior](https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior). Note that usually a NuGet.config file is placed in the directory and the configuration options are added there to ensure the sources are persisted in the version control.
-
-  ```shell
-  PM> Install-Package DocumentFormat.OpenXml -Version <version retrieved from the web>
-  ```
-
-- To pass the feed URL as an argument, here is an example for Visual Studio 2015 and later.
-
-  ```shell
-  PM> Install-Package DocumentFormat.OpenXml -Version <version retrieved from the web> -Source https://dotnet.myget.org/F/open-xml-sdk/api/v3/index.json
-  ```
-
-**Note**: If you have trouble installing the package, try restarting Visual Studio. Package sources could be cached and changes you've made to any NuGet.config files may not be detected.
+The package you want to install is DocumentFormat.OpenXml and are available on [NuGet](https://www.nuget.org/packages/DocumentFormat.OpenXml).
 
 If You Have Problems
 --------------------
