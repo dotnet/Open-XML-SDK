@@ -27,6 +27,9 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description>AllocatedCommands &lt;wne:acds></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "tcg")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TemplateCommandGroup : OpenXmlPartRootElement
     {
         /// <summary>
@@ -123,6 +126,9 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description>Mcd &lt;wne:mcd></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "mcds")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Mcds : OpenXmlCompositeElement
     {
         /// <summary>
@@ -183,6 +189,9 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description>Mcds &lt;wne:mcds></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "vbaSuppData")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VbaSuppData : OpenXmlPartRootElement
     {
         /// <summary>
@@ -301,6 +310,9 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description>SingleDataSourceRecord &lt;wne:recipientData></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "recipients")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MailMergeRecipients : OpenXmlPartRootElement
     {
         /// <summary>
@@ -354,6 +366,9 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:fci.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "fci")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     {
         /// <summary>
@@ -370,6 +385,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "fciName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue CommandName
         {
             get => GetAttribute<StringValue>();
@@ -383,6 +404,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "fciIndex")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue CommandIndex
         {
             get => GetAttribute<HexBinaryValue>();
@@ -396,6 +423,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "swArg")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue Argument
         {
             get => GetAttribute<HexBinaryValue>();
@@ -427,6 +460,9 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:macro.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "macro")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MacroKeyboardCustomization : MacroWllType
     {
         /// <summary>
@@ -451,6 +487,9 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:wll.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "wll")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WllMacroKeyboardCustomization : MacroWllType
     {
         /// <summary>
@@ -491,6 +530,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "macroName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue MacroName
         {
             get => GetAttribute<StringValue>();
@@ -510,6 +555,9 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acd.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "acd")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapType
     {
         /// <summary>
@@ -534,6 +582,9 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acdEntry.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "acdEntry")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
     {
         /// <summary>
@@ -574,6 +625,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "acdName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue AcceleratorName
         {
             get => GetAttribute<StringValue>();
@@ -593,6 +650,9 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:wch.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "wch")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CharacterInsertion : OpenXmlLeafElement
     {
         /// <summary>
@@ -609,6 +669,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -646,6 +712,9 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description>CharacterInsertion &lt;wne:wch></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "keymap")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class KeyMapEntry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -686,6 +755,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "chmPrimary")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue CharacterMapPrimary
         {
             get => GetAttribute<HexBinaryValue>();
@@ -699,6 +774,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "chmSecondary")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue CharacterMapSecondary
         {
             get => GetAttribute<HexBinaryValue>();
@@ -712,6 +793,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "kcmPrimary")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue KeyCodePrimary
         {
             get => GetAttribute<HexBinaryValue>();
@@ -725,6 +812,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "kcmSecondary")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue KeyCodeSecondary
         {
             get => GetAttribute<HexBinaryValue>();
@@ -738,6 +831,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "mask")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public OnOffValue Mask
         {
             get => GetAttribute<OnOffValue>();
@@ -855,6 +954,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acd.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "acd")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AllocatedCommand : OpenXmlLeafElement
     {
         /// <summary>
@@ -871,6 +973,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "argValue")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ArgumentValue
         {
             get => GetAttribute<StringValue>();
@@ -884,6 +992,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "fciBasedOn")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue CommandBasedOn
         {
             get => GetAttribute<StringValue>();
@@ -897,6 +1011,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "fciIndexBasedOn")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue CommandIndexBasedOn
         {
             get => GetAttribute<HexBinaryValue>();
@@ -910,6 +1030,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "acdName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue AcceleratorName
         {
             get => GetAttribute<StringValue>();
@@ -939,6 +1065,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:mcd.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "mcd")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Mcd : OpenXmlLeafElement
     {
         /// <summary>
@@ -955,6 +1084,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "macroName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue MacroName
         {
             get => GetAttribute<StringValue>();
@@ -968,6 +1103,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Name
         {
             get => GetAttribute<StringValue>();
@@ -981,6 +1122,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "menuHelp")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue MenuHelp
         {
             get => GetAttribute<StringValue>();
@@ -994,6 +1141,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "bEncrypt")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue BEncrypt
         {
             get => GetAttribute<HexBinaryValue>();
@@ -1007,6 +1160,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "cmg")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue Cmg
         {
             get => GetAttribute<HexBinaryValue>();
@@ -1043,6 +1202,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocNew.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocNew")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocNewXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1080,6 +1242,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocOpen.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocOpen")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1117,6 +1282,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocClose.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocClose")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1154,6 +1322,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocSync.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocSync")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1191,6 +1362,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocXmlAfterInsert.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocXmlAfterInsert")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1228,6 +1402,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocXmlBeforeDelete.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocXmlBeforeDelete")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1265,6 +1442,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlAfterInsert.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocContentControlAfterInsert")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1302,6 +1482,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlBeforeDelete.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocContentControlBeforeDelete")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1339,6 +1522,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlOnExit.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocContentControlOnExit")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1376,6 +1562,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlOnEnter.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocContentControlOnEnter")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1413,6 +1602,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocStoreUpdate.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocStoreUpdate")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1450,6 +1642,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlContentUpdate.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocContentControlContentUpdate")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1487,6 +1682,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocBuildingBlockAfterInsert.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "eventDocBuildingBlockAfterInsert")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1542,6 +1740,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     ///   <item><description>EventDocBuildingBlockAfterInsertXsdString &lt;wne:eventDocBuildingBlockAfterInsert></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "docEvents")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocEvents : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1794,6 +1995,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     ///   <item><description>AllocatedCommandManifestEntry &lt;wne:acdEntry></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "acdManifest")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AllocatedCommandManifest : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1847,6 +2051,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:toolbarData.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "toolbarData")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ToolbarData : OpenXmlLeafElement
     {
         /// <summary>
@@ -1863,6 +2070,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -1895,6 +2108,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>KeyMapEntry &lt;wne:keymap></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "keymaps")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class KeyMapCustomizations : KeymapsType
     {
         /// <summary>
@@ -1953,6 +2169,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>KeyMapEntry &lt;wne:keymap></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "keymapsBad")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MismatchedKeyMapCustomization : KeymapsType
     {
         /// <summary>
@@ -2063,6 +2282,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ToolbarData &lt;wne:toolbarData></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "toolbars")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Toolbars : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2124,6 +2346,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>AllocatedCommand &lt;wne:acd></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "acds")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AllocatedCommands : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2177,6 +2402,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:active.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "active")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RecordIncluded : OpenXmlLeafElement
     {
         /// <summary>
@@ -2193,6 +2421,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public OnOffValue Val
         {
             get => GetAttribute<OnOffValue>();
@@ -2216,6 +2450,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:hash.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "hash")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RecordHashCode : OpenXmlLeafElement
     {
         /// <summary>
@@ -2232,6 +2469,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue Val
         {
             get => GetAttribute<IntegerValue>();
@@ -2265,6 +2508,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>RecordHashCode &lt;wne:hash></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(33, "recipientData")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     {
         /// <summary>

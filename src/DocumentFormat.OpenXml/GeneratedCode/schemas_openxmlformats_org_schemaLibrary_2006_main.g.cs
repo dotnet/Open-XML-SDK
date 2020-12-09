@@ -24,6 +24,9 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     ///   <item><description>Schema &lt;sl:schema></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(25, "schemaLibrary")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SchemaLibrary : OpenXmlCompositeElement
     {
         /// <summary>
@@ -77,6 +80,9 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is sl:schema.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(25, "schema")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Schema : OpenXmlLeafElement
     {
         /// <summary>
@@ -93,6 +99,12 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(25, "uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Uri
         {
             get => GetAttribute<StringValue>();
@@ -106,6 +118,12 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(25, "manifestLocation")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ManifestLocation
         {
             get => GetAttribute<StringValue>();
@@ -119,6 +137,12 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(25, "schemaLocation")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue SchemaLocation
         {
             get => GetAttribute<StringValue>();

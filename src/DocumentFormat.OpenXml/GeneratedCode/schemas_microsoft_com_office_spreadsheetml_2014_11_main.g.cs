@@ -24,6 +24,9 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     ///   <item><description>ModelTimeGrouping &lt;x16:modelTimeGrouping></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(84, "modelTimeGroupings")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ModelTimeGroupings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -84,6 +87,9 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     ///   <item><description>CalculatedTimeColumn &lt;x16:calculatedTimeColumn></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(84, "modelTimeGrouping")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ModelTimeGrouping : OpenXmlCompositeElement
     {
         /// <summary>
@@ -121,6 +127,12 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>tableName, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: tableName</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tableName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue TableName
         {
             get => GetAttribute<StringValue>();
@@ -131,6 +143,12 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>columnName, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: columnName</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "columnName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ColumnName
         {
             get => GetAttribute<StringValue>();
@@ -141,6 +159,12 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         /// <para>columnId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: columnId</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "columnId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ColumnId
         {
             get => GetAttribute<StringValue>();
@@ -181,6 +205,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x16:calculatedTimeColumn.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(84, "calculatedTimeColumn")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CalculatedTimeColumn : OpenXmlLeafElement
     {
         /// <summary>
@@ -194,6 +221,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>columnName, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: columnName</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "columnName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ColumnName
         {
             get => GetAttribute<StringValue>();
@@ -204,6 +237,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>columnId, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: columnId</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "columnId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ColumnId
         {
             get => GetAttribute<StringValue>();
@@ -214,6 +253,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>contentType, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: contentType</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "contentType")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType> ContentType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>>();
@@ -224,6 +269,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>isSelected, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: isSelected</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "isSelected")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue IsSelected
         {
             get => GetAttribute<BooleanValue>();

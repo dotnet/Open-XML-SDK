@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     /// <summary>
     /// A lookup that identifies properties on an <see cref="OpenXmlElement"/> and caches the schema information
-    /// from those elements (identified by the <see cref="SchemaAttrAttribute"/> on the property type.
+    /// from those elements.
     /// </summary>
     internal class ElementLookup
     {
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             private readonly Func<OpenXmlElement> _activator;
 
             public ActivatorElementChild(Type child, Func<OpenXmlElement> activator)
-                : this(child, GetSchema(child, activator))
+                : this(child, GetSchema(activator))
             {
                 _activator = activator;
             }
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public override OpenXmlElement Create() => _activator();
 
-            private static OpenXmlSchema GetSchema(Type child, Func<OpenXmlElement> activator)
+            private static OpenXmlSchema GetSchema(Func<OpenXmlElement> activator)
             {
                 var instance = activator();
 

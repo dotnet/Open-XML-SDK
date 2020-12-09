@@ -23,6 +23,9 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     ///   <item><description>Characteristic &lt;ac:characteristic></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(8, "additionalCharacteristics")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
     {
         /// <summary>
@@ -76,6 +79,9 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ac:characteristic.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(8, "characteristic")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Characteristic : OpenXmlLeafElement
     {
         /// <summary>
@@ -89,6 +95,12 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Name of Characteristic</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Name
         {
             get => GetAttribute<StringValue>();
@@ -99,6 +111,12 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Relationship of Value to Name</para>
         /// <para>Represents the following attribute in the schema: relation</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "relation")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>>();
@@ -109,6 +127,12 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Characteristic Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Val
         {
             get => GetAttribute<StringValue>();
@@ -119,6 +143,12 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Characteristic Grammar</para>
         /// <para>Represents the following attribute in the schema: vocabulary</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "vocabulary")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Vocabulary
         {
             get => GetAttribute<StringValue>();

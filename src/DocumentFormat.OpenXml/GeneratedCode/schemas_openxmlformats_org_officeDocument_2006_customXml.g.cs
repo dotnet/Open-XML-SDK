@@ -23,6 +23,9 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     ///   <item><description>SchemaReferences &lt;ds:schemaRefs></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(20, "datastoreItem")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataStoreItem : OpenXmlPartRootElement
     {
         /// <summary>
@@ -63,6 +66,12 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(20, "itemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ItemId
         {
             get => GetAttribute<StringValue>();
@@ -139,6 +148,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:schemaRef.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(20, "schemaRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SchemaReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -155,6 +167,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(20, "uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Uri
         {
             get => GetAttribute<StringValue>();
@@ -187,6 +205,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>SchemaReference &lt;ds:schemaRef></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(20, "schemaRefs")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SchemaReferences : OpenXmlCompositeElement
     {
         /// <summary>
