@@ -79,6 +79,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bwMode")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -186,6 +192,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Val
         {
             get => GetAttribute<UInt32Value>();
@@ -269,9 +281,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(82, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class BooleanType : OpenXmlLeafElement
     {
         /// <summary>
@@ -285,6 +294,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Boolean Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Val
         {
             get => GetAttribute<BooleanValue>();
@@ -822,9 +837,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2016 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(82, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class UniqueIDChart : OpenXmlLeafElement
     {
         /// <summary>
@@ -838,6 +850,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Val
         {
             get => GetAttribute<StringValue>();
@@ -1538,6 +1556,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Val
         {
             get => GetAttribute<BooleanValue>();
@@ -1581,6 +1605,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>val, this property is only available in Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Val
         {
             get => GetAttribute<BooleanValue>();

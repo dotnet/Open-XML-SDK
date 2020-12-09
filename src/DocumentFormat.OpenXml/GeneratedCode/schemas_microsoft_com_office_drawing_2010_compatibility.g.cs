@@ -34,6 +34,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
         /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "spid")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ShapeId
         {
             get => GetAttribute<StringValue>();

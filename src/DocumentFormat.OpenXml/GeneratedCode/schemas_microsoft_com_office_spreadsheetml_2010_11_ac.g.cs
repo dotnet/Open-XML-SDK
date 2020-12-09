@@ -35,6 +35,12 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
         /// <para>url, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: url</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "url")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Url
         {
             get => GetAttribute<StringValue>();

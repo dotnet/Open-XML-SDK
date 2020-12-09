@@ -66,6 +66,12 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(20, "itemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ItemId
         {
             get => GetAttribute<StringValue>();
@@ -161,6 +167,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(20, "uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Uri
         {
             get => GetAttribute<StringValue>();

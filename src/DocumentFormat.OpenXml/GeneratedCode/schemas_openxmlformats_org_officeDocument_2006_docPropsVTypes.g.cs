@@ -703,6 +703,12 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Vector Base Type</para>
         /// <para>Represents the following attribute in the schema: baseType</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "baseType")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>>();
@@ -713,6 +719,12 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Vector Size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Size
         {
             get => GetAttribute<UInt32Value>();
@@ -850,6 +862,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Array Lower Bounds Attribute</para>
         /// <para>Represents the following attribute in the schema: lBound</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "lBound")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value LowerBounds
         {
             get => GetAttribute<Int32Value>();
@@ -860,6 +878,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Array Upper Bounds Attribute</para>
         /// <para>Represents the following attribute in the schema: uBound</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "uBound")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value UpperBounds
         {
             get => GetAttribute<Int32Value>();
@@ -870,6 +894,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Array Base Type</para>
         /// <para>Represents the following attribute in the schema: baseType</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "baseType")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>>();
@@ -2128,6 +2158,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>VSTREAM Version Attribute</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "version")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Version
         {
             get => GetAttribute<StringValue>();
@@ -2226,6 +2262,12 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
         /// <para>Format Attribute</para>
         /// <para>Represents the following attribute in the schema: format</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "format")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Format
         {
             get => GetAttribute<Int32Value>();
@@ -2236,6 +2278,12 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Size
         {
             get => GetAttribute<UInt32Value>();

@@ -61,6 +61,12 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ct=http://schemas.microsoft.com/office/2006/metadata/contentType
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(38, "_")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue UnderScore
         {
             get => GetAttribute<StringValue>();
@@ -74,6 +80,12 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "_")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ReservedAttributeString
         {
             get => GetAttribute<StringValue>();
@@ -87,6 +99,12 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "contentTypeName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ContentTypeName
         {
             get => GetAttribute<StringValue>();
@@ -100,6 +118,12 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "contentTypeID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ContentTypeID
         {
             get => GetAttribute<StringValue>();
@@ -113,6 +137,12 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "contentTypeVersion")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value ContentTypeVersion
         {
             get => GetAttribute<Int32Value>();
@@ -126,6 +156,12 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "contentTypeDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ContentTypeDescription
         {
             get => GetAttribute<StringValue>();
@@ -139,6 +175,12 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "contentTypeScope")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ContentTypeScope
         {
             get => GetAttribute<StringValue>();
@@ -152,6 +194,12 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "versionID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue VersionID
         {
             get => GetAttribute<StringValue>();

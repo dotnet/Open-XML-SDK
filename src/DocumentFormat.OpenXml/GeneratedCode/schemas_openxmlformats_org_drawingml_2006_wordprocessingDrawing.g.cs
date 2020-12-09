@@ -93,6 +93,12 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Text Wrapping Location</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "wrapText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>();
@@ -103,6 +109,12 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text (Top)</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distT")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromTop
         {
             get => GetAttribute<UInt32Value>();
@@ -113,6 +125,12 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distB")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromBottom
         {
             get => GetAttribute<UInt32Value>();
@@ -123,6 +141,12 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distL")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
@@ -133,6 +157,12 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distR")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
@@ -228,6 +258,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Text Wrapping Location</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "wrapText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>();
@@ -238,6 +274,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Test on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distL")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
@@ -248,6 +290,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distR")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
@@ -341,6 +389,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Text Wrapping Location</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "wrapText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>();
@@ -351,6 +405,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distL")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
@@ -361,6 +421,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distR")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
@@ -454,6 +520,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Top Edge</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distT")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromTop
         {
             get => GetAttribute<UInt32Value>();
@@ -464,6 +536,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distB")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromBottom
         {
             get => GetAttribute<UInt32Value>();
@@ -556,6 +634,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Top Edge</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distT")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromTop
         {
             get => GetAttribute<UInt32Value>();
@@ -566,6 +650,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distB")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromBottom
         {
             get => GetAttribute<UInt32Value>();
@@ -576,6 +666,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distL")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
@@ -586,6 +682,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distR")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
@@ -599,6 +701,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(51, "anchorId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue AnchorId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -612,6 +720,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(51, "editId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue EditId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -786,6 +900,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Distance From Text on Top Edge</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distT")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromTop
         {
             get => GetAttribute<UInt32Value>();
@@ -796,6 +916,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distB")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromBottom
         {
             get => GetAttribute<UInt32Value>();
@@ -806,6 +932,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distL")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
@@ -816,6 +948,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distR")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
@@ -826,6 +964,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Page Positioning</para>
         /// <para>Represents the following attribute in the schema: simplePos</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "simplePos")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue SimplePos
         {
             get => GetAttribute<BooleanValue>();
@@ -836,6 +980,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Relative Z-Ordering Position</para>
         /// <para>Represents the following attribute in the schema: relativeHeight</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "relativeHeight")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value RelativeHeight
         {
             get => GetAttribute<UInt32Value>();
@@ -846,6 +996,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Display Behind Document Text</para>
         /// <para>Represents the following attribute in the schema: behindDoc</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "behindDoc")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue BehindDoc
         {
             get => GetAttribute<BooleanValue>();
@@ -856,6 +1012,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Lock Anchor</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "locked")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Locked
         {
             get => GetAttribute<BooleanValue>();
@@ -866,6 +1028,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Layout In Table Cell</para>
         /// <para>Represents the following attribute in the schema: layoutInCell</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "layoutInCell")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue LayoutInCell
         {
             get => GetAttribute<BooleanValue>();
@@ -876,6 +1044,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "hidden")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -886,6 +1060,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Allow Objects to Overlap</para>
         /// <para>Represents the following attribute in the schema: allowOverlap</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "allowOverlap")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue AllowOverlap
         {
             get => GetAttribute<BooleanValue>();
@@ -899,6 +1079,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(51, "editId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue EditId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -912,6 +1098,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(51, "anchorId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue AnchorId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -1158,9 +1350,6 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(16, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class Point2DType : OpenXmlLeafElement
     {
         /// <summary>
@@ -1174,6 +1363,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>X-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "x")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value X
         {
             get => GetAttribute<Int64Value>();
@@ -1184,6 +1379,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Y-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "y")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value Y
         {
             get => GetAttribute<Int64Value>();
@@ -1228,6 +1429,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Additional Extent on Left Edge</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "l")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value LeftEdge
         {
             get => GetAttribute<Int64Value>();
@@ -1238,6 +1445,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Additional Extent on Top Edge</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "t")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value TopEdge
         {
             get => GetAttribute<Int64Value>();
@@ -1248,6 +1461,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Additional Extent on Right Edge</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "r")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value RightEdge
         {
             get => GetAttribute<Int64Value>();
@@ -1258,6 +1477,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Additional Extent on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "b")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value BottomEdge
         {
             get => GetAttribute<Int64Value>();
@@ -1347,6 +1572,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>Wrapping Points Modified</para>
         /// <para>Represents the following attribute in the schema: edited</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "edited")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Edited
         {
             get => GetAttribute<BooleanValue>();
@@ -1438,6 +1669,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>Horizontal Position Relative Base</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "relativeFrom")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues> RelativeFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues>>();
@@ -1564,6 +1801,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Vertical Position Relative Base</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "relativeFrom")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues> RelativeFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues>>();
@@ -1658,6 +1901,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Extent Length</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "cx")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value Cx
         {
             get => GetAttribute<Int64Value>();
@@ -1668,6 +1917,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Extent Width</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "cy")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value Cy
         {
             get => GetAttribute<Int64Value>();
@@ -1748,6 +2003,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Id
         {
             get => GetAttribute<UInt32Value>();
@@ -1758,6 +2019,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Name
         {
             get => GetAttribute<StringValue>();
@@ -1768,6 +2035,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "descr")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -1778,6 +2051,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "hidden")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -1788,6 +2067,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Title
         {
             get => GetAttribute<StringValue>();

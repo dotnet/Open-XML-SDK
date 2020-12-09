@@ -65,6 +65,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -75,6 +81,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "type")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Type
         {
             get => GetAttribute<StringValue>();
@@ -85,6 +97,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>rotatedBoundingBox</para>
         /// <para>Represents the following attribute in the schema: rotatedBoundingBox</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rotatedBoundingBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public ListValue<StringValue> RotatedBoundingBox
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -95,6 +113,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>alignmentLevel</para>
         /// <para>Represents the following attribute in the schema: alignmentLevel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "alignmentLevel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value AlignmentLevel
         {
             get => GetAttribute<Int32Value>();
@@ -105,6 +129,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>contentType</para>
         /// <para>Represents the following attribute in the schema: contentType</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "contentType")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value ContentType
         {
             get => GetAttribute<Int32Value>();
@@ -115,6 +145,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>ascender</para>
         /// <para>Represents the following attribute in the schema: ascender</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "ascender")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Ascender
         {
             get => GetAttribute<StringValue>();
@@ -125,6 +161,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>descender</para>
         /// <para>Represents the following attribute in the schema: descender</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "descender")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Descender
         {
             get => GetAttribute<StringValue>();
@@ -135,6 +177,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>baseline</para>
         /// <para>Represents the following attribute in the schema: baseline</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "baseline")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Baseline
         {
             get => GetAttribute<StringValue>();
@@ -145,6 +193,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>midline</para>
         /// <para>Represents the following attribute in the schema: midline</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "midline")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Midline
         {
             get => GetAttribute<StringValue>();
@@ -155,6 +209,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>customRecognizerId</para>
         /// <para>Represents the following attribute in the schema: customRecognizerId</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "customRecognizerId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue CustomRecognizerId
         {
             get => GetAttribute<StringValue>();
@@ -165,6 +225,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>mathML</para>
         /// <para>Represents the following attribute in the schema: mathML</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "mathML")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue MathML
         {
             get => GetAttribute<StringValue>();
@@ -175,6 +241,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>mathStruct</para>
         /// <para>Represents the following attribute in the schema: mathStruct</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "mathStruct")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue MathStruct
         {
             get => GetAttribute<StringValue>();
@@ -185,6 +257,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>mathSymbol</para>
         /// <para>Represents the following attribute in the schema: mathSymbol</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "mathSymbol")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue MathSymbol
         {
             get => GetAttribute<StringValue>();
@@ -195,6 +273,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>beginModifierType</para>
         /// <para>Represents the following attribute in the schema: beginModifierType</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "beginModifierType")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue BeginModifierType
         {
             get => GetAttribute<StringValue>();
@@ -205,6 +289,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>endModifierType</para>
         /// <para>Represents the following attribute in the schema: endModifierType</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "endModifierType")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue EndModifierType
         {
             get => GetAttribute<StringValue>();
@@ -215,6 +305,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>rotationAngle</para>
         /// <para>Represents the following attribute in the schema: rotationAngle</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rotationAngle")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value RotationAngle
         {
             get => GetAttribute<Int32Value>();
@@ -225,6 +321,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>hotPoints</para>
         /// <para>Represents the following attribute in the schema: hotPoints</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "hotPoints")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public ListValue<StringValue> HotPoints
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -235,6 +337,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>centroid</para>
         /// <para>Represents the following attribute in the schema: centroid</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "centroid")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Centroid
         {
             get => GetAttribute<StringValue>();
@@ -245,6 +353,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>semanticType</para>
         /// <para>Represents the following attribute in the schema: semanticType</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "semanticType")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue SemanticType
         {
             get => GetAttribute<StringValue>();
@@ -255,6 +369,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>shapeName</para>
         /// <para>Represents the following attribute in the schema: shapeName</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "shapeName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ShapeName
         {
             get => GetAttribute<StringValue>();
@@ -265,6 +385,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         /// <para>shapeGeometry</para>
         /// <para>Represents the following attribute in the schema: shapeGeometry</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "shapeGeometry")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public ListValue<StringValue> ShapeGeometry
         {
             get => GetAttribute<ListValue<StringValue>>();
@@ -407,6 +533,12 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") })
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "type")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Type
         {
             get => GetAttribute<StringValue>();
@@ -487,9 +619,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(45, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class ContextLinkType : OpenXmlLeafElement
     {
         /// <summary>
@@ -503,6 +632,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>direction</para>
         /// <para>Represents the following attribute in the schema: direction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "direction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues> Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>>();
@@ -513,6 +648,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <para>ref</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "ref")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Reference
         {
             get => GetAttribute<StringValue>();

@@ -143,6 +143,12 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <para>Number Format Code</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "formatCode")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue FormatCode
         {
             get => GetAttribute<StringValue>();
@@ -153,6 +159,12 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <para>Linked to Source</para>
         /// <para>Represents the following attribute in the schema: sourceLinked</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "sourceLinked")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue SourceLinked
         {
             get => GetAttribute<BooleanValue>();
@@ -241,6 +253,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bwMode")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -1798,9 +1816,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class BooleanType : OpenXmlLeafElement
     {
         /// <summary>
@@ -1814,6 +1829,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Boolean Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Val
         {
             get => GetAttribute<BooleanValue>();
@@ -3888,9 +3909,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList &lt;c:extLst></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(64, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class StringDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3967,6 +3985,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Integer Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Val
         {
             get => GetAttribute<UInt32Value>();

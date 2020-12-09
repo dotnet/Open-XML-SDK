@@ -66,6 +66,12 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(35, "classid")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ActiveXControlClassId
         {
             get => GetAttribute<StringValue>();
@@ -79,6 +85,12 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(35, "license")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue License
         {
             get => GetAttribute<StringValue>();
@@ -92,6 +104,12 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -105,6 +123,12 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(35, "persistence")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
@@ -192,6 +216,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(35, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Name
         {
             get => GetAttribute<StringValue>();
@@ -205,6 +235,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(35, "value")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Value
         {
             get => GetAttribute<StringValue>();
@@ -317,6 +353,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(35, "persistence")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
@@ -330,6 +372,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -378,6 +426,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();

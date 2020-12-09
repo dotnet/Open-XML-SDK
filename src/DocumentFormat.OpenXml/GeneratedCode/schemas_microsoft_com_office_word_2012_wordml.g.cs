@@ -38,6 +38,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Val
         {
             get => GetAttribute<StringValue>();
@@ -51,6 +57,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "themeColor")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -64,6 +76,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "themeTint")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -77,6 +95,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "themeShade")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -137,6 +161,12 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "prefixMappings")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue PrefixMappings
         {
             get => GetAttribute<StringValue>();
@@ -150,6 +180,12 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "xpath")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue XPath
         {
             get => GetAttribute<StringValue>();
@@ -163,6 +199,12 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "storeItemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue StoreItemId
         {
             get => GetAttribute<StringValue>();
@@ -214,6 +256,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>>();
@@ -689,9 +737,6 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(69, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class OnOffType : OpenXmlLeafElement
     {
         /// <summary>
@@ -708,6 +753,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public OnOffValue Val
         {
             get => GetAttribute<OnOffValue>();
@@ -746,6 +797,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Val
         {
             get => GetAttribute<StringValue>();
@@ -793,6 +850,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Val
         {
             get => GetAttribute<Int32Value>();
@@ -839,6 +902,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "paraId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue ParaId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -852,6 +921,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "paraIdParent")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue ParaIdParent
         {
             get => GetAttribute<HexBinaryValue>();
@@ -865,6 +940,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "done")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public OnOffValue Done
         {
             get => GetAttribute<OnOffValue>();
@@ -954,6 +1035,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "author")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Author
         {
             get => GetAttribute<StringValue>();
@@ -967,6 +1054,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "contact")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Contact
         {
             get => GetAttribute<StringValue>();
@@ -1037,6 +1130,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "providerId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ProviderId
         {
             get => GetAttribute<StringValue>();
@@ -1050,6 +1149,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "userId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue UserId
         {
             get => GetAttribute<StringValue>();
@@ -1104,6 +1209,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Val
         {
             get => GetAttribute<StringValue>();

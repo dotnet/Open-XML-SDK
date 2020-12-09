@@ -63,6 +63,12 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Selected Style</para>
         /// <para>Represents the following attribute in the schema: SelectedStyle</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "SelectedStyle")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue SelectedStyle
         {
             get => GetAttribute<StringValue>();
@@ -73,6 +79,12 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Documentation Style Name</para>
         /// <para>Represents the following attribute in the schema: StyleName</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "StyleName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue StyleName
         {
             get => GetAttribute<StringValue>();
@@ -83,6 +95,12 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Uniform Resource Identifier</para>
         /// <para>Represents the following attribute in the schema: URI</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "URI")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Uri
         {
             get => GetAttribute<StringValue>();
@@ -3326,9 +3344,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class NameType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3526,9 +3541,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>Corporate &lt;b:Corporate></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(9, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     {
         /// <summary>

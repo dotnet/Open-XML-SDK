@@ -130,6 +130,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         /// <para>Object type</para>
         /// <para>Represents the following attribute in the schema: ObjectType</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "ObjectType")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>>();

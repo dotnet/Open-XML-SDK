@@ -34,6 +34,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         /// <para>embeddedHtml, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: embeddedHtml</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "embeddedHtml")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue EmbeddedHtml
         {
             get => GetAttribute<StringValue>();
@@ -44,6 +50,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         /// <para>h, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: h</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "h")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Height
         {
             get => GetAttribute<UInt32Value>();
@@ -54,6 +66,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         /// <para>w, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "w")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Width
         {
             get => GetAttribute<UInt32Value>();

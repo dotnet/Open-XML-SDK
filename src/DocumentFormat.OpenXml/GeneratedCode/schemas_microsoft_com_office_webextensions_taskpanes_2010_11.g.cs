@@ -133,6 +133,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -277,6 +283,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>dockstate, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: dockstate</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "dockstate")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue DockState
         {
             get => GetAttribute<StringValue>();
@@ -287,6 +299,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>visibility, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visibility</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visibility")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visibility
         {
             get => GetAttribute<BooleanValue>();
@@ -297,6 +315,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>width, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "width")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public DoubleValue Width
         {
             get => GetAttribute<DoubleValue>();
@@ -307,6 +331,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>row, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: row</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "row")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Row
         {
             get => GetAttribute<UInt32Value>();
@@ -317,6 +347,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>locked, this property is only available in Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "locked")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Locked
         {
             get => GetAttribute<BooleanValue>();

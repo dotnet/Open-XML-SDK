@@ -73,6 +73,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>normalEastAsianFlow, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: normalEastAsianFlow</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "normalEastAsianFlow")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue NormalEastAsianFlow
         {
             get => GetAttribute<BooleanValue>();
@@ -254,6 +260,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Id
         {
             get => GetAttribute<UInt32Value>();
@@ -264,6 +276,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Name
         {
             get => GetAttribute<StringValue>();
@@ -274,6 +292,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "descr")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -284,6 +308,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "hidden")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -294,6 +324,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Title
         {
             get => GetAttribute<StringValue>();
@@ -423,6 +459,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Text Box</para>
         /// <para>Represents the following attribute in the schema: txBox</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "txBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue TextBox
         {
             get => GetAttribute<BooleanValue>();
@@ -664,6 +706,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bwMode")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -926,6 +974,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt16Value Id
         {
             get => GetAttribute<UInt16Value>();
@@ -1029,6 +1083,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt16Value Id
         {
             get => GetAttribute<UInt16Value>();
@@ -1039,6 +1099,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>seq, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: seq</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "seq")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt16Value Sequence
         {
             get => GetAttribute<UInt16Value>();
@@ -1141,6 +1207,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rot")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -1151,6 +1223,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Paragraph Spacing</para>
         /// <para>Represents the following attribute in the schema: spcFirstLastPara</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "spcFirstLastPara")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue UseParagraphSpacing
         {
             get => GetAttribute<BooleanValue>();
@@ -1161,6 +1239,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Text Vertical Overflow</para>
         /// <para>Represents the following attribute in the schema: vertOverflow</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "vertOverflow")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues> VerticalOverflow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>>();
@@ -1171,6 +1255,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Text Horizontal Overflow</para>
         /// <para>Represents the following attribute in the schema: horzOverflow</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "horzOverflow")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>();
@@ -1181,6 +1271,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Vertical Text</para>
         /// <para>Represents the following attribute in the schema: vert</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "vert")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>();
@@ -1191,6 +1287,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Text Wrapping Type</para>
         /// <para>Represents the following attribute in the schema: wrap</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "wrap")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues> Wrap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>>();
@@ -1201,6 +1303,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Left Inset</para>
         /// <para>Represents the following attribute in the schema: lIns</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "lIns")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value LeftInset
         {
             get => GetAttribute<Int32Value>();
@@ -1211,6 +1319,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Top Inset</para>
         /// <para>Represents the following attribute in the schema: tIns</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tIns")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value TopInset
         {
             get => GetAttribute<Int32Value>();
@@ -1221,6 +1335,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Right Inset</para>
         /// <para>Represents the following attribute in the schema: rIns</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rIns")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value RightInset
         {
             get => GetAttribute<Int32Value>();
@@ -1231,6 +1351,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Bottom Inset</para>
         /// <para>Represents the following attribute in the schema: bIns</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bIns")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value BottomInset
         {
             get => GetAttribute<Int32Value>();
@@ -1241,6 +1367,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Number of Columns</para>
         /// <para>Represents the following attribute in the schema: numCol</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "numCol")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value ColumnCount
         {
             get => GetAttribute<Int32Value>();
@@ -1251,6 +1383,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Space Between Columns</para>
         /// <para>Represents the following attribute in the schema: spcCol</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "spcCol")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value ColumnSpacing
         {
             get => GetAttribute<Int32Value>();
@@ -1261,6 +1399,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Columns Right-To-Left</para>
         /// <para>Represents the following attribute in the schema: rtlCol</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rtlCol")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue RightToLeftColumns
         {
             get => GetAttribute<BooleanValue>();
@@ -1271,6 +1415,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>From WordArt</para>
         /// <para>Represents the following attribute in the schema: fromWordArt</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fromWordArt")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue FromWordArt
         {
             get => GetAttribute<BooleanValue>();
@@ -1281,6 +1431,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Anchor</para>
         /// <para>Represents the following attribute in the schema: anchor</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "anchor")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>();
@@ -1291,6 +1447,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Anchor Center</para>
         /// <para>Represents the following attribute in the schema: anchorCtr</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "anchorCtr")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue AnchorCenter
         {
             get => GetAttribute<BooleanValue>();
@@ -1301,6 +1463,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Force Anti-Alias</para>
         /// <para>Represents the following attribute in the schema: forceAA</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "forceAA")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ForceAntiAlias
         {
             get => GetAttribute<BooleanValue>();
@@ -1311,6 +1479,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Text Upright</para>
         /// <para>Represents the following attribute in the schema: upright</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "upright")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue UpRight
         {
             get => GetAttribute<BooleanValue>();
@@ -1321,6 +1495,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Compatible Line Spacing</para>
         /// <para>Represents the following attribute in the schema: compatLnSpc</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "compatLnSpc")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue CompatibleLineSpacing
         {
             get => GetAttribute<BooleanValue>();

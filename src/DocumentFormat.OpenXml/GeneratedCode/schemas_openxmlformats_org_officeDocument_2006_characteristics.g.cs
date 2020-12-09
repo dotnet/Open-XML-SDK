@@ -95,6 +95,12 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Name of Characteristic</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Name
         {
             get => GetAttribute<StringValue>();
@@ -105,6 +111,12 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Relationship of Value to Name</para>
         /// <para>Represents the following attribute in the schema: relation</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "relation")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>>();
@@ -115,6 +127,12 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Characteristic Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Val
         {
             get => GetAttribute<StringValue>();
@@ -125,6 +143,12 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Characteristic Grammar</para>
         /// <para>Represents the following attribute in the schema: vocabulary</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "vocabulary")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Vocabulary
         {
             get => GetAttribute<StringValue>();

@@ -37,6 +37,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>>();
@@ -82,6 +88,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.StyleValues>>();
@@ -3861,9 +3873,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(21, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class OnOffType : OpenXmlLeafElement
     {
         /// <summary>
@@ -3880,6 +3889,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>>();
@@ -3918,6 +3933,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "alnAt")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue AlignAt
         {
             get => GetAttribute<IntegerValue>();
@@ -3931,6 +3952,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue Val
         {
             get => GetAttribute<IntegerValue>();
@@ -4095,6 +4122,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "space")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
@@ -4226,9 +4259,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(21, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class CharType : OpenXmlLeafElement
     {
         /// <summary>
@@ -4245,6 +4275,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Val
         {
             get => GetAttribute<StringValue>();
@@ -6848,9 +6884,6 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(21, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7020,9 +7053,6 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(21, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class TopBottomType : OpenXmlLeafElement
     {
         /// <summary>
@@ -7039,6 +7069,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>>();
@@ -7529,6 +7565,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>>();
@@ -7729,6 +7771,12 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>>();
@@ -7809,9 +7857,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(21, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class SpacingRuleType : OpenXmlLeafElement
     {
         /// <summary>
@@ -7828,6 +7873,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue Val
         {
             get => GetAttribute<IntegerValue>();
@@ -7905,9 +7956,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(21, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class UnsignedShortType : OpenXmlLeafElement
     {
         /// <summary>
@@ -7924,6 +7972,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt16Value Val
         {
             get => GetAttribute<UInt16Value>();
@@ -8120,6 +8174,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>>();
@@ -8604,6 +8664,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue Val
         {
             get => GetAttribute<IntegerValue>();
@@ -8650,6 +8716,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>>();
@@ -9058,9 +9130,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(21, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class TwipsMeasureType : OpenXmlLeafElement
     {
         /// <summary>
@@ -9077,6 +9146,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Val
         {
             get => GetAttribute<UInt32Value>();
@@ -9508,9 +9583,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(21, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class LimitLocationType : OpenXmlLeafElement
     {
         /// <summary>
@@ -9527,6 +9599,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>>();
@@ -10285,6 +10363,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue Val
         {
             get => GetAttribute<IntegerValue>();
@@ -10441,9 +10525,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(21, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
     {
         /// <summary>
@@ -10460,6 +10541,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>>();
@@ -10501,6 +10588,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Val
         {
             get => GetAttribute<StringValue>();
@@ -10547,6 +10640,12 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>>();
@@ -10589,6 +10688,12 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>>();

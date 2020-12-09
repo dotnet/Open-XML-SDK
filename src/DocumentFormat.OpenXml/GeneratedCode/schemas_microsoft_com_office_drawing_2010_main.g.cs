@@ -35,6 +35,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>cellRange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: cellRange</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "cellRange")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue CellRange
         {
             get => GetAttribute<StringValue>();
@@ -45,6 +51,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "spid")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -87,6 +99,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "spid")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -128,6 +146,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Val
         {
             get => GetAttribute<BooleanValue>();
@@ -203,6 +227,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>bwMode, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bwMode")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -216,6 +246,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue RelationshipId
         {
             get => GetAttribute<StringValue>();
@@ -311,6 +347,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Val
         {
             get => GetAttribute<BooleanValue>();
@@ -554,6 +596,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Line Width</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "w")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Width
         {
             get => GetAttribute<Int32Value>();
@@ -564,6 +612,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Line Ending Cap Type</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "cap")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues> CapType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineCapValues>>();
@@ -574,6 +628,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Compound Line Type</para>
         /// <para>Represents the following attribute in the schema: cmpd</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "cmpd")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues> CompoundLineType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues>>();
@@ -584,6 +644,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Stroke Alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "algn")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues> Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues>>();
@@ -940,6 +1006,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Shape Depth</para>
         /// <para>Represents the following attribute in the schema: z</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "z")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value Z
         {
             get => GetAttribute<Int64Value>();
@@ -950,6 +1022,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Extrusion Height</para>
         /// <para>Represents the following attribute in the schema: extrusionH</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "extrusionH")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value ExtrusionHeight
         {
             get => GetAttribute<Int64Value>();
@@ -960,6 +1038,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Contour Width</para>
         /// <para>Represents the following attribute in the schema: contourW</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "contourW")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value ContourWidth
         {
             get => GetAttribute<Int64Value>();
@@ -970,6 +1054,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Preset Material Type</para>
         /// <para>Represents the following attribute in the schema: prstMaterial</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "prstMaterial")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues> PresetMaterial
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>();
@@ -1179,6 +1269,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Val
         {
             get => GetAttribute<BooleanValue>();
@@ -1346,6 +1442,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Disallow Shape Grouping</para>
         /// <para>Represents the following attribute in the schema: noGrp</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "noGrp")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue NoGrouping
         {
             get => GetAttribute<BooleanValue>();
@@ -1356,6 +1458,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Disallow Shape Selection</para>
         /// <para>Represents the following attribute in the schema: noSelect</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "noSelect")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue NoSelection
         {
             get => GetAttribute<BooleanValue>();
@@ -1366,6 +1474,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Disallow Shape Rotation</para>
         /// <para>Represents the following attribute in the schema: noRot</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "noRot")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue NoRotation
         {
             get => GetAttribute<BooleanValue>();
@@ -1376,6 +1490,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Disallow Aspect Ratio Change</para>
         /// <para>Represents the following attribute in the schema: noChangeAspect</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "noChangeAspect")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue NoChangeAspect
         {
             get => GetAttribute<BooleanValue>();
@@ -1386,6 +1506,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Disallow Shape Movement</para>
         /// <para>Represents the following attribute in the schema: noMove</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "noMove")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue NoMove
         {
             get => GetAttribute<BooleanValue>();
@@ -1396,6 +1522,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Disallow Shape Resize</para>
         /// <para>Represents the following attribute in the schema: noResize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "noResize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue NoResize
         {
             get => GetAttribute<BooleanValue>();
@@ -1406,6 +1538,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Disallow Shape Point Editing</para>
         /// <para>Represents the following attribute in the schema: noEditPoints</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "noEditPoints")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue NoEditPoints
         {
             get => GetAttribute<BooleanValue>();
@@ -1416,6 +1554,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Disallow Showing Adjust Handles</para>
         /// <para>Represents the following attribute in the schema: noAdjustHandles</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "noAdjustHandles")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue NoAdjustHandles
         {
             get => GetAttribute<BooleanValue>();
@@ -1426,6 +1570,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Disallow Arrowhead Changes</para>
         /// <para>Represents the following attribute in the schema: noChangeArrowheads</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "noChangeArrowheads")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue NoChangeArrowheads
         {
             get => GetAttribute<BooleanValue>();
@@ -1436,6 +1586,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Disallow Shape Type Change</para>
         /// <para>Represents the following attribute in the schema: noChangeShapeType</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "noChangeShapeType")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue NoChangeShapeType
         {
             get => GetAttribute<BooleanValue>();
@@ -1503,6 +1659,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>x1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x1</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "x1")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value FirstXCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1513,6 +1675,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>y1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y1</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "y1")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value FirstYCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1523,6 +1691,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>x2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x2</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "x2")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value SecondXCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1533,6 +1707,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>y2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y2</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "y2")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value SecondYCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1592,6 +1772,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>x1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x1</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "x1")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value FirstXCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1602,6 +1788,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>y1, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y1</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "y1")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value FirstYCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1612,6 +1804,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>x2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: x2</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "x2")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value SecondXCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1622,6 +1820,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>y2, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: y2</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "y2")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value SecondYCoordinate
         {
             get => GetAttribute<Int32Value>();
@@ -1681,6 +1885,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>radius, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: radius</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "radius")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Radius
         {
             get => GetAttribute<Int32Value>();
@@ -1724,6 +1934,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -1734,6 +1950,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>crackSpacing, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: crackSpacing</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "crackSpacing")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value CrackSpacing
         {
             get => GetAttribute<Int32Value>();
@@ -1781,6 +2003,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -1791,6 +2019,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "pressure")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Pressure
         {
             get => GetAttribute<Int32Value>();
@@ -1838,6 +2072,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -1848,6 +2088,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "pressure")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Pressure
         {
             get => GetAttribute<Int32Value>();
@@ -1895,6 +2141,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -1905,6 +2157,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>numberOfShades, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: numberOfShades</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "numberOfShades")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value NumberOfShades
         {
             get => GetAttribute<Int32Value>();
@@ -1952,6 +2210,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -1962,6 +2226,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>grainSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: grainSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "grainSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value GrainSize
         {
             get => GetAttribute<Int32Value>();
@@ -2009,6 +2279,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2019,6 +2295,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "scaling")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Scaling
         {
             get => GetAttribute<Int32Value>();
@@ -2066,6 +2348,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2076,6 +2364,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>intensity, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: intensity</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "intensity")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Intensity
         {
             get => GetAttribute<Int32Value>();
@@ -2123,6 +2417,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2133,6 +2433,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>smoothness, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: smoothness</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "smoothness")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Smoothness
         {
             get => GetAttribute<Int32Value>();
@@ -2180,6 +2486,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2190,6 +2502,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>gridSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: gridSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "gridSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value GridSize
         {
             get => GetAttribute<Int32Value>();
@@ -2237,6 +2555,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2247,6 +2571,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>pencilSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pencilSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "pencilSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value PencilSize
         {
             get => GetAttribute<Int32Value>();
@@ -2294,6 +2624,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2304,6 +2640,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Size
         {
             get => GetAttribute<Int32Value>();
@@ -2351,6 +2693,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2361,6 +2709,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "pressure")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Pressure
         {
             get => GetAttribute<Int32Value>();
@@ -2408,6 +2762,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2418,6 +2778,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>intensity, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: intensity</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "intensity")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Intensity
         {
             get => GetAttribute<Int32Value>();
@@ -2465,6 +2831,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2475,6 +2847,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>brushSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: brushSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "brushSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value BrushSize
         {
             get => GetAttribute<Int32Value>();
@@ -2522,6 +2900,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2532,6 +2916,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "scaling")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value BrushSize
         {
             get => GetAttribute<Int32Value>();
@@ -2579,6 +2969,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2589,6 +2985,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>pencilSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pencilSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "pencilSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value BrushSize
         {
             get => GetAttribute<Int32Value>();
@@ -2636,6 +3038,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2646,6 +3054,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "pressure")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Pressure
         {
             get => GetAttribute<Int32Value>();
@@ -2693,6 +3107,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2703,6 +3123,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>detail, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: detail</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "detail")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Detail
         {
             get => GetAttribute<Int32Value>();
@@ -2750,6 +3176,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2760,6 +3192,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>smoothness, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: smoothness</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "smoothness")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Smoothness
         {
             get => GetAttribute<Int32Value>();
@@ -2807,6 +3245,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2817,6 +3261,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "scaling")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Scaling
         {
             get => GetAttribute<Int32Value>();
@@ -2864,6 +3314,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "trans")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Transparancy
         {
             get => GetAttribute<Int32Value>();
@@ -2874,6 +3330,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>brushSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: brushSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "brushSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value BrushSize
         {
             get => GetAttribute<Int32Value>();
@@ -2952,6 +3414,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>t, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "t")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value MarqueeTop
         {
             get => GetAttribute<Int32Value>();
@@ -2962,6 +3430,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>b, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "b")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value MarqueeBottom
         {
             get => GetAttribute<Int32Value>();
@@ -2972,6 +3446,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>l, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "l")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value MarqueeLeft
         {
             get => GetAttribute<Int32Value>();
@@ -2982,6 +3462,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>r, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "r")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value MarqueeRight
         {
             get => GetAttribute<Int32Value>();
@@ -3048,6 +3534,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>bright, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: bright</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bright")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Bright
         {
             get => GetAttribute<Int32Value>();
@@ -3058,6 +3550,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>contrast, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: contrast</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "contrast")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Contrast
         {
             get => GetAttribute<Int32Value>();
@@ -3105,6 +3603,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <para>colorTemp, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: colorTemp</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "colorTemp")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value ColorTemperatureValue
         {
             get => GetAttribute<Int32Value>();
@@ -3148,6 +3652,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1500L), MaxInclusi
         /// <para>sat, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sat</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "sat")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value SaturationAmount
         {
             get => GetAttribute<Int32Value>();
@@ -3191,6 +3701,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <para>amount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: amount</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "amount")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Amount
         {
             get => GetAttribute<Int32Value>();
@@ -3290,6 +3806,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -3771,6 +4293,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "embed")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Embed
         {
             get => GetAttribute<StringValue>();
@@ -3848,6 +4376,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Id
         {
             get => GetAttribute<UInt32Value>();
@@ -3858,6 +4392,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Name
         {
             get => GetAttribute<StringValue>();
@@ -3868,6 +4408,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "descr")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -3878,6 +4424,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "hidden")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -3888,6 +4440,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Title
         {
             get => GetAttribute<StringValue>();
@@ -4017,6 +4575,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>isComment, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "isComment")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue IsComment
         {
             get => GetAttribute<BooleanValue>();
@@ -4213,6 +4777,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rot")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -4223,6 +4793,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "flipH")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -4233,6 +4809,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "flipV")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue VerticalFlip
         {
             get => GetAttribute<BooleanValue>();

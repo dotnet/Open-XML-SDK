@@ -385,6 +385,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "fciName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue CommandName
         {
             get => GetAttribute<StringValue>();
@@ -398,6 +404,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "fciIndex")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue CommandIndex
         {
             get => GetAttribute<HexBinaryValue>();
@@ -411,6 +423,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "swArg")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue Argument
         {
             get => GetAttribute<HexBinaryValue>();
@@ -496,9 +514,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class MacroWllType : OpenXmlLeafElement
     {
         /// <summary>
@@ -515,6 +530,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "macroName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue MacroName
         {
             get => GetAttribute<StringValue>();
@@ -588,9 +609,6 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
     {
         /// <summary>
@@ -607,6 +625,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "acdName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue AcceleratorName
         {
             get => GetAttribute<StringValue>();
@@ -645,6 +669,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -725,6 +755,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "chmPrimary")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue CharacterMapPrimary
         {
             get => GetAttribute<HexBinaryValue>();
@@ -738,6 +774,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "chmSecondary")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue CharacterMapSecondary
         {
             get => GetAttribute<HexBinaryValue>();
@@ -751,6 +793,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "kcmPrimary")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue KeyCodePrimary
         {
             get => GetAttribute<HexBinaryValue>();
@@ -764,6 +812,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "kcmSecondary")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue KeyCodeSecondary
         {
             get => GetAttribute<HexBinaryValue>();
@@ -777,6 +831,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "mask")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public OnOffValue Mask
         {
             get => GetAttribute<OnOffValue>();
@@ -913,6 +973,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "argValue")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ArgumentValue
         {
             get => GetAttribute<StringValue>();
@@ -926,6 +992,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "fciBasedOn")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue CommandBasedOn
         {
             get => GetAttribute<StringValue>();
@@ -939,6 +1011,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "fciIndexBasedOn")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue CommandIndexBasedOn
         {
             get => GetAttribute<HexBinaryValue>();
@@ -952,6 +1030,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "acdName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue AcceleratorName
         {
             get => GetAttribute<StringValue>();
@@ -1000,6 +1084,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "macroName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue MacroName
         {
             get => GetAttribute<StringValue>();
@@ -1013,6 +1103,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Name
         {
             get => GetAttribute<StringValue>();
@@ -1026,6 +1122,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "menuHelp")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue MenuHelp
         {
             get => GetAttribute<StringValue>();
@@ -1039,6 +1141,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "bEncrypt")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue BEncrypt
         {
             get => GetAttribute<HexBinaryValue>();
@@ -1052,6 +1160,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "cmg")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue Cmg
         {
             get => GetAttribute<HexBinaryValue>();
@@ -1956,6 +2070,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -2110,9 +2230,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>KeyMapEntry &lt;wne:keymap></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(33, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class KeymapsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2304,6 +2421,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public OnOffValue Val
         {
             get => GetAttribute<OnOffValue>();
@@ -2346,6 +2469,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(33, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue Val
         {
             get => GetAttribute<IntegerValue>();

@@ -37,6 +37,12 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         /// <remark>
         /// xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(86, "font")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Font
         {
             get => GetAttribute<StringValue>();
@@ -50,6 +56,12 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         /// <remark>
         /// xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
         /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(86, "char")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public HexBinaryValue Char
         {
             get => GetAttribute<HexBinaryValue>();

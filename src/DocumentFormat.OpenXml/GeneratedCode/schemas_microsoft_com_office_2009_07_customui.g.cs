@@ -34,6 +34,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -44,6 +50,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -54,6 +66,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -64,6 +82,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -74,6 +98,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -84,6 +114,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -94,6 +130,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -104,6 +146,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -114,6 +162,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -124,6 +178,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -134,6 +194,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -144,6 +210,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -154,6 +226,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -164,6 +242,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -174,6 +258,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -184,6 +274,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -194,6 +290,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -204,6 +306,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -214,6 +322,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -224,6 +338,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -234,6 +354,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -244,6 +370,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -254,6 +386,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -264,6 +402,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -274,6 +418,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -284,6 +434,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -415,6 +571,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -425,6 +587,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -435,6 +603,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -445,6 +619,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -455,6 +635,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -465,6 +651,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -475,6 +667,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -485,6 +683,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -495,6 +699,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -505,6 +715,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -515,6 +731,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -525,6 +747,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -535,6 +763,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -545,6 +779,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -555,6 +795,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -565,6 +811,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -575,6 +827,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -585,6 +843,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -595,6 +859,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -605,6 +875,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -615,6 +891,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -625,6 +907,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -635,6 +923,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -645,6 +939,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -655,6 +955,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -665,6 +971,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -675,6 +987,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -685,6 +1003,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -695,6 +1019,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -705,6 +1035,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -853,6 +1189,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getPressed")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -863,6 +1205,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -873,6 +1221,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -883,6 +1237,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -893,6 +1253,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -903,6 +1269,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -913,6 +1285,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -923,6 +1301,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -933,6 +1317,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -943,6 +1333,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -953,6 +1349,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -963,6 +1365,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -973,6 +1381,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -983,6 +1397,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -993,6 +1413,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -1003,6 +1429,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -1013,6 +1445,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -1023,6 +1461,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -1033,6 +1477,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -1043,6 +1493,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -1053,6 +1509,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -1063,6 +1525,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -1073,6 +1541,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -1083,6 +1557,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -1243,6 +1723,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -1253,6 +1739,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -1263,6 +1755,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "invalidateContentOnDrop")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -1273,6 +1771,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>columns, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "columns")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue Columns
         {
             get => GetAttribute<IntegerValue>();
@@ -1283,6 +1787,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>rows, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rows")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue Rows
         {
             get => GetAttribute<IntegerValue>();
@@ -1293,6 +1803,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>itemWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "itemWidth")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue ItemWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -1303,6 +1819,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>itemHeight, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "itemHeight")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue ItemHeight
         {
             get => GetAttribute<IntegerValue>();
@@ -1313,6 +1835,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemWidth")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemWidth
         {
             get => GetAttribute<StringValue>();
@@ -1323,6 +1851,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemHeight, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemHeight")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemHeight
         {
             get => GetAttribute<StringValue>();
@@ -1333,6 +1867,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showItemLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowItemLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -1343,6 +1883,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showInRibbon, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showInRibbon</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showInRibbon")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>>();
@@ -1353,6 +1899,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -1363,6 +1915,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -1373,6 +1931,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -1383,6 +1947,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -1393,6 +1963,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -1403,6 +1979,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -1413,6 +1995,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showItemImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
@@ -1423,6 +2011,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemCount")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -1433,6 +2027,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -1443,6 +2043,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemScreentip
         {
             get => GetAttribute<StringValue>();
@@ -1453,6 +2059,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemSupertip
         {
             get => GetAttribute<StringValue>();
@@ -1463,6 +2075,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemImage
         {
             get => GetAttribute<StringValue>();
@@ -1473,6 +2091,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -1483,6 +2107,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "sizeString")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue SizeString
         {
             get => GetAttribute<StringValue>();
@@ -1493,6 +2123,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSelectedItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSelectedItemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSelectedItemID
         {
             get => GetAttribute<StringValue>();
@@ -1503,6 +2139,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSelectedItemIndex")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -1513,6 +2155,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -1523,6 +2171,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -1533,6 +2187,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -1543,6 +2203,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -1553,6 +2219,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -1563,6 +2235,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -1573,6 +2251,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -1583,6 +2267,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -1593,6 +2283,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -1603,6 +2299,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -1613,6 +2315,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -1623,6 +2331,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -1633,6 +2347,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -1643,6 +2363,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -1653,6 +2379,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -1663,6 +2395,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -1673,6 +2411,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -1683,6 +2427,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -1693,6 +2443,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -1703,6 +2459,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -1713,6 +2475,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -1723,6 +2491,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -1947,6 +2721,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getPressed")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -1957,6 +2737,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -1967,6 +2753,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -1977,6 +2769,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -1987,6 +2785,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -1997,6 +2801,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -2007,6 +2817,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -2017,6 +2833,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -2027,6 +2849,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -2037,6 +2865,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -2047,6 +2881,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2057,6 +2897,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -2067,6 +2913,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -2077,6 +2929,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -2087,6 +2945,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -2097,6 +2961,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -2107,6 +2977,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -2117,6 +2993,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -2127,6 +3009,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -2137,6 +3025,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -2147,6 +3041,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -2157,6 +3057,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2167,6 +3073,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2177,6 +3089,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -2187,6 +3105,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -2197,6 +3121,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -2207,6 +3137,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -2217,6 +3153,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -2227,6 +3169,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -2237,6 +3185,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -2247,6 +3201,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -2398,6 +3358,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -2408,6 +3374,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2418,6 +3390,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -2428,6 +3406,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -2438,6 +3422,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -2448,6 +3438,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2458,6 +3454,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2468,6 +3470,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>title, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Title
         {
             get => GetAttribute<StringValue>();
@@ -2478,6 +3486,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getTitle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetTitle
         {
             get => GetAttribute<StringValue>();
@@ -2585,6 +3599,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -2595,6 +3615,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -2605,6 +3631,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -2615,6 +3647,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2625,6 +3663,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -2635,6 +3679,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -2645,6 +3695,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -2655,6 +3711,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -2665,6 +3727,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2675,6 +3743,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2685,6 +3759,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -2695,6 +3775,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -2705,6 +3791,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -2715,6 +3807,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -2725,6 +3823,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -2735,6 +3839,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -2882,6 +3992,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "itemSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
@@ -2892,6 +4008,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -2902,6 +4024,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -2912,6 +4040,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -2922,6 +4056,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -2932,6 +4072,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -2942,6 +4088,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -2952,6 +4104,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -2962,6 +4120,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -2972,6 +4136,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -2982,6 +4152,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -2992,6 +4168,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -3002,6 +4184,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -3012,6 +4200,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -3022,6 +4216,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -3032,6 +4232,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -3042,6 +4248,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -3052,6 +4264,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -3062,6 +4280,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -3072,6 +4296,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -3082,6 +4312,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3092,6 +4328,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3102,6 +4344,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -3112,6 +4360,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -3122,6 +4376,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -3132,6 +4392,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -3142,6 +4408,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -3152,6 +4424,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -3162,6 +4440,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -3172,6 +4456,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -3355,6 +4645,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -3365,6 +4661,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -3375,6 +4677,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -3385,6 +4693,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3395,6 +4709,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -3405,6 +4725,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -3415,6 +4741,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getContent, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getContent")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetContent
         {
             get => GetAttribute<StringValue>();
@@ -3425,6 +4757,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "invalidateContentOnDrop")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -3435,6 +4773,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -3445,6 +4789,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -3455,6 +4805,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -3465,6 +4821,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -3475,6 +4837,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -3485,6 +4853,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -3495,6 +4869,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -3505,6 +4885,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -3515,6 +4901,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -3525,6 +4917,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -3535,6 +4933,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -3545,6 +4949,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -3555,6 +4965,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -3565,6 +4981,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3575,6 +4997,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3585,6 +5013,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -3595,6 +5029,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -3605,6 +5045,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -3615,6 +5061,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -3625,6 +5077,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -3635,6 +5093,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -3645,6 +5109,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -3655,6 +5125,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -3836,6 +5312,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -3846,6 +5328,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -3856,6 +5344,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -3866,6 +5360,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3876,6 +5376,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -3886,6 +5392,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -3896,6 +5408,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -3906,6 +5424,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -3916,6 +5440,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3926,6 +5456,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -3936,6 +5472,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -3946,6 +5488,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -3956,6 +5504,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -3966,6 +5520,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -3976,6 +5536,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -3986,6 +5552,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -4133,6 +5705,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -4143,6 +5721,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4153,6 +5737,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -4163,6 +5753,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -4173,6 +5769,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "itemSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
@@ -4183,6 +5785,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>title, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Title
         {
             get => GetAttribute<StringValue>();
@@ -4193,6 +5801,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getTitle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetTitle
         {
             get => GetAttribute<StringValue>();
@@ -4203,6 +5817,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -4213,6 +5833,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -4223,6 +5849,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -4233,6 +5865,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -4243,6 +5881,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -4253,6 +5897,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -4263,6 +5913,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -4273,6 +5929,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -4283,6 +5945,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -4293,6 +5961,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -4303,6 +5977,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -4313,6 +5993,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -4323,6 +6009,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -4333,6 +6025,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4343,6 +6041,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4353,6 +6057,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -4363,6 +6073,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -4373,6 +6089,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -4383,6 +6105,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -4393,6 +6121,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -4403,6 +6137,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -4413,6 +6153,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -4423,6 +6169,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -4606,6 +6358,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -4616,6 +6374,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4626,6 +6390,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -4636,6 +6406,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -4646,6 +6422,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -4656,6 +6438,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4666,6 +6454,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4733,6 +6527,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -4743,6 +6543,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSize
         {
             get => GetAttribute<StringValue>();
@@ -4753,6 +6559,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -4763,6 +6575,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -4773,6 +6591,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -4783,6 +6607,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -4793,6 +6623,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -4803,6 +6639,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -4813,6 +6655,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -4823,6 +6671,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4833,6 +6687,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -4843,6 +6703,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -4853,6 +6719,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -4863,6 +6735,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -4873,6 +6751,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -4883,6 +6767,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -4893,6 +6783,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -4903,6 +6799,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -4913,6 +6815,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -4923,6 +6831,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -4933,6 +6847,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4943,6 +6863,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -4953,6 +6879,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -4963,6 +6895,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -4973,6 +6911,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -4983,6 +6927,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -4993,6 +6943,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -5003,6 +6959,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -5013,6 +6975,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -5023,6 +6991,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -5168,6 +7142,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -5178,6 +7158,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5188,6 +7174,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -5198,6 +7190,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -5208,6 +7206,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -5218,6 +7222,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -5228,6 +7238,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -5238,6 +7254,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -5248,6 +7270,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -5258,6 +7286,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -5268,6 +7302,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -5278,6 +7318,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -5288,6 +7334,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -5298,6 +7350,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -5308,6 +7366,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5318,6 +7382,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5328,6 +7398,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -5338,6 +7414,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -5348,6 +7430,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -5358,6 +7446,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -5468,6 +7562,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -5478,6 +7578,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSize
         {
             get => GetAttribute<StringValue>();
@@ -5488,6 +7594,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -5498,6 +7610,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -5508,6 +7626,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -5518,6 +7642,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -5528,6 +7658,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -5538,6 +7674,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -5548,6 +7690,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -5558,6 +7706,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -5568,6 +7722,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -5578,6 +7738,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5588,6 +7754,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -5598,6 +7770,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -5608,6 +7786,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -5618,6 +7802,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -5628,6 +7818,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -5638,6 +7834,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -5648,6 +7850,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -5658,6 +7866,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -5668,6 +7882,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -5678,6 +7898,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -5688,6 +7914,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5698,6 +7930,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -5708,6 +7946,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -5718,6 +7962,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -5728,6 +7978,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -5738,6 +7994,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -5748,6 +8010,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -5758,6 +8026,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -5768,6 +8042,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -5778,6 +8058,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -5931,6 +8217,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -5941,6 +8233,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSize
         {
             get => GetAttribute<StringValue>();
@@ -5951,6 +8249,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getPressed")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -5961,6 +8265,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -5971,6 +8281,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -5981,6 +8297,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -5991,6 +8313,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -6001,6 +8329,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -6011,6 +8345,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -6021,6 +8361,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -6031,6 +8377,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -6041,6 +8393,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -6051,6 +8409,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -6061,6 +8425,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -6071,6 +8441,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -6081,6 +8457,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -6091,6 +8473,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -6101,6 +8489,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -6111,6 +8505,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -6121,6 +8521,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -6131,6 +8537,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -6141,6 +8553,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -6151,6 +8569,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -6161,6 +8585,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -6171,6 +8601,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -6181,6 +8617,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -6191,6 +8633,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -6201,6 +8649,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -6211,6 +8665,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -6221,6 +8681,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -6231,6 +8697,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -6241,6 +8713,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -6251,6 +8729,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -6407,6 +8891,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -6417,6 +8907,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -6427,6 +8923,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -6437,6 +8939,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -6447,6 +8955,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -6457,6 +8971,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>maxLength, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "maxLength")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue MaxLength
         {
             get => GetAttribute<IntegerValue>();
@@ -6467,6 +8987,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetText
         {
             get => GetAttribute<StringValue>();
@@ -6477,6 +9003,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onChange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onChange")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnChange
         {
             get => GetAttribute<StringValue>();
@@ -6487,6 +9019,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "sizeString")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue SizeString
         {
             get => GetAttribute<StringValue>();
@@ -6497,6 +9035,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -6507,6 +9051,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -6517,6 +9067,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -6527,6 +9083,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -6537,6 +9099,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -6547,6 +9115,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -6557,6 +9131,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -6567,6 +9147,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -6577,6 +9163,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -6587,6 +9179,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -6597,6 +9195,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -6607,6 +9211,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -6617,6 +9227,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -6627,6 +9243,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -6637,6 +9259,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -6647,6 +9275,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -6657,6 +9291,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -6667,6 +9307,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -6677,6 +9323,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -6687,6 +9339,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -6697,6 +9355,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -6707,6 +9371,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -6888,6 +9558,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showItemImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
@@ -6898,6 +9574,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemCount")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -6908,6 +9590,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -6918,6 +9606,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemScreentip
         {
             get => GetAttribute<StringValue>();
@@ -6928,6 +9622,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemSupertip
         {
             get => GetAttribute<StringValue>();
@@ -6938,6 +9638,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemImage
         {
             get => GetAttribute<StringValue>();
@@ -6948,6 +9654,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -6958,6 +9670,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "sizeString")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue SizeString
         {
             get => GetAttribute<StringValue>();
@@ -6968,6 +9686,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "invalidateContentOnDrop")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -6978,6 +9702,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -6988,6 +9718,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -6998,6 +9734,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -7008,6 +9750,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -7018,6 +9766,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -7028,6 +9782,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>maxLength, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "maxLength")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue MaxLength
         {
             get => GetAttribute<IntegerValue>();
@@ -7038,6 +9798,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetText
         {
             get => GetAttribute<StringValue>();
@@ -7048,6 +9814,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onChange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onChange")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnChange
         {
             get => GetAttribute<StringValue>();
@@ -7058,6 +9830,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -7068,6 +9846,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -7078,6 +9862,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -7088,6 +9878,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -7098,6 +9894,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -7108,6 +9910,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -7118,6 +9926,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -7128,6 +9942,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -7138,6 +9958,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -7148,6 +9974,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -7158,6 +9990,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -7168,6 +10006,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -7178,6 +10022,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -7188,6 +10038,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -7198,6 +10054,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -7208,6 +10070,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -7218,6 +10086,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -7228,6 +10102,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -7238,6 +10118,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -7248,6 +10134,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -7258,6 +10150,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -7268,6 +10166,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -7484,6 +10388,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -7494,6 +10404,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -7504,6 +10420,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -7514,6 +10436,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -7524,6 +10452,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -7534,6 +10468,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -7544,6 +10484,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showItemImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
@@ -7554,6 +10500,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemCount")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -7564,6 +10516,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -7574,6 +10532,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemScreentip
         {
             get => GetAttribute<StringValue>();
@@ -7584,6 +10548,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemSupertip
         {
             get => GetAttribute<StringValue>();
@@ -7594,6 +10564,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemImage
         {
             get => GetAttribute<StringValue>();
@@ -7604,6 +10580,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -7614,6 +10596,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "sizeString")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue SizeString
         {
             get => GetAttribute<StringValue>();
@@ -7624,6 +10612,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSelectedItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSelectedItemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSelectedItemID
         {
             get => GetAttribute<StringValue>();
@@ -7634,6 +10628,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSelectedItemIndex")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -7644,6 +10644,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showItemLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowItemLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -7654,6 +10660,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -7664,6 +10676,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -7674,6 +10692,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -7684,6 +10708,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -7694,6 +10724,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -7704,6 +10740,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -7714,6 +10756,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -7724,6 +10772,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -7734,6 +10788,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -7744,6 +10804,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -7754,6 +10820,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -7764,6 +10836,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -7774,6 +10852,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -7784,6 +10868,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -7794,6 +10884,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -7804,6 +10900,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -7814,6 +10916,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -7824,6 +10932,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -7834,6 +10948,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -7844,6 +10964,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -7854,6 +10980,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -7864,6 +10996,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -8082,6 +11220,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -8092,6 +11236,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSize
         {
             get => GetAttribute<StringValue>();
@@ -8102,6 +11252,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -8112,6 +11268,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -8122,6 +11284,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "invalidateContentOnDrop")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -8132,6 +11300,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>columns, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "columns")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue Columns
         {
             get => GetAttribute<IntegerValue>();
@@ -8142,6 +11316,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>rows, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rows")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue Rows
         {
             get => GetAttribute<IntegerValue>();
@@ -8152,6 +11332,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>itemWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "itemWidth")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue ItemWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -8162,6 +11348,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>itemHeight, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "itemHeight")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue ItemHeight
         {
             get => GetAttribute<IntegerValue>();
@@ -8172,6 +11364,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemWidth")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemWidth
         {
             get => GetAttribute<StringValue>();
@@ -8182,6 +11380,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemHeight, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemHeight")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemHeight
         {
             get => GetAttribute<StringValue>();
@@ -8192,6 +11396,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showItemLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowItemLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -8202,6 +11412,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showInRibbon, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showInRibbon</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showInRibbon")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>>();
@@ -8212,6 +11428,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -8222,6 +11444,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -8232,6 +11460,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -8242,6 +11476,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -8252,6 +11492,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -8262,6 +11508,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -8272,6 +11524,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showItemImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
@@ -8282,6 +11540,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemCount")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -8292,6 +11556,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -8302,6 +11572,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemScreentip
         {
             get => GetAttribute<StringValue>();
@@ -8312,6 +11588,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemSupertip
         {
             get => GetAttribute<StringValue>();
@@ -8322,6 +11604,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemImage
         {
             get => GetAttribute<StringValue>();
@@ -8332,6 +11620,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -8342,6 +11636,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "sizeString")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue SizeString
         {
             get => GetAttribute<StringValue>();
@@ -8352,6 +11652,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSelectedItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSelectedItemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSelectedItemID
         {
             get => GetAttribute<StringValue>();
@@ -8362,6 +11668,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSelectedItemIndex")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -8372,6 +11684,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -8382,6 +11700,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -8392,6 +11716,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -8402,6 +11732,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -8412,6 +11748,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -8422,6 +11764,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -8432,6 +11780,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -8442,6 +11796,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -8452,6 +11812,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -8462,6 +11828,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -8472,6 +11844,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -8482,6 +11860,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -8492,6 +11876,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -8502,6 +11892,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -8512,6 +11908,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -8522,6 +11924,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -8532,6 +11940,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -8542,6 +11956,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -8552,6 +11972,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -8562,6 +11988,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -8572,6 +12004,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -8582,6 +12020,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -8852,6 +12296,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -8862,6 +12312,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSize
         {
             get => GetAttribute<StringValue>();
@@ -8872,6 +12328,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "itemSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
@@ -8882,6 +12344,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -8892,6 +12360,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -8902,6 +12376,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -8912,6 +12392,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -8922,6 +12408,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -8932,6 +12424,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -8942,6 +12440,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -8952,6 +12456,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -8962,6 +12472,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -8972,6 +12488,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -8982,6 +12504,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -8992,6 +12520,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -9002,6 +12536,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -9012,6 +12552,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -9022,6 +12568,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -9032,6 +12584,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -9042,6 +12600,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -9052,6 +12616,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -9062,6 +12632,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -9072,6 +12648,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9082,6 +12664,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9092,6 +12680,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -9102,6 +12696,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -9112,6 +12712,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -9122,6 +12728,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -9132,6 +12744,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -9142,6 +12760,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -9152,6 +12776,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -9162,6 +12792,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -9353,6 +12989,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -9363,6 +13005,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSize
         {
             get => GetAttribute<StringValue>();
@@ -9373,6 +13021,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -9383,6 +13037,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -9393,6 +13053,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -9403,6 +13069,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9413,6 +13085,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -9423,6 +13101,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -9433,6 +13117,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getContent, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getContent")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetContent
         {
             get => GetAttribute<StringValue>();
@@ -9443,6 +13133,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "invalidateContentOnDrop")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
@@ -9453,6 +13149,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -9463,6 +13165,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -9473,6 +13181,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -9483,6 +13197,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -9493,6 +13213,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -9503,6 +13229,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -9513,6 +13245,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -9523,6 +13261,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -9533,6 +13277,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -9543,6 +13293,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -9553,6 +13309,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -9563,6 +13325,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -9573,6 +13341,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -9583,6 +13357,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9593,6 +13373,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9603,6 +13389,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -9613,6 +13405,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -9623,6 +13421,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -9633,6 +13437,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -9643,6 +13453,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -9653,6 +13469,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -9663,6 +13485,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -9673,6 +13501,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -9859,6 +13693,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -9869,6 +13709,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSize
         {
             get => GetAttribute<StringValue>();
@@ -9879,6 +13725,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -9889,6 +13741,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -9899,6 +13757,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -9909,6 +13773,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9919,6 +13789,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -9929,6 +13805,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -9939,6 +13821,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -9949,6 +13837,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -9959,6 +13853,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9969,6 +13869,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -9979,6 +13885,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -9989,6 +13901,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -9999,6 +13917,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -10009,6 +13933,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -10019,6 +13949,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -10029,6 +13965,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -10189,6 +14131,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -10199,6 +14147,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10209,6 +14163,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -10219,6 +14179,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -10229,6 +14195,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -10239,6 +14211,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -10249,6 +14227,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -10259,6 +14243,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10269,6 +14259,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10279,6 +14275,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>boxStyle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: boxStyle</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "boxStyle")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues> BoxStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues>>();
@@ -10423,6 +14425,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -10433,6 +14441,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10443,6 +14457,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -10453,6 +14473,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -10463,6 +14489,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -10473,6 +14505,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -10483,6 +14521,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -10493,6 +14537,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10503,6 +14553,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10597,6 +14653,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -10607,6 +14669,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -10617,6 +14685,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -10627,6 +14701,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10637,6 +14717,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -10647,6 +14733,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -10657,6 +14749,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "isDefinitive")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
@@ -10667,6 +14765,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -10677,6 +14781,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -10687,6 +14797,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -10697,6 +14813,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -10707,6 +14829,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -10717,6 +14845,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -10727,6 +14861,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -10737,6 +14877,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -10747,6 +14893,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -10757,6 +14909,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -10767,6 +14925,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -10869,6 +15033,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -10879,6 +15049,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -10889,6 +15065,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -10899,6 +15081,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -10909,6 +15097,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -10919,6 +15113,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -10929,6 +15129,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getPressed")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -10939,6 +15145,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -10949,6 +15161,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -10959,6 +15177,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -10969,6 +15193,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -10979,6 +15209,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -10989,6 +15225,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -10999,6 +15241,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -11009,6 +15257,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -11132,6 +15386,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -11142,6 +15402,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -11152,6 +15418,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -11162,6 +15434,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -11172,6 +15450,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -11182,6 +15466,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -11192,6 +15482,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -11202,6 +15498,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -11212,6 +15514,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -11222,6 +15530,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -11232,6 +15546,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -11242,6 +15562,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -11252,6 +15578,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -11262,6 +15594,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -11272,6 +15610,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -11282,6 +15626,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -11390,6 +15740,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -11400,6 +15756,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -11410,6 +15772,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -11420,6 +15788,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -11430,6 +15804,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -11440,6 +15820,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -11450,6 +15836,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -11460,6 +15852,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -11470,6 +15868,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -11480,6 +15884,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getPressed")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -11490,6 +15900,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -11500,6 +15916,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -11510,6 +15932,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -11520,6 +15948,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -11530,6 +15964,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -11540,6 +15980,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -11550,6 +15996,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -11560,6 +16012,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -11665,6 +16123,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "expand")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -11675,6 +16139,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>style, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "style")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values> Style
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values>>();
@@ -11685,6 +16155,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -11695,6 +16171,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -11705,6 +16187,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -11715,6 +16203,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -11725,6 +16219,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -11735,6 +16235,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -11745,6 +16251,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -11755,6 +16267,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -11765,6 +16283,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "isDefinitive")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
@@ -11775,6 +16299,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -11785,6 +16315,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -11795,6 +16331,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -11805,6 +16347,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -11815,6 +16363,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -11825,6 +16379,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -11835,6 +16395,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -11845,6 +16411,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -11855,6 +16427,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -11865,6 +16443,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -11875,6 +16459,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -11987,6 +16577,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "expand")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -11997,6 +16593,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -12007,6 +16609,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -12017,6 +16625,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -12027,6 +16641,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -12037,6 +16657,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -12047,6 +16673,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -12057,6 +16689,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -12067,6 +16705,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -12077,6 +16721,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -12087,6 +16737,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -12097,6 +16753,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getPressed")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -12107,6 +16769,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -12117,6 +16785,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -12127,6 +16801,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -12137,6 +16817,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -12147,6 +16833,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -12157,6 +16849,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -12167,6 +16865,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -12177,6 +16881,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -12287,6 +16997,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -12297,6 +17013,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -12307,6 +17029,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -12317,6 +17045,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "alignLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -12327,6 +17061,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "expand")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -12337,6 +17077,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -12347,6 +17093,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -12357,6 +17109,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -12367,6 +17125,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -12377,6 +17141,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -12387,6 +17157,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -12397,6 +17173,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -12407,6 +17189,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -12417,6 +17205,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetText
         {
             get => GetAttribute<StringValue>();
@@ -12427,6 +17221,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onChange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onChange")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnChange
         {
             get => GetAttribute<StringValue>();
@@ -12437,6 +17237,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>maxLength, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "maxLength")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue MaxLength
         {
             get => GetAttribute<IntegerValue>();
@@ -12447,6 +17253,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "sizeString")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue SizeString
         {
             get => GetAttribute<StringValue>();
@@ -12572,6 +17384,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -12582,6 +17400,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -12592,6 +17416,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -12602,6 +17432,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "alignLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -12612,6 +17448,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "expand")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -12622,6 +17464,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -12632,6 +17480,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -12642,6 +17496,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -12652,6 +17512,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -12662,6 +17528,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -12672,6 +17544,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -12682,6 +17560,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -12692,6 +17576,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -12702,6 +17592,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -12712,6 +17608,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -12722,6 +17624,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -12732,6 +17640,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -12742,6 +17656,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -12752,6 +17672,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSelectedItemIndex")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -12762,6 +17688,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "sizeString")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue SizeString
         {
             get => GetAttribute<StringValue>();
@@ -12772,6 +17704,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemCount")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -12782,6 +17720,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -12792,6 +17736,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -12946,6 +17896,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -12956,6 +17912,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -12966,6 +17928,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -12976,6 +17944,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "alignLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -12986,6 +17960,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "expand")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -12996,6 +17976,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -13006,6 +17992,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -13016,6 +18008,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -13026,6 +18024,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -13036,6 +18040,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -13046,6 +18056,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -13056,6 +18072,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -13066,6 +18088,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -13076,6 +18104,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -13086,6 +18120,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSelectedItemIndex")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
@@ -13096,6 +18136,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemCount")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -13106,6 +18152,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -13116,6 +18168,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -13250,6 +18308,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -13260,6 +18324,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -13270,6 +18340,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -13280,6 +18356,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "alignLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -13290,6 +18372,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "expand")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -13300,6 +18388,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -13310,6 +18404,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -13320,6 +18420,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -13330,6 +18436,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -13340,6 +18452,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -13350,6 +18468,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -13360,6 +18484,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -13370,6 +18500,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -13380,6 +18516,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetText
         {
             get => GetAttribute<StringValue>();
@@ -13390,6 +18532,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onChange, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onChange")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnChange
         {
             get => GetAttribute<StringValue>();
@@ -13400,6 +18548,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "sizeString")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue SizeString
         {
             get => GetAttribute<StringValue>();
@@ -13410,6 +18564,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemCount")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemCount
         {
             get => GetAttribute<StringValue>();
@@ -13420,6 +18580,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemLabel
         {
             get => GetAttribute<StringValue>();
@@ -13430,6 +18596,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getItemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetItemID
         {
             get => GetAttribute<StringValue>();
@@ -13538,6 +18710,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -13548,6 +18726,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -13558,6 +18742,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -13568,6 +18758,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "alignLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -13578,6 +18774,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "expand")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -13588,6 +18790,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -13598,6 +18806,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -13608,6 +18822,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -13618,6 +18838,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -13628,6 +18854,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -13638,6 +18870,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -13648,6 +18886,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -13658,6 +18902,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -13668,6 +18918,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -13678,6 +18934,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -13688,6 +18950,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -13698,6 +18966,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -13708,6 +18982,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -13718,6 +18998,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -13728,6 +19014,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -13738,6 +19030,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -13748,6 +19046,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>target, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "target")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Target
         {
             get => GetAttribute<StringValue>();
@@ -13758,6 +19062,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getTarget, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getTarget</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getTarget")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetTarget
         {
             get => GetAttribute<StringValue>();
@@ -13877,6 +19187,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -13887,6 +19203,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -13897,6 +19219,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -13907,6 +19235,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "alignLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -13917,6 +19251,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "expand")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -13927,6 +19267,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -13937,6 +19283,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -13947,6 +19299,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -13957,6 +19315,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -13967,6 +19331,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -13977,6 +19347,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -13987,6 +19363,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>noWrap, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: noWrap</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "noWrap")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue NoWrap
         {
             get => GetAttribute<BooleanValue>();
@@ -14099,6 +19481,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -14109,6 +19497,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -14119,6 +19513,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -14129,6 +19529,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "expand")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -14139,6 +19545,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -14149,6 +19561,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -14280,6 +19698,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -14290,6 +19714,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -14300,6 +19730,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -14310,6 +19746,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>align, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: align</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "align")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Align
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -14320,6 +19762,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "expand")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
@@ -14330,6 +19778,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>layoutChildren, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: layoutChildren</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "layoutChildren")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues> LayoutChildren
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues>>();
@@ -14415,6 +19869,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -14425,6 +19885,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -14435,6 +19901,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -14445,6 +19917,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -14455,6 +19933,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -14465,6 +19949,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -14475,6 +19965,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -14485,6 +19981,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -14495,6 +19997,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -14505,6 +20013,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -14515,6 +20029,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>altText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: altText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "altText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue AltText
         {
             get => GetAttribute<StringValue>();
@@ -14525,6 +20045,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getAltText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getAltText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getAltText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetAltText
         {
             get => GetAttribute<StringValue>();
@@ -14638,6 +20164,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -14648,6 +20180,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -14658,6 +20196,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -14668,6 +20212,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -14678,6 +20228,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -14688,6 +20244,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -14698,6 +20260,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -14708,6 +20276,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -14718,6 +20292,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -14728,6 +20308,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -14738,6 +20324,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -14748,6 +20340,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -14758,6 +20356,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>style, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "style")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues> Style
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues>>();
@@ -14768,6 +20372,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getStyle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getStyle</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getStyle")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetStyle
         {
             get => GetAttribute<StringValue>();
@@ -14778,6 +20388,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>helperText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: helperText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "helperText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue HelperText
         {
             get => GetAttribute<StringValue>();
@@ -14788,6 +20404,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getHelperText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getHelperText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getHelperText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetHelperText
         {
             get => GetAttribute<StringValue>();
@@ -14798,6 +20420,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -14808,6 +20436,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -14952,6 +20586,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -14962,6 +20602,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -14972,6 +20618,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -14982,6 +20634,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -14992,6 +20650,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -15002,6 +20666,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -15012,6 +20682,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15022,6 +20698,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15032,6 +20714,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -15042,6 +20730,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -15052,6 +20746,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -15062,6 +20762,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -15072,6 +20778,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>helperText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: helperText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "helperText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue HelperText
         {
             get => GetAttribute<StringValue>();
@@ -15082,6 +20794,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getHelperText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getHelperText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getHelperText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetHelperText
         {
             get => GetAttribute<StringValue>();
@@ -15092,6 +20810,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -15102,6 +20826,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -15112,6 +20842,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>allowedTaskSizes, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: allowedTaskSizes</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "allowedTaskSizes")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>>();
@@ -15253,6 +20989,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>title, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Title
         {
             get => GetAttribute<StringValue>();
@@ -15263,6 +21005,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getTitle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetTitle
         {
             get => GetAttribute<StringValue>();
@@ -15273,6 +21021,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "itemSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
@@ -15390,6 +21144,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onLoad, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onLoad</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onLoad")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnLoad
         {
             get => GetAttribute<StringValue>();
@@ -15400,6 +21160,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>loadImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: loadImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "loadImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue LoadImage
         {
             get => GetAttribute<StringValue>();
@@ -15541,6 +21307,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -15551,6 +21323,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -15561,6 +21339,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -15571,6 +21355,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -15581,6 +21371,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -15591,6 +21387,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -15654,6 +21456,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -15664,6 +21472,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -15674,6 +21488,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -15684,6 +21504,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -15694,6 +21520,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -15704,6 +21536,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -15714,6 +21552,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -15724,6 +21568,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -15734,6 +21584,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -15744,6 +21600,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15754,6 +21616,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -15764,6 +21632,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -15774,6 +21648,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -15784,6 +21664,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -15794,6 +21680,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -15804,6 +21696,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -15814,6 +21712,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -15824,6 +21728,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -15834,6 +21744,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -15844,6 +21760,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -15854,6 +21776,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15864,6 +21792,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -15874,6 +21808,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -15884,6 +21824,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -15894,6 +21840,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -15904,6 +21856,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -15914,6 +21872,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -15924,6 +21888,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -16066,6 +22036,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getPressed")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetPressed
         {
             get => GetAttribute<StringValue>();
@@ -16076,6 +22052,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -16086,6 +22068,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -16096,6 +22084,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -16106,6 +22100,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -16116,6 +22116,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -16126,6 +22132,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -16136,6 +22148,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -16146,6 +22164,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -16156,6 +22180,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -16166,6 +22196,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -16176,6 +22212,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -16186,6 +22228,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -16196,6 +22244,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -16206,6 +22260,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -16216,6 +22276,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -16226,6 +22292,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -16236,6 +22308,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -16246,6 +22324,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -16256,6 +22340,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -16266,6 +22356,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -16276,6 +22372,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -16286,6 +22388,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -16296,6 +22404,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -16306,6 +22420,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -16316,6 +22436,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -16326,6 +22452,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -16336,6 +22468,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -16346,6 +22484,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -16492,6 +22636,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -16502,6 +22652,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -16512,6 +22668,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -16522,6 +22684,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -16532,6 +22700,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -16542,6 +22716,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -16552,6 +22732,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -16562,6 +22748,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -16572,6 +22764,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -16765,6 +22963,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -16775,6 +22979,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -16785,6 +22995,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -16795,6 +23011,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -16805,6 +23027,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -16815,6 +23043,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -16825,6 +23059,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -16835,6 +23075,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -16845,6 +23091,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -16855,6 +23107,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -16865,6 +23123,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -16875,6 +23139,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -16885,6 +23155,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -16895,6 +23171,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -16905,6 +23187,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -16915,6 +23203,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -16925,6 +23219,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -16935,6 +23235,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -16945,6 +23251,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -16955,6 +23267,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -16965,6 +23283,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -16975,6 +23299,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>autoScale, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: autoScale</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "autoScale")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue AutoScale
         {
             get => GetAttribute<BooleanValue>();
@@ -16985,6 +23315,12 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <para>centerVertically, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: centerVertically</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "centerVertically")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue CenterVertically
         {
             get => GetAttribute<BooleanValue>();
@@ -17154,6 +23490,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -17164,6 +23506,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdQ
         {
             get => GetAttribute<StringValue>();
@@ -17174,6 +23522,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -17184,6 +23538,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -17194,6 +23554,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -17204,6 +23570,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
@@ -17214,6 +23586,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSize
         {
             get => GetAttribute<StringValue>();
@@ -17224,6 +23602,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -17234,6 +23618,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -17244,6 +23634,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -17254,6 +23650,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -17264,6 +23666,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -17274,6 +23682,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -17284,6 +23698,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -17294,6 +23714,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -17304,6 +23730,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -17314,6 +23746,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -17324,6 +23762,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -17334,6 +23778,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -17344,6 +23794,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -17354,6 +23810,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17364,6 +23826,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17374,6 +23842,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -17384,6 +23858,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -17394,6 +23874,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -17404,6 +23890,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -17414,6 +23906,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -17424,6 +23922,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -17434,6 +23938,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowImage
         {
             get => GetAttribute<BooleanValue>();
@@ -17444,6 +23954,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowImage
         {
             get => GetAttribute<StringValue>();
@@ -17719,9 +24235,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>Separator &lt;mso14:separator></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(57, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class QatItemsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17815,6 +24328,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -17825,6 +24344,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17835,6 +24360,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -17845,6 +24376,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -17855,6 +24392,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -17865,6 +24408,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -17875,6 +24424,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -17885,6 +24440,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -17895,6 +24456,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17905,6 +24472,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -17915,6 +24488,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -17925,6 +24504,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -17935,6 +24520,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -17945,6 +24536,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -18075,6 +24672,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -18085,6 +24688,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -18095,6 +24704,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -18149,6 +24764,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -18159,6 +24780,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -18169,6 +24796,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -18179,6 +24812,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -18487,6 +25126,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -18600,9 +25245,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     /// <para>This class is available in Office 2010 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(57, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class BackstageItemType : OpenXmlLeafElement
     {
         /// <summary>
@@ -18616,6 +25258,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -18626,6 +25274,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -18636,6 +25290,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -18682,6 +25342,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -18692,6 +25358,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -18702,6 +25374,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -18712,6 +25390,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -18722,6 +25406,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -18732,6 +25422,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -18742,6 +25438,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -18752,6 +25454,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -18762,6 +25470,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "isDefinitive")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
@@ -18772,6 +25486,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -18782,6 +25502,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -18792,6 +25518,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -18802,6 +25534,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -18812,6 +25550,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -18822,6 +25566,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -18832,6 +25582,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -18842,6 +25598,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -18852,6 +25614,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -18862,6 +25630,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -18872,6 +25646,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -19012,6 +25792,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "screentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Screentip
         {
             get => GetAttribute<StringValue>();
@@ -19022,6 +25808,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getScreentip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetScreentip
         {
             get => GetAttribute<StringValue>();
@@ -19032,6 +25824,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "supertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Supertip
         {
             get => GetAttribute<StringValue>();
@@ -19042,6 +25840,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getSupertip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetSupertip
         {
             get => GetAttribute<StringValue>();
@@ -19052,6 +25856,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -19062,6 +25872,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -19072,6 +25888,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -19082,6 +25904,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -19092,6 +25920,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -19102,6 +25936,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -19112,6 +25952,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -19122,6 +25968,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -19132,6 +25984,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -19142,6 +26000,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -19152,6 +26016,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -19162,6 +26032,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -19172,6 +26048,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -19182,6 +26064,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -19331,6 +26219,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -19341,6 +26235,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -19351,6 +26251,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -19361,6 +26267,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -19371,6 +26283,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -19381,6 +26299,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "itemSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
@@ -19729,9 +26653,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     ///   <item><description>ImageControl &lt;mso14:imageControl></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(57, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class GroupControlsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19833,6 +26754,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -19843,6 +26770,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -19853,6 +26786,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -19863,6 +26802,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -19873,6 +26818,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -19883,6 +26834,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -19893,6 +26850,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -19903,6 +26866,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -19913,6 +26882,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -19923,6 +26898,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -19933,6 +26914,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -19943,6 +26930,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -20032,6 +27025,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -20042,6 +27041,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20052,6 +27057,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -20062,6 +27073,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -20072,6 +27089,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -20082,6 +27105,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -20092,6 +27121,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20102,6 +27137,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20112,6 +27153,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -20122,6 +27169,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "isDefinitive")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
@@ -20132,6 +27185,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -20142,6 +27201,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -20152,6 +27217,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -20162,6 +27233,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -20172,6 +27249,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -20182,6 +27265,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -20192,6 +27281,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -20202,6 +27297,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -20212,6 +27313,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -20222,6 +27329,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -20232,6 +27345,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -20242,6 +27361,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -20252,6 +27377,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -20404,6 +27535,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -20414,6 +27551,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20424,6 +27567,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -20434,6 +27583,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -20444,6 +27599,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -20454,6 +27615,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -20464,6 +27631,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20474,6 +27647,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20484,6 +27663,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -20494,6 +27679,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -20504,6 +27695,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -20514,6 +27711,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -20633,6 +27836,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -20643,6 +27852,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20653,6 +27868,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -20663,6 +27884,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -20673,6 +27900,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -20683,6 +27916,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -20693,6 +27932,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20703,6 +27948,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -20713,6 +27964,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -20723,6 +27980,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -20733,6 +27996,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -20743,6 +28012,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -20753,6 +28028,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -20763,6 +28044,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -20773,6 +28060,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -20783,6 +28076,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -20793,6 +28092,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -20803,6 +28108,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -20813,6 +28124,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetDescription
         {
             get => GetAttribute<StringValue>();
@@ -20823,6 +28140,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -20833,6 +28156,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -20985,6 +28314,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -20995,6 +28330,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21005,6 +28346,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -21015,6 +28362,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -21025,6 +28378,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -21035,6 +28394,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -21045,6 +28410,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -21055,6 +28426,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -21065,6 +28442,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>helperText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: helperText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "helperText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue HelperText
         {
             get => GetAttribute<StringValue>();
@@ -21075,6 +28458,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getHelperText, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getHelperText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getHelperText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetHelperText
         {
             get => GetAttribute<StringValue>();
@@ -21085,6 +28474,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "showLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue ShowLabel
         {
             get => GetAttribute<BooleanValue>();
@@ -21095,6 +28490,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getShowLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetShowLabel
         {
             get => GetAttribute<StringValue>();
@@ -21105,6 +28506,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>allowedTaskSizes, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: allowedTaskSizes</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "allowedTaskSizes")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>>();
@@ -21376,6 +28783,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -21386,6 +28799,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21396,6 +28815,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -21406,6 +28831,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -21416,6 +28847,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -21426,6 +28863,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -21436,6 +28879,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21446,6 +28895,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21456,6 +28911,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -21466,6 +28927,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -21476,6 +28943,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -21486,6 +28959,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -21496,6 +28975,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -21506,6 +28991,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -21516,6 +29007,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -21526,6 +29023,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -21536,6 +29039,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>title, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Title
         {
             get => GetAttribute<StringValue>();
@@ -21546,6 +29055,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>getTitle, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetTitle
         {
             get => GetAttribute<StringValue>();
@@ -21556,6 +29071,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>columnWidthPercent, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: columnWidthPercent</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "columnWidthPercent")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue ColumnWidthPercent
         {
             get => GetAttribute<IntegerValue>();
@@ -21566,6 +29087,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>firstColumnMinWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: firstColumnMinWidth</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "firstColumnMinWidth")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue FirstColumnMinWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -21576,6 +29103,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>firstColumnMaxWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: firstColumnMaxWidth</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "firstColumnMaxWidth")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue FirstColumnMaxWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -21586,6 +29119,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>secondColumnMinWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: secondColumnMinWidth</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "secondColumnMinWidth")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue SecondColumnMinWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -21596,6 +29135,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>secondColumnMaxWidth, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: secondColumnMaxWidth</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "secondColumnMaxWidth")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public IntegerValue SecondColumnMaxWidth
         {
             get => GetAttribute<IntegerValue>();
@@ -21754,6 +29299,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue IdMso
         {
             get => GetAttribute<StringValue>();
@@ -21764,6 +29315,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterMso
         {
             get => GetAttribute<StringValue>();
@@ -21774,6 +29331,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
@@ -21784,6 +29347,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertAfterQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21794,6 +29363,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "insertBeforeQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21804,6 +29379,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Id
         {
             get => GetAttribute<StringValue>();
@@ -21814,6 +29395,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idQ")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue QualifiedId
         {
             get => GetAttribute<StringValue>();
@@ -21824,6 +29411,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Tag
         {
             get => GetAttribute<StringValue>();
@@ -21834,6 +29427,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onAction")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnAction
         {
             get => GetAttribute<StringValue>();
@@ -21844,6 +29443,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "isDefinitive")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
@@ -21854,6 +29459,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "enabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Enabled
         {
             get => GetAttribute<BooleanValue>();
@@ -21864,6 +29475,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getEnabled")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetEnabled
         {
             get => GetAttribute<StringValue>();
@@ -21874,6 +29491,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "label")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Label
         {
             get => GetAttribute<StringValue>();
@@ -21884,6 +29507,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetLabel
         {
             get => GetAttribute<StringValue>();
@@ -21894,6 +29523,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Visible
         {
             get => GetAttribute<BooleanValue>();
@@ -21904,6 +29539,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetVisible
         {
             get => GetAttribute<StringValue>();
@@ -21914,6 +29555,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "keytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Keytip
         {
             get => GetAttribute<StringValue>();
@@ -21924,6 +29571,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getKeytip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetKeytip
         {
             get => GetAttribute<StringValue>();
@@ -21934,6 +29587,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "image")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Image
         {
             get => GetAttribute<StringValue>();
@@ -21944,6 +29603,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "imageMso")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ImageMso
         {
             get => GetAttribute<StringValue>();
@@ -21954,6 +29619,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "getImage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue GetImage
         {
             get => GetAttribute<StringValue>();
@@ -22163,6 +29834,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>startFromScratch, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: startFromScratch</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "startFromScratch")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue StartFromScratch
         {
             get => GetAttribute<BooleanValue>();
@@ -22282,6 +29959,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onShow, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onShow</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onShow")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnShow
         {
             get => GetAttribute<StringValue>();
@@ -22292,6 +29975,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <para>onHide, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: onHide</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "onHide")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue OnHide
         {
             get => GetAttribute<StringValue>();

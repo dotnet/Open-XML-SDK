@@ -148,6 +148,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <para>relativeFrom, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "relativeFrom")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>>();
@@ -240,6 +246,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>relativeFrom, this property is only available in Office2010, Office2013, Office2016</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "relativeFrom")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>>();

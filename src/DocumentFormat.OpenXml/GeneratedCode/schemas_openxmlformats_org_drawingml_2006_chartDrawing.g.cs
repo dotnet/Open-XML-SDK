@@ -305,6 +305,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>Reference to Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "macro")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Macro
         {
             get => GetAttribute<StringValue>();
@@ -315,6 +321,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>Text Link</para>
         /// <para>Represents the following attribute in the schema: textlink</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "textlink")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue TextLink
         {
             get => GetAttribute<StringValue>();
@@ -325,6 +337,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>Lock Text</para>
         /// <para>Represents the following attribute in the schema: fLocksText</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fLocksText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue LockText
         {
             get => GetAttribute<BooleanValue>();
@@ -335,6 +353,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>Publish to Server</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fPublished")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Published
         {
             get => GetAttribute<BooleanValue>();
@@ -585,6 +609,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>Reference to Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "macro")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Macro
         {
             get => GetAttribute<StringValue>();
@@ -595,6 +625,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>Publish To Server</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fPublished")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Published
         {
             get => GetAttribute<BooleanValue>();
@@ -716,6 +752,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>Reference to Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "macro")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Macro
         {
             get => GetAttribute<StringValue>();
@@ -726,6 +768,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>Publish to Server</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fPublished")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Published
         {
             get => GetAttribute<BooleanValue>();
@@ -848,6 +896,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>Reference to Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "macro")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Macro
         {
             get => GetAttribute<StringValue>();
@@ -858,6 +912,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>Publish to Server</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fPublished")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Published
         {
             get => GetAttribute<BooleanValue>();
@@ -994,6 +1054,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Id
         {
             get => GetAttribute<UInt32Value>();
@@ -1004,6 +1070,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Name
         {
             get => GetAttribute<StringValue>();
@@ -1014,6 +1086,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "descr")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Description
         {
             get => GetAttribute<StringValue>();
@@ -1024,6 +1102,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "hidden")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue Hidden
         {
             get => GetAttribute<BooleanValue>();
@@ -1034,6 +1118,12 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Title
         {
             get => GetAttribute<StringValue>();
@@ -1163,6 +1253,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Text Box</para>
         /// <para>Represents the following attribute in the schema: txBox</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "txBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue TextBox
         {
             get => GetAttribute<BooleanValue>();
@@ -1370,6 +1466,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bwMode")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -1938,6 +2040,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>preferRelativeResize</para>
         /// <para>Represents the following attribute in the schema: preferRelativeResize</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "preferRelativeResize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue PreferRelativeResize
         {
             get => GetAttribute<BooleanValue>();
@@ -2134,6 +2242,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>DPI Setting</para>
         /// <para>Represents the following attribute in the schema: dpi</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "dpi")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Dpi
         {
             get => GetAttribute<UInt32Value>();
@@ -2144,6 +2258,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Rotate With Shape</para>
         /// <para>Represents the following attribute in the schema: rotWithShape</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rotWithShape")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue RotateWithShape
         {
             get => GetAttribute<BooleanValue>();
@@ -2440,6 +2560,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rot")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int32Value Rotation
         {
             get => GetAttribute<Int32Value>();
@@ -2450,6 +2576,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "flipH")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -2460,6 +2592,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "flipV")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public BooleanValue VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
@@ -2824,9 +2962,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>YPosition &lt;cdr:y></description></item>
     /// </list>
     /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(12, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class MarkerType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2915,6 +3050,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Extent Length</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "cx")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value Cx
         {
             get => GetAttribute<Int64Value>();
@@ -2925,6 +3066,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Extent Width</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "cy")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public Int64Value Cy
         {
             get => GetAttribute<Int64Value>();
@@ -3104,6 +3251,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bwMode")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();

@@ -35,6 +35,12 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
         /// <para>Shape ID</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "spid")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue ShapeId
         {
             get => GetAttribute<StringValue>();

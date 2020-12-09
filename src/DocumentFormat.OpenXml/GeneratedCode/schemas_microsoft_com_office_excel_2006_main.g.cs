@@ -492,6 +492,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "ref")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Ref
         {
             get => GetAttribute<StringValue>();
@@ -502,6 +508,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "count")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Count
         {
             get => GetAttribute<UInt32Value>();
@@ -583,6 +595,12 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
         /// <para>Reference</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "ref")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public StringValue Ref
         {
             get => GetAttribute<StringValue>();
@@ -593,6 +611,12 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
         /// <para>Count</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "count")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value Count
         {
             get => GetAttribute<UInt32Value>();
@@ -682,9 +706,6 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
     /// <para>This class is available in Office 2007 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(32, null)]
-#pragma warning restore CS0618 // Type or member is obsolete
     public abstract partial class SortMapItemType : OpenXmlLeafElement
     {
         /// <summary>
@@ -698,6 +719,12 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
         /// <para>New Value</para>
         /// <para>Represents the following attribute in the schema: newVal</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "newVal")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value NewVal
         {
             get => GetAttribute<UInt32Value>();
@@ -708,6 +735,12 @@ aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
         /// <para>Old Value</para>
         /// <para>Represents the following attribute in the schema: oldVal</para>
         /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "oldVal")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
         public UInt32Value OldVal
         {
             get => GetAttribute<UInt32Value>();
