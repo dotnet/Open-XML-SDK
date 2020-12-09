@@ -20,12 +20,9 @@ Table of Contents
 -----------------
 
 - [Releases](#releases)
-- [How to install the NuGet package](#how-to-install-the-nuget-package)
 - [If You Have Problems](#if-you-have-problems)
 - [Known Issues](#known-issues)
 - [Documentation](#documentation)
-- [Build Instructions](#build-instructions)
-- [To build the Open XML SDK](#to-build-the-open-xml-sdk)
 - [Related tools](#related-tools)
 - [Code of Conduct](#code-of-conduct)
 
@@ -44,11 +41,6 @@ Package currently supports the following targets:
 - .NET 4.6
 - .NET Standard 1.3
 - .NET Standard 2.0.
-
-How to install the NuGet package
----------------------------------
-
-The package you want to install is DocumentFormat.OpenXml and are available on [NuGet](https://www.nuget.org/packages/DocumentFormat.OpenXml).
 
 If You Have Problems
 --------------------
