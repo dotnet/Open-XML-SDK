@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Version 2.12.0
+## Version 2.12.0 - 2020-12-09
 
 ### Added
 - Added `OpenSettings.RelationshipErrorHandlerFactory` to provide a way to handle URIs that break parsing documents with malformed links (#793)
@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Fixed exception that would be thrown if attempting to save a document as FlatOPC if it contains SVG files (#822)
-- Added `SchemaAttrAttribute` annotations back for backwards compatibility (#825)
+- Added `SchemaAttrAttribute` attributes back for backwards compatibility (#825)
 
 ### Removed
 - Removed explicit reference to `System.IO.Packaging` on .NET 4.6 builds (#774)
