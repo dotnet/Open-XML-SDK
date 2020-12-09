@@ -67,25 +67,6 @@ stages:
         - template: sign.yml
     dependsOn: Package
     condition: succeeded()
-  
-  - stage: MyGet
-    jobs:
-      - deployment: OpenXmlMyGet
-        displayName: Deploy to MyGet
-        pool:
-          name: Hosted Windows 2019 with VS2019
-        environment: 'openxmlsdk-dotnet-myget'
-        strategy:
-          runOnce:
-            deploy:
-              steps:
-                - template: nuget.yml
-                  parameters:
-                    feed: 'OpenXML MyGet Feed'
-    dependsOn: 
-      - Build
-      - Sign
-    condition: succeeded()
 
   - stage: NuGet
     jobs:
@@ -102,5 +83,6 @@ stages:
                   parameters:
                     feed: 'OpenXML NuGet Feed'
     dependsOn: 
-      - MyGet
+      - Build
+      - Sign
     condition: and(succeeded(), variables['ReleaseNuGet'], eq(variables['Build.SourceBranchName'], 'master'))
