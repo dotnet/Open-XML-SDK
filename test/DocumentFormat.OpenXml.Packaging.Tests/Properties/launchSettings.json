@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "DocumentFormat.OpenXml.Packaging.Tests": {
+      "commandName": "Project"
+    }
+  }
+}
