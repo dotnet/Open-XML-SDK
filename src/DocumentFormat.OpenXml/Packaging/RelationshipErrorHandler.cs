@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             var target = child.Attribute(TargetAttributeName)?.Value;
 
-            if (Uri.TryCreate(target, UriHelper.RelativeOrAbsolute, out _))
+            if (!string.IsNullOrEmpty(target) && Uri.TryCreate(target, UriHelper.RelativeOrAbsolute, out _))
             {
                 return false;
             }
