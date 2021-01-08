@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Fixed bug where properties on `OpenXmlCompositeElement` instances could not be set to null to remove element (#850)
+- Fixed `OpenXmlElement.RawOuterXml` to properly set null values without throwing (#818)
 - Allow rewriting of all malformed URIs regardless of target value (#835)
 
 ## Version 2.12.0 - 2020-12-09
