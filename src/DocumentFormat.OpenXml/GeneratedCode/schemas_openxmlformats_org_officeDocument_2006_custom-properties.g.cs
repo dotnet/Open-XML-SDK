@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
             base.ConfigureMetadata(builder);
             builder.SetSchema(4, "Properties");
             builder.AddChild<CustomDocumentProperty>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty), 0, 0)
             };
@@ -301,7 +301,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "linkTarget", a => a.LinkTarget);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTArray), 1, 1),

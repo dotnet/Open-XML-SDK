@@ -269,7 +269,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
 .AddAttribute(27, "allowincell", a => a.AllowInCell)
 .AddAttribute(27, "allowoverlap", a => a.AllowOverlap)
 .AddAttribute(27, "insetmode", a => a.InsetMode);
-            builder.Particle = new CompositeParticle(ParticleType.All, 0, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.All, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 0, 1),
@@ -509,7 +509,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
             builder.AddChild<Rules>();
             builder.AddElement<ShapeLayout>()
 .AddAttribute(26, "ext", a => a.Extension);
-            builder.Particle = new CompositeParticle(ParticleType.All, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeIdMap), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RegroupTable), 0, 1),
@@ -1116,7 +1116,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 .AddAttribute(0, "dgmfontsize", a => a.FontSize)
 .AddAttribute(0, "constrainbounds", a => a.ConstrainBounds)
 .AddAttribute(0, "dgmbasetextscale", a => a.BaseTextScale);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RelationTable), 0, 1)
             };
@@ -2518,7 +2518,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 .AddAttribute(0, "ObjectID", a => a.ObjectId)
 .AddAttribute(19, "id", a => a.Id)
 .AddAttribute(0, "UpdateMode", a => a.UpdateMode);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LinkType), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LockedField), 0, 1),
@@ -3506,7 +3506,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Entry>();
             builder.AddElement<RegroupTable>()
 .AddAttribute(26, "ext", a => a.Extension);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Entry), 0, 0)
             };
@@ -3589,7 +3589,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Rule>();
             builder.AddElement<Rules>()
 .AddAttribute(26, "ext", a => a.Extension);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rule), 0, 0)
             };
@@ -3788,7 +3788,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Proxy), 0, 0)
             };
@@ -3871,7 +3871,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<Relation>();
             builder.AddElement<RelationTable>()
 .AddAttribute(26, "ext", a => a.Extension);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Relation), 0, 0)
             };

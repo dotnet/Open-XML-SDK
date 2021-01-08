@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.InkML
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -482,18 +482,18 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Bind), 0, 0),
-                    new CompositeParticle(ParticleType.Choice, 0, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Table), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Matrix), 1, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
                 }
@@ -747,7 +747,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsV
 union.AddValidator(StringValidator.Instance);
 });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
             };
@@ -810,7 +810,7 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "intermittentChannels");
             builder.AddChild<Channel>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0)
             };
@@ -1027,7 +1027,7 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<IntermittentChannels>();
             builder.AddElement<TraceFormat>()
 .AddAttribute(1, "id", a => a.Id);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.IntermittentChannels), 0, 1)
@@ -1418,7 +1418,7 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channelProperties");
             builder.AddChild<ChannelProperty>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, 0)
             };
@@ -1610,7 +1610,7 @@ union.AddValidator(StringValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Emma), 0, 1)
             };
@@ -1774,7 +1774,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsV
 union.AddValidator(StringValidator.Instance);
 });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0)
@@ -1879,7 +1879,7 @@ union.AddValidator(StringValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1)
             };
@@ -1992,7 +1992,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddElement<CanvasTransform>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "invertible", a => a.Invertible);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 1, 2)
             };
@@ -2176,7 +2176,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "description", a => a.Description);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SampleRate), 0, 1),
@@ -2340,7 +2340,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0),
@@ -2782,7 +2782,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -2946,7 +2946,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "from", a => a.From)
 .AddAttribute(0, "to", a => a.To);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -3181,7 +3181,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
@@ -3346,7 +3346,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<TraceFormat>();
             builder.AddChild<TraceGroup>();
             builder.AddChild<TraceView>();
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),

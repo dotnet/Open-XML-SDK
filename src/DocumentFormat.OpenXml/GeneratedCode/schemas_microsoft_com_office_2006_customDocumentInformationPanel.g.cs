@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             builder.AddChild<ShowOnOpen>();
             builder.AddChild<DefaultPropertyEditorNamespace>();
             builder.AddChild<CustomPropertyEditor>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace), 1, 1),
@@ -323,7 +323,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             builder.SetSchema(37, "customPropertyEditor");
             builder.AddChild<PropertyEditorNamespace>();
             builder.AddChild<XsnFileLocation>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation), 1, 1)

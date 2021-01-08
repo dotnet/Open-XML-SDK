@@ -63,6 +63,9 @@ namespace DocumentFormat.OpenXml.Framework
             return collection.Add(value);
         }
 
+        public static CompiledParticle Compile(this CompositeParticle.Builder builder)
+            => Compile(builder.Build());
+
         public static CompiledParticle Compile(this ParticleConstraint particle)
             => new CompiledParticle(particle);
     }

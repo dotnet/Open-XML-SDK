@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
    aBuilder.AddValidator(RequiredValidator.Instance);
    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(0, 1)
             };
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema(22, "calcChain");
             builder.AddChild<CalculationCell>();
             builder.AddChild<ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculationCell), 1, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -247,7 +247,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<Authors>();
             builder.AddChild<CommentList>();
             builder.AddChild<ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Authors), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentList), 1, 1),
@@ -404,7 +404,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Schema), 1, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Map), 1, 0)
@@ -498,7 +498,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "connections");
             builder.AddChild<Connection>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), 1, 0)
             };
@@ -938,7 +938,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "tupleCache", a => a.IsTupleCache)
 .AddAttribute(0, "supportSubquery", a => a.SupportSubquery)
 .AddAttribute(0, "supportAdvancedDrill", a => a.SupportAdvancedDrill);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSource), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheFields), 1, 1),
@@ -1205,7 +1205,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ExtensionList>();
             builder.AddElement<PivotCacheRecords>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -2497,7 +2497,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "fieldListSortAscending", a => a.FieldListSortAscending)
 .AddAttribute(0, "mdxSubqueries", a => a.MdxSubqueries)
 .AddAttribute(0, "customListSort", a => a.CustomListSort);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Location), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFields), 0, 1),
@@ -3223,7 +3223,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "applyPatternFormats", a => a.ApplyPatternFormats)
 .AddAttribute(0, "applyAlignmentFormats", a => a.ApplyAlignmentFormats)
 .AddAttribute(0, "applyWidthHeightFormats", a => a.ApplyWidthHeightFormats);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList), 0, 1)
@@ -3384,7 +3384,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<SharedStringTable>()
 .AddAttribute(0, "count", a => a.Count)
 .AddAttribute(0, "uniqueCount", a => a.UniqueCount);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SharedStringItem), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -3692,7 +3692,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 .AddAttribute(0, "keepChangeHistory", a => a.KeepChangeHistory)
 .AddAttribute(0, "protected", a => a.Protected)
 .AddAttribute(0, "preserveHistory", a => a.PreserveHistory);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Header), 1, 0)
             };
@@ -3811,7 +3811,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<RevisionComment>();
             builder.AddChild<RevisionQueryTable>();
             builder.AddChild<RevisionConflict>();
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionRowColumn), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionMove), 0, 0),
@@ -3933,7 +3933,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<UserInfo>();
             builder.AddElement<Users>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.UserInfo), 0, 256)
             };
@@ -4101,7 +4101,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<WebPublishItems>();
             builder.AddChild<TableParts>();
             builder.AddChild<WorksheetExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDimension), 0, 1),
@@ -4309,7 +4309,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<Picture>();
             builder.AddChild<WebPublishItems>();
             builder.AddChild<ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews), 1, 1),
@@ -4627,7 +4627,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<OleObjects>();
             builder.AddChild<Controls>();
             builder.AddChild<ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetViews), 0, 1),
@@ -4955,7 +4955,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<CellMetadata>();
             builder.AddChild<ValueMetadata>();
             builder.AddChild<ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataTypes), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), 0, 1),
@@ -5093,7 +5093,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "singleXmlCells");
             builder.AddChild<SingleXmlCell>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell), 1, 0)
             };
@@ -5206,7 +5206,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<TableStyles>();
             builder.AddChild<Colors>();
             builder.AddChild<StylesheetExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormats), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fonts), 0, 1),
@@ -5458,9 +5458,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             builder.AddChild<DdeLink>();
             builder.AddChild<OleLink>();
             builder.AddChild<ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalBook), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeLink), 1, 1),
@@ -5949,7 +5949,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "dataCellStyle", a => a.DataCellStyle)
 .AddAttribute(0, "totalsRowCellStyle", a => a.TotalsRowCellStyle)
 .AddAttribute(0, "connectionId", a => a.ConnectionId);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
@@ -6128,7 +6128,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(22, "volTypes");
             builder.AddChild<VolatileType>();
             builder.AddChild<ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VolatileType), 1, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -6274,7 +6274,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<WorkbookExtensionList>();
             builder.AddElement<Workbook>()
 .AddAttribute(0, "conformance", a => a.Conformance);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FileVersion), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FileSharing), 0, 1),
@@ -6650,7 +6650,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "hiddenButton", a => a.HiddenButton)
 .AddAttribute(0, "showButton", a => a.ShowButton);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filters), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Top10), 0, 1),
@@ -6913,9 +6913,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SortCondition), 0, 64, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortCondition), 0, 64)
@@ -6980,11 +6980,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<Extension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
                     }
@@ -7246,7 +7246,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "authors");
             builder.AddChild<Author>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Author), 0, 0)
             };
@@ -7308,7 +7308,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "commentList");
             builder.AddChild<Comment>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Comment), 0, 0)
             };
@@ -7453,7 +7453,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentText), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentProperties), 0, 1, version: FileFormatVersions.Office2010)
@@ -8246,7 +8246,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "SchemaRef", a => a.SchemaReference)
 .AddAttribute(0, "Namespace", a => a.Namespace);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(0, 1)
             };
@@ -8493,7 +8493,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataBinding), 0, 1)
             };
@@ -8654,7 +8654,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(0, 1)
             };
@@ -9082,7 +9082,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "saveData", a => a.SaveData)
 .AddAttribute(0, "credentials", a => a.Credentials)
 .AddAttribute(0, "singleSignOnId", a => a.SingleSignOnId);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OlapProperties), 0, 1),
@@ -9258,7 +9258,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<FieldItem>();
             builder.AddElement<Tables>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingTable), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), 1, 1),
@@ -9942,7 +9942,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "databaseField", a => a.DatabaseField)
 .AddAttribute(0, "mappingCount", a => a.MappingCount)
 .AddAttribute(0, "memberPropertyField", a => a.MemberPropertyField);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SharedItems), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldGroup), 0, 1),
@@ -10052,7 +10052,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Page>();
             builder.AddElement<Pages>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Page), 1, 4)
             };
@@ -10132,7 +10132,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<RangeSet>();
             builder.AddElement<RangeSets>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RangeSet), 1, 0)
             };
@@ -10212,7 +10212,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<PageItem>();
             builder.AddElement<Page>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageItem), 0, 0)
             };
@@ -10687,7 +10687,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 .AddAttribute(0, "un", a => a.Underline)
 .AddAttribute(0, "st", a => a.Strikethrough)
 .AddAttribute(0, "b", a => a.Bold);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
@@ -10968,7 +10968,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 .AddAttribute(0, "un", a => a.Underline)
 .AddAttribute(0, "st", a => a.Strikethrough)
 .AddAttribute(0, "b", a => a.Bold);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
@@ -11123,7 +11123,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "f", a => a.Calculated)
 .AddAttribute(0, "c", a => a.Caption)
 .AddAttribute(0, "cp", a => a.PropertyCount);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
@@ -11402,7 +11402,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 .AddAttribute(0, "un", a => a.Underline)
 .AddAttribute(0, "st", a => a.Strikethrough)
 .AddAttribute(0, "b", a => a.Bold);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
@@ -11696,7 +11696,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 .AddAttribute(0, "un", a => a.Underline)
 .AddAttribute(0, "st", a => a.Strikethrough)
 .AddAttribute(0, "b", a => a.Bold);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
@@ -11850,7 +11850,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "f", a => a.Calculated)
 .AddAttribute(0, "c", a => a.Caption)
 .AddAttribute(0, "cp", a => a.PropertyCount);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
@@ -11912,7 +11912,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "tpls");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuple), 1, 0)
             };
@@ -11973,7 +11973,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sortByTuple");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuple), 1, 0)
             };
@@ -12209,7 +12209,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<StringItem>();
             builder.AddChild<DateTimeItem>();
             builder.AddChild<FieldItem>();
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberItem), 1, 1),
@@ -12621,7 +12621,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "user", a => a.User)
 .AddAttribute(0, "customRollUp", a => a.CustomRollUp);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Groups), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -12729,7 +12729,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Group>();
             builder.AddElement<Groups>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Group), 1, 0)
             };
@@ -12886,7 +12886,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "uniqueParent", a => a.UniqueParent)
 .AddAttribute(0, "id", a => a.Id);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupMembers), 1, 1)
             };
@@ -12983,7 +12983,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<GroupMember>();
             builder.AddElement<GroupMembers>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupMember), 1, 0)
             };
@@ -13136,7 +13136,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<StringItem>();
             builder.AddElement<Entries>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberItem), 1, 1),
@@ -13219,7 +13219,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<TupleSet>();
             builder.AddElement<Sets>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TupleSet), 1, 0)
             };
@@ -13299,7 +13299,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Query>();
             builder.AddElement<QueryCache>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Query), 1, 0)
             };
@@ -13379,7 +13379,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ServerFormat>();
             builder.AddElement<ServerFormats>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), 0, 0)
             };
@@ -13685,7 +13685,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "sortType", a => a.SortType)
 .AddAttribute(0, "queryFailed", a => a.QueryFailed);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortByTuple), 0, 1)
@@ -13771,7 +13771,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 1)
             };
@@ -13884,7 +13884,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<CalculatedItem>()
 .AddAttribute(0, "field", a => a.Field)
 .AddAttribute(0, "formula", a => a.Formula);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -14180,7 +14180,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "collapsedLevelsAreSubtotals", a => a.CollapsedLevelsAreSubtotals)
 .AddAttribute(0, "axis", a => a.Axis)
 .AddAttribute(0, "fieldPosition", a => a.FieldPosition);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -14396,7 +14396,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "parent", a => a.ParentName)
 .AddAttribute(0, "solveOrder", a => a.SolveOrder)
 .AddAttribute(0, "set", a => a.Set);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList), 0, 1)
             };
@@ -15301,7 +15301,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "showPropTip", a => a.ShowPropertyTooltip)
 .AddAttribute(0, "showPropAsCaption", a => a.ShowPropAsCaption)
 .AddAttribute(0, "defaultAttributeDrillState", a => a.DefaultAttributeDrillState);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Items), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoSortScope), 0, 1),
@@ -15746,7 +15746,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "baseField", a => a.BaseField)
 .AddAttribute(0, "baseItem", a => a.BaseItem)
 .AddAttribute(0, "numFmtId", a => a.NumberFormatId);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList), 0, 1)
             };
@@ -15874,7 +15874,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "t", a => a.ItemType)
 .AddAttribute(0, "r", a => a.RepeatedItemCount)
 .AddAttribute(0, "i", a => a.Index);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
             };
@@ -16023,7 +16023,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<Format>()
 .AddAttribute(0, "action", a => a.Action)
 .AddAttribute(0, "dxfId", a => a.FormatId);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -16170,7 +16170,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreas), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -16278,7 +16278,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<PivotArea>();
             builder.AddElement<PivotAreas>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 0, 0)
             };
@@ -16398,7 +16398,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "series", a => a.Series);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1)
             };
@@ -16665,7 +16665,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "dragOff", a => a.DragOff)
 .AddAttribute(0, "includeNewItemsInFilter", a => a.IncludeNewItemsInFilter)
 .AddAttribute(0, "caption", a => a.Caption);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Members), 0, 0),
@@ -17517,7 +17517,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "description", a => a.Description)
 .AddAttribute(0, "stringValue1", a => a.StringValue1)
 .AddAttribute(0, "stringValue2", a => a.StringValue2);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList), 0, 1)
@@ -17995,7 +17995,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "unbalanced", a => a.Unbalanced)
 .AddAttribute(0, "unbalancedGroup", a => a.UnbalancedGroup)
 .AddAttribute(0, "hidden", a => a.Hidden);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldsUsage), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupLevels), 0, 1),
@@ -18287,7 +18287,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<FieldItem>();
             builder.AddElement<DiscreteProperties>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldItem), 1, 0)
             };
@@ -18377,7 +18377,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DateTimeItem>();
             builder.AddElement<GroupItems>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberItem), 1, 1),
@@ -18533,7 +18533,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "hier", a => a.Hierarchy)
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "cap", a => a.Caption);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -18628,7 +18628,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<PivotAreaReference>();
             builder.AddElement<PivotAreaReferences>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReference), 1, 0)
             };
@@ -18982,7 +18982,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "stdDevPSubtotal", a => a.ApplyStandardDeviationPInSubtotal)
 .AddAttribute(0, "varSubtotal", a => a.ApplyVarianceInSubtotal)
 .AddAttribute(0, "varPSubtotal", a => a.ApplyVariancePInSubtotal);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldItem), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -19063,7 +19063,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<QueryTableField>();
             builder.AddElement<QueryTableFields>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableField), 0, 0)
             };
@@ -19143,7 +19143,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DeletedField>();
             builder.AddElement<QueryTableDeletedFields>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DeletedField), 1, 0)
             };
@@ -19377,7 +19377,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "fillFormulas", a => a.FillFormulas)
 .AddAttribute(0, "clipped", a => a.Clipped)
 .AddAttribute(0, "tableColumnId", a => a.TableColumnId);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -19460,7 +19460,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "si");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Run), 0, 32767),
@@ -19527,7 +19527,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "is");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Run), 0, 32767),
@@ -19594,7 +19594,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "text");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Run), 0, 32767),
@@ -20544,7 +20544,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<FontFamily>();
             builder.AddChild<RunPropertyCharSet>();
             builder.AddChild<FontScheme>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Bold), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Italic), 0, 1),
@@ -20622,7 +20622,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(22, "r");
             builder.AddChild<RunProperties>();
             builder.AddChild<Text>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RunProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 1, 1)
@@ -20752,7 +20752,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 1, 1)
             };
@@ -21054,7 +21054,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "minRId", a => a.MinRevisionId)
 .AddAttribute(0, "maxRId", a => a.MaxRevisionId);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetIdMap), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ReviewedList), 0, 1),
@@ -21313,7 +21313,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "edge", a => a.Edge);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Undo), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange), 0, 0),
@@ -21514,7 +21514,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "sourceSheetId", a => a.SourceSheetId);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Undo), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange), 0, 0),
@@ -21764,7 +21764,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -22237,7 +22237,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "ph", a => a.HasPhoneticText)
 .AddAttribute(0, "oldPh", a => a.OldPhoneticText)
 .AddAttribute(0, "endOfListFormulaUpdate", a => a.EndOfListFormulaUpdate);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OldCell), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NewCell), 1, 1),
@@ -22480,7 +22480,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "start", a => a.Start)
 .AddAttribute(0, "length", a => a.Length);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -23178,7 +23178,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "oldStatusBar", a => a.OldStatusBar)
 .AddAttribute(0, "comment", a => a.Comment)
 .AddAttribute(0, "oldComment", a => a.OldComment);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OldFormula), 0, 1),
@@ -23731,7 +23731,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<SheetId>();
             builder.AddElement<SheetIdMap>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetId), 1, 65535)
             };
@@ -23811,7 +23811,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Reviewed>();
             builder.AddElement<ReviewedList>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Reviewed), 1, 0)
             };
@@ -24152,7 +24152,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oc");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellValue), 0, 1),
@@ -24222,7 +24222,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "c");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellValue), 0, 1),
@@ -24617,7 +24617,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "cm", a => a.CellMetaIndex)
 .AddAttribute(0, "vm", a => a.ValueMetaIndex)
 .AddAttribute(0, "ph", a => a.ShowPhonetic);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellValue), 0, 1),
@@ -24742,7 +24742,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "odxf");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
@@ -24815,7 +24815,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ndxf");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
@@ -24888,7 +24888,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "dxf");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
@@ -25508,7 +25508,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -25813,7 +25813,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Cell), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -26754,7 +26754,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1)
             };
@@ -27046,7 +27046,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "rowBreaks");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Break), 0, 0)
             };
@@ -27109,7 +27109,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "colBreaks");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Break), 0, 0)
             };
@@ -27930,7 +27930,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "differentFirst", a => a.DifferentFirst)
 .AddAttribute(0, "scaleWithDoc", a => a.ScaleWithDoc)
 .AddAttribute(0, "alignWithMargins", a => a.AlignWithMargins);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OddHeader), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OddFooter), 0, 1),
@@ -28097,7 +28097,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ExtensionList>();
             builder.AddElement<AutoFilter>()
 .AddAttribute(0, "ref", a => a.Reference);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FilterColumn), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
@@ -28397,7 +28397,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "rank", a => a.Rank)
 .AddAttribute(0, "stdDev", a => a.StdDev)
 .AddAttribute(0, "equalAverage", a => a.EqualAverage);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula), 0, 3),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColorScale), 0, 1),
@@ -28644,7 +28644,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "val", a => a.Val)
 .AddAttribute(0, "gte", a => a.GreaterThanOrEqual);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -28825,7 +28825,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "count", a => a.Count)
 .AddAttribute(0, "user", a => a.User)
 .AddAttribute(0, "comment", a => a.Comment);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InputCells), 1, 32)
             };
@@ -29716,7 +29716,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "zoomToFit", a => a.ZoomToFit);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -29870,7 +29870,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 .AddAttribute(0, "scale", a => a.Scale)
 .AddAttribute(0, "state", a => a.State)
 .AddAttribute(0, "zoomToFit", a => a.ZoomToFit);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup), 0, 1),
@@ -30155,7 +30155,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ControlProperties), 0, 1, version: FileFormatVersions.Office2010)
             };
@@ -30712,7 +30712,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), 0, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula1), 0, 1),
@@ -31151,7 +31151,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pane), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Selection), 0, 4),
@@ -31597,7 +31597,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 .AddAttribute(0, "view", a => a.View)
 .AddAttribute(0, "showRuler", a => a.ShowRuler)
 .AddAttribute(0, "topLeftCell", a => a.TopLeftCell);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pane), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Selection), 0, 1),
@@ -31926,7 +31926,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(19, "id", a => a.Id);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties), 0, 1, version: FileFormatVersions.Office2010)
             };
@@ -32022,7 +32022,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<MetadataType>();
             builder.AddElement<MetadataTypes>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataType), 1, 0)
             };
@@ -32103,7 +32103,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<CharacterValue>();
             builder.AddElement<MetadataStrings>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), 1, 0)
             };
@@ -32184,7 +32184,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Mdx>();
             builder.AddElement<MdxMetadata>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Mdx), 1, 0)
             };
@@ -32287,7 +32287,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -32353,7 +32353,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellMetadata");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), 1, 0)
             };
@@ -32415,7 +32415,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "valueMetadata");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), 1, 0)
             };
@@ -33059,7 +33059,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bk");
             builder.AddChild<MetadataRecord>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataRecord), 1, 0)
             };
@@ -33191,7 +33191,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bk");
             builder.AddChild<ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -33313,7 +33313,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxTuple), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxSet), 1, 1),
@@ -33609,7 +33609,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 .AddAttribute(0, "u", a => a.Underline)
 .AddAttribute(0, "st", a => a.Strikethrough)
 .AddAttribute(0, "b", a => a.Bold);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0, 0)
             };
@@ -33730,7 +33730,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "c", a => a.MemberIndexCount)
 .AddAttribute(0, "o", a => a.SortingOrder);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0, 0)
             };
@@ -34089,7 +34089,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -34224,7 +34224,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -34377,7 +34377,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -34474,7 +34474,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<BackgroundColor>();
             builder.AddElement<PatternFill>()
 .AddAttribute(0, "patternType", a => a.PatternType);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ForegroundColor), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BackgroundColor), 0, 1)
@@ -34666,7 +34666,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "right", a => a.Right)
 .AddAttribute(0, "top", a => a.Top)
 .AddAttribute(0, "bottom", a => a.Bottom);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GradientStop), 0, 0)
             };
@@ -34754,7 +34754,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 1)
             };
@@ -35190,7 +35190,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<FontFamilyNumbering>();
             builder.AddChild<FontCharSet>();
             builder.AddChild<FontScheme>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Bold), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Italic), 0, 1),
@@ -35463,7 +35463,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(22, "fill");
             builder.AddChild<PatternFill>();
             builder.AddChild<GradientFill>();
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PatternFill), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GradientFill), 0, 1)
@@ -35620,7 +35620,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "diagonalUp", a => a.DiagonalUp)
 .AddAttribute(0, "diagonalDown", a => a.DiagonalDown)
 .AddAttribute(0, "outline", a => a.Outline);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StartBorder), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EndBorder), 0, 1, version: FileFormatVersions.Office2010),
@@ -35807,7 +35807,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "indexedColors");
             builder.AddChild<RgbColor>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RgbColor), 1, 64)
             };
@@ -35869,7 +35869,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "mruColors");
             builder.AddChild<Color>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 10)
             };
@@ -36003,7 +36003,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "pivot", a => a.Pivot)
 .AddAttribute(0, "table", a => a.Table)
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyleElement), 0, 28)
             };
@@ -36220,7 +36220,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "iLevel", a => a.OutlineLevel)
 .AddAttribute(0, "hidden", a => a.Hidden)
 .AddAttribute(0, "customBuiltin", a => a.CustomBuiltin);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -36526,7 +36526,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "applyBorder", a => a.ApplyBorder)
 .AddAttribute(0, "applyAlignment", a => a.ApplyAlignment)
 .AddAttribute(0, "applyProtection", a => a.ApplyProtection);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
@@ -36866,7 +36866,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetNames");
             builder.AddChild<SheetName>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetName), 1, 65534)
             };
@@ -36928,7 +36928,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "definedNames");
             builder.AddChild<ExternalDefinedName>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName), 0, 0)
             };
@@ -36990,7 +36990,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetDataSet");
             builder.AddChild<ExternalSheetData>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData), 1, 0)
             };
@@ -37173,7 +37173,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "refreshError", a => a.RefreshError);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalRow), 0, 0)
             };
@@ -37257,7 +37257,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalCell), 0, 0)
             };
@@ -37375,7 +37375,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "t", a => a.DataType)
 .AddAttribute(0, "vm", a => a.ValueMetaIndex);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Xstring), 0, 1)
             };
@@ -37452,7 +37452,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "ddeItems");
             builder.AddChild<DdeItem>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeItem), 0, 0)
             };
@@ -37583,7 +37583,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "ole", a => a.UseOle)
 .AddAttribute(0, "advise", a => a.Advise)
 .AddAttribute(0, "preferPic", a => a.PreferPicture);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Values), 0, 1)
             };
@@ -37695,7 +37695,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<Values>()
 .AddAttribute(0, "rows", a => a.Rows)
 .AddAttribute(0, "cols", a => a.Columns);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Value), 1, 0)
             };
@@ -37777,7 +37777,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DdeLinkValue>();
             builder.AddElement<Value>()
 .AddAttribute(0, "t", a => a.ValueType);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue), 1, 1)
             };
@@ -37854,7 +37854,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(22, "oleItems");
             builder.AddChild<OleItem>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OleItem>();
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleItem), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OleItem), 1, 1, version: FileFormatVersions.Office2010)
@@ -37945,7 +37945,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetNames), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames), 0, 1),
@@ -38089,7 +38089,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeItems), 0, 1)
             };
@@ -38210,7 +38210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleItems), 0, 1)
             };
@@ -38589,7 +38589,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "headerRowCellStyle", a => a.HeaderRowCellStyle)
 .AddAttribute(0, "dataCellStyle", a => a.DataCellStyle)
 .AddAttribute(0, "totalsRowCellStyle", a => a.TotalsRowCellStyle);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula), 0, 1),
@@ -38949,7 +38949,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -39048,7 +39048,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Main), 1, 0)
             };
@@ -39131,7 +39131,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Topic), 1, 0)
             };
@@ -39216,7 +39216,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<TopicReferences>();
             builder.AddElement<Topic>()
 .AddAttribute(0, "t", a => a.ValueType);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Xstring), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Subtopic), 0, 0),
@@ -40049,7 +40049,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "showStatusbar", a => a.ShowStatusbar)
 .AddAttribute(0, "showComments", a => a.ShowComments)
 .AddAttribute(0, "showObjects", a => a.ShowObjects);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -40466,7 +40466,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "firstSheet", a => a.FirstSheet)
 .AddAttribute(0, "activeTab", a => a.ActiveTab)
 .AddAttribute(0, "autoFilterDateGrouping", a => a.AutoFilterDateGrouping);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
             };
@@ -40918,7 +40918,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Table), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
@@ -41036,7 +41036,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "moveWithCells", a => a.MoveWithCells)
 .AddAttribute(0, "sizeWithCells", a => a.SizeWithCells)
 .AddAttribute(0, "z-order", a => a.ZOrder);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FromMarker), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ToMarker), 1, 1, version: FileFormatVersions.Office2010)
@@ -41128,7 +41128,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "from");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
@@ -41196,7 +41196,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "to");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
@@ -41392,7 +41392,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Id), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
@@ -41477,7 +41477,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
@@ -41562,7 +41562,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotField), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
@@ -41647,7 +41647,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SourceConnection), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
@@ -41728,7 +41728,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<TableColumn>();
             builder.AddElement<TableColumns>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumn), 1, 0)
             };
@@ -41904,7 +41904,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<TableExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableExtension), 0, 0)
             };
@@ -42067,7 +42067,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "start");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
             };
@@ -42129,7 +42129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "end");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
             };
@@ -42190,7 +42190,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "left");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
             };
@@ -42251,7 +42251,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "right");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
             };
@@ -42312,7 +42312,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "top");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
             };
@@ -42373,7 +42373,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bottom");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
             };
@@ -42434,7 +42434,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "diagonal");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
             };
@@ -42495,7 +42495,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "vertical");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
             };
@@ -42556,7 +42556,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "horizontal");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
             };
@@ -42960,7 +42960,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "listFillRange", a => a.ListFillRange)
 .AddAttribute(0, "cf", a => a.Cf)
 .AddAttribute(19, "id", a => a.Id);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor), 1, 1, version: FileFormatVersions.Office2010)
             };
@@ -43244,7 +43244,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "altText", a => a.AltText)
 .AddAttribute(0, "dde", a => a.Dde)
 .AddAttribute(19, "id", a => a.Id);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor), 1, 1, version: FileFormatVersions.Office2010)
             };
@@ -43354,7 +43354,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<ChartSheetProperties>()
 .AddAttribute(0, "published", a => a.Published)
 .AddAttribute(0, "codeName", a => a.CodeName);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TabColor), 0, 1)
             };
@@ -43433,7 +43433,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(22, "sheetViews");
             builder.AddChild<ChartSheetView>();
             builder.AddChild<ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetView), 1, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -43646,7 +43646,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customSheetViews");
             builder.AddChild<CustomChartsheetView>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView), 0, 0)
             };
@@ -44285,7 +44285,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<WebPublishItem>();
             builder.AddElement<WebPublishItems>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishItem), 1, 0)
             };
@@ -44349,7 +44349,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(22, "colorScale");
             builder.AddChild<ConditionalFormatValueObject>();
             builder.AddChild<Color>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 3),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 2, 3)
@@ -44466,7 +44466,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "minLength", a => a.MinLength)
 .AddAttribute(0, "maxLength", a => a.MaxLength)
 .AddAttribute(0, "showValue", a => a.ShowValue);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 2),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 1)
@@ -44600,7 +44600,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "showValue", a => a.ShowValue)
 .AddAttribute(0, "percent", a => a.Percent)
 .AddAttribute(0, "reverse", a => a.Reverse);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 0)
             };
@@ -44662,7 +44662,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<ConditionalFormattingRuleExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension), 0, 0)
             };
@@ -44742,7 +44742,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DataReference>();
             builder.AddElement<DataReferences>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataReference), 0, 0)
             };
@@ -44962,7 +44962,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "codeName", a => a.CodeName)
 .AddAttribute(0, "filterMode", a => a.FilterMode)
 .AddAttribute(0, "enableFormatConditionsCalculation", a => a.EnableFormatConditionsCalculation);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TabColor), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OutlineProperties), 0, 1),
@@ -45068,7 +45068,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(22, "sheetViews");
             builder.AddChild<SheetView>();
             builder.AddChild<ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetView), 1, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -45730,7 +45730,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customSheetViews");
             builder.AddChild<CustomSheetView>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetView), 1, 0)
             };
@@ -45792,7 +45792,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "oleObjects");
             builder.AddChild<OleObject>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObject), 1, 65535)
             };
@@ -45854,7 +45854,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "controls");
             builder.AddChild<Control>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Control), 1, 65535)
             };
@@ -45964,7 +45964,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cols");
             builder.AddChild<Column>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Column), 1, 0)
             };
@@ -46026,7 +46026,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheetData");
             builder.AddChild<Row>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Row), 0, 0)
             };
@@ -46177,7 +46177,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 })
 .AddAttribute(0, "topLabels", a => a.TopLabels)
 .AddAttribute(0, "link", a => a.Link);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataReferences), 0, 1)
             };
@@ -46289,7 +46289,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddElement<ConditionalFormatting>()
 .AddAttribute(0, "pivot", a => a.Pivot)
 .AddAttribute(0, "sqref", a => a.SequenceOfReferences);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule), 1, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -46353,7 +46353,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customProperties");
             builder.AddChild<CustomProperty>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperty), 1, 0)
             };
@@ -46433,7 +46433,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<MemberProperty>();
             builder.AddElement<MemberProperties>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberProperty), 1, 0)
             };
@@ -46530,7 +46530,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddElement<Members>()
 .AddAttribute(0, "count", a => a.Count)
 .AddAttribute(0, "level", a => a.Level);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Member), 1, 0)
             };
@@ -46592,7 +46592,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<PivotHierarchyExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension), 0, 0)
             };
@@ -46672,7 +46672,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<Item>();
             builder.AddElement<Items>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Item), 1, 0)
             };
@@ -46734,7 +46734,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "autoSortScope");
             builder.AddChild<PivotArea>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1)
             };
@@ -46809,7 +46809,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<PivotFieldExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension), 0, 0)
             };
@@ -46993,7 +46993,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<RangeSets>();
             builder.AddElement<Consolidation>()
 .AddAttribute(0, "autoPage", a => a.AutoPage);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pages), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RangeSets), 1, 1)
@@ -47082,7 +47082,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<CacheSourceExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension), 0, 0)
             };
@@ -47401,7 +47401,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 .AddAttribute(0, "autoScale", a => a.AutoScale)
 .AddAttribute(0, "rowHidden", a => a.RowHidden)
 .AddAttribute(0, "colHidden", a => a.ColHidden);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor), 1, 1, version: FileFormatVersions.Office2010)
             };
@@ -47872,7 +47872,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<Filters>()
 .AddAttribute(0, "blank", a => a.Blank)
 .AddAttribute(0, "calendarType", a => a.CalendarType);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Filter), 0, 0, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filter), 0, 0),
@@ -48053,7 +48053,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<CustomFilter>();
             builder.AddElement<CustomFilters>()
 .AddAttribute(0, "and", a => a.And);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomFilter), 1, 2)
             };
@@ -48394,7 +48394,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache), 1, 1, version: FileFormatVersions.Office2013),
@@ -48483,7 +48483,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotFilter), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState), 1, 1, version: FileFormatVersions.Office2013),
@@ -48569,7 +48569,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.QueryTable), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
@@ -49137,7 +49137,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "htmlTables", a => a.HtmlTables)
 .AddAttribute(0, "htmlFormat", a => a.HtmlFormat)
 .AddAttribute(0, "editPage", a => a.EditPage);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tables), 0, 1)
             };
@@ -49486,7 +49486,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "consecutive", a => a.Consecutive)
 .AddAttribute(0, "qualifier", a => a.Qualifier)
 .AddAttribute(0, "delimiter", a => a.Delimiter);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextFields), 0, 1)
             };
@@ -49584,7 +49584,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<Parameter>();
             builder.AddElement<Parameters>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Parameter), 1, 0)
             };
@@ -49646,7 +49646,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<ConnectionExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension), 0, 0)
             };
@@ -49732,7 +49732,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Connection), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.Connection), 1, 1, version: FileFormatVersions.Office2013),
@@ -49814,7 +49814,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<TextField>();
             builder.AddElement<TextFields>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextField), 1, 2001)
             };
@@ -49918,7 +49918,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "connectionId", a => a.ConnectionId);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorksheetSource), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Consolidation), 1, 1),
@@ -50041,7 +50041,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<CacheField>();
             builder.AddElement<CacheFields>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), 0, 0)
             };
@@ -50121,7 +50121,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<CacheHierarchy>();
             builder.AddElement<CacheHierarchies>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy), 1, 0)
             };
@@ -50201,7 +50201,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Kpi>();
             builder.AddElement<Kpis>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Kpi), 0, 0)
             };
@@ -50271,7 +50271,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<QueryCache>();
             builder.AddChild<ServerFormats>();
             builder.AddChild<ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Entries), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sets), 0, 1),
@@ -50420,7 +50420,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<CalculatedItem>();
             builder.AddElement<CalculatedItems>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedItem), 1, 0)
             };
@@ -50500,7 +50500,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<CalculatedMember>();
             builder.AddElement<CalculatedMembers>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMember), 1, 0)
             };
@@ -50580,7 +50580,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Dimension>();
             builder.AddElement<Dimensions>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Dimension), 0, 0)
             };
@@ -50660,7 +50660,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<MeasureGroup>();
             builder.AddElement<MeasureGroups>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MeasureGroup), 0, 0)
             };
@@ -50740,7 +50740,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<MeasureDimensionMap>();
             builder.AddElement<Maps>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MeasureDimensionMap), 0, 0)
             };
@@ -50802,7 +50802,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<PivotCacheDefinitionExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension), 0, 0)
             };
@@ -50892,7 +50892,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled), 1, 1, version: FileFormatVersions.Office2013),
@@ -51207,7 +51207,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "maxDate", a => a.MaxDate)
 .AddAttribute(0, "count", a => a.Count)
 .AddAttribute(0, "longText", a => a.LongText);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberItem), 1, 1),
@@ -51316,9 +51316,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<FieldGroup>()
 .AddAttribute(0, "par", a => a.ParentId)
 .AddAttribute(0, "base", a => a.Base);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RangeProperties), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DiscreteProperties), 0, 1)
@@ -51383,7 +51383,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<CacheFieldExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension), 0, 0)
             };
@@ -51469,7 +51469,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheField), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames), 1, 1, version: FileFormatVersions.Office2013),
@@ -51551,7 +51551,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<FieldUsage>();
             builder.AddElement<FieldsUsage>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldUsage), 0, 0)
             };
@@ -51631,7 +51631,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<GroupLevel>();
             builder.AddElement<GroupLevels>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupLevel), 1, 0)
             };
@@ -51693,7 +51693,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<CacheHierarchyExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension), 0, 0)
             };
@@ -51779,7 +51779,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy), 1, 1, version: FileFormatVersions.Office2013),
@@ -51843,7 +51843,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<CalculatedMemberExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension), 0, 0)
             };
@@ -51929,7 +51929,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember), 1, 1, version: FileFormatVersions.Office2013),
@@ -52153,7 +52153,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<PivotField>();
             builder.AddElement<PivotFields>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), 1, 0)
             };
@@ -52233,7 +52233,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Field>();
             builder.AddElement<RowFields>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Field), 1, 0)
             };
@@ -52313,7 +52313,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<RowItem>();
             builder.AddElement<RowItems>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowItem), 1, 0)
             };
@@ -52393,7 +52393,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Field>();
             builder.AddElement<ColumnFields>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Field), 1, 0)
             };
@@ -52473,7 +52473,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<RowItem>();
             builder.AddElement<ColumnItems>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowItem), 1, 1048576)
             };
@@ -52553,7 +52553,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<PageField>();
             builder.AddElement<PageFields>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageField), 1, 256)
             };
@@ -52633,7 +52633,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DataField>();
             builder.AddElement<DataFields>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataField), 1, 0)
             };
@@ -52713,7 +52713,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Format>();
             builder.AddElement<Formats>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Format), 1, 0)
             };
@@ -52793,7 +52793,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ConditionalFormat>();
             builder.AddElement<ConditionalFormats>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat), 1, 0)
             };
@@ -52873,7 +52873,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ChartFormat>();
             builder.AddElement<ChartFormats>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartFormat), 1, 0)
             };
@@ -52953,7 +52953,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<PivotHierarchy>();
             builder.AddElement<PivotHierarchies>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy), 1, 0)
             };
@@ -53164,7 +53164,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<PivotFilter>();
             builder.AddElement<PivotFilters>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilter), 0, 0)
             };
@@ -53244,7 +53244,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<RowHierarchyUsage>();
             builder.AddElement<RowHierarchiesUsage>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowHierarchyUsage), 1, 0)
             };
@@ -53324,7 +53324,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ColumnHierarchyUsage>();
             builder.AddElement<ColumnHierarchiesUsage>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchyUsage), 1, 16384)
             };
@@ -53386,7 +53386,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<PivotTableDefinitionExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension), 0, 0)
             };
@@ -53474,7 +53474,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableData), 1, 1, version: FileFormatVersions.Office2013),
@@ -53539,7 +53539,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<DataFieldExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension), 0, 0)
             };
@@ -53625,7 +53625,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataField), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataField), 1, 1, version: FileFormatVersions.Office2013),
@@ -53689,7 +53689,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<PivotFilterExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension), 0, 0)
             };
@@ -53877,7 +53877,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "nextId", a => a.NextId)
 .AddAttribute(0, "unboundColumnsLeft", a => a.UnboundColumnsLeft)
 .AddAttribute(0, "unboundColumnsRight", a => a.UnboundColumnsRight);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableFields), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields), 0, 1),
@@ -53998,7 +53998,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<QueryTableExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension), 0, 0)
             };
@@ -54105,7 +54105,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "protectedRanges");
             builder.AddChild<ProtectedRange>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ProtectedRange), 1, 0)
             };
@@ -54219,7 +54219,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "current", a => a.Current)
 .AddAttribute(0, "show", a => a.Show)
 .AddAttribute(0, "sqref", a => a.SequenceOfReferences);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Scenario), 1, 0)
             };
@@ -54299,7 +54299,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<MergeCell>();
             builder.AddElement<MergeCells>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MergeCell), 1, 0)
             };
@@ -54430,7 +54430,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "xWindow", a => a.XWindow)
 .AddAttribute(0, "yWindow", a => a.YWindow)
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataValidation), 1, 65534)
             };
@@ -54495,7 +54495,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "hyperlinks");
             builder.AddChild<Hyperlink>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Hyperlink), 1, 0)
             };
@@ -54557,7 +54557,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "cellWatches");
             builder.AddChild<CellWatch>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellWatch), 1, 0)
             };
@@ -54621,7 +54621,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(22, "ignoredErrors");
             builder.AddChild<IgnoredError>();
             builder.AddChild<ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IgnoredError), 1, 9),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
@@ -54702,7 +54702,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<TablePart>();
             builder.AddElement<TableParts>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TablePart), 0, 0)
             };
@@ -54764,7 +54764,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<WorksheetExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension), 0, 0)
             };
@@ -54862,7 +54862,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidations), 1, 1, version: FileFormatVersions.Office2010),
@@ -54950,7 +54950,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<NumberingFormat>();
             builder.AddElement<NumberingFormats>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 0)
             };
@@ -55053,7 +55053,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 65491)
             };
@@ -55133,7 +55133,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<Fill>();
             builder.AddElement<Fills>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 1, 65430)
             };
@@ -55213,7 +55213,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<Border>();
             builder.AddElement<Borders>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 65430)
             };
@@ -55293,7 +55293,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<CellFormat>();
             builder.AddElement<CellStyleFormats>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), 1, 65430)
             };
@@ -55373,7 +55373,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<CellFormat>();
             builder.AddElement<CellFormats>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), 1, 65430)
             };
@@ -55453,7 +55453,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<CellStyle>();
             builder.AddElement<CellStyles>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyle), 1, 65430)
             };
@@ -55533,7 +55533,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.AddChild<DifferentialFormat>();
             builder.AddElement<DifferentialFormats>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 0)
             };
@@ -55647,7 +55647,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 .AddAttribute(0, "count", a => a.Count)
 .AddAttribute(0, "defaultTableStyle", a => a.DefaultTableStyle)
 .AddAttribute(0, "defaultPivotStyle", a => a.DefaultPivotStyle);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyle), 0, 0)
             };
@@ -55712,7 +55712,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             builder.SetSchema(22, "colors");
             builder.AddChild<IndexedColors>();
             builder.AddChild<MruColors>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IndexedColors), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MruColors), 0, 1)
@@ -55801,7 +55801,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<StylesheetExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension), 0, 0)
             };
@@ -55891,7 +55891,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles), 1, 1, version: FileFormatVersions.Office2013),
@@ -56837,7 +56837,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "bookViews");
             builder.AddChild<WorkbookView>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookView), 1, 0)
             };
@@ -56899,7 +56899,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "sheets");
             builder.AddChild<Sheet>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), 1, 32767)
             };
@@ -56979,7 +56979,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             builder.AddChild<FunctionGroup>();
             builder.AddElement<FunctionGroups>()
 .AddAttribute(0, "builtInGroupCount", a => a.BuiltInGroupCount);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FunctionGroup), 0, 255)
             };
@@ -57042,7 +57042,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "externalReferences");
             builder.AddChild<ExternalReference>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalReference), 1, 65534)
             };
@@ -57104,7 +57104,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "definedNames");
             builder.AddChild<DefinedName>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DefinedName), 0, 0)
             };
@@ -57463,7 +57463,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "customWorkbookViews");
             builder.AddChild<CustomWorkbookView>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView), 1, 0)
             };
@@ -57525,7 +57525,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "pivotCaches");
             builder.AddChild<PivotCache>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
             };
@@ -57882,7 +57882,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<WebPublishObject>();
             builder.AddElement<WebPublishObjects>()
 .AddAttribute(0, "count", a => a.Count);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishObject), 1, 0)
             };
@@ -57944,7 +57944,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(22, "extLst");
             builder.AddChild<WorkbookExtension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension), 0, 0)
             };
@@ -58048,7 +58048,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCaches), 1, 1, version: FileFormatVersions.Office2010),

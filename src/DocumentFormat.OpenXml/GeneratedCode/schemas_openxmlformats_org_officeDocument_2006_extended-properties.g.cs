@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             builder.AddChild<Application>();
             builder.AddChild<ApplicationVersion>();
             builder.AddChild<DocumentSecurity>();
-            builder.Particle = new CompositeParticle(ParticleType.All, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Template), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Manager), 0, 1),
@@ -1522,7 +1522,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "HeadingPairs");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
             };
@@ -1583,7 +1583,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "HLinks");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
             };
@@ -1709,7 +1709,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "TitlesOfParts");
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
             };
@@ -1784,7 +1784,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             base.ConfigureMetadata(builder);
             builder.SetSchema(3, "DigSig");
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTBlob), 1, 1)
             };
