@@ -125,7 +125,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0, 0)
             };
@@ -191,7 +191,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             builder.AddChild<Last>();
             builder.AddChild<First>();
             builder.AddChild<Middle>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.First), 0, 0),
@@ -2469,7 +2469,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "NameList");
             builder.AddChild<Person>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
             };
@@ -2530,7 +2530,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Artist");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2591,7 +2591,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "BookAuthor");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2652,7 +2652,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Compiler");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2713,7 +2713,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Composer");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2774,7 +2774,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Conductor");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2835,7 +2835,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Counsel");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2896,7 +2896,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Director");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2957,7 +2957,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Editor");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -3018,7 +3018,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Interviewee");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -3079,7 +3079,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Interviewer");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -3140,7 +3140,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Inventor");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -3201,7 +3201,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "ProducerName");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -3262,7 +3262,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Translator");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -3323,7 +3323,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Writer");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -3449,9 +3449,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Author");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
@@ -3515,9 +3515,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Performer");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
@@ -3690,9 +3690,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             builder.AddChild<ProducerName>();
             builder.AddChild<Translator>();
             builder.AddChild<Writer>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Artist), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Author), 1, 1),
@@ -4121,9 +4121,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             builder.AddChild<Volume>();
             builder.AddChild<Year>();
             builder.AddChild<YearAccessed>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AlbumTitle), 1, 1),

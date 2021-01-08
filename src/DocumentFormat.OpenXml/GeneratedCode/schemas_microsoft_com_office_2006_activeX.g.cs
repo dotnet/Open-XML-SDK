@@ -151,7 +151,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty), 0, 0)
             };
@@ -259,9 +259,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(35, "value", a => a.Value);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.SharedComFont), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture), 0, 1)
@@ -392,7 +392,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<SharedComFont>()
 .AddAttribute(35, "persistence", a => a.Persistence)
 .AddAttribute(19, "id", a => a.Id);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty), 0, 0)
             };

@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         [GlobalSetup]
         public void Setup()
         {
-            _particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            _particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0 , 1),
                 new ElementParticle(typeof(T2), 0 , 10),

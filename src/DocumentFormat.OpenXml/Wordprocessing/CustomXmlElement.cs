@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     a.AddValidator(new StringValidator { IsNcName = true });
                 });
 
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(CustomXmlProperties), 0, 1),
             };

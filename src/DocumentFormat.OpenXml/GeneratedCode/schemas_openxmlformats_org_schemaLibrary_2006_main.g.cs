@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
             base.ConfigureMetadata(builder);
             builder.SetSchema(25, "schemaLibrary");
             builder.AddChild<Schema>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema), 0, 0)
             };

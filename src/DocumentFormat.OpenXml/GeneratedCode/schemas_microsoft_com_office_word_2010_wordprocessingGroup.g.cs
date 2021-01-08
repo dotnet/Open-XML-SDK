@@ -76,12 +76,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "wgp");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new CompositeParticle(ParticleType.Choice, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShape), 1, 1, version: FileFormatVersions.Office2010),
@@ -157,12 +157,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
             base.ConfigureMetadata(builder);
             builder.SetSchema(60, "grpSp");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new CompositeParticle(ParticleType.Choice, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShape), 1, 1, version: FileFormatVersions.Office2010),
@@ -433,7 +433,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)
 .AddAttribute(0, "title", a => a.Title);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
@@ -539,7 +539,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
@@ -683,7 +683,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "flipH", a => a.HorizontalFlip)
 .AddAttribute(0, "flipV", a => a.VerticalFlip);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
@@ -773,11 +773,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(60, "extLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
                     }
@@ -844,7 +844,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList), 0, 1)
@@ -975,12 +975,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -990,9 +990,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
@@ -1081,7 +1081,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
             builder.AddChild<OfficeArtExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties), 1, 1, version: FileFormatVersions.Office2010),

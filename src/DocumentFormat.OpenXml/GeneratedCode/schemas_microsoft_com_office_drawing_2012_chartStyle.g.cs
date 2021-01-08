@@ -123,11 +123,11 @@ union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "id", a => a.Id);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -310,7 +310,7 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<ChartStyle>()
 .AddAttribute(0, "id", a => a.Id);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis), 1, 1, version: FileFormatVersions.Office2013),
@@ -905,11 +905,11 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlueModulation>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Gamma>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.InverseGamma>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tint), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shade), 1, 1),
@@ -1001,11 +1001,11 @@ union.AddValidator(StringValidator.Instance);
             builder.SetSchema(65, "extLst");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
                     }
@@ -1150,11 +1150,11 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyl
 union.AddValidator(StringValidator.Instance);
 });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tint), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shade), 1, 1),
@@ -1251,11 +1251,11 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "lnRef");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1331,11 +1331,11 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "fillRef");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1411,11 +1411,11 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "effectRef");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1680,11 +1680,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "mods", a => a.Modifiers);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1804,20 +1804,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -1828,9 +1828,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
@@ -2296,12 +2296,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 .AddAttribute(0, "smtClean", a => a.SmartTagClean)
 .AddAttribute(0, "smtId", a => a.SmartTagId)
 .AddAttribute(0, "bmk", a => a.Bookmark);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -2311,26 +2311,26 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Highlight), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFollowsText), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Underline), 0, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFillText), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFill), 1, 1)
@@ -2776,12 +2776,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "forceAA", a => a.ForceAntiAlias)
 .AddAttribute(0, "upright", a => a.UpRight)
 .AddAttribute(0, "compatLnSpc", a => a.CompatibleLineSpacing);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWrap), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoAutoFit), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NormalAutoFit), 1, 1),
@@ -2789,9 +2789,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FlatText), 1, 1)
@@ -3946,7 +3946,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "axisTitle");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4024,7 +4024,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "categoryAxis");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4102,7 +4102,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "chartArea");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4180,7 +4180,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataLabel");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4258,7 +4258,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataLabelCallout");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4336,7 +4336,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPoint");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4414,7 +4414,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPoint3D");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4492,7 +4492,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointLine");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4570,7 +4570,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointMarker");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4648,7 +4648,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointWireframe");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4726,7 +4726,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataTable");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4804,7 +4804,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "downBar");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4882,7 +4882,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dropLine");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4960,7 +4960,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "errorBar");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5038,7 +5038,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "floor");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5116,7 +5116,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "gridlineMajor");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5194,7 +5194,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "gridlineMinor");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5272,7 +5272,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "hiLoLine");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5350,7 +5350,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "leaderLine");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5428,7 +5428,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "legend");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5506,7 +5506,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "plotArea");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5584,7 +5584,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "plotArea3D");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5662,7 +5662,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "seriesAxis");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5740,7 +5740,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "seriesLine");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5818,7 +5818,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "title");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5896,7 +5896,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "trendline");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5974,7 +5974,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "trendlineLabel");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -6052,7 +6052,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "upBar");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -6130,7 +6130,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "valueAxis");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -6208,7 +6208,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "wall");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),

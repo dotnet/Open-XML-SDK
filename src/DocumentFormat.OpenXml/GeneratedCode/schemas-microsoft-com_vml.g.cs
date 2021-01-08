@@ -366,7 +366,7 @@ namespace DocumentFormat.OpenXml.Vml
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "formulas");
             builder.AddChild<Formula>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formula), 0, 128)
             };
@@ -428,7 +428,7 @@ namespace DocumentFormat.OpenXml.Vml
             base.ConfigureMetadata(builder);
             builder.SetSchema(26, "handles");
             builder.AddChild<ShapeHandle>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandle), 0, 4)
             };
@@ -951,7 +951,7 @@ namespace DocumentFormat.OpenXml.Vml
 .AddAttribute(0, "recolor", a => a.Recolor)
 .AddAttribute(0, "rotate", a => a.Rotate)
 .AddAttribute(19, "id", a => a.RelationshipId);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties), 0, 1)
             };
@@ -1533,7 +1533,7 @@ namespace DocumentFormat.OpenXml.Vml
 .AddAttribute(27, "forcedash", a => a.ForceDash)
 .AddAttribute(19, "id", a => a.RelationshipId)
 .AddAttribute(0, "insetpen", a => a.Insetpen);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LeftStroke), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.TopStroke), 0, 1),
@@ -1957,7 +1957,7 @@ namespace DocumentFormat.OpenXml.Vml
 .AddAttribute(0, "style", a => a.Style)
 .AddAttribute(0, "inset", a => a.Inset)
 .AddAttribute(27, "singleclick", a => a.SingleClick);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent), 0, 1),
                 new AnyParticle(XsdAny.Local, 1, 1)
@@ -3672,11 +3672,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(0, "path", a => a.EdgePath)
 .AddAttribute(27, "gfxdata", a => a.EncodedPackage)
 .AddAttribute(0, "equationxml", a => a.EquationXml);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -4840,11 +4840,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(0, "adj", a => a.Adjustment)
 .AddAttribute(0, "path", a => a.EdgePath)
 .AddAttribute(27, "master", a => a.Master);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -5611,7 +5611,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(0, "editas", a => a.EditAs)
 .AddAttribute(27, "tableproperties", a => a.TableProperties)
 .AddAttribute(27, "tablelimits", a => a.TableLimits);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Group), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shape), 1, 1),
@@ -5828,7 +5828,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 .AddAttribute(27, "bwpure", a => a.PureBlackWhiteMode)
 .AddAttribute(27, "bwnormal", a => a.NormalBlackWhiteMode)
 .AddAttribute(27, "targetscreensize", a => a.TargetScreenSize);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1)
             };
@@ -6961,11 +6961,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 .AddAttribute(0, "print", a => a.Print)
 .AddAttribute(0, "startangle", a => a.StartAngle)
 .AddAttribute(0, "endangle", a => a.EndAngle);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -8162,11 +8162,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(0, "control1", a => a.Control1)
 .AddAttribute(0, "control2", a => a.Control2)
 .AddAttribute(0, "to", a => a.To);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -9446,11 +9446,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(0, "grayscale", a => a.GrayScale)
 .AddAttribute(0, "bilevel", a => a.BiLevel)
 .AddAttribute(27, "gfxdata", a => a.Gfxdata);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -10611,11 +10611,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(27, "gfxdata", a => a.Gfxdata)
 .AddAttribute(0, "from", a => a.From)
 .AddAttribute(0, "to", a => a.To);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -11740,11 +11740,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
 .AddAttribute(27, "clip", a => a.Clip)
 .AddAttribute(27, "gfxdata", a => a.Gfxdata);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -12890,11 +12890,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(27, "clip", a => a.Clip)
 .AddAttribute(27, "gfxdata", a => a.Gfxdata)
 .AddAttribute(0, "points", a => a.Points);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -14021,11 +14021,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(27, "cliptowrap", a => a.ClipToWrap)
 .AddAttribute(27, "clip", a => a.Clip)
 .AddAttribute(27, "gfxdata", a => a.Gfxdata);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
@@ -15152,11 +15152,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(27, "clip", a => a.Clip)
 .AddAttribute(27, "gfxdata", a => a.Gfxdata)
 .AddAttribute(0, "arcsize", a => a.ArcSize);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),

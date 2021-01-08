@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualInkContentPartProperties>();
             builder.AddChild<ApplicationNonVisualDrawingProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
@@ -231,7 +231,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "flipH", a => a.HorizontalFlip)
 .AddAttribute(0, "flipV", a => a.VerticalFlip);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
@@ -339,11 +339,11 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.AddElement<ExtensionListModify>()
 .AddAttribute(0, "mod", a => a.Modify);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
                     }
@@ -455,7 +455,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.AddElement<Media>()
 .AddAttribute(19, "embed", a => a.Embed)
 .AddAttribute(19, "link", a => a.Link);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade), 0, 1, version: FileFormatVersions.Office2010),
@@ -1596,7 +1596,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(49, "sectionPr");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SectionOld>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld), 1, 0, version: FileFormatVersions.Office2010)
             };
@@ -1659,7 +1659,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(49, "sectionLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Section>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Section), 1, 0, version: FileFormatVersions.Office2010)
             };
@@ -1778,11 +1778,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -2077,7 +2077,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(49, "laserTraceLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TracePointList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList), 0, 0, version: FileFormatVersions.Office2010)
             };
@@ -2249,9 +2249,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ResumeEventRecord>();
             builder.AddChild<SeekEventRecord>();
             builder.AddChild<NullEventRecord>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord), 1, 1, version: FileFormatVersions.Office2010),
@@ -2508,7 +2508,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)
 .AddAttribute(0, "title", a => a.Title);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
@@ -2632,7 +2632,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             builder.AddElement<NonVisualInkContentPartProperties>()
 .AddAttribute(0, "isComment", a => a.IsComment);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
@@ -2771,12 +2771,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<ApplicationNonVisualDrawingProperties>()
 .AddAttribute(0, "isPhoto", a => a.IsPhoto)
 .AddAttribute(0, "userDrawn", a => a.UserDrawn);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlaceholderShape), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromCD), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.WaveAudioFile), 1, 1),
@@ -3051,7 +3051,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(49, "bmkLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<MediaBookmark>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark), 0, 0, version: FileFormatVersions.Office2010)
             };
@@ -3114,11 +3114,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(49, "extLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
                     }
@@ -3241,7 +3241,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
@@ -3367,7 +3367,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
             builder.SetSchema(49, "sldIdLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SectionSlideIdListEntry>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry), 0, 0, version: FileFormatVersions.Office2010)
             };
@@ -3470,7 +3470,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
@@ -3651,7 +3651,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             builder.SetSchema(49, "tracePtLst");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TracePoint>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint), 0, 0, version: FileFormatVersions.Office2010)
             };

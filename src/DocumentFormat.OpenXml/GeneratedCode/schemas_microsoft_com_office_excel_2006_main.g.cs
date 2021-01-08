@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleObjects>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDimension), 0, 1),
@@ -290,7 +290,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
             builder.SetSchema(32, "worksheetSortMap");
             builder.AddChild<RowSortMap>();
             builder.AddChild<ColumnSortMap>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMap), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMap), 0, 1)
@@ -534,7 +534,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMapItem), 1, 536870910)
             };
@@ -637,7 +637,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new NumberValidator() { MaxInclusive = (536870910L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem), 1, 536870910)
             };

@@ -337,7 +337,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             builder.SetSchema(69, "commentsEx");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<CommentEx>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.CommentEx), 0, 0, version: FileFormatVersions.Office2013)
             };
@@ -431,7 +431,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             builder.SetSchema(69, "people");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<Person>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Person), 0, 0, version: FileFormatVersions.Office2013)
             };
@@ -527,7 +527,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<SectionTitle>();
             builder.AddChild<DoNotAllowInsertDeleteSection>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SectionTitle), 0, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection), 0, 1, version: FileFormatVersions.Office2013)
@@ -1083,7 +1083,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.PresenceInfo), 0, 1, version: FileFormatVersions.Office2013)
             };

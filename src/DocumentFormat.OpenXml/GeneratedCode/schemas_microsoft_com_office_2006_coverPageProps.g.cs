@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
             builder.AddChild<CompanyPhoneNumber>();
             builder.AddChild<CompanyFaxNumber>();
             builder.AddChild<CompanyEmailAddress>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract), 1, 1),

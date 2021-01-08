@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Level>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level), 0, 0),

@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PivotTableName>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FormatId>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatId), 1, 1),
@@ -290,20 +290,20 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -314,9 +314,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
@@ -400,7 +400,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ManualLayout), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
@@ -490,7 +490,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "fullRef");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<SequenceOfReferences>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -566,7 +566,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "levelRef");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<SequenceOfReferences>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -642,7 +642,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "formulaRef");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<SequenceOfReferences>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -718,7 +718,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "filteredSeriesTitle");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<ChartText>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -794,7 +794,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "filteredCategoryTitle");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<AxisDataSourceType>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.AxisDataSourceType), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -870,7 +870,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "filteredAreaSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<AreaChartSeries>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.AreaChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -946,7 +946,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "filteredBarSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<BarChartSeries>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.BarChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -1022,7 +1022,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "filteredBubbleSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<BubbleChartSeries>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.BubbleChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -1098,7 +1098,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "filteredLineSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<LineChartSeries>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LineChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -1174,7 +1174,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "filteredPieSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<PieChartSeries>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PieChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -1250,7 +1250,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "filteredRadarSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<RadarChartSeries>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.RadarChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -1326,7 +1326,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "filteredScatterSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<ScatterChartSeries>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ScatterChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -1402,7 +1402,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "filteredSurfaceSeries");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<SurfaceChartSeries>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.SurfaceChartSeries), 1, 1, version: FileFormatVersions.Office2013)
             };
@@ -1480,7 +1480,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<Formula>();
             builder.AddChild<DataLabelsRangeChache>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRangeChache), 0, 1, version: FileFormatVersions.Office2013)
@@ -1570,7 +1570,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "categoryFilterExceptions");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<CategoryFilterException>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterException), 1, 0, version: FileFormatVersions.Office2013)
             };
@@ -1633,7 +1633,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "dlblFieldTable");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DataLabelFieldTableEntry>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTableEntry), 0, 0, version: FileFormatVersions.Office2013)
             };
@@ -1906,9 +1906,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RichText>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RichText), 1, 1),
@@ -2013,7 +2013,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(64, "leaderLines");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
             };
@@ -2220,9 +2220,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
@@ -2381,11 +2381,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Shape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
@@ -2567,11 +2567,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
@@ -2751,11 +2751,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.YValues>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
@@ -2919,11 +2919,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
@@ -3084,11 +3084,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
@@ -3269,11 +3269,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSize>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
@@ -3450,11 +3450,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
@@ -3623,11 +3623,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
@@ -3818,7 +3818,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "dlblRangeCache");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0),
@@ -3884,7 +3884,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(64, "dlblFieldTableCache");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0),
@@ -4072,7 +4072,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Size>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Symbol), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Size), 0, 1),
@@ -4220,21 +4220,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Separator>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 1, 1),
-                    new CompositeParticle(ParticleType.Group, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Sequence, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0, 1),
-                            new CompositeParticle(ParticleType.Group, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                 {
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
@@ -4338,7 +4338,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Bubble3D>();
             builder.AddChild<Marker>();
             builder.AddChild<DataLabel>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.SequenceOfReferences), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
@@ -4502,7 +4502,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<TextFieldGuid>();
             builder.AddChild<Formula>();
             builder.AddChild<DataLabelFieldTableCache>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.TextFieldGuid), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Formula), 1, 1, version: FileFormatVersions.Office2013),

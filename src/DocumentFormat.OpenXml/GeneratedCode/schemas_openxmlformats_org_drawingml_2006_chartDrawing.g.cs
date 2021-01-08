@@ -81,15 +81,15 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             builder.AddChild<ConnectionShape>();
             builder.AddChild<Picture>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.FromAnchor), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.ToAnchor), 1, 1),
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Shape), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.GroupShape), 1, 1),
@@ -199,15 +199,15 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             builder.AddChild<ConnectionShape>();
             builder.AddChild<Picture>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.FromAnchor), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Extent), 1, 1),
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Shape), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.GroupShape), 1, 1),
@@ -378,7 +378,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
 .AddAttribute(0, "textlink", a => a.TextLink)
 .AddAttribute(0, "fLocksText", a => a.LockText)
 .AddAttribute(0, "fPublished", a => a.Published);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualShapeProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties), 1, 1),
@@ -510,11 +510,11 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             builder.AddChild<ConnectionShape>();
             builder.AddChild<Picture>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGroupShapeProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.GroupShapeProperties), 1, 1),
-                new CompositeParticle(ParticleType.Choice, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Shape), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.GroupShape), 1, 1),
@@ -647,7 +647,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             builder.AddElement<GraphicFrame>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "fPublished", a => a.Published);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGraphicFrameProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.Transform), 1, 1),
@@ -790,7 +790,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             builder.AddElement<ConnectionShape>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "fPublished", a => a.Published);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualConnectorShapeDrawingProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.ShapeProperties), 1, 1),
@@ -935,7 +935,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             builder.AddElement<Picture>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "fPublished", a => a.Published);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualPictureProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.BlipFill), 1, 1),
@@ -1149,7 +1149,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)
 .AddAttribute(0, "title", a => a.Title);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
@@ -1273,7 +1273,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<NonVisualShapeDrawingProperties>()
 .AddAttribute(0, "txBox", a => a.TextBox);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
@@ -1364,7 +1364,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(12, "nvSpPr");
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualShapeDrawingProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualShapeDrawingProperties), 1, 1)
@@ -1502,20 +1502,20 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -1526,9 +1526,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
@@ -1615,7 +1615,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1, 1),
@@ -1736,7 +1736,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
@@ -1832,7 +1832,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.StartConnection), 0, 1),
@@ -1951,7 +1951,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(12, "nvCxnSpPr");
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualConnectionShapeProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualConnectionShapeProperties), 1, 1)
@@ -2060,7 +2060,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
             builder.AddElement<NonVisualPictureDrawingProperties>()
 .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList), 0, 1)
@@ -2151,7 +2151,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(12, "nvPicPr");
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualPictureDrawingProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualPictureDrawingProperties), 1, 1)
@@ -2281,13 +2281,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<BlipFill>()
 .AddAttribute(0, "dpi", a => a.Dpi)
 .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tile), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Stretch), 1, 1)
@@ -2380,7 +2380,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(12, "cNvGraphicFramePr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
@@ -2471,7 +2471,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(12, "nvGraphicFramePr");
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualGraphicFrameDrawingProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGraphicFrameDrawingProperties), 1, 1)
@@ -2614,7 +2614,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "flipH", a => a.HorizontalFlip)
 .AddAttribute(0, "flipV", a => a.VerticalFlip);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
@@ -2705,7 +2705,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(12, "cNvGrpSpPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList), 0, 1)
@@ -2876,7 +2876,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(12, "from");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.XPosition), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.YPosition), 1, 1)
@@ -2939,7 +2939,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(12, "to");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.XPosition), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.YPosition), 1, 1)
@@ -3153,7 +3153,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(12, "nvGrpSpPr");
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualGroupShapeDrawingProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGroupShapeDrawingProperties), 1, 1)
@@ -3283,12 +3283,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -3298,9 +3298,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)

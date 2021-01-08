@@ -32,11 +32,11 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Fact]
         public void RequireFilter()
         {
-            var particle = new CompositeParticle(ParticleType.Sequence, 1, 1, requireFilter: true)
+            var particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1, requireFilter: true)
             {
                 new CompositeParticle(ParticleType.Group,  1, 1),
                 new CompositeParticle(ParticleType.Group,  1, 2, version: FileFormatVersions.Office2010),
-            };
+            }.Build();
 
             var built2007 = Assert.IsType<CompositeParticle>(particle.Build(FileFormatVersions.Office2007));
 
@@ -60,12 +60,12 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Fact]
         public void CompositeSequenceVersion()
         {
-            var particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(ParticleTests), 1, 1),
                 new AnyParticle( 1, 1, version: FileFormatVersions.Office2010),
                 new NsAnyParticle(0, 1, 1),
-            };
+            }.Build();
 
             var built2007 = Assert.IsType<CompositeParticle>(particle.Build(FileFormatVersions.Office2007));
 
@@ -90,12 +90,12 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Fact]
         public void CompositeSequenceMultipleVersion()
         {
-            var particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(ParticleTests), 1, 1),
                 new ElementParticle(typeof(ParticleTests), 1, 1, version: FileFormatVersions.Office2010),
                 new NsAnyParticle(0, 1, 1),
-            };
+            }.Build();
 
             var built2007 = Assert.IsType<CompositeParticle>(particle.Build(FileFormatVersions.Office2007));
 
@@ -120,12 +120,12 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Theory]
         public void CompositeSequenceNoVersion(FileFormatVersions version)
         {
-            var particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(ParticleTests), 1, 1),
                 new AnyParticle( 1, 1),
                 new NsAnyParticle(0, 1, 1),
-            };
+            }.Build();
 
             var built = Assert.IsType<CompositeParticle>(particle.Build(version));
 
