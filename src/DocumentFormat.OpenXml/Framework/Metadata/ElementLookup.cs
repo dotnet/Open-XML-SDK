@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -36,7 +34,10 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public IEnumerable<ElementChild> Elements => _data;
 
-        public OpenXmlElement Create(byte id, string name)
+        public OpenXmlElement? Create(byte id, string name)
+            => Create(new OpenXmlSchema(id, name));
+
+        public OpenXmlElement? Create(OpenXmlSchema schema)
         {
             if (_data.Length == 0)
             {
@@ -45,7 +46,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             // This is on a hot-path and using a dictionary adds substantial time to the lookup. Most child lists are small, so using a sorted
             // list to store them with a binary search improves overall performance.
-            var idx = Array.BinarySearch(_data, new ElementChild(null, id, name), ElementChildNameComparer.Instance);
+            var idx = Array.BinarySearch(_data, new ElementChild(null, schema), ElementChildNameComparer.Instance);
 
             if (idx < 0)
             {
@@ -57,11 +58,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         private static ElementLookup CreatePartLookup(Type type, Func<Type, Func<OpenXmlElement>> activatorFactory)
         {
-            List<ElementChild> lookup = null;
+            List<ElementChild>? lookup = null;
 
             foreach (var child in GetAllRootElements(type))
             {
-                if (lookup == null)
+                if (lookup is null)
                 {
                     lookup = new List<ElementChild>();
                 }
@@ -71,7 +72,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 lookup.Add(key);
             }
 
-            if (lookup == null)
+            if (lookup is null)
             {
                 return Empty;
             }
@@ -101,35 +102,21 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             }
 
             public int Compare(ElementChild x, ElementChild y)
-            {
-                var nsCompare = x.NamespaceId.CompareTo(y.NamespaceId);
-
-                if (nsCompare != 0)
-                {
-                    return nsCompare;
-                }
-
-                return string.CompareOrdinal(x.Name, y.Name);
-            }
+                => x.Schema.CompareTo(y.Schema);
         }
 
         [DebuggerDisplay("{Namespace}:{Name}")]
         public class ElementChild
         {
-            public ElementChild(Type type, byte nsId, string name)
+            public ElementChild(Type? type, OpenXmlSchema schema)
             {
                 Type = type;
-                NamespaceId = nsId;
-                Name = name;
+                Schema = schema;
             }
 
-            public Type Type { get; }
+            public Type? Type { get; }
 
-            public byte NamespaceId { get; }
-
-            public string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
-
-            public string Name { get; }
+            public OpenXmlSchema Schema { get; }
 
             public virtual OpenXmlElement Create() => throw new NotImplementedException();
         }
@@ -139,14 +126,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             private readonly Func<OpenXmlElement> _activator;
 
             public ActivatorElementChild(Type child, Func<OpenXmlElement> activator)
-                : this(child, GetSchema(activator))
+                : base(child, GetSchema(activator))
             {
                 _activator = activator;
-            }
-
-            private ActivatorElementChild(Type child, OpenXmlSchema schema)
-                : base(child, schema.NamespaceId, schema.Tag)
-            {
             }
 
             public override OpenXmlElement Create() => _activator();

@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework.Schema;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
@@ -24,10 +22,10 @@ namespace DocumentFormat.OpenXml.Framework
 
         public ParticleConstraint Particle { get; }
 
-        public ParticlePath Find(object obj)
+        public ParticlePath? Find(object obj)
             => Find(obj?.GetType());
 
-        public ParticlePath Find(Type type)
+        public ParticlePath? Find(Type? type)
         {
             if (type is null)
             {

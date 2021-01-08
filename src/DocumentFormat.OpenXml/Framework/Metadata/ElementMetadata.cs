@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
@@ -21,7 +19,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlMiscNode), new ElementMetadata()),
         });
 
-        private readonly Lazy<ElementLookup> _children;
+        private readonly Lazy<ElementLookup>? _children;
 
         internal ElementMetadata(
             ReadOnlyArray<AttributeMetadata> attributes,
@@ -55,7 +53,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public FileFormatVersions Availability { get; }
 
-        public CompiledParticle Particle { get; }
+        public CompiledParticle? Particle { get; }
 
         public OpenXmlSchema Schema { get; }
 
@@ -93,11 +91,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         {
             private static readonly Lazy<ElementLookup> _lazy = new Lazy<ElementLookup>(() => ElementLookup.Empty, true);
 
-            private List<IMetadataBuilder<AttributeMetadata>> _attributes;
-            private HashSet<IMetadataBuilder<ElementLookup.ElementChild>> _children;
-            private List<IValidator> _constraints;
+            private List<IMetadataBuilder<AttributeMetadata>>? _attributes;
+            private HashSet<IMetadataBuilder<ElementLookup.ElementChild>>? _children;
+            private List<IValidator>? _constraints;
             private byte _nsId;
-            private string _localName;
+            private string? _localName;
 
             public Builder<TElement> AddElement<TElement>()
                 where TElement : OpenXmlElement
@@ -118,7 +116,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             public void SetSchema(string ns, string localName)
                 => SetSchema(NamespaceIdMap.GetNamespaceId(ns), localName);
 
-            public CompositeParticle Particle { get; set; }
+            public CompositeParticle? Particle { get; set; }
 
             public void SetSchema(byte nsId, string localName)
             {
@@ -157,7 +155,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 return new ElementMetadata(BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, schema, Particle.Compile(), lookup);
             }
 
-            private AttributeMetadata[] BuildAttributes()
+            private AttributeMetadata[]? BuildAttributes()
             {
                 if (_attributes is null)
                 {
@@ -182,7 +180,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 private class ElementChild2 : ElementLookup.ElementChild
                 {
                     public ElementChild2(ElementMetadata metadata)
-                        : base(typeof(T), metadata.Schema.NamespaceId, metadata.Schema.Tag)
+                        : base(typeof(T), metadata.Schema)
                     {
                     }
 
@@ -201,7 +199,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 _builder = builder;
             }
 
-            public Builder<TElement> AddAttribute<TSimpleType>(byte nsId, string localName, Expression<Func<TElement, TSimpleType>> expression, Action<AttributeMetadata.Builder<TSimpleType>> action = null)
+            public Builder<TElement> AddAttribute<TSimpleType>(byte nsId, string localName, Expression<Func<TElement, TSimpleType>> expression, Action<AttributeMetadata.Builder<TSimpleType>>? action = null)
                 where TSimpleType : OpenXmlSimpleType, new()
             {
                 if (expression.Body is MemberExpression member)

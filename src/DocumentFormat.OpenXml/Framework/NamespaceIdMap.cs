@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -327,7 +325,7 @@ namespace DocumentFormat.OpenXml.Framework
         /// </summary>
         /// <param name="prefix">The namespace prefix.</param>
         /// <returns></returns>
-        public static string GetNamespaceUri(string prefix)
+        public static string? GetNamespaceUri(string prefix)
         {
             if (prefix == null)
             {
@@ -349,7 +347,7 @@ namespace DocumentFormat.OpenXml.Framework
         /// <returns></returns>
         public static string GetNamespacePrefix(byte namespaceId) => _namespaceResolver[namespaceId].Prefix;
 
-        public static string GetNamespacePrefix(string namespaceUri) => _namespaceResolver.TryGetByNamespace(namespaceUri, out var info) ? info.Prefix : null;
+        public static string? GetNamespacePrefix(string namespaceUri) => _namespaceResolver.TryGetByNamespace(namespaceUri, out var info) ? info.Prefix : null;
 
         /// <summary>
         /// Try to get the expected namespace if the passed namespace is an obsolete.
