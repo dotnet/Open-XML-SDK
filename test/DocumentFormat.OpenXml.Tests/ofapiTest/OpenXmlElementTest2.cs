@@ -142,5 +142,41 @@ namespace DocumentFormat.OpenXml.Tests
             target = unknown2.GetXPathIndex();
             Assert.Equal(2, target);
         }
+
+        /// <summary>
+        /// Tests if empty string is set when
+        /// null value is given to setter
+        /// </summary>
+        [Fact]
+        public void TestSetRawOuterXmlField_NullValueIsSet_FieldShouldNotBeNull()
+        {
+            var openXmlElement = new Document();
+            openXmlElement.RawOuterXml = null;
+            Assert.NotNull(openXmlElement.RawOuterXml);
+        }
+
+        /// <summary>
+        /// Tests if proper string value is set when
+        /// setter is invoked
+        /// </summary>
+        [Fact]
+        public void TestSetRawOuterXmlField_ValueIsSet_FieldShouldContainSetValue()
+        {
+            var openXmlElement = new Document();
+            var testValue = "Some proper value";
+            openXmlElement.RawOuterXml = testValue;
+            Assert.Equal(testValue, openXmlElement.RawOuterXml);
+        }
+
+        /// <summary>
+        /// Tests if field is empty when empty string is set
+        /// </summary>
+        [Fact]
+        public void TestSetRawOuterXmlField_SetValueIsEmpty_FieldShouldBeEmpty()
+        {
+            var openXmlElement = new Document();
+            openXmlElement.RawOuterXml = string.Empty;
+            Assert.Equal(string.Empty, openXmlElement.RawOuterXml);
+        }
     }
 }
