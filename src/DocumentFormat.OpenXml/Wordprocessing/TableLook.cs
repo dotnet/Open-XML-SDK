@@ -53,8 +53,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </remarks>
         private static string ValueToString(long value) => Convert.ToString(value, 16).PadLeft(4, '0');
 
-        private static long StringToValue(string str)
+        private static long StringToValue(string? str)
         {
+            if (str is null)
+            {
+                return 0;
+            }
+
             try
             {
                 return Convert.ToInt64(str, 16);

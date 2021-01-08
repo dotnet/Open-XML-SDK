@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Diagnostics;
 
@@ -15,14 +13,14 @@ namespace DocumentFormat.OpenXml
     public class HexBinaryValue : StringValue
     {
         /// <summary>
-        /// Initializes a new instance of the HexBinaryValue class.
+        /// Initializes a new instance of the <see cref="HexBinaryValue"/> class.
         /// </summary>
         public HexBinaryValue()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the HexBinaryValue class using the supplied string.
+        /// Initializes a new instance of the <see cref="HexBinaryValue"/> class using the supplied string.
         /// </summary>
         /// <param name="hexBinary">The string value.</param>
         public HexBinaryValue(string hexBinary)
@@ -31,9 +29,9 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the HexBinaryValue class by deep copying the supplied HexBinaryValue class.
+        /// Initializes a new instance of the <see cref="HexBinaryValue"/> class by deep copying the supplied <see cref="HexBinaryValue"/> class.
         /// </summary>
-        /// <param name="source">The source HexBinaryValue class.</param>
+        /// <param name="source">The source <see cref="HexBinaryValue"/> class.</param>
         public HexBinaryValue(HexBinaryValue source)
             : base((StringValue)source)
         {
@@ -87,62 +85,56 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets the hex binary value
         /// </summary>
-        public override string Value
+        public override string? Value
         {
             get => TextValue;
             set => TextValue = value;
         }
 
         /// <summary>
-        /// Implicitly converts the specified value to a String value.
+        /// Implicitly converts the specified value to a <see cref="string"/> value.
         /// </summary>
-        /// <param name="xmlAttribute">The HexBinaryValue object to convert.</param>
-        /// <returns>The converted HexBinary string. Returns null when xmlAttribute is null.</returns>
-        public static implicit operator string(HexBinaryValue xmlAttribute)
+        /// <param name="value">The <see cref="HexBinaryValue"/> object to convert.</param>
+        /// <returns>The converted HexBinary string. Returns null when <paramref name="value"/> is <c>null</c>.</returns>
+        public static implicit operator string?(HexBinaryValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 return null;
             }
 
-            return ToString(xmlAttribute);
+            return ToString(value);
         }
 
         /// <summary>
-        /// Implicitly converts the specified String value to a HexBinaryValue object.
+        /// Implicitly converts the specified <see cref="string"/> value to a <see cref="HexBinaryValue"/> object.
         /// </summary>
         /// <param name="value">The specified hexBinary value.</param>
-        /// <returns>A new HexBinaryValue instance with the value.</returns>
-        public static implicit operator HexBinaryValue(string value)
-        {
-            return FromString(value);
-        }
+        /// <returns>A new <see cref="HexBinaryValue"/> instance with the value.</returns>
+        public static implicit operator HexBinaryValue(string value) => FromString(value);
 
         /// <summary>
-        /// Returns a new HexBinaryValue object that was created from a String value.
+        /// Returns a new <see cref="HexBinaryValue"/> object that was created from a <see cref="string"/> value.
         /// </summary>
-        /// <param name="value">A String value to use to create a new HexBinaryValue object.</param>
-        /// <returns>A HexBinaryValue object that corresponds to the value parameter.</returns>
-        public static new HexBinaryValue FromString(string value)
-        {
-            return new HexBinaryValue(value);
-        }
+        /// <param name="value">A <see cref="string"/> value to use to create a new <see cref="HexBinaryValue"/> object.</param>
+        /// <returns>A <see cref="HexBinaryValue"/> object that corresponds to the value parameter.</returns>
+        public static new HexBinaryValue FromString(string value) => new HexBinaryValue(value);
 
         /// <summary>
-        /// Returns the String value representation of a HexBinaryValue object.
+        /// Returns the <see cref="string"/> value representation of a <see cref="HexBinaryValue"/> object.
         /// </summary>
-        /// <param name="xmlAttribute">
-        /// A HexBinaryValue object used to retrieve a String value representation.
+        /// <param name="value">
+        /// A <see cref="HexBinaryValue"/> object used to retrieve a <see cref="string"/> value representation.
         /// </param>
-        /// <returns>A String value that represents a HexBinaryValue object.</returns>
-        public static string ToString(HexBinaryValue xmlAttribute)
+        /// <returns>A <see cref="string"/> value that represents a <see cref="HexBinaryValue"/> object.</returns>
+        public static string? ToString(HexBinaryValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return xmlAttribute.Value;
+            return value.Value;
         }
 
         private protected override OpenXmlSimpleType CloneImpl() => new HexBinaryValue(this);

@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -29,7 +27,7 @@ namespace DocumentFormat.OpenXml
     {
         private static EnumStringLookupImpl Instance { get; } = new EnumStringLookupImpl();
 
-        public static bool TryParse(string name, out TEnum value) => Instance.TryParse(name, out value);
+        public static bool TryParse(string? name, out TEnum value) => Instance.TryParse(name, out value);
 
         public static string ToString(TEnum value) => Instance.ToString(value);
 
@@ -41,10 +39,10 @@ namespace DocumentFormat.OpenXml
 
         private sealed class EnumStringLookupImpl
         {
-            private readonly Dictionary<string, TEnum> _nameLookup;
-            private readonly EnumStringInfo[] _enumInfo;
+            private readonly Dictionary<string, TEnum>? _nameLookup;
+            private readonly EnumStringInfo[]? _enumInfo;
 
-            public bool TryParse(string name, out TEnum value)
+            public bool TryParse(string? name, out TEnum value)
             {
                 if (_nameLookup == null)
                 {
@@ -90,7 +88,7 @@ namespace DocumentFormat.OpenXml
                     throw new ArgumentOutOfRangeException(nameof(value));
                 }
 
-                return _enumInfo[index];
+                return _enumInfo![index];
             }
 
             public EnumStringLookupImpl()

@@ -1,15 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Defines an OnOffValue data type for attributes that have enum values that are Boolean values that represent: 'true' or 'false', 'on' or 'off', or '0' or '1'.
+    /// Defines an <see cref="OnOffValue"/> data type for attributes that have enum values that are <see cref="bool"/> values that represent: 'true' or 'false', 'on' or 'off', or '0' or '1'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
     public class OnOffValue : OpenXmlComparableSimpleValue<bool>
@@ -22,7 +20,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of <see cref="OnOffValue"/> class using the supplied Boolean value.
+        /// Initializes a new instance of <see cref="OnOffValue"/> class using the supplied <see cref="bool"/> value.
         /// </summary>
         /// <param name="value">The <see cref="bool"/> value.</param>
         public OnOffValue(bool value)
@@ -31,7 +29,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of <see cref="OnOffValue"/> class using the supplied OnOffValue class.
+        /// Initializes a new instance of <see cref="OnOffValue"/> class using the supplied <see cref="OnOffValue"/> class.
         /// </summary>
         /// <param name="source">The source <see cref="OnOffValue"/> class.</param>
         public OnOffValue(OnOffValue source)
@@ -44,7 +42,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="textValue">The text value which could be 'true', 'false', 'on', 'off', '0', or '1'.</param>
         /// <returns>True for 'true', 'on', '0', or '1'.</returns>
-        private protected override bool Parse(string textValue)
+        private protected override bool Parse(string? textValue)
         {
             switch (textValue)
             {
@@ -62,34 +60,30 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private protected override bool ShouldParse(string value) => value != null;
+        private protected override bool ShouldParse(string? value) => value != null;
 
         /// <summary>
         /// Gets the default text value.
         /// </summary>
         /// <param name="boolValue">The boolean value.</param>
-        /// <returns>"1" for True, "0" for False.</returns>
-        private protected override string GetText(bool boolValue)
-        {
-            // TODO : Defines the default text values.
-            return boolValue ? "true" : "false";
-        }
+        /// <returns>"1" for <c>true</c>, "0" for <c>false</c>.</returns>
+        private protected override string GetText(bool boolValue) => boolValue ? "true" : "false";
 
         private protected override OpenXmlSimpleType CloneImpl() => new OnOffValue(this);
 
         /// <summary>
-        /// Implicitly converts the specified OnOffValue object to a <see cref="bool"/> value.
+        /// Implicitly converts the specified <see cref="OnOffValue"/> object to a <see cref="bool"/> value.
         /// </summary>
-        /// <param name="xmlAttribute">The <see cref="OnOffValue"/> object to convert.</param>
+        /// <param name="value">The <see cref="OnOffValue"/> object to convert.</param>
         /// <returns>The converted <see cref="bool"/> value.</returns>
-        public static implicit operator bool(OnOffValue xmlAttribute)
+        public static implicit operator bool(OnOffValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
-                throw new ArgumentNullException(nameof(xmlAttribute));
+                throw new ArgumentNullException(nameof(value));
             }
 
-            return ToBoolean(xmlAttribute);
+            return ToBoolean(value);
         }
 
         /// <summary>
@@ -97,34 +91,28 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The <see cref="bool"/> value to convert.</param>
         /// <returns>The converted <see cref="OnOffValue"/>.</returns>
-        public static implicit operator OnOffValue(bool value)
-        {
-            return FromBoolean(value);
-        }
+        public static implicit operator OnOffValue(bool value) => FromBoolean(value);
 
         /// <summary>
-        /// Returns a new OnOffValue object created from a Boolean value.
+        /// Returns a new <see cref="OnOffValue"/> object created from a <see cref="bool"/> value.
         /// </summary>
-        /// <param name="value">A Boolean value that is used to create a new OnOffValue object.</param>
-        /// <returns>A OnOffValue that corresponds to the value parameter.</returns>
-        public static OnOffValue FromBoolean(bool value)
-        {
-            return new OnOffValue(value);
-        }
+        /// <param name="value">A <see cref="bool"/> value that is used to create a new <see cref="OnOffValue"/> object.</param>
+        /// <returns>A <see cref="OnOffValue"/> that corresponds to the value parameter.</returns>
+        public static OnOffValue FromBoolean(bool value) => new OnOffValue(value);
 
         /// <summary>
-        /// Returns the internal Boolean representation of a OnOffValue object.
+        /// Returns the internal <see cref="bool"/> representation of a <see cref="OnOffValue"/> object.
         /// </summary>
-        /// <param name="xmlAttribute">A OnOffValue object to retrieve an internal Boolean representation.</param>
-        /// <returns>A Boolean value that represents a OnOffValue object.</returns>
-        public static bool ToBoolean(OnOffValue xmlAttribute)
+        /// <param name="value">A <see cref="OnOffValue"/> object to retrieve an internal <see cref="bool"/> representation.</param>
+        /// <returns>A <see cref="bool"/> value that represents a <see cref="OnOffValue"/> object.</returns>
+        public static bool ToBoolean(OnOffValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return xmlAttribute.Value;
+            return value.Value;
         }
     }
 }
