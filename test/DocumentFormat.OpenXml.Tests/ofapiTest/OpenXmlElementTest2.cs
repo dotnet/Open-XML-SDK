@@ -144,7 +144,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Tests if empty string is set when 
+        /// Tests if empty string is set when
         /// null value is given to setter
         /// </summary>
         [Fact]
