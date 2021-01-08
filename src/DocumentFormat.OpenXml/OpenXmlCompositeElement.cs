@@ -1,8 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections;
 using System.Collections.Generic;

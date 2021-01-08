@@ -1,7 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
+#nullable disable
+
 using System;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
