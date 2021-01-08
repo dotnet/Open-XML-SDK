@@ -164,6 +164,43 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
+        [Fact]
+        public void HyperlinkRelationshipTest3()
+        {
+            using (var stream = new MemoryStream())
+            {
+                using (var testDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+                {
+                    var mainPart = testDocument.AddMainDocumentPart();
+                    mainPart.Document = new Document();
+                    var body = mainPart.Document.AppendChild(new Body());
+
+                    var link = mainPart.AddHyperlinkRelationship(new System.Uri(string.Empty, System.UriKind.RelativeOrAbsolute), true);
+                    body.AppendChild(new Paragraph(new Hyperlink(new Run(new Text("empty URI link"))) {Id = link.Id}));
+
+                    var validator = new OpenXmlValidator();
+                    var errors = validator.Validate(testDocument);
+                    Assert.Empty(errors);
+                }
+
+                stream.Seek(0, SeekOrigin.Begin);
+
+                // System.Xml.XmlException occurs while opening
+                using (var wordDocument = WordprocessingDocument.Open(stream, true, new OpenSettings { RelationshipErrorHandlerFactory = _ => new RemoveMalformedHyperlinksRelationshipErrorHandler() }))
+                {
+                    Assert.Single(wordDocument.MainDocumentPart.HyperlinkRelationships);
+                }
+            }
+        }
+
+        private sealed class RemoveMalformedHyperlinksRelationshipErrorHandler : RelationshipErrorHandler
+        {
+            public override string Rewrite(System.Uri partUri, string id, string uri)
+            {
+                return "http://error";
+            }
+        }
+
         ///<summary>
         ///ChangePartIdTest.
         ///</summary>
