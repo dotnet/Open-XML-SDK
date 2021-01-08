@@ -23,18 +23,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public bool Any() => Length > 0;
 
-        public ref T this[int index]
-        {
-            get
-            {
-                if (_array is null)
-                {
-                    throw new InvalidOperationException();
-                }
-
-                return ref _array[index];
-            }
-        }
+        public ref T this[int index] => ref _array![index];
 
         public int Length => _array?.Length ?? 0;
 
