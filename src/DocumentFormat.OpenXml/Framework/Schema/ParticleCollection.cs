@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections;
@@ -18,7 +16,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
         private readonly Type _type;
         private readonly OpenXmlCompositeElement _element;
         private readonly CompiledParticle _compiled;
-        private readonly ParticlePath _elementPath;
+        private readonly ParticlePath? _elementPath;
 
         internal ParticleCollection(Type type, CompiledParticle compiled, OpenXmlCompositeElement element)
         {
@@ -51,7 +49,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                 var data = enumerator.Current;
                 var current = _compiled.Find(data);
 
-                if (current != null && current.Equals(_elementPath))
+                if (current != null && _elementPath != null && current.Equals(_elementPath))
                 {
                     remove = data;
                 }
@@ -112,8 +110,13 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             return false;
         }
 
-        private OpenXmlElement GetNode()
+        private OpenXmlElement? GetNode()
         {
+            if (_elementPath is null)
+            {
+                return null;
+            }
+
             var enumerator = new OpenXmlCompositeElementEnumerator(this);
 
             while (enumerator.MoveNext())
@@ -160,7 +163,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             {
                 _type = type;
                 _child = element.FirstChild;
-                Current = null;
+                Current = null!;
             }
 
             public OpenXmlElement Current { get; private set; }
@@ -173,7 +176,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
             public bool MoveNext()
             {
-                Current = null;
+                Current = null!;
 
                 while (_child != null)
                 {
@@ -200,8 +203,8 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             public OpenXmlCompositeElementEnumerator(in ParticleCollection collection)
             {
                 _collection = collection;
-                Current = default;
-                Path = null;
+                Current = default!;
+                Path = null!;
             }
 
             public OpenXmlElement Current { get; private set; }
@@ -211,8 +214,8 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             private bool Complete()
             {
                 _collection = default;
-                Path = null;
-                Current = null;
+                Path = null!;
+                Current = null!;
                 return false;
             }
 
@@ -237,7 +240,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                     return Complete();
                 }
 
-                if (_collection._elementPath.Type == ParticleType.All && !_collection._elementPath.IsSibling(Path))
+                if (_collection._elementPath != null && _collection._elementPath.Type == ParticleType.All && !_collection._elementPath.IsSibling(Path))
                 {
                     return Complete();
                 }
@@ -249,7 +252,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             {
                 Advance();
 
-                if (Current is null)
+                if (Current is null || _collection._elementPath is null)
                 {
                     return Complete();
                 }
@@ -295,8 +298,8 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                         }
                     }
 
-                    Path = _collection._compiled.Find(Current);
-                } while (Path == null);
+                    Path = _collection._compiled.Find(Current)!;
+                } while (Path is null);
             }
         }
     }

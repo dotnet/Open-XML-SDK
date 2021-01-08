@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Framework
         /// same relationship type but different content type.
         /// </summary>
         /// <remarks>This value is null for non-fixed content type.</remarks>
-        public string PartContentType => _info.PartContentType;
+        public string? PartContentType => _info.PartContentType;
 
         /// <summary>
         /// Gets a value indicating whether the min occurs > 0, (i.e. is required).

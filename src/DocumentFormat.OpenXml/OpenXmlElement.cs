@@ -311,7 +311,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the local name of the current element.
         /// </summary>
-        public virtual string LocalName => Metadata.Schema.Tag;
+        public virtual string LocalName => Metadata.Schema.Name;
 
         /// <summary>
         /// Gets the namespace prefix of current element.

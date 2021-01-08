@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema.Restrictions;
 using System.Collections.Generic;
@@ -22,7 +20,7 @@ namespace DocumentFormat.OpenXml.Framework
         private static readonly XmlQualifiedName _ncName = new XmlQualifiedName("NCName", "http://www.w3.org/2001/XMLSchema");
         private static readonly XmlQualifiedName _qname = new XmlQualifiedName("QName", "http://www.w3.org/2001/XMLSchema");
 
-        public XmlQualifiedName QName
+        public XmlQualifiedName? QName
         {
             get
             {
@@ -54,24 +52,24 @@ namespace DocumentFormat.OpenXml.Framework
         private long? _minLength;
         private long? _maxLength;
         private long? _length;
-        private Regex _regex;
+        private Regex? _regex;
 
         public Regex Regex
         {
             get
             {
-                if (_regex == null && Pattern != null)
+                if (_regex is null && Pattern != null)
                 {
                     var regex = new Regex($@"\A{Pattern}\z", RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
                     Interlocked.Exchange(ref _regex, regex);
                 }
 
-                return _regex;
+                return _regex!;
             }
         }
 
-        public string Pattern { get; set; }
+        public string? Pattern { get; set; }
 
         public bool IsToken { get; set; }
 
@@ -111,7 +109,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
             else if (current.Value is IEnumerable<StringValue> list)
             {
-                ValidationErrorInfo outside = null;
+                ValidationErrorInfo? outside = null;
 
                 using (context.Stack.Push(info => outside = info))
                 {
@@ -235,7 +233,7 @@ namespace DocumentFormat.OpenXml.Framework
                         errorType: ValidationErrorType.Schema);
                 }
             }
-            else if (Regex is Regex regex && !regex.IsMatch(str.Value))
+            else if (Pattern != null && Regex is Regex regex && !regex.IsMatch(str.Value))
             {
                 context.CreateError(
                     id: id,

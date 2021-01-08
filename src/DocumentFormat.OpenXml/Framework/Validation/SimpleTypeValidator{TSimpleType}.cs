@@ -1,9 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Validation;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Framework
 {
@@ -32,7 +31,7 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        private static bool TryTransformValue(in ValidationElement current, out OpenXmlSimpleType type)
+        private static bool TryTransformValue(in ValidationElement current, [MaybeNullWhen(false)] out OpenXmlSimpleType type)
         {
             var input = current.Value;
 

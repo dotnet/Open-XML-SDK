@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 
@@ -31,7 +29,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
         public override string ToString() => $"({Type}:{Index})";
 
-        public bool Equals(ParticlePathItem other)
+        public bool Equals(ParticlePathItem? other)
         {
             if (other is null)
             {

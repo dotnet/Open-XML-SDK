@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             return 0;
         }
 
-        public bool IsSibling(ParticlePath other)
+        public bool IsSibling(ParticlePath? other)
           => Equals(other, _values.Length - 1);
 
         public override bool Equals(object obj)
@@ -129,8 +129,13 @@ namespace DocumentFormat.OpenXml.Framework.Schema
         public override int GetHashCode()
             => HashCode.Combine(Type, _values.Length);
 
-        private bool Equals(ParticlePath other, int length)
+        private bool Equals(ParticlePath? other, int length)
         {
+            if (other is null)
+            {
+                return false;
+            }
+
             length = System.Math.Min(other._values.Length, length);
 
             for (int i = 0; i < length; i++)

@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Reflection;
 
@@ -27,7 +25,7 @@ namespace DocumentFormat.OpenXml.Framework
         [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
         public string PartClassName { get; }
 
-        public string PartContentType { get; }
+        public string? PartContentType { get; }
 
         public FileFormatVersions Availability { get; }
     }
