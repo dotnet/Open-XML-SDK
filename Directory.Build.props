@@ -7,14 +7,16 @@
 
     <!-- Because of the size of the project, to facilitate  quick development, by default only single
          frameworks will be build. This is customizable with the following possible values:
-         - DevFramework40: .NET Framework 4.0
-         - DevFramework46: .NET Framework 4.6
-         - DevCore11:      .NET Core 1.1
-         - DevCore21:      .NET Core 2.1
-         - DevCore31:      .NET Core 3.1
+         - net35:              .NET Framework 3.5 
+         - net40:              .NET Framework 4.0
+         - net46:              .NET Framework 4.6
+         - netcoreapp1.1:      .NET Core 1.1
+         - netcoreapp2.1:      .NET Core 2.1
+         - netcoreapp3.1:      .NET Core 3.1
+         - net5.0:             .NET 5.0
          - All: Will build for all platforms
          -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore31</ProjectLoadStyle>
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">netcoreapp3.1</ProjectLoadStyle>
     <__InvalidProjectLoadStyle>false</__InvalidProjectLoadStyle>
   </PropertyGroup>
 
@@ -26,7 +28,7 @@
   </PropertyGroup>
 
   <Choose>
-    <When Condition=" '$(ProjectLoadStyle)' == 'DevFramework35' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'net35' ">
       <PropertyGroup>
         <ProductTargetFrameworks>net35</ProductTargetFrameworks>
         <TestTargetFrameworks>net452</TestTargetFrameworks>
@@ -39,7 +41,7 @@
         <Reference Include="WindowsBase" Version="3.0.0.0" />
       </ItemGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'DevFramework40' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'net40' ">
       <PropertyGroup>
         <ProductTargetFrameworks>net40</ProductTargetFrameworks>
         <TestTargetFrameworks>net452</TestTargetFrameworks>
@@ -52,7 +54,7 @@
         <Reference Include="WindowsBase" Version="4.0.0.0" />
       </ItemGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'DevFramework46' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'net46' ">
       <PropertyGroup>
         <ProductTargetFrameworks>net46</ProductTargetFrameworks>
         <TestTargetFrameworks>net46</TestTargetFrameworks>
@@ -64,7 +66,7 @@
         <Reference Include="WindowsBase" />
       </ItemGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'DevCore11' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp1.1' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard1.3</ProductTargetFrameworks>
         <TestTargetFrameworks>netcoreapp1.1</TestTargetFrameworks>
@@ -74,7 +76,7 @@
         <SamplesFrameworks>netcoreapp1.1</SamplesFrameworks>
       </PropertyGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'DevCore21' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp2.1' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
         <TestTargetFrameworks>netcoreapp2.1</TestTargetFrameworks>
@@ -83,13 +85,22 @@
         <SamplesFrameworks>netcoreapp2.1</SamplesFrameworks>
       </PropertyGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'DevCore31' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp3.1' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
         <TestTargetFrameworks>netcoreapp3.1</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
         <BenchmarkTargetFramework>netcoreapp3.1</BenchmarkTargetFramework>
         <SamplesFrameworks>netcoreapp3.1</SamplesFrameworks>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(ProjectLoadStyle)' == 'net5.0' ">
+      <PropertyGroup>
+        <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
+        <TestTargetFrameworks>net5.0</TestTargetFrameworks>
+        <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
+        <BenchmarkTargetFramework>net5.0</BenchmarkTargetFramework>
+        <SamplesFrameworks>net5.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'All' ">
@@ -100,9 +111,9 @@
         -->
         <ProductTargetFrameworks>netstandard1.3;netstandard2.0;net35;net40;net46</ProductTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard1.3</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net452;net46;netcoreapp1.1;netcoreapp2.1;netcoreapp3.1</TestTargetFrameworks>
-        <BenchmarkTargetFramework>netcoreapp3.1</BenchmarkTargetFramework>
-        <SamplesFrameworks>net46;netcoreapp2.1;netcoreapp3.1</SamplesFrameworks>
+        <TestTargetFrameworks>net452;net46;netcoreapp1.1;netcoreapp2.1;netcoreapp3.1;net5.0</TestTargetFrameworks>
+        <BenchmarkTargetFramework>netcoreapp3.1;net5.0</BenchmarkTargetFramework>
+        <SamplesFrameworks>net46;netcoreapp2.1;netcoreapp3.1;net5.0</SamplesFrameworks>
 
         <!-- Must disable this due to https://github.com/NuGet/Home/issues/7414 so .NET Core 1.x will build -->
         <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
