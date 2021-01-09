@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Framework.Tests
@@ -66,7 +65,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void Comparer()
         {
-            var comparer = StringComparer.Ordinal;
+            var comparer = System.StringComparer.Ordinal;
             var input = "DocumentFormat.OpenXml";
 
             var expected = Seed * Combinator + comparer.GetHashCode(input);

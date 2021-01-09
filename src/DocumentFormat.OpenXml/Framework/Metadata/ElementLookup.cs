@@ -101,8 +101,25 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
             }
 
-            public int Compare(ElementChild x, ElementChild y)
-                => x.Schema.CompareTo(y.Schema);
+            public int Compare(ElementChild? x, ElementChild? y)
+            {
+                if (x is null && y is null)
+                {
+                    return 0;
+                }
+
+                if (x is null)
+                {
+                    return -1;
+                }
+
+                if (y is null)
+                {
+                    return 1;
+                }
+
+                return x.Schema.CompareTo(y.Schema);
+            }
         }
 
         [DebuggerDisplay("{Namespace}:{Name}")]

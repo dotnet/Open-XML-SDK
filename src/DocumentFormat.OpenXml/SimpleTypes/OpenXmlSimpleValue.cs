@@ -3,6 +3,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml
 {
@@ -63,7 +64,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (!InnerValue.HasValue && ShouldParse(InnerText))
+                if (!InnerValue.HasValue && ShouldParse(InnerText) && InnerText is not null)
                 {
                     InnerValue = Parse(InnerText);
                 }
@@ -100,10 +101,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private protected virtual bool ShouldParse(string? value)
-        {
-            return !string.IsNullOrEmpty(value);
-        }
+        private protected virtual bool ShouldParse(string? value) => !string.IsNullOrEmpty(value);
 
         private protected virtual void ValidateSet(T value)
         {
@@ -114,15 +112,21 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Convert the text to meaningful value.
         /// </summary>
-        private protected abstract T Parse(string? input);
+        private protected abstract T Parse(string input);
 
         internal sealed override bool IsValid => TryParse(InnerText, out _);
 
         /// <summary>
         /// Convert the text to meaningful value with no exceptions
         /// </summary>
-        private protected virtual bool TryParse(string? input, out T value)
+        private protected virtual bool TryParse(string? input, [MaybeNullWhen(false)] out T value)
         {
+            if (input is null || !ShouldParse(input))
+            {
+                value = default;
+                return false;
+            }
+
             try
             {
                 value = Parse(input);
@@ -152,7 +156,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc />
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj is OpenXmlSimpleValue<T> openXmlSimpleValue)
             {

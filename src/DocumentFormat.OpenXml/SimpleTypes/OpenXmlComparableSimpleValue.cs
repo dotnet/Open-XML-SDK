@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc />
-        public int CompareTo(object obj)
+        public int CompareTo(object? obj)
         {
             if(obj is null || !HasValue)
             {
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc />
-        public int CompareTo(OpenXmlComparableSimpleValue<T> other)
+        public int CompareTo(OpenXmlComparableSimpleValue<T>? other)
         {
             return other is null ? 1 : Value.CompareTo(other.Value);
         }
@@ -84,13 +84,13 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc />
-        public bool Equals(OpenXmlComparableSimpleValue<T> other)
+        public bool Equals(OpenXmlComparableSimpleValue<T>? other)
         {
             return !(other is null) && Value.Equals(other.Value);
         }
 
         /// <inheritdoc />
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj is null)
             {

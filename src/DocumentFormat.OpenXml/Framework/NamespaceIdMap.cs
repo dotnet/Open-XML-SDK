@@ -4,6 +4,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Framework
 {
@@ -253,7 +254,7 @@ namespace DocumentFormat.OpenXml.Framework
         /// <param name="strictNamespace">A namespace in Strict.</param>
         /// <param name="transitionalNamespace">An equivalent namespace in Transitional.</param>
         /// <returns>Returns true when a Transitional equivalent namespace is found, returns false when it is not found.</returns>
-        public static bool TryGetTransitionalNamespace(string strictNamespace, out string transitionalNamespace)
+        public static bool TryGetTransitionalNamespace(string strictNamespace, [MaybeNullWhen(false)] out string transitionalNamespace)
         {
             if (strictNamespace is null)
             {
@@ -269,7 +270,7 @@ namespace DocumentFormat.OpenXml.Framework
         /// <param name="strictRelationship">A relationship in Strict.</param>
         /// <param name="transitionalRelationship">An equivalent relationship in Transitional.</param>
         /// <returns>Returns true when a Transitional equivalent relationship is found, returns false when it is not.</returns>
-        public static bool TryGetTransitionalRelationship(string strictRelationship, out string transitionalRelationship)
+        public static bool TryGetTransitionalRelationship(string strictRelationship, [MaybeNullWhen(false)] out string transitionalRelationship)
         {
             if (strictRelationship is null)
             {
@@ -355,7 +356,7 @@ namespace DocumentFormat.OpenXml.Framework
         /// <param name="namespaceUri">The namespace to pass.</param>
         /// <param name="extNamespaceUri">The expected namespace when the passed namespace is an obsolete.</param>
         /// <returns>True when the passed namespace is an obsolete and the expected namespace found</returns>
-        public static bool TryGetExtendedNamespace(string namespaceUri, out string extNamespaceUri)
+        public static bool TryGetExtendedNamespace(string namespaceUri, [MaybeNullWhen(false)] out string extNamespaceUri)
         {
             return _extendedNamespaces.TryGetValue(namespaceUri, out extNamespaceUri);
         }
@@ -389,9 +390,9 @@ namespace DocumentFormat.OpenXml.Framework
 
             public NamespaceInfo this[int id] => _info[id];
 
-            public bool TryGetByNamespace(string ns, out NamespaceInfo info) => _byNamespace.TryGetValue(ns, out info);
+            public bool TryGetByNamespace(string ns, [MaybeNullWhen(false)] out NamespaceInfo info) => _byNamespace.TryGetValue(ns, out info);
 
-            public bool TryGetByPrefix(string prefix, out NamespaceInfo info) => _byPrefix.TryGetValue(prefix, out info);
+            public bool TryGetByPrefix(string prefix, [MaybeNullWhen(false)] out NamespaceInfo info) => _byPrefix.TryGetValue(prefix, out info);
 
             IEnumerator IEnumerable.GetEnumerator() => _info.GetEnumerator();
 

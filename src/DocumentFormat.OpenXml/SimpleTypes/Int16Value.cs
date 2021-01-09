@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(short input) => XmlConvert.ToString(input);
 
-        private protected override short Parse(string? input) => XmlConvert.ToInt16(input);
+        private protected override short Parse(string input) => XmlConvert.ToInt16(input);
 
         /// <summary>
         /// Implicitly converts the specified value to an <see cref="short"/> value.

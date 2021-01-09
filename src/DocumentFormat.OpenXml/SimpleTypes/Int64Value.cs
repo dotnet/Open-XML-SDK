@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(long input) => XmlConvert.ToString(input);
 
-        private protected override long Parse(string? input) => XmlConvert.ToInt64(input);
+        private protected override long Parse(string input) => XmlConvert.ToInt64(input);
 
         /// <summary>
         /// Implicitly converts the specified <see cref="Int64Value"/> to an <see cref="long"/> value.

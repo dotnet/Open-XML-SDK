@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(int input) => XmlConvert.ToString(input);
 
-        private protected override int Parse(string? input) => XmlConvert.ToInt32(input);
+        private protected override int Parse(string input) => XmlConvert.ToInt32(input);
 
         /// <summary>
         /// Implicitly converts the specified value to an <see cref="int"/> value.

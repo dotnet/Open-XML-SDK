@@ -84,6 +84,11 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
+                if (InnerText is null)
+                {
+                    return 0;
+                }
+
                 // decoded the data
                 var binaryData = Convert.FromBase64String(InnerText);
                 return binaryData.Length;

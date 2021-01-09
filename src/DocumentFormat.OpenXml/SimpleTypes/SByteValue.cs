@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(sbyte input) => XmlConvert.ToString(input);
 
-        private protected override sbyte Parse(string? input) => XmlConvert.ToSByte(input);
+        private protected override sbyte Parse(string input) => XmlConvert.ToSByte(input);
 
         /// <summary>
         /// Implicitly converts the specified <see cref="SByteValue"/> to an <see cref="sbyte"/> value.

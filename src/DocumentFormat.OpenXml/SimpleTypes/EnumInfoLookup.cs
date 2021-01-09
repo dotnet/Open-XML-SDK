@@ -120,8 +120,8 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var enumVal in values)
                 {
-                    var field = enumType.GetDeclaredField(enumVal.ToString());
-                    var enumString = field.GetCustomAttribute<EnumStringAttribute>();
+                    var field = enumType.GetDeclaredField(enumVal.ToString()!);
+                    var enumString = field!.GetCustomAttribute<EnumStringAttribute>();
                     var officeAvailability = field.GetCustomAttribute<OfficeAvailabilityAttribute>();
 
                     if (enumString is null)

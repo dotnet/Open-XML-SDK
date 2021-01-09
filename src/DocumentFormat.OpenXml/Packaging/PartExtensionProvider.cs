@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(partExtension));
             }
 
-            if (TryGetValue(contentType, out string existedPartExtension) && string.Equals(existedPartExtension, partExtension, StringComparison.Ordinal))
+            if (TryGetValue(contentType, out var existedPartExtension) && string.Equals(existedPartExtension, partExtension, StringComparison.Ordinal))
             {
                 return;
             }

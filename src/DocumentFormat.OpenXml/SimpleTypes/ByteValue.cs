@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(byte input) => XmlConvert.ToString(input);
 
-        private protected override byte Parse(string? input) => XmlConvert.ToByte(TextValue);
+        private protected override byte Parse(string input) => XmlConvert.ToByte(input);
 
         /// <summary>
         /// Implicitly converts the specified value to a <see cref="byte"/> value.
