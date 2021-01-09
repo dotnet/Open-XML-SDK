@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     particleMatchInfo.Match = ParticleMatch.Partial;
                     if (validationContext.CollectExpectedChildren)
                     {
-                        if (particleMatchInfo.ExpectedChildren == null)
+                        if (particleMatchInfo.ExpectedChildren is null)
                         {
                             particleMatchInfo.InitExpectedChildren();
                         }

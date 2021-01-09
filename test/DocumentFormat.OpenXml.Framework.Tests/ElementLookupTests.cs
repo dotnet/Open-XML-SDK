@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             public bool Equals(LookupData other)
             {
-                if (other == null)
+                if (other is null)
                 {
                     return false;
                 }

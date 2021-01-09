@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidOperationException">Thrown when <paramref name="value"/> is <c>null</c>.</exception>
         public static implicit operator T(EnumValue<T> value)
         {
-            if (value == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }

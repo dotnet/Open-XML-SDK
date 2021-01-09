@@ -112,7 +112,7 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
         public void Operators_ValidValues_CorrectComparisons()
         {
             Assert.True(SmallValue1 == SmallValue2);
-            Assert.True(NullValue1 == NullValue2);
+            Assert.True(NullValue1 is nullValue2);
 
             Assert.True(SmallValue1 != LargeValue);
             Assert.True(SmallValue1 != NullValue1);

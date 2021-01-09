@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (subPart == null)
+            if (subPart is null)
             {
                 throw new ArgumentNullException(nameof(subPart));
             }
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }

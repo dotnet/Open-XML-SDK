@@ -3882,7 +3882,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Assert.NotNull(host);
 
-            if (targetPath == null)
+            if (targetPath is null)
             {
                 return (host, null);
             }

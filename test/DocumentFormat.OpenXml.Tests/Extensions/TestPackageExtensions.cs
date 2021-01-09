@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>Return main part of current package, null if not exist.</returns>
         public static OpenXmlPart MainPart(this OpenXmlPackage package)
         {
-            if (package == null)
+            if (package is null)
             {
                 throw new ArgumentNullException(nameof(package));
             }

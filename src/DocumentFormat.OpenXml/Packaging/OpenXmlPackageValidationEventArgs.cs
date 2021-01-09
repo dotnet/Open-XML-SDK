@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (_message == null && MessageId != null)
+                if (_message is null && MessageId != null)
                 {
                     return ExceptionMessages.ResourceManager.GetString(MessageId);
                 }

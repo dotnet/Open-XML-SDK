@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public bool Equals(IdPartPair value)
         {
             //Check for null
-            if (value == null)
+            if (value is null)
             {
                 return false;
             }

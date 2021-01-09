@@ -300,7 +300,7 @@ namespace DocumentFormat.OpenXml.Tests
             else
             {
                 Log.Comment("verify the standalone is not presented");
-                Log.VerifyTrue(standaloneValue == null, "expected: null <> actual: {0}", standaloneValue);
+                Log.VerifyTrue(standaloneValue is null, "expected: null <> actual: {0}", standaloneValue);
             }
         }
 
@@ -318,11 +318,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void WriteStartE(OpenXmlWriter writer, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            if (writeSource is OpenXmlReader && attributes == null)
+            if (writeSource is OpenXmlReader && attributes is null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlReader);
             }
-            else if (writeSource is OpenXmlReader && attributes != null && namespaceDeclarations == null)
+            else if (writeSource is OpenXmlReader && attributes != null && namespaceDeclarations is null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlReader, attributes);
             }
@@ -330,11 +330,11 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 writer.WriteStartElement(writeSource as OpenXmlReader, attributes, namespaceDeclarations);
             }
-            else if (writeSource is OpenXmlElement && attributes == null)
+            else if (writeSource is OpenXmlElement && attributes is null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlElement);
             }
-            else if (writeSource is OpenXmlElement && attributes != null && namespaceDeclarations == null)
+            else if (writeSource is OpenXmlElement && attributes != null && namespaceDeclarations is null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlElement, attributes);
             }

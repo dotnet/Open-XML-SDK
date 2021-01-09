@@ -154,7 +154,7 @@ namespace DocumentFormat.OpenXml.Framework
         {
             value = 0;
 
-            if (simpleType == null || !simpleType.HasValue)
+            if (simpleType is null || !simpleType.HasValue)
             {
                 return false;
             }

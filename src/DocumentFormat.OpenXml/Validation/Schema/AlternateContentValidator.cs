@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             if (acElement is AlternateContentChoice choice)
             {
                 // All Choice elements shall have a Requires attribute whose value contains a whitespace-delimited list of namespace prefixes
-                if (choice.Requires == null)
+                if (choice.Requires is null)
                 {
                     // report error
                     errorInfo = validationContext.ComposeMcValidationError(acElement, "MC_MissedRequiresAttribute");

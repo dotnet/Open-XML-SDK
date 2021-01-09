@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             var next = child.GetNextNonMiscElementSibling();
             var mcTier = child.Parent;
 
-            if (next == null && mcTier != parent)
+            if (next is null && mcTier != parent)
             {
                 // the child must be under element in ProcessContent or ACB
                 if (mcTier is AlternateContentChoice || mcTier is AlternateContentFallback)
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             while (child != null)
             {
                 var acb = child as AlternateContent;
-                if (acb == null && child.IsInVersion(format))
+                if (acb is null && child.IsInVersion(format))
                 {
                     return child;
                 }
@@ -106,7 +106,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     mcContext.PopMCAttributes2();
                 }
 
-                while (child == null && nextSiblings.Count > 0)
+                while (child is null && nextSiblings.Count > 0)
                 {
                     child = nextSiblings.Pop();
                 }

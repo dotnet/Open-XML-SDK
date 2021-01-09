@@ -23,12 +23,12 @@ namespace DocumentFormat.OpenXml
         /// <returns>The position index in same type element in parent.</returns>
         internal static int GetXPathIndex(this OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            if (element.Parent == null)
+            if (element.Parent is null)
             {
                 return 1;
             }
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The part in which the element is in. Returns null if not in a part.</returns>
         internal static OpenXmlPart GetPart(this OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }

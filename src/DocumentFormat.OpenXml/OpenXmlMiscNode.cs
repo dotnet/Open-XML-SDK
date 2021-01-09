@@ -245,7 +245,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override void WriteTo(XmlWriter xmlWriter)
         {
-            if (xmlWriter == null)
+            if (xmlWriter is null)
             {
                 throw new ArgumentNullException(nameof(xmlWriter));
             }

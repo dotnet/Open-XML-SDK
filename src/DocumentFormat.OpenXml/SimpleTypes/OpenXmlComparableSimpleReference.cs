@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml
 
             if (Value is null)
             {
-                return other.Value == null ? 0 : -1;
+                return other.Value is null ? 0 : -1;
             }
 
             if (other.Value is null)

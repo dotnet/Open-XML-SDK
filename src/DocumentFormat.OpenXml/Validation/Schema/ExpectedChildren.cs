@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public void Add(Type elementType)
         {
             // No lock, not safe for multi-thread
-            if (_elementTypes == null)
+            if (_elementTypes is null)
             {
                 _elementTypes = new List<Type>();
             }
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         public void Add(string namesapceForXsdany)
         {
             // No lock, not safe for multi-thread
-            if (_xsdanyNamespaces == null)
+            if (_xsdanyNamespaces is null)
             {
                 _xsdanyNamespaces = new List<string>();
             }
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 expectedChildren._elementTypes.Count > 0)
             {
                 // No lock, not safe for multi-thread
-                if (_elementTypes == null)
+                if (_elementTypes is null)
                 {
                     _elementTypes = new List<Type>();
                 }
@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 expectedChildren._xsdanyNamespaces.Count > 0)
             {
                 // No lock, not safe for multi-thread
-                if (_xsdanyNamespaces == null)
+                if (_xsdanyNamespaces is null)
                 {
                     _xsdanyNamespaces = new List<string>();
                 }

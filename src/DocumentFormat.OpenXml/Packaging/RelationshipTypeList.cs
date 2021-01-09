@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (_list == null)
+                if (_list is null)
                 {
                     _list = new Dictionary<string, int>();
 

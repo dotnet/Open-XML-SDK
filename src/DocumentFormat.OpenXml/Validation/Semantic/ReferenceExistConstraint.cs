@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     _elementName,
                     element.LocalName,
                     GetAttributeQualifiedName(element, _refAttribute),
-                    result.Part == null ? _partPath : result.Part.PackagePart.Uri.ToString(),
+                    result.Part is null ? _partPath : result.Part.PackagePart.Uri.ToString(),
                     attribute.Value.InnerText),
             };
         }

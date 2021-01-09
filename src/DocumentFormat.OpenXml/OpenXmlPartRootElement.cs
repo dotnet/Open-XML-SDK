@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlPart">The OpenXmlPart class.</param>
         protected OpenXmlPartRootElement(OpenXmlPart openXmlPart)
         {
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal void SaveToPart(OpenXmlPart openXmlPart)
         {
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
@@ -249,7 +249,7 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidOperationException">Thrown when the tree is not associated with a part.</exception>
         public void Save()
         {
-            if (OpenXmlPart == null)
+            if (OpenXmlPart is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.CannotSaveDomTreeWithoutAssociatedPart);
             }
@@ -265,7 +265,7 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidOperationException">Thrown when the tree is not associated with a part.</exception>
         public void Reload()
         {
-            if (OpenXmlPart == null)
+            if (OpenXmlPart is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.CannotReloadDomTreeWithoutAssociatedPart);
             }
@@ -281,7 +281,7 @@ namespace DocumentFormat.OpenXml
         /// </param>
         public override void WriteTo(XmlWriter xmlWriter)
         {
-            if (xmlWriter == null)
+            if (xmlWriter is null)
             {
                 throw new ArgumentNullException(nameof(xmlWriter));
             }

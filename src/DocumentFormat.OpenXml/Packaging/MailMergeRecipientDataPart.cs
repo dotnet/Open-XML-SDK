@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                if (value == null)
+                if (value is null)
                 {
                     throw new ArgumentNullException(nameof(value));
                 }
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                if (value == null)
+                if (value is null)
                 {
                     throw new ArgumentNullException(nameof(value));
                 }
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private void TryLoadRootElement()
         {
-            if (_rootEle == null)
+            if (_rootEle is null)
             {
                 try
                 {
@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                 }
 
-                if (_rootEle == null)
+                if (_rootEle is null)
                 {
                     LoadDomTree<DocumentFormat.OpenXml.Office.Word.MailMergeRecipients>();
                 }

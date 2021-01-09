@@ -64,12 +64,12 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(localName));
             }
 
-            if (prefix == null)
+            if (prefix is null)
             {
                 prefix = string.Empty;
             }
 
-            if (ns == null)
+            if (ns is null)
             {
                 ns = string.Empty;
             }
@@ -93,12 +93,12 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(localName));
             }
 
-            if (prefix == null)
+            if (prefix is null)
             {
                 prefix = string.Empty;
             }
 
-            if (ns == null)
+            if (ns is null)
             {
                 ns = string.Empty;
             }

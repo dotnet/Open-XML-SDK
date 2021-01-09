@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         internal void InitExpectedChildren()
         {
-            if (ExpectedChildren == null)
+            if (ExpectedChildren is null)
             {
                 ExpectedChildren = new ExpectedChildren();
             }
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="expectedChildren"></param>
         internal void SetExpectedChildren(ExpectedChildren expectedChildren)
         {
-            if (expectedChildren == null || expectedChildren.Count == 0)
+            if (expectedChildren is null || expectedChildren.Count == 0)
             {
                 if (ExpectedChildren != null)
                 {
@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
             else
             {
-                if (ExpectedChildren == null)
+                if (ExpectedChildren is null)
                 {
                     ExpectedChildren = new ExpectedChildren();
                 }

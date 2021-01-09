@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     ValidationResources.Sem_MissingIndexedElement,
                     _refElement.FullName, element.LocalName,
                     GetAttributeQualifiedName(element, _attribute),
-                    result.Part == null ? _refPartType : result.Part.PackagePart.Uri.ToString(),
+                    result.Part is null ? _refPartType : result.Part.PackagePart.Uri.ToString(),
                     index),
             };
         }

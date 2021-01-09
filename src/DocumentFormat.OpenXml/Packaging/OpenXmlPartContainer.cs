@@ -71,12 +71,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (referenceRelationship == null)
+            if (referenceRelationship is null)
             {
                 throw new ArgumentNullException(nameof(referenceRelationship));
             }
 
-            if (referenceRelationship.Id == null || referenceRelationship.Container != this)
+            if (referenceRelationship.Id is null || referenceRelationship.Container != this)
             {
                 throw new InvalidOperationException(ExceptionMessages.ReferenceRelationshipIsNotReferenced);
             }
@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (id == null)
+            if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (id == null)
+            if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
@@ -178,12 +178,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (relationshipType == null)
+            if (relationshipType is null)
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
 
-            if (externalUri == null)
+            if (externalUri is null)
             {
                 throw new ArgumentNullException(nameof(externalUri));
             }
@@ -215,17 +215,17 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (relationshipType == null)
+            if (relationshipType is null)
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
 
-            if (externalUri == null)
+            if (externalUri is null)
             {
                 throw new ArgumentNullException(nameof(externalUri));
             }
 
-            if (id == null)
+            if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
@@ -253,12 +253,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (externalRelationship == null)
+            if (externalRelationship is null)
             {
                 throw new ArgumentNullException(nameof(externalRelationship));
             }
 
-            if (externalRelationship.Id == null || externalRelationship.Container != this)
+            if (externalRelationship.Id is null || externalRelationship.Container != this)
             {
                 throw new InvalidOperationException(ExceptionMessages.ExternalRelationshipIsNotReferenced);
             }
@@ -283,7 +283,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="KeyNotFoundException">Thrown when there is no ExternalRelationship with the specified relationship ID.</exception>
         public void DeleteExternalRelationship(string id)
         {
-            if (id == null)
+            if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
@@ -311,7 +311,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="KeyNotFoundException">Thrown when there is no ExternalRelationship with the specified relationship ID.</exception>
         public ExternalRelationship GetExternalRelationship(string id)
         {
-            if (id == null)
+            if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
@@ -354,7 +354,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (hyperlinkUri == null)
+            if (hyperlinkUri is null)
             {
                 throw new ArgumentNullException(nameof(hyperlinkUri));
             }
@@ -380,12 +380,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (hyperlinkUri == null)
+            if (hyperlinkUri is null)
             {
                 throw new ArgumentNullException(nameof(hyperlinkUri));
             }
 
-            if (id == null)
+            if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
@@ -427,7 +427,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (mediaDataPart == null)
+            if (mediaDataPart is null)
             {
                 throw new ArgumentNullException(nameof(mediaDataPart));
             }
@@ -460,12 +460,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (mediaDataPart == null)
+            if (mediaDataPart is null)
             {
                 throw new ArgumentNullException(nameof(mediaDataPart));
             }
 
-            if (id == null)
+            if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
@@ -492,7 +492,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="dataPartReferenceRelationship"/> is null reference.</exception>
         internal DataPartReferenceRelationship AddDataPartReferenceRelationship(DataPartReferenceRelationship dataPartReferenceRelationship)
         {
-            if (dataPartReferenceRelationship == null)
+            if (dataPartReferenceRelationship is null)
             {
                 throw new ArgumentNullException(nameof(dataPartReferenceRelationship));
             }
@@ -533,7 +533,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (id == null)
+            if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
@@ -578,7 +578,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (part == null)
+            if (part is null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
@@ -610,12 +610,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (part == null)
+            if (part is null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
 
-            if (newRelationshipId == null)
+            if (newRelationshipId is null)
             {
                 throw new ArgumentNullException(nameof(newRelationshipId));
             }
@@ -643,7 +643,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            if (oldId == null)
+            if (oldId is null)
             {
                 // the part is not a sub part.
                 throw new ArgumentOutOfRangeException(nameof(part));
@@ -689,7 +689,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public virtual T AddPart<T>(T part, string id)
             where T : OpenXmlPart
         {
-            if (id == null)
+            if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
@@ -708,7 +708,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="InvalidOperationException">Thrown when the <paramref name="targetPart"/> and this part are not in the same OpenXmlPackage.</exception>
         public string CreateRelationshipToPart(OpenXmlPart targetPart)
         {
-            if (targetPart == null)
+            if (targetPart is null)
             {
                 throw new ArgumentNullException(nameof(targetPart));
             }
@@ -736,12 +736,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="InvalidOperationException">Thrown when the <paramref name="targetPart"/> and this part are not in the same OpenXmlPackage.</exception>
         public string CreateRelationshipToPart(OpenXmlPart targetPart, string id)
         {
-            if (targetPart == null)
+            if (targetPart is null)
             {
                 throw new ArgumentNullException(nameof(targetPart));
             }
 
-            if (id == null)
+            if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
@@ -798,7 +798,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public virtual T AddNewPart<T>(string contentType, string id)
             where T : OpenXmlPart
         {
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
@@ -830,17 +830,17 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (relationshipType == null)
+            if (relationshipType is null)
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (targetExt == null)
+            if (targetExt is null)
             {
                 throw new ArgumentNullException(nameof(targetExt));
             }
@@ -867,7 +867,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (id == null)
+            if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
@@ -885,11 +885,11 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            //if (part == null)
+            //if (part is null)
             //{
             //    throw new ArgumentNullException(nameof(part));
             //}
-            if (part == null)
+            if (part is null)
             {
                 return false;
             }
@@ -915,7 +915,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (partsToBeDeleted == null)
+            if (partsToBeDeleted is null)
             {
                 throw new ArgumentNullException(nameof(partsToBeDeleted));
             }
@@ -959,19 +959,19 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="annotation">The annotation to add to this PartContainer.</param>
         public void AddAnnotation(object annotation)
         {
-            if (annotation == null)
+            if (annotation is null)
             {
                 throw new ArgumentNullException(nameof(annotation));
             }
 
-            if (_annotations == null)
+            if (_annotations is null)
             {
                 _annotations = (annotation is object[]) ? new object[] { annotation } : annotation;
             }
             else
             {
                 var annotations = _annotations as object[];
-                if (annotations == null)
+                if (annotations is null)
                 {
                     _annotations = new object[] { _annotations, annotation };
                 }
@@ -1006,7 +1006,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 var annotations = _annotations as object[];
 
-                if (annotations == null)
+                if (annotations is null)
                 {
                     return _annotations as T;
                 }
@@ -1015,7 +1015,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     var obj = annotations[i];
 
-                    if (obj == null)
+                    if (obj is null)
                     {
                         break;
                     }
@@ -1037,7 +1037,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The first annotation object of the specified type.</returns>
         public object Annotation(Type type)
         {
-            if (type == null)
+            if (type is null)
             {
                 throw new ArgumentNullException(nameof(type));
             }
@@ -1045,7 +1045,7 @@ namespace DocumentFormat.OpenXml.Packaging
             if (_annotations != null)
             {
                 var annotations = _annotations as object[];
-                if (annotations == null)
+                if (annotations is null)
                 {
                     if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
                     {
@@ -1057,7 +1057,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     for (var i = 0; i < annotations.Length; i++)
                     {
                         var obj = annotations[i];
-                        if (obj == null)
+                        if (obj is null)
                         {
                             break;
                         }
@@ -1084,7 +1084,7 @@ namespace DocumentFormat.OpenXml.Packaging
             if (_annotations != null)
             {
                 var annotations = _annotations as object[];
-                if (annotations == null)
+                if (annotations is null)
                 {
                     if (_annotations is T)
                     {
@@ -1096,7 +1096,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     for (var i = 0; i < annotations.Length; i++)
                     {
                         var obj = annotations[i];
-                        if (obj == null)
+                        if (obj is null)
                         {
                             break;
                         }
@@ -1117,7 +1117,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>An IEnumerable(T) of object that contains the annotations for this PartContainer.</returns>
         public IEnumerable<object> Annotations(Type type)
         {
-            if (type == null)
+            if (type is null)
             {
                 throw new ArgumentNullException(nameof(type));
             }
@@ -1125,7 +1125,7 @@ namespace DocumentFormat.OpenXml.Packaging
             if (_annotations != null)
             {
                 var annotations = _annotations as object[];
-                if (annotations == null)
+                if (annotations is null)
                 {
                     if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
                     {
@@ -1137,7 +1137,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     for (var i = 0; i < annotations.Length; i++)
                     {
                         var obj = annotations[i];
-                        if (obj == null)
+                        if (obj is null)
                         {
                             break;
                         }
@@ -1161,7 +1161,7 @@ namespace DocumentFormat.OpenXml.Packaging
             if (_annotations != null)
             {
                 var annotations = _annotations as object[];
-                if (annotations == null)
+                if (annotations is null)
                 {
                     if (_annotations is T)
                     {
@@ -1175,7 +1175,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     while (index < annotations.Length)
                     {
                         var obj = annotations[index];
-                        if (obj == null)
+                        if (obj is null)
                         {
                             break;
                         }
@@ -1209,7 +1209,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="type">The Type of the annotations to remove.</param>
         public void RemoveAnnotations(Type type)
         {
-            if (type == null)
+            if (type is null)
             {
                 throw new ArgumentNullException(nameof(type));
             }
@@ -1217,7 +1217,7 @@ namespace DocumentFormat.OpenXml.Packaging
             if (_annotations != null)
             {
                 var annotations = _annotations as object[];
-                if (annotations == null)
+                if (annotations is null)
                 {
                     if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
                     {
@@ -1231,7 +1231,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     while (index < annotations.Length)
                     {
                         var o = annotations[index];
-                        if (o == null)
+                        if (o is null)
                         {
                             break;
                         }
@@ -1289,7 +1289,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (partCollection == null)
+            if (partCollection is null)
             {
                 throw new ArgumentNullException(nameof(partCollection));
             }
@@ -1427,7 +1427,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
@@ -1493,7 +1493,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (subPart == null)
+            if (subPart is null)
             {
                 throw new ArgumentNullException(nameof(subPart));
             }
@@ -1562,7 +1562,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The part added to the parent. Different with the passed in part.</returns>
         internal OpenXmlPart SetSubPart(OpenXmlPart part, string rId)
         {
-            if (part == null)
+            if (part is null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
@@ -1588,7 +1588,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The part added to the parent. Different with the passed in part.</returns>
         internal OpenXmlPart AddSubPart(OpenXmlPart part, string rId)
         {
-            if (part == null)
+            if (part is null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
@@ -1629,7 +1629,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (keepIdAndUri)
             {
-                if (rId == null)
+                if (rId is null)
                 {
                     throw new ArgumentNullException(nameof(rId));
                 }
@@ -1708,7 +1708,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 foreach (var item in dataPartsDictionary)
                 {
-                    if (item.Value == null)
+                    if (item.Value is null)
                     {
                         var dataPart = item.Key;
 
@@ -1760,7 +1760,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The relationship ID.</returns>
         internal string AttachChild(OpenXmlPart part, string rId)
         {
-            if (rId == null)
+            if (rId is null)
             {
                 var relationship = CreateRelationship(part.Uri, TargetMode.Internal, part.RelationshipType);
                 return relationship.Id;
@@ -1929,7 +1929,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (relationshipType == null)
+            if (relationshipType is null)
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
@@ -1963,7 +1963,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (part == null)
+            if (part is null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
@@ -1985,7 +1985,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (relationshipType == null)
+            if (relationshipType is null)
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
@@ -2028,7 +2028,7 @@ namespace DocumentFormat.OpenXml.Packaging
                             //   so the Document Part can be retrieved.
 
                             // when sourcePart is null, use the package root as sourceUri.
-                            var sourceUri = sourcePart == null ? new Uri("/", UriKind.Relative) : sourcePart.Uri;
+                            var sourceUri = sourcePart is null ? new Uri("/", UriKind.Relative) : sourcePart.Uri;
                             var uriTarget = PackUriHelper.ResolvePartUri(sourceUri, relationship.TargetUri);
 
                             if (loadedParts.TryGetValue(uriTarget, out var child))
@@ -2045,7 +2045,7 @@ namespace DocumentFormat.OpenXml.Packaging
                             }
                             else if (DataPartReferenceRelationship.IsDataPartReferenceRelationship(relationship.RelationshipType))
                             {
-                                if ((dataPart = openXmlPackage.FindDataPart(uriTarget)) == null)
+                                if ((dataPart = openXmlPackage.FindDataPart(uriTarget)) is null)
                                 {
                                     // Load the part as MediaDataPart.
                                     dataPart = new MediaDataPart();
@@ -2105,7 +2105,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new object of strong typed class.</returns>
         virtual internal OpenXmlPart CreatePartCore(string relationshipType)
         {
-            if (relationshipType == null)
+            if (relationshipType is null)
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }

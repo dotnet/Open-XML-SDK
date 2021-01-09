@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (TextValue == null && InnerValue.HasValue)
+                if (TextValue is null && InnerValue.HasValue)
                 {
                     TextValue = GetText(InnerValue.Value);
                 }
@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
         public static implicit operator T(OpenXmlSimpleValue<T> xmlAttribute)
         {
-            if (xmlAttribute == null)
+            if (xmlAttribute is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }

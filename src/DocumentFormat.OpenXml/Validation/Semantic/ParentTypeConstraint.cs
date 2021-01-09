@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             var element = context.Stack.Current.Element;
             var parent = element.Parent;
 
-            if (parent == null)
+            if (parent is null)
             {
                 return null;
             }

@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             foreach (XAttribute attr in left.Attributes().Where(x => x.IsNamespaceDeclaration == false))
             {
-                if (right.Attribute(attr.Name) == null || !SpecialAttrValueCompare(attr, right.Attribute(attr.Name)))
+                if (right.Attribute(attr.Name) is null || !SpecialAttrValueCompare(attr, right.Attribute(attr.Name)))
                 {
                     return false;
                 }

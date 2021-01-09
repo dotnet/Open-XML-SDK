@@ -72,12 +72,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when either parameter is null.</exception>
         public void MakeSurePartExtensionExist(string contentType, string partExtension)
         {
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (partExtension == null)
+            if (partExtension is null)
             {
                 throw new ArgumentNullException(nameof(partExtension));
             }

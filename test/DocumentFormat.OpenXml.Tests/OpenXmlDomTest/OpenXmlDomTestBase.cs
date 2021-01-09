@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Tests
         private static string GetElementPath(OpenXmlElement element)
         {
             // Log.Comment("get the current element position path");
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="path">the result element path</param>
         private static void GetSameLevelPath(OpenXmlElement element, ref StringBuilder path)
         {
-            if (element == null || path == null)
+            if (element is null || path is null)
             {
                 throw new ArgumentNullException("element|path");
             }
@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>The <see cref="XElement"/> retrieved from the path</returns>
         private static XElement GetXmlElement(string path, OpenXmlPart part)
         {
-            if (part == null)
+            if (part is null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Tests
                 element = XElement.Load(reader);
             }
 
-            if (element == null)
+            if (element is null)
             {
                 throw new Exception("Failed to load element from specified part.");
             }
@@ -167,7 +167,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>the corresponding <see cref="XElement"/></returns>
         internal static XElement ConvertToXElement(OpenXmlPart part, OpenXmlElement element)
         {
-            if (part == null || element == null)
+            if (part is null || element is null)
             {
                 throw new ArgumentNullException("part | element");
             }
@@ -218,7 +218,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         /// <summary> Get part root of current element.</summary>
         internal GetTargetElement getPartRoot =
-            e => e.Parent == null ? (e is OpenXmlPartRootElement ? e : null) : e.Ancestors<OpenXmlPartRootElement>().FirstOrDefault();
+            e => e.Parent is null ? (e is OpenXmlPartRootElement ? e : null) : e.Ancestors<OpenXmlPartRootElement>().FirstOrDefault();
 
         /// <summary> Get parent of current element.</summary>
         internal GetTargetElement getAnyAncestor =
@@ -226,7 +226,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         /// <summary> Get root element of current one.</summary>
         internal GetTargetElement getRootElement =
-            e => e.Parent == null ? e : e.Ancestors().LastOrDefault();
+            e => e.Parent is null ? e : e.Ancestors().LastOrDefault();
 
         /// <summary> Get parent of current element.</summary>
         internal GetTargetElement getParent =
@@ -354,11 +354,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         /// <summary>Get first sibling of pass-in OpenXmlElement.</summary>
         internal GetTargetElement getFirstSibling =
-            e => e.Parent == null ? null : e == e.Parent.First() ? e.NextSibling() : e.Parent.First();
+            e => e.Parent is null ? null : e == e.Parent.First() ? e.NextSibling() : e.Parent.First();
 
         /// <summary>Get last sibling of pass-in OpenXmlElement.</summary>
         internal GetTargetElement getLastSibling =
-            e => e.Parent == null ? null : e == e.Parent.Last() ? e.PreviousSibling() : e.Parent.Last();
+            e => e.Parent is null ? null : e == e.Parent.Last() ? e.PreviousSibling() : e.Parent.Last();
 
         /// <summary>Get any sibling of pass-in OpenXmlElement.</summary>
         internal GetTargetElement getAnySibling =
@@ -580,7 +580,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>Return value of <paramref name="PendOp"/></returns>
         internal OpenXmlElement PendOperation(PendChild<OpenXmlElement> pendOp, OpenXmlElement pendee)
         {
-            if (pendOp == null)
+            if (pendOp is null)
             {
                 throw new ArgumentNullException(nameof(pendOp));
             }
@@ -666,12 +666,12 @@ namespace DocumentFormat.OpenXml.Tests
                         {
                             case InsertType.Before:
                                 expectPos =
-                                    refElement == null ? hostElement.ChildElements.Count : refElement.Index();
+                                    refElement is null ? hostElement.ChildElements.Count : refElement.Index();
                                 result = InsertOperation(hostElement.InsertBefore, importElement.Clone() as OpenXmlElement, refElement);
                                 break;
                             case InsertType.After:
                                 expectPos =
-                                    refElement == null ? 0 : refElement.Index() + 1;
+                                    refElement is null ? 0 : refElement.Index() + 1;
                                 result = InsertOperation(hostElement.InsertAfter, importElement.Clone() as OpenXmlElement, refElement);
                                 break;
                             default:
@@ -714,7 +714,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>Return value of <paramref name="insertOp"/></returns>
         internal OpenXmlElement InsertOperation(InsertChild<OpenXmlElement> insertOp, OpenXmlElement insertee, OpenXmlElement refChild)
         {
-            if (insertOp == null || insertee == null)
+            if (insertOp is null || insertee is null)
             {
                 throw new ArgumentNullException("insertOp|insertee");
             }
@@ -1067,7 +1067,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     Log.Comment("Target element found: {0}", deleteElement.Path());
 
-                    int childPosition = deleteElement == null ? -1 : deleteElement.Index();
+                    int childPosition = deleteElement is null ? -1 : deleteElement.Index();
                     XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
                     Log.Comment("Removing specified child element...");
@@ -1125,7 +1125,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     Log.Comment("Parent element found: {0}", parent.Path());
 
-                    int targetPosition = targetElement == null ? -1 : targetElement.Index();
+                    int targetPosition = targetElement is null ? -1 : targetElement.Index();
                     XElement xBefore = ConvertToXElement(hostPart, parent);
 
                     Log.Comment("Removing current element...");
@@ -1391,7 +1391,7 @@ namespace DocumentFormat.OpenXml.Tests
                 foreach (var a in attributes)
                 {
                     XAttribute xa = xBefore.Attribute(a.GetXName());
-                    if (xa == null)
+                    if (xa is null)
                     {
                         Log.Fail("Attribute {0} does NOT exist.", a.GetFullName());
                     }
@@ -1914,7 +1914,7 @@ namespace DocumentFormat.OpenXml.Tests
                 foreach (var ns in namespaceDeclarations)
                 {
                     var nsUri = xBefore.GetNamespaceOfPrefix(ns.Key).NamespaceName;
-                    if (nsUri == null)
+                    if (nsUri is null)
                     {
                         Log.Fail("NamespaceDeclaration {0} does NOT exist.", ns.Key);
                     }
@@ -2453,7 +2453,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing all annotations for setup...");
             hostElement.RemoveAnnotations(typeof(object));
             var results = hostElement.Annotations(typeof(object));
-            if (results == null || !results.Any())
+            if (results is null || !results.Any())
             {
                 Log.Pass("Removed all annotations.");
             }
@@ -2488,7 +2488,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations(annotation.GetType());
             results = hostElement.Annotations(annotation.GetType());
-            if (results == null || !results.Any())
+            if (results is null || !results.Any())
             {
                 Log.Pass("Removed all annotations.");
             }
@@ -2505,7 +2505,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing all annotations for setup...");
             hostElement.RemoveAnnotations<object>();
             var results = hostElement.Annotations<object>();
-            if (results == null || !results.Any())
+            if (results is null || !results.Any())
             {
                 Log.Pass("Removed all annotations.");
             }
@@ -2540,7 +2540,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations<OpenXmlElement>();
             results = hostElement.Annotations(annotation.GetType());
-            if (results == null || !results.Any())
+            if (results is null || !results.Any())
             {
                 Log.Pass("Removed all annotations.");
             }
@@ -2557,7 +2557,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing all annotations for setup...");
             hostElement.RemoveAnnotations(typeof(object));
             var results = hostElement.Annotations(typeof(object));
-            if (results == null || !results.Any())
+            if (results is null || !results.Any())
             {
                 Log.Pass("Removed all annotations.");
             }
@@ -2616,7 +2616,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing annotations of OpenXmlElement...");
             hostElement.RemoveAnnotations(typeof(OpenXmlElement));
             results = hostElement.Annotations(typeof(OpenXmlElement));
-            if (results == null || !results.Any())
+            if (results is null || !results.Any())
             {
                 Log.Pass("Removed all annotations.");
             }
@@ -2624,7 +2624,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations(typeof(object));
             results = hostElement.Annotations(typeof(object));
-            if (results == null || !results.Any())
+            if (results is null || !results.Any())
             {
                 Log.Pass("Removed all annotations.");
             }
@@ -2641,7 +2641,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing all annotations for setup...");
             hostElement.RemoveAnnotations(typeof(object));
             var results = hostElement.Annotations(typeof(object));
-            if (results == null || !results.Any())
+            if (results is null || !results.Any())
             {
                 Log.Pass("Removed all annotations.");
             }
@@ -2676,7 +2676,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations(annotations.GetType());
             results = hostElement.Annotations(annotations.GetType());
-            if (results == null || !results.Any())
+            if (results is null || !results.Any())
             {
                 Log.Pass("Removed all annotations.");
             }
@@ -2692,7 +2692,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="targetElement">the element to be checked</param>
         internal void VerifyNoChildren(XElement targetElement)
         {
-            if (targetElement == null)
+            if (targetElement is null)
             {
                 throw new ArgumentNullException(nameof(targetElement));
             }
@@ -2709,7 +2709,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="targetPosition">If null, compare these two elements. Otherwise, compare the originalElement with resultElement's targetPosition-th child</param>
         internal void VerifyEqual(XElement resultElement, XElement originalElement, int? childPosition)
         {
-            if (resultElement == null || originalElement == null)
+            if (resultElement is null || originalElement is null)
             {
                 throw new ArgumentNullException("one of the arguments passed in is NULL");
             }
@@ -2743,7 +2743,7 @@ namespace DocumentFormat.OpenXml.Tests
         internal void VerifyEqual<T>(IEnumerable<XElement> XElement, IEnumerable<T> OElement, OpenXmlPart part)
             where T : OpenXmlElement
         {
-            if (XElement == null || OElement == null)
+            if (XElement is null || OElement is null)
             {
                 throw new ArgumentNullException("one of the arguments passed in is NULL");
             }
@@ -2787,7 +2787,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="targetPosition">the original position of the removed child</param>
         internal void VerifyRemove(XElement resultElement, XElement originalElement, int childPosition)
         {
-            if (resultElement == null || originalElement == null)
+            if (resultElement is null || originalElement is null)
             {
                 throw new ArgumentNullException("resultElement|originalElement");
             }
@@ -2830,12 +2830,12 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="targetPosition">original position of removed children</param>
         internal void VerifyRemove(XElement resultElement, XElement originalElement, IEnumerable<int> childrenPosition)
         {
-            if (resultElement == null || originalElement == null)
+            if (resultElement is null || originalElement is null)
             {
                 throw new ArgumentNullException("resultElement|originalElement");
             }
 
-            if (childrenPosition == null)
+            if (childrenPosition is null)
             {
                 throw new ArgumentNullException(nameof(childrenPosition));
             }

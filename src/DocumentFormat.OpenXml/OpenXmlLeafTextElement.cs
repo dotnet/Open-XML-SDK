@@ -204,7 +204,7 @@ namespace DocumentFormat.OpenXml
                             child.Load(xmlReader, OpenXmlLoadMode.Full);
                             unwanted++;
 
-                            if (ShadowElement == null)
+                            if (ShadowElement is null)
                             {
                                 ShadowElement = new OpenXmlUnknownElement(Prefix, LocalName, NamespaceUri);
                             }
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml
                 if (unwanted == 0)
                 {
                     // only text node, no unwanted children
-                    Debug.Assert(ShadowElement == null);
+                    Debug.Assert(ShadowElement is null);
                 }
                 else if (textNodePosition > -1)
                 {

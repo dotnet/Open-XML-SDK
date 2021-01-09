@@ -317,7 +317,7 @@ namespace DocumentFormat.OpenXml.Tests
                     unknown = host.AppendChild(unknown);
                     var ns = unknown.NamespaceDeclarations.Where(kvp => kvp.Key == prefix && kvp.Value == namespaceUri).FirstOrDefault();
 
-                    if (ns.Key == null)
+                    if (ns.Key is null)
                     {
                         ns = new KeyValuePair<string, string>(unknown.Prefix, unknown.NamespaceUri);
                     }

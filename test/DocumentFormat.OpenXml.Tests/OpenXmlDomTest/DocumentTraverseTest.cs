@@ -177,7 +177,7 @@ namespace DocumentFormat.OpenXml.Tests
                 VerifyEqual(Xwalker, walker, part);
             }
 
-            if (Xwalker.NextNode == null && walker.NextSibling() == null)
+            if (Xwalker.NextNode is null && walker.NextSibling() is null)
             {
                 Log.Comment("check if the current element is the last sibling of the original element");
                 VerifyEqual(Xele.Parent.Elements().Last(), walker, part);
@@ -200,7 +200,7 @@ namespace DocumentFormat.OpenXml.Tests
                 VerifyEqual(Xwalker, walker, part);
             }
 
-            if (Xwalker.PreviousNode == null && walker.PreviousSibling() == null)
+            if (Xwalker.PreviousNode is null && walker.PreviousSibling() is null)
             {
                 Log.Comment("check if the current element is the first sibling of the original element");
                 VerifyEqual(Xele.Parent.Elements().First(), walker, part);
@@ -222,7 +222,7 @@ namespace DocumentFormat.OpenXml.Tests
                 VerifyEqual(Xwalker, walker, part);
             }
 
-            if (Xwalker.NextNode == null && walker.NextSibling() == null)
+            if (Xwalker.NextNode is null && walker.NextSibling() is null)
             {
                 Log.Comment("check if the current element is the last sibling of the original element");
                 VerifyEqual(Xele.Parent.Elements().Last(), walker, part);
@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml.Tests
                 VerifyEqual(Xwalker, walker, part);
             }
 
-            if (Xwalker.PreviousNode == null && walker.PreviousSibling<OpenXmlElement>() == null)
+            if (Xwalker.PreviousNode is null && walker.PreviousSibling<OpenXmlElement>() is null)
             {
                 Log.Comment("check if the current element is the first sibling of the original element");
                 VerifyEqual(Xele.Parent.Elements().First(), walker, part);

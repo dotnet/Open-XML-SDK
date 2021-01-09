@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         {
                             if (validationContext.CollectExpectedChildren)
                             {
-                                if (particleMatchInfo.ExpectedChildren == null)
+                                if (particleMatchInfo.ExpectedChildren is null)
                                 {
                                     particleMatchInfo.SetExpectedChildren(childConstraint.ParticleValidator.GetRequiredElements());
                                 }
@@ -138,7 +138,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     {
                         if (validationContext.CollectExpectedChildren)
                         {
-                            if (particleMatchInfo.ExpectedChildren == null)
+                            if (particleMatchInfo.ExpectedChildren is null)
                             {
                                 particleMatchInfo.InitExpectedChildren();
                             }

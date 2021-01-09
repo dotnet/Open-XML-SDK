@@ -29,12 +29,12 @@ namespace DocumentFormat.OpenXml.Validation
         /// <param name="validationSettings">The OpenXmlPackageValidationSettings for validation events.</param>
         public void Validate(OpenXmlPackageValidationSettings validationSettings)
         {
-            if (validationSettings == null)
+            if (validationSettings is null)
             {
                 throw new ArgumentNullException(nameof(validationSettings));
             }
 
-            if (validationSettings.GetEventHandler() == null)
+            if (validationSettings.GetEventHandler() is null)
             {
                 throw new ArgumentNullException(nameof(validationSettings.EventHandler));
             }

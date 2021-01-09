@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
                 X15.WorkbookProperties workbookProperties = package.WorkbookPart.Workbook.Descendants<X15.WorkbookProperties>().FirstOrDefault();
-                if (workbookProperties == null)
+                if (workbookProperties is null)
                 {
                     throw new Exception("Unable to obtain the X15.WorkbookProperties.");
                 }
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 workbookPrExtUri = workbookExtension.Uri;
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
-                if (absolutePath == null)
+                if (absolutePath is null)
                 {
                     throw new Exception("Unable to obtain the X15ac.AbsolutePath.");
                 }
@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 log.Verify(workbookPrCount == 0, "workbookPr element is not deleted.");
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
-                log.Verify(absolutePath == null, "X15ac.AbsolutePath element is not deleted.");
+                log.Verify(absolutePath is null, "X15ac.AbsolutePath element is not deleted.");
             }
         }
 

@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public static IEnumerable<OpenXmlPart> GetAllParts(this OpenXmlPackage package)
         {
-            if (package == null)
+            if (package is null)
             {
                 throw new ArgumentNullException(nameof(package));
             }

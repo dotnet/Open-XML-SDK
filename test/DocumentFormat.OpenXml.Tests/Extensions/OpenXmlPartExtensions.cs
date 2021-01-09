@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>IEnumerable<OpenXmlPart> of parts in the pass-in <paramref name="root"/>.</returns>
         public static IEnumerable<OpenXmlPart> DescendantParts(this OpenXmlPartContainer root)
         {
-            if (root == null)
+            if (root is null)
             {
                 throw new ArgumentNullException(nameof(root));
             }
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>return true if it has non-null root element, otherwise rturn false.</returns>
         public static bool IsReflectable(this OpenXmlPart part)
         {
-            if (part == null)
+            if (part is null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>Return Root element of the pass-in part</returns>
         public static OpenXmlPartRootElement RootElement(this OpenXmlPart part)
         {
-            if (part == null)
+            if (part is null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
@@ -194,7 +194,7 @@ namespace DocumentFormat.OpenXml.Tests
                 .Where(p => p.PropertyType.IsSubclassOf(typeof(OpenXmlPartRootElement)))
                 .FirstOrDefault();
 
-            if (property == null)
+            if (property is null)
             {
                 return null;
             }
@@ -232,7 +232,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             // if there is only one part is null, return false
-            if ((targetPart == null && sourcePart != null) || (sourcePart == null && targetPart != null))
+            if ((targetPart is null && sourcePart != null) || (sourcePart is null && targetPart != null))
             {
                 return false;
             }
@@ -287,7 +287,7 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
 
-            if (sourcePart.RootElement == null)
+            if (sourcePart.RootElement is null)
             {
                 // if the part is binary part, compare binary
                 bool xmlCompareSuccess = false;

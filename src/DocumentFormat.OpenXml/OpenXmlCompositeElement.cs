@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlCompositeElement(IEnumerable childrenElements)
             : this()
         {
-            if (childrenElements == null)
+            if (childrenElements is null)
             {
                 throw new ArgumentNullException(nameof(childrenElements));
             }
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlCompositeElement(IEnumerable<OpenXmlElement> childrenElements)
             : this()
         {
-            if (childrenElements == null)
+            if (childrenElements is null)
             {
                 throw new ArgumentNullException(nameof(childrenElements));
             }
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlCompositeElement(params OpenXmlElement[] childrenElements)
             : this()
         {
-            if (childrenElements == null)
+            if (childrenElements is null)
             {
                 throw new ArgumentNullException(nameof(childrenElements));
             }
@@ -241,7 +241,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Returns null if <paramref name="newChild"/> equals <c>null</c>.</remarks>
         public override T AppendChild<T>(T newChild)
         {
-            if (newChild == null)
+            if (newChild is null)
             {
                 return null;
             }
@@ -256,7 +256,7 @@ namespace DocumentFormat.OpenXml
             OpenXmlElement prevNode = LastChild;
             OpenXmlElement nextNode = newChild;
 
-            if (prevNode == null)
+            if (prevNode is null)
             {
                 nextNode.Next = nextNode;
                 _lastChild = nextNode;
@@ -284,7 +284,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> is null. Inserted as first child if <paramref name="referenceChild"/> is <c>null</c>.</remarks>
         public override T InsertAfter<T>(T newChild, OpenXmlElement referenceChild)
         {
-            if (newChild == null)
+            if (newChild is null)
             {
                 return null;
             }
@@ -294,7 +294,7 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
 
-            if (referenceChild == null)
+            if (referenceChild is null)
             {
                 return PrependChild(newChild);
             }
@@ -341,7 +341,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> is null. Inserted as first child if <paramref name="referenceChild"/> is <c>null</c>.</remarks>
         public override T InsertBefore<T>(T newChild, OpenXmlElement referenceChild)
         {
-            if (newChild == null)
+            if (newChild is null)
             {
                 return null;
             }
@@ -351,7 +351,7 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
 
-            if (referenceChild == null)
+            if (referenceChild is null)
             {
                 return AppendChild(newChild);
             }
@@ -398,7 +398,7 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="ArgumentOutOfRangeException">Thrown when <paramref name="index"/> is less than 0 or is greater than the count of children.</exception>
         public override T InsertAt<T>(T newChild, int index)
         {
-            if (newChild == null)
+            if (newChild is null)
             {
                 return null;
             }
@@ -435,7 +435,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> equals <c>null</c>.</remarks>
         public override T PrependChild<T>(T newChild)
         {
-            if (newChild == null)
+            if (newChild is null)
             {
                 return null;
             }
@@ -456,7 +456,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Returns <c>null</c> if <paramref name="child"/> is <c>null</c>.</remarks>
         public override T RemoveChild<T>(T child)
         {
-            if (child == null)
+            if (child is null)
             {
                 return null;
             }
@@ -521,7 +521,7 @@ namespace DocumentFormat.OpenXml
                 element = next;
             }
 
-            Debug.Assert(_lastChild == null);
+            Debug.Assert(_lastChild is null);
         }
 
         /// <summary>
@@ -533,12 +533,12 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> equals <c>null</c>.</remarks>
         public override T ReplaceChild<T>(OpenXmlElement newChild, T oldChild)
         {
-            if (oldChild == null)
+            if (oldChild is null)
             {
                 return null;
             }
 
-            if (newChild == null)
+            if (newChild is null)
             {
                 throw new ArgumentNullException(nameof(newChild));
             }
@@ -748,7 +748,7 @@ namespace DocumentFormat.OpenXml
                         case ElementAction.ACBlock:
                             {
                                 var effectiveNode = OpenXmlElementContext.MCContext.GetContentFromACBlock(element as AlternateContent, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
-                                if (effectiveNode == null)
+                                if (effectiveNode is null)
                                 {
                                     break;
                                 }
@@ -796,7 +796,7 @@ namespace DocumentFormat.OpenXml
         private void AddANode(OpenXmlElement node)
         {
             node.Parent = this;
-            if (_lastChild == null)
+            if (_lastChild is null)
             {
                 node.Next = node;
                 _lastChild = node;

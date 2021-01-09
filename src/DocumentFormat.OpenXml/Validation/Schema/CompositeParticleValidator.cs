@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             ValidationErrorInfo errorInfo;
 
             // no children
-            if (child == null)
+            if (child is null)
             {
                 if (ParticleConstraint.MinOccurs == 0)
                 {
@@ -251,7 +251,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 
             var element = validationContext.Stack.Current.Element;
-            if (particleMatchInfo.LastMatchedElement == null)
+            if (particleMatchInfo.LastMatchedElement is null)
             {
                 child = validationContext.GetFirstChildMc();
             }
@@ -271,7 +271,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 case ParticleMatch.Partial:
                     // error: the child can not be matched, it is invalid
-                    if (child == null)
+                    if (child is null)
                     {
                         // missing child
                         errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_IncompleteContentExpectingComplex", GetExpectedChildrenMessage(element, particleMatchInfo.ExpectedChildren));
@@ -308,7 +308,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 // Same element name, but wrong type. Only occurs when validating memory DOM.
                 var validElement = element.TryCreateValidChild(validationContext.FileFormat, child.NamespaceUri, child.LocalName);
-                if (validElement == null)
+                if (validElement is null)
                 {
                     errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), expectedChildren);
                 }

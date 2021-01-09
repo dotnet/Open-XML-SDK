@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 }
 
                 X15.Connection x15connection = connectionsPart.Connections.Descendants<X15.Connection>().FirstOrDefault();
-                if (x15connection == null)
+                if (x15connection is null)
                 {
                     throw new Exception("Unable to obtain the X15.Connection.");
                 }

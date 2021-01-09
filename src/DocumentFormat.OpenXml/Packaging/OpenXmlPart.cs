@@ -38,17 +38,17 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal void Load(OpenXmlPackage openXmlPackage, OpenXmlPart parent, Uri uriTarget, string id, Dictionary<Uri, OpenXmlPart> loadedParts)
         {
-            if (uriTarget == null)
+            if (uriTarget is null)
             {
                 throw new ArgumentNullException(nameof(uriTarget));
             }
 
-            if (id == null)
+            if (id is null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
 
-            if (openXmlPackage == null && parent == null)
+            if (openXmlPackage is null && parent is null)
             {
                 throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
             }
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentOutOfRangeException(nameof(parent));
             }
-            else if (parent != null && openXmlPackage == null)
+            else if (parent != null && openXmlPackage is null)
             {
                 openXmlPackage = parent.OpenXmlPackage;
             }
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
@@ -153,7 +153,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal void CreateInternal(OpenXmlPackage openXmlPackage, OpenXmlPart parent, string contentType, string targetExt)
         {
             // openXmlPackage, parent can not be all null
-            if (openXmlPackage == null && parent == null)
+            if (openXmlPackage is null && parent is null)
             {
                 throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
             }
@@ -162,7 +162,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentOutOfRangeException(nameof(parent));
             }
-            else if (parent != null && openXmlPackage == null)
+            else if (parent != null && openXmlPackage is null)
             {
                 openXmlPackage = parent.OpenXmlPackage;
             }
@@ -192,7 +192,7 @@ namespace DocumentFormat.OpenXml.Packaging
             //Uri is auto generated to make sure it's unique
             string targetPath = GetTargetPath(TargetPath);
 
-            if (targetPath == null)
+            if (targetPath is null)
             {
                 targetPath = ".";
             }
@@ -207,7 +207,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            if (targetFileExt == null)
+            if (targetFileExt is null)
             {
                 targetFileExt = TargetFileExtension;
             }
@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal void CreateInternal2(OpenXmlPackage openXmlPackage, OpenXmlPart parent, string contentType, Uri partUri)
         {
             // openXmlPackage, parent can not be all null
-            if (openXmlPackage == null && parent == null)
+            if (openXmlPackage is null && parent is null)
             {
                 throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
             }
@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentOutOfRangeException(nameof(parent));
             }
-            else if (parent != null && openXmlPackage == null)
+            else if (parent != null && openXmlPackage is null)
             {
                 openXmlPackage = parent.OpenXmlPackage;
             }
@@ -361,7 +361,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (sourceStream == null)
+            if (sourceStream is null)
             {
                 throw new ArgumentNullException(nameof(sourceStream));
             }
@@ -405,7 +405,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (schemas == null)
+            if (schemas is null)
             {
                 throw new ArgumentNullException(nameof(schemas));
             }
@@ -450,7 +450,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (schemaFile == null)
+            if (schemaFile is null)
             {
                 throw new ArgumentNullException(nameof(schemaFile));
             }
@@ -531,7 +531,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (reachableParts == null)
+            if (reachableParts is null)
             {
                 throw new ArgumentNullException(nameof(reachableParts));
             }
@@ -652,7 +652,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal void LoadDomTree<T>()
             where T : OpenXmlPartRootElement, new()
         {
-            Debug.Assert(InternalRootElement == null);
+            Debug.Assert(InternalRootElement is null);
 
             using (Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read))
             {
@@ -739,7 +739,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         protected sealed override void ThrowIfObjectDisposed()
         {
-            if (_openXmlPackage == null)
+            if (_openXmlPackage is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.PartIsDestroyed);
             }

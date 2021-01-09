@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlElement">The OpenXmlElement to read.</param>
         public OpenXmlDomReader(OpenXmlElement openXmlElement) : this()
         {
-            if (openXmlElement == null)
+            if (openXmlElement is null)
             {
                 throw new ArgumentNullException(nameof(openXmlElement));
             }
@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml
         public OpenXmlDomReader(OpenXmlElement openXmlElement, bool readMiscNodes)
             : this(readMiscNodes)
         {
-            if (openXmlElement == null)
+            if (openXmlElement is null)
             {
                 throw new ArgumentNullException(nameof(openXmlElement));
             }

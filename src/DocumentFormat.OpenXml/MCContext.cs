@@ -421,7 +421,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (var choice in acblk.ChildElements.OfType<AlternateContentChoice>())
             {
-                if (choice.Requires == null)
+                if (choice.Requires is null)
                 {
                     //should we throw exception here?
                     continue;
@@ -443,7 +443,7 @@ namespace DocumentFormat.OpenXml
                     //so we should use the element's LookupNamespace function to find it
                     //string ns = LookupNamespaceDelegate(req);
                     string ns = choice.LookupNamespace(req);
-                    if (ns == null)
+                    if (ns is null)
                     {
                         if (_noExceptionOnError)
                         {
