@@ -76,7 +76,7 @@
         <SamplesFrameworks>netcoreapp2.1</SamplesFrameworks>
       </PropertyGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'netstandard2_1' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp2_1' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
         <TestTargetFrameworks>netcoreapp2.1</TestTargetFrameworks>
