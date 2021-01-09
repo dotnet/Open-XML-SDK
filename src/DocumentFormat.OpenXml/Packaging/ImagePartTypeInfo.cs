@@ -8,89 +8,43 @@ namespace DocumentFormat.OpenXml.Packaging
     internal static class ImagePartTypeInfo
     {
         internal static string GetContentType(ImagePartType imageType)
-        {
-            switch (imageType)
+            => imageType switch
             {
-                case ImagePartType.Bmp:
-                    return "image/bmp";
+                ImagePartType.Bmp => "image/bmp",
+                ImagePartType.Gif => "image/gif",
+                ImagePartType.Png => "image/png",
+                ImagePartType.Tiff => "image/tiff",
 
-                case ImagePartType.Gif:
-                    return "image/gif";
+                //ImagePartType.Xbm => "image/xbm",
+                ImagePartType.Icon => "image/x-icon",
+                ImagePartType.Pcx => "image/x-pcx",
 
-                case ImagePartType.Png:
-                    return "image/png";
-
-                case ImagePartType.Tiff:
-                    return "image/tiff";
-
-                //case ImagePartType.Xbm:
-                //    return "image/xbm";
-                case ImagePartType.Icon:
-                    return "image/x-icon";
-
-                case ImagePartType.Pcx:
-                    return "image/x-pcx";
-
-                //case ImagePartType.Pcz:
-                //    return "image/x-pcz";
-
-                //case ImagePartType.Pict:
-                //    return "image/pict";
-                case ImagePartType.Jpeg:
-                    return "image/jpeg";
-
-                case ImagePartType.Emf:
-                    return "image/x-emf";
-
-                case ImagePartType.Wmf:
-                    return "image/x-wmf";
-
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(imageType));
-            }
-        }
+                //ImagePartType.Pcz => "image/x-pcz",
+                //ImagePartType.Pict => "image/pict",
+                ImagePartType.Jpeg => "image/jpeg",
+                ImagePartType.Emf => "image/x-emf",
+                ImagePartType.Wmf => "image/x-wmf",
+                _ => throw new ArgumentOutOfRangeException(nameof(imageType)),
+            };
 
         internal static string GetTargetExtension(ImagePartType imageType)
-        {
-            switch (imageType)
+            => imageType switch
             {
-                case ImagePartType.Bmp:
-                    return ".bmp";
+                ImagePartType.Bmp => ".bmp",
+                ImagePartType.Gif => ".gif",
+                ImagePartType.Png => ".png",
+                ImagePartType.Tiff => ".tiff",
 
-                case ImagePartType.Gif:
-                    return ".gif";
+                //ImagePartType.Xbm => ".xbm",
+                ImagePartType.Icon => ".ico",
+                ImagePartType.Pcx => ".pcx",
 
-                case ImagePartType.Png:
-                    return ".png";
-
-                case ImagePartType.Tiff:
-                    return ".tiff";
-
-                //case ImagePartType.Xbm:
-                //    return ".xbm";
-                case ImagePartType.Icon:
-                    return ".ico";
-
-                case ImagePartType.Pcx:
-                    return ".pcx";
-
-                //case ImagePartType.Pcz:
-                //    return ".pcz";
-
-                //case ImagePartType.Pict:
-                //    return ".pict";
-                case ImagePartType.Jpeg:
-                    return ".jpg";
-
-                case ImagePartType.Emf:
-                    return ".emf";
-
-                case ImagePartType.Wmf:
-                    return ".wmf";
-
-                default:
-                    return ".image";
-            }
-        }
+                //ImagePartType.Pcz => ".pcz",
+                //ImagePartType.Pict => ".pict",
+                ImagePartType.Jpeg => ".jpg",
+                ImagePartType.Emf => ".emf",
+                ImagePartType.Wmf => ".wmf",
+                _ => ".image",
+            };
     }
 }

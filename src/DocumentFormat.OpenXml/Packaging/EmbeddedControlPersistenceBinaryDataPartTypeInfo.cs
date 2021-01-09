@@ -8,27 +8,17 @@ namespace DocumentFormat.OpenXml.Packaging
     internal static class EmbeddedControlPersistenceBinaryDataPartTypeInfo
     {
         internal static string GetContentType(EmbeddedControlPersistenceBinaryDataPartType controlType)
-        {
-            switch (controlType)
+            => controlType switch
             {
-                case EmbeddedControlPersistenceBinaryDataPartType.ActiveXBin:
-                    return "application/vnd.ms-office.activeX";
-
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(controlType));
-            }
-        }
+                EmbeddedControlPersistenceBinaryDataPartType.ActiveXBin => "application/vnd.ms-office.activeX",
+                _ => throw new ArgumentOutOfRangeException(nameof(controlType)),
+            };
 
         internal static string GetTargetExtension(EmbeddedControlPersistenceBinaryDataPartType controlType)
-        {
-            switch (controlType)
+            => controlType switch
             {
-                case EmbeddedControlPersistenceBinaryDataPartType.ActiveXBin:
-                    return ".bin";
-
-                default:
-                    return ".bin";
-            }
-        }
+                EmbeddedControlPersistenceBinaryDataPartType.ActiveXBin => ".bin",
+                _ => ".bin",
+            };
     }
 }

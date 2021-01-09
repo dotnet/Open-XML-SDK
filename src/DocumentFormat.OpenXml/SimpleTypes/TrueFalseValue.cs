@@ -91,20 +91,12 @@ namespace DocumentFormat.OpenXml
         /// <param name="textValue">The text value which could be 't', 'f', 'true', 'false'.</param>
         /// <returns>True on text value is 't', 'true'; False on text value is 'f', 'false'.</returns>
         private protected override bool Parse(string? textValue)
-        {
-            switch (textValue)
+            => textValue switch
             {
-                case "true":
-                case "t":
-                    return true;
-                case "false":
-                case "f":
-                case null:
-                    return false;
-                default:
-                    throw new FormatException(ExceptionMessages.TextIsInvalidTrueFalseValue);
-            }
-        }
+                "true" or "t" => true,
+                "false" or "f" or null => false,
+                _ => throw new FormatException(ExceptionMessages.TextIsInvalidTrueFalseValue),
+            };
 
         /// <summary>
         /// Gets the default text value.

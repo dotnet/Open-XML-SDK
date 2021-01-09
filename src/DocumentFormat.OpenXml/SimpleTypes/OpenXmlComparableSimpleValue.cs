@@ -47,17 +47,12 @@ namespace DocumentFormat.OpenXml
                 return 1;
             }
 
-            switch (obj)
+            return obj switch
             {
-                case OpenXmlComparableSimpleValue<T> other:
-                    return CompareTo(other.Value);
-
-                case T t:
-                    return CompareTo(t);
-
-                default:
-                    return Value.CompareTo(obj);
-            }
+                OpenXmlComparableSimpleValue<T> other => CompareTo(other.Value),
+                T t => CompareTo(t),
+                _ => Value.CompareTo(obj),
+            };
         }
 
         /// <inheritdoc />

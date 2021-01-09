@@ -8,89 +8,41 @@ namespace DocumentFormat.OpenXml.Packaging
     internal static class AlternativeFormatImportPartTypeInfo
     {
         internal static string GetContentType(AlternativeFormatImportPartType partType)
-        {
-            switch (partType)
+            => partType switch
             {
-                //case AlternativeFormatImportPartType.Text:
-                //    return "application/text/plain";
-                case AlternativeFormatImportPartType.Xhtml:
-                    return "application/xhtml+xml";
+                //AlternativeFormatImportPartType.Text => "application/text/plain",
+                AlternativeFormatImportPartType.Xhtml => "application/xhtml+xml",
+                AlternativeFormatImportPartType.Mht => "message/rfc822",
+                AlternativeFormatImportPartType.Xml => "application/xml",
 
-                case AlternativeFormatImportPartType.Mht:
-                    return "message/rfc822";
-
-                case AlternativeFormatImportPartType.Xml:
-                    return "application/xml";
-
-                //case AlternativeFormatImportPartType.TextXml:
-                //    return "text/xml";
-                case AlternativeFormatImportPartType.TextPlain:
-                    return "text/plain";
-
-                case AlternativeFormatImportPartType.WordprocessingML:
-                    return "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml";
-
-                case AlternativeFormatImportPartType.OfficeWordMacroEnabled:
-                    return "application/vnd.ms-word.document.macroEnabled.main+xml";
-
-                case AlternativeFormatImportPartType.OfficeWordTemplate:
-                    return "application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml";
-
-                case AlternativeFormatImportPartType.OfficeWordMacroEnabledTemplate:
-                    return "application/vnd.ms-word.template.macroEnabledTemplate.main+xml";
-
-                case AlternativeFormatImportPartType.Rtf:
-                    return "application/rtf";
-
-                case AlternativeFormatImportPartType.Html:
-                    return "text/html";
-
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(partType));
-            }
-        }
+                //AlternativeFormatImportPartType.TextXml => "text/xml",
+                AlternativeFormatImportPartType.TextPlain => "text/plain",
+                AlternativeFormatImportPartType.WordprocessingML => "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml",
+                AlternativeFormatImportPartType.OfficeWordMacroEnabled => "application/vnd.ms-word.document.macroEnabled.main+xml",
+                AlternativeFormatImportPartType.OfficeWordTemplate => "application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml",
+                AlternativeFormatImportPartType.OfficeWordMacroEnabledTemplate => "application/vnd.ms-word.template.macroEnabledTemplate.main+xml",
+                AlternativeFormatImportPartType.Rtf => "application/rtf",
+                AlternativeFormatImportPartType.Html => "text/html",
+                _ => throw new ArgumentOutOfRangeException(nameof(partType)),
+            };
 
         internal static string GetTargetExtension(AlternativeFormatImportPartType imageType)
-        {
-            switch (imageType)
+            => imageType switch
             {
-                //case AlternativeFormatImportPartType.Text:
-                //    return ".txt";
-                case AlternativeFormatImportPartType.Xhtml:
-                    return ".xhtml";
+                //AlternativeFormatImportPartType.Text => ".txt",
+                AlternativeFormatImportPartType.Xhtml => ".xhtml",
+                AlternativeFormatImportPartType.Mht => ".mht",
+                AlternativeFormatImportPartType.Xml => ".xml",
 
-                case AlternativeFormatImportPartType.Mht:
-                    return ".mht";
-
-                case AlternativeFormatImportPartType.Xml:
-                    return ".xml";
-
-                //case AlternativeFormatImportPartType.TextXml:
-                //    return ".xml";
-                case AlternativeFormatImportPartType.TextPlain:
-                    return ".txt";
-
-                case AlternativeFormatImportPartType.WordprocessingML:
-                    return ".docx";
-
-                case AlternativeFormatImportPartType.OfficeWordMacroEnabled:
-                    return ".docm";
-
-                case AlternativeFormatImportPartType.OfficeWordTemplate:
-                    return ".dotx";
-
-                case AlternativeFormatImportPartType.OfficeWordMacroEnabledTemplate:
-                    return ".dotm";
-
-                case AlternativeFormatImportPartType.Rtf:
-                    return ".rtf";
-
-                case AlternativeFormatImportPartType.Html:
-                    return ".htm";
-
-                default:
-                    return ".dat";
-            }
-        }
+                //AlternativeFormatImportPartType.TextXml => ".xml",
+                AlternativeFormatImportPartType.TextPlain => ".txt",
+                AlternativeFormatImportPartType.WordprocessingML => ".docx",
+                AlternativeFormatImportPartType.OfficeWordMacroEnabled => ".docm",
+                AlternativeFormatImportPartType.OfficeWordTemplate => ".dotx",
+                AlternativeFormatImportPartType.OfficeWordMacroEnabledTemplate => ".dotm",
+                AlternativeFormatImportPartType.Rtf => ".rtf",
+                AlternativeFormatImportPartType.Html => ".htm",
+                _ => ".dat",
+            };
     }
 }

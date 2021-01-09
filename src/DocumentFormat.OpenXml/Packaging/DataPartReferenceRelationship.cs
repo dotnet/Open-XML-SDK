@@ -63,18 +63,11 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         internal static bool IsDataPartReferenceRelationship(string relationshipType)
-        {
-            switch (relationshipType)
+            => relationshipType switch
             {
-                case MediaReferenceRelationship.RelationshipTypeConst:
-                case AudioReferenceRelationship.RelationshipTypeConst:
-                case VideoReferenceRelationship.RelationshipTypeConst:
-                    return true;
-
-                default:
-                    return false;
-            }
-        }
+                MediaReferenceRelationship.RelationshipTypeConst or AudioReferenceRelationship.RelationshipTypeConst or VideoReferenceRelationship.RelationshipTypeConst => true,
+                _ => false,
+            };
 
         /// <summary>
         /// Creates a new instance of the DataPartRelationship class based on the relationship type.
@@ -88,26 +81,13 @@ namespace DocumentFormat.OpenXml.Packaging
             Debug.Assert(containter is not null);
             Debug.Assert(dataPart is not null);
 
-            DataPartReferenceRelationship dataPartReferenceRelationship;
-
-            switch (relationshipType)
+            DataPartReferenceRelationship dataPartReferenceRelationship = relationshipType switch
             {
-                case MediaReferenceRelationship.RelationshipTypeConst:
-                    dataPartReferenceRelationship = new MediaReferenceRelationship((MediaDataPart)dataPart, id);
-                    break;
-
-                case AudioReferenceRelationship.RelationshipTypeConst:
-                    dataPartReferenceRelationship = new AudioReferenceRelationship((MediaDataPart)dataPart, id);
-                    break;
-
-                case VideoReferenceRelationship.RelationshipTypeConst:
-                    dataPartReferenceRelationship = new VideoReferenceRelationship((MediaDataPart)dataPart, id);
-                    break;
-
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(relationshipType));
-            }
-
+                MediaReferenceRelationship.RelationshipTypeConst => new MediaReferenceRelationship((MediaDataPart)dataPart, id),
+                AudioReferenceRelationship.RelationshipTypeConst => new AudioReferenceRelationship((MediaDataPart)dataPart, id),
+                VideoReferenceRelationship.RelationshipTypeConst => new VideoReferenceRelationship((MediaDataPart)dataPart, id),
+                _ => throw new ArgumentOutOfRangeException(nameof(relationshipType)),
+            };
             dataPartReferenceRelationship.Container = containter;
             return dataPartReferenceRelationship;
         }

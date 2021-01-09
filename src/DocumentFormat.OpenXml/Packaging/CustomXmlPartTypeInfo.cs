@@ -8,45 +8,23 @@ namespace DocumentFormat.OpenXml.Packaging
     internal static class CustomXmlPartTypeInfo
     {
         internal static string GetContentType(CustomXmlPartType partType)
-        {
-            switch (partType)
+            => partType switch
             {
-                case CustomXmlPartType.AdditionalCharacteristics:
-                    return "application/xml";
-
-                case CustomXmlPartType.Bibliography:
-                    return "application/xml";
-
-                case CustomXmlPartType.CustomXml:
-                    return "application/xml";
-
-                case CustomXmlPartType.InkContent:
-                    return "application/inkml+xml";
-
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(partType));
-            }
-        }
+                CustomXmlPartType.AdditionalCharacteristics => "application/xml",
+                CustomXmlPartType.Bibliography => "application/xml",
+                CustomXmlPartType.CustomXml => "application/xml",
+                CustomXmlPartType.InkContent => "application/inkml+xml",
+                _ => throw new ArgumentOutOfRangeException(nameof(partType)),
+            };
 
         internal static string GetTargetExtension(CustomXmlPartType partType)
-        {
-            switch (partType)
+            => partType switch
             {
-                case CustomXmlPartType.AdditionalCharacteristics:
-                    return ".xml";
-
-                case CustomXmlPartType.Bibliography:
-                    return ".xml";
-
-                case CustomXmlPartType.CustomXml:
-                    return ".xml";
-
-                case CustomXmlPartType.InkContent:
-                    return ".xml";
-
-                default:
-                    return ".xml";
-            }
-        }
+                CustomXmlPartType.AdditionalCharacteristics => ".xml",
+                CustomXmlPartType.Bibliography => ".xml",
+                CustomXmlPartType.CustomXml => ".xml",
+                CustomXmlPartType.InkContent => ".xml",
+                _ => ".xml",
+            };
     }
 }

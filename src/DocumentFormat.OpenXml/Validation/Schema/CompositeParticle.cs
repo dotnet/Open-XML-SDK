@@ -70,28 +70,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         private ParticleValidator CreateParticleValidator()
-        {
-            switch (ParticleType)
+            => ParticleType switch
             {
-                case ParticleType.All:
-                    return new AllParticleValidator(this);
-
-                case ParticleType.Choice:
-                    return new ChoiceParticleValidator(this);
-
-                case ParticleType.Sequence:
-                    return new SequenceParticleValidator(this);
-
-                case ParticleType.Group:
-                    return new GroupParticleValidator(this);
-
-                //case ParticleType.Any:
-                //    return new AnyParticleValidator(particleConstraint);
-                case ParticleType.Element:
-                default:
-                    throw new InvalidOperationException();
-            }
-        }
+                ParticleType.All => new AllParticleValidator(this),
+                ParticleType.Choice => new ChoiceParticleValidator(this),
+                ParticleType.Sequence => new SequenceParticleValidator(this),
+                ParticleType.Group => new GroupParticleValidator(this),
+                _ => throw new InvalidOperationException(),
+            };
 
         public override bool Equals(object obj)
         {
