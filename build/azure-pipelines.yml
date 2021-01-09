@@ -28,36 +28,36 @@ stages:
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-            - name: netcoreapp1.1
+            - name: netcoreapp1_1
               runtimes:
                 - 1.1.13
                 - 2.1.23
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-                - image: 'ubuntu-latest'
+                - image: 'ubuntu-20.04'
                   name: 'linux'
-            - name: netcoreapp2.1
+            - name: netcoreapp2_1
               runtimes:
                 - 2.1.23
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-                - image: 'ubuntu-latest'
+                - image: 'ubuntu-20.04'
                   name: 'linux'
-            - name: netcoreapp3.1
+            - name: netcoreapp3_1
               runtimes:
                 - 3.1.10
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-                - image: 'ubuntu-latest'
+                - image: 'ubuntu-20.04'
                   name: 'linux'
-            - name: net5.0
+            - name: net5_0
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-                - image: 'ubuntu-latest'
+                - image: 'ubuntu-20.04'
                   name: 'linux'
 
   - stage: Package

@@ -10,13 +10,13 @@
          - net35:              .NET Framework 3.5 
          - net40:              .NET Framework 4.0
          - net46:              .NET Framework 4.6
-         - netcoreapp1.1:      .NET Core 1.1
-         - netcoreapp2.1:      .NET Core 2.1
-         - netcoreapp3.1:      .NET Core 3.1
-         - net5.0:             .NET 5.0
+         - netcoreapp1_1:      .NET Core 1.1
+         - netcoreapp2_1:      .NET Core 2.1
+         - netcoreapp3_1:      .NET Core 3.1
+         - net5_0:             .NET 5.0
          - All: Will build for all platforms
          -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">netcoreapp3.1</ProjectLoadStyle>
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">netcoreapp3_1</ProjectLoadStyle>
     <__InvalidProjectLoadStyle>false</__InvalidProjectLoadStyle>
   </PropertyGroup>
 
@@ -66,7 +66,7 @@
         <Reference Include="WindowsBase" />
       </ItemGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp1.1' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp1_1' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard1.3</ProductTargetFrameworks>
         <TestTargetFrameworks>netcoreapp1.1</TestTargetFrameworks>
@@ -76,7 +76,7 @@
         <SamplesFrameworks>netcoreapp1.1</SamplesFrameworks>
       </PropertyGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp2.1' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp2_1' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
         <TestTargetFrameworks>netcoreapp2.1</TestTargetFrameworks>
@@ -85,7 +85,7 @@
         <SamplesFrameworks>netcoreapp2.1</SamplesFrameworks>
       </PropertyGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp3.1' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp3_1' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
         <TestTargetFrameworks>netcoreapp3.1</TestTargetFrameworks>
@@ -94,7 +94,7 @@
         <SamplesFrameworks>netcoreapp3.1</SamplesFrameworks>
       </PropertyGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'net5.0' ">
+    <When Condition=" '$(ProjectLoadStyle)' == 'net5_0' ">
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
         <TestTargetFrameworks>net5.0</TestTargetFrameworks>
