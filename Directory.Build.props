@@ -74,6 +74,8 @@
         <!-- BenchmarkDotNet only supports .NET Standard 2.0-->
         <BenchmarkTargetFramework>netcoreapp2.1</BenchmarkTargetFramework>
         <SamplesFrameworks>netcoreapp2.1</SamplesFrameworks>
+        <!-- Used to special case some tests for running netstandard1.3 build on .NET Core 2.1 -->
+        <DefineConstants>$(DefineConstants);NETSTANDARD1_3_SDK</DefineConstants>
       </PropertyGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'netcoreapp2_1' ">
