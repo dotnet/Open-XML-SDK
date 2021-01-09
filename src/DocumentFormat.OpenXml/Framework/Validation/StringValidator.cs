@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.Framework
                             errorType: ValidationErrorType.Schema);
                     }
                 }
-                else if (current.Value.InnerText.Length > 255)
+                else if (current.Value.InnerText != null && current.Value.InnerText.Length > 255)
                 {
                     context.CreateError(
                         id: id,

@@ -1,15 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents a generic value for simple value types (Int32, UInt32, Byte, struct, etc).
+    /// Represents a generic value for simple value types (such as <see cref="int"/> , <see cref="uint"/>, <see cref="byte"/>, etc).
     /// </summary>
     /// <typeparam name="T">The type of the value.</typeparam>
     [DebuggerDisplay("{InnerText}")]
@@ -70,7 +68,7 @@ namespace DocumentFormat.OpenXml
                     InnerValue = Parse(InnerText);
                 }
 
-                return InnerValue.Value;
+                return InnerValue!.Value;
             }
 
             set
@@ -83,7 +81,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc />
-        public override string InnerText
+        public override string? InnerText
         {
             get
             {
@@ -102,7 +100,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private protected virtual bool ShouldParse(string value)
+        private protected virtual bool ShouldParse(string? value)
         {
             return !string.IsNullOrEmpty(value);
         }
@@ -116,14 +114,14 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Convert the text to meaningful value.
         /// </summary>
-        private protected abstract T Parse(string input);
+        private protected abstract T Parse(string? input);
 
         internal sealed override bool IsValid => TryParse(InnerText, out _);
 
         /// <summary>
         /// Convert the text to meaningful value with no exceptions
         /// </summary>
-        private protected virtual bool TryParse(string input, out T value)
+        private protected virtual bool TryParse(string? input, out T value)
         {
             try
             {

@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets the value of this instance.
         /// </summary>
-        public abstract T Value { get; set; }
+        public abstract T? Value { get; set; }
 
         /// <inheritdoc />
         public int CompareTo(object obj)
@@ -41,6 +41,10 @@ namespace DocumentFormat.OpenXml
             if (obj is null || !HasValue)
             {
                 return 1;
+            }
+            else if (Value is null)
+            {
+                return -1;
             }
             else if (obj is OpenXmlComparableSimpleReference<T> other)
             {
@@ -64,9 +68,14 @@ namespace DocumentFormat.OpenXml
                 return 1;
             }
 
-            if (Value == null)
+            if (Value is null)
             {
                 return other.Value == null ? 0 : -1;
+            }
+
+            if (other.Value is null)
+            {
+                return -1;
             }
 
             return Value.CompareTo(other.Value);
@@ -82,6 +91,10 @@ namespace DocumentFormat.OpenXml
         public override bool Equals(object obj)
         {
             if (obj is null || !HasValue)
+            {
+                return false;
+            }
+            else if (Value is null)
             {
                 return false;
             }

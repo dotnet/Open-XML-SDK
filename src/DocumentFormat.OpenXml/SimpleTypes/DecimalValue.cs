@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Diagnostics;
 using System.Xml;
@@ -16,28 +14,28 @@ namespace DocumentFormat.OpenXml
     public class DecimalValue : OpenXmlComparableSimpleValue<decimal>
     {
         /// <summary>
-        /// Initializes a new instance of the DecimalValue class.
+        /// Initializes a new instance of the <see cref="DecimalValue"/> class.
         /// </summary>
         public DecimalValue()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the DecimalValue class using the supplied
-        /// Decimal value.
+        /// Initializes a new instance of the <see cref="DecimalValue"/> class using the supplied
+        /// <see cref="decimal"/> value.
         /// </summary>
-        /// <param name="value">The Decimal value.</param>
+        /// <param name="value">The <see cref="decimal"/> value.</param>
         public DecimalValue(decimal value)
             : base(value)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the DecimalValue class by deep copying
-        /// the supplied DecimalValue class.
+        /// Initializes a new instance of the <see cref="DecimalValue"/> class by deep copying
+        /// the supplied <see cref="DecimalValue"/> class.
         /// </summary>
         /// <param name="source">
-        /// The source DecimalValue class.
+        /// The source <see cref="DecimalValue"/> class.
         /// </param>
         public DecimalValue(DecimalValue source)
             : base(source)
@@ -46,66 +44,60 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(decimal input) => XmlConvert.ToString(input);
 
-        private protected override decimal Parse(string input) => XmlConvert.ToDecimal(input);
+        private protected override decimal Parse(string? input) => XmlConvert.ToDecimal(input);
 
         /// <summary>
-        /// Implicitly converts the specified value to a Decimal value.
-        /// </summary>
-        /// <param name="xmlAttribute">
-        /// The DecimalValue to convert.
-        /// </param>
-        /// <returns>
-        /// The converted Decimal value.
-        /// </returns>
-        /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator decimal(DecimalValue xmlAttribute)
-        {
-            if (xmlAttribute == null)
-            {
-                throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
-            }
-
-            return ToDecimal(xmlAttribute);
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DecimalValue class by implicitly
-        /// converting the supplied Decimal value.
+        /// Implicitly converts the specified value to a <see cref="decimal"/> value.
         /// </summary>
         /// <param name="value">
-        /// The Decimal value.
+        /// The <see cref="DecimalValue"/> to convert.
         /// </param>
-        /// <returns>A new DecimalValue instance with the value.</returns>
-        public static implicit operator DecimalValue(decimal value)
+        /// <returns>
+        /// The converted <see cref="decimal"/> value.
+        /// </returns>
+        /// <exception cref="InvalidOperationException">Thrown when <paramref name="value"/> is null.</exception>
+        public static implicit operator decimal(DecimalValue value)
         {
-            return FromDecimal(value);
-        }
-
-        /// <summary>
-        /// Returns a new DecimalValue object that was created from a Decimal value.
-        /// </summary>
-        /// <param name="value">A Decimal value to use to create a new DecimalValue object.</param>
-        /// <returns>A DecimalValue object that corresponds to the value parameter.</returns>
-        public static DecimalValue FromDecimal(decimal value)
-        {
-            return new DecimalValue(value);
-        }
-
-        /// <summary>
-        /// Returns the Decimal representation of a DecimalValue object.
-        /// </summary>
-        /// <param name="xmlAttribute">
-        /// A DecimalValue object to use to retrieve a Decimal representation.
-        /// </param>
-        /// <returns>A Decimal value that represents a DecimalValue object.</returns>
-        public static decimal ToDecimal(DecimalValue xmlAttribute)
-        {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return xmlAttribute.Value;
+            return ToDecimal(value);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DecimalValue"/> class by implicitly
+        /// converting the supplied <see cref="decimal"/> value.
+        /// </summary>
+        /// <param name="value">
+        /// The <see cref="decimal"/> value.
+        /// </param>
+        /// <returns>A new <see cref="DecimalValue"/> instance with the value.</returns>
+        public static implicit operator DecimalValue(decimal value) => FromDecimal(value);
+
+        /// <summary>
+        /// Returns a new <see cref="DecimalValue"/> object that was created from a <see cref="decimal"/> value.
+        /// </summary>
+        /// <param name="value">A <see cref="decimal"/> value to use to create a new <see cref="DecimalValue"/> object.</param>
+        /// <returns>A <see cref="DecimalValue"/> object that corresponds to the value parameter.</returns>
+        public static DecimalValue FromDecimal(decimal value) => new DecimalValue(value);
+
+        /// <summary>
+        /// Returns the <see cref="decimal"/> representation of a <see cref="DecimalValue"/> object.
+        /// </summary>
+        /// <param name="value">
+        /// A <see cref="DecimalValue"/> object to use to retrieve a <see cref="decimal"/> representation.
+        /// </param>
+        /// <returns>A <see cref="decimal"/> value that represents a <see cref="DecimalValue"/> object.</returns>
+        public static decimal ToDecimal(DecimalValue value)
+        {
+            if (value is null)
+            {
+                throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
+            }
+
+            return value.Value;
         }
 
         private protected override OpenXmlSimpleType CloneImpl() => new DecimalValue(this);

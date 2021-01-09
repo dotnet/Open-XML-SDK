@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <summary>
         /// An implementation of XmlConvert.VerifyTOKEN(string) as it is not available cross platform and throws if fails
         /// </summary>
-        public static bool VerifyTOKEN(string token)
+        public static bool VerifyTOKEN(string? token)
         {
             if (token == null || token.Length == 0)
             {
