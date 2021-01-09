@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-#if FEATURE_ABSTRACT_XML_CLOSE
+#if FEATURE_ABSTRACT_XML_CLOSE && !NETSTANDARD1_3_SDK
         [Theory]
         [InlineData(true)]
         [InlineData(false)]

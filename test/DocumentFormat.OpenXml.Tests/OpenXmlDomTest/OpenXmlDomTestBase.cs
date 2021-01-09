@@ -1341,15 +1341,8 @@ namespace DocumentFormat.OpenXml.Tests
                 var attribute = hostElement.GetAttribute(xAttribute.Name.LocalName, xAttribute.Name.NamespaceName);
 
                 Log.Comment("Checking if attribute: {0} has correct value as XAttribute...", xAttribute.Name);
-                if (attribute == null)
-                {
-                    Log.Fail("Attribute {0} does NOT exist.", xAttribute.Name);
-                }
-                else
-                {
-                    Log.VerifyValue(attribute.Value, xAttribute.Value,
-                        "Attribute {0} value {1} does NOT match expected value {2}", attribute.GetFullName(), attribute.Value, xAttribute.Value);
-                }
+                Log.VerifyValue(attribute.Value, xAttribute.Value,
+                    "Attribute {0} value {1} does NOT match expected value {2}", attribute.GetFullName(), attribute.Value, xAttribute.Value);
             }
             else
             {
@@ -1460,7 +1453,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Comment("Importing element found: {0}", importElement.Path());
 
                     var attribute = getAttribute(importElement);
-                    if (attribute != null && attribute != default(OpenXmlAttribute))
+                    if (attribute != default)
                     {
                         Log.Comment("Setting attribute {0} with value {1}...", attribute.GetFullName(), attribute.Value);
 
@@ -1607,7 +1600,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("Looking for target attribute to remove...");
                 OpenXmlAttribute remove = getRemoveAttribute(hostElement);
 
-                if (remove != null && remove != default(OpenXmlAttribute))
+                if (remove != default)
                 {
                     Log.Comment("Removing Attribute {0}", remove.GetFullName());
 

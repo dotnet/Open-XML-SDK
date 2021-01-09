@@ -15,11 +15,6 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>XName of pass-in OpenXmlAttribute</returns>
         public static XName GetXName(this OpenXmlAttribute attribute)
         {
-            if (attribute == null)
-            {
-                throw new ArgumentNullException(nameof(attribute));
-            }
-
             return XName.Get(attribute.LocalName, attribute.NamespaceUri);
         }
 
@@ -30,11 +25,6 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>name of attribute in <w:p> format</returns>
         public static string GetFullName(this OpenXmlAttribute attribute)
         {
-            if (attribute == null)
-            {
-                throw new ArgumentNullException(nameof(attribute));
-            }
-
             if (string.IsNullOrEmpty(attribute.Prefix))
             {
                 return attribute.LocalName;

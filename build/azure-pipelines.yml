@@ -16,40 +16,47 @@ stages:
       - template: build.yml
         parameters:
           buildTargets:
-            - name: DevFramework35
+            - name: net35
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-            - name: DevFramework40
+            - name: net40
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-            - name: DevFramework46
+            - name: net46
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-            - name: DevCore11
+            - name: netstandard1_3
               runtimes:
-                - 1.1.13
-                - 2.1.18
+                - 2.1.23
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-                - image: 'ubuntu-latest'
+                - image: 'ubuntu-20.04'
                   name: 'linux'
-            - name: DevCore21
+            - name: netcoreapp2_1
               runtimes:
-                - 2.1.18
+                - 2.1.23
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-                - image: 'ubuntu-latest'
+                - image: 'ubuntu-20.04'
                   name: 'linux'
-            - name: DevCore31
+            - name: netcoreapp3_1
+              runtimes:
+                - 3.1.10
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-                - image: 'ubuntu-latest'
+                - image: 'ubuntu-20.04'
+                  name: 'linux'
+            - name: net5_0
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+                - image: 'ubuntu-20.04'
                   name: 'linux'
 
   - stage: Package
