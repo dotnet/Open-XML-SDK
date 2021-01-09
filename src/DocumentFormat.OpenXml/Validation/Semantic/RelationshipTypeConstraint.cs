@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             var element = context.Stack.Current.Element;
             var attribute = element.ParsedState.Attributes[_attribute];
 
-            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
+            if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }

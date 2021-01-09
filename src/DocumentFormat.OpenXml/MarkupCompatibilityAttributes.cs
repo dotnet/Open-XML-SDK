@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 
 namespace DocumentFormat.OpenXml
@@ -12,13 +10,13 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class MarkupCompatibilityAttributes
     {
-        internal static readonly string MCPrefix = NamespaceIdMap.GetNamespacePrefix(AlternateContent.MarkupCompatibilityNamespace);
+        internal static readonly string MCPrefix = NamespaceIdMap.GetNamespacePrefix(AlternateContent.MarkupCompatibilityNamespace)!;
 
         /// <summary>
         /// Gets or sets a whitespace-delimited list of prefixes, where each
         ///  prefix identifies an ignorable namespace.
         /// </summary>
-        public StringValue Ignorable { get; set; }
+        public StringValue? Ignorable { get; set; }
 
         /// <summary>
         /// Gets or sets a whitespace-delimited list of element-qualified names
@@ -26,7 +24,7 @@ namespace DocumentFormat.OpenXml
         ///  elements shall be processed, even if the elements themselves are
         ///  ignored.
         /// </summary>
-        public StringValue ProcessContent { get; set; }
+        public StringValue? ProcessContent { get; set; }
 
         /// <summary>
         /// Gets or sets a whitespace-delimited list of element qualified names
@@ -34,19 +32,19 @@ namespace DocumentFormat.OpenXml
         ///  by a markup producer for preservation by markup editors, even if
         ///  the elements themselves are ignored.
         /// </summary>
-        public StringValue PreserveElements { get; set; }
+        public StringValue? PreserveElements { get; set; }
 
         /// <summary>
         /// Gets or sets a whitespace-delimited list of attribute qualified names
         ///  that identify expanded names of attributes. The attributes were
         ///  suggested by a markup producer for preservation by markup editors.
         /// </summary>
-        public StringValue PreserveAttributes { get; set; }
+        public StringValue? PreserveAttributes { get; set; }
 
         /// <summary>
         /// Gets or sets a whitespace-delimited list of prefixes that identify
         ///  a set of namespace names.
         /// </summary>
-        public StringValue MustUnderstand { get; set; }
+        public StringValue? MustUnderstand { get; set; }
     }
 }

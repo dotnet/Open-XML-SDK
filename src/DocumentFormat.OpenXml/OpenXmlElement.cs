@@ -250,7 +250,7 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var value in ParsedState.Attributes)
                 {
-                    if (value.HasValue)
+                    if (value.Value is not null)
                     {
                         return true;
                     }
@@ -491,7 +491,7 @@ namespace DocumentFormat.OpenXml
                 {
                     foreach (var attribute in ParsedState.Attributes)
                     {
-                        if (attribute.HasValue &&
+                        if (attribute.Value is not null &&
                             attribute.Property.Name == localName &&
                             attribute.Property.Namespace == namespaceUri)
                         {
@@ -531,7 +531,7 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var attribute in ParsedState.Attributes)
                 {
-                    if (attribute.HasValue)
+                    if (attribute.Value is not null)
                     {
                         attributes.Add(new OpenXmlAttribute(attribute));
                     }
@@ -1429,7 +1429,7 @@ namespace DocumentFormat.OpenXml
             {
                 foreach (var attribute in ParsedState.Attributes)
                 {
-                    if (attribute.HasValue)
+                    if (attribute.Value is not null)
                     {
                         var ns = attribute.Property.Namespace;
                         var prefix = string.Empty;
@@ -1491,7 +1491,7 @@ namespace DocumentFormat.OpenXml
 
                 if (!attribute.IsNil)
                 {
-                    if (!attribute.HasValue)
+                    if (attribute.Value is null)
                     {
                         attribute.Value = attribute.Property.CreateNew();
                     }
@@ -1875,7 +1875,7 @@ namespace DocumentFormat.OpenXml
                 {
                     var attribute = container.ParsedState.Attributes[i];
 
-                    if (attribute.HasValue)
+                    if (attribute.Value is not null)
                     {
                         RawState.Attributes[i].Value = (OpenXmlSimpleType)attribute.Value.Clone();
                     }
@@ -2721,7 +2721,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (var attribute in RawState.Attributes)
             {
-                if (attribute.HasValue)
+                if (attribute.Value is not null)
                 {
                     var action = OpenXmlElementContext.MCContext.GetAttributeAction(attribute.Property.Namespace, attribute.Property.Name, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
 

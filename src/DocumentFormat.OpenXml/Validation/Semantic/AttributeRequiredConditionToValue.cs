@@ -27,14 +27,14 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             var element = context.Stack.Current.Element;
             var requiredAttribute = element.ParsedState.Attributes[_requiredAttribute];
 
-            if (requiredAttribute.HasValue)
+            if (requiredAttribute.Value is not null)
             {
                 return null;
             }
 
             var conditionAttribute = element.ParsedState.Attributes[_conditionAttribute];
 
-            if (!conditionAttribute.HasValue)
+            if (conditionAttribute.Value is null)
             {
                 return null;
             }

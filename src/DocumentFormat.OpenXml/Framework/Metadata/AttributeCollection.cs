@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal readonly struct AttributeCollection : IEnumerable<AttributeCollection.AttributeEntry>
     {
-        private readonly OpenXmlSimpleType[] _data;
+        private readonly OpenXmlSimpleType?[] _data;
         private readonly ReadOnlyArray<AttributeMetadata> _attributes;
 
         public AttributeCollection(ReadOnlyArray<AttributeMetadata> tags)
@@ -117,9 +117,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public ref readonly AttributeMetadata Property => ref _collection._attributes[_index];
 
-            public ref OpenXmlSimpleType Value => ref _collection._data[_index];
-
-            public bool HasValue => Value != null;
+            public ref OpenXmlSimpleType? Value => ref _collection._data[_index];
         }
     }
 }

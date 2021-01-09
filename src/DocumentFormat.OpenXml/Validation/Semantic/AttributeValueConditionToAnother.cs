@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             var element = context.Stack.Current.Element;
             var attribute = element.ParsedState.Attributes[_attribute];
 
-            if (!attribute.HasValue)
+            if (attribute.Value is null)
             {
                 return null;
             }
@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var conditionAttribute = element.ParsedState.Attributes[_conditionAttribute];
 
-            if (!conditionAttribute.HasValue)
+            if (conditionAttribute.Value is null)
             {
                 return null;
             }

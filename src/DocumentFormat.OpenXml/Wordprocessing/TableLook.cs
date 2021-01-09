@@ -32,9 +32,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 var isValueTrue = value == "true" || value == "1";
                 var attribute = RawState.Attributes[namespaceUri, localName];
 
-                if (attribute.HasValue)
+                if (attribute.Value is OpenXmlSimpleType simpleType)
                 {
-                    var current = StringToValue(attribute.Value.InnerText);
+                    var current = StringToValue(simpleType.InnerText);
                     var combined = isValueTrue ? (current | result) : (current & ~result);
 
                     value = ValueToString(combined);
