@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (_validMainPartContentType == null)
+                if (_validMainPartContentType is null)
                 {
                     _validMainPartContentType = new Dictionary<PresentationDocumentType, string>
                     {
@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private void UpdateDocumentTypeFromContentType()
         {
-            if (MainPartContentType == null)
+            if (MainPartContentType is null)
             {
                 throw new InvalidOperationException();
             }
@@ -226,7 +226,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The new PresentationDocument based on the template.</returns>
         public static PresentationDocument CreateFromTemplate(string path)
         {
-            if (path == null)
+            if (path is null)
             {
                 throw new ArgumentNullException(nameof(path));
             }
@@ -440,7 +440,7 @@ namespace DocumentFormat.OpenXml.Packaging
             DocumentType = newType;
             MainPartContentType = MainPartContentTypes[newType];
 
-            if (PresentationPart == null)
+            if (PresentationPart is null)
             {
                 return;
             }
@@ -470,7 +470,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (relationshipType == null)
+            if (relationshipType is null)
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
@@ -605,7 +605,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <remarks>Mainly used for adding not-fixed content type part - ImagePart, etc.</remarks>
         public override T AddNewPart<T>(string contentType, string id)
         {
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }

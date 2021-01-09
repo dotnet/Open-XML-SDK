@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Tests
         public static TSource PickSecond<TSource>(this IEnumerable<TSource> source)
         {
             var chosenElement = source.Skip(1).FirstOrDefault();
-            if (chosenElement != null)
+            if (chosenElement is not null)
             {
                 return chosenElement;
             }

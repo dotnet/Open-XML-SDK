@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml
             get
             {
                 MakeSureParsed();
-                if (RawInnerText != null)
+                if (RawInnerText is not null)
                 {
                     return _rawInnerText;
                 }
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (ShadowElement != null)
+                if (ShadowElement is not null)
                 {
                     return ShadowElement.InnerXml;
                 }
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml
         internal override void WriteContentTo(XmlWriter w)
         {
             // Write the loaded inner xml if there are any
-            if (ShadowElement != null)
+            if (ShadowElement is not null)
             {
                 ShadowElement.WriteContentTo(w);
             }
@@ -204,7 +204,7 @@ namespace DocumentFormat.OpenXml
                             child.Load(xmlReader, OpenXmlLoadMode.Full);
                             unwanted++;
 
-                            if (ShadowElement == null)
+                            if (ShadowElement is null)
                             {
                                 ShadowElement = new OpenXmlUnknownElement(Prefix, LocalName, NamespaceUri);
                             }
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml
                 if (unwanted == 0)
                 {
                     // only text node, no unwanted children
-                    Debug.Assert(ShadowElement == null);
+                    Debug.Assert(ShadowElement is null);
                 }
                 else if (textNodePosition > -1)
                 {

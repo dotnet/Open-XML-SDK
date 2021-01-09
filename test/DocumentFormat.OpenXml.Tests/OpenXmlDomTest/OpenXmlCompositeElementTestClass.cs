@@ -2146,7 +2146,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 // DocumentFormat.OpenXml.Drawing.LockedCanvas
                 var element = doc.Descendants().Where(e => e.LocalName == "lockedCanvas").FirstOrDefault();
-                if (element == null)
+                if (element is null)
                 {
                     Log.Warning("No lockedCanvas element found in specified document.");
                     return;

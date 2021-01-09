@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// </summary>
         public static bool VerifyTOKEN(string? token)
         {
-            if (token == null || token.Length == 0)
+            if (token is null || token.Length == 0)
             {
                 return true;
             }

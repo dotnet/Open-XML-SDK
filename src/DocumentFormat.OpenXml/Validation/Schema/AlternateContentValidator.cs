@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             child = acElement.GetFirstNonMiscElementChild();
 
-            while (child != null)
+            while (child is not null)
             {
                 if (child is AlternateContent)
                 {
@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // AlternateContent elements might include the attributes Ignorable, MustUnderstand, ProcessContent, PreserveElements, and PreserveAttributes
             // These attributes’ qualified names shall be prefixed when associated with an AlternateContent / Choice / Fallback element.
             // A markup consumer shall generate an error if it encounters an unprefixed attribute name associated with an AlternateContent element.
-            if (acElement.ExtendedAttributes != null)
+            if (acElement.ExtendedAttributes is not null)
             {
                 foreach (var exAttribute in acElement.ExtendedAttributes)
                 {
@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             if (acElement is AlternateContentChoice choice)
             {
                 // All Choice elements shall have a Requires attribute whose value contains a whitespace-delimited list of namespace prefixes
-                if (choice.Requires == null)
+                if (choice.Requires is null)
                 {
                     // report error
                     errorInfo = validationContext.ComposeMcValidationError(acElement, "MC_MissedRequiresAttribute");

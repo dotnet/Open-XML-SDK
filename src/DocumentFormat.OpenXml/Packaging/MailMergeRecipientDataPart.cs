@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (Recipients != null)
+                if (Recipients is not null)
                 {
                     return Recipients;
                 }
@@ -60,12 +60,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                if (value == null)
+                if (value is null)
                 {
                     throw new ArgumentNullException(nameof(value));
                 }
 
-                if (MailMergeRecipients != null)
+                if (MailMergeRecipients is not null)
                 {
                     throw new InvalidOperationException(SR.Format(ExceptionMessages.PropertyMutualExclusive, "Recipients", "MailMergeRecipients"));
                 }
@@ -88,12 +88,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                if (value == null)
+                if (value is null)
                 {
                     throw new ArgumentNullException(nameof(value));
                 }
 
-                if (Recipients != null)
+                if (Recipients is not null)
                 {
                     throw new InvalidOperationException(SR.Format(ExceptionMessages.PropertyMutualExclusive, "MailMergeRecipients", "Recipients"));
                 }
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private void TryLoadRootElement()
         {
-            if (_rootEle == null)
+            if (_rootEle is null)
             {
                 try
                 {
@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                 }
 
-                if (_rootEle == null)
+                if (_rootEle is null)
                 {
                     LoadDomTree<DocumentFormat.OpenXml.Office.Word.MailMergeRecipients>();
                 }

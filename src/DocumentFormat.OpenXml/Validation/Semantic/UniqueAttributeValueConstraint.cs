@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo ValidateCore(ValidationContext context)
         {
-            if (_parent != null)
+            if (_parent is not null)
             {
                 return null;
             }

@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal NsAnyParticleValidator(NsAnyParticle particleConstraint)
             : base()
         {
-            Debug.Assert(particleConstraint != null);
+            Debug.Assert(particleConstraint is not null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.AnyWithUri);
 
             _nsAnyParticleConstraint = particleConstraint;
@@ -40,8 +40,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The context information for validation.</param>
         public override void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo != null);
-            Debug.Assert(particleMatchInfo.StartElement != null);
+            Debug.Assert(particleMatchInfo is not null);
+            Debug.Assert(particleMatchInfo.StartElement is not null);
             Debug.Assert(!(particleMatchInfo.StartElement is OpenXmlMiscNode));
 
             var element = particleMatchInfo.StartElement;
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             if (ParticleConstraint.MinOccurs > 0)
             {
-                if (result != null)
+                if (result is not null)
                 {
                     result.Add(NamespaceIdMap.GetNamespaceUri(_nsAnyParticleConstraint.NamespaceId));
                 }
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>True if there are expected elements in this particle.</returns>
         public override bool GetExpectedElements(ExpectedChildren result)
         {
-            if (result != null)
+            if (result is not null)
             {
                 result.Add(NamespaceIdMap.GetNamespaceUri(_nsAnyParticleConstraint.NamespaceId));
             }

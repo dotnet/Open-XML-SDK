@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 subMsg = SR.Format(ValidationResources.Sem_MaxLengthConstraintFailed, _maxLength);
             }
 
-            if (subMsg == null)
+            if (subMsg is null)
             {
                 return null;
             }

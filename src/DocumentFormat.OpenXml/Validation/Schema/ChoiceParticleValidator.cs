@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal ChoiceParticleValidator(CompositeParticle particleConstraint)
             : base(particleConstraint)
         {
-            Debug.Assert(particleConstraint != null);
+            Debug.Assert(particleConstraint is not null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.Choice);
         }
 
@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             var childMatchInfo = new ParticleMatchInfo();
 
-            while (constraintIndex < constraintTotal && next != null)
+            while (constraintIndex < constraintTotal && next is not null)
             {
                 childConstraint = ParticleConstraint.ChildrenParticles[constraintIndex];
 
@@ -106,7 +106,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                 }
 
-                if (requiredElements && result != null)
+                if (requiredElements && result is not null)
                 {
                     result.Add(requiredChoiceChildren);
                 }

@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal static void ValidateMcAttributes(ValidationContext validationContext)
         {
             var element = validationContext.Stack.Current.Element;
-            if (element.MCAttributes == null)
+            if (element.MCAttributes is null)
             {
                 return;
             }
@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             HashSet<string> ignorableNamespaces = null;
             ValidationErrorInfo errorInfo;
 
-            if (element.MCAttributes != null)
+            if (element.MCAttributes is not null)
             {
                 // validate Ignorable attribute
                 if (!string.IsNullOrEmpty(element.MCAttributes.Ignorable))
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     // The ProcessAttributes attribute value shall not reference any attribute name that does not belong to a namespace
                     // that is identified by the Ignorable attribute of the same element.
-                    if (ignorableNamespaces == null)
+                    if (ignorableNamespaces is null)
                     {
                         // must have Ignorable on same element.
                         errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidPreserveAttributesAttribute", element.MCAttributes.PreserveAttributes);
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     // The ProcessAttributes attribute value shall not reference any attribute name that does not belong to a namespace
                     // that is identified by the Ignorable attribute of the same element.
-                    if (ignorableNamespaces == null)
+                    if (ignorableNamespaces is null)
                     {
                         // must have Ignorable on same element.
                         errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidPreserveElementsAttribute", element.MCAttributes.PreserveElements);
@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     // The ProcessAttributes attribute value shall not reference any attribute name that does not belong to a namespace
                     // that is identified by the Ignorable attribute of the same element.
-                    if (ignorableNamespaces == null)
+                    if (ignorableNamespaces is null)
                     {
                         // must have Ignorable on same element.
                         errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidProcessContentAttribute", element.MCAttributes.ProcessContent);

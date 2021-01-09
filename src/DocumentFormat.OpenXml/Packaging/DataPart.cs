@@ -144,7 +144,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (sourceStream == null)
+            if (sourceStream is null)
             {
                 throw new ArgumentNullException(nameof(sourceStream));
             }
@@ -242,13 +242,13 @@ namespace DocumentFormat.OpenXml.Packaging
         internal void CreateInternal2(OpenXmlPackage openXmlPackage, string contentType, Uri partUri)
         {
             // openXmlPackage, parent can not be all null
-            if (openXmlPackage == null)
+            if (openXmlPackage is null)
             {
                 throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
             }
 
             // throw exception to catch error in our code
-            if (_metroPart != null)
+            if (_metroPart is not null)
             {
                 throw new InvalidOperationException();
             }
@@ -267,7 +267,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             string targetFileExt;
 
-            if (extension == null)
+            if (extension is null)
             {
                 if (!_openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out targetFileExt))
                 {
@@ -299,7 +299,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         protected void ThrowIfObjectDisposed()
         {
-            if (_openXmlPackage == null)
+            if (_openXmlPackage is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.PartIsDestroyed);
             }

@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 {
                     var err = ValidateCore(context);
 
-                    if (err != null)
+                    if (err is not null)
                     {
                         context.AddError(err);
                     }
@@ -61,12 +61,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             var current = context.Stack.Current;
 
-            if (current.Package != null)
+            if (current.Package is not null)
             {
                 level = SemanticValidationLevel.Package;
                 type = current.Package.ApplicationType;
             }
-            else if (current.Part != null)
+            else if (current.Part is not null)
             {
                 level = SemanticValidationLevel.Part;
                 type = current.Part.OpenXmlPackage.ApplicationType;

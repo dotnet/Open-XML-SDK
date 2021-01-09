@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private protected override bool ShouldParse(string? value) => value != null;
+        private protected override bool ShouldParse(string? value) => value is not null;
 
         /// <summary>
         /// Gets the default text value.

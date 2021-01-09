@@ -54,8 +54,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="id">The relationship ID.</param>
         internal void Initialize(OpenXmlPartContainer containter, DataPart dataPart, string relationshipType, string id)
         {
-            Debug.Assert(containter != null);
-            Debug.Assert(dataPart != null);
+            Debug.Assert(containter is not null);
+            Debug.Assert(dataPart is not null);
 
             Initialize(dataPart.Uri, false, relationshipType, id);
             Container = containter;
@@ -85,8 +85,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="id">The relationship ID.</param>
         internal static DataPartReferenceRelationship CreateDataPartReferenceRelationship(OpenXmlPartContainer containter, DataPart dataPart, string relationshipType, string id)
         {
-            Debug.Assert(containter != null);
-            Debug.Assert(dataPart != null);
+            Debug.Assert(containter is not null);
+            Debug.Assert(dataPart is not null);
 
             DataPartReferenceRelationship dataPartReferenceRelationship;
 

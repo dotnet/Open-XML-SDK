@@ -186,7 +186,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 {
                     var constructor = type.GetConstructor(Cached.Array<Type>());
 
-                    if (constructor != null)
+                    if (constructor is not null)
                     {
                         var element = (OpenXmlElement)Activator.CreateInstance(type);
 
@@ -194,7 +194,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                         {
                             var constraint = element.Metadata.Particle.Particle?.Build(version);
 
-                            if (constraint != null)
+                            if (constraint is not null)
                             {
                                 if (constraints.TryGetValue(type, out var current))
                                 {

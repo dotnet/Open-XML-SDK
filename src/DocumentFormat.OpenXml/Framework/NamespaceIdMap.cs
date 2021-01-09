@@ -255,7 +255,7 @@ namespace DocumentFormat.OpenXml.Framework
         /// <returns>Returns true when a Transitional equivalent namespace is found, returns false when it is not found.</returns>
         public static bool TryGetTransitionalNamespace(string strictNamespace, out string transitionalNamespace)
         {
-            if (strictNamespace == null)
+            if (strictNamespace is null)
             {
                 throw new ArgumentNullException(nameof(strictNamespace));
             }
@@ -271,7 +271,7 @@ namespace DocumentFormat.OpenXml.Framework
         /// <returns>Returns true when a Transitional equivalent relationship is found, returns false when it is not.</returns>
         public static bool TryGetTransitionalRelationship(string strictRelationship, out string transitionalRelationship)
         {
-            if (strictRelationship == null)
+            if (strictRelationship is null)
             {
                 throw new ArgumentNullException(nameof(strictRelationship));
             }
@@ -301,7 +301,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public static bool TryGetNamespaceId(string namespaceUri, out byte id)
         {
-            if (namespaceUri != null && _namespaceResolver.TryGetByNamespace(NormalizeNamespace(namespaceUri), out var info))
+            if (namespaceUri is not null && _namespaceResolver.TryGetByNamespace(NormalizeNamespace(namespaceUri), out var info))
             {
                 id = info.Id;
                 return true;
@@ -327,7 +327,7 @@ namespace DocumentFormat.OpenXml.Framework
         /// <returns></returns>
         public static string? GetNamespaceUri(string prefix)
         {
-            if (prefix == null)
+            if (prefix is null)
             {
                 throw new ArgumentNullException(nameof(prefix));
             }

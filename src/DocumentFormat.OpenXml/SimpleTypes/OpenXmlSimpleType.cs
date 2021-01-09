@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets a value indicating whether the underneath text value is a valid value.
         /// </summary>
-        public virtual bool HasValue => TextValue != null;
+        public virtual bool HasValue => TextValue is not null;
 
         internal abstract bool IsValid { get; }
 

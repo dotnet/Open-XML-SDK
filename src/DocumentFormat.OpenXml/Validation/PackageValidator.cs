@@ -29,12 +29,12 @@ namespace DocumentFormat.OpenXml.Validation
         /// <param name="validationSettings">The OpenXmlPackageValidationSettings for validation events.</param>
         public void Validate(OpenXmlPackageValidationSettings validationSettings)
         {
-            if (validationSettings == null)
+            if (validationSettings is null)
             {
                 throw new ArgumentNullException(nameof(validationSettings));
             }
 
-            if (validationSettings.GetEventHandler() == null)
+            if (validationSettings.GetEventHandler() is null)
             {
                 throw new ArgumentNullException(nameof(validationSettings.EventHandler));
             }
@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Validation
                             if (version.AtLeast(rule.FileFormat))
                             {
                                 // validate content type
-                                if (rule.PartContentType != null && part.ContentType != rule.PartContentType)
+                                if (rule.PartContentType is not null && part.ContentType != rule.PartContentType)
                                 {
                                     var message = SR.Format(ExceptionMessages.InvalidContentTypePart, rule.PartContentType);
 

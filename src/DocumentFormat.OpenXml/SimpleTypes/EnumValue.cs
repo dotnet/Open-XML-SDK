@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidOperationException">Thrown when <paramref name="value"/> is <c>null</c>.</exception>
         public static implicit operator T(EnumValue<T> value)
         {
-            if (value == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml
             return fileFormat.AtLeast(EnumInfoLookup<T>.GetVersion(Value));
         }
 
-        private protected override bool ShouldParse(string? value) => value != null;
+        private protected override bool ShouldParse(string? value) => value is not null;
 
         private protected override void ValidateSet(T value)
         {

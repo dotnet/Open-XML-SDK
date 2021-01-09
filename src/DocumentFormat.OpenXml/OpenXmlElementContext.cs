@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (_mcSettings == null)
+                if (_mcSettings is null)
                 {
                     _mcSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007.AndLater());
                 }

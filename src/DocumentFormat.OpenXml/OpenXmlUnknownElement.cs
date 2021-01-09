@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml
         public OpenXmlUnknownElement(string name)
             : this()
         {
-            if (name == null)
+            if (name is null)
             {
                 throw new ArgumentNullException(nameof(name));
             }
@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml
         public OpenXmlUnknownElement(string qualifiedName, string namespaceUri)
             : this()
         {
-            if (qualifiedName == null)
+            if (qualifiedName is null)
             {
                 throw new ArgumentNullException(nameof(qualifiedName));
             }
@@ -80,17 +80,17 @@ namespace DocumentFormat.OpenXml
         public OpenXmlUnknownElement(string prefix, string localName, string namespaceUri)
             : this()
         {
-            if (localName == null)
+            if (localName is null)
             {
                 throw new ArgumentNullException(nameof(localName));
             }
 
-            if (prefix == null)
+            if (prefix is null)
             {
                 prefix = string.Empty;
             }
 
-            if (namespaceUri == null)
+            if (namespaceUri is null)
             {
                 namespaceUri = string.Empty;
             }
@@ -198,7 +198,7 @@ namespace DocumentFormat.OpenXml
             {
                 base.WriteContentTo(w);
             }
-            else if (Text != null)
+            else if (Text is not null)
             {
                 w.WriteString(Text);
             }
@@ -210,7 +210,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override void WriteTo(XmlWriter xmlWriter)
         {
-            if (xmlWriter == null)
+            if (xmlWriter is null)
             {
                 throw new ArgumentNullException(nameof(xmlWriter));
             }
@@ -257,7 +257,7 @@ namespace DocumentFormat.OpenXml
             // load children elements
             base.Populate(xmlReader, loadMode);
 
-            if (FirstChild != null && FirstChild.NextSibling() == null)
+            if (FirstChild is not null && FirstChild.NextSibling() is null)
             {
                 // only one child
                 if (FirstChild is OpenXmlMiscNode miscNode)

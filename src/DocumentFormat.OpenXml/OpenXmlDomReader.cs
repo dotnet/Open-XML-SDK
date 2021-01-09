@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlElement">The OpenXmlElement to read.</param>
         public OpenXmlDomReader(OpenXmlElement openXmlElement) : this()
         {
-            if (openXmlElement == null)
+            if (openXmlElement is null)
             {
                 throw new ArgumentNullException(nameof(openXmlElement));
             }
@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml
         public OpenXmlDomReader(OpenXmlElement openXmlElement, bool readMiscNodes)
             : this(readMiscNodes)
         {
-            if (openXmlElement == null)
+            if (openXmlElement is null)
             {
                 throw new ArgumentNullException(nameof(openXmlElement));
             }
@@ -377,7 +377,7 @@ namespace DocumentFormat.OpenXml
                         if (_elementStack.Count > 0)
                         {
                             element = element.NextSibling();
-                            if (element != null)
+                            if (element is not null)
                             {
                                 _elementStack.Push(element);
 
@@ -484,7 +484,7 @@ namespace DocumentFormat.OpenXml
             }
 
             element = element.NextSibling();
-            if (element != null)
+            if (element is not null)
             {
                 _elementStack.Push(element);
                 if (element is OpenXmlMiscNode)
@@ -590,7 +590,7 @@ namespace DocumentFormat.OpenXml
 
                 OpenXmlLeafTextElement textElement = element as OpenXmlLeafTextElement;
 
-                if (textElement != null)
+                if (textElement is not null)
                 {
                     return textElement.Text;
                 }

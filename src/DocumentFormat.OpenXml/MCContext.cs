@@ -323,7 +323,7 @@ namespace DocumentFormat.OpenXml
         private int PushIgnorable(MarkupCompatibilityAttributes attr)
         {
             int ret = 0;
-            if (attr != null && attr.Ignorable != null && !string.IsNullOrEmpty(attr.Ignorable.Value))
+            if (attr is not null && attr.Ignorable is not null && !string.IsNullOrEmpty(attr.Ignorable.Value))
             {
                 foreach (var ns in ParsePrefixList(attr.Ignorable, OnMcContextError))
                 {
@@ -351,7 +351,7 @@ namespace DocumentFormat.OpenXml
         private int PushPreserveAttribute(MarkupCompatibilityAttributes attr)
         {
             int ret = 0;
-            if (attr != null && attr.PreserveAttributes != null && !string.IsNullOrEmpty(attr.PreserveAttributes.Value))
+            if (attr is not null && attr.PreserveAttributes is not null && !string.IsNullOrEmpty(attr.PreserveAttributes.Value))
             {
                 ret = PushQName(_currentPreserveAttr, attr.PreserveAttributes.Value);
             }
@@ -362,7 +362,7 @@ namespace DocumentFormat.OpenXml
         private int PushPreserveElement(MarkupCompatibilityAttributes attr)
         {
             int ret = 0;
-            if (attr != null && attr.PreserveElements != null && !string.IsNullOrEmpty(attr.PreserveElements.Value))
+            if (attr is not null && attr.PreserveElements is not null && !string.IsNullOrEmpty(attr.PreserveElements.Value))
             {
                 ret = PushQName(_currentPreserveEle, attr.PreserveElements.Value);
             }
@@ -373,7 +373,7 @@ namespace DocumentFormat.OpenXml
         private int PushProcessContent(MarkupCompatibilityAttributes attr)
         {
             int ret = 0;
-            if (attr != null && attr.ProcessContent != null && !string.IsNullOrEmpty(attr.ProcessContent.Value))
+            if (attr is not null && attr.ProcessContent is not null && !string.IsNullOrEmpty(attr.ProcessContent.Value))
             {
                 ret = PushQName(_currentProcessContent, attr.ProcessContent.Value);
             }
@@ -421,7 +421,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (var choice in acblk.ChildElements.OfType<AlternateContentChoice>())
             {
-                if (choice.Requires == null)
+                if (choice.Requires is null)
                 {
                     //should we throw exception here?
                     continue;
@@ -443,7 +443,7 @@ namespace DocumentFormat.OpenXml
                     //so we should use the element's LookupNamespace function to find it
                     //string ns = LookupNamespaceDelegate(req);
                     string ns = choice.LookupNamespace(req);
-                    if (ns == null)
+                    if (ns is null)
                     {
                         if (_noExceptionOnError)
                         {
@@ -470,7 +470,7 @@ namespace DocumentFormat.OpenXml
             }
 
             var fallback = acblk.GetFirstChild<AlternateContentFallback>();
-            if (fallback != null)
+            if (fallback is not null)
             {
                 return fallback;
             }

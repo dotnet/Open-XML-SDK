@@ -169,7 +169,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("****** test NextSibling ******");
             Log.Comment("check if the nextSibling returns correctly");
 
-            while (Xwalker.NextNode != null && walker.NextSibling() != null)
+            while (Xwalker.NextNode is not null && walker.NextSibling() is not null)
             {
                 Xwalker = Xwalker.ElementsAfterSelf().First();
                 walker = walker.NextSibling();
@@ -177,7 +177,7 @@ namespace DocumentFormat.OpenXml.Tests
                 VerifyEqual(Xwalker, walker, part);
             }
 
-            if (Xwalker.NextNode == null && walker.NextSibling() == null)
+            if (Xwalker.NextNode is null && walker.NextSibling() is null)
             {
                 Log.Comment("check if the current element is the last sibling of the original element");
                 VerifyEqual(Xele.Parent.Elements().Last(), walker, part);
@@ -193,14 +193,14 @@ namespace DocumentFormat.OpenXml.Tests
             VerifyEqual(Xwalker.ElementsBeforeSelf(), walker.ElementsBefore(), part);
 
             Log.Comment("****** test PreviousSibling ******");
-            while (Xwalker.PreviousNode != null && walker.PreviousSibling() != null)
+            while (Xwalker.PreviousNode is not null && walker.PreviousSibling() is not null)
             {
                 Xwalker = Xwalker.ElementsBeforeSelf().Last();
                 walker = walker.PreviousSibling();
                 VerifyEqual(Xwalker, walker, part);
             }
 
-            if (Xwalker.PreviousNode == null && walker.PreviousSibling() == null)
+            if (Xwalker.PreviousNode is null && walker.PreviousSibling() is null)
             {
                 Log.Comment("check if the current element is the first sibling of the original element");
                 VerifyEqual(Xele.Parent.Elements().First(), walker, part);
@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("****** test NextSibling<OpenXmlElement> ******");
 
-            while (Xwalker.NextNode != null && walker.NextSibling() != null)
+            while (Xwalker.NextNode is not null && walker.NextSibling() is not null)
             {
                 Xwalker = Xwalker.ElementsAfterSelf().First();
                 walker = walker.NextSibling<OpenXmlElement>();
@@ -222,7 +222,7 @@ namespace DocumentFormat.OpenXml.Tests
                 VerifyEqual(Xwalker, walker, part);
             }
 
-            if (Xwalker.NextNode == null && walker.NextSibling() == null)
+            if (Xwalker.NextNode is null && walker.NextSibling() is null)
             {
                 Log.Comment("check if the current element is the last sibling of the original element");
                 VerifyEqual(Xele.Parent.Elements().Last(), walker, part);
@@ -235,14 +235,14 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Log.Comment("****** test PreviousSibling<OpenXmlElement>() ******");
-            while (Xwalker.PreviousNode != null && walker.PreviousSibling<OpenXmlElement>() != null)
+            while (Xwalker.PreviousNode is not null && walker.PreviousSibling<OpenXmlElement>() is not null)
             {
                 Xwalker = Xwalker.ElementsBeforeSelf().Last();
                 walker = walker.PreviousSibling<OpenXmlElement>();
                 VerifyEqual(Xwalker, walker, part);
             }
 
-            if (Xwalker.PreviousNode == null && walker.PreviousSibling<OpenXmlElement>() == null)
+            if (Xwalker.PreviousNode is null && walker.PreviousSibling<OpenXmlElement>() is null)
             {
                 Log.Comment("check if the current element is the first sibling of the original element");
                 VerifyEqual(Xele.Parent.Elements().First(), walker, part);
@@ -255,7 +255,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Log.Comment("****** test NextSibling<{0}> ******", typeof(U).Name);
-            while (Xwalker.ElementsAfterSelf().Where(x => x.Name.LocalName == UTagName).Any() && walker.NextSibling<U>() != null)
+            while (Xwalker.ElementsAfterSelf().Where(x => x.Name.LocalName == UTagName).Any() && walker.NextSibling<U>() is not null)
             {
                 Xwalker = Xwalker.ElementsAfterSelf().Where(x => x.Name.LocalName == UTagName).First();
                 walker = walker.NextSibling<U>();
@@ -264,7 +264,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Log.Comment("****** test PreviousSibling<{0}>() ******", typeof(U).Name);
-            while (Xwalker.ElementsBeforeSelf().Where(x => x.Name.LocalName == UTagName).Any() && walker.PreviousSibling<U>() != null)
+            while (Xwalker.ElementsBeforeSelf().Where(x => x.Name.LocalName == UTagName).Any() && walker.PreviousSibling<U>() is not null)
             {
                 Xwalker = Xwalker.ElementsBeforeSelf().Where(x => x.Name.LocalName == UTagName).Last();
                 walker = walker.PreviousSibling<U>();

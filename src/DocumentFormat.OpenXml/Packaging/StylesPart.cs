@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (_rootEle == null)
+                if (_rootEle is null)
                 {
                     LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Styles>();
                 }
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                if (value == null)
+                if (value is null)
                 {
                     throw new ArgumentNullException(nameof(value));
                 }

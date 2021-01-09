@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
         internal void OpenCore(Package package)
         {
-            if (package == null)
+            if (package is null)
             {
                 throw new ArgumentNullException(nameof(package));
             }
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the specified stream is read-only and <paramref name="readWriteMode"/> is true. The package to open requires write or read/write permission.</exception>
         internal void OpenCore(Stream stream, bool readWriteMode)
         {
-            if (stream == null)
+            if (stream is null)
             {
                 throw new ArgumentNullException(nameof(stream));
             }
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the specified stream is read-only. The package to open requires write or read/write permission.</exception>
         internal void CreateCore(Stream stream)
         {
-            if (stream == null)
+            if (stream is null)
             {
                 throw new ArgumentNullException(nameof(stream));
             }
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="FileNotFoundException">Thrown when the supplied path cannot be found</exception>
         internal void OpenCore(string path, bool readWriteMode)
         {
-            if (path == null)
+            if (path is null)
             {
                 throw new ArgumentNullException(nameof(path));
             }
@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when path is a null reference.</exception>
         internal void CreateCore(string path)
         {
-            if (path == null)
+            if (path is null)
             {
                 throw new ArgumentNullException(nameof(path));
             }
@@ -336,7 +336,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (part == null)
+            if (part is null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
@@ -381,7 +381,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
@@ -407,12 +407,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (extension == null)
+            if (extension is null)
             {
                 throw new ArgumentNullException(nameof(extension));
             }
@@ -454,7 +454,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (dataPart == null)
+            if (dataPart is null)
             {
                 throw new ArgumentNullException(nameof(dataPart));
             }
@@ -504,7 +504,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             OpenXmlPackageValidationSettings ValidateSettings(OpenXmlPackageValidationSettings settings)
             {
-                if (settings.GetEventHandler() == null)
+                if (settings.GetEventHandler() is null)
                 {
                     // use default DefaultValidationEventHandler( ) which throw an exception
                     settings.EventHandler += DefaultValidationEventHandler;
@@ -525,7 +525,7 @@ namespace DocumentFormat.OpenXml.Packaging
         [EditorBrowsable(EditorBrowsableState.Never)]
         internal void Validate(OpenXmlPackageValidationSettings validationSettings, FileFormatVersions fileFormatVersions)
         {
-            Debug.Assert(validationSettings != null);
+            Debug.Assert(validationSettings is not null);
             Debug.Assert(fileFormatVersions.Any());
 
             validationSettings.FileFormat = fileFormatVersions;
@@ -660,7 +660,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (OpenSettings.MarkupCompatibilityProcessSettings == null)
+                if (OpenSettings.MarkupCompatibilityProcessSettings is null)
                 {
                     return new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007);
                 }
@@ -753,8 +753,8 @@ namespace DocumentFormat.OpenXml.Packaging
         // Check if the part content changed and save it if yes.
         private static void TrySavePartContent(OpenXmlPart part)
         {
-            Debug.Assert(part != null);
-            Debug.Assert(part.OpenXmlPackage != null);
+            Debug.Assert(part is not null);
+            Debug.Assert(part.OpenXmlPackage is not null);
 
             // If StrictRelationshipFound is true, we need to update the part anyway.
             if (part.OpenXmlPackage.StrictRelationshipFound)
@@ -768,7 +768,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 relationshipCollection.UpdateRelationshipTypesInPackage();
 
                 // For ISO Strict documents, we read and save the part anyway to translate the contents. The contents are translated when PartRootElement is being loaded.
-                if (part.PartRootElement != null)
+                if (part.PartRootElement is not null)
                 {
                     SavePartContent(part);
                 }
@@ -786,15 +786,15 @@ namespace DocumentFormat.OpenXml.Packaging
         // Check if the content of a part is changed.
         private static bool IsPartContentChanged(OpenXmlPart part)
         {
-            Debug.Assert(part != null);
+            Debug.Assert(part is not null);
 
             // If the root element of the part is loaded,
             // consider the part changed and should be saved.
-            Debug.Assert(part.OpenXmlPackage != null);
+            Debug.Assert(part.OpenXmlPackage is not null);
             if (!part.IsRootElementLoaded &&
                 part.OpenXmlPackage.MarkupCompatibilityProcessSettings.ProcessMode == MarkupCompatibilityProcessMode.ProcessAllParts)
             {
-                if (part.PartRootElement != null)
+                if (part.PartRootElement is not null)
                 {
                     return true;
                 }
@@ -806,7 +806,7 @@ namespace DocumentFormat.OpenXml.Packaging
         // Save the content of a part to its stream.
         private static void SavePartContent(OpenXmlPart part)
         {
-            Debug.Assert(part != null);
+            Debug.Assert(part is not null);
             Debug.Assert(part.IsRootElementLoaded);
 
             // Save PartRootElement to the part stream.
@@ -964,7 +964,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
@@ -973,7 +973,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
-                    if (GetSubPart(relationshipType) != null)
+                    if (GetSubPart(relationshipType) is not null)
                     {
                         // already have one, cannot add new one.
                         throw new InvalidOperationException();
@@ -1010,7 +1010,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (reachableParts == null)
+            if (reachableParts is null)
             {
                 throw new ArgumentNullException(nameof(reachableParts));
             }
@@ -1228,7 +1228,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The cloned OpenXml package.</returns>
         public OpenXmlPackage Clone(Stream stream, bool isEditable, OpenSettings openSettings)
         {
-            if (stream == null)
+            if (stream is null)
             {
                 throw new ArgumentNullException(nameof(stream));
             }
@@ -1238,7 +1238,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // OpenSettings, i.e., unless the caller explicitly specifies
             // something, we'll later open the clone with this OpenXml
             // package's OpenSettings.
-            if (openSettings == null)
+            if (openSettings is null)
             {
                 openSettings = OpenSettings;
             }
@@ -1330,7 +1330,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The cloned document.</returns>
         public OpenXmlPackage Clone(string path, bool isEditable, OpenSettings openSettings)
         {
-            if (path == null)
+            if (path is null)
             {
                 throw new ArgumentNullException(nameof(path));
             }
@@ -1340,7 +1340,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // OpenSettings, i.e., unless the caller explicitly specifies
             // something, we'll later open the clone with this OpenXml
             // package's OpenSettings.
-            if (openSettings == null)
+            if (openSettings is null)
             {
                 openSettings = OpenSettings;
             }
@@ -1408,7 +1408,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The cloned OpenXml package.</returns>
         public OpenXmlPackage Clone(Package package, OpenSettings openSettings)
         {
-            if (package == null)
+            if (package is null)
             {
                 throw new ArgumentNullException(nameof(package));
             }
@@ -1418,7 +1418,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // OpenSettings, i.e., unless the caller explicitly specifies
             // something, we'll later open the clone with this OpenXml
             // package's OpenSettings.
-            if (openSettings == null)
+            if (openSettings is null)
             {
                 openSettings = OpenSettings;
             }

@@ -91,18 +91,18 @@ namespace DocumentFormat.OpenXml.Tests
             PresentationDocument presentation = package as PresentationDocument;
             SpreadsheetDocument spreadsheet = package as SpreadsheetDocument;
 
-            if (wordprocessing != null)
+            if (wordprocessing is not null)
             {
                 elements.AddRange(wordprocessing.MainDocumentPart.Document.Descendants<TElement>());
             }
-            else if (presentation != null)
+            else if (presentation is not null)
             {
                 foreach (var slidePart in presentation.PresentationPart.SlideParts)
                 {
                     elements.AddRange(slidePart.Slide.Descendants<TElement>());
                 }
             }
-            else if (spreadsheet != null)
+            else if (spreadsheet is not null)
             {
                 foreach (var sheet in spreadsheet.WorkbookPart.Workbook.Sheets)
                 {

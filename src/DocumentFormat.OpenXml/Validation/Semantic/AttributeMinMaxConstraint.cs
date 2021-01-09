@@ -21,8 +21,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public AttributeMinMaxConstraint(string minAttributeNamespace, string minAttributeLocalName, string maxAttributeNamespace, string maxAttributeLocalName)
             : base(SemanticValidationLevel.Element) // TODO: add error message for this class
         {
-            Debug.Assert(minAttributeNamespace != null);
-            Debug.Assert(maxAttributeNamespace != null);
+            Debug.Assert(minAttributeNamespace is not null);
+            Debug.Assert(maxAttributeNamespace is not null);
             Debug.Assert(!string.IsNullOrEmpty(minAttributeLocalName));
             Debug.Assert(!string.IsNullOrEmpty(maxAttributeLocalName));
 

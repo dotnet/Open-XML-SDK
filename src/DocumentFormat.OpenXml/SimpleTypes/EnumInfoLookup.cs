@@ -44,12 +44,12 @@ namespace DocumentFormat.OpenXml
 
             public bool TryParse(string? name, out TEnum value)
             {
-                if (_nameLookup == null)
+                if (_nameLookup is null)
                 {
                     throw new ArgumentOutOfRangeException(nameof(TEnum));
                 }
 
-                if (name == null)
+                if (name is null)
                 {
                     value = default;
                     return false;
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml
 
             private bool IsDefined(TEnum value, out int index)
             {
-                if (_enumInfo == null)
+                if (_enumInfo is null)
                 {
                     throw new ArgumentOutOfRangeException(nameof(TEnum));
                 }
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml
                     var enumString = field.GetCustomAttribute<EnumStringAttribute>();
                     var officeAvailability = field.GetCustomAttribute<OfficeAvailabilityAttribute>();
 
-                    if (enumString == null)
+                    if (enumString is null)
                     {
                         return;
                     }

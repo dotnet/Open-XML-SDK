@@ -245,7 +245,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override void WriteTo(XmlWriter xmlWriter)
         {
-            if (xmlWriter == null)
+            if (xmlWriter is null)
             {
                 throw new ArgumentNullException(nameof(xmlWriter));
             }
@@ -376,7 +376,7 @@ namespace DocumentFormat.OpenXml
 
         internal static OpenXmlMiscNode CreateFromText(string text)
         {
-            Debug.Assert(text != null);
+            Debug.Assert(text is not null);
 
             return new OpenXmlMiscNode(XmlNodeType.Text)
             {
@@ -387,7 +387,7 @@ namespace DocumentFormat.OpenXml
 
         internal static OpenXmlMiscNode CreateFromCdata(string value)
         {
-            Debug.Assert(value != null);
+            Debug.Assert(value is not null);
 
             return new OpenXmlMiscNode(XmlNodeType.CDATA)
             {
@@ -398,7 +398,7 @@ namespace DocumentFormat.OpenXml
 
         internal static OpenXmlMiscNode CreateFromSignificantWhitespace(string whitespace)
         {
-            Debug.Assert(whitespace != null);
+            Debug.Assert(whitespace is not null);
 
             return new OpenXmlMiscNode(XmlNodeType.SignificantWhitespace)
             {

@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlPart">The OpenXmlPart to read.</param>
         public OpenXmlPartReader(OpenXmlPart openXmlPart) : this()
         {
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml
         public OpenXmlPartReader(OpenXmlPart openXmlPart, bool readMiscNodes)
             : this(readMiscNodes)
         {
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
         public OpenXmlPartReader(Stream partStream) : this()
         {
-            if (partStream == null)
+            if (partStream is null)
             {
                 throw new ArgumentNullException(nameof(partStream));
             }
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml
         public OpenXmlPartReader(Stream partStream, bool readMiscNodes)
             : this(readMiscNodes)
         {
-            if (partStream == null)
+            if (partStream is null)
             {
                 throw new ArgumentNullException(nameof(partStream));
             }
@@ -402,7 +402,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>true if the next element was read successfully; false if there are no more elements to read. </returns>
         private bool MoveToNextElement()
         {
-            Debug.Assert(_xmlReader != null);
+            Debug.Assert(_xmlReader is not null);
 
             switch (_elementState)
             {
@@ -468,7 +468,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Only can be called on element start. Current will move to the end tag if no child element.</remarks>
         private bool MoveToFirstChild()
         {
-            Debug.Assert(_xmlReader != null);
+            Debug.Assert(_xmlReader is not null);
 
             switch (_elementState)
             {
@@ -519,7 +519,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Current will move to the end tag of the parent if no more sibling element.</remarks>
         private bool MoveToNextSibling()
         {
-            Debug.Assert(_xmlReader != null);
+            Debug.Assert(_xmlReader is not null);
 
             if (_elementState == ElementState.EOF)
             {
@@ -547,7 +547,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         private void InnerSkip()
         {
-            Debug.Assert(_xmlReader != null);
+            Debug.Assert(_xmlReader is not null);
 
             switch (_elementState)
             {
@@ -745,7 +745,7 @@ namespace DocumentFormat.OpenXml
             // create the root element object
             var rootElement = CreateElement(_xmlReader.NamespaceURI, _xmlReader.LocalName);
 
-            if (rootElement == null)
+            if (rootElement is null)
             {
                 throw new InvalidDataException(ExceptionMessages.PartUnknown);
             }
@@ -786,7 +786,7 @@ namespace DocumentFormat.OpenXml
 
         private void LoadAttributes()
         {
-            Debug.Assert(_xmlReader != null);
+            Debug.Assert(_xmlReader is not null);
 
             _attributeList.Clear();
             _nsDecls.Clear();
@@ -871,7 +871,7 @@ namespace DocumentFormat.OpenXml
         private OpenXmlElement CreateChildElement()
         {
             Debug.Assert(_elementStack.Count > 0);
-            Debug.Assert(_xmlReader != null);
+            Debug.Assert(_xmlReader is not null);
 
             OpenXmlElement element = _elementStack.Peek();
 

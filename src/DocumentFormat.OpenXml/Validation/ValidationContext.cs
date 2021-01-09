@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         public void AddError(ValidationErrorInfo error)
         {
-            if (error != null && !CheckIfCancelled())
+            if (error is not null && !CheckIfCancelled())
             {
                 Stack.Current.AddError(error);
             }

@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml
         public ListValue(IEnumerable<T> list)
             : base()
         {
-            if (list == null)
+            if (list is null)
             {
                 throw new ArgumentNullException(nameof(list));
             }
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml
                 {
                     foreach (var itemValue in this)
                     {
-                        if (itemValue != null && !itemValue.IsValid)
+                        if (itemValue is not null && !itemValue.IsValid)
                         {
                             return false;
                         }
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (_list == null)
+                if (_list is null)
                 {
                     if (!string.IsNullOrEmpty(TextValue))
                     {
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                if (_list == null)
+                if (_list is null)
                 {
                     return false;
                 }
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (_list == null)
+                if (_list is null)
                 {
                     if (!string.IsNullOrEmpty(TextValue))
                     {
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                Debug.Assert(_list != null);
+                Debug.Assert(_list is not null);
                 return _list!;
             }
         }
@@ -192,14 +192,14 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (TextValue == null && _list != null)
+                if (TextValue is null && _list is not null)
                 {
                     var textString = new StringBuilder();
                     string separator = string.Empty;
 
                     foreach (var value in _list)
                     {
-                        if (value != null)
+                        if (value is not null)
                         {
                             textString.Append(separator);
                             textString.Append(value.ToString());

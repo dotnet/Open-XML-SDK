@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            if (subMsg == null)
+            if (subMsg is null)
             {
                 return null;
             }

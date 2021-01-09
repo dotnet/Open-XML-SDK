@@ -587,7 +587,7 @@ namespace DocumentFormat.OpenXml.Tests
                         Assert.Equal(a1[i].Value, a2[i].Value);
                     }
 
-                    Assert.Equal(curElem.MCAttributes == null, elem.MCAttributes == null);
+                    Assert.Equal(curElem.MCAttributes is null, elem.MCAttributes is null);
                     if (curElem is OpenXmlLeafTextElement)
                     {
                         Assert.Equal(((OpenXmlLeafTextElement)curElem).Text, ((OpenXmlLeafTextElement)elem).Text);

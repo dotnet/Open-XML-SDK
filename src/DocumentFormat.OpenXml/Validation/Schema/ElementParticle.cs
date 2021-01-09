@@ -32,8 +32,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo != null);
-            Debug.Assert(particleMatchInfo.StartElement != null);
+            Debug.Assert(particleMatchInfo is not null);
+            Debug.Assert(particleMatchInfo.StartElement is not null);
 
             if (particleMatchInfo.StartElement.GetType() == ElementType)
             {
@@ -51,8 +51,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public void TryMatch(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo != null);
-            Debug.Assert(particleMatchInfo.StartElement != null);
+            Debug.Assert(particleMatchInfo is not null);
+            Debug.Assert(particleMatchInfo.StartElement is not null);
 
             if (ElementType != particleMatchInfo.StartElement.GetType())
             {
@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 var element = particleMatchInfo.StartElement;
                 int count = 0;
 
-                while (element != null && MaxOccursGreaterThan(count) && element.GetType() == ElementType)
+                while (element is not null && MaxOccursGreaterThan(count) && element.GetType() == ElementType)
                 {
                     count++;
                     particleMatchInfo.LastMatchedElement = element;
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     particleMatchInfo.Match = ParticleMatch.Partial;
                     if (validationContext.CollectExpectedChildren)
                     {
-                        if (particleMatchInfo.ExpectedChildren == null)
+                        if (particleMatchInfo.ExpectedChildren is null)
                         {
                             particleMatchInfo.InitExpectedChildren();
                         }
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             if (MinOccurs > 0)
             {
-                if (result != null)
+                if (result is not null)
                 {
                     result.Add(ElementType);
                 }

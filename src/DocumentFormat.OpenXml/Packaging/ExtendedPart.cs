@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (subPart == null)
+            if (subPart is null)
             {
                 throw new ArgumentNullException(nameof(subPart));
             }
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (IsChildPart(subPart))
                 {
-                    if (rId != null && rId != GetIdOfPart(subPart))
+                    if (rId is not null && rId != GetIdOfPart(subPart))
                     {
                         // Do NOT allow one sub part is referenced more than once.
                         throw new InvalidOperationException(ExceptionMessages.PartExistsWithDifferentRelationshipId);
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }

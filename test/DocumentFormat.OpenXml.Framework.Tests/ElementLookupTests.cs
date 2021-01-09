@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                     {
                         return ElementLookup.Parts;
                     }
-                    else if (type.GetConstructor(Cached.Array<Type>()) != null)
+                    else if (type.GetConstructor(Cached.Array<Type>()) is not null)
                     {
                         var instance = (OpenXmlElement)Activator.CreateInstance(type);
                         return instance.Metadata.Children;
@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             public bool Equals(LookupData other)
             {
-                if (other == null)
+                if (other is null)
                 {
                     return false;
                 }

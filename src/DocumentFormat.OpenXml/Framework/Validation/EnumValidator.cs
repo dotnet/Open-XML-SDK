@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Framework
             var current = context.Stack.Current;
             var value = current.Value;
 
-            if (value != null && !value.IsValid)
+            if (value is not null && !value.IsValid)
             {
                 var errorMessageResourceId = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
                 var message = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;

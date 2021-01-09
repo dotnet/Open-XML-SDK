@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             get
             {
-                if (_particleValidator == null)
+                if (_particleValidator is null)
                 {
                     _particleValidator = CreateParticleValidator();
                 }

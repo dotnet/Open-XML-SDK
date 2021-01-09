@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal XmlPath(OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml
             XPath = TryBuildXPath(GetElements(element), out var namespaces);
 
 #pragma warning disable CS0618 // Type or member is obsolete
-            if (namespaces == null)
+            if (namespaces is null)
             {
                 Namespaces = ReadOnlyWrapper.Instance;
                 NamespacesDefinitions = Cached.Array<string>();
@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="part">The OpenXmlPart.</param>
         internal XmlPath(OpenXmlPart part)
         {
-            if (part == null)
+            if (part is null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>XmlPath to this element from root element.</returns>
         internal static XmlPath GetXPath(OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 return null;
             }
@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml
 
         internal static XmlPath GetXPath(OpenXmlPart part)
         {
-            if (part == null)
+            if (part is null)
             {
                 return null;
             }
@@ -167,7 +167,7 @@ namespace DocumentFormat.OpenXml
         {
             var elements = new Stack<OpenXmlElement>();
 
-            while (element != null)
+            while (element is not null)
             {
                 elements.Push(element);
                 element = element.Parent;

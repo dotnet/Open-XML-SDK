@@ -20,10 +20,10 @@ namespace DocumentFormat.OpenXml
 
         public override IEnumerator<OpenXmlElement> GetEnumerator()
         {
-            if (_container.HasChildren && _container.FirstChild != null)
+            if (_container.HasChildren && _container.FirstChild is not null)
             {
                 for ( OpenXmlElement element = _container.FirstChild;
-                      element != null;
+                      element is not null;
                       element = element.NextSibling() )
                 {
                     yield return element;
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml
             if (_container.HasChildren)
             {
                 for (OpenXmlElement element = _container.FirstChild;
-                          element != null;
+                          element is not null;
                           element = element.NextSibling())
                 {
                     if (index == 0)
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml
                 if (_container.HasChildren)
                 {
                     for (OpenXmlElement element = _container.FirstChild;
-                              element != null;
+                              element is not null;
                               element = element.NextSibling())
                     {
                         num++;

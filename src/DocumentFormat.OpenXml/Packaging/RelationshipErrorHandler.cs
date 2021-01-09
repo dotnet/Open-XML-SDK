@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     var doc = WalkRelationships(part);
 
-                    if (doc != null)
+                    if (doc is not null)
                     {
                         using var stream = part.GetStream(FileMode.Open, FileAccess.Write);
 

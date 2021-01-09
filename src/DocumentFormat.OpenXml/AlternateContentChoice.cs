@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml
             {
                 var parentsParentElement = Parent.Parent;
 
-                if (parentsParentElement != null)
+                if (parentsParentElement is not null)
                 {
                     return parentsParentElement.ElementFactory(namespaceId, name);
                 }
