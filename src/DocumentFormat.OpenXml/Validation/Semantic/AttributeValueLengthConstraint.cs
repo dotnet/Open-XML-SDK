@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             var attribute = element.ParsedState.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
-            if (!attribute.HasValue)
+            if (attribute.Value is null)
             {
                 return null;
             }
