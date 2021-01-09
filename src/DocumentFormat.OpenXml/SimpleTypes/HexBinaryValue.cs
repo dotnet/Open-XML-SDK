@@ -1,8 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.Runtime.CompilerServices;
+using System.Text;
 
 namespace DocumentFormat.OpenXml
 {
@@ -22,7 +27,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Initializes a new instance of the <see cref="HexBinaryValue"/> class using the supplied string.
         /// </summary>
-        /// <param name="hexBinary">The string value.</param>
+        /// <param name="hexBinary">The <see cref="string"/> value.</param>
         public HexBinaryValue(string hexBinary)
         {
             TextValue = hexBinary;
@@ -73,10 +78,8 @@ namespace DocumentFormat.OpenXml
 
                 return true;
 
-                bool IsLetterBetween(char check, char lower, char upper)
-                {
-                    return check >= lower && check <= upper;
-                }
+                static bool IsLetterBetween(char check, char lower, char upper)
+                    => check >= lower && check <= upper;
             }
         }
 
@@ -119,6 +122,131 @@ namespace DocumentFormat.OpenXml
         /// <param name="value">A <see cref="string"/> value to use to create a new <see cref="HexBinaryValue"/> object.</param>
         /// <returns>A <see cref="HexBinaryValue"/> object that corresponds to the value parameter.</returns>
         public static new HexBinaryValue FromString(string value) => new HexBinaryValue(value);
+
+        /// <summary>
+        /// Attempts to retrieve the bytes associated with this <see cref="HexBinaryValue"/> if available.
+        /// </summary>
+        /// <param name="bytes">The bytes if successfully written.</param>
+        /// <returns>Whether bytes where successfully written.</returns>
+        public bool TryGetBytes([MaybeNullWhen(false)] out byte[] bytes)
+        {
+            if (InnerText is null || InnerText.Length % 2 != 0)
+            {
+                bytes = null;
+                return false;
+            }
+
+            var length = InnerText.Length;
+
+            if (length == 0)
+            {
+                bytes = Cached.Array<byte>();
+                return true;
+            }
+
+            bytes = new byte[length / 2];
+
+            return TryWriteBytes(bytes.AsSpan());
+        }
+
+        /// <summary>
+        /// Attempts to write the bytes associated with this <see cref="HexBinaryValue"/> if available.
+        /// </summary>
+        /// <param name="bytes">A buffer to write to</param>
+        /// <returns>Whether bytes where successfully written.</returns>
+#if NET5_0
+        public
+#else
+        internal 
+#endif
+            bool TryWriteBytes(Span<byte> bytes)
+        {
+            if (InnerText is null)
+            {
+                return false;
+            }
+
+            if (InnerText.Length % 2 != 0 && bytes.Length != InnerText.Length / 2)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < InnerText.Length; i += 2)
+            {
+                if (byte.TryParse(InnerText.AsSpan().Slice(i, 2), NumberStyles.HexNumber, null, out var result))
+                {
+                    bytes[i / 2] = result;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Returns a new <see cref="HexBinaryValue"/> object that was created from <paramref name="bytes"/>.
+        /// </summary>
+        /// <param name="bytes">A byte array to use to create a new <see cref="HexBinaryValue"/> object.</param>
+        /// <returns>A <see cref="HexBinaryValue"/> object that corresponds to the value parameter.</returns>
+#if NET5_0
+        public
+#else
+        internal
+#endif
+        static HexBinaryValue Create(ReadOnlySpan<byte> bytes)
+        {
+            if (bytes.Length == 0)
+            {
+                return new HexBinaryValue(string.Empty);
+            }
+
+#if NET5_0
+            Span<char> chars = stackalloc char[bytes.Length * 2];
+
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                var b = bytes[i];
+                chars[i * 2] = ToCharUpper(b >> 4);
+                chars[i * 2 + 1] = ToCharUpper(b);
+            }
+
+            return new HexBinaryValue(new string(chars));
+#else
+            var sb = new StringBuilder(bytes.Length * 2);
+
+            foreach (var b in bytes)
+            {
+                sb.Append(ToCharUpper(b >> 4));
+                sb.Append(ToCharUpper(b));
+            }
+
+            return new HexBinaryValue(sb.ToString());
+#endif
+
+            static char ToCharUpper(int value)
+            {
+                value &= 0xF;
+                value += '0';
+
+                if (value > '9')
+                {
+                    value += 'A' - ('9' + 1);
+                }
+
+                return (char)value;
+            }
+        }
+
+        /// <summary>
+        /// Returns a new <see cref="HexBinaryValue"/> object that was created from <paramref name="bytes"/>.
+        /// </summary>
+        /// <param name="bytes">A byte array to use to create a new <see cref="HexBinaryValue"/> object.</param>
+        /// <returns>A <see cref="HexBinaryValue"/> object that corresponds to the value parameter.</returns>
+        public static HexBinaryValue Create(params byte[] bytes)
+            => Create(bytes.AsSpan());
 
         /// <summary>
         /// Returns the <see cref="string"/> value representation of a <see cref="HexBinaryValue"/> object.
