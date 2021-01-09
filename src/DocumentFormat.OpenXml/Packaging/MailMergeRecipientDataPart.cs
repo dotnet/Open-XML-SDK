@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (Recipients != null)
+                if (Recipients is not null)
                 {
                     return Recipients;
                 }
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     throw new ArgumentNullException(nameof(value));
                 }
 
-                if (MailMergeRecipients != null)
+                if (MailMergeRecipients is not null)
                 {
                     throw new InvalidOperationException(SR.Format(ExceptionMessages.PropertyMutualExclusive, "Recipients", "MailMergeRecipients"));
                 }
@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     throw new ArgumentNullException(nameof(value));
                 }
 
-                if (Recipients != null)
+                if (Recipients is not null)
                 {
                     throw new InvalidOperationException(SR.Format(ExceptionMessages.PropertyMutualExclusive, "MailMergeRecipients", "Recipients"));
                 }

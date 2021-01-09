@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             HashSet<string> ignorableNamespaces = null;
             ValidationErrorInfo errorInfo;
 
-            if (element.MCAttributes != null)
+            if (element.MCAttributes is not null)
             {
                 // validate Ignorable attribute
                 if (!string.IsNullOrEmpty(element.MCAttributes.Ignorable))

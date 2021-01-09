@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="isExternal">A value that indicates whether the target of the relationship is Internal or External to the Package.</param>
         internal protected ReferenceRelationship(Uri targetUri, bool isExternal, string relationshipType, string id)
         {
-            Debug.Assert(targetUri != null);
+            Debug.Assert(targetUri is not null);
             Debug.Assert(!string.IsNullOrEmpty(relationshipType));
             Debug.Assert(!string.IsNullOrEmpty(id));
 
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="isExternal">A value that indicates whether the target of the relationship is Internal or External to the Package.</param>
         internal void Initialize(Uri targetUri, bool isExternal, string relationshipType, string id)
         {
-            Debug.Assert(targetUri != null);
+            Debug.Assert(targetUri is not null);
             Debug.Assert(!string.IsNullOrEmpty(relationshipType));
             Debug.Assert(!string.IsNullOrEmpty(id));
 

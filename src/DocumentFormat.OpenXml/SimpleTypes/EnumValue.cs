@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml
             return fileFormat.AtLeast(EnumInfoLookup<T>.GetVersion(Value));
         }
 
-        private protected override bool ShouldParse(string? value) => value != null;
+        private protected override bool ShouldParse(string? value) => value is not null;
 
         private protected override void ValidateSet(T value)
         {

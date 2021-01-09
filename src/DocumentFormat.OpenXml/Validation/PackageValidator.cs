@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Validation
                             if (version.AtLeast(rule.FileFormat))
                             {
                                 // validate content type
-                                if (rule.PartContentType != null && part.ContentType != rule.PartContentType)
+                                if (rule.PartContentType is not null && part.ContentType != rule.PartContentType)
                                 {
                                     var message = SR.Format(ExceptionMessages.InvalidContentTypePart, rule.PartContentType);
 

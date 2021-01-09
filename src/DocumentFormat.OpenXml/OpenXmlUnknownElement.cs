@@ -198,7 +198,7 @@ namespace DocumentFormat.OpenXml
             {
                 base.WriteContentTo(w);
             }
-            else if (Text != null)
+            else if (Text is not null)
             {
                 w.WriteString(Text);
             }
@@ -257,7 +257,7 @@ namespace DocumentFormat.OpenXml
             // load children elements
             base.Populate(xmlReader, loadMode);
 
-            if (FirstChild != null && FirstChild.NextSibling() is null)
+            if (FirstChild is not null && FirstChild.NextSibling() is null)
             {
                 // only one child
                 if (FirstChild is OpenXmlMiscNode miscNode)

@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public static XmlQualifiedName GetSimpleTypeQualifiedName(this Type type)
         {
-            if (type != null && _simpleTypeMapping.TryGetValue(type, out var value))
+            if (type is not null && _simpleTypeMapping.TryGetValue(type, out var value))
             {
                 return value;
             }

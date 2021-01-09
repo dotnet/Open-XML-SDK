@@ -33,10 +33,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns></returns>
         internal override void Validate(ValidationContext validationContext)
         {
-            Debug.Assert(validationContext != null);
+            Debug.Assert(validationContext is not null);
 
             var element = validationContext.Stack.Current.Element as OpenXmlCompositeElement;
-            Debug.Assert(element != null);
+            Debug.Assert(element is not null);
 
             var child = validationContext.GetFirstChildMc();
             ValidationErrorInfo errorInfo;
@@ -79,13 +79,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     return;
 
                 case ParticleMatch.Matched:
-                    Debug.Assert(particleMatchInfo.LastMatchedElement != null);
+                    Debug.Assert(particleMatchInfo.LastMatchedElement is not null);
                     child = validationContext.GetNextChildMc(particleMatchInfo.LastMatchedElement);
                     {
                         // Two cases now.
                         // 1. All children be matched.
                         // 2. Too many children ( > maxOccurs ).
-                        if (child != null)
+                        if (child is not null)
                         {
                             // invalid child
                             EmitInvalidElementError(validationContext, particleMatchInfo);
@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 var childMatchInfo = new ParticleMatchInfo();
 
-                while (next != null && ParticleConstraint.MaxOccursGreaterThan(matchCount))
+                while (next is not null && ParticleConstraint.MaxOccursGreaterThan(matchCount))
                 {
                     // Use Reset() instead of new() to avoid heavy memory allocation and GC.
                     childMatchInfo.Reset(next);

@@ -301,7 +301,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public static bool TryGetNamespaceId(string namespaceUri, out byte id)
         {
-            if (namespaceUri != null && _namespaceResolver.TryGetByNamespace(NormalizeNamespace(namespaceUri), out var info))
+            if (namespaceUri is not null && _namespaceResolver.TryGetByNamespace(NormalizeNamespace(namespaceUri), out var info))
             {
                 id = info.Id;
                 return true;

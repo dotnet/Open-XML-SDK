@@ -395,7 +395,7 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.DeletePart(corePart);
                 doc.DeletePart(appPart);
 
-                if (thumbNailPart != null)
+                if (thumbNailPart is not null)
                 {
                     doc.DeletePart(thumbNailPart);
                 }

@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml
 
                 case OpenXmlElement child:
                 {
-                    if (child.Parent != null)
+                    if (child.Parent is not null)
                     {
                         child = child.CloneNode(true);
                     }

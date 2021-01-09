@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
             while (enumerator.MoveNext())
             {
-                if (remove != null)
+                if (remove is not null)
                 {
                     remove.Remove();
                     remove = null;
@@ -49,13 +49,13 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                 var data = enumerator.Current;
                 var current = _compiled.Find(data);
 
-                if (current != null && _elementPath != null && current.Equals(_elementPath))
+                if (current is not null && _elementPath is not null && current.Equals(_elementPath))
                 {
                     remove = data;
                 }
             }
 
-            if (remove != null)
+            if (remove is not null)
             {
                 remove.Remove();
             }
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             {
                 Current = null!;
 
-                while (_child != null)
+                while (_child is not null)
                 {
                     if (_child.GetType() == _type)
                     {
@@ -240,7 +240,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                     return Complete();
                 }
 
-                if (_collection._elementPath != null && _collection._elementPath.Type == ParticleType.All && !_collection._elementPath.IsSibling(Path))
+                if (_collection._elementPath is not null && _collection._elementPath.Type == ParticleType.All && !_collection._elementPath.IsSibling(Path))
                 {
                     return Complete();
                 }

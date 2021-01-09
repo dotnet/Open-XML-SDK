@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Tests
             var property = part.GetType().GetProperties(flag)
                 .Where(p => p.PropertyType.IsSubclassOf(typeof(OpenXmlPartRootElement)))
                 .FirstOrDefault();
-            return property != null;
+            return property is not null;
         }
 
         /// <summary>
@@ -232,7 +232,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             // if there is only one part is null, return false
-            if ((targetPart is null && sourcePart != null) || (sourcePart is null && targetPart != null))
+            if ((targetPart is null && sourcePart is not null) || (sourcePart is null && targetPart is not null))
             {
                 return false;
             }
@@ -376,7 +376,7 @@ namespace DocumentFormat.OpenXml.Tests
             var sb = new StringBuilder();
             using (var xw = XmlWriter.Create(sb))
             {
-                if (part.RootElement != null)
+                if (part.RootElement is not null)
                 {
                     part.RootElement.WriteTo(xw);
                 }

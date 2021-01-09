@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// </remarks>
         public static List<ValidationErrorInfo> Validate(this DocumentValidator schemaValidator, OpenXmlElement openXmlElement)
         {
-            Debug.Assert(openXmlElement != null);
+            Debug.Assert(openXmlElement is not null);
 
             Debug.Assert(!(openXmlElement is OpenXmlUnknownElement || openXmlElement is OpenXmlMiscNode));
 

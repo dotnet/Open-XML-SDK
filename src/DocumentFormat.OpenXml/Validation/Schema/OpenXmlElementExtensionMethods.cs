@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     mcTier = mcTier.Parent;
                 }
 
-                Debug.Assert(mcTier != null);
+                Debug.Assert(mcTier is not null);
 
                 // there is no more next sibling in this level, then try to find the next siblig of the up level.
                 return parent.GetNextChildMc(mcTier, mcContext, format);
@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // Use stack to cache the next siblings in different levels.
             Stack<OpenXmlElement> nextSiblings = new Stack<OpenXmlElement>();
 
-            while (child != null)
+            while (child is not null)
             {
                 var acb = child as AlternateContent;
                 if (acb is null && child.IsInVersion(format))
@@ -64,11 +64,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 else
                 {
                     mcContext.PushMCAttributes2(child.MCAttributes, child.LookupNamespace);
-                    if (acb != null)
+                    if (acb is not null)
                     {
                         nextSiblings.Push(child.GetNextNonMiscElementSibling());
                         var select = mcContext.GetContentFromACBlock(acb, format);
-                        if (select != null)
+                        if (select is not null)
                         {
                             child = select.GetFirstNonMiscElementChild();
                         }

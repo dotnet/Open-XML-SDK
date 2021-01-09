@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal SequenceParticleValidator(CompositeParticle particleConstraint)
             : base(particleConstraint)
         {
-            Debug.Assert(particleConstraint != null);
+            Debug.Assert(particleConstraint is not null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.Sequence);
         }
 
@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             var childMatchInfo = new ParticleMatchInfo();
 
-            while (constraintIndex < constraintTotal && next != null)
+            while (constraintIndex < constraintTotal && next is not null)
             {
                 childConstraint = ParticleConstraint.ChildrenParticles[constraintIndex];
 
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             if (constraintIndex == constraintTotal)
             {
-                if (particleMatchInfo.LastMatchedElement != null)
+                if (particleMatchInfo.LastMatchedElement is not null)
                 {
                     particleMatchInfo.Match = ParticleMatch.Matched;
                 }

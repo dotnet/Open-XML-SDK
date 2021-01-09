@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml
         {
             var part = element.GetPart();
 
-            if (part != null)
+            if (part is not null)
             {
                 return part.Uri;
             }
@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml
         internal static OpenXmlElement TryCreateValidChild(this OpenXmlElement parent, FileFormatVersions fileFormat, string namespaceUri, string localName)
         {
             Debug.Assert(parent is OpenXmlCompositeElement);
-            Debug.Assert(localName != null);
+            Debug.Assert(localName is not null);
 
             var newElement = parent.ElementFactory(string.Empty, localName, namespaceUri);
             if (newElement is OpenXmlUnknownElement || !newElement.IsInVersion(fileFormat))

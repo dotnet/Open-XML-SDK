@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         public static bool Validate(string? uriString)
         {
             // code copied from XmlConvert.TryToUri()
-            if ((uriString != null) && (uriString.Length > 0))
+            if ((uriString is not null) && (uriString.Length > 0))
             {
                 uriString = uriString.Trim(_whitespaceChars);
 

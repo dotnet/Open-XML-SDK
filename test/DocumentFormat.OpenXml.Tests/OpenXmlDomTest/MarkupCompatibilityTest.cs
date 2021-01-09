@@ -649,10 +649,10 @@ namespace DocumentFormat.OpenXml.Tests
                         var dom = part.RootElement();
                         var host = dom
                             .Descendants()
-                            .PickFirst(d => d.FirstChild != null && !(d.FirstChild is OpenXmlUnknownElement));
+                            .PickFirst(d => d.FirstChild is not null && !(d.FirstChild is OpenXmlUnknownElement));
                         var target = host
                             .Descendants()
-                            .PickFirst(d => d.FirstChild != null && !(d.FirstChild is OpenXmlUnknownElement));
+                            .PickFirst(d => d.FirstChild is not null && !(d.FirstChild is OpenXmlUnknownElement));
 
                         var knownElement = target.FirstChild;
                         host.SetIgnorable(knownElement.Prefix);
@@ -691,10 +691,10 @@ namespace DocumentFormat.OpenXml.Tests
                         var dom = part.RootElement();
                         var host = dom
                             .Descendants()
-                            .PickFirst(d => d.FirstChild != null && !(d.FirstChild is OpenXmlUnknownElement));
+                            .PickFirst(d => d.FirstChild is not null && !(d.FirstChild is OpenXmlUnknownElement));
                         var target = host
                             .Descendants()
-                            .PickFirst(d => d.FirstChild != null && !(d.FirstChild is OpenXmlUnknownElement));
+                            .PickFirst(d => d.FirstChild is not null && !(d.FirstChild is OpenXmlUnknownElement));
 
                         var knownElement = target.FirstChild;
                         host.SetIgnorable(knownElement.Prefix);
@@ -729,10 +729,10 @@ namespace DocumentFormat.OpenXml.Tests
                 var dom = part.RootElement();
                 var host = dom
                     .Descendants()
-                    .PickFirst(d => d.FirstChild != null && !(d.FirstChild is OpenXmlUnknownElement));
+                    .PickFirst(d => d.FirstChild is not null && !(d.FirstChild is OpenXmlUnknownElement));
                 var target = host
                     .Descendants()
-                    .PickFirst(d => d.FirstChild != null && !(d.FirstChild is OpenXmlUnknownElement));
+                    .PickFirst(d => d.FirstChild is not null && !(d.FirstChild is OpenXmlUnknownElement));
 
                 host.SetIgnorable(target.FirstChild.Prefix);
 

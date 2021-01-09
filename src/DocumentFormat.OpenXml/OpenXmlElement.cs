@@ -243,7 +243,7 @@ namespace DocumentFormat.OpenXml
             get
             {
                 MakeSureParsed();
-                if (ExtendedAttributesField != null && ExtendedAttributesField.Count != 0)
+                if (ExtendedAttributesField is not null && ExtendedAttributesField.Count != 0)
                 {
                     return true;
                 }
@@ -273,7 +273,7 @@ namespace DocumentFormat.OpenXml
             get
             {
                 MakeSureParsed();
-                if (ExtendedAttributesField != null)
+                if (ExtendedAttributesField is not null)
                 {
                     return ExtendedAttributesField;
                 }
@@ -487,7 +487,7 @@ namespace DocumentFormat.OpenXml
 
             if (HasAttributes)
             {
-                if (namespaceUri != null)
+                if (namespaceUri is not null)
                 {
                     foreach (var attribute in ParsedState.Attributes)
                     {
@@ -539,7 +539,7 @@ namespace DocumentFormat.OpenXml
 
                 attributes.AddRange(ExtendedAttributes);
 
-                if (MCAttributes != null)
+                if (MCAttributes is not null)
                 {
                     AddMCAttributes(attributes);
                 }
@@ -586,7 +586,7 @@ namespace DocumentFormat.OpenXml
                 var index = 0;
 
                 // remove the old one if there is
-                if (ExtendedAttributesField != null)
+                if (ExtendedAttributesField is not null)
                 {
                     foreach (var extendedAttibute in ExtendedAttributesField)
                     {
@@ -646,7 +646,7 @@ namespace DocumentFormat.OpenXml
                 else
                 {
                     var index = 0;
-                    if (ExtendedAttributesField != null)
+                    if (ExtendedAttributesField is not null)
                     {
                         foreach (var extendedAttribute in ExtendedAttributesField)
                         {
@@ -756,7 +756,7 @@ namespace DocumentFormat.OpenXml
             }
 
             MakeSureParsed();
-            if (NamespaceDeclField != null)
+            if (NamespaceDeclField is not null)
             {
                 for (var i = 0; i < NamespaceDeclField.Count; i++)
                 {
@@ -792,7 +792,7 @@ namespace DocumentFormat.OpenXml
 
             var firstChild = parent.FirstChild;
 
-            while (firstChild != null)
+            while (firstChild is not null)
             {
                 var nextSibling = firstChild.NextSibling();
                 if (nextSibling == this)
@@ -816,7 +816,7 @@ namespace DocumentFormat.OpenXml
         {
             var element = PreviousSibling();
 
-            while (element != null)
+            while (element is not null)
             {
                 if (element is T t)
                 {
@@ -837,7 +837,7 @@ namespace DocumentFormat.OpenXml
         public OpenXmlElement NextSibling()
         {
             var parentNode = Parent;
-            if ((parentNode != null) && (Next != parentNode.FirstChild))
+            if ((parentNode is not null) && (Next != parentNode.FirstChild))
             {
                 return Next;
             }
@@ -855,7 +855,7 @@ namespace DocumentFormat.OpenXml
         {
             var element = NextSibling();
 
-            while (element != null)
+            while (element is not null)
             {
                 if (element is T t)
                 {
@@ -876,7 +876,7 @@ namespace DocumentFormat.OpenXml
         {
             var ancestor = Parent;
 
-            while (ancestor != null)
+            while (ancestor is not null)
             {
                 yield return ancestor;
                 ancestor = ancestor.Parent;
@@ -893,7 +893,7 @@ namespace DocumentFormat.OpenXml
         {
             var ancestor = Parent;
 
-            while (ancestor != null)
+            while (ancestor is not null)
             {
                 if (ancestor is T t)
                 {
@@ -960,7 +960,7 @@ namespace DocumentFormat.OpenXml
                 var topElement = stack.Peek();
                 var firstChildInTopElement = topElement.FirstChild;
 
-                if (topElement == root && firstChildInTopElement != null)
+                if (topElement == root && firstChildInTopElement is not null)
                 {
                     root = firstChildInTopElement;
                     stack.Push(root);
@@ -970,7 +970,7 @@ namespace DocumentFormat.OpenXml
                 {
                     var nextSiblingElement = topElement.NextSibling();
                     stack.Pop();
-                    if (nextSiblingElement != null)
+                    if (nextSiblingElement is not null)
                     {
                         root = nextSiblingElement;
                         stack.Push(root);
@@ -986,7 +986,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>An IEnumerable object that contains a list of OpenXmlElement elements.</returns>
         public IEnumerable<OpenXmlElement> ElementsBefore()
         {
-            if (Parent != null)
+            if (Parent is not null)
             {
                 var element = Parent.FirstChild;
 
@@ -1005,11 +1005,11 @@ namespace DocumentFormat.OpenXml
         /// <returns>An IEnumerable object that contains a list of OpenXmlElement elements.</returns>
         public IEnumerable<OpenXmlElement> ElementsAfter()
         {
-            if (Parent != null)
+            if (Parent is not null)
             {
                 var element = NextSibling();
 
-                while (element != null)
+                while (element is not null)
                 {
                     yield return element;
 
@@ -1088,7 +1088,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="newChildren">The array of OpenXmlElement elements to be appended.</param>
         public void Append(params OpenXmlElement[] newChildren)
         {
-            if (newChildren != null)
+            if (newChildren is not null)
             {
                 foreach (var child in newChildren)
                 {
@@ -1231,7 +1231,7 @@ namespace DocumentFormat.OpenXml
             var element = FirstChild;
             OpenXmlElement next;
 
-            while (element != null)
+            while (element is not null)
             {
                 next = element.NextSibling();
 
@@ -1304,7 +1304,7 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         private static ElementOrder GetOrder(OpenXmlElement element1, OpenXmlElement element2)
         {
-            Debug.Assert(element1 != null && element2 != null);
+            Debug.Assert(element1 is not null && element2 is not null);
 
             if (element1.Parent is null && element2.Parent is null)
             {
@@ -1383,7 +1383,7 @@ namespace DocumentFormat.OpenXml
 
             var element = element1.NextSibling();
 
-            while (element != null)
+            while (element is not null)
             {
                 if (ReferenceEquals(element, element2))
                 {
@@ -1397,7 +1397,7 @@ namespace DocumentFormat.OpenXml
 #if DEBUG
             element = element1.PreviousSibling();
 
-            while (element != null)
+            while (element is not null)
             {
                 if (ReferenceEquals(element, element2))
                 {
@@ -1414,10 +1414,10 @@ namespace DocumentFormat.OpenXml
 
         private protected virtual void WriteAttributesTo(XmlWriter xmlWriter)
         {
-            Debug.Assert(xmlWriter != null);
+            Debug.Assert(xmlWriter is not null);
 
             //write the namespace declaration first, so the inner attribute will get the right prefix
-            if (NamespaceDeclField != null)
+            if (NamespaceDeclField is not null)
             {
                 foreach (var item in NamespaceDeclField)
                 {
@@ -1506,7 +1506,7 @@ namespace DocumentFormat.OpenXml
 
         internal virtual void LoadAttributes(XmlReader xmlReader)
         {
-            Debug.Assert(xmlReader != null);
+            Debug.Assert(xmlReader is not null);
 
             Debug.Assert(xmlReader.NodeType == XmlNodeType.Element);
 
@@ -1572,16 +1572,16 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if a MCAttributes is pushed.</returns>
         private protected bool PushMcContext(XmlReader xmlReader)
         {
-            Debug.Assert(xmlReader != null);
+            Debug.Assert(xmlReader is not null);
             Debug.Assert(xmlReader.NodeType == XmlNodeType.Element);
 
-            if (OpenXmlElementContext != null && OpenXmlElementContext.MCSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess)
+            if (OpenXmlElementContext is not null && OpenXmlElementContext.MCSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess)
             {
                 OpenXmlElementContext.MCContext.LookupNamespaceDelegate = xmlReader.LookupNamespace;
 
                 var mcAttributes = LoadMCAttribute(xmlReader);
 
-                if (mcAttributes != null)
+                if (mcAttributes is not null)
                 {
                     OpenXmlElementContext.MCContext.PushMCAttributes(mcAttributes);
                     if (OpenXmlElementContext.ACBlockLevel == 0)
@@ -1602,7 +1602,7 @@ namespace DocumentFormat.OpenXml
 
         private protected void PopMcContext()
         {
-            if (OpenXmlElementContext != null && OpenXmlElementContext.MCSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess)
+            if (OpenXmlElementContext is not null && OpenXmlElementContext.MCSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess)
             {
                 OpenXmlElementContext.MCContext.PopMCAttributes();
             }
@@ -1620,9 +1620,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="mcSettings">The MarkupCompatibilityProcessSettings.</param>
         private protected static void CheckMustUnderstandAttr(XmlReader reader, MarkupCompatibilityAttributes mcAttributes, MarkupCompatibilityProcessSettings mcSettings)
         {
-            Debug.Assert(mcAttributes != null && mcSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess);
+            Debug.Assert(mcAttributes is not null && mcSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess);
 
-            if (mcAttributes.MustUnderstand != null && !string.IsNullOrEmpty(mcAttributes.MustUnderstand.Value))
+            if (mcAttributes.MustUnderstand is not null && !string.IsNullOrEmpty(mcAttributes.MustUnderstand.Value))
             {
                 var prefixes = mcAttributes.MustUnderstand.Value.Trim().Split(new char[] { ' ' });
                 foreach (var prefix in prefixes)
@@ -1653,7 +1653,7 @@ namespace DocumentFormat.OpenXml
                 return;
             }
 
-            if (MCAttributes.MustUnderstand != null && !string.IsNullOrEmpty(MCAttributes.MustUnderstand.Value))
+            if (MCAttributes.MustUnderstand is not null && !string.IsNullOrEmpty(MCAttributes.MustUnderstand.Value))
             {
                 var prefixes = MCAttributes.MustUnderstand.Value.Trim().Split(new char[] { ' ' });
                 foreach (var prefix in prefixes)
@@ -1681,7 +1681,7 @@ namespace DocumentFormat.OpenXml
 
         internal void Load(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
-            Debug.Assert(xmlReader != null);
+            Debug.Assert(xmlReader is not null);
 
             switch (loadMode)
             {
@@ -1690,7 +1690,7 @@ namespace DocumentFormat.OpenXml
                     break;
 
                 case OpenXmlLoadMode.Lazy:
-                    if (OpenXmlElementContext != null && xmlReader.Depth < OpenXmlElementContext.LazySteps)
+                    if (OpenXmlElementContext is not null && xmlReader.Depth < OpenXmlElementContext.LazySteps)
                     {
                         Populate(xmlReader, loadMode);
                     }
@@ -1748,7 +1748,7 @@ namespace DocumentFormat.OpenXml
         {
             var stringReader = new StringReader(RawOuterXml);
 
-            if (OpenXmlElementContext != null)
+            if (OpenXmlElementContext is not null)
             {
 #if FEATURE_XML_PROHIBIT_DTD
                 OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
@@ -1767,7 +1767,7 @@ namespace DocumentFormat.OpenXml
         {
             using (TextReader stringReader = new StringReader(outerXml))
             {
-                if (OpenXmlElementContext != null)
+                if (OpenXmlElementContext is not null)
                 {
 #if FEATURE_XML_PROHIBIT_DTD
                     OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
@@ -1862,10 +1862,10 @@ namespace DocumentFormat.OpenXml
         // Copy attributes including Attributes, ExtendedAttributes, MCAttributes from the container.
         private protected void CopyAttributes(OpenXmlElement container)
         {
-            Debug.Assert(container != null);
+            Debug.Assert(container is not null);
             if (container.HasAttributes)
             {
-                if (container.ExtendedAttributesField != null)
+                if (container.ExtendedAttributesField is not null)
                 {
                     ExtendedAttributesField = new List<OpenXmlAttribute>(container.ExtendedAttributesField);
                 }
@@ -1882,14 +1882,14 @@ namespace DocumentFormat.OpenXml
                 }
 
                 // Copy MCAttributes
-                if (container.MCAttributes != null)
+                if (container.MCAttributes is not null)
                 {
                     MCAttributes = CloneMCAttributes(container.MCAttributes);
-                    Debug.Assert(MCAttributes != null);
+                    Debug.Assert(MCAttributes is not null);
                 }
             }
 
-            if (container.NamespaceDeclField != null)
+            if (container.NamespaceDeclField is not null)
             {
                 NamespaceDeclField = new List<KeyValuePair<string, string>>(container.NamespaceDeclField);
             }
@@ -1900,29 +1900,29 @@ namespace DocumentFormat.OpenXml
         // this method should be modified up-to-date.
         private static MarkupCompatibilityAttributes CloneMCAttributes(MarkupCompatibilityAttributes source)
         {
-            Debug.Assert(source != null);
+            Debug.Assert(source is not null);
             var target = new MarkupCompatibilityAttributes();
-            if (source.Ignorable != null)
+            if (source.Ignorable is not null)
             {
                 target.Ignorable = (StringValue)source.Ignorable.Clone();
             }
 
-            if (source.MustUnderstand != null)
+            if (source.MustUnderstand is not null)
             {
                 target.MustUnderstand = (StringValue)source.MustUnderstand.Clone();
             }
 
-            if (source.PreserveAttributes != null)
+            if (source.PreserveAttributes is not null)
             {
                 target.PreserveAttributes = (StringValue)source.PreserveAttributes.Clone();
             }
 
-            if (source.PreserveElements != null)
+            if (source.PreserveElements is not null)
             {
                 target.PreserveElements = (StringValue)source.PreserveElements.Clone();
             }
 
-            if (source.ProcessContent != null)
+            if (source.ProcessContent is not null)
             {
                 target.ProcessContent = (StringValue)source.ProcessContent.Clone();
             }
@@ -1933,7 +1933,7 @@ namespace DocumentFormat.OpenXml
         // Copy child elements from the container.
         internal void CopyChilden(OpenXmlElement container, bool deep)
         {
-            Debug.Assert(container != null);
+            Debug.Assert(container is not null);
             foreach (var element in container.ChildElements)
             {
                 Append(element.CloneNode(deep));
@@ -1981,7 +1981,7 @@ namespace DocumentFormat.OpenXml
                 else
                 {
                     var index = 0;
-                    while ((index < annotations.Length) && (annotations[index] != null))
+                    while ((index < annotations.Length) && (annotations[index] is not null))
                     {
                         index++;
                     }
@@ -2005,7 +2005,7 @@ namespace DocumentFormat.OpenXml
         public T Annotation<T>()
             where T : class
         {
-            if (_annotations != null)
+            if (_annotations is not null)
             {
                 var annotations = _annotations as object[];
 
@@ -2024,7 +2024,7 @@ namespace DocumentFormat.OpenXml
                     }
 
                     var t = obj as T;
-                    if (t != null)
+                    if (t is not null)
                     {
                         return t;
                     }
@@ -2046,7 +2046,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(type));
             }
 
-            if (_annotations != null)
+            if (_annotations is not null)
             {
                 var annotations = _annotations as object[];
                 if (annotations is null)
@@ -2085,7 +2085,7 @@ namespace DocumentFormat.OpenXml
         public IEnumerable<T> Annotations<T>()
             where T : class
         {
-            if (_annotations != null)
+            if (_annotations is not null)
             {
                 var annotations = _annotations as object[];
                 if (annotations is null)
@@ -2126,7 +2126,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(type));
             }
 
-            if (_annotations != null)
+            if (_annotations is not null)
             {
                 var annotations = _annotations as object[];
                 if (annotations is null)
@@ -2162,7 +2162,7 @@ namespace DocumentFormat.OpenXml
         public void RemoveAnnotations<T>()
             where T : class
         {
-            if (_annotations != null)
+            if (_annotations is not null)
             {
                 var annotations = _annotations as object[];
                 if (annotations is null)
@@ -2218,7 +2218,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(type));
             }
 
-            if (_annotations != null)
+            if (_annotations is not null)
             {
                 var annotations = _annotations as object[];
                 if (annotations is null)
@@ -2304,7 +2304,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>True if nsUri == @"http://www.w3.org/2000/xmlns/".</returns>
         internal bool IsXmlnsUri(string nsUri)
         {
-            if (OpenXmlElementContext != null)
+            if (OpenXmlElementContext is not null)
             {
                 return OpenXmlElementContext.IsXmlnsUri(nsUri);
             }
@@ -2559,27 +2559,27 @@ namespace DocumentFormat.OpenXml
                 mcPrefix = MarkupCompatibilityAttributes.MCPrefix;
             }
 
-            if (MCAttributes.Ignorable != null)
+            if (MCAttributes.Ignorable is not null)
             {
                 attributes.Add(new OpenXmlAttribute(mcPrefix, "Ignorable", AlternateContent.MarkupCompatibilityNamespace, MCAttributes.Ignorable));
             }
 
-            if (MCAttributes.ProcessContent != null)
+            if (MCAttributes.ProcessContent is not null)
             {
                 attributes.Add(new OpenXmlAttribute(mcPrefix, "ProcessContent", AlternateContent.MarkupCompatibilityNamespace, MCAttributes.ProcessContent));
             }
 
-            if (MCAttributes.PreserveElements != null)
+            if (MCAttributes.PreserveElements is not null)
             {
                 attributes.Add(new OpenXmlAttribute(mcPrefix, "PreserveElements", AlternateContent.MarkupCompatibilityNamespace, MCAttributes.PreserveElements));
             }
 
-            if (MCAttributes.PreserveAttributes != null)
+            if (MCAttributes.PreserveAttributes is not null)
             {
                 attributes.Add(new OpenXmlAttribute(mcPrefix, "PreserveAttributes", AlternateContent.MarkupCompatibilityNamespace, MCAttributes.PreserveAttributes));
             }
 
-            if (MCAttributes.MustUnderstand != null)
+            if (MCAttributes.MustUnderstand is not null)
             {
                 attributes.Add(new OpenXmlAttribute(mcPrefix, "MustUnderstand", AlternateContent.MarkupCompatibilityNamespace, MCAttributes.MustUnderstand));
             }
@@ -2644,27 +2644,27 @@ namespace DocumentFormat.OpenXml
                 mcPrefix = MarkupCompatibilityAttributes.MCPrefix;
             }
 
-            if (MCAttributes.Ignorable != null)
+            if (MCAttributes.Ignorable is not null)
             {
                 xmlWriter.WriteAttributeString(mcPrefix, MCConsts.Ignorable, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.Ignorable);
             }
 
-            if (MCAttributes.ProcessContent != null)
+            if (MCAttributes.ProcessContent is not null)
             {
                 xmlWriter.WriteAttributeString(mcPrefix, MCConsts.ProcessContent, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.ProcessContent);
             }
 
-            if (MCAttributes.PreserveElements != null)
+            if (MCAttributes.PreserveElements is not null)
             {
                 xmlWriter.WriteAttributeString(mcPrefix, MCConsts.PreserveElements, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.PreserveElements);
             }
 
-            if (MCAttributes.PreserveAttributes != null)
+            if (MCAttributes.PreserveAttributes is not null)
             {
                 xmlWriter.WriteAttributeString(mcPrefix, MCConsts.PreserveAttributes, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.PreserveAttributes);
             }
 
-            if (MCAttributes.MustUnderstand != null)
+            if (MCAttributes.MustUnderstand is not null)
             {
                 xmlWriter.WriteAttributeString(mcPrefix, MCConsts.MustUnderstand, AlternateContent.MarkupCompatibilityNamespace, MCAttributes.MustUnderstand);
             }
@@ -2678,27 +2678,27 @@ namespace DocumentFormat.OpenXml
             }
 
             var ret = 0;
-            if (MCAttributes.Ignorable != null)
+            if (MCAttributes.Ignorable is not null)
             {
                 ret++;
             }
 
-            if (MCAttributes.ProcessContent != null)
+            if (MCAttributes.ProcessContent is not null)
             {
                 ret++;
             }
 
-            if (MCAttributes.PreserveElements != null)
+            if (MCAttributes.PreserveElements is not null)
             {
                 ret++;
             }
 
-            if (MCAttributes.PreserveAttributes != null)
+            if (MCAttributes.PreserveAttributes is not null)
             {
                 ret++;
             }
 
-            if (MCAttributes.MustUnderstand != null)
+            if (MCAttributes.MustUnderstand is not null)
             {
                 ret++;
             }
@@ -2732,7 +2732,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            if (ExtendedAttributesField != null)
+            if (ExtendedAttributesField is not null)
             {
                 var tobeRemoved = new List<OpenXmlAttribute>();
 
@@ -2754,7 +2754,7 @@ namespace DocumentFormat.OpenXml
 
         internal string LookupNamespaceLocal(string prefix)
         {
-            if (NamespaceDeclField != null)
+            if (NamespaceDeclField is not null)
             {
                 for (var i = 0; i < NamespaceDeclField.Count; i++)
                 {
@@ -2770,7 +2770,7 @@ namespace DocumentFormat.OpenXml
 
         internal string LookupPrefixLocal(string uri)
         {
-            if (NamespaceDeclField != null)
+            if (NamespaceDeclField is not null)
             {
                 for (var i = 0; i < NamespaceDeclField.Count; i++)
                 {
@@ -2799,7 +2799,7 @@ namespace DocumentFormat.OpenXml
             // first, lookup whether the prefix is defined on itself and any ancestor elements.
             var node = this;
             string ret = null;
-            while (node != null)
+            while (node is not null)
             {
                 ret = node.LookupNamespaceLocal(prefix);
                 if (!string.IsNullOrEmpty(ret))
@@ -2827,7 +2827,7 @@ namespace DocumentFormat.OpenXml
 
             var node = this;
             string ret = null;
-            while (node != null)
+            while (node is not null)
             {
                 ret = node.LookupPrefixLocal(namespaceUri);
                 if (!string.IsNullOrEmpty(ret))
@@ -2851,7 +2851,7 @@ namespace DocumentFormat.OpenXml
         {
             var next = NextSibling();
 
-            while (next != null && next is OpenXmlMiscNode)
+            while (next is not null && next is OpenXmlMiscNode)
             {
                 next = next.NextSibling();
             }
@@ -2890,7 +2890,7 @@ namespace DocumentFormat.OpenXml
         {
             var root = this;
 
-            while (root.Parent != null)
+            while (root.Parent is not null)
             {
                 root = root.Parent;
             }

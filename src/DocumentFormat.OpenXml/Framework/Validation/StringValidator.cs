@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Framework
         {
             get
             {
-                if (_regex is null && Pattern != null)
+                if (_regex is null && Pattern is not null)
                 {
                     var regex = new Regex($@"\A{Pattern}\z", RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
@@ -117,14 +117,14 @@ namespace DocumentFormat.OpenXml.Framework
                     {
                         Validate(s, context, current, includeDetails: false);
 
-                        if (outside != null)
+                        if (outside is not null)
                         {
                             break;
                         }
                     }
                 }
 
-                if (outside != null)
+                if (outside is not null)
                 {
                     context.AddError(outside);
                 }
@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.Framework
                             errorType: ValidationErrorType.Schema);
                     }
                 }
-                else if (current.Value.InnerText != null && current.Value.InnerText.Length > 255)
+                else if (current.Value.InnerText is not null && current.Value.InnerText.Length > 255)
                 {
                     context.CreateError(
                         id: id,
@@ -233,7 +233,7 @@ namespace DocumentFormat.OpenXml.Framework
                         errorType: ValidationErrorType.Schema);
                 }
             }
-            else if (Pattern != null && Regex is Regex regex && !regex.IsMatch(str.Value))
+            else if (Pattern is not null && Regex is Regex regex && !regex.IsMatch(str.Value))
             {
                 context.CreateError(
                     id: id,

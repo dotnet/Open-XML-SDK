@@ -66,11 +66,11 @@ namespace DocumentFormat.OpenXml
         {
             OpenXmlElement newElement = null;
 
-            if (Parent != null &&
+            if (Parent is not null &&
                  Parent is AlternateContent)
             {
                 OpenXmlElement parentsParentElement = Parent.Parent;
-                if (parentsParentElement != null)
+                if (parentsParentElement is not null)
                 {
                     newElement = parentsParentElement.ElementFactory(namespaceId, name);
                 }

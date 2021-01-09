@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override OpenXmlSimpleType CloneImpl() => new TrueFalseValue(this);
 
-        private protected override bool ShouldParse(string? value) => value != null;
+        private protected override bool ShouldParse(string? value) => value is not null;
 
         /// <summary>
         /// Gets the real boolean value of the text value.

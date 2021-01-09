@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 log.Pass("Edited ChartTrackingReferenceBase value.");
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
-                log.Verify(absolutePath != null, "Unable to obtain the X15ac.AbsolutePath.");
+                log.Verify(absolutePath is not null, "Unable to obtain the X15ac.AbsolutePath.");
                 absolutePath.Url = string.Empty;
             }
         }
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 log.Verify(workbookPrNum == 1, "Missing workbookPr element.");
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
-                log.Verify(absolutePath != null, "Missing X15ac.AbsolutePath element.");
+                log.Verify(absolutePath is not null, "Missing X15ac.AbsolutePath element.");
             }
         }
     }

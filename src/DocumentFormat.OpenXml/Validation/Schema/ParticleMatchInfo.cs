@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             if (expectedChildren is null || expectedChildren.Count == 0)
             {
-                if (ExpectedChildren != null)
+                if (ExpectedChildren is not null)
                 {
                     ExpectedChildren.Clear();
                 }
@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Match = ParticleMatch.Nomatch;
             LastMatchedElement = null;
             ErrorMessage = null;
-            if (ExpectedChildren != null)
+            if (ExpectedChildren is not null)
             {
                 ExpectedChildren.Clear();
             }

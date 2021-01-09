@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="expectedChildren"></param>
         internal void Add(ExpectedChildren expectedChildren)
         {
-            if (expectedChildren._elementTypes != null &&
+            if (expectedChildren._elementTypes is not null &&
                 expectedChildren._elementTypes.Count > 0)
             {
                 // No lock, not safe for multi-thread
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
             }
 
-            if (expectedChildren._xsdanyNamespaces != null &&
+            if (expectedChildren._xsdanyNamespaces is not null &&
                 expectedChildren._xsdanyNamespaces.Count > 0)
             {
                 // No lock, not safe for multi-thread
@@ -92,12 +92,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             get
             {
                 int count = 0;
-                if (_elementTypes != null)
+                if (_elementTypes is not null)
                 {
                     count = _elementTypes.Count;
                 }
 
-                if (_xsdanyNamespaces != null)
+                if (_xsdanyNamespaces is not null)
                 {
                     count += _xsdanyNamespaces.Count;
                 }
@@ -113,16 +113,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>The Fmt_ListOfPossibleElements sub string to be used in error reporting.</returns>
         internal string GetExpectedChildrenMessage(OpenXmlElement parent)
         {
-            Debug.Assert(parent != null);
+            Debug.Assert(parent is not null);
 
-            if (_elementTypes != null || _xsdanyNamespaces != null)
+            if (_elementTypes is not null || _xsdanyNamespaces is not null)
             {
-                Debug.Assert(_elementTypes != null && _elementTypes.Count > 0 ||
-                             _xsdanyNamespaces != null && _xsdanyNamespaces.Count > 0);
+                Debug.Assert(_elementTypes is not null && _elementTypes.Count > 0 ||
+                             _xsdanyNamespaces is not null && _xsdanyNamespaces.Count > 0);
 
                 var childrenNames = new List<string>();
 
-                if (_elementTypes != null)
+                if (_elementTypes is not null)
                 {
                     foreach (var childElement in parent.Metadata.Children.Elements)
                     {
@@ -134,7 +134,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                 }
 
-                if (_xsdanyNamespaces != null)
+                if (_xsdanyNamespaces is not null)
                 {
                     foreach (var namespaceForXsdany in _xsdanyNamespaces)
                     {
@@ -156,12 +156,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         internal void Clear()
         {
-            if (_elementTypes != null)
+            if (_elementTypes is not null)
             {
                 _elementTypes.Clear();
             }
 
-            if (_xsdanyNamespaces != null)
+            if (_xsdanyNamespaces is not null)
             {
                 _xsdanyNamespaces.Clear();
             }

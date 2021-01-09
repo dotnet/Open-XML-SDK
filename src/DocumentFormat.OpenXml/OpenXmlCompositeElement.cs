@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml
 
                 OpenXmlElement lastChild = _lastChild;
 
-                if (lastChild != null)
+                if (lastChild is not null)
                 {
                     return lastChild.Next;
                 }
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return LastChild != null;
+                return LastChild is not null;
             }
         }
 
@@ -186,7 +186,7 @@ namespace DocumentFormat.OpenXml
                         OpenXmlElement next = null;
 
                         // then move all children to this element.
-                        while (child != null)
+                        while (child is not null)
                         {
                             next = child.NextSibling();
 
@@ -246,7 +246,7 @@ namespace DocumentFormat.OpenXml
                 return null;
             }
 
-            if (newChild.Parent != null)
+            if (newChild.Parent is not null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
@@ -289,7 +289,7 @@ namespace DocumentFormat.OpenXml
                 return null;
             }
 
-            if (newChild.Parent != null)
+            if (newChild.Parent is not null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
@@ -309,8 +309,8 @@ namespace DocumentFormat.OpenXml
             OpenXmlElement nextNode = newChild;
             OpenXmlElement prevNode = referenceChild;
 
-            Debug.Assert(nextNode != null);
-            Debug.Assert(prevNode != null);
+            Debug.Assert(nextNode is not null);
+            Debug.Assert(prevNode is not null);
 
             if (prevNode == _lastChild)
             {
@@ -346,7 +346,7 @@ namespace DocumentFormat.OpenXml
                 return null;
             }
 
-            if (newChild.Parent != null)
+            if (newChild.Parent is not null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
@@ -366,8 +366,8 @@ namespace DocumentFormat.OpenXml
             OpenXmlElement prevNode = newChild;
             OpenXmlElement nextNode = referenceChild;
 
-            Debug.Assert(nextNode != null);
-            Debug.Assert(prevNode != null);
+            Debug.Assert(nextNode is not null);
+            Debug.Assert(prevNode is not null);
 
             if (nextNode == FirstChild)
             {
@@ -403,7 +403,7 @@ namespace DocumentFormat.OpenXml
                 return null;
             }
 
-            if (newChild.Parent != null)
+            if (newChild.Parent is not null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
@@ -440,7 +440,7 @@ namespace DocumentFormat.OpenXml
                 return null;
             }
 
-            if (newChild.Parent != null)
+            if (newChild.Parent is not null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
@@ -512,7 +512,7 @@ namespace DocumentFormat.OpenXml
         public override void RemoveAllChildren()
         {
             OpenXmlElement element = FirstChild;
-            while (element != null)
+            while (element is not null)
             {
                 OpenXmlElement next = element.NextSibling();
 
@@ -548,7 +548,7 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ElementIsNotChild);
             }
 
-            if (newChild.Parent != null)
+            if (newChild.Parent is not null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
@@ -582,7 +582,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="element">The OpenXmlElement element to insert.</param>
         private void ElementInsertingEvent(OpenXmlElement element)
         {
-            if (OpenXmlElementContext != null)
+            if (OpenXmlElementContext is not null)
             {
                 OpenXmlElementContext.ElementInsertingEvent(element, this);
             }
@@ -594,7 +594,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="element">The OpenXmlElement element to insert.</param>
         private void ElementInsertedEvent(OpenXmlElement element)
         {
-            if (OpenXmlElementContext != null)
+            if (OpenXmlElementContext is not null)
             {
                 OpenXmlElementContext.ElementInsertedEvent(element, this);
             }
@@ -606,7 +606,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="element">The OpenXmlElement element to remove.</param>
         private void ElementRemovingEvent(OpenXmlElement element)
         {
-            if (OpenXmlElementContext != null)
+            if (OpenXmlElementContext is not null)
             {
                 OpenXmlElementContext.ElementRemovingEvent(element, this);
             }
@@ -618,7 +618,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="element">The OpenXmlElement element to be removed.</param>
         private void ElementRemovedEvent(OpenXmlElement element)
         {
-            if (OpenXmlElementContext != null)
+            if (OpenXmlElementContext is not null)
             {
                 OpenXmlElementContext.ElementRemovedEvent(element, this);
             }
@@ -658,7 +658,7 @@ namespace DocumentFormat.OpenXml
                     element.Parent = this;
 
                     bool isACB = element is AlternateContent;
-                    if (isACB && element.OpenXmlElementContext != null)
+                    if (isACB && element.OpenXmlElementContext is not null)
                     {
                         element.OpenXmlElementContext.ACBlockLevel++;
                     }
@@ -672,7 +672,7 @@ namespace DocumentFormat.OpenXml
 
                     //Process the element according to the MC behavior
                     var action = ElementAction.Normal;
-                    if (OpenXmlElementContext != null && OpenXmlElementContext.MCSettings.ProcessMode != DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode.NoProcess)
+                    if (OpenXmlElementContext is not null && OpenXmlElementContext.MCSettings.ProcessMode != DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode.NoProcess)
                     {
                         action = OpenXmlElementContext.MCContext.GetElementAction(element, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
                     }
@@ -684,7 +684,7 @@ namespace DocumentFormat.OpenXml
                         PopMcContext();
                     }
 
-                    if (isACB && element.OpenXmlElementContext != null)
+                    if (isACB && element.OpenXmlElementContext is not null)
                     {
                         element.OpenXmlElementContext.ACBlockLevel--;
                     }
@@ -731,7 +731,7 @@ namespace DocumentFormat.OpenXml
                                         }
                                     }
 
-                                    if (newnode != null)
+                                    if (newnode is not null)
                                     {
                                         AddANode(newnode);
                                     }
@@ -755,7 +755,7 @@ namespace DocumentFormat.OpenXml
 
                                 element.Parent = null;
                                 effectiveNode.Parent = null;
-                                while (effectiveNode.FirstChild != null)
+                                while (effectiveNode.FirstChild is not null)
                                 {
                                     var node = effectiveNode.FirstChild;
                                     node.Remove();
@@ -781,7 +781,7 @@ namespace DocumentFormat.OpenXml
         {
             // Reconstruct the _nsMappings for the new node based on the original node
             node.MakeSureParsed();
-            if (newnode.NamespaceDeclField != null && node.NamespaceDeclField != null)
+            if (newnode.NamespaceDeclField is not null && node.NamespaceDeclField is not null)
             {
                 newnode.NamespaceDeclField = new List<KeyValuePair<string, string>>(node.NamespaceDeclField);
             }

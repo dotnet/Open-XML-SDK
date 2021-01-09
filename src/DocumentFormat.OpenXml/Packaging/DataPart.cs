@@ -248,7 +248,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // throw exception to catch error in our code
-            if (_metroPart != null)
+            if (_metroPart is not null)
             {
                 throw new InvalidOperationException();
             }

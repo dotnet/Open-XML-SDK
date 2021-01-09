@@ -322,11 +322,11 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 writer.WriteStartElement(writeSource as OpenXmlReader);
             }
-            else if (writeSource is OpenXmlReader && attributes != null && namespaceDeclarations is null)
+            else if (writeSource is OpenXmlReader && attributes is not null && namespaceDeclarations is null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlReader, attributes);
             }
-            else if (writeSource is OpenXmlReader && attributes != null && namespaceDeclarations != null)
+            else if (writeSource is OpenXmlReader && attributes is not null && namespaceDeclarations is not null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlReader, attributes, namespaceDeclarations);
             }
@@ -334,11 +334,11 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 writer.WriteStartElement(writeSource as OpenXmlElement);
             }
-            else if (writeSource is OpenXmlElement && attributes != null && namespaceDeclarations is null)
+            else if (writeSource is OpenXmlElement && attributes is not null && namespaceDeclarations is null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlElement, attributes);
             }
-            else if (writeSource is OpenXmlElement && attributes != null && namespaceDeclarations != null)
+            else if (writeSource is OpenXmlElement && attributes is not null && namespaceDeclarations is not null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlElement, attributes);
             }
@@ -382,7 +382,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var oReader = writeSource as OpenXmlReader;
                 Log.VerifyTrue(xmlReader.LocalName == oReader.LocalName, "expected: {0} <> actual: {1}", oReader.LocalName, xmlReader.LocalName);
 
-                if (attributes != null)
+                if (attributes is not null)
                 {
                     foreach (var attr in attributes)
                     {
@@ -397,7 +397,7 @@ namespace DocumentFormat.OpenXml.Tests
                     }
                 }
 
-                if (namespaceDeclarations != null)
+                if (namespaceDeclarations is not null)
                 {
                     foreach (var ns in namespaceDeclarations)
                     {
@@ -418,7 +418,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 Log.VerifyTrue(xmlReader.LocalName == element.LocalName, "expected: {0} <> actual: {1}", element.LocalName, xmlReader.LocalName);
 
-                if (attributes != null)
+                if (attributes is not null)
                 {
                     foreach (var attr in attributes)
                     {
@@ -433,7 +433,7 @@ namespace DocumentFormat.OpenXml.Tests
                     }
                 }
 
-                if (namespaceDeclarations != null)
+                if (namespaceDeclarations is not null)
                 {
                     foreach (var ns in namespaceDeclarations)
                     {
@@ -1114,7 +1114,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var result = false;
 
-            if (reader != null && reader.EOF == false)
+            if (reader is not null && reader.EOF == false)
             {
                 result = reader.Read();
 
@@ -1123,7 +1123,7 @@ namespace DocumentFormat.OpenXml.Tests
                     result = SkipWhitespace(reader);
                 }
 
-                if (reader != null && reader.EOF == false)
+                if (reader is not null && reader.EOF == false)
                 {
                     System.Diagnostics.Debug.WriteLine("O: [{0}] {1}", reader.ElementType, reader.LocalName);
                 }
@@ -1136,7 +1136,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var result = false;
 
-            if (reader != null && reader.EOF == false)
+            if (reader is not null && reader.EOF == false)
             {
                 result = reader.Read();
 
@@ -1145,7 +1145,7 @@ namespace DocumentFormat.OpenXml.Tests
                     result = SkipWhitespace(reader);
                 }
 
-                if (reader != null && reader.EOF == false)
+                if (reader is not null && reader.EOF == false)
                 {
                     System.Diagnostics.Debug.WriteLine("X: [{0}] {1}", reader.NodeType, reader.LocalName);
                 }
@@ -1158,7 +1158,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var result = true;
 
-            if (reader != null && reader.EOF == false)
+            if (reader is not null && reader.EOF == false)
             {
                 reader.Skip();
 
@@ -1175,7 +1175,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var result = true;
 
-            if (reader != null && reader.EOF == false)
+            if (reader is not null && reader.EOF == false)
             {
                 reader.Skip();
 
@@ -1193,7 +1193,7 @@ namespace DocumentFormat.OpenXml.Tests
             var result = true;
 
             while (result == true &&
-                reader != null && reader.EOF == false &&
+                reader is not null && reader.EOF == false &&
                 reader.LocalName == "#whitespace")
             {
                 result = reader.Read();
@@ -1207,7 +1207,7 @@ namespace DocumentFormat.OpenXml.Tests
             var result = true;
 
             while (result == true &&
-                reader != null && reader.EOF == false &&
+                reader is not null && reader.EOF == false &&
                 reader.NodeType == XmlNodeType.Whitespace)
             {
                 result = reader.Read();

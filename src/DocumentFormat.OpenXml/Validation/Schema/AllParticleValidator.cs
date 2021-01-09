@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal AllParticleValidator(CompositeParticle particleConstraint)
             : base(particleConstraint)
         {
-            Debug.Assert(particleConstraint != null);
+            Debug.Assert(particleConstraint is not null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.All);
 
             // xsd:all can only contain xsd:element children and maxOccurs of each children can only be 1
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
             }
 
-            while (next != null)
+            while (next is not null)
             {
                 if (_childrenParticles.TryGetValue(next.GetType(), out bool visited))
                 {

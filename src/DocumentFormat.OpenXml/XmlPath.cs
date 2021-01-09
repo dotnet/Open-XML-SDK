@@ -167,7 +167,7 @@ namespace DocumentFormat.OpenXml
         {
             var elements = new Stack<OpenXmlElement>();
 
-            while (element != null)
+            while (element is not null)
             {
                 elements.Push(element);
                 element = element.Parent;

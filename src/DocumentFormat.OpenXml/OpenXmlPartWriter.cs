@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml
 
             _xmlWriter.WriteStartElement(elementReader.Prefix, elementReader.LocalName, elementReader.NamespaceUri);
 
-            if (namespaceDeclarations != null)
+            if (namespaceDeclarations is not null)
             {
                 foreach (var item in namespaceDeclarations)
                 {
@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            if (attributes != null)
+            if (attributes is not null)
             {
                 // write attributes
                 foreach (var attribute in attributes)
@@ -274,7 +274,7 @@ namespace DocumentFormat.OpenXml
 
             _xmlWriter.WriteStartElement(elementObject.Prefix, elementObject.LocalName, elementObject.NamespaceUri);
 
-            if (namespaceDeclarations != null)
+            if (namespaceDeclarations is not null)
             {
                 foreach (var item in namespaceDeclarations)
                 {
@@ -282,7 +282,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            if (attributes != null)
+            if (attributes is not null)
             {
                 // write attributes
                 foreach (var attribute in attributes)
@@ -356,7 +356,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override void Close()
         {
-            if (_xmlWriter != null)
+            if (_xmlWriter is not null)
             {
 #if FEATURE_CLOSE
                 _xmlWriter.Close();

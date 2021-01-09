@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml
             get
             {
                 MakeSureParsed();
-                if (RawInnerText != null)
+                if (RawInnerText is not null)
                 {
                     return _rawInnerText;
                 }
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (ShadowElement != null)
+                if (ShadowElement is not null)
                 {
                     return ShadowElement.InnerXml;
                 }
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml
         internal override void WriteContentTo(XmlWriter w)
         {
             // Write the loaded inner xml if there are any
-            if (ShadowElement != null)
+            if (ShadowElement is not null)
             {
                 ShadowElement.WriteContentTo(w);
             }

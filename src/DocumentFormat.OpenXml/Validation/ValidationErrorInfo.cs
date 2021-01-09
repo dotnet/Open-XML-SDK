@@ -71,11 +71,11 @@ namespace DocumentFormat.OpenXml.Validation
             {
                 if (_xmlPath is null)
                 {
-                    if (_element != null)
+                    if (_element is not null)
                     {
                         _xmlPath = XmlPath.GetXPath(_element);
                     }
-                    else if (Part != null)
+                    else if (Part is not null)
                     {
                         _xmlPath = XmlPath.GetXPath(Part);
                     }

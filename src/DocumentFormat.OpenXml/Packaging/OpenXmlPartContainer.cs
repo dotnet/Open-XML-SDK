@@ -630,7 +630,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 if (idPartPair.Value == part)
                 {
-                    if (oldId != null)
+                    if (oldId is not null)
                     {
                         // There are multiple relationship to the same part,
                         // This case should not exist in current design.
@@ -978,7 +978,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 else
                 {
                     var index = 0;
-                    while ((index < annotations.Length) && (annotations[index] != null))
+                    while ((index < annotations.Length) && (annotations[index] is not null))
                     {
                         index++;
                     }
@@ -1002,7 +1002,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public T Annotation<T>()
             where T : class
         {
-            if (_annotations != null)
+            if (_annotations is not null)
             {
                 var annotations = _annotations as object[];
 
@@ -1042,7 +1042,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(type));
             }
 
-            if (_annotations != null)
+            if (_annotations is not null)
             {
                 var annotations = _annotations as object[];
                 if (annotations is null)
@@ -1081,7 +1081,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public IEnumerable<T> Annotations<T>()
             where T : class
         {
-            if (_annotations != null)
+            if (_annotations is not null)
             {
                 var annotations = _annotations as object[];
                 if (annotations is null)
@@ -1122,7 +1122,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(type));
             }
 
-            if (_annotations != null)
+            if (_annotations is not null)
             {
                 var annotations = _annotations as object[];
                 if (annotations is null)
@@ -1158,7 +1158,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public void RemoveAnnotations<T>()
             where T : class
         {
-            if (_annotations != null)
+            if (_annotations is not null)
             {
                 var annotations = _annotations as object[];
                 if (annotations is null)
@@ -1214,7 +1214,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(type));
             }
 
-            if (_annotations != null)
+            if (_annotations is not null)
             {
                 var annotations = _annotations as object[];
                 if (annotations is null)
@@ -1346,7 +1346,7 @@ namespace DocumentFormat.OpenXml.Packaging
             ThrowIfObjectDisposed();
 
             //validate id
-            if (id != null)
+            if (id is not null)
             {
                 if (id.Length == 0)
                 {
@@ -1382,7 +1382,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentOutOfRangeException(nameof(T), ExceptionMessages.ExtendedPartNotAllowed);
             }
 
-            if (contentType != null && part.IsContentTypeFixed && !string.Equals(contentType, part.ContentType, StringComparison.Ordinal))
+            if (contentType is not null && part.IsContentTypeFixed && !string.Equals(contentType, part.ContentType, StringComparison.Ordinal))
             {
                 throw new ArgumentOutOfRangeException(nameof(contentType), ExceptionMessages.ErrorContentType);
             }
@@ -1441,7 +1441,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
-                    if (GetSubPartOfType<T>() != null)
+                    if (GetSubPartOfType<T>() is not null)
                     {
                         // already have one, can not add new one.
                         throw new OpenXmlPackageException(ExceptionMessages.OnlyOnePartAllowed);
@@ -1449,7 +1449,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 // Invalid part (same relationship type, but wrong (is different to be expected )content type
-                if (partConstraintRule.PartContentType != null && contentType != partConstraintRule.PartContentType)
+                if (partConstraintRule.PartContentType is not null && contentType != partConstraintRule.PartContentType)
                 {
                     throw new ArgumentOutOfRangeException(nameof(newPart));
                 }
@@ -1502,7 +1502,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (IsChildPart(subPart))
                 {
-                    if (rId != null && rId != GetIdOfPart(subPart))
+                    if (rId is not null && rId != GetIdOfPart(subPart))
                     {
                         // Do NOT allow one sub part is referenced more than once.
                         throw new InvalidOperationException(ExceptionMessages.PartExistsWithDifferentRelationshipId);
@@ -1529,7 +1529,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
             else
             {
-                if (partConstraintRule.PartContentType != null && subPart.ContentType != partConstraintRule.PartContentType)
+                if (partConstraintRule.PartContentType is not null && subPart.ContentType != partConstraintRule.PartContentType)
                 {
                     throw new InvalidOperationException(ExceptionMessages.AddedPartIsNotAllowed);
                 }
@@ -1544,7 +1544,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     // return SetSubPart(subPart, rId);
                     var child = GetSubPart(subPart.RelationshipType);
 
-                    if (child != null)
+                    if (child is not null)
                     {
                         throw new OpenXmlPackageException(ExceptionMessages.OnlyOnePartAllowed);
                     }
@@ -1571,7 +1571,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // delete the old one
             //OpenXmlPart child = this.GetSubPart(part.RelationshipType);
 
-            //if (child != null)
+            //if (child is not null)
             //{
             //    // already have one, remove
             //    // TODO: should we throw?
@@ -1732,7 +1732,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 foreach (var dataPartReferenceRelationship in part.DataPartReferenceRelationships)
                 {
                     var newDataPart = (MediaDataPart)dataPartsDictionary[dataPartReferenceRelationship.DataPart];
-                    Debug.Assert(newDataPart != null);
+                    Debug.Assert(newDataPart is not null);
 
                     var newDataPartReference = DataPartReferenceRelationship.CreateDataPartReferenceRelationship(this, newDataPart, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
                     ReferenceRelationshipList.AddLast(newDataPartReference);
@@ -2131,8 +2131,8 @@ namespace DocumentFormat.OpenXml.Packaging
         // Checks if the target part is in the same OpenXmlPackage as this part.
         private bool IsInSamePackage(OpenXmlPart targetPart)
         {
-            return InternalOpenXmlPackage != null &&
-                targetPart.OpenXmlPackage != null &&
+            return InternalOpenXmlPackage is not null &&
+                targetPart.OpenXmlPackage is not null &&
                 targetPart.OpenXmlPackage == InternalOpenXmlPackage;
         }
     }

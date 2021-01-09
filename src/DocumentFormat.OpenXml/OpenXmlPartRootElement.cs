@@ -132,7 +132,7 @@ namespace DocumentFormat.OpenXml
                 if (xmlReader.NodeType == XmlNodeType.XmlDeclaration)
                 {
                     string standaloneAttribute = xmlReader.GetAttribute("standalone");
-                    if (standaloneAttribute != null)
+                    if (standaloneAttribute is not null)
                     {
                         _standaloneDeclaration = standaloneAttribute.Equals("yes", StringComparison.OrdinalIgnoreCase);
                     }
@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml
 
             using (XmlWriter xmlWriter = XmlWriter.Create(stream, settings))
             {
-                if (_standaloneDeclaration != null)
+                if (_standaloneDeclaration is not null)
                 {
                     xmlWriter.WriteStartDocument(_standaloneDeclaration.Value);
                 }
@@ -292,7 +292,7 @@ namespace DocumentFormat.OpenXml
                 string prefix = LookupNamespaceLocal(NamespaceUri);
 
                 //if not defined in the current node, try the xmlWriter
-                if (Parent != null && string.IsNullOrEmpty(prefix))
+                if (Parent is not null && string.IsNullOrEmpty(prefix))
                 {
                     prefix = xmlWriter.LookupPrefix(NamespaceUri);
                 }
@@ -334,7 +334,7 @@ namespace DocumentFormat.OpenXml
 
                 foreach (OpenXmlElement element in Descendants())
                 {
-                    if (element.NamespaceDeclField != null)
+                    if (element.NamespaceDeclField is not null)
                     {
                         foreach (var item in element.NamespaceDeclField)
                         {
@@ -350,7 +350,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (!string.IsNullOrEmpty(namespacePair.Key))
                     {
-                        if (NamespaceDeclField != null &&
+                        if (NamespaceDeclField is not null &&
                             string.IsNullOrEmpty(LookupPrefixLocal(namespacePair.Value)) &&
                             string.IsNullOrEmpty(LookupNamespaceLocal(namespacePair.Key)))
                         {
