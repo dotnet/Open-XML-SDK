@@ -1784,37 +1784,13 @@ namespace DocumentFormat.OpenXml
         }
 
         internal OpenXmlElement ElementFactory(XmlReader xmlReader)
-        {
-            switch (xmlReader.NodeType)
+            => xmlReader.NodeType switch
             {
-                case XmlNodeType.Element:
-                    return ElementFactory(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI);
-
-                case XmlNodeType.Comment:
-                case XmlNodeType.ProcessingInstruction:
-                case XmlNodeType.XmlDeclaration:
-                    return new OpenXmlMiscNode(xmlReader.NodeType);
-
-                case XmlNodeType.Text:
-                case XmlNodeType.CDATA:
-                case XmlNodeType.SignificantWhitespace:
-                case XmlNodeType.Whitespace:
-                    return new OpenXmlMiscNode(xmlReader.NodeType);
-
-                case XmlNodeType.Attribute:
-                case XmlNodeType.Document:
-                case XmlNodeType.DocumentFragment:
-                case XmlNodeType.DocumentType: // not allowed when DtdProcessing = DtdProcessing.Prohibit
-                case XmlNodeType.EndElement:
-                case XmlNodeType.EndEntity:
-                case XmlNodeType.Entity: // not allowed when DtdProcessing = DtdProcessing.Prohibit
-                case XmlNodeType.EntityReference:
-                case XmlNodeType.Notation: // not allowed when DtdProcessing = DtdProcessing.Prohibit
-                case XmlNodeType.None:
-                default:
-                    throw new InvalidOperationException();
-            }
-        }
+                XmlNodeType.Element => ElementFactory(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI),
+                XmlNodeType.Comment or XmlNodeType.ProcessingInstruction or XmlNodeType.XmlDeclaration => new OpenXmlMiscNode(xmlReader.NodeType),
+                XmlNodeType.Text or XmlNodeType.CDATA or XmlNodeType.SignificantWhitespace or XmlNodeType.Whitespace => new OpenXmlMiscNode(xmlReader.NodeType),
+                _ => throw new InvalidOperationException(),
+            };
 
         internal OpenXmlElement ElementFactory(string prefix, string name, string namespaceUri)
         {

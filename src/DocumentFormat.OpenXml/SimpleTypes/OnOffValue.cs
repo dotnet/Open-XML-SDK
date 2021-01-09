@@ -43,22 +43,12 @@ namespace DocumentFormat.OpenXml
         /// <param name="textValue">The text value which could be 'true', 'false', 'on', 'off', '0', or '1'.</param>
         /// <returns>True for 'true', 'on', '0', or '1'.</returns>
         private protected override bool Parse(string? textValue)
-        {
-            switch (textValue)
+            => textValue switch
             {
-                case "true":
-                case "1":
-                case "on":
-                    return true;
-                case "false":
-                case "0":
-                case "off":
-                case null:
-                    return false;
-                default:
-                    throw new FormatException(ExceptionMessages.TextIsInvalidOnOffValue);
-            }
-        }
+                "true" or "1" or "on" => true,
+                "false" or "0" or "off" or null => false,
+                _ => throw new FormatException(ExceptionMessages.TextIsInvalidOnOffValue),
+            };
 
         private protected override bool ShouldParse(string? value) => value is not null;
 

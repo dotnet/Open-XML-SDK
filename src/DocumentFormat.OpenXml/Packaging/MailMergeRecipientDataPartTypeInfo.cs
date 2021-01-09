@@ -8,21 +8,14 @@ namespace DocumentFormat.OpenXml.Packaging
     internal static class MailMergeRecipientDataPartTypeInfo
     {
         internal static string GetContentType(MailMergeRecipientDataPartType mailMergeRecipientDataPartType)
-        {
-            switch (mailMergeRecipientDataPartType)
+            => mailMergeRecipientDataPartType switch
             {
-                case MailMergeRecipientDataPartType.OpenXmlMailMergeRecipientData:
-                    return "application/vnd.openxmlformats-officedocument.wordprocessingml.mailMergeRecipientData+xml";
-                case MailMergeRecipientDataPartType.MsWordMailMergeRecipientData:
-                    return "application/vnd.ms-word.mailMergeRecipientData+xml";
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(mailMergeRecipientDataPartType));
-            }
-        }
+                MailMergeRecipientDataPartType.OpenXmlMailMergeRecipientData => "application/vnd.openxmlformats-officedocument.wordprocessingml.mailMergeRecipientData+xml",
+                MailMergeRecipientDataPartType.MsWordMailMergeRecipientData => "application/vnd.ms-word.mailMergeRecipientData+xml",
+                _ => throw new ArgumentOutOfRangeException(nameof(mailMergeRecipientDataPartType)),
+            };
 
         internal static string GetTargetExtension(MailMergeRecipientDataPartType mailMergeRecipientDataPartType)
-        {
-            return ".xml";
-        }
+            => ".xml";
     }
 }

@@ -513,41 +513,20 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(relationshipType));
             }
 
-            switch (relationshipType)
+            return relationshipType switch
             {
-                case MainDocumentPart.RelationshipTypeConstant:
-                    return new MainDocumentPart();
-
-                case CoreFilePropertiesPart.RelationshipTypeConstant:
-                    return new CoreFilePropertiesPart();
-
-                case ExtendedFilePropertiesPart.RelationshipTypeConstant:
-                    return new ExtendedFilePropertiesPart();
-
-                case CustomFilePropertiesPart.RelationshipTypeConstant:
-                    return new CustomFilePropertiesPart();
-
-                case ThumbnailPart.RelationshipTypeConstant:
-                    return new ThumbnailPart();
-
-                case DigitalSignatureOriginPart.RelationshipTypeConstant:
-                    return new DigitalSignatureOriginPart();
-
-                case QuickAccessToolbarCustomizationsPart.RelationshipTypeConstant:
-                    return new QuickAccessToolbarCustomizationsPart();
-
-                case RibbonExtensibilityPart.RelationshipTypeConstant:
-                    return new RibbonExtensibilityPart();
-
-                // Fix for O15:#258840
-                case RibbonAndBackstageCustomizationsPart.RelationshipTypeConstant:
-                    return new RibbonAndBackstageCustomizationsPart();
-
-                case WebExTaskpanesPart.RelationshipTypeConstant:
-                    return new WebExTaskpanesPart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
+                MainDocumentPart.RelationshipTypeConstant => new MainDocumentPart(),
+                CoreFilePropertiesPart.RelationshipTypeConstant => new CoreFilePropertiesPart(),
+                ExtendedFilePropertiesPart.RelationshipTypeConstant => new ExtendedFilePropertiesPart(),
+                CustomFilePropertiesPart.RelationshipTypeConstant => new CustomFilePropertiesPart(),
+                ThumbnailPart.RelationshipTypeConstant => new ThumbnailPart(),
+                DigitalSignatureOriginPart.RelationshipTypeConstant => new DigitalSignatureOriginPart(),
+                QuickAccessToolbarCustomizationsPart.RelationshipTypeConstant => new QuickAccessToolbarCustomizationsPart(),
+                RibbonExtensibilityPart.RelationshipTypeConstant => new RibbonExtensibilityPart(),
+                RibbonAndBackstageCustomizationsPart.RelationshipTypeConstant => new RibbonAndBackstageCustomizationsPart(),
+                WebExTaskpanesPart.RelationshipTypeConstant => new WebExTaskpanesPart(),
+                _ => throw new ArgumentOutOfRangeException(nameof(relationshipType)),
+            };
         }
 
         /// <summary>
