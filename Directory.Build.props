@@ -112,7 +112,7 @@
         <ProductTargetFrameworks>netstandard1.3;netstandard2.0;net35;net40;net46</ProductTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard1.3</AssetsTargetFrameworks>
         <TestTargetFrameworks>net452;net46;netcoreapp1.1;netcoreapp2.1;netcoreapp3.1;net5.0</TestTargetFrameworks>
-        <BenchmarkTargetFramework>netcoreapp3.1;net5.0</BenchmarkTargetFramework>
+        <BenchmarkTargetFramework>net5.0</BenchmarkTargetFramework>
         <SamplesFrameworks>net46;netcoreapp2.1;netcoreapp3.1;net5.0</SamplesFrameworks>
 
         <!-- Must disable this due to https://github.com/NuGet/Home/issues/7414 so .NET Core 1.x will build -->
@@ -144,7 +144,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>9.0</LangVersion>
     <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)\rules.ruleset</CodeAnalysisRuleSet>
 
     <!-- Signing -->
