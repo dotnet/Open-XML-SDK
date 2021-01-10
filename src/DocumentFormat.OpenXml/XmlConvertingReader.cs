@@ -57,13 +57,13 @@ namespace DocumentFormat.OpenXml
         public override string GetAttribute(int index) => BaseReader.GetAttribute(index);
 
         /// <inheritdoc/>
-        public override string GetAttribute(string name) => BaseReader.GetAttribute(name);
+        public override string? GetAttribute(string name) => BaseReader.GetAttribute(name);
 
         /// <inheritdoc/>
-        public override string GetAttribute(string localName, string namespaceURI) => BaseReader.GetAttribute(localName, namespaceURI);
+        public override string? GetAttribute(string localName, string? namespaceURI) => BaseReader.GetAttribute(localName, namespaceURI);
 
         /// <inheritdoc/>
-        public override string LookupNamespace(string prefix) => BaseReader.LookupNamespace(prefix);
+        public override string? LookupNamespace(string prefix) => BaseReader.LookupNamespace(prefix);
 
         /// <inheritdoc/>
         public override void MoveToAttribute(int index) => BaseReader.MoveToAttribute(index);
@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml
         public override bool MoveToAttribute(string name) => BaseReader.MoveToAttribute(name);
 
         /// <inheritdoc/>
-        public override bool MoveToAttribute(string localName, string namespaceURI) => BaseReader.MoveToAttribute(localName, namespaceURI);
+        public override bool MoveToAttribute(string localName, string? namespaceURI) => BaseReader.MoveToAttribute(localName, namespaceURI);
 
         /// <inheritdoc/>
         public override bool MoveToElement() => BaseReader.MoveToElement();
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml
         public override int AttributeCount => BaseReader.AttributeCount;
 
         /// <inheritdoc/>
-        public override string BaseURI => BaseReader.BaseURI;
+        public override string? BaseURI => BaseReader.BaseURI;
 
         /// <inheritdoc/>
         public override bool CanReadBinaryContent => BaseReader.CanReadBinaryContent;
@@ -126,10 +126,10 @@ namespace DocumentFormat.OpenXml
         public override string this[int index] => BaseReader[index];
 
         /// <inheritdoc/>
-        public override string this[string name] => BaseReader[name];
+        public override string? this[string name] => BaseReader[name];
 
         /// <inheritdoc/>
-        public override string this[string name, string namespaceURI] => BaseReader[name, namespaceURI];
+        public override string? this[string name, string? namespaceURI] => BaseReader[name, namespaceURI];
 
         /// <inheritdoc/>
         public override string LocalName => BaseReader.LocalName;

@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(float input) => XmlConvert.ToString(input);
 
-        private protected override float Parse(string? input) => XmlConvert.ToSingle(input);
+        private protected override float Parse(string input) => XmlConvert.ToSingle(input);
 
         /// <summary>
         /// Implicitly converts the specified <see cref="SingleValue"/> object to a <see cref="float"/> value.

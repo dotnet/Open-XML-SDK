@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             }
         }
 
-        public int CompareTo(ParticlePath other)
+        public int CompareTo(ParticlePath? other)
             => CompareTo(other, true);
 
         public override string ToString()
@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             => string.Join(", ", (IEnumerable<ParticlePathItem>)_values);
 #endif
 
-        private int CompareTo(ParticlePath other, bool isCompare)
+        private int CompareTo(ParticlePath? other, bool isCompare)
         {
             if (other is null)
             {
@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
         public bool IsSibling(ParticlePath? other)
           => Equals(other, _values.Length - 1);
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj is ParticlePath path)
             {
@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
         /// </summary>
         /// <param name="other"></param>
         /// <returns></returns>
-        public bool Equals(ParticlePath other)
+        public bool Equals(ParticlePath? other)
             => CompareTo(other, false) == 0;
 
         public override int GetHashCode()

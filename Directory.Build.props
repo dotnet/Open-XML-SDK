@@ -16,7 +16,7 @@
          - net5_0:             .NET 5.0
          - All: Will build for all platforms
          -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">netcoreapp3_1</ProjectLoadStyle>
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">net5_0</ProjectLoadStyle>
     <__InvalidProjectLoadStyle>false</__InvalidProjectLoadStyle>
   </PropertyGroup>
 
@@ -98,7 +98,7 @@
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'net5_0' ">
       <PropertyGroup>
-        <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
+        <ProductTargetFrameworks>net5.0</ProductTargetFrameworks>
         <TestTargetFrameworks>net5.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard1.3</AssetsTargetFrameworks>
         <BenchmarkTargetFramework>net5.0</BenchmarkTargetFramework>

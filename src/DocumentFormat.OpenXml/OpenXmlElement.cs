@@ -2319,7 +2319,12 @@ namespace DocumentFormat.OpenXml
 
         internal static void SplitName(string name, out string prefix, out string localName)
         {
+#if NET5_0
+            var length = name.IndexOf(':', StringComparison.Ordinal);
+#else
             var length = name.IndexOf(':');
+#endif
+
             if (((length == -1) || (length == 0)) || ((name.Length - 1) == length))
             {
                 prefix = string.Empty;

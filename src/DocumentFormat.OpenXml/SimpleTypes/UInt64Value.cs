@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(ulong input) => XmlConvert.ToString(input);
 
-        private protected override ulong Parse(string? input) => XmlConvert.ToUInt64(input);
+        private protected override ulong Parse(string input) => XmlConvert.ToUInt64(input);
 
         /// <summary>
         /// Implicitly converts the specified <see cref="UInt64Value"/> object to a <see cref="ulong"/> value.

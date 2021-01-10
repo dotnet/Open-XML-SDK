@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(bool input) => input ? "1" : "0";
 
-        private protected override bool Parse(string? input) => XmlConvert.ToBoolean(input);
+        private protected override bool Parse(string input) => XmlConvert.ToBoolean(input);
 
         /// <summary>
         /// Implicitly converts the specified value to a <see cref="bool"/> value.

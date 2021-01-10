@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Framework
             return null;
         }
 
-        public int Compare(OpenXmlElement x, OpenXmlElement y)
+        public int Compare(OpenXmlElement? x, OpenXmlElement? y)
         {
             var xPath = Find(x?.GetType());
             var yPath = Find(y?.GetType());

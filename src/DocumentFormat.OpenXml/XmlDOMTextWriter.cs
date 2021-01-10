@@ -27,19 +27,19 @@ namespace DocumentFormat.OpenXml
 
         public override void Flush() => _writer.Flush();
 
-        public override string LookupPrefix(string ns) => _writer.LookupPrefix(ns);
+        public override string? LookupPrefix(string ns) => _writer.LookupPrefix(ns);
 
         public override void WriteBase64(byte[] buffer, int index, int count) => _writer.WriteBase64(buffer, index, count);
 
-        public override void WriteCData(string text) => _writer.WriteCData(text);
+        public override void WriteCData(string? text) => _writer.WriteCData(text);
 
         public override void WriteCharEntity(char ch) => _writer.WriteCharEntity(ch);
 
         public override void WriteChars(char[] buffer, int index, int count) => _writer.WriteChars(buffer, index, count);
 
-        public override void WriteComment(string text) => _writer.WriteComment(text);
+        public override void WriteComment(string? text) => _writer.WriteComment(text);
 
-        public override void WriteDocType(string name, string pubid, string sysid, string subset) => _writer.WriteDocType(name, pubid, sysid, subset);
+        public override void WriteDocType(string name, string? pubid, string? sysid, string? subset) => _writer.WriteDocType(name, pubid, sysid, subset);
 
         public override void WriteEndAttribute() => _writer.WriteEndAttribute();
 
@@ -51,13 +51,13 @@ namespace DocumentFormat.OpenXml
 
         public override void WriteFullEndElement() => _writer.WriteFullEndElement();
 
-        public override void WriteProcessingInstruction(string name, string text) => _writer.WriteProcessingInstruction(name, text);
+        public override void WriteProcessingInstruction(string name, string? text) => _writer.WriteProcessingInstruction(name, text);
 
         public override void WriteRaw(string data) => _writer.WriteRaw(data);
 
         public override void WriteRaw(char[] buffer, int index, int count) => _writer.WriteRaw(buffer, index, count);
 
-        public override void WriteStartAttribute(string prefix, string localName, string ns)
+        public override void WriteStartAttribute(string? prefix, string localName, string? ns)
         {
             if (string.IsNullOrEmpty(localName))
             {
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml
 
         public override void WriteStartDocument(bool standalone) => _writer.WriteStartDocument(standalone);
 
-        public override void WriteStartElement(string prefix, string localName, string ns)
+        public override void WriteStartElement(string? prefix, string localName, string? ns)
         {
             if (string.IsNullOrEmpty(localName))
             {
@@ -111,7 +111,7 @@ namespace DocumentFormat.OpenXml
             _writer.WriteStartElement(prefix, localName, ns);
         }
 
-        public override void WriteString(string text)
+        public override void WriteString(string? text)
         {
             if (!string.IsNullOrEmpty(text))
             {
@@ -121,11 +121,11 @@ namespace DocumentFormat.OpenXml
 
         public override void WriteSurrogateCharEntity(char lowChar, char highChar) => _writer.WriteSurrogateCharEntity(lowChar, highChar);
 
-        public override void WriteWhitespace(string ws) => _writer.WriteWhitespace(ws);
+        public override void WriteWhitespace(string? ws) => _writer.WriteWhitespace(ws);
 
-        public override XmlWriterSettings Settings => _writer.Settings;
+        public override XmlWriterSettings? Settings => _writer.Settings;
 
-        public override string XmlLang => _writer.XmlLang;
+        public override string? XmlLang => _writer.XmlLang;
 
         public override XmlSpace XmlSpace => _writer.XmlSpace;
 

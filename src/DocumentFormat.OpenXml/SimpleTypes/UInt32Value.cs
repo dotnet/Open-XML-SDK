@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(uint input) => XmlConvert.ToString(input);
 
-        private protected override uint Parse(string? input) => XmlConvert.ToUInt32(input);
+        private protected override uint Parse(string input) => XmlConvert.ToUInt32(input);
 
         /// <summary>
         /// Implicitly converts the specified <see cref="UInt32Value"/> class to a <see cref="uint"/> value.

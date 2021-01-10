@@ -222,7 +222,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override OpenXmlSimpleType CloneImpl() => new ListValue<T>(this);
 
-        private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        private void CollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
         {
             // clear the TextValue when the collection is changed.
             TextValue = null;

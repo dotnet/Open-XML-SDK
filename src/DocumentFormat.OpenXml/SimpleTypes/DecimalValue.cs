@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(decimal input) => XmlConvert.ToString(input);
 
-        private protected override decimal Parse(string? input) => XmlConvert.ToDecimal(input);
+        private protected override decimal Parse(string input) => XmlConvert.ToDecimal(input);
 
         /// <summary>
         /// Implicitly converts the specified value to a <see cref="decimal"/> value.

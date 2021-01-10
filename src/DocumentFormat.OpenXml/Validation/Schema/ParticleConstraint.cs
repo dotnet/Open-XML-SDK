@@ -3,7 +3,11 @@
 
 #nullable disable
 
+#if NET5_0
+using System;
+#else
 using DocumentFormat.OpenXml.Framework;
+#endif
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {

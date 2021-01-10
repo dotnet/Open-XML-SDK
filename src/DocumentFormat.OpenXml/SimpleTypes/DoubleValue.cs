@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(double input) => XmlConvert.ToString(input);
 
-        private protected override double Parse(string? input) => XmlConvert.ToDouble(input);
+        private protected override double Parse(string input) => XmlConvert.ToDouble(input);
 
         /// <summary>
         /// Implicitly converts the specified value to a <see cref="double"/> value.

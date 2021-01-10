@@ -233,7 +233,7 @@ namespace DocumentFormat.OpenXml.Framework
                         errorType: ValidationErrorType.Schema);
                 }
             }
-            else if (Pattern is not null && Regex is Regex regex && !regex.IsMatch(str.Value))
+            else if (Pattern is not null && Regex is Regex regex && str.Value is not null && !regex.IsMatch(str.Value))
             {
                 context.CreateError(
                     id: id,

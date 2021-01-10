@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Convert the text to meaningful value.
         /// </summary>
-        private protected override DateTime Parse(string? input) => XmlConvert.ToDateTime(TextValue, XmlDateTimeSerializationMode.Utc);
+        private protected override DateTime Parse(string input) => XmlConvert.ToDateTime(input, XmlDateTimeSerializationMode.Utc);
 
         /// <summary>
         /// Implicitly converts the specified value to a <see cref="DateTime"/> value.
