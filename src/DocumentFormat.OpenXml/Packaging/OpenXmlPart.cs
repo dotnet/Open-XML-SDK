@@ -133,15 +133,15 @@ namespace DocumentFormat.OpenXml.Packaging
         // get app specific TargetPath if exists
         internal string GetTargetPath(string defaultPath)
         {
-            if (TargetPathOfWord is not null && _openXmlPackage is WordprocessingDocument)
+            if (TargetPathOfWord is not null && _openXmlPackage.ApplicationType == ApplicationType.Word)
             {
                 return TargetPathOfWord;
             }
-            else if (TargetPathOfExcel is not null && _openXmlPackage is SpreadsheetDocument)
+            else if (TargetPathOfExcel is not null && _openXmlPackage.ApplicationType == ApplicationType.Excel)
             {
                 return TargetPathOfExcel;
             }
-            else if (TargetPathOfPPT is not null && _openXmlPackage is PresentationDocument)
+            else if (TargetPathOfPPT is not null && _openXmlPackage.ApplicationType == ApplicationType.PowerPoint)
             {
                 return TargetPathOfPPT;
             }
