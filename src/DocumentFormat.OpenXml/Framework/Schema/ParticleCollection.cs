@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
         public struct Enumerator : IEnumerator<OpenXmlElement>
         {
             private readonly Type _type;
-            private OpenXmlElement _child;
+            private OpenXmlElement? _child;
 
             internal Enumerator(OpenXmlElement element, Type type)
             {
@@ -290,7 +290,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                     }
                     else
                     {
-                        Current = Current.Next;
+                        Current = Current.Next!;
 
                         if (IsComplete)
                         {

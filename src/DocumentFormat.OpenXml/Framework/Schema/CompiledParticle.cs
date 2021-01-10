@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public ParticleConstraint Particle { get; }
 
-        public ParticlePath? Find(object obj)
+        public ParticlePath? Find(object? obj)
             => Find(obj?.GetType());
 
         public ParticlePath? Find(Type? type)
