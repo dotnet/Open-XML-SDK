@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -222,7 +221,7 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            var wasAdded = SetElement(newChild);
+            var wasAdded = Metadata.Particle.Set(this, newChild, newChild?.GetType());
 
             if (throwOnError && !wasAdded)
             {
@@ -789,7 +788,8 @@ namespace DocumentFormat.OpenXml
         private protected TElement GetElement<TElement>()
             where TElement : OpenXmlElement => Metadata.Particle.Get<TElement>(this);
 
-        private protected bool SetElement(OpenXmlElement value)
+        private protected bool SetElement<TElement>(TElement value)
+            where TElement : OpenXmlElement
             => Metadata.Particle.Set(this, value);
 
         private void AddANode(OpenXmlElement node)
