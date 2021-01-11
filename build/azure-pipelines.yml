@@ -1,11 +1,13 @@
 trigger:
 - master
+- release/*
 
 pr:
   autoCancel: true
   branches:
     include:
     - master
+    - release/*
 
 variables:
   RunPeVerify: true
