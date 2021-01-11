@@ -5,6 +5,7 @@
 
 using DocumentFormat.OpenXml.Framework.Schema;
 using DocumentFormat.OpenXml.Validation.Schema;
+using System;
 
 namespace DocumentFormat.OpenXml.Framework
 {
@@ -45,19 +46,23 @@ namespace DocumentFormat.OpenXml.Framework
             return null;
         }
 
-        public static bool Set(this CompiledParticle compiled, OpenXmlCompositeElement parent, OpenXmlElement value)
+        public static bool Set<T>(this CompiledParticle compiled, OpenXmlCompositeElement parent, T value)
+            where T : OpenXmlElement
+            => Set(compiled, parent, value, typeof(T));
+
+        public static bool Set(this CompiledParticle compiled, OpenXmlCompositeElement parent, OpenXmlElement value, Type type)
         {
+            if (type is null)
+            {
+                return false;
+            }
+
             if (compiled is null)
             {
                 return false;
             }
 
-            if (value is null)
-            {
-                return false;
-            }
-
-            var collection = new ParticleCollection(value.GetType(), compiled, parent);
+            var collection = new ParticleCollection(type, compiled, parent);
 
             collection.Clear();
             return collection.Add(value);
