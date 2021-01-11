@@ -281,7 +281,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                 {
                     if (Current is null)
                     {
-                        Current = _collection._element.FirstChild;
+                        Current = _collection._element.FirstChild!;
 
                         if (Current is null)
                         {
