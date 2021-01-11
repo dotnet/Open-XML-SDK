@@ -1,7 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.IO;
@@ -89,7 +91,7 @@ namespace DocumentFormat.OpenXml.Tests
             target = p.GetPartUri();
             Assert.Null(target);
 
-            using ( var stream = new MemoryStream() )
+            using (var stream = new MemoryStream())
             using (var doc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
                 doc.AddMainDocumentPart();
@@ -117,12 +119,12 @@ namespace DocumentFormat.OpenXml.Tests
             target = p.FirstChild.GetXPathIndex();
             Assert.Equal(1, target);
 
-            var run1 = p.AppendChild( new Run() );
-            var run2 = p.AppendChild( new Run() );
-            var bk1 = p.AppendChild( new BookmarkStart());
-            var unknown1 = p.AppendChild( new OpenXmlUnknownElement("unknown") );
-            var unknown2 = p.AppendChild( new OpenXmlUnknownElement("unknown") );
-            var run3 = p.AppendChild(new Run() );
+            var run1 = p.AppendChild(new Run());
+            var run2 = p.AppendChild(new Run());
+            var bk1 = p.AppendChild(new BookmarkStart());
+            var unknown1 = p.AppendChild(new OpenXmlUnknownElement("unknown"));
+            var unknown2 = p.AppendChild(new OpenXmlUnknownElement("unknown"));
+            var run3 = p.AppendChild(new Run());
 
             target = run1.GetXPathIndex();
             Assert.Equal(1, target);
@@ -177,6 +179,42 @@ namespace DocumentFormat.OpenXml.Tests
             var openXmlElement = new Document();
             openXmlElement.RawOuterXml = string.Empty;
             Assert.Equal(string.Empty, openXmlElement.RawOuterXml);
+        }
+
+        [Fact]
+        public void CanSetNullValue()
+        {
+            var cell = new WithChildElement
+            {
+                Child = new ChildElement(),
+            };
+
+            Assert.NotNull(cell.Child);
+
+            cell.Child = null;
+
+            Assert.Null(cell.Child);
+        }
+
+        private class WithChildElement : OpenXmlCompositeElement
+        {
+            public ChildElement Child
+            {
+                get => GetElement<ChildElement>();
+                set => SetElement(value);
+            }
+
+            internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+            {
+                builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+                {
+                    new ElementParticle(typeof(ChildElement), 0, 1),
+                };
+            }
+        }
+
+        private class ChildElement : OpenXmlLeafElement
+        {
         }
     }
 }
