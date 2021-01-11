@@ -22,9 +22,7 @@ namespace DocumentFormat.OpenXml
         {
             if (_container.HasChildren && _container.FirstChild is not null)
             {
-                for ( OpenXmlElement element = _container.FirstChild;
-                      element is not null;
-                      element = element.NextSibling() )
+                for (var element = _container.FirstChild; element is not null; element = element.NextSibling())
                 {
                     yield return element;
                 }
@@ -39,9 +37,7 @@ namespace DocumentFormat.OpenXml
         {
             if (_container.HasChildren)
             {
-                for (OpenXmlElement element = _container.FirstChild;
-                          element is not null;
-                          element = element.NextSibling())
+                for (var element = _container.FirstChild; element is not null; element = element.NextSibling())
                 {
                     if (index == 0)
                     {
@@ -63,9 +59,7 @@ namespace DocumentFormat.OpenXml
                 int num = 0;
                 if (_container.HasChildren)
                 {
-                    for (OpenXmlElement element = _container.FirstChild;
-                              element is not null;
-                              element = element.NextSibling())
+                    for (var element = _container.FirstChild; element is not null; element = element.NextSibling())
                     {
                         num++;
                     }

@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 _builder = builder;
             }
 
-            public Builder<TElement> AddAttribute<TSimpleType>(byte nsId, string localName, Expression<Func<TElement, TSimpleType>> expression, Action<AttributeMetadata.Builder<TSimpleType>>? action = null)
+            public Builder<TElement> AddAttribute<TSimpleType>(byte nsId, string localName, Expression<Func<TElement, TSimpleType?>> expression, Action<AttributeMetadata.Builder<TSimpleType>>? action = null)
                 where TSimpleType : OpenXmlSimpleType, new()
             {
                 if (expression.Body is MemberExpression member)
