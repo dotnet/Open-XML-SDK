@@ -6,6 +6,7 @@ pr:
   branches:
     include:
     - master
+    - release/*
 
 variables:
   RunPeVerify: true
