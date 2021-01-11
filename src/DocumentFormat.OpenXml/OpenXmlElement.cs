@@ -154,15 +154,7 @@ namespace DocumentFormat.OpenXml
         {
             get => _rawOuterXml;
 
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                {
-                    _rawOuterXml = string.Empty;
-                }
-
-                _rawOuterXml = value;
-            }
+            set => _rawOuterXml = value ?? string.Empty;
         }
 
         private Framework.Metadata.ElementState _state;
