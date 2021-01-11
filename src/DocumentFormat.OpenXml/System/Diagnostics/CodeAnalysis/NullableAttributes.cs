@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#pragma warning disable SA1402 // File may only contain a single type
+
 namespace System.Diagnostics.CodeAnalysis
 {
     /// <summary>
@@ -47,7 +49,7 @@ namespace System.Diagnostics.CodeAnalysis
         /// </param>
         public MaybeNullWhenAttribute(bool returnValue) => ReturnValue = returnValue;
 
-        /// <summary>Gets the return value condition.</summary>
+        /// <summary>Gets a value indicating whether the return value condition.</summary>
         public bool ReturnValue { get; }
     }
 
@@ -63,7 +65,7 @@ namespace System.Diagnostics.CodeAnalysis
         /// </param>
         public NotNullWhenAttribute(bool returnValue) => ReturnValue = returnValue;
 
-        /// <summary>Gets the return value condition.</summary>
+        /// <summary>Gets a value indicating whether the return value condition.</summary>
         public bool ReturnValue { get; }
     }
 
@@ -104,7 +106,7 @@ namespace System.Diagnostics.CodeAnalysis
         /// </param>
         public DoesNotReturnIfAttribute(bool parameterValue) => ParameterValue = parameterValue;
 
-        /// <summary>Gets the condition parameter value.</summary>
+        /// <summary>Gets a value indicating whether the condition parameter value.</summary>
         public bool ParameterValue { get; }
     }
 
@@ -162,7 +164,7 @@ namespace System.Diagnostics.CodeAnalysis
             Members = members;
         }
 
-        /// <summary>Gets the return value condition.</summary>
+        /// <summary>Gets a value indicating whether the return value condition.</summary>
         public bool ReturnValue { get; }
 
         /// <summary>Gets field or property member names.</summary>

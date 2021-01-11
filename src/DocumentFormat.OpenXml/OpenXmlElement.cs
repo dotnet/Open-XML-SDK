@@ -325,7 +325,7 @@ namespace DocumentFormat.OpenXml
 
                 if (!string.IsNullOrEmpty(prefix))
                 {
-                    return prefix;
+                    return prefix!;
                 }
 
                 return NamespaceIdMap.GetNamespacePrefix(NamespaceId);
@@ -1310,8 +1310,6 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         private static ElementOrder GetOrder(OpenXmlElement element1, OpenXmlElement element2)
         {
-            Debug.Assert(element1 is not null && element2 is not null);
-
             if (element1.Parent is null && element2.Parent is null)
             {
                 return ElementOrder.NotInSameTree;
@@ -1420,8 +1418,6 @@ namespace DocumentFormat.OpenXml
 
         private protected virtual void WriteAttributesTo(XmlWriter xmlWriter)
         {
-            Debug.Assert(xmlWriter is not null);
-
             //write the namespace declaration first, so the inner attribute will get the right prefix
             if (NamespaceDeclField is not null)
             {
@@ -1512,8 +1508,6 @@ namespace DocumentFormat.OpenXml
 
         internal virtual void LoadAttributes(XmlReader xmlReader)
         {
-            Debug.Assert(xmlReader is not null);
-
             Debug.Assert(xmlReader.NodeType == XmlNodeType.Element);
 
             // read attributes
@@ -1578,7 +1572,6 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if a MCAttributes is pushed.</returns>
         private protected bool PushMcContext(XmlReader xmlReader)
         {
-            Debug.Assert(xmlReader is not null);
             Debug.Assert(xmlReader.NodeType == XmlNodeType.Element);
 
             if (OpenXmlElementContext is not null && OpenXmlElementContext.MCSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess)
@@ -1626,11 +1619,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="mcSettings">The MarkupCompatibilityProcessSettings.</param>
         private protected static void CheckMustUnderstandAttr(XmlReader reader, MarkupCompatibilityAttributes mcAttributes, MarkupCompatibilityProcessSettings mcSettings)
         {
-            Debug.Assert(mcAttributes is not null && mcSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess);
+            Debug.Assert(mcSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess);
 
             if (mcAttributes.MustUnderstand is not null && !string.IsNullOrEmpty(mcAttributes.MustUnderstand.Value))
             {
-                var prefixes = mcAttributes.MustUnderstand.Value.Trim().Split(new char[] { ' ' });
+                var prefixes = mcAttributes.MustUnderstand.Value!.Trim().Split(new char[] { ' ' });
                 foreach (var prefix in prefixes)
                 {
                     var ns = reader.LookupNamespace(prefix);
@@ -1661,7 +1654,7 @@ namespace DocumentFormat.OpenXml
 
             if (MCAttributes.MustUnderstand is not null && !string.IsNullOrEmpty(MCAttributes.MustUnderstand.Value))
             {
-                var prefixes = MCAttributes.MustUnderstand.Value.Trim().Split(new char[] { ' ' });
+                var prefixes = MCAttributes.MustUnderstand.Value!.Trim().Split(new char[] { ' ' });
                 foreach (var prefix in prefixes)
                 {
                     var ns = LookupNamespace(prefix);
@@ -1670,7 +1663,7 @@ namespace DocumentFormat.OpenXml
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, MCAttributes.MustUnderstand.Value));
                     }
 
-                    if (NamespaceIdMap.IsInFileFormat(ns, OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
+                    if (NamespaceIdMap.IsInFileFormat(ns!, OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }
@@ -1687,8 +1680,6 @@ namespace DocumentFormat.OpenXml
 
         internal void Load(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
-            Debug.Assert(xmlReader is not null);
-
             switch (loadMode)
             {
                 case OpenXmlLoadMode.Full:
@@ -1844,7 +1835,6 @@ namespace DocumentFormat.OpenXml
         // Copy attributes including Attributes, ExtendedAttributes, MCAttributes from the container.
         private protected void CopyAttributes(OpenXmlElement container)
         {
-            Debug.Assert(container is not null);
             if (container.HasAttributes)
             {
                 if (container.ExtendedAttributesField is not null)
@@ -1882,8 +1872,8 @@ namespace DocumentFormat.OpenXml
         // this method should be modified up-to-date.
         private static MarkupCompatibilityAttributes CloneMCAttributes(MarkupCompatibilityAttributes source)
         {
-            Debug.Assert(source is not null);
             var target = new MarkupCompatibilityAttributes();
+
             if (source.Ignorable is not null)
             {
                 target.Ignorable = (StringValue)source.Ignorable.Clone();
@@ -1915,7 +1905,6 @@ namespace DocumentFormat.OpenXml
         // Copy child elements from the container.
         internal void CopyChilden(OpenXmlElement container, bool deep)
         {
-            Debug.Assert(container is not null);
             foreach (var element in container.ChildElements)
             {
                 Append(element.CloneNode(deep));
