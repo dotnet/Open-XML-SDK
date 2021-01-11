@@ -486,16 +486,13 @@ namespace DocumentFormat.OpenXml
 
             if (HasAttributes)
             {
-                if (namespaceUri is not null)
+                foreach (var attribute in ParsedState.Attributes)
                 {
-                    foreach (var attribute in ParsedState.Attributes)
+                    if (attribute.Value is not null &&
+                        attribute.Property.Name == localName &&
+                        attribute.Property.Namespace == namespaceUri)
                     {
-                        if (attribute.Value is not null &&
-                            attribute.Property.Name == localName &&
-                            attribute.Property.Namespace == namespaceUri)
-                        {
-                            return new OpenXmlAttribute(attribute);
-                        }
+                        return new OpenXmlAttribute(attribute);
                     }
                 }
 
