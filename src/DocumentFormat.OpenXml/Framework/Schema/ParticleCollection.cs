@@ -245,7 +245,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                     return Complete();
                 }
 
-                return IsComplete ? Complete() : true;
+                return true;
             }
 
             private bool Initialize()

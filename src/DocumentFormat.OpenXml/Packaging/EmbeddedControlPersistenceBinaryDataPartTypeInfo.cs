@@ -14,11 +14,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 _ => throw new ArgumentOutOfRangeException(nameof(controlType)),
             };
 
-        internal static string GetTargetExtension(EmbeddedControlPersistenceBinaryDataPartType controlType)
-            => controlType switch
-            {
-                EmbeddedControlPersistenceBinaryDataPartType.ActiveXBin => ".bin",
-                _ => ".bin",
-            };
+        internal static string GetTargetExtension() => ".bin";
     }
 }

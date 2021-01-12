@@ -559,14 +559,8 @@ namespace DocumentFormat.OpenXml
                     return;
 
                 case ElementState.Start:
-                    _xmlReader.Skip();
-                    _elementStack.Pop();
-                    GetElementInformation();
-                    return;
-
                 case ElementState.End:
                 case ElementState.MiscNode:
-                    // cursor is end element, pop stack
                     _xmlReader.Skip();
                     _elementStack.Pop();
                     GetElementInformation();

@@ -220,7 +220,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomPropertyPart AddCustomPropertyPart(CustomPropertyPartType partType, string id)
         {
             var contentType = CustomPropertyPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomPropertyPart(contentType, id);
         }
@@ -233,7 +233,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomPropertyPart AddCustomPropertyPart(CustomPropertyPartType partType)
         {
             var contentType = CustomPropertyPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomPropertyPart(contentType);
         }
@@ -272,7 +272,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(EmbeddedControlPersistenceBinaryDataPartType partType, string id)
         {
             var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddEmbeddedControlPersistenceBinaryDataPart(contentType, id);
         }
@@ -285,7 +285,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(EmbeddedControlPersistenceBinaryDataPartType partType)
         {
             var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddEmbeddedControlPersistenceBinaryDataPart(contentType);
         }

@@ -15,12 +15,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 _ => throw new ArgumentOutOfRangeException(nameof(partType)),
             };
 
-        internal static string GetTargetExtension(CustomPropertyPartType partType)
-            => partType switch
-            {
-                CustomPropertyPartType.Spreadsheet => ".xml",
-                CustomPropertyPartType.Xml => ".xml",
-                _ => ".xml",
-            };
+        internal static string GetTargetExtension() => ".xml";
     }
 }
