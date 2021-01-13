@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 Children = GetLookup().Elements.Select(t => new ChildData
                 {
                     Name = t.Schema.Name,
-                    Namespace = t.Schema.NamespaceUri,
+                    Namespace = t.Schema.Namespace.Uri,
                 });
             }
 

@@ -194,7 +194,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the namespace ID of the current element.
         /// </summary>
-        internal byte NamespaceId => Metadata.Schema.NamespaceId;
+        internal byte NamespaceId => Metadata.Schema.Namespace.Id;
 
         internal virtual void ConfigureMetadata(ElementMetadata.Builder builder)
         {
@@ -305,7 +305,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the namespace URI of the current element.
         /// </summary>
-        public virtual string NamespaceUri => Metadata.Schema.NamespaceUri;
+        public virtual string NamespaceUri => Metadata.Schema.Namespace.Uri;
 
         /// <summary>
         /// Gets the local name of the current element.
