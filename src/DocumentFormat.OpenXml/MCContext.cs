@@ -161,23 +161,6 @@ namespace DocumentFormat.OpenXml
             return _currentIgnorable.Count > 0;
         }
 
-        internal bool IsIgnorableNs(byte namespaceId)
-        {
-            if (_currentIgnorable.Count == 0)
-            {
-                return false;
-            }
-
-            if (_currentIgnorable.Contains(NamespaceIdMap.GetNamespaceUri(namespaceId)))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
         internal bool IsIgnorableNs(string ns)
         {
             if (_currentIgnorable.Count == 0)
