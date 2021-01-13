@@ -4,7 +4,6 @@
 #nullable disable
 
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;

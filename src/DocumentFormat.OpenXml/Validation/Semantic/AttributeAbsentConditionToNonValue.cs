@@ -3,7 +3,6 @@
 
 #nullable disable
 
-using DocumentFormat.OpenXml.Validation;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
