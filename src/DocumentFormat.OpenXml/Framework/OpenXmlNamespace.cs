@@ -7,39 +7,41 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal readonly struct OpenXmlNamespace : IComparable<OpenXmlNamespace>, IEquatable<OpenXmlNamespace>
     {
-        private readonly byte? _nsId;
         private readonly string? _prefix;
         private readonly string? _uri;
 
         private OpenXmlNamespace(byte nsId)
         {
-            _nsId = nsId;
             _prefix = NamespaceIdMap.GetNamespacePrefix(nsId);
             _uri = NamespaceIdMap.GetNamespaceUri(nsId);
         }
 
         public OpenXmlNamespace(string? nsUri, string? prefix = null)
         {
-            _prefix = prefix ?? NamespaceIdMap.GetNamespacePrefix(nsUri ?? string.Empty);
-            var uri = nsUri ?? string.Empty;
-
-            if (NamespaceIdMap.TryGetNamespaceId(uri, out var nsId))
+            if (prefix is not null)
             {
-                _nsId = nsId;
+                _prefix = string.Intern(prefix);
             }
             else
             {
-                _nsId = default;
+                _prefix = null;
             }
 
-            _uri = uri;
+            if (nsUri is not null)
+            {
+                _uri = string.Intern(nsUri);
+            }
+            else
+            {
+                _uri = null;
+            }
         }
 
         public string Uri => _uri ?? string.Empty;
 
         public string Prefix => _prefix ?? string.Empty;
 
-        public bool IsValid => _nsId.HasValue;
+        public bool IsValid => NamespaceIdMap.TryGetNamespaceId(Uri, out _);
 
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
 
@@ -47,12 +49,19 @@ namespace DocumentFormat.OpenXml.Framework
 
         public override bool Equals(object? obj) => obj is OpenXmlNamespace ns && Equals(ns);
 
-        public override int GetHashCode() => HashCode.Combine(_nsId.GetValueOrDefault());
+        public override int GetHashCode()
+        {
+            var hashcode = new HashCode();
+
+            hashcode.Add(Uri, StringComparer.Ordinal);
+
+            return hashcode.ToHashCode();
+        }
 
         public override string ToString() => Uri;
 
         public int CompareTo(OpenXmlNamespace other)
-            => _nsId.GetValueOrDefault().CompareTo(other._nsId.GetValueOrDefault());
+            => string.CompareOrdinal(Uri, other.Uri);
 
         public bool Equals(OpenXmlNamespace other)
             => string.Equals(Uri, other.Uri, StringComparison.Ordinal);
