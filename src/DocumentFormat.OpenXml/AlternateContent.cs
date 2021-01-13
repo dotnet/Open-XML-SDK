@@ -93,6 +93,8 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override string LocalName => TagName;
 
+        internal static bool Is(in OpenXmlSchema schema) => schema.Equals(new OpenXmlSchema(MarkupCompatibilityNamespaceId, Name));
+
         /// <summary>
         /// Appends a new child of type T:DocumentFormat.OpenXml.AlternateContentChoice
         ///  to the current element.

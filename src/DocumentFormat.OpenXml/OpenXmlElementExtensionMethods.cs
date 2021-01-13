@@ -160,7 +160,7 @@ namespace DocumentFormat.OpenXml
             Debug.Assert(parent is OpenXmlCompositeElement);
             Debug.Assert(localName is not null);
 
-            var newElement = parent.ElementFactory(string.Empty, localName, namespaceUri);
+            var newElement = parent.ElementFactory2(string.Empty, localName, namespaceUri);
             if (newElement is OpenXmlUnknownElement || !newElement.IsInVersion(fileFormat))
             {
                 return null;

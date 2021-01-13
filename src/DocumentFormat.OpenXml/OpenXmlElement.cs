@@ -1780,13 +1780,13 @@ namespace DocumentFormat.OpenXml
         internal OpenXmlElement ElementFactory(XmlReader xmlReader)
             => xmlReader.NodeType switch
             {
-                XmlNodeType.Element => ElementFactory(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI),
+                XmlNodeType.Element => ElementFactory2(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI),
                 XmlNodeType.Comment or XmlNodeType.ProcessingInstruction or XmlNodeType.XmlDeclaration => new OpenXmlMiscNode(xmlReader.NodeType),
                 XmlNodeType.Text or XmlNodeType.CDATA or XmlNodeType.SignificantWhitespace or XmlNodeType.Whitespace => new OpenXmlMiscNode(xmlReader.NodeType),
                 _ => throw new InvalidOperationException(),
             };
 
-        internal OpenXmlElement ElementFactory(string prefix, string name, string namespaceUri)
+        internal OpenXmlElement ElementFactory2(string prefix, string name, string namespaceUri)
         {
             Debug.Assert(!string.IsNullOrEmpty(name));
 
@@ -1794,7 +1794,7 @@ namespace DocumentFormat.OpenXml
 
             if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out var nsId))
             {
-                newElement = ElementFactory(nsId, name);
+                newElement = ElementFactory(new OpenXmlSchema(nsId, name));
 
                 // try AlternateContent
                 if (newElement is null &&
@@ -1813,7 +1813,7 @@ namespace DocumentFormat.OpenXml
             return newElement;
         }
 
-        internal virtual OpenXmlElement? ElementFactory(byte namespaceId, string name) => Metadata.Children.Create(namespaceId, name);
+        internal virtual OpenXmlElement? ElementFactory(in OpenXmlSchema schema) => Metadata.Children.Create(schema);
 
         internal virtual T CloneImp<T>(bool deep)
             where T : OpenXmlElement, new()

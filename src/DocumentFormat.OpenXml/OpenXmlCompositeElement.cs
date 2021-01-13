@@ -709,7 +709,7 @@ namespace DocumentFormat.OpenXml
                                     // If node is an UnknowElement, we should try to see whether the parent element can load the node as strong typed element
                                     if (node is OpenXmlUnknownElement)
                                     {
-                                        newnode = ElementFactory(node.Prefix, node.LocalName, node.NamespaceUri);
+                                        newnode = ElementFactory2(node.Prefix, node.LocalName, node.NamespaceUri);
                                         if (!(newnode is OpenXmlUnknownElement))
                                         {
                                             // The following method will load teh element in MCMode.Full

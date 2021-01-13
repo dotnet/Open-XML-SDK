@@ -34,10 +34,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public IEnumerable<ElementChild> Elements => _data;
 
-        public OpenXmlElement? Create(byte id, string name)
-            => Create(new OpenXmlSchema(id, name));
-
-        public OpenXmlElement? Create(OpenXmlSchema schema)
+        public OpenXmlElement? Create(in OpenXmlSchema schema)
         {
             if (_data.Length == 0)
             {
@@ -125,7 +122,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         [DebuggerDisplay("{Namespace}:{Name}")]
         public class ElementChild
         {
-            public ElementChild(Type? type, OpenXmlSchema schema)
+            public ElementChild(Type? type, in OpenXmlSchema schema)
             {
                 Type = type;
                 Schema = schema;
