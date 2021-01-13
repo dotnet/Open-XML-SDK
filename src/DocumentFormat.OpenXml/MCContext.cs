@@ -273,7 +273,7 @@ namespace DocumentFormat.OpenXml
         #region private methods
         private static bool ContainsQName(in OpenXmlQualifiedName input, Stack<XmlQualifiedName> stack)
         {
-            var qname = input.ToXmlQualifiedName();
+            var qname = new XmlQualifiedName(input.Name, input.Namespace.Uri);
 
             foreach (var qn in stack)
             {

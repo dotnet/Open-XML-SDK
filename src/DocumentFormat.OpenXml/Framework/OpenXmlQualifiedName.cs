@@ -79,7 +79,5 @@ namespace DocumentFormat.OpenXml.Framework
                 return new OpenXmlQualifiedName(new OpenXmlNamespace(uri, prefix), localName);
             }
         }
-
-        public XmlQualifiedName ToXmlQualifiedName() => new XmlQualifiedName(Name, Namespace.Uri);
     }
 }

@@ -32,14 +32,14 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, current.Property.QName.ToXmlQualifiedName(), current.Value.InnerText, current.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
+                        description: SR.Format(description, current.Property.QName, current.Value.InnerText, current.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, current.Property.QName.ToXmlQualifiedName(), current.Value.InnerText, string.Empty),
+                        description: SR.Format(description, current.Property.QName, current.Value.InnerText, string.Empty),
                         errorType: ValidationErrorType.Schema);
                 }
             }
