@@ -9,20 +9,21 @@ namespace DocumentFormat.OpenXml.Framework
     {
         private readonly byte? _nsId;
         private readonly string? _prefix;
+        private readonly string? _uri;
 
-        public OpenXmlNamespace(byte nsId)
+        private OpenXmlNamespace(byte nsId)
         {
             _nsId = nsId;
             _prefix = NamespaceIdMap.GetNamespacePrefix(nsId);
-            Uri = NamespaceIdMap.GetNamespaceUri(nsId);
+            _uri = NamespaceIdMap.GetNamespaceUri(nsId);
         }
 
         public OpenXmlNamespace(string? nsUri, string? prefix = null)
         {
             _prefix = prefix ?? NamespaceIdMap.GetNamespacePrefix(nsUri ?? string.Empty);
-            Uri = nsUri ?? string.Empty;
+            var uri = nsUri ?? string.Empty;
 
-            if (NamespaceIdMap.TryGetNamespaceId(Uri, out var nsId))
+            if (NamespaceIdMap.TryGetNamespaceId(uri, out var nsId))
             {
                 _nsId = nsId;
             }
@@ -30,9 +31,11 @@ namespace DocumentFormat.OpenXml.Framework
             {
                 _nsId = default;
             }
+
+            _uri = uri;
         }
 
-        public string Uri { get; }
+        public string Uri => _uri ?? string.Empty;
 
         public string Prefix => _prefix ?? string.Empty;
 
