@@ -290,16 +290,6 @@ namespace DocumentFormat.OpenXml.Framework
             return false;
         }
 
-        public static byte GetNamespaceId(string namespaceUri)
-        {
-            if (TryGetNamespaceId(namespaceUri, out var id))
-            {
-                return id;
-            }
-
-            throw new KeyNotFoundException();
-        }
-
         public static bool TryGetNamespaceId(string namespaceUri, out byte id)
         {
             if (namespaceUri is not null && _namespaceResolver.TryGetByNamespace(NormalizeNamespace(namespaceUri), out var info))

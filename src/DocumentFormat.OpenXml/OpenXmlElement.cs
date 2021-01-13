@@ -1632,13 +1632,14 @@ namespace DocumentFormat.OpenXml
                 var prefixes = mcAttributes.MustUnderstand.Value!.Trim().Split(new char[] { ' ' });
                 foreach (var prefix in prefixes)
                 {
-                    var ns = reader.LookupNamespace(prefix);
-                    if (string.IsNullOrEmpty(ns))
+                    var ns = new OpenXmlNamespace(reader.LookupNamespace(prefix));
+
+                    if (ns.IsEmpty)
                     {
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, mcAttributes.MustUnderstand.Value));
                     }
 
-                    if (NamespaceIdMap.IsInFileFormat(ns, mcSettings.TargetFileFormatVersions))
+                    if (ns.IsInFormat(mcSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }
@@ -1663,13 +1664,14 @@ namespace DocumentFormat.OpenXml
                 var prefixes = MCAttributes.MustUnderstand.Value!.Trim().Split(new char[] { ' ' });
                 foreach (var prefix in prefixes)
                 {
-                    var ns = LookupNamespace(prefix);
-                    if (string.IsNullOrEmpty(ns))
+                    var ns = new OpenXmlNamespace(LookupNamespace(prefix));
+
+                    if (ns.IsEmpty)
                     {
                         throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, MCAttributes.MustUnderstand.Value));
                     }
 
-                    if (NamespaceIdMap.IsInFileFormat(ns!, OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
+                    if (ns.IsInFormat(OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
                     {
                         continue;
                     }
@@ -1804,7 +1806,7 @@ namespace DocumentFormat.OpenXml
                 newElement = ElementFactory(qname);
 
                 // try AlternateContent
-                if (newElement is null && AlternateContent.Is(qname))
+                if (newElement is null && AlternateContent.InternalQName.Equals(qname))
                 {
                     newElement = new AlternateContent();
                 }

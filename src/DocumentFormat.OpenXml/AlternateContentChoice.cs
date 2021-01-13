@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml
         {
             base.ConfigureMetadata(builder);
 
-            builder.SetSchema(AlternateContent.Namespace, Name);
+            builder.SetSchema(AlternateContent.InternalQName.Namespace.Uri, Name);
 
             builder.AddElement<AlternateContentChoice>()
                 .AddAttribute(0, "Requires", a => a.Requires);

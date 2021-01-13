@@ -17,12 +17,12 @@ namespace DocumentFormat.OpenXml.Framework
             Uri = NamespaceIdMap.GetNamespaceUri(nsId);
         }
 
-        public OpenXmlNamespace(string nsUri, string? prefix = null)
+        public OpenXmlNamespace(string? nsUri, string? prefix = null)
         {
             _prefix = prefix ?? NamespaceIdMap.GetNamespacePrefix(nsUri ?? string.Empty);
-            Uri = nsUri!;
+            Uri = nsUri ?? string.Empty;
 
-            if (NamespaceIdMap.TryGetNamespaceId(nsUri!, out var nsId))
+            if (NamespaceIdMap.TryGetNamespaceId(Uri, out var nsId))
             {
                 _nsId = nsId;
             }
@@ -41,6 +41,8 @@ namespace DocumentFormat.OpenXml.Framework
         public bool IsValid => _nsId.HasValue;
 
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
+
+        public bool IsInFormat(FileFormatVersions version) => NamespaceIdMap.IsInFileFormat(Uri, version);
 
         public override bool Equals(object? obj) => obj is OpenXmlNamespace ns && Equals(ns);
 

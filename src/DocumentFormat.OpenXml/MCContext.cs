@@ -216,7 +216,7 @@ namespace DocumentFormat.OpenXml
                 return AttributeAction.Normal;
             }
 
-            if (NamespaceIdMap.IsInFileFormat(qname.Namespace.Uri, format))
+            if (qname.Namespace.IsInFormat(format))
             {
                 return AttributeAction.Normal;
             }
@@ -426,8 +426,9 @@ namespace DocumentFormat.OpenXml
                     //bug when we try to GetContentFromACBlock, the reader has already moved to the next element of ACB
                     //so we should use the element's LookupNamespace function to find it
                     //string ns = LookupNamespaceDelegate(req);
-                    string ns = choice.LookupNamespace(req);
-                    if (ns is null)
+                    var ns = new OpenXmlNamespace(choice.LookupNamespace(req));
+
+                    if (ns.IsEmpty)
                     {
                         if (_noExceptionOnError)
                         {
@@ -440,7 +441,7 @@ namespace DocumentFormat.OpenXml
                         }
                     }
 
-                    if (!NamespaceIdMap.IsInFileFormat(ns, format))
+                    if (!ns.IsInFormat(format))
                     {
                         chooce = false;
                         break;

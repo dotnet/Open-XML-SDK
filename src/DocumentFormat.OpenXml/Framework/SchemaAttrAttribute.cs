@@ -37,8 +37,13 @@ namespace DocumentFormat.OpenXml
         /// <param name="ns">Specifies the namespace of the schema attribute.</param>
         /// <param name="tag">Specifies the Tag name of the schema attribute.</param>
         public SchemaAttrAttribute(string ns, string tag)
-            : this(NamespaceIdMap.GetNamespaceId(ns), tag)
         {
+            if (string.IsNullOrEmpty(tag))
+            {
+                throw new ArgumentNullException(nameof(tag));
+            }
+
+            _qname = new OpenXmlQualifiedName(ns, tag);
         }
 
         /// <summary>

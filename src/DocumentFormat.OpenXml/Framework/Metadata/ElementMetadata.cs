@@ -94,8 +94,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             private List<IMetadataBuilder<AttributeMetadata>>? _attributes;
             private HashSet<IMetadataBuilder<ElementLookup.ElementChild>>? _children;
             private List<IValidator>? _constraints;
-            private byte _nsId;
-            private string? _localName;
+            private OpenXmlQualifiedName _qname;
 
             public Builder<TElement> AddElement<TElement>()
                 where TElement : OpenXmlElement
@@ -113,16 +112,16 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 _constraints.Add(constraint);
             }
 
-            public void SetSchema(string ns, string localName)
-                => SetSchema(NamespaceIdMap.GetNamespaceId(ns), localName);
-
             public CompositeParticle? Particle { get; set; }
 
+            public void SetSchema(in OpenXmlQualifiedName qname)
+                => _qname = qname;
+
+            public void SetSchema(string ns, string localName)
+                => SetSchema(new OpenXmlQualifiedName(ns, localName));
+
             public void SetSchema(byte nsId, string localName)
-            {
-                _nsId = nsId;
-                _localName = localName;
-            }
+                => SetSchema(new OpenXmlQualifiedName(nsId, localName));
 
             public void AddChild<T>()
                 where T : OpenXmlElement, new()
@@ -149,10 +148,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public ElementMetadata Build()
             {
-                var schema = _localName is null ? default : new OpenXmlQualifiedName(_nsId, _localName);
                 var lookup = _children is null ? _lazy : new Lazy<ElementLookup>(() => new ElementLookup(_children.Select(c => c.Build())), true);
 
-                return new ElementMetadata(BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, schema, Particle.Compile(), lookup);
+                return new ElementMetadata(BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, _qname, Particle.Compile(), lookup);
             }
 
             private AttributeMetadata[]? BuildAttributes()
