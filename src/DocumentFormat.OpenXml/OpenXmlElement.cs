@@ -492,7 +492,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (attribute.Value is not null && attribute.Property.QName.Equals(qname))
                     {
-                        return new OpenXmlAttribute(attribute);
+                        return new OpenXmlAttribute(attribute.Property.QName, attribute.Value.InnerText);
                     }
                 }
 
@@ -529,7 +529,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (attribute.Value is not null)
                     {
-                        attributes.Add(new OpenXmlAttribute(attribute));
+                        attributes.Add(new OpenXmlAttribute(attribute.Property.QName, attribute.Value.InnerText));
                     }
                 }
 

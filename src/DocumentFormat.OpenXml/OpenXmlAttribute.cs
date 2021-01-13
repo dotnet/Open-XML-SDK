@@ -19,8 +19,8 @@ namespace DocumentFormat.OpenXml
 
         private string _namespaceUri;
 
-        internal OpenXmlAttribute(in Framework.Metadata.AttributeCollection.AttributeEntry entry)
-            : this(entry.Property.QName.Namespace.Prefix, entry.Property.QName.Name, entry.Property.QName.Namespace.Uri, entry.Value?.ToString())
+        internal OpenXmlAttribute(in OpenXmlQualifiedName qname, string value)
+            : this(qname.Namespace.Prefix, qname.Name, qname.Namespace.Uri, value)
         {
         }
 
