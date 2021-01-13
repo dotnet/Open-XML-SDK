@@ -200,50 +200,50 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal bool IsPreservedAttribute(string ns, string localName)
+        internal bool IsPreservedAttribute(in OpenXmlQualifiedName qname)
         {
-            return ContainsQName(localName, ns, _currentPreserveAttr);
+            return ContainsQName(qname, _currentPreserveAttr);
         }
 
-        internal bool IsPreservedElement(string ns, string localName)
+        internal bool IsPreservedElement(in OpenXmlQualifiedName qname)
         {
-            return ContainsQName(localName, ns, _currentPreserveEle);
+            return ContainsQName(qname, _currentPreserveEle);
         }
 
-        internal bool IsProcessContent(string ns, string localName)
+        internal bool IsProcessContent(in OpenXmlQualifiedName qname)
         {
-            return ContainsQName(localName, ns, _currentProcessContent);
+            return ContainsQName(qname, _currentProcessContent);
         }
 
         internal bool IsProcessContent(OpenXmlElement element)
         {
             // TODO: performance tuning
-            return ContainsQName(element.LocalName, element.NamespaceUri, _currentProcessContent);
+            return ContainsQName(element.QName, _currentProcessContent);
         }
 
-        internal AttributeAction GetAttributeAction(string ns, string localName, FileFormatVersions format)
+        internal AttributeAction GetAttributeAction(in OpenXmlQualifiedName qname, FileFormatVersions format)
         {
             if (format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007) || format.All())
             {
                 return AttributeAction.Normal;
             }
 
-            if (string.IsNullOrEmpty(ns))
+            if (qname.Namespace.IsEmpty)
             {
                 return AttributeAction.Normal;
             }
 
-            if (NamespaceIdMap.IsInFileFormat(ns, format))
+            if (NamespaceIdMap.IsInFileFormat(qname.Namespace.Uri, format))
             {
                 return AttributeAction.Normal;
             }
 
-            if (!IsIgnorableNs(ns))
+            if (!IsIgnorableNs(qname.Namespace.Uri))
             {
                 return AttributeAction.Normal;
             }
 
-            if (IsPreservedAttribute(ns, localName))
+            if (IsPreservedAttribute(qname))
             {
                 return AttributeAction.Normal;
             }
@@ -270,12 +270,12 @@ namespace DocumentFormat.OpenXml
 
             if (IsIgnorableNs(element.NamespaceUri))
             {
-                if (IsPreservedElement(element.NamespaceUri, element.LocalName))
+                if (IsPreservedElement(element.QName))
                 {
                     return ElementAction.Normal;
                 }
 
-                if (IsProcessContent(element.NamespaceUri, element.LocalName))
+                if (IsProcessContent(element.QName))
                 {
                     return ElementAction.ProcessContent;
                 }
@@ -288,13 +288,14 @@ namespace DocumentFormat.OpenXml
         #endregion
 
         #region private methods
-        private static bool ContainsQName(string localName, string ns, Stack<XmlQualifiedName> stack)
+        private static bool ContainsQName(in OpenXmlQualifiedName input, Stack<XmlQualifiedName> stack)
         {
-            XmlQualifiedName qname = new XmlQualifiedName(localName, ns);
+            var qname = input.ToXmlQualifiedName();
+
             foreach (var qn in stack)
             {
                 if (qn == qname ||
-                    qn.Name == "*" && qn.Namespace == ns)
+                    qn.Name == "*" && qn.Namespace == input.Namespace.Uri)
                 {
                     return true;
                 }

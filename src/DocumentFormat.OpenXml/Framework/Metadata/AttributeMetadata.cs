@@ -21,15 +21,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public abstract ReadOnlyArray<IValidator> Validators { get; }
 
-        public string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
-
-        public string NamespacePrefix => NamespaceIdMap.GetNamespacePrefix(NamespaceId);
-
         public abstract OpenXmlSimpleType CreateNew();
 
         public abstract Type Type { get; }
 
-        public XmlQualifiedName GetQName() => new XmlQualifiedName(Name, Namespace);
+        public XmlQualifiedName GetQName() => QName.ToXmlQualifiedName();
 
         public class Builder<TSimpleType> : ValidatorBuilder, IMetadataBuilder<AttributeMetadata>
             where TSimpleType : OpenXmlSimpleType, new()

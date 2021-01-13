@@ -312,6 +312,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public virtual string LocalName => Metadata.QName.Name;
 
+        internal OpenXmlQualifiedName QName => new OpenXmlQualifiedName(NamespaceUri, LocalName);
+
         /// <summary>
         /// Gets the namespace prefix of current element.
         /// </summary>
@@ -325,7 +327,7 @@ namespace DocumentFormat.OpenXml
 
                 if (!string.IsNullOrEmpty(prefix))
                 {
-                    return prefix!;
+                    return prefix;
                 }
 
                 return NamespaceIdMap.GetNamespacePrefix(NamespaceId);
@@ -484,13 +486,16 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentOutOfRangeException(nameof(localName), ExceptionMessages.StringIsEmpty);
             }
 
+            return GetAttribute(new OpenXmlQualifiedName(namespaceUri, localName));
+        }
+
+        private OpenXmlAttribute GetAttribute(in OpenXmlQualifiedName qname)
+        {
             if (HasAttributes)
             {
                 foreach (var attribute in ParsedState.Attributes)
                 {
-                    if (attribute.Value is not null &&
-                        attribute.Property.Name == localName &&
-                        attribute.Property.Namespace == namespaceUri)
+                    if (attribute.Value is not null && attribute.Property.QName.Equals(qname))
                     {
                         return new OpenXmlAttribute(attribute);
                     }
@@ -498,16 +503,16 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var extendedAttribute in ExtendedAttributes)
                 {
-                    if (extendedAttribute.LocalName == localName && extendedAttribute.NamespaceUri == namespaceUri)
+                    if (extendedAttribute.QName.Equals(qname))
                     {
                         // clone a copy
                         return new OpenXmlAttribute(extendedAttribute.Prefix, extendedAttribute.LocalName, extendedAttribute.NamespaceUri, extendedAttribute.Value);
                     }
                 }
 
-                if (namespaceUri == AlternateContent.MarkupCompatibilityNamespace)
+                if (qname.Namespace.Uri == AlternateContent.MarkupCompatibilityNamespace)
                 {
-                    return GetMCAttribute(localName);
+                    return GetMCAttribute(qname.Name);
                 }
             }
 
@@ -1435,7 +1440,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (attribute.Value is not null)
                     {
-                        var ns = attribute.Property.Namespace;
+                        var ns = attribute.Property.QName.Namespace.Uri;
                         var prefix = string.Empty;
 
                         if (!string.IsNullOrEmpty(ns))
@@ -1443,7 +1448,7 @@ namespace DocumentFormat.OpenXml
                             prefix = xmlWriter.LookupPrefix(ns);
                             if (string.IsNullOrEmpty(prefix))
                             {
-                                prefix = attribute.Property.NamespacePrefix;
+                                prefix = attribute.Property.QName.Namespace.Prefix;
                             }
                         }
 
@@ -2665,7 +2670,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (attribute.Value is not null)
                 {
-                    var action = OpenXmlElementContext.MCContext.GetAttributeAction(attribute.Property.Namespace, attribute.Property.Name, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
+                    var action = OpenXmlElementContext.MCContext.GetAttributeAction(attribute.Property.QName, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
 
                     if (action == AttributeAction.Ignore)
                     {
@@ -2680,7 +2685,7 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var attribute in ExtendedAttributesField)
                 {
-                    var action = OpenXmlElementContext.MCContext.GetAttributeAction(attribute.NamespaceUri, attribute.LocalName, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
+                    var action = OpenXmlElementContext.MCContext.GetAttributeAction(attribute.QName, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
                     if (action == AttributeAction.Ignore)
                     {
                         tobeRemoved.Add(attribute);

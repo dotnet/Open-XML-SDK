@@ -40,6 +40,8 @@ namespace DocumentFormat.OpenXml.Framework
 
         public bool IsValid => _nsId.HasValue;
 
+        public bool IsEmpty => string.IsNullOrEmpty(Uri);
+
         public override bool Equals(object? obj) => obj is OpenXmlNamespace ns && Equals(ns);
 
         public override int GetHashCode() => HashCode.Combine(_nsId.GetValueOrDefault());
