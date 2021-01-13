@@ -4,7 +4,7 @@
 using System;
 using System.Xml;
 
-namespace DocumentFormat.OpenXml.Framework.Metadata
+namespace DocumentFormat.OpenXml.Framework
 {
     internal readonly struct OpenXmlQualifiedName : IComparable<OpenXmlQualifiedName>, IEquatable<OpenXmlQualifiedName>
     {

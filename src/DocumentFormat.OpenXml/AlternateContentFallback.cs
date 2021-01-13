@@ -3,6 +3,7 @@
 
 #nullable disable
 
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System.Collections.Generic;
 

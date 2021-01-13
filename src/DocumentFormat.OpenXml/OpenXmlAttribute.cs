@@ -3,7 +3,7 @@
 
 #nullable disable
 
-using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Xml;
 using System.Xml.Linq;

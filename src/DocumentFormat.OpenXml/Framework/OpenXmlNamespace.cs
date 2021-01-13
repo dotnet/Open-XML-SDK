@@ -3,7 +3,7 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml.Framework.Metadata
+namespace DocumentFormat.OpenXml.Framework
 {
     internal readonly struct OpenXmlNamespace : IComparable<OpenXmlNamespace>, IEquatable<OpenXmlNamespace>
     {
