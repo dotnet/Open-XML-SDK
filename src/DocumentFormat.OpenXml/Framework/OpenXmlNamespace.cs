@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         private static string? GetNamespacePrefix(string namespaceUri) => _namespaceResolver.TryGetByNamespace(namespaceUri, out var info) ? info.Prefix : null;
 
-        private static string NormalizeNamespace(OpenXmlNamespace ns)
+        private static string NormalizeNamespace(in OpenXmlNamespace ns)
         {
             if (ns.TryGetExtendedNamespace(out var result))
             {

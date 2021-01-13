@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal readonly struct OpenXmlQualifiedName : IComparable<OpenXmlQualifiedName>, IEquatable<OpenXmlQualifiedName>
     {
-        internal OpenXmlQualifiedName(OpenXmlNamespace ns, string name)
+        internal OpenXmlQualifiedName(in OpenXmlNamespace ns, string name)
         {
             Namespace = ns;
             Name = name;

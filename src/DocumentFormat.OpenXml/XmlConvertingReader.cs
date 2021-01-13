@@ -172,7 +172,7 @@ namespace DocumentFormat.OpenXml
 
         bool IXmlLineInfo.HasLineInfo() => XmlLineInfo.Get(BaseReader).HasLineInfo();
 
-        private string ApplyStrictTranslation(OpenXmlNamespace ns)
+        private string ApplyStrictTranslation(in OpenXmlNamespace ns)
         {
             if (StrictRelationshipFound)
             {
