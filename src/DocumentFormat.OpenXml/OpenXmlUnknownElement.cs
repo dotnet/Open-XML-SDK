@@ -49,7 +49,10 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(name));
             }
 
-            OpenXmlElement.SplitName(name, out _prefix, out _tagName);
+            var schema = OpenXmlSchema.Parse(name);
+
+            _prefix = schema.Namespace.Prefix;
+            _tagName = schema.Name;
         }
 
         /// <summary>
@@ -66,8 +69,10 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(qualifiedName));
             }
 
-            OpenXmlElement.SplitName(qualifiedName, out _prefix, out _tagName);
+            var schema = OpenXmlSchema.Parse(qualifiedName);
 
+            _prefix = schema.Namespace.Prefix;
+            _tagName = schema.Name;
             _namespaceUri = namespaceUri;
         }
 
@@ -126,9 +131,10 @@ namespace DocumentFormat.OpenXml
                 {
                     if (xmlReader.Read() && xmlReader.NodeType == XmlNodeType.Element)
                     {
-                        OpenXmlUnknownElement newElement = new OpenXmlUnknownElement(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI);
-                        newElement.OuterXml = outerXml;
-                        return newElement;
+                        return new OpenXmlUnknownElement(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI)
+                        {
+                            OuterXml = outerXml,
+                        };
                     }
                 } while (xmlReader.NodeType == XmlNodeType.Whitespace);
 

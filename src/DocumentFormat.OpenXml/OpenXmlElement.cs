@@ -2298,26 +2298,6 @@ namespace DocumentFormat.OpenXml
             return false;
         }
 
-        internal static void SplitName(string name, out string prefix, out string localName)
-        {
-#if NET5_0
-            var length = name.IndexOf(':', StringComparison.Ordinal);
-#else
-            var length = name.IndexOf(':');
-#endif
-
-            if (((length == -1) || (length == 0)) || ((name.Length - 1) == length))
-            {
-                prefix = string.Empty;
-                localName = name;
-            }
-            else
-            {
-                prefix = name.Substring(0, length);
-                localName = name.Substring(length + 1);
-            }
-        }
-
         private bool ValidOuterXml(string outerXml, string namespaceURI, string localName)
         {
             using (var xmlReader = CreateXmlReader(outerXml))

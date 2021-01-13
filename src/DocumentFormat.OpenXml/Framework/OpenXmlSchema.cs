@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 var uri = nsUri ?? NamespaceIdMap.GetNamespaceUri(prefix) ?? string.Empty;
                 var localName = name.Substring(length + 1);
 
-                return new OpenXmlSchema(new OpenXmlNamespace(uri, prefix), name);
+                return new OpenXmlSchema(new OpenXmlNamespace(uri, prefix), localName);
             }
         }
 

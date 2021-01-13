@@ -3,7 +3,7 @@
 
 #nullable disable
 
-using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.Xml;
 using System.Xml.Linq;
@@ -39,11 +39,11 @@ namespace DocumentFormat.OpenXml
 
             _namespaceUri = namespaceUri;
 
-            OpenXmlElement.SplitName(qualifiedName, out var prefix, out var localName);
+            var schema = OpenXmlSchema.Parse(qualifiedName);
 
 #pragma warning disable CS0618 // Type or member is obsolete
-            Prefix = prefix;
-            LocalName = localName;
+            Prefix = schema.Namespace.Prefix;
+            LocalName = schema.Name;
             Value = value;
 #pragma warning restore CS0618 // Type or member is obsolete
         }
