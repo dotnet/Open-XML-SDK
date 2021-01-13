@@ -13,12 +13,14 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         public OpenXmlNamespace(byte nsId)
         {
             _nsId = nsId;
-            _prefix = null;
+            _prefix = NamespaceIdMap.GetNamespacePrefix(nsId);
+            Uri = NamespaceIdMap.GetNamespaceUri(nsId);
         }
 
         public OpenXmlNamespace(string nsUri, string? prefix = null)
         {
             _prefix = prefix ?? NamespaceIdMap.GetNamespacePrefix(nsUri);
+            Uri = nsUri;
 
             if (NamespaceIdMap.TryGetNamespaceId(nsUri, out var nsId))
             {
@@ -32,7 +34,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public byte Id => _nsId.GetValueOrDefault();
 
-        public string Uri => _nsId.HasValue ? NamespaceIdMap.GetNamespaceUri(_nsId.Value) : string.Empty;
+        public string Uri { get; }
 
         public string Prefix => _prefix ?? string.Empty;
 

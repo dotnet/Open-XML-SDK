@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -709,7 +710,7 @@ namespace DocumentFormat.OpenXml
                                     // If node is an UnknowElement, we should try to see whether the parent element can load the node as strong typed element
                                     if (node is OpenXmlUnknownElement)
                                     {
-                                        newnode = ElementFactory2(node.Prefix, node.LocalName, node.NamespaceUri);
+                                        newnode = ElementFactory2(OpenXmlSchema.Create(node.NamespaceUri, node.Prefix, node.LocalName));
                                         if (!(newnode is OpenXmlUnknownElement))
                                         {
                                             // The following method will load teh element in MCMode.Full

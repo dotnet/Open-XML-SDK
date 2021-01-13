@@ -1780,26 +1780,22 @@ namespace DocumentFormat.OpenXml
         internal OpenXmlElement ElementFactory(XmlReader xmlReader)
             => xmlReader.NodeType switch
             {
-                XmlNodeType.Element => ElementFactory2(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI),
+                XmlNodeType.Element => ElementFactory2(OpenXmlSchema.Create(xmlReader.NamespaceURI, xmlReader.Prefix, xmlReader.LocalName)),
                 XmlNodeType.Comment or XmlNodeType.ProcessingInstruction or XmlNodeType.XmlDeclaration => new OpenXmlMiscNode(xmlReader.NodeType),
                 XmlNodeType.Text or XmlNodeType.CDATA or XmlNodeType.SignificantWhitespace or XmlNodeType.Whitespace => new OpenXmlMiscNode(xmlReader.NodeType),
                 _ => throw new InvalidOperationException(),
             };
 
-        internal OpenXmlElement ElementFactory2(string prefix, string name, string namespaceUri)
+        internal OpenXmlElement ElementFactory2(in OpenXmlSchema schema)
         {
-            Debug.Assert(!string.IsNullOrEmpty(name));
-
             var newElement = default(OpenXmlElement);
 
-            if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out var nsId))
+            if (schema.Namespace.IsValid)
             {
-                newElement = ElementFactory(new OpenXmlSchema(nsId, name));
+                newElement = ElementFactory(schema);
 
                 // try AlternateContent
-                if (newElement is null &&
-                    AlternateContent.MarkupCompatibilityNamespaceId == nsId &&
-                    AlternateContent.TagName == name)
+                if (newElement is null && AlternateContent.Is(schema))
                 {
                     newElement = new AlternateContent();
                 }
@@ -1807,7 +1803,7 @@ namespace DocumentFormat.OpenXml
 
             if (newElement is null)
             {
-                newElement = new OpenXmlUnknownElement(prefix, name, namespaceUri);
+                newElement = new OpenXmlUnknownElement(schema);
             }
 
             return newElement;

@@ -4,6 +4,7 @@
 #nullable disable
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -68,6 +69,11 @@ namespace DocumentFormat.OpenXml
             OpenXmlElement.SplitName(qualifiedName, out _prefix, out _tagName);
 
             _namespaceUri = namespaceUri;
+        }
+
+        internal OpenXmlUnknownElement(in OpenXmlSchema schema)
+            : this(schema.Namespace.Prefix, schema.Name, schema.Namespace.Uri)
+        {
         }
 
         /// <summary>
