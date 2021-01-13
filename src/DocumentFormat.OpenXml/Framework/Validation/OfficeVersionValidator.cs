@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Framework
             {
                 context.CreateError(
                     id: "Sch_UndeclaredAttribute",
-                    description: SR.Format(ValidationResources.Sch_UndeclaredAttribute, current.Property.GetQName()),
+                    description: SR.Format(ValidationResources.Sch_UndeclaredAttribute, current.Property.QName.ToXmlQualifiedName()),
                     errorType: ValidationErrorType.Schema);
             }
         }

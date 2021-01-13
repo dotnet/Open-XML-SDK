@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Framework
             if (IsRequired && current.Value is null)
             {
                 context.CreateError(
-                    description: SR.Format(ValidationResources.Sch_MissRequiredAttribute, current.Property.GetQName().Name),
+                    description: SR.Format(ValidationResources.Sch_MissRequiredAttribute, current.Property.QName.ToXmlQualifiedName().Name),
                     id: "Sch_MissRequiredAttribute",
                     errorType: ValidationErrorType.Schema);
             }

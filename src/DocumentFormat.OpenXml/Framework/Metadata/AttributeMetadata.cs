@@ -21,8 +21,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public abstract Type Type { get; }
 
-        public XmlQualifiedName GetQName() => QName.ToXmlQualifiedName();
-
         public class Builder<TSimpleType> : ValidatorBuilder, IMetadataBuilder<AttributeMetadata>
             where TSimpleType : OpenXmlSimpleType, new()
         {

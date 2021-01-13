@@ -84,14 +84,14 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, current.Property.GetQName(), current.Value.InnerText, current.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
+                        description: SR.Format(description, current.Property.QName.ToXmlQualifiedName(), current.Value.InnerText, current.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, current.Property.GetQName(), current.Value.InnerText, SR.Format(ValidationResources.Sch_StringIsNotValidValue, stValue.InnerText, current.Property.TypeName)),
+                        description: SR.Format(description, current.Property.QName.ToXmlQualifiedName(), current.Value.InnerText, SR.Format(ValidationResources.Sch_StringIsNotValidValue, stValue.InnerText, current.Property.TypeName)),
                         errorType: ValidationErrorType.Schema);
                 }
 
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, current.Property.GetQName(), current.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, current.Value, _nonNegativeQname)),
+                        description: SR.Format(description, current.Property.QName.ToXmlQualifiedName(), current.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, current.Value, _nonNegativeQname)),
                         errorType: ValidationErrorType.Schema);
                 }
 
@@ -112,7 +112,7 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, current.Property.GetQName(), current.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, current.Value, _positiveQname)),
+                        description: SR.Format(description, current.Property.QName.ToXmlQualifiedName(), current.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, current.Value, _positiveQname)),
                         errorType: ValidationErrorType.Schema);
                 }
 

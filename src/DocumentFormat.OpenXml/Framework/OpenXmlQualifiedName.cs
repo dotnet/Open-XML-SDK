@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Framework
             return string.CompareOrdinal(Name, other.Name);
         }
 
-        public override string ToString() => $"{Namespace}:{Name}";
+        public override string ToString() => Namespace.IsEmpty ? Name : string.Concat(Namespace.ToString(), ":", Name);
 
         public bool Equals(OpenXmlQualifiedName other)
             => Namespace.Equals(other.Namespace)
