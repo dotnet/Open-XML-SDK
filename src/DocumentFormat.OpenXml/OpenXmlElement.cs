@@ -1796,7 +1796,7 @@ namespace DocumentFormat.OpenXml
         {
             var newElement = default(OpenXmlElement);
 
-            if (qname.Namespace.IsValid)
+            if (qname.Namespace.IsKnown)
             {
                 newElement = ElementFactory(qname);
 

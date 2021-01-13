@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public string Prefix => _prefix ?? GetNamespacePrefix(Uri) ?? string.Empty;
 
-        public bool IsValid => TryGetNamespaceId(Uri, out _);
+        public bool IsKnown => TryGetNamespaceId(Uri, out _);
 
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
 
@@ -69,6 +69,9 @@ namespace DocumentFormat.OpenXml.Framework
 
         public override bool Equals(object? obj) => obj is OpenXmlNamespace ns && Equals(ns);
 
+        public bool Equals(OpenXmlNamespace other)
+            => string.Equals(Uri, other.Uri, StringComparison.Ordinal);
+
         public override int GetHashCode()
         {
             var hashcode = new HashCode();
@@ -82,9 +85,6 @@ namespace DocumentFormat.OpenXml.Framework
 
         public int CompareTo(OpenXmlNamespace other)
             => string.CompareOrdinal(Uri, other.Uri);
-
-        public bool Equals(OpenXmlNamespace other)
-            => string.Equals(Uri, other.Uri, StringComparison.Ordinal);
 
         public static implicit operator OpenXmlNamespace(string ns) => new OpenXmlNamespace(ns);
 
@@ -104,11 +104,6 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        /// <summary>
-        /// Gets the namespace URI for the specified namespace ID.
-        /// </summary>
-        /// <param name="namespaceId">The namespace ID.</param>
-        /// <returns></returns>
         private static string GetNamespaceUri(byte namespaceId) => _namespaceResolver[namespaceId].Namespace;
 
         /// <summary>
@@ -148,51 +143,6 @@ namespace DocumentFormat.OpenXml.Framework
             }
 
             return ns.Uri;
-        }
-
-        private class NamespaceResolver : IEnumerable
-        {
-            private readonly Dictionary<string, NamespaceInfo> _byNamespace = new Dictionary<string, NamespaceInfo>(StringComparer.Ordinal);
-            private readonly Dictionary<string, NamespaceInfo> _byPrefix = new Dictionary<string, NamespaceInfo>(StringComparer.Ordinal);
-            private readonly List<NamespaceInfo> _info = new List<NamespaceInfo>();
-
-            public int Count => _info.Count;
-
-            public void Add(string @namespace, string prefix, FileFormatVersions version)
-            {
-                var info = new NamespaceInfo(@namespace, prefix, version, (byte)_info.Count);
-
-                _byNamespace.Add(@namespace, info);
-                _byPrefix.Add(prefix, info);
-                _info.Add(info);
-            }
-
-            public NamespaceInfo this[int id] => _info[id];
-
-            public bool TryGetByNamespace(string ns, [MaybeNullWhen(false)] out NamespaceInfo info) => _byNamespace.TryGetValue(ns, out info);
-
-            public bool TryGetByPrefix(string prefix, [MaybeNullWhen(false)] out NamespaceInfo info) => _byPrefix.TryGetValue(prefix, out info);
-
-            IEnumerator IEnumerable.GetEnumerator() => _info.GetEnumerator();
-
-            public class NamespaceInfo
-            {
-                public NamespaceInfo(string ns, string prefix, FileFormatVersions version, byte id)
-                {
-                    Namespace = ns;
-                    Prefix = prefix;
-                    Version = version;
-                    Id = id;
-                }
-
-                public string Namespace { get; }
-
-                public string Prefix { get; }
-
-                public FileFormatVersions Version { get; }
-
-                public byte Id { get; }
-            }
         }
 
         /// <summary>
@@ -432,5 +382,50 @@ namespace DocumentFormat.OpenXml.Framework
             { "http://purl.oclc.org/ooxml/officeDocument/relationships/worksheet", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" },
             { "http://purl.oclc.org/ooxml/officeDocument/relationships/xmlMaps", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps" },
         };
+
+        private class NamespaceResolver : IEnumerable
+        {
+            private readonly Dictionary<string, NamespaceInfo> _byNamespace = new Dictionary<string, NamespaceInfo>(StringComparer.Ordinal);
+            private readonly Dictionary<string, NamespaceInfo> _byPrefix = new Dictionary<string, NamespaceInfo>(StringComparer.Ordinal);
+            private readonly List<NamespaceInfo> _info = new List<NamespaceInfo>();
+
+            public int Count => _info.Count;
+
+            public void Add(string @namespace, string prefix, FileFormatVersions version)
+            {
+                var info = new NamespaceInfo(@namespace, prefix, version, (byte)_info.Count);
+
+                _byNamespace.Add(@namespace, info);
+                _byPrefix.Add(prefix, info);
+                _info.Add(info);
+            }
+
+            public NamespaceInfo this[int id] => _info[id];
+
+            public bool TryGetByNamespace(string ns, [MaybeNullWhen(false)] out NamespaceInfo info) => _byNamespace.TryGetValue(ns, out info);
+
+            public bool TryGetByPrefix(string prefix, [MaybeNullWhen(false)] out NamespaceInfo info) => _byPrefix.TryGetValue(prefix, out info);
+
+            IEnumerator IEnumerable.GetEnumerator() => _info.GetEnumerator();
+
+            public class NamespaceInfo
+            {
+                public NamespaceInfo(string ns, string prefix, FileFormatVersions version, byte id)
+                {
+                    Namespace = ns;
+                    Prefix = prefix;
+                    Version = version;
+                    Id = id;
+                }
+
+                public string Namespace { get; }
+
+                public string Prefix { get; }
+
+                public FileFormatVersions Version { get; }
+
+                public byte Id { get; }
+            }
+        }
     }
 }

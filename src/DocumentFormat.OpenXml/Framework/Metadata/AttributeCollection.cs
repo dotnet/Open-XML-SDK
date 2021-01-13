@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         private int GetIndex(in OpenXmlQualifiedName qname)
         {
-            if (qname.Namespace.IsValid)
+            if (qname.Namespace.IsKnown)
             {
                 for (var i = 0; i < _attributes.Length; i++)
                 {
