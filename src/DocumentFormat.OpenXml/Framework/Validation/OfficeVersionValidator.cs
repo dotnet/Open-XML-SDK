@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Framework
         {
             var current = context.Stack.Current;
 
-            if (!context.FileFormat.AtLeast(OfficeVersion) && current.Value?.HasValue == true && !context.McContext.IsIgnorableNs(current.Property.GetQName().Namespace))
+            if (!context.FileFormat.AtLeast(OfficeVersion) && current.Value?.HasValue == true && !context.McContext.IsIgnorableNs(current.Property.QName.Namespace))
             {
                 context.CreateError(
                     id: "Sch_UndeclaredAttribute",

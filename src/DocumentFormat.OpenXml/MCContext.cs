@@ -161,19 +161,19 @@ namespace DocumentFormat.OpenXml
             return _currentIgnorable.Count > 0;
         }
 
-        internal bool IsIgnorableNs(string ns)
+        internal bool IsIgnorableNs(in OpenXmlNamespace ns)
         {
             if (_currentIgnorable.Count == 0)
             {
                 return false;
             }
 
-            if (string.IsNullOrEmpty(ns))
+            if (ns.IsEmpty)
             {
                 return false;
             }
 
-            if (_currentIgnorable.Contains(ns))
+            if (_currentIgnorable.Contains(ns.Uri))
             {
                 return true;
             }
@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml
                 return AttributeAction.Normal;
             }
 
-            if (!IsIgnorableNs(qname.Namespace.Uri))
+            if (!IsIgnorableNs(qname.Namespace))
             {
                 return AttributeAction.Normal;
             }
