@@ -322,7 +322,7 @@ namespace DocumentFormat.OpenXml
 
                 if (!string.IsNullOrEmpty(prefix))
                 {
-                    return prefix;
+                    return prefix!;
                 }
 
                 return QName.Namespace.Prefix;
