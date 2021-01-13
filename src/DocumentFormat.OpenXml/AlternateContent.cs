@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         [Obsolete("NamespaceId will be removed in later releases.")]
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public static byte MarkupCompatibilityNamespaceId => InternalQName.Namespace.Id;
+        public static byte MarkupCompatibilityNamespaceId => 0;
 
         /// <summary>
         /// Gets a value that represents the tag name of the

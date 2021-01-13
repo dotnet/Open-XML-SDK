@@ -32,8 +32,6 @@ namespace DocumentFormat.OpenXml.Framework
             }
         }
 
-        public byte Id => _nsId.GetValueOrDefault();
-
         public string Uri { get; }
 
         public string Prefix => _prefix ?? string.Empty;
