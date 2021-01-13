@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             {
                 new ElementParticle(typeof(ParticleTests), 1, 1),
                 new AnyParticle( 1, 1, version: FileFormatVersions.Office2010),
-                new NsAnyParticle(0, 1, 1),
+                new AnyParticle(0, 1, 1),
             }.Build();
 
             var built2007 = Assert.IsType<CompositeParticle>(particle.Build(FileFormatVersions.Office2007));
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             {
                 new ElementParticle(typeof(ParticleTests), 1, 1),
                 new ElementParticle(typeof(ParticleTests), 1, 1, version: FileFormatVersions.Office2010),
-                new NsAnyParticle(0, 1, 1),
+                new AnyParticle(0, 1, 1),
             }.Build();
 
             var built2007 = Assert.IsType<CompositeParticle>(particle.Build(FileFormatVersions.Office2007));
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             {
                 new ElementParticle(typeof(ParticleTests), 1, 1),
                 new AnyParticle( 1, 1),
-                new NsAnyParticle(0, 1, 1),
+                new AnyParticle(0, 1, 1),
             }.Build();
 
             var built = Assert.IsType<CompositeParticle>(particle.Build(version));
@@ -152,15 +152,6 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         public void AnyParticleBuildSame(FileFormatVersions version)
         {
             var particle = new AnyParticle(1, 1);
-
-            Assert.Same(particle, particle.Build(version));
-        }
-
-        [MemberData(nameof(Versions))]
-        [Theory]
-        public void AnyNsParticleBuildSame(FileFormatVersions version)
-        {
-            var particle = new NsAnyParticle(0, 1, 1);
 
             Assert.Same(particle, particle.Build(version));
         }
