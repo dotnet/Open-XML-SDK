@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Framework
             else
             {
                 var prefix = name.Substring(0, length);
-                var uri = nsUri ?? NamespaceIdMap.GetNamespaceUri(prefix) ?? string.Empty;
+                var uri = nsUri ?? OpenXmlNamespace.GetNamespaceUri(prefix) ?? string.Empty;
                 var localName = name.Substring(length + 1);
 
                 return new OpenXmlQualifiedName(new OpenXmlNamespace(uri, prefix), localName);
