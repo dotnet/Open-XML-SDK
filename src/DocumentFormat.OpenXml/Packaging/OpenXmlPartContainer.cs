@@ -1,14 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO.Packaging;
 using System.Linq;
 using System.Reflection;
@@ -23,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         private readonly Dictionary<string, OpenXmlPart> _childrenPartsDictionary = new Dictionary<string, OpenXmlPart>(StringComparer.Ordinal);
         private readonly LinkedList<ReferenceRelationship> _referenceRelationships = new LinkedList<ReferenceRelationship>();
-        private object _annotations;
+        private object? _annotations;
 
         /// <summary>
         /// Initializes OpenXmlPartContainer.
@@ -555,7 +554,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="id">The relationship ID of the part.</param>
         /// <param name="part">The part.</param>
         /// <returns>Return <c>true</c> when the part with the specified id exist, otherwise <c>false</c></returns>
-        public bool TryGetPartById(string id, out OpenXmlPart part)
+        public bool TryGetPartById(string id, [MaybeNullWhen(false)] out OpenXmlPart part)
         {
             ThrowIfObjectDisposed();
 
@@ -620,7 +619,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(newRelationshipId));
             }
 
-            string oldId = null;
+            var oldId = default(string);
+
             foreach (var idPartPair in ChildrenRelationshipParts)
             {
                 if (idPartPair.Key == newRelationshipId)
@@ -826,7 +826,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="targetExt">The desired part name extension in the package.</param>
         /// <param name="rId">The desired relationship ID.</param>
         /// <returns>The new ExtendedPart.</returns>
-        public ExtendedPart AddExtendedPart(string relationshipType, string contentType, string targetExt, string rId)
+        public ExtendedPart AddExtendedPart(string relationshipType, string contentType, string targetExt, string? rId)
         {
             ThrowIfObjectDisposed();
 
@@ -970,8 +970,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
             else
             {
-                var annotations = _annotations as object[];
-                if (annotations is null)
+                if (_annotations is not object?[] annotations)
                 {
                     _annotations = new object[] { _annotations, annotation };
                 }
@@ -985,7 +984,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                     if (index == annotations.Length)
                     {
-                        Array.Resize<object>(ref annotations, index * 2);
+                        Array.Resize(ref annotations, index * 2);
                         _annotations = annotations;
                     }
 
@@ -999,14 +998,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <typeparam name="T">The type of the annotation to retrieve.</typeparam>
         /// <returns>The first annotation object of the specified type.</returns>
-        public T Annotation<T>()
+        public T? Annotation<T>()
             where T : class
         {
             if (_annotations is not null)
             {
-                var annotations = _annotations as object[];
-
-                if (annotations is null)
+                if (_annotations is not object?[] annotations)
                 {
                     return _annotations as T;
                 }
@@ -1035,7 +1032,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="type">The type of the annotation to retrieve.</param>
         /// <returns>The first annotation object of the specified type.</returns>
-        public object Annotation(Type type)
+        public object? Annotation(Type type)
         {
             if (type is null)
             {
@@ -1044,8 +1041,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (_annotations is not null)
             {
-                var annotations = _annotations as object[];
-                if (annotations is null)
+                if (_annotations is not object?[] annotations)
                 {
                     if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
                     {
@@ -1083,12 +1079,11 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (_annotations is not null)
             {
-                var annotations = _annotations as object[];
-                if (annotations is null)
+                if (_annotations is not object?[] annotations)
                 {
-                    if (_annotations is T)
+                    if (_annotations is T t)
                     {
-                        yield return (T)_annotations;
+                        yield return t;
                     }
                 }
                 else
@@ -1101,9 +1096,9 @@ namespace DocumentFormat.OpenXml.Packaging
                             break;
                         }
 
-                        if (obj is T)
+                        if (obj is T t)
                         {
-                            yield return (T)obj;
+                            yield return t;
                         }
                     }
                 }
@@ -1124,8 +1119,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (_annotations is not null)
             {
-                var annotations = _annotations as object[];
-                if (annotations is null)
+                if (_annotations is not object?[] annotations)
                 {
                     if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
                     {
@@ -1160,8 +1154,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             if (_annotations is not null)
             {
-                var annotations = _annotations as object[];
-                if (annotations is null)
+                if (_annotations is not object?[] annotations)
                 {
                     if (_annotations is T)
                     {
@@ -1216,8 +1209,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (_annotations is not null)
             {
-                var annotations = _annotations as object[];
-                if (annotations is null)
+                if (_annotations is not object?[] annotations)
                 {
                     if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
                     {
@@ -1340,7 +1332,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="contentType">The content type of the part.</param>
         /// <param name="id">The part relationship id.</param>
         /// <returns>The added part.</returns>
-        internal T AddNewPartInternal<T>(string contentType, string id)
+        internal T AddNewPartInternal<T>(string? contentType, string? id)
             where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
@@ -1422,7 +1414,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="newPart">The part to be initialized.</param>
         /// <param name="contentType">The content type of the part.</param>
         /// <param name="id">The relationship id.</param>
-        internal virtual void InitPart<T>(T newPart, string contentType, string id)
+        internal virtual void InitPart<T>(T newPart, string contentType, string? id)
             where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
@@ -1489,7 +1481,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "subPart" is null reference.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the part is no allowed to be added.</exception>
         /// <exception cref="OpenXmlPackageException">Thrown when one instance of same type part already exists and multiple instance of that type is not allowed.</exception>
-        internal virtual OpenXmlPart AddPartFrom(OpenXmlPart subPart, string rId)
+        internal virtual OpenXmlPart AddPartFrom(OpenXmlPart subPart, string? rId)
         {
             ThrowIfObjectDisposed();
 
@@ -1560,7 +1552,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="part"></param>
         /// <param name="rId">A unique relationship identifier.</param>
         /// <returns>The part added to the parent. Different with the passed in part.</returns>
-        internal OpenXmlPart SetSubPart(OpenXmlPart part, string rId)
+        internal OpenXmlPart SetSubPart(OpenXmlPart part, string? rId)
         {
             if (part is null)
             {
@@ -1586,7 +1578,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="part"></param>
         /// <param name="rId">A unique relationship identifier.</param>
         /// <returns>The part added to the parent. Different with the passed in part.</returns>
-        internal OpenXmlPart AddSubPart(OpenXmlPart part, string rId)
+        internal OpenXmlPart AddSubPart(OpenXmlPart part, string? rId)
         {
             if (part is null)
             {
@@ -1612,10 +1604,10 @@ namespace DocumentFormat.OpenXml.Packaging
         // Add part which is from other package to this package
         // All child parts will also be added
         // partDictionary used to map new part from the source part and to detect cycle reference in source part
-        internal OpenXmlPart AddSubPartFromOtherPackage(OpenXmlPart part, bool keepIdAndUri, string rId)
+        internal OpenXmlPart AddSubPartFromOtherPackage(OpenXmlPart part, bool keepIdAndUri, string? rId)
         {
             var partDictionary = new Dictionary<OpenXmlPart, OpenXmlPart>();
-            var dataPartsDictionary = new Dictionary<DataPart, DataPart>();
+            var dataPartsDictionary = new Dictionary<DataPart, DataPart?>();
 
             return AddSubPartFromOtherPackage(part, partDictionary, dataPartsDictionary, keepIdAndUri, rId);
         }
@@ -1624,8 +1616,8 @@ namespace DocumentFormat.OpenXml.Packaging
         // All child parts will also be added
         // partDictionary used to map new part from the source part and to detect cycle reference in source part
         private OpenXmlPart AddSubPartFromOtherPackage(OpenXmlPart part, IDictionary<OpenXmlPart, OpenXmlPart> partDictionary,
-                                                        IDictionary<DataPart, DataPart> dataPartsDictionary,
-                                                        bool keepIdAndUri, string rId)
+                                                        IDictionary<DataPart, DataPart?> dataPartsDictionary,
+                                                        bool keepIdAndUri, string? rId)
         {
             if (keepIdAndUri)
             {
@@ -1731,11 +1723,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 // then create data part reference relationship
                 foreach (var dataPartReferenceRelationship in part.DataPartReferenceRelationships)
                 {
-                    var newDataPart = (MediaDataPart)dataPartsDictionary[dataPartReferenceRelationship.DataPart];
-                    Debug.Assert(newDataPart is not null);
-
-                    var newDataPartReference = DataPartReferenceRelationship.CreateDataPartReferenceRelationship(this, newDataPart, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
-                    ReferenceRelationshipList.AddLast(newDataPartReference);
+                    if (dataPartsDictionary[dataPartReferenceRelationship.DataPart] is MediaDataPart newDataPart)
+                    {
+                        var newDataPartReference = DataPartReferenceRelationship.CreateDataPartReferenceRelationship(this, newDataPart, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
+                        ReferenceRelationshipList.AddLast(newDataPartReference);
+                    }
                 }
 
                 return child;
@@ -1758,7 +1750,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="part">The part to be attached.</param>
         /// <param name="rId">The desired relationship ID.</param>
         /// <returns>The relationship ID.</returns>
-        internal string AttachChild(OpenXmlPart part, string rId)
+        internal string AttachChild(OpenXmlPart part, string? rId)
         {
             if (rId is null)
             {
@@ -1782,7 +1774,7 @@ namespace DocumentFormat.OpenXml.Packaging
             var liveParts = new Dictionary<OpenXmlPart, bool>();
             var processedParts = new Dictionary<OpenXmlPart, bool>();
 
-            if(!TryGetPartById(id, out var child))
+            if (!TryGetPartById(id, out var child))
             {
                 return false;
             }
@@ -1925,7 +1917,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="relationshipType">The relationship type of the part.</param>
         /// <returns>return null if no one.</returns>
         /// <remarks>Only used for maxOccurence=1 part.</remarks>
-        internal OpenXmlPart GetSubPart(string relationshipType)
+        internal OpenXmlPart? GetSubPart(string relationshipType)
         {
             ThrowIfObjectDisposed();
 
@@ -1946,7 +1938,7 @@ namespace DocumentFormat.OpenXml.Packaging
             return null;
         }
 
-        internal T GetSubPartOfType<T>()
+        internal T? GetSubPartOfType<T>()
             where T : OpenXmlPart
         {
             ThrowIfObjectDisposed();
