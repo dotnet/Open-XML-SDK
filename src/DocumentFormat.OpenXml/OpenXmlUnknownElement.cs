@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(name));
             }
 
-            var schema = OpenXmlSchema.Parse(name);
+            var schema = OpenXmlQualifiedName.Parse(name);
 
             _prefix = schema.Namespace.Prefix;
             _tagName = schema.Name;
@@ -69,15 +69,15 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(qualifiedName));
             }
 
-            var schema = OpenXmlSchema.Parse(qualifiedName);
+            var schema = OpenXmlQualifiedName.Parse(qualifiedName);
 
             _prefix = schema.Namespace.Prefix;
             _tagName = schema.Name;
             _namespaceUri = namespaceUri;
         }
 
-        internal OpenXmlUnknownElement(in OpenXmlSchema schema)
-            : this(schema.Namespace.Prefix, schema.Name, schema.Namespace.Uri)
+        internal OpenXmlUnknownElement(in OpenXmlQualifiedName qname)
+            : this(qname.Namespace.Prefix, qname.Name, qname.Namespace.Uri)
         {
         }
 

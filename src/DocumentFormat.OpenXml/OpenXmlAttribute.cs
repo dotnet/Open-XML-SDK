@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml
 
             _namespaceUri = namespaceUri;
 
-            var schema = OpenXmlSchema.Parse(qualifiedName);
+            var schema = OpenXmlQualifiedName.Parse(qualifiedName);
 
 #pragma warning disable CS0618 // Type or member is obsolete
             Prefix = schema.Namespace.Prefix;

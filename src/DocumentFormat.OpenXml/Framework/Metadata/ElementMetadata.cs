@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             ReadOnlyArray<IValidator> validators,
             ReadOnlyArray<IValidator> constraints,
             FileFormatVersions version,
-            OpenXmlSchema schema,
+            OpenXmlQualifiedName qname,
             CompiledParticle particle,
             Lazy<ElementLookup> lookup)
         {
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             Validators = validators;
             Constraints = constraints;
             Availability = version;
-            Schema = schema;
+            QName = qname;
             Particle = particle;
             _children = lookup;
         }
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public CompiledParticle? Particle { get; }
 
-        public OpenXmlSchema Schema { get; }
+        public OpenXmlQualifiedName QName { get; }
 
         public static ElementMetadata Create(OpenXmlElement element)
         {
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public ElementMetadata Build()
             {
-                var schema = _localName is null ? default : new OpenXmlSchema(_nsId, _localName);
+                var schema = _localName is null ? default : new OpenXmlQualifiedName(_nsId, _localName);
                 var lookup = _children is null ? _lazy : new Lazy<ElementLookup>(() => new ElementLookup(_children.Select(c => c.Build())), true);
 
                 return new ElementMetadata(BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, schema, Particle.Compile(), lookup);
@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 private class ElementChild2 : ElementLookup.ElementChild
                 {
                     public ElementChild2(ElementMetadata metadata)
-                        : base(typeof(T), metadata.Schema)
+                        : base(typeof(T), metadata.QName)
                     {
                     }
 

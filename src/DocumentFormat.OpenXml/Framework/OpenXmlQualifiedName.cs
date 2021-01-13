@@ -6,9 +6,9 @@ using System.Xml;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
-    internal readonly struct OpenXmlSchema : IComparable<OpenXmlSchema>, IEquatable<OpenXmlSchema>
+    internal readonly struct OpenXmlQualifiedName : IComparable<OpenXmlQualifiedName>, IEquatable<OpenXmlQualifiedName>
     {
-        internal OpenXmlSchema(OpenXmlNamespace ns, string name)
+        internal OpenXmlQualifiedName(OpenXmlNamespace ns, string name)
         {
             Namespace = ns;
             Name = name;
@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public override bool Equals(object? obj) => base.Equals(obj);
 
-        public int CompareTo(OpenXmlSchema other)
+        public int CompareTo(OpenXmlQualifiedName other)
         {
             var nsCompare = Namespace.CompareTo(other.Namespace);
 
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public override string ToString() => $"{Namespace}:{Name}";
 
-        public bool Equals(OpenXmlSchema other)
+        public bool Equals(OpenXmlQualifiedName other)
             => Namespace.Equals(other.Namespace)
             && string.Equals(Name, other.Name, StringComparison.Ordinal);
 
@@ -48,10 +48,10 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             return hashcode.ToHashCode();
         }
 
-        public static OpenXmlSchema Create(string nsUri, string prefix, string name)
-            => new OpenXmlSchema(new OpenXmlNamespace(nsUri, prefix), name);
+        public static OpenXmlQualifiedName Create(string nsUri, string prefix, string name)
+            => new OpenXmlQualifiedName(new OpenXmlNamespace(nsUri, prefix), name);
 
-        public static OpenXmlSchema Parse(string name, string? nsUri = null)
+        public static OpenXmlQualifiedName Parse(string name, string? nsUri = null)
         {
 #if NET5_0
             var length = name.IndexOf(':', StringComparison.Ordinal);
@@ -63,11 +63,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
                 if (nsUri is null)
                 {
-                    return new OpenXmlSchema(string.Empty, name);
+                    return new OpenXmlQualifiedName(string.Empty, name);
                 }
                 else
                 {
-                    return new OpenXmlSchema(nsUri, name);
+                    return new OpenXmlQualifiedName(nsUri, name);
                 }
             }
             else
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 var uri = nsUri ?? NamespaceIdMap.GetNamespaceUri(prefix) ?? string.Empty;
                 var localName = name.Substring(length + 1);
 
-                return new OpenXmlSchema(new OpenXmlNamespace(uri, prefix), localName);
+                return new OpenXmlQualifiedName(new OpenXmlNamespace(uri, prefix), localName);
             }
         }
 

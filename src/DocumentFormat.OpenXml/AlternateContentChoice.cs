@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml
             set => SetAttribute(value);
         }
 
-        internal override OpenXmlElement ElementFactory(in OpenXmlSchema schema)
+        internal override OpenXmlElement ElementFactory(in OpenXmlQualifiedName qname)
         {
             if (Parent is AlternateContent)
             {
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml
 
                 if (parentsParentElement is not null)
                 {
-                    return parentsParentElement.ElementFactory(schema);
+                    return parentsParentElement.ElementFactory(qname);
                 }
             }
 

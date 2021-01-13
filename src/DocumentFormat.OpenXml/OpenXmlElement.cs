@@ -194,7 +194,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the namespace ID of the current element.
         /// </summary>
-        internal byte NamespaceId => Metadata.Schema.Namespace.Id;
+        internal byte NamespaceId => Metadata.QName.Namespace.Id;
 
         internal virtual void ConfigureMetadata(ElementMetadata.Builder builder)
         {
@@ -305,12 +305,12 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the namespace URI of the current element.
         /// </summary>
-        public virtual string NamespaceUri => Metadata.Schema.Namespace.Uri;
+        public virtual string NamespaceUri => Metadata.QName.Namespace.Uri;
 
         /// <summary>
         /// Gets the local name of the current element.
         /// </summary>
-        public virtual string LocalName => Metadata.Schema.Name;
+        public virtual string LocalName => Metadata.QName.Name;
 
         /// <summary>
         /// Gets the namespace prefix of current element.
@@ -1780,22 +1780,22 @@ namespace DocumentFormat.OpenXml
         internal OpenXmlElement ElementFactory(XmlReader xmlReader)
             => xmlReader.NodeType switch
             {
-                XmlNodeType.Element => ElementFactory2(OpenXmlSchema.Create(xmlReader.NamespaceURI, xmlReader.Prefix, xmlReader.LocalName)),
+                XmlNodeType.Element => ElementFactory2(OpenXmlQualifiedName.Create(xmlReader.NamespaceURI, xmlReader.Prefix, xmlReader.LocalName)),
                 XmlNodeType.Comment or XmlNodeType.ProcessingInstruction or XmlNodeType.XmlDeclaration => new OpenXmlMiscNode(xmlReader.NodeType),
                 XmlNodeType.Text or XmlNodeType.CDATA or XmlNodeType.SignificantWhitespace or XmlNodeType.Whitespace => new OpenXmlMiscNode(xmlReader.NodeType),
                 _ => throw new InvalidOperationException(),
             };
 
-        internal OpenXmlElement ElementFactory2(in OpenXmlSchema schema)
+        internal OpenXmlElement ElementFactory2(in OpenXmlQualifiedName qname)
         {
             var newElement = default(OpenXmlElement);
 
-            if (schema.Namespace.IsValid)
+            if (qname.Namespace.IsValid)
             {
-                newElement = ElementFactory(schema);
+                newElement = ElementFactory(qname);
 
                 // try AlternateContent
-                if (newElement is null && AlternateContent.Is(schema))
+                if (newElement is null && AlternateContent.Is(qname))
                 {
                     newElement = new AlternateContent();
                 }
@@ -1803,13 +1803,13 @@ namespace DocumentFormat.OpenXml
 
             if (newElement is null)
             {
-                newElement = new OpenXmlUnknownElement(schema);
+                newElement = new OpenXmlUnknownElement(qname);
             }
 
             return newElement;
         }
 
-        internal virtual OpenXmlElement? ElementFactory(in OpenXmlSchema schema) => Metadata.Children.Create(schema);
+        internal virtual OpenXmlElement? ElementFactory(in OpenXmlQualifiedName qname) => Metadata.Children.Create(qname);
 
         internal virtual T CloneImp<T>(bool deep)
             where T : OpenXmlElement, new()

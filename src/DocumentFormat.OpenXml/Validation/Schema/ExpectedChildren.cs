@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         if (_elementTypes.Contains(childElement.Type))
                         {
                             // <namespace:localname>, use InvariantCulture
-                            childrenNames.Add(SR.Format(ValidationResources.Fmt_ElementName, childElement.Schema.Namespace.Uri, childElement.Schema.Name));
+                            childrenNames.Add(SR.Format(ValidationResources.Fmt_ElementName, childElement.QName.Namespace.Uri, childElement.QName.Name));
                         }
                     }
                 }

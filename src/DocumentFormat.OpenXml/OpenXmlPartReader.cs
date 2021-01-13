@@ -737,7 +737,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // create the root element object
-            var rootElement = CreateElement(new OpenXmlSchema(_xmlReader.NamespaceURI, _xmlReader.LocalName));
+            var rootElement = CreateElement(new OpenXmlQualifiedName(_xmlReader.NamespaceURI, _xmlReader.LocalName));
 
             if (rootElement is null)
             {
@@ -761,9 +761,9 @@ namespace DocumentFormat.OpenXml
             return true;
         }
 
-        private static OpenXmlElement CreateElement(in OpenXmlSchema schema)
+        private static OpenXmlElement CreateElement(in OpenXmlQualifiedName qname)
         {
-            if (ElementLookup.Parts.Create(schema) is OpenXmlElement element)
+            if (ElementLookup.Parts.Create(qname) is OpenXmlElement element)
             {
                 return element;
             }

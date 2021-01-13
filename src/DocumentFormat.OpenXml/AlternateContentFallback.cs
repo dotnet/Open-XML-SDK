@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public static string TagName => Name;
 
-        internal override OpenXmlElement ElementFactory(in OpenXmlSchema schema)
+        internal override OpenXmlElement ElementFactory(in OpenXmlQualifiedName qname)
         {
             OpenXmlElement newElement = null;
 
@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml
                 OpenXmlElement parentsParentElement = Parent.Parent;
                 if (parentsParentElement is not null)
                 {
-                    newElement = parentsParentElement.ElementFactory(schema);
+                    newElement = parentsParentElement.ElementFactory(qname);
                 }
             }
 
