@@ -1447,7 +1447,7 @@ namespace DocumentFormat.OpenXml
                             }
                         }
 
-                        xmlWriter.WriteStartAttribute(prefix, attribute.Property.Name, ns);
+                        xmlWriter.WriteStartAttribute(prefix, attribute.Property.QName.Name, ns);
                         xmlWriter.WriteString(attribute.Value.InnerText);
                         xmlWriter.WriteEndAttribute();
                     }

@@ -202,7 +202,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
                 if (expression.Body is MemberExpression member)
                 {
-                    var builder = new AttributeMetadata.Builder<TSimpleType>(nsId, localName, member.Member.Name);
+                    var builder = new AttributeMetadata.Builder<TSimpleType>(new OpenXmlQualifiedName(nsId, localName), member.Member.Name);
 
                     action?.Invoke(builder);
 
