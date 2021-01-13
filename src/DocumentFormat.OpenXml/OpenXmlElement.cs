@@ -191,11 +191,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <summary>
-        /// Gets the namespace ID of the current element.
-        /// </summary>
-        internal byte NamespaceId => Metadata.QName.Namespace.Id;
-
         internal virtual void ConfigureMetadata(ElementMetadata.Builder builder)
         {
         }
@@ -330,7 +325,7 @@ namespace DocumentFormat.OpenXml
                     return prefix;
                 }
 
-                return NamespaceIdMap.GetNamespacePrefix(NamespaceId);
+                return QName.Namespace.Prefix;
             }
         }
 
@@ -1057,7 +1052,7 @@ namespace DocumentFormat.OpenXml
                 //in this case, we use the predefined prefix
                 if (string.IsNullOrEmpty(prefix))
                 {
-                    prefix = NamespaceIdMap.GetNamespacePrefix(NamespaceId);
+                    prefix = QName.Namespace.Prefix;
                 }
 
                 xmlWriter.WriteStartElement(prefix, LocalName, NamespaceUri);

@@ -300,7 +300,7 @@ namespace DocumentFormat.OpenXml
                 //in this case, we use the predefined prefix
                 if (string.IsNullOrEmpty(prefix))
                 {
-                    prefix = NamespaceIdMap.GetNamespacePrefix(NamespaceId);
+                    prefix = QName.Namespace.Prefix;
                 }
 
                 xmlWriter.WriteStartElement(prefix, LocalName, NamespaceUri);
