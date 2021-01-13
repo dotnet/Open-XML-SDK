@@ -19,10 +19,10 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public OpenXmlNamespace(string nsUri, string? prefix = null)
         {
-            _prefix = prefix ?? NamespaceIdMap.GetNamespacePrefix(nsUri);
-            Uri = nsUri;
+            _prefix = prefix ?? NamespaceIdMap.GetNamespacePrefix(nsUri ?? string.Empty);
+            Uri = nsUri!;
 
-            if (NamespaceIdMap.TryGetNamespaceId(nsUri, out var nsId))
+            if (NamespaceIdMap.TryGetNamespaceId(nsUri!, out var nsId))
             {
                 _nsId = nsId;
             }

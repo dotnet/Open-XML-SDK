@@ -120,6 +120,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public XName XName => XName.Get(LocalName, _namespaceUri);
 
+        internal OpenXmlQualifiedName QName => new OpenXmlQualifiedName(_namespaceUri, LocalName);
+
         /// <summary>
         /// Determines if this instance of an OpenXmlAttribute structure is equal to the specified instance of an OpenXmlAttribute structure.
         /// </summary>

@@ -569,7 +569,7 @@ namespace DocumentFormat.OpenXml
             }
 
             MakeSureParsed();
-            if (!TrySetFixedAttribute(openXmlAttribute.NamespaceUri, openXmlAttribute.LocalName, openXmlAttribute.Value, false))
+            if (!TrySetFixedAttribute(openXmlAttribute.QName, openXmlAttribute.Value, false))
             {
                 if (openXmlAttribute.NamespaceUri == AlternateContent.MarkupCompatibilityNamespace)
                 {
@@ -631,10 +631,15 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentOutOfRangeException(nameof(localName), ExceptionMessages.StringIsEmpty);
             }
 
+            RemoveAttribute(new OpenXmlQualifiedName(namespaceUri, localName));
+        }
+
+        private void RemoveAttribute(in OpenXmlQualifiedName qname)
+        {
             if (HasAttributes)
             {
                 // get attribute namespace ID
-                var attribute = RawState.Attributes[namespaceUri, localName];
+                var attribute = RawState.Attributes[qname];
                 if (!attribute.IsNil)
                 {
                     attribute.Value = null;
@@ -646,7 +651,7 @@ namespace DocumentFormat.OpenXml
                     {
                         foreach (var extendedAttribute in ExtendedAttributesField)
                         {
-                            if (extendedAttribute.LocalName == localName && extendedAttribute.NamespaceUri == namespaceUri)
+                            if (extendedAttribute.QName.Equals(qname))
                             {
                                 ExtendedAttributesField.RemoveAt(index);
                                 return;
@@ -658,9 +663,9 @@ namespace DocumentFormat.OpenXml
                 }
 
                 //try remove MC attribute
-                if (namespaceUri == AlternateContent.MarkupCompatibilityNamespace)
+                if (qname.Namespace.Uri == AlternateContent.MarkupCompatibilityNamespace)
                 {
-                    RemoveMCAttribute(localName);
+                    RemoveMCAttribute(qname.Name);
                 }
             }
         }
@@ -1467,26 +1472,25 @@ namespace DocumentFormat.OpenXml
         /// <param name="w">The XmlWriter at which to save the child nodes. </param>
         internal abstract void WriteContentTo(XmlWriter w);
 
-        private protected virtual bool StrictTranslateAttribute(string namespaceUri, string localName, string value) => TrySetFixedAttribute(namespaceUri, localName, value, false);
+        private protected virtual bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string value) => TrySetFixedAttribute(qname, value, false);
 
         /// <summary>
         /// Attempts to set the attribute to a known attribute.
         /// </summary>
-        /// <param name="namespaceUri"></param>
-        /// <param name="localName"></param>
+        /// <param name="qname"></param>
         /// <param name="value"></param>
         /// <param name="strictRelationshipFound"></param>
         /// <returns>true if the attribute is a known attribute.</returns>
-        private bool TrySetFixedAttribute(string namespaceUri, string localName, string value, bool strictRelationshipFound)
+        private bool TrySetFixedAttribute(in OpenXmlQualifiedName qname, string value, bool strictRelationshipFound)
         {
             if (RawState.Attributes.Any())
             {
                 if (strictRelationshipFound)
                 {
-                    return StrictTranslateAttribute(namespaceUri, localName, value);
+                    return StrictTranslateAttribute(qname, value);
                 }
 
-                var attribute = RawState.Attributes[namespaceUri, localName];
+                var attribute = RawState.Attributes[qname];
 
                 if (!attribute.IsNil)
                 {
@@ -1512,7 +1516,7 @@ namespace DocumentFormat.OpenXml
             {
                 while (xmlReader.MoveToNextAttribute())
                 {
-                    if (!TrySetFixedAttribute(xmlReader.NamespaceURI, xmlReader.LocalName, xmlReader.Value, ((XmlConvertingReader)xmlReader).StrictRelationshipFound))
+                    if (!TrySetFixedAttribute(new OpenXmlQualifiedName(xmlReader.NamespaceURI, xmlReader.LocalName), xmlReader.Value, ((XmlConvertingReader)xmlReader).StrictRelationshipFound))
                     {
                         if (xmlReader.NamespaceURI == AlternateContent.MarkupCompatibilityNamespace)
                         {
@@ -2269,16 +2273,6 @@ namespace DocumentFormat.OpenXml
             {
                 return nsUri == OpenXmlElementContext.xmlnsUri;
             }
-        }
-
-        /// <summary>
-        /// Indicates whether the specified namespace is a known namespace.
-        /// </summary>
-        /// <param name="namespaceUri"></param>
-        /// <returns></returns>
-        internal static bool IsKnownNamespace(string namespaceUri)
-        {
-            return NamespaceIdMap.TryGetNamespaceId(namespaceUri, out _);
         }
 
         /// <summary>

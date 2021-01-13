@@ -15,6 +15,8 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public abstract string Name { get; }
 
+        public OpenXmlQualifiedName QName => new OpenXmlQualifiedName(NamespaceId, Name);
+
         public abstract byte NamespaceId { get; }
 
         public abstract ReadOnlyArray<IValidator> Validators { get; }
