@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public string Name { get; }
 
-        public override bool Equals(object? obj) => base.Equals(obj);
+        public override bool Equals(object? obj) => obj is OpenXmlQualifiedName qname && Equals(qname);
 
         public int CompareTo(OpenXmlQualifiedName other)
         {

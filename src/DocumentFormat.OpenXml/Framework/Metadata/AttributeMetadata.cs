@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         public class Builder<TSimpleType> : ValidatorBuilder, IMetadataBuilder<AttributeMetadata>
             where TSimpleType : OpenXmlSimpleType, new()
         {
-            private static IValidator _defaultValidator = GetDefaultValidator();
+            private static readonly IValidator _defaultValidator = GetDefaultValidator();
 
             public Builder(in OpenXmlQualifiedName qname, string propertyName)
             {

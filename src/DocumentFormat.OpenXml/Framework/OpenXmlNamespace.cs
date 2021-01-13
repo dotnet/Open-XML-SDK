@@ -18,28 +18,13 @@ namespace DocumentFormat.OpenXml.Framework
 
         public OpenXmlNamespace(string? nsUri, string? prefix = null)
         {
-            if (prefix is not null)
-            {
-                _prefix = string.Intern(prefix);
-            }
-            else
-            {
-                _prefix = null;
-            }
-
-            if (nsUri is not null)
-            {
-                _uri = string.Intern(nsUri);
-            }
-            else
-            {
-                _uri = null;
-            }
+            _uri = nsUri;
+            _prefix = prefix;
         }
 
         public string Uri => _uri ?? string.Empty;
 
-        public string Prefix => _prefix ?? string.Empty;
+        public string Prefix => _prefix ?? NamespaceIdMap.GetNamespacePrefix(Uri) ?? string.Empty;
 
         public bool IsValid => NamespaceIdMap.TryGetNamespaceId(Uri, out _);
 
