@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 {
     public partial class Document
     {
-        private protected override bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string value)
+        private protected override bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string? value)
         {
             if (string.Equals("conformance", qname.Name, StringComparison.Ordinal)
                 && string.Equals("strict", value, StringComparison.Ordinal))

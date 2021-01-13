@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remarks>
         /// See §14.3.1.2 of ISO/IEC 29500-4 for details on this translation
         /// </remarks>
-        private protected override bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string value)
+        private protected override bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string? value)
         {
             if (s_attributeMap.TryGetValue(qname.Name, out var result))
             {
