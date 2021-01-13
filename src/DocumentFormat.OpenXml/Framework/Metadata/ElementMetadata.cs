@@ -121,7 +121,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 => SetSchema(new OpenXmlQualifiedName(ns, localName));
 
             public void SetSchema(byte nsId, string localName)
-                => SetSchema(new OpenXmlQualifiedName(nsId, localName));
+                => SetSchema(new OpenXmlQualifiedName(new OpenXmlNamespace(nsId), localName));
 
             public void AddChild<T>()
                 where T : OpenXmlElement, new()
@@ -202,7 +202,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
                 if (expression.Body is MemberExpression member)
                 {
-                    var builder = new AttributeMetadata.Builder<TSimpleType>(new OpenXmlQualifiedName(nsId, localName), member.Member.Name);
+                    var builder = new AttributeMetadata.Builder<TSimpleType>(new OpenXmlQualifiedName(new OpenXmlNamespace(nsId), localName), member.Member.Name);
 
                     action?.Invoke(builder);
 

@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(tag));
             }
 
-            _qname = new OpenXmlQualifiedName(nsId, tag);
+            _qname = new OpenXmlQualifiedName(new OpenXmlNamespace(nsId), tag);
         }
 
         /// <summary>

@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         public void NamespacePrefixTest(string ns, string prefix, FileFormatVersions version, byte id)
         {
             var nsFromNs = new OpenXmlNamespace(ns);
-            var nsFromId = (OpenXmlNamespace)id;
+            var nsFromId = new OpenXmlNamespace(id);
 
             Assert.Equal(nsFromNs, nsFromId);
             Assert.Equal(prefix, nsFromNs.Prefix);

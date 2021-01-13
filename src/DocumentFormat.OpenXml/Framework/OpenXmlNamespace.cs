@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Framework
         private readonly string? _prefix;
         private readonly string? _uri;
 
-        private OpenXmlNamespace(byte nsId)
+        internal OpenXmlNamespace(byte nsId)
         {
             _prefix = GetNamespacePrefix(nsId);
             _uri = GetNamespaceUri(nsId);
@@ -87,8 +87,6 @@ namespace DocumentFormat.OpenXml.Framework
             => string.CompareOrdinal(Uri, other.Uri);
 
         public static implicit operator OpenXmlNamespace(string ns) => new OpenXmlNamespace(ns);
-
-        public static implicit operator OpenXmlNamespace(byte nsId) => new OpenXmlNamespace(nsId);
 
         private static bool TryGetNamespaceId(string namespaceUri, out byte id)
         {
