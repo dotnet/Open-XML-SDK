@@ -44,20 +44,17 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlPartReader class using the supplied OpenXmlPart and Boolean values.
+        /// Initializes a new instance of the OpenXmlPartReader class using the supplied OpenXmlPart class.
         /// </summary>
         /// <param name="openXmlPart">The OpenXmlPart to read.</param>
-        /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
-        /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space. The default value is true.</param>
-        public OpenXmlPartReader(OpenXmlPart openXmlPart, bool readMiscNodes = false, bool ignoreWhitespace = true)
-            : this(readMiscNodes)
+        public OpenXmlPartReader(OpenXmlPart openXmlPart) : this()
         {
             if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace, out _standalone, out _encoding);
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: false, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -66,24 +63,44 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlPart">The OpenXmlPart to read.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         public OpenXmlPartReader(OpenXmlPart openXmlPart, bool readMiscNodes)
-            : this(openXmlPart, readMiscNodes, ignoreWhitespace: true)
+            : this(readMiscNodes)
         {
+            if (openXmlPart is null)
+            {
+                throw new ArgumentNullException(nameof(openXmlPart));
+            }
+
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: false, out _standalone, out _encoding);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartReader class using the supplied OpenXmlPart and Boolean values.
+        /// </summary>
+        /// <param name="openXmlPart">The OpenXmlPart to read.</param>
+        /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
+        /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space. The default value is true.</param>
+        public OpenXmlPartReader(OpenXmlPart openXmlPart, bool readMiscNodes, bool ignoreWhitespace)
+            : this(readMiscNodes)
+        {
+            if (openXmlPart is null) {
+                throw new ArgumentNullException(nameof(openXmlPart));
+            }
+
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace, out _standalone, out _encoding);
         }
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartReader class using the supplied stream.
         /// </summary>
         /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
-        /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
-        /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space. The default value is true.</param>
-        public OpenXmlPartReader(Stream partStream, bool readMiscNodes = false, bool ignoreWhitespace = true) : this(readMiscNodes)
+        public OpenXmlPartReader(Stream partStream) : this()
         {
             if (partStream is null)
             {
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace, out _standalone, out _encoding);
+            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace: false, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -92,8 +109,30 @@ namespace DocumentFormat.OpenXml
         /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         public OpenXmlPartReader(Stream partStream, bool readMiscNodes)
-            : this(partStream, readMiscNodes, true)
+            : this(readMiscNodes)
         {
+            if (partStream is null)
+            {
+                throw new ArgumentNullException(nameof(partStream));
+            }
+
+            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace: false, out _standalone, out _encoding);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartReader class using the supplied stream and Boolean values.
+        /// </summary>
+        /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
+        /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
+        /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space. The default value is true.</param>
+        public OpenXmlPartReader(Stream partStream, bool readMiscNodes, bool ignoreWhitespace)
+            : this(readMiscNodes)
+        {
+            if (partStream is null) {
+                throw new ArgumentNullException(nameof(partStream));
+            }
+
+            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace, out _standalone, out _encoding);
         }
 
         /// <summary>
