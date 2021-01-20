@@ -393,26 +393,31 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData(false)]
         public void PartReaderIgnoreWhitespaceTest(bool ignoreWhitespace)
         {
-            string partText = "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">" +
-                                "<w:body>" +
-                                    "<w:p w:rsidP=\"001\"><w:r><w:t>  </w:t></w:r></w:p>" +
-                               "</w:body>" +
-                              "</w:document>";
+            const string PartText = "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">" +
+                "<w:body>" +
+                "<w:p w:rsidP=\"001\"><w:r><w:t>  </w:t></w:r></w:p>" +
+                "</w:body>" +
+                "</w:document>";
 
             UTF8Encoding utf8Encoding = new UTF8Encoding();
-            Stream stream = new MemoryStream(utf8Encoding.GetBytes(partText), false);
+            using var stream = new MemoryStream(utf8Encoding.GetBytes(PartText), false);
 
-            //======== new test with a new reader ========
-            OpenXmlReader reader = OpenXmlReader.Create(stream, false, ignoreWhitespace); // ignore whitespaces
+            using var reader = OpenXmlReader.Create(stream, false, ignoreWhitespace);
             Assert.False(reader.EOF);
 
             reader.Read();
             Assert.False(reader.EOF);
 
-            reader.ReadFirstChild(); // to <w:body>
-            reader.Read(); // to <w:p>
-            reader.Read(); // to <w:r>
-            reader.Read(); // to <w:t>
+            reader.ReadFirstChild();
+            Assert.True(reader.IsStartElement);
+            Assert.Equal(typeof(Body), reader.ElementType);
+            reader.Read();
+            Assert.True(reader.IsStartElement);
+            Assert.Equal(typeof(Paragraph), reader.ElementType);
+            reader.Read();
+            Assert.True(reader.IsStartElement);
+            Assert.Equal(typeof(Run), reader.ElementType);
+            reader.Read();
             Assert.True(reader.IsStartElement);
             Assert.Equal(typeof(Text), reader.ElementType);
             Assert.Equal(ignoreWhitespace, reader.GetText() == string.Empty);
