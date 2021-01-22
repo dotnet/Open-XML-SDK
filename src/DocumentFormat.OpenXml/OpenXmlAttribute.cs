@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Xml;
@@ -19,7 +17,7 @@ namespace DocumentFormat.OpenXml
 
         private string _namespaceUri;
 
-        internal OpenXmlAttribute(in OpenXmlQualifiedName qname, string value)
+        internal OpenXmlAttribute(in OpenXmlQualifiedName qname, string? value)
             : this(qname.Namespace.Prefix, qname.Name, qname.Namespace.Uri, value)
         {
         }
@@ -30,7 +28,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="qualifiedName">The qualified attribute name.</param>
         /// <param name="namespaceUri">The namespace URI of the attribute.</param>
         /// <param name="value">The text value of the attribute.</param>
-        public OpenXmlAttribute(string qualifiedName, string namespaceUri, string value)
+        public OpenXmlAttribute(string qualifiedName, string namespaceUri, string? value)
         {
             if (string.IsNullOrEmpty(qualifiedName))
             {
@@ -55,7 +53,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="localName">The local name of the attribute.</param>
         /// <param name="namespaceUri">The namespace URI of the attribute.</param>
         /// <param name="value">The text value of the attribute.</param>
-        public OpenXmlAttribute(string prefix, string localName, string namespaceUri, string value)
+        public OpenXmlAttribute(string prefix, string localName, string namespaceUri, string? value)
         {
             if (string.IsNullOrEmpty(localName))
             {
@@ -103,7 +101,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets the text value of the attribute.
         /// </summary>
-        public string Value
+        public string? Value
         {
             get;
             [Obsolete(ObsoleteMessage)]
@@ -162,7 +160,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="obj">An Object.</param>
         /// <returns>Returns true if obj is an OpenXmlAttribute structure and it is equal to this instance of an OpenXmlAttribute structure; otherwise, returns false.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj is OpenXmlAttribute attribute)
             {

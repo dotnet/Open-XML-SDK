@@ -320,9 +320,9 @@ namespace DocumentFormat.OpenXml
 
                 var prefix = LookupPrefix(NamespaceUri);
 
-                if (!string.IsNullOrEmpty(prefix))
+                if (!prefix.IsNullOrEmpty())
                 {
-                    return prefix!;
+                    return prefix;
                 }
 
                 return QName.Namespace.Prefix;
@@ -1472,7 +1472,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="w">The XmlWriter at which to save the child nodes. </param>
         internal abstract void WriteContentTo(XmlWriter w);
 
-        private protected virtual bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string value) => TrySetFixedAttribute(qname, value, false);
+        private protected virtual bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string? value) => TrySetFixedAttribute(qname, value, false);
 
         /// <summary>
         /// Attempts to set the attribute to a known attribute.
@@ -1481,7 +1481,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="value"></param>
         /// <param name="strictRelationshipFound"></param>
         /// <returns>true if the attribute is a known attribute.</returns>
-        private bool TrySetFixedAttribute(in OpenXmlQualifiedName qname, string value, bool strictRelationshipFound)
+        private bool TrySetFixedAttribute(in OpenXmlQualifiedName qname, string? value, bool strictRelationshipFound)
         {
             if (RawState.Attributes.Any())
             {
@@ -2336,7 +2336,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private bool LoadMCAttribute(string localName, string value)
+        private bool LoadMCAttribute(string localName, string? value)
         {
             // Do not call this.MCAttributes as this method is called on xml parsing.
             if (McAttributesFiled is null)
@@ -2493,7 +2493,7 @@ namespace DocumentFormat.OpenXml
         {
             var mcPrefix = LookupPrefix(AlternateContent.MarkupCompatibilityNamespace);
 
-            if (string.IsNullOrEmpty(mcPrefix))
+            if (mcPrefix.IsNullOrEmpty())
             {
                 mcPrefix = MarkupCompatibilityAttributes.MCPrefix;
             }
@@ -2542,7 +2542,7 @@ namespace DocumentFormat.OpenXml
             }
 
             var mcPrefix = LookupPrefix(AlternateContent.MarkupCompatibilityNamespace);
-            if (string.IsNullOrEmpty(mcPrefix))
+            if (mcPrefix.IsNullOrEmpty())
             {
                 mcPrefix = MarkupCompatibilityAttributes.MCPrefix;
             }
