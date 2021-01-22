@@ -2491,14 +2491,14 @@ namespace DocumentFormat.OpenXml
         /// <param name="attributes"></param>
         private void AddMCAttributes(ICollection<OpenXmlAttribute> attributes)
         {
-            var mcPrefix = LookupPrefix(AlternateContent.MarkupCompatibilityNamespace)!;
+            var mcPrefix = LookupPrefix(AlternateContent.MarkupCompatibilityNamespace);
 
             if (string.IsNullOrEmpty(mcPrefix))
             {
                 mcPrefix = MarkupCompatibilityAttributes.MCPrefix;
             }
 
-            if (MCAttributes is null) 
+            if (MCAttributes is null || mcPrefix is null)
             {
                 return;
             }
