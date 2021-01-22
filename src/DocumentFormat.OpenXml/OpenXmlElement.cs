@@ -320,9 +320,9 @@ namespace DocumentFormat.OpenXml
 
                 var prefix = LookupPrefix(NamespaceUri);
 
-                if (!string.IsNullOrEmpty(prefix))
+                if (!prefix.IsNullOrEmpty())
                 {
-                    return prefix!;
+                    return prefix;
                 }
 
                 return QName.Namespace.Prefix;
@@ -2493,12 +2493,12 @@ namespace DocumentFormat.OpenXml
         {
             var mcPrefix = LookupPrefix(AlternateContent.MarkupCompatibilityNamespace);
 
-            if (string.IsNullOrEmpty(mcPrefix))
+            if (mcPrefix.IsNullOrEmpty())
             {
                 mcPrefix = MarkupCompatibilityAttributes.MCPrefix;
             }
 
-            if (MCAttributes is null || mcPrefix is null)
+            if (MCAttributes is null)
             {
                 return;
             }
@@ -2542,7 +2542,7 @@ namespace DocumentFormat.OpenXml
             }
 
             var mcPrefix = LookupPrefix(AlternateContent.MarkupCompatibilityNamespace);
-            if (string.IsNullOrEmpty(mcPrefix))
+            if (mcPrefix.IsNullOrEmpty())
             {
                 mcPrefix = MarkupCompatibilityAttributes.MCPrefix;
             }
