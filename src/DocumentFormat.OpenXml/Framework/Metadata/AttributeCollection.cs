@@ -34,19 +34,19 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public AttributeEntry this[int index] => new AttributeEntry(this, index);
 
-        public AttributeEntry this[string namespaceUri, string tagName] => this[GetIndex(namespaceUri, tagName)];
+        public AttributeEntry this[in OpenXmlQualifiedName qname] => this[GetIndex(qname)];
 
         public int Length => _attributes.Length;
 
-        private int GetIndex(string namespaceUri, string tagName)
+        private int GetIndex(in OpenXmlQualifiedName qname)
         {
-            if (!string.IsNullOrEmpty(tagName) && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out var nsId))
+            if (qname.Namespace.IsKnown)
             {
                 for (var i = 0; i < _attributes.Length; i++)
                 {
                     var tag = _attributes[i];
 
-                    if (tag.Name.Equals(tagName, StringComparison.Ordinal) && tag.NamespaceId == nsId)
+                    if (qname.Equals(tag.QName))
                     {
                         return i;
                     }

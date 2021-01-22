@@ -151,9 +151,8 @@ namespace DocumentFormat.OpenXml
                     return false;
                 }
 
-                if (!NamespaceIdMap.TryGetNamespaceId(xmlReader.NamespaceURI, out byte nsId) ||
-                    nsId != NamespaceId ||
-                    xmlReader.LocalName != LocalName)
+                var qname = new OpenXmlQualifiedName(xmlReader.NamespaceURI, xmlReader.LocalName);
+                if (!qname.Namespace.IsKnown || !QName.Equals(qname))
                 {
                     var elementQName = new XmlQualifiedName(xmlReader.LocalName, xmlReader.NamespaceURI).ToString();
                     var msg = SR.Format(ExceptionMessages.Fmt_PartRootIsInvalid, elementQName, XmlQualifiedName.ToString());
@@ -301,7 +300,7 @@ namespace DocumentFormat.OpenXml
                 //in this case, we use the predefined prefix
                 if (string.IsNullOrEmpty(prefix))
                 {
-                    prefix = NamespaceIdMap.GetNamespacePrefix(NamespaceId);
+                    prefix = QName.Namespace.Prefix;
                 }
 
                 xmlWriter.WriteStartElement(prefix, LocalName, NamespaceUri);

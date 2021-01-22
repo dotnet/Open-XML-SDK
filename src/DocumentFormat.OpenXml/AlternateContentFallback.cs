@@ -3,6 +3,7 @@
 
 #nullable disable
 
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System.Collections.Generic;
 
@@ -62,7 +63,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public static string TagName => Name;
 
-        internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
+        internal override OpenXmlElement ElementFactory(in OpenXmlQualifiedName qname)
         {
             OpenXmlElement newElement = null;
 
@@ -72,7 +73,7 @@ namespace DocumentFormat.OpenXml
                 OpenXmlElement parentsParentElement = Parent.Parent;
                 if (parentsParentElement is not null)
                 {
-                    newElement = parentsParentElement.ElementFactory(namespaceId, name);
+                    newElement = parentsParentElement.ElementFactory(qname);
                 }
             }
 
@@ -97,7 +98,7 @@ namespace DocumentFormat.OpenXml
         {
             base.ConfigureMetadata(builder);
 
-            builder.SetSchema(AlternateContent.Namespace, Name);
+            builder.SetSchema(AlternateContent.InternalQName.Namespace.Uri, Name);
         }
     }
 }

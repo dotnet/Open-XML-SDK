@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml
             set => SetAttribute(value);
         }
 
-        internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
+        internal override OpenXmlElement ElementFactory(in OpenXmlQualifiedName qname)
         {
             if (Parent is AlternateContent)
             {
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml
 
                 if (parentsParentElement is not null)
                 {
-                    return parentsParentElement.ElementFactory(namespaceId, name);
+                    return parentsParentElement.ElementFactory(qname);
                 }
             }
 
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml
         {
             base.ConfigureMetadata(builder);
 
-            builder.SetSchema(AlternateContent.Namespace, Name);
+            builder.SetSchema(AlternateContent.InternalQName.Namespace.Uri, Name);
 
             builder.AddElement<AlternateContentChoice>()
                 .AddAttribute(0, "Requires", a => a.Requires);

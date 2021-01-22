@@ -3,9 +3,12 @@
 
 #nullable disable
 
-using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Diagnostics;
+
+#if !NET5_0
+using DocumentFormat.OpenXml.Framework;
+#endif
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {

@@ -34,10 +34,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public IEnumerable<ElementChild> Elements => _data;
 
-        public OpenXmlElement? Create(byte id, string name)
-            => Create(new OpenXmlSchema(id, name));
-
-        public OpenXmlElement? Create(OpenXmlSchema schema)
+        public OpenXmlElement? Create(in OpenXmlQualifiedName qname)
         {
             if (_data.Length == 0)
             {
@@ -46,7 +43,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             // This is on a hot-path and using a dictionary adds substantial time to the lookup. Most child lists are small, so using a sorted
             // list to store them with a binary search improves overall performance.
-            var idx = Array.BinarySearch(_data, new ElementChild(null, schema), ElementChildNameComparer.Instance);
+            var idx = Array.BinarySearch(_data, new ElementChild(null, qname), ElementChildNameComparer.Instance);
 
             if (idx < 0)
             {
@@ -118,22 +115,22 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                     return 1;
                 }
 
-                return x.Schema.CompareTo(y.Schema);
+                return x.QName.CompareTo(y.QName);
             }
         }
 
         [DebuggerDisplay("{Namespace}:{Name}")]
         public class ElementChild
         {
-            public ElementChild(Type? type, OpenXmlSchema schema)
+            public ElementChild(Type? type, in OpenXmlQualifiedName qname)
             {
                 Type = type;
-                Schema = schema;
+                QName = qname;
             }
 
             public Type? Type { get; }
 
-            public OpenXmlSchema Schema { get; }
+            public OpenXmlQualifiedName QName { get; }
 
             public virtual OpenXmlElement Create() => throw new NotImplementedException();
         }
@@ -150,11 +147,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public override OpenXmlElement Create() => _activator();
 
-            private static OpenXmlSchema GetSchema(Func<OpenXmlElement> activator)
+            private static OpenXmlQualifiedName GetSchema(Func<OpenXmlElement> activator)
             {
                 var instance = activator();
 
-                var schema = instance.Metadata.Schema;
+                var schema = instance.Metadata.QName;
 
                 return schema;
             }

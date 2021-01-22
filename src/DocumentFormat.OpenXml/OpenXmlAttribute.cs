@@ -19,8 +19,8 @@ namespace DocumentFormat.OpenXml
 
         private string _namespaceUri;
 
-        internal OpenXmlAttribute(in Framework.Metadata.AttributeCollection.AttributeEntry entry)
-            : this(entry.Property.NamespacePrefix, entry.Property.Name, entry.Property.Namespace, entry.Value?.ToString())
+        internal OpenXmlAttribute(in OpenXmlQualifiedName qname, string value)
+            : this(qname.Namespace.Prefix, qname.Name, qname.Namespace.Uri, value)
         {
         }
 
@@ -39,11 +39,11 @@ namespace DocumentFormat.OpenXml
 
             _namespaceUri = namespaceUri;
 
-            OpenXmlElement.SplitName(qualifiedName, out var prefix, out var localName);
+            var schema = OpenXmlQualifiedName.Parse(qualifiedName);
 
 #pragma warning disable CS0618 // Type or member is obsolete
-            Prefix = prefix;
-            LocalName = localName;
+            Prefix = schema.Namespace.Prefix;
+            LocalName = schema.Name;
             Value = value;
 #pragma warning restore CS0618 // Type or member is obsolete
         }
@@ -119,6 +119,8 @@ namespace DocumentFormat.OpenXml
         /// Gets the qualified name of the current attribute.
         /// </summary>
         public XName XName => XName.Get(LocalName, _namespaceUri);
+
+        internal OpenXmlQualifiedName QName => new OpenXmlQualifiedName(_namespaceUri, LocalName);
 
         /// <summary>
         /// Determines if this instance of an OpenXmlAttribute structure is equal to the specified instance of an OpenXmlAttribute structure.

@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class MarkupCompatibilityAttributes
     {
-        internal static readonly string MCPrefix = NamespaceIdMap.GetNamespacePrefix(AlternateContent.MarkupCompatibilityNamespace)!;
+        internal static readonly string MCPrefix = new OpenXmlNamespace(AlternateContent.MarkupCompatibilityNamespace).Prefix;
 
         /// <summary>
         /// Gets or sets a whitespace-delimited list of prefixes, where each

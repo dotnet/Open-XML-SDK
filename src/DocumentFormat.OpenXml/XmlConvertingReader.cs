@@ -172,21 +172,21 @@ namespace DocumentFormat.OpenXml
 
         bool IXmlLineInfo.HasLineInfo() => XmlLineInfo.Get(BaseReader).HasLineInfo();
 
-        private string ApplyStrictTranslation(string uri)
+        private string ApplyStrictTranslation(in OpenXmlNamespace ns)
         {
             if (StrictRelationshipFound)
             {
-                if (NamespaceIdMap.TryGetTransitionalNamespace(uri, out var transitionalNamespace))
+                if (ns.TryGetTransitionalNamespace( out var transitionalNamespace))
                 {
-                    return transitionalNamespace;
+                    return transitionalNamespace.Uri;
                 }
             }
-            else if (NamespaceIdMap.TryGetExtendedNamespace(uri, out var extendedNamespace))
+            else if (ns.TryGetExtendedNamespace( out var extendedNamespace))
             {
-                return extendedNamespace;
+                return extendedNamespace.Uri;
             }
 
-            return uri;
+            return ns.Uri;
         }
     }
 }

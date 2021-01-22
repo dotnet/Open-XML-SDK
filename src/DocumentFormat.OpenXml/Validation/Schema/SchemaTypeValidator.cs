@@ -244,9 +244,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             public override string PropertyName => "Value";
 
-            public override string Name => _element.LocalName;
-
-            public override byte NamespaceId => _element.NamespaceId;
+            public override OpenXmlQualifiedName QName => _element.QName;
 
             public override ReadOnlyArray<IValidator> Validators => _element.ParsedState.Metadata.Validators;
 

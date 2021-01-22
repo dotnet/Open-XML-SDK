@@ -35,9 +35,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 relationshipProperty.RelationshipType = relationship.RelationshipType;
 
                 // If packageRel.RelationshipType is something for Strict, it tries to get the equivalent in Transitional.
-                if (NamespaceIdMap.TryGetTransitionalRelationship(relationshipProperty.RelationshipType, out var transitionalNamespace))
+                if (new OpenXmlNamespace(relationshipProperty.RelationshipType).TryGetTransitionalRelationship(out var transitionalNamespace))
                 {
-                    relationshipProperty.RelationshipType = transitionalNamespace;
+                    relationshipProperty.RelationshipType = transitionalNamespace.Uri;
                     StrictRelationshipFound = true;
                 }
 

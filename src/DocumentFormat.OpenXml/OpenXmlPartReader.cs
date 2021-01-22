@@ -737,7 +737,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // create the root element object
-            var rootElement = CreateElement(_xmlReader.NamespaceURI, _xmlReader.LocalName);
+            var rootElement = CreateElement(new OpenXmlQualifiedName(_xmlReader.NamespaceURI, _xmlReader.LocalName));
 
             if (rootElement is null)
             {
@@ -761,15 +761,9 @@ namespace DocumentFormat.OpenXml
             return true;
         }
 
-        private static OpenXmlElement CreateElement(string namespaceUri, string name)
+        private static OpenXmlElement CreateElement(in OpenXmlQualifiedName qname)
         {
-            if (string.IsNullOrEmpty(name))
-            {
-                throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(name));
-            }
-
-            if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId)
-                && ElementLookup.Parts.Create(nsId, name) is OpenXmlElement element)
+            if (ElementLookup.Parts.Create(qname) is OpenXmlElement element)
             {
                 return element;
             }
