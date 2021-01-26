@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System.Collections.Generic;
@@ -63,14 +61,14 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public static string TagName => Name;
 
-        internal override OpenXmlElement ElementFactory(in OpenXmlQualifiedName qname)
+        internal override OpenXmlElement? ElementFactory(in OpenXmlQualifiedName qname)
         {
-            OpenXmlElement newElement = null;
+            var newElement = default(OpenXmlElement);
 
             if (Parent is not null &&
                  Parent is AlternateContent)
             {
-                OpenXmlElement parentsParentElement = Parent.Parent;
+                var parentsParentElement = Parent.Parent;
                 if (parentsParentElement is not null)
                 {
                     newElement = parentsParentElement.ElementFactory(qname);

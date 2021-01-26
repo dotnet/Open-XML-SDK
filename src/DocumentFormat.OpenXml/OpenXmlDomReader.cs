@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -22,32 +20,23 @@ namespace DocumentFormat.OpenXml
         private OpenXmlElement _rootElement;
         private ElementState _elementState;
 
-        private OpenXmlDomReader()
-            : base()
-        {
-            _elementStack = new Stack<OpenXmlElement>();
-            _elementState = ElementState.Null;
-        }
-
-        private OpenXmlDomReader(bool readMiscNodes)
-            : base(readMiscNodes)
-        {
-            _elementStack = new Stack<OpenXmlElement>();
-            _elementState = ElementState.Null;
-        }
-
         /// <summary>
         /// Initializes a new instance of the OpenXmlDomReader class.
         /// </summary>
         /// <param name="openXmlElement">The OpenXmlElement to read.</param>
-        public OpenXmlDomReader(OpenXmlElement openXmlElement) : this()
+        public OpenXmlDomReader(OpenXmlElement openXmlElement)
+            : base()
         {
             if (openXmlElement is null)
             {
                 throw new ArgumentNullException(nameof(openXmlElement));
             }
 
-            Init(openXmlElement);
+            _rootElement = openXmlElement;
+            _elementState = ElementState.Null;
+
+            _elementStack = new Stack<OpenXmlElement>();
+            _elementState = ElementState.Null;
         }
 
         /// <summary>
@@ -56,14 +45,18 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlElement">The OpenXmlElement to read.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         public OpenXmlDomReader(OpenXmlElement openXmlElement, bool readMiscNodes)
-            : this(readMiscNodes)
+            : base(readMiscNodes)
         {
             if (openXmlElement is null)
             {
                 throw new ArgumentNullException(nameof(openXmlElement));
             }
 
-            Init(openXmlElement);
+            _rootElement = openXmlElement;
+            _elementState = ElementState.Null;
+
+            _elementStack = new Stack<OpenXmlElement>();
+            _elementState = ElementState.Null;
         }
 
         /// <summary>
@@ -337,8 +330,6 @@ namespace DocumentFormat.OpenXml
                 return ReadRoot();
             }
 
-            OpenXmlElement element;
-
             switch (_elementState)
             {
                 case ElementState.EOF:
@@ -346,11 +337,11 @@ namespace DocumentFormat.OpenXml
 
                 case ElementState.Start:
                     {
-                        element = _elementStack.Peek();
-                        if (element.HasChildren)
+                        var element = _elementStack.Peek();
+                        if (element.FirstChild is OpenXmlElement child)
                         {
-                            _elementStack.Push(element.FirstChild);
-                            if (element.FirstChild is OpenXmlMiscNode)
+                            _elementStack.Push(child);
+                            if (child is OpenXmlMiscNode)
                             {
                                 _elementState = ElementState.MiscNode;
                             }
@@ -372,7 +363,7 @@ namespace DocumentFormat.OpenXml
                 case ElementState.MiscNode:
                     {
                         // at end state, find next element
-                        element = _elementStack.Pop();
+                        var element = _elementStack.Pop();
 
                         if (_elementStack.Count > 0)
                         {
@@ -431,11 +422,12 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            OpenXmlElement element = _elementStack.Peek();
-            if (element.HasChildren)
+            var element = _elementStack.Peek();
+
+            if (element.FirstChild is OpenXmlElement child)
             {
-                _elementStack.Push(element.FirstChild);
-                if (element.FirstChild is OpenXmlMiscNode)
+                _elementStack.Push(child);
+                if (child is OpenXmlMiscNode)
                 {
                     _elementState = ElementState.MiscNode;
                 }
@@ -473,7 +465,7 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            OpenXmlElement element = _elementStack.Pop();
+            var element = _elementStack.Pop();
 
             // Fix bug #253890, case: the element used to constructor this DOM reader is not root element ( aka. it has parents and siblings. )
             // the stack is empty means we should move to EOF.
@@ -586,11 +578,7 @@ namespace DocumentFormat.OpenXml
             ThrowIfObjectDisposed();
             if (_elementState == ElementState.Start)
             {
-                OpenXmlElement element = _elementStack.Peek();
-
-                OpenXmlLeafTextElement textElement = element as OpenXmlLeafTextElement;
-
-                if (textElement is not null)
+                if (_elementStack.Peek() is OpenXmlLeafTextElement textElement)
                 {
                     return textElement.Text;
                 }
@@ -605,16 +593,10 @@ namespace DocumentFormat.OpenXml
             ThrowIfObjectDisposed();
             _elementState = ElementState.EOF;
             _elementStack.Clear();
-            _rootElement = null;
+            _rootElement = null!;
         }
 
         #region private methods
-
-        private void Init(OpenXmlElement openXmlElement)
-        {
-            _rootElement = openXmlElement;
-            _elementState = ElementState.Null;
-        }
 
         private bool ReadRoot()
         {
