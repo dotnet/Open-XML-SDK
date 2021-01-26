@@ -20,6 +20,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPackage : OpenXmlPartContainer, IDisposable
     {
+        private protected const string ObsoleteMessage = "The parameterless constructor never initialized anything. This will be removed in future updates.";
+
         private readonly PartExtensionProvider _partExtensionProvider = new PartExtensionProvider();
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
 
@@ -31,9 +33,21 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class.
         /// </summary>
+        [Obsolete(ObsoleteMessage)]
         protected OpenXmlPackage()
             : base()
         {
+        }
+
+        private protected OpenXmlPackage(in PackageLoader loader)
+            : base()
+        {
+            _package = loader.Package;
+
+            if (loader.Load)
+            {
+                Load(_package);
+            }
         }
 
         /// <summary>
@@ -42,139 +56,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public virtual OpenXmlPart RootPart => throw new InvalidDataException(ExceptionMessages.UnknownPackage);
 
         /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class using the supplied Open XML package.
-        /// </summary>
-        /// <param name="package">The target package for the OpenXmlPackage class.</param>
-        /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
-        /// <exception cref="OpenXmlPackageException">Thrown when package is not opened with read access.</exception>
-        /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
-        internal void OpenCore(Package package)
-        {
-            if (package is null)
-            {
-                throw new ArgumentNullException(nameof(package));
-            }
-
-            if (package.FileOpenAccess == FileAccess.Write)
-            {
-                throw new OpenXmlPackageException(ExceptionMessages.PackageMustCanBeRead);
-            }
-
-            _package = package;
-
-            Load();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class with access to a specified Open XML package.
-        /// </summary>
-        /// <param name="package">The target package for the OpenXmlPackage class.</param>
-        /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
-        internal void CreateCore(Package package)
-        {
-            _package = package ?? throw new ArgumentNullException(nameof(package));
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class using the supplied I/O stream class.
-        /// </summary>
-        /// <param name="stream">The I/O stream on which to open the package.</param>
-        /// <param name="readWriteMode">Indicates whether or not the package is in read/write mode. False indicates read-only mode.</param>
-        /// <exception cref="ArgumentNullException">Thrown when stream is a null reference.</exception>
-        /// <exception cref="OpenXmlPackageException">Thrown when the specified stream is read-only and <paramref name="readWriteMode"/> is true. The package to open requires write or read/write permission.</exception>
-        internal void OpenCore(Stream stream, bool readWriteMode)
-        {
-            if (stream is null)
-            {
-                throw new ArgumentNullException(nameof(stream));
-            }
-
-            if (!stream.CanRead)
-            {
-                throw new OpenXmlPackageException(ExceptionMessages.StreamAccessModeShouldRead);
-            }
-
-            if (readWriteMode && !stream.CanWrite)
-            {
-                throw new OpenXmlPackageException(ExceptionMessages.StreamAccessModeShouldBeWrite);
-            }
-
-            var packageAccess = readWriteMode ? FileAccess.ReadWrite : FileAccess.Read;
-            var packageMode = readWriteMode ? FileMode.OpenOrCreate : FileMode.Open;
-
-            _package = Package.Open(stream, packageMode, packageAccess);
-
-            Load();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class using the supplied I/O stream class.
-        /// </summary>
-        /// <param name="stream">The I/O stream on which to open the package.</param>
-        /// <exception cref="ArgumentNullException">Thrown when stream is a null reference.</exception>
-        /// <exception cref="OpenXmlPackageException">Thrown when the specified stream is read-only. The package to open requires write or read/write permission.</exception>
-        internal void CreateCore(Stream stream)
-        {
-            if (stream is null)
-            {
-                throw new ArgumentNullException(nameof(stream));
-            }
-
-            if (!stream.CanWrite)
-            {
-                throw new OpenXmlPackageException(ExceptionMessages.StreamAccessModeShouldBeWrite);
-            }
-
-            _package = Package.Open(stream, FileMode.Create, FileAccess.ReadWrite);
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class using the specified file.
-        /// </summary>
-        /// <param name="path">The path and file name of the target package for the OpenXmlPackage.</param>
-        /// <param name="readWriteMode">Indicates whether or not the package is in read/write mode. False for read only mode.</param>
-        /// <exception cref="ArgumentNullException">Thrown when path is a null reference.</exception>
-        /// <exception cref="FileNotFoundException">Thrown when the supplied path cannot be found</exception>
-        internal void OpenCore(string path, bool readWriteMode)
-        {
-            if (path is null)
-            {
-                throw new ArgumentNullException(nameof(path));
-            }
-
-            if (!File.Exists(path))
-            {
-                throw new FileNotFoundException(ExceptionMessages.FileNotFound, path);
-            }
-
-            var packageMode = readWriteMode ? FileAccess.ReadWrite : FileAccess.Read;
-            var packageAccess = readWriteMode ? FileMode.OpenOrCreate : FileMode.Open;
-            var packageShare = readWriteMode ? FileShare.None : FileShare.Read;
-
-            _package = Package.Open(path, packageAccess, packageMode, packageShare);
-
-            Load();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class using the supplied file.
-        /// </summary>
-        /// <param name="path">The path and file name of the target package for the OpenXmlPackage.</param>
-        /// <exception cref="ArgumentNullException">Thrown when path is a null reference.</exception>
-        internal void CreateCore(string path)
-        {
-            if (path is null)
-            {
-                throw new ArgumentNullException(nameof(path));
-            }
-
-            _package = Package.Open(path, FileMode.Create, FileAccess.ReadWrite, FileShare.None);
-        }
-
-        /// <summary>
         /// Loads the package. This method must be called in the constructor of a derived class.
         /// </summary>
-        private void Load()
+        private void Load(Package _package)
         {
             try
             {

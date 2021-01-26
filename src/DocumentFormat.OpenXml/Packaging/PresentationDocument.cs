@@ -64,8 +64,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates a PresentationDocument.
         /// </summary>
+        [Obsolete(ObsoleteMessage)]
         protected PresentationDocument()
             : base()
+        {
+        }
+
+        private PresentationDocument(in PackageLoader loader)
+            : base(loader)
         {
         }
 
@@ -154,23 +160,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of PresentationDocument.</returns>
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static PresentationDocument Create(string path, PresentationDocumentType type, bool autoSave)
-        {
-            if (string.IsNullOrEmpty(path))
-            {
-                throw new ArgumentNullException(path);
-            }
-
-            var doc = new PresentationDocument
+            => new PresentationDocument(PackageLoader.CreateCore(path))
             {
                 DocumentType = type,
                 OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
-
-            doc.CreateCore(path);
-
-            return doc;
-        }
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the IO stream.
@@ -182,18 +177,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static PresentationDocument Create(Stream stream, PresentationDocumentType type, bool autoSave)
-        {
-            var doc = new PresentationDocument
+            => new PresentationDocument(PackageLoader.CreateCore(stream))
             {
                 DocumentType = type,
                 OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
-
-            doc.CreateCore(stream);
-
-            return doc;
-        }
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the specified package.
@@ -205,18 +194,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static PresentationDocument Create(Package package, PresentationDocumentType type, bool autoSave)
-        {
-            var doc = new PresentationDocument
+            => new PresentationDocument(PackageLoader.CreateCore(package))
             {
                 DocumentType = type,
                 OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
-
-            doc.CreateCore(package);
-
-            return doc;
-        }
 
         /// <summary>
         /// Creates an editable PresentationDocument from a template, opened on
@@ -323,12 +306,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new PresentationDocument
+            var doc = new PresentationDocument(PackageLoader.OpenCore(path, isEditable))
             {
                 OpenSettings = new OpenSettings(openSettings),
             };
-
-            doc.OpenCore(path, isEditable);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
@@ -362,12 +343,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new PresentationDocument
+            var doc = new PresentationDocument(PackageLoader.OpenCore(stream, isEditable))
             {
                 OpenSettings = new OpenSettings(openSettings),
             };
-
-            doc.OpenCore(stream, isEditable);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
@@ -400,12 +379,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new PresentationDocument
+            var doc = new PresentationDocument(PackageLoader.OpenCore(package))
             {
                 OpenSettings = new OpenSettings(openSettings),
             };
-
-            doc.OpenCore(package);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {

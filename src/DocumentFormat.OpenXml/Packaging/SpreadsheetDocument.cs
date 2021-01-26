@@ -62,8 +62,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates a SpreadsheetDocument.
         /// </summary>
+        [Obsolete(ObsoleteMessage)]
         protected SpreadsheetDocument()
             : base()
+        {
+        }
+
+        private SpreadsheetDocument(in PackageLoader loader)
+            : base(loader)
         {
         }
 
@@ -152,23 +158,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of SpreadsheetDocument.</returns>
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static SpreadsheetDocument Create(string path, SpreadsheetDocumentType type, bool autoSave)
-        {
-            if (string.IsNullOrEmpty(path))
-            {
-                throw new ArgumentNullException(nameof(path));
-            }
-
-            var doc = new SpreadsheetDocument
+            => new SpreadsheetDocument(PackageLoader.CreateCore(path))
             {
                 DocumentType = type,
                 OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
-
-            doc.CreateCore(path);
-
-            return doc;
-        }
 
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the IO stream.
@@ -180,18 +175,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static SpreadsheetDocument Create(Stream stream, SpreadsheetDocumentType type, bool autoSave)
-        {
-            var doc = new SpreadsheetDocument
+            => new SpreadsheetDocument(PackageLoader.CreateCore(stream))
             {
                 DocumentType = type,
                 OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
-
-            doc.CreateCore(stream);
-
-            return doc;
-        }
 
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the specified package.
@@ -203,18 +192,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static SpreadsheetDocument Create(Package package, SpreadsheetDocumentType type, bool autoSave)
-        {
-            var doc = new SpreadsheetDocument
+            => new SpreadsheetDocument(PackageLoader.CreateCore(package))
             {
                 DocumentType = type,
                 OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
-
-            doc.CreateCore(package);
-
-            return doc;
-        }
 
         /// <summary>
         /// Creates an editable SpreadsheetDocument from a template, opened on
@@ -283,12 +266,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new SpreadsheetDocument
+            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(path, isEditable))
             {
                 OpenSettings = new OpenSettings(openSettings),
             };
-
-            doc.OpenCore(path, isEditable);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
@@ -322,12 +303,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new SpreadsheetDocument
+            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(stream, isEditable))
             {
                 OpenSettings = new OpenSettings(openSettings),
             };
-
-            doc.OpenCore(stream, isEditable);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
@@ -360,12 +339,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new SpreadsheetDocument
+            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(package))
             {
                 OpenSettings = new OpenSettings(openSettings),
             };
-
-            doc.OpenCore(package);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
