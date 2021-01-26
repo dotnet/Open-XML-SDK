@@ -178,10 +178,6 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="System\Runtime\CompilerServices\" />
-  </ItemGroup>
-
   <Import Project="$(MSBuildThisFileDirectory)\PEVerify.targets" />
 
 </Project>
