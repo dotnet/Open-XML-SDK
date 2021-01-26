@@ -39,12 +39,14 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        private protected OpenXmlPackage(in PackageLoader loader)
+        private protected OpenXmlPackage(in PackageLoader loader, OpenSettings settings)
             : base()
         {
+            OpenSettings = new OpenSettings(settings);
+
             _package = loader.Package;
 
-            if (loader.Load)
+            if (loader.IsOpen)
             {
                 Load(_package);
             }

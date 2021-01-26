@@ -70,8 +70,8 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        private PresentationDocument(in PackageLoader loader)
-            : base(loader)
+        private PresentationDocument(in PackageLoader loader, OpenSettings settings)
+            : base(loader, settings)
         {
         }
 
@@ -160,10 +160,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of PresentationDocument.</returns>
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static PresentationDocument Create(string path, PresentationDocumentType type, bool autoSave)
-            => new PresentationDocument(PackageLoader.CreateCore(path))
+            => new PresentationDocument(PackageLoader.CreateCore(path), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
 
@@ -177,10 +176,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static PresentationDocument Create(Stream stream, PresentationDocumentType type, bool autoSave)
-            => new PresentationDocument(PackageLoader.CreateCore(stream))
+            => new PresentationDocument(PackageLoader.CreateCore(stream), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
 
@@ -194,10 +192,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static PresentationDocument Create(Package package, PresentationDocumentType type, bool autoSave)
-            => new PresentationDocument(PackageLoader.CreateCore(package))
+            => new PresentationDocument(PackageLoader.CreateCore(package), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
 
@@ -306,10 +303,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new PresentationDocument(PackageLoader.OpenCore(path, isEditable))
-            {
-                OpenSettings = new OpenSettings(openSettings),
-            };
+            var doc = new PresentationDocument(PackageLoader.OpenCore(path, isEditable), openSettings);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
@@ -343,10 +337,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new PresentationDocument(PackageLoader.OpenCore(stream, isEditable))
-            {
-                OpenSettings = new OpenSettings(openSettings),
-            };
+            var doc = new PresentationDocument(PackageLoader.OpenCore(stream, isEditable), openSettings);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
@@ -379,10 +370,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new PresentationDocument(PackageLoader.OpenCore(package))
-            {
-                OpenSettings = new OpenSettings(openSettings),
-            };
+            var doc = new PresentationDocument(PackageLoader.OpenCore(package), openSettings);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {

@@ -68,8 +68,8 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        private SpreadsheetDocument(in PackageLoader loader)
-            : base(loader)
+        private SpreadsheetDocument(in PackageLoader loader, OpenSettings settings)
+            : base(loader, settings)
         {
         }
 
@@ -158,10 +158,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of SpreadsheetDocument.</returns>
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static SpreadsheetDocument Create(string path, SpreadsheetDocumentType type, bool autoSave)
-            => new SpreadsheetDocument(PackageLoader.CreateCore(path))
+            => new SpreadsheetDocument(PackageLoader.CreateCore(path), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
 
@@ -175,10 +174,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static SpreadsheetDocument Create(Stream stream, SpreadsheetDocumentType type, bool autoSave)
-            => new SpreadsheetDocument(PackageLoader.CreateCore(stream))
+            => new SpreadsheetDocument(PackageLoader.CreateCore(stream), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
 
@@ -192,10 +190,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static SpreadsheetDocument Create(Package package, SpreadsheetDocumentType type, bool autoSave)
-            => new SpreadsheetDocument(PackageLoader.CreateCore(package))
+            => new SpreadsheetDocument(PackageLoader.CreateCore(package), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
 
@@ -266,10 +263,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(path, isEditable))
-            {
-                OpenSettings = new OpenSettings(openSettings),
-            };
+            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(path, isEditable), openSettings);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
@@ -303,10 +297,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(stream, isEditable))
-            {
-                OpenSettings = new OpenSettings(openSettings),
-            };
+            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(stream, isEditable), openSettings);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
@@ -339,10 +330,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(package))
-            {
-                OpenSettings = new OpenSettings(openSettings),
-            };
+            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(package), openSettings);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {

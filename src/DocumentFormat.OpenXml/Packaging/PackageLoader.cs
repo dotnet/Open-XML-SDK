@@ -12,12 +12,12 @@ namespace DocumentFormat.OpenXml.Packaging
         public PackageLoader(Package package)
         {
             Package = package;
-            Load = false;
+            IsOpen = false;
         }
 
         public Package Package { get; }
 
-        public bool Load { get; init; }
+        public bool IsOpen { get; init; }
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class using the supplied Open XML package.
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             return new PackageLoader(package)
             {
-                Load = true,
+                IsOpen = true,
             };
         }
 
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             return new PackageLoader(Package.Open(stream, packageMode, packageAccess))
             {
-                Load = true,
+                IsOpen = true,
             };
         }
 
@@ -131,7 +131,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             return new PackageLoader(Package.Open(path, packageAccess, packageMode, packageShare))
             {
-                Load = true,
+                IsOpen = true,
             };
         }
 
