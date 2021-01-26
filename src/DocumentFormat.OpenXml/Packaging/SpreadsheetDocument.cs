@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -32,7 +30,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         internal sealed override string MainPartRelationshipType => WorkbookPart.RelationshipTypeConstant;
 
-        private static Dictionary<SpreadsheetDocumentType, string> _validMainPartContentType;
+        private static Dictionary<SpreadsheetDocumentType, string>? _validMainPartContentType;
 
         private static Dictionary<SpreadsheetDocumentType, string> MainPartContentTypes
         {
@@ -62,8 +60,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates a SpreadsheetDocument.
         /// </summary>
+        [Obsolete(ObsoleteMessage)]
         protected SpreadsheetDocument()
             : base()
+        {
+        }
+
+        private SpreadsheetDocument(in PackageLoader loader, OpenSettings settings)
+            : base(loader, settings)
         {
         }
 
@@ -152,23 +156,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of SpreadsheetDocument.</returns>
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static SpreadsheetDocument Create(string path, SpreadsheetDocumentType type, bool autoSave)
-        {
-            if (string.IsNullOrEmpty(path))
-            {
-                throw new ArgumentNullException(nameof(path));
-            }
-
-            var doc = new SpreadsheetDocument
+            => new SpreadsheetDocument(PackageLoader.CreateCore(path), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
-
-            doc.CreateCore(path);
-
-            return doc;
-        }
 
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the IO stream.
@@ -180,18 +172,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static SpreadsheetDocument Create(Stream stream, SpreadsheetDocumentType type, bool autoSave)
-        {
-            var doc = new SpreadsheetDocument
+            => new SpreadsheetDocument(PackageLoader.CreateCore(stream), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
-
-            doc.CreateCore(stream);
-
-            return doc;
-        }
 
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the specified package.
@@ -203,18 +188,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static SpreadsheetDocument Create(Package package, SpreadsheetDocumentType type, bool autoSave)
-        {
-            var doc = new SpreadsheetDocument
+            => new SpreadsheetDocument(PackageLoader.CreateCore(package), new OpenSettings { AutoSave = autoSave })
             {
                 DocumentType = type,
-                OpenSettings = new OpenSettings { AutoSave = autoSave },
                 MainPartContentType = MainPartContentTypes[type],
             };
-
-            doc.CreateCore(package);
-
-            return doc;
-        }
 
         /// <summary>
         /// Creates an editable SpreadsheetDocument from a template, opened on
@@ -283,12 +261,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new SpreadsheetDocument
-            {
-                OpenSettings = new OpenSettings(openSettings),
-            };
-
-            doc.OpenCore(path, isEditable);
+            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(path, isEditable), openSettings);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
@@ -322,12 +295,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new SpreadsheetDocument
-            {
-                OpenSettings = new OpenSettings(openSettings),
-            };
-
-            doc.OpenCore(stream, isEditable);
+            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(stream, isEditable), openSettings);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
@@ -360,12 +328,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            var doc = new SpreadsheetDocument
-            {
-                OpenSettings = new OpenSettings(openSettings),
-            };
-
-            doc.OpenCore(package);
+            var doc = new SpreadsheetDocument(PackageLoader.OpenCore(package), openSettings);
 
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
@@ -643,12 +606,12 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <inheritdoc />
-        public override OpenXmlPart RootPart => WorkbookPart;
+        public override OpenXmlPart? RootPart => WorkbookPart;
 
         /// <summary>
         /// Gets the WorkbookPart of the SpreadsheetDocument.
         /// </summary>
-        public WorkbookPart WorkbookPart
+        public WorkbookPart? WorkbookPart
         {
             get { return GetSubPartOfType<WorkbookPart>(); }
         }
@@ -656,7 +619,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the SpreadsheetDocument.
         /// </summary>
-        public CoreFilePropertiesPart CoreFilePropertiesPart
+        public CoreFilePropertiesPart? CoreFilePropertiesPart
         {
             get { return GetSubPartOfType<CoreFilePropertiesPart>(); }
         }
@@ -664,7 +627,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ExtendedFilePropertiesPart of the SpreadsheetDocument.
         /// </summary>
-        public ExtendedFilePropertiesPart ExtendedFilePropertiesPart
+        public ExtendedFilePropertiesPart? ExtendedFilePropertiesPart
         {
             get { return GetSubPartOfType<ExtendedFilePropertiesPart>(); }
         }
@@ -672,7 +635,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CustomFilePropertiesPart of the SpreadsheetDocument.
         /// </summary>
-        public CustomFilePropertiesPart CustomFilePropertiesPart
+        public CustomFilePropertiesPart? CustomFilePropertiesPart
         {
             get { return GetSubPartOfType<CustomFilePropertiesPart>(); }
         }
@@ -680,18 +643,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ThumbnailPart of the SpreadsheetDocument.
         /// </summary>
-        public ThumbnailPart ThumbnailPart
+        public ThumbnailPart? ThumbnailPart
         {
-            get
-            {
-                return GetSubPartOfType<ThumbnailPart>();
-            }
+            get { return GetSubPartOfType<ThumbnailPart>(); }
         }
 
         /// <summary>
         /// Gets the RibbonExtensibilityPart of the SpreadsheetDocument.
         /// </summary>
-        public RibbonExtensibilityPart RibbonExtensibilityPart
+        public RibbonExtensibilityPart? RibbonExtensibilityPart
         {
             get { return GetSubPartOfType<RibbonExtensibilityPart>(); }
         }
@@ -699,7 +659,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the QuickAccessToolbarCustomizationsPart of the SpreadsheetDocument.
         /// </summary>
-        public QuickAccessToolbarCustomizationsPart QuickAccessToolbarCustomizationsPart
+        public QuickAccessToolbarCustomizationsPart? QuickAccessToolbarCustomizationsPart
         {
             get { return GetSubPartOfType<QuickAccessToolbarCustomizationsPart>(); }
         }
@@ -707,7 +667,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the DigitalSignatureOriginPart of the SpreadsheetDocument.
         /// </summary>
-        public DigitalSignatureOriginPart DigitalSignatureOriginPart
+        public DigitalSignatureOriginPart? DigitalSignatureOriginPart
         {
             get { return GetSubPartOfType<DigitalSignatureOriginPart>(); }
         }
@@ -716,7 +676,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the RibbonAndBackstageCustomizationsPart of the SpreadsheetDocument, only available in Office2010.
         /// </summary>
         [OfficeAvailability(FileFormatVersions.Office2010)]
-        public RibbonAndBackstageCustomizationsPart RibbonAndBackstageCustomizationsPart
+        public RibbonAndBackstageCustomizationsPart? RibbonAndBackstageCustomizationsPart
         {
             get { return GetSubPartOfType<RibbonAndBackstageCustomizationsPart>(); }
         }
@@ -725,7 +685,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WebExTaskpanesPart of the SpreadsheetDocument, only available in Office2013.
         /// </summary>
         [OfficeAvailability(FileFormatVersions.Office2013)]
-        public WebExTaskpanesPart WebExTaskpanesPart
+        public WebExTaskpanesPart? WebExTaskpanesPart
         {
             get { return GetSubPartOfType<WebExTaskpanesPart>(); }
         }
