@@ -418,7 +418,6 @@ namespace DocumentFormat.OpenXml.Packaging
         [EditorBrowsable(EditorBrowsableState.Never)]
         internal void Validate(OpenXmlPackageValidationSettings validationSettings, FileFormatVersions fileFormatVersions)
         {
-            Debug.Assert(validationSettings is not null);
             Debug.Assert(fileFormatVersions.Any());
 
             validationSettings.FileFormat = fileFormatVersions;
@@ -646,9 +645,6 @@ namespace DocumentFormat.OpenXml.Packaging
         // Check if the part content changed and save it if yes.
         private static void TrySavePartContent(OpenXmlPart part)
         {
-            Debug.Assert(part is not null);
-            Debug.Assert(part.OpenXmlPackage is not null);
-
             // If StrictRelationshipFound is true, we need to update the part anyway.
             if (part.OpenXmlPackage.StrictRelationshipFound)
             {
@@ -679,11 +675,8 @@ namespace DocumentFormat.OpenXml.Packaging
         // Check if the content of a part is changed.
         private static bool IsPartContentChanged(OpenXmlPart part)
         {
-            Debug.Assert(part is not null);
-
             // If the root element of the part is loaded,
             // consider the part changed and should be saved.
-            Debug.Assert(part.OpenXmlPackage is not null);
             if (!part.IsRootElementLoaded &&
                 part.OpenXmlPackage.MarkupCompatibilityProcessSettings.ProcessMode == MarkupCompatibilityProcessMode.ProcessAllParts)
             {
@@ -699,9 +692,6 @@ namespace DocumentFormat.OpenXml.Packaging
         // Save the content of a part to its stream.
         private static void SavePartContent(OpenXmlPart part)
         {
-            Debug.Assert(part is not null);
-            Debug.Assert(part.IsRootElementLoaded);
-
             // Save PartRootElement to the part stream.
             part.PartRootElement.Save();
         }

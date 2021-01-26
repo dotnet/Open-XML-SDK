@@ -9,15 +9,15 @@ namespace DocumentFormat.OpenXml.Packaging
 {
     internal readonly struct PackageLoader
     {
-        public PackageLoader(Package package)
+        public PackageLoader(Package package, bool isOpen = false)
         {
             Package = package;
-            IsOpen = false;
+            IsOpen = isOpen;
         }
 
         public Package Package { get; }
 
-        public bool IsOpen { get; init; }
+        public bool IsOpen { get; }
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class using the supplied Open XML package.
@@ -38,10 +38,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new OpenXmlPackageException(ExceptionMessages.PackageMustCanBeRead);
             }
 
-            return new PackageLoader(package)
-            {
-                IsOpen = true,
-            };
+            return new PackageLoader(package, isOpen: true);
         }
 
         /// <summary>
@@ -79,10 +76,7 @@ namespace DocumentFormat.OpenXml.Packaging
             var packageAccess = readWriteMode ? FileAccess.ReadWrite : FileAccess.Read;
             var packageMode = readWriteMode ? FileMode.OpenOrCreate : FileMode.Open;
 
-            return new PackageLoader(Package.Open(stream, packageMode, packageAccess))
-            {
-                IsOpen = true,
-            };
+            return new PackageLoader(Package.Open(stream, packageMode, packageAccess), isOpen: true);
         }
 
         /// <summary>
@@ -129,10 +123,7 @@ namespace DocumentFormat.OpenXml.Packaging
             var packageAccess = readWriteMode ? FileMode.OpenOrCreate : FileMode.Open;
             var packageShare = readWriteMode ? FileShare.None : FileShare.Read;
 
-            return new PackageLoader(Package.Open(path, packageAccess, packageMode, packageShare))
-            {
-                IsOpen = true,
-            };
+            return new PackageLoader(Package.Open(path, packageAccess, packageMode, packageShare), isOpen: true);
         }
 
         /// <summary>
