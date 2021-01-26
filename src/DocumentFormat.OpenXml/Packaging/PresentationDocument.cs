@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -32,7 +30,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         internal sealed override string MainPartRelationshipType => PresentationPart.RelationshipTypeConstant;
 
-        private static Dictionary<PresentationDocumentType, string> _validMainPartContentType;
+        private static Dictionary<PresentationDocumentType, string>? _validMainPartContentType;
 
         private static Dictionary<PresentationDocumentType, string> MainPartContentTypes
         {
@@ -608,12 +606,12 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <inheritdoc />
-        public override OpenXmlPart RootPart => PresentationPart;
+        public override OpenXmlPart? RootPart => PresentationPart;
 
         /// <summary>
         /// Gets the PresentationPart of the PresentationDocument.
         /// </summary>
-        public PresentationPart PresentationPart
+        public PresentationPart? PresentationPart
         {
             get { return GetSubPartOfType<PresentationPart>(); }
         }
@@ -621,7 +619,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the PresentationDocument.
         /// </summary>
-        public CoreFilePropertiesPart CoreFilePropertiesPart
+        public CoreFilePropertiesPart? CoreFilePropertiesPart
         {
             get { return GetSubPartOfType<CoreFilePropertiesPart>(); }
         }
@@ -629,7 +627,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ExtendedFilePropertiesPart of the PresentationDocument.
         /// </summary>
-        public ExtendedFilePropertiesPart ExtendedFilePropertiesPart
+        public ExtendedFilePropertiesPart? ExtendedFilePropertiesPart
         {
             get { return GetSubPartOfType<ExtendedFilePropertiesPart>(); }
         }
@@ -637,7 +635,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CustomFilePropertiesPart of the PresentationDocument.
         /// </summary>
-        public CustomFilePropertiesPart CustomFilePropertiesPart
+        public CustomFilePropertiesPart? CustomFilePropertiesPart
         {
             get { return GetSubPartOfType<CustomFilePropertiesPart>(); }
         }
@@ -645,18 +643,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ThumbnailPart of the PresentationDocument.
         /// </summary>
-        public ThumbnailPart ThumbnailPart
+        public ThumbnailPart? ThumbnailPart
         {
-            get
-            {
-                return GetSubPartOfType<ThumbnailPart>();
-            }
+            get { return GetSubPartOfType<ThumbnailPart>(); }
         }
 
         /// <summary>
         /// Gets the DigitalSignatureOriginPart of the PresentationDocument.
         /// </summary>
-        public DigitalSignatureOriginPart DigitalSignatureOriginPart
+        public DigitalSignatureOriginPart? DigitalSignatureOriginPart
         {
             get { return GetSubPartOfType<DigitalSignatureOriginPart>(); }
         }
@@ -664,7 +659,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the RibbonExtensibilityPart of the PresentationDocument.
         /// </summary>
-        public RibbonExtensibilityPart RibbonExtensibilityPart
+        public RibbonExtensibilityPart? RibbonExtensibilityPart
         {
             get { return GetSubPartOfType<RibbonExtensibilityPart>(); }
         }
@@ -672,7 +667,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the QuickAccessToolbarCustomizationsPart of the PresentationDocument.
         /// </summary>
-        public QuickAccessToolbarCustomizationsPart QuickAccessToolbarCustomizationsPart
+        public QuickAccessToolbarCustomizationsPart? QuickAccessToolbarCustomizationsPart
         {
             get { return GetSubPartOfType<QuickAccessToolbarCustomizationsPart>(); }
         }
@@ -681,7 +676,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the RibbonAndBackstageCustomizationsPart of the PresentationDocument, only available in Office2010.
         /// </summary>
         [OfficeAvailability(FileFormatVersions.Office2010)]
-        public RibbonAndBackstageCustomizationsPart RibbonAndBackstageCustomizationsPart
+        public RibbonAndBackstageCustomizationsPart? RibbonAndBackstageCustomizationsPart
         {
             get { return GetSubPartOfType<RibbonAndBackstageCustomizationsPart>(); }
         }
@@ -690,7 +685,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WebExTaskpanesPart of the PresentationDocument, only available in Office2013.
         /// </summary>
         [OfficeAvailability(FileFormatVersions.Office2013)]
-        public WebExTaskpanesPart WebExTaskpanesPart
+        public WebExTaskpanesPart? WebExTaskpanesPart
         {
             get { return GetSubPartOfType<WebExTaskpanesPart>(); }
         }

@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -32,7 +30,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         internal sealed override string MainPartRelationshipType => MainDocumentPart.RelationshipTypeConstant;
 
-        private static Dictionary<WordprocessingDocumentType, string> _validMainPartContentType;
+        private static Dictionary<WordprocessingDocumentType, string>? _validMainPartContentType;
 
         private static Dictionary<WordprocessingDocumentType, string> MainPartContentTypes
         {
@@ -262,13 +260,16 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     // Create a relative or absolute external relationship to the template.
                     // TODO: Check whether relative URIs are universally supported. They work in Office 2010.
-                    MainDocumentPart mainDocumentPart = document.MainDocumentPart;
-                    DocumentSettingsPart documentSettingsPart = mainDocumentPart.DocumentSettingsPart;
-                    ExternalRelationship relationship = documentSettingsPart.AddExternalRelationship(
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate",
-                        new Uri(path, UriHelper.RelativeOrAbsolute));
-                    documentSettingsPart.Settings.Append(
-                        new DocumentFormat.OpenXml.Wordprocessing.AttachedTemplate() { Id = relationship.Id });
+                    var documentSettingsPart = document.MainDocumentPart?.DocumentSettingsPart;
+
+                    if (documentSettingsPart is not null)
+                    {
+                        var relationship = documentSettingsPart.AddExternalRelationship(
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate",
+                            new Uri(path, UriHelper.RelativeOrAbsolute));
+                        documentSettingsPart.Settings.Append(
+                            new Wordprocessing.AttachedTemplate() { Id = relationship.Id });
+                    }
                 }
 
                 // We are done, so save and return.
@@ -646,12 +647,12 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <inheritdoc />
-        public override OpenXmlPart RootPart => MainDocumentPart;
+        public override OpenXmlPart? RootPart => MainDocumentPart;
 
         /// <summary>
         /// Gets the MainDocumentPart of the WordprocessingDocument.
         /// </summary>
-        public MainDocumentPart MainDocumentPart
+        public MainDocumentPart? MainDocumentPart
         {
             get { return GetSubPartOfType<MainDocumentPart>(); }
         }
@@ -659,7 +660,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the WordprocessingDocument.
         /// </summary>
-        public CoreFilePropertiesPart CoreFilePropertiesPart
+        public CoreFilePropertiesPart? CoreFilePropertiesPart
         {
             get { return GetSubPartOfType<CoreFilePropertiesPart>(); }
         }
@@ -667,7 +668,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ExtendedFilePropertiesPart of the WordprocessingDocument.
         /// </summary>
-        public ExtendedFilePropertiesPart ExtendedFilePropertiesPart
+        public ExtendedFilePropertiesPart? ExtendedFilePropertiesPart
         {
             get { return GetSubPartOfType<ExtendedFilePropertiesPart>(); }
         }
@@ -675,7 +676,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CustomFilePropertiesPart of the WordprocessingDocument.
         /// </summary>
-        public CustomFilePropertiesPart CustomFilePropertiesPart
+        public CustomFilePropertiesPart? CustomFilePropertiesPart
         {
             get { return GetSubPartOfType<CustomFilePropertiesPart>(); }
         }
@@ -683,18 +684,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ThumbnailPart of the WordprocessingDocument.
         /// </summary>
-        public ThumbnailPart ThumbnailPart
+        public ThumbnailPart? ThumbnailPart
         {
-            get
-            {
-                return GetSubPartOfType<ThumbnailPart>();
-            }
+            get { return GetSubPartOfType<ThumbnailPart>(); }
         }
 
         /// <summary>
         /// Gets the DigitalSignatureOriginPart of the WordprocessingDocument.
         /// </summary>
-        public DigitalSignatureOriginPart DigitalSignatureOriginPart
+        public DigitalSignatureOriginPart? DigitalSignatureOriginPart
         {
             get { return GetSubPartOfType<DigitalSignatureOriginPart>(); }
         }
@@ -702,7 +700,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the RibbonExtensibilityPart of the WordprocessingDocument.
         /// </summary>
-        public RibbonExtensibilityPart RibbonExtensibilityPart
+        public RibbonExtensibilityPart? RibbonExtensibilityPart
         {
             get { return GetSubPartOfType<RibbonExtensibilityPart>(); }
         }
@@ -710,7 +708,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the QuickAccessToolbarCustomizationsPart of the WordprocessingDocument.
         /// </summary>
-        public QuickAccessToolbarCustomizationsPart QuickAccessToolbarCustomizationsPart
+        public QuickAccessToolbarCustomizationsPart? QuickAccessToolbarCustomizationsPart
         {
             get { return GetSubPartOfType<QuickAccessToolbarCustomizationsPart>(); }
         }
@@ -719,7 +717,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the RibbonAndBackstageCustomizationsPart of the WordprocessingDocument, only available in Office2010.
         /// </summary>
         [OfficeAvailability(FileFormatVersions.Office2010)]
-        public RibbonAndBackstageCustomizationsPart RibbonAndBackstageCustomizationsPart
+        public RibbonAndBackstageCustomizationsPart? RibbonAndBackstageCustomizationsPart
         {
             get { return GetSubPartOfType<RibbonAndBackstageCustomizationsPart>(); }
         }
@@ -728,7 +726,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WebExTaskpanesPart of the WordprocessingDocument, only available in Office2013.
         /// </summary>
         [OfficeAvailability(FileFormatVersions.Office2013)]
-        public WebExTaskpanesPart WebExTaskpanesPart
+        public WebExTaskpanesPart? WebExTaskpanesPart
         {
             get { return GetSubPartOfType<WebExTaskpanesPart>(); }
         }

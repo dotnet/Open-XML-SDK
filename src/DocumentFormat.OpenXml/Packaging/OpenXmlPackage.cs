@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the root part for the package.
         /// </summary>
-        public virtual OpenXmlPart RootPart => throw new InvalidDataException(ExceptionMessages.UnknownPackage);
+        public virtual OpenXmlPart? RootPart => throw new InvalidDataException(ExceptionMessages.UnknownPackage);
 
         /// <summary>
         /// Loads the package. This method must be called in the constructor of a derived class.
