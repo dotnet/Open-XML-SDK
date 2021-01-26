@@ -59,6 +59,7 @@
         <Compile Include="System\Reflection\TypeExtensions.cs" />
         <Compile Include="System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
         <Compile Include="System\Runtime\CompilerServices\FormattableStringFactory.cs" />
+        <Compile Include="System\Runtime\CompilerServices\IsExternalInit.cs" />
         <Compile Include="System\Threading\CancellationToken.cs" />
         <Compile Include="System\Xml\Linq\XDocumentExtensions.cs" />
       </ItemGroup>
@@ -83,6 +84,7 @@
         <Compile Include="System\Reflection\TypeExtensions.cs" />
         <Compile Include="System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
         <Compile Include="System\Runtime\CompilerServices\FormattableStringFactory.cs" />
+        <Compile Include="System\Runtime\CompilerServices\IsExternalInit.cs" />
         <Compile Include="System\FormattableString.cs" />
       </ItemGroup>
     </When>
@@ -101,6 +103,7 @@
       <ItemGroup>
         <Compile Include="System\HashCode.cs" />
         <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+        <Compile Include="System\Runtime\CompilerServices\IsExternalInit.cs" />
       </ItemGroup>
     </When>
 
@@ -121,6 +124,7 @@
         <Compile Include="System\SerializableAttribute.cs" />
         <Compile Include="System\Reflection\SubclassExtensions.cs" />
         <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+        <Compile Include="System\Runtime\CompilerServices\IsExternalInit.cs" />
       </ItemGroup>
 
     </When>
@@ -133,6 +137,7 @@
       <ItemGroup>
         <Compile Include="System\HashCode.cs" />
         <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+        <Compile Include="System\Runtime\CompilerServices\IsExternalInit.cs" />
       </ItemGroup>
 
       <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->
