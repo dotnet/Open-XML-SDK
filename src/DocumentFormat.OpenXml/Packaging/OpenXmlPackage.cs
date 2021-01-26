@@ -1,14 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -37,6 +36,9 @@ namespace DocumentFormat.OpenXml.Packaging
         protected OpenXmlPackage()
             : base()
         {
+            _package = null!;
+            _mainPartContentType = null!;
+            OpenSettings = null!;
         }
 
         private protected OpenXmlPackage(in PackageLoader loader, OpenSettings settings)
@@ -50,6 +52,10 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 Load(_package);
             }
+            else
+            {
+                _mainPartContentType = null!;
+            }
         }
 
         /// <summary>
@@ -60,6 +66,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Loads the package. This method must be called in the constructor of a derived class.
         /// </summary>
+        [MemberNotNull(nameof(_mainPartContentType))]
         private void Load(Package _package)
         {
             try
@@ -104,7 +111,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
 
-                if (!hasMainPart)
+                if (!hasMainPart || _mainPartContentType is null)
                 {
                     throw new OpenXmlPackageException(ExceptionMessages.NoMainPart);
                 }
@@ -379,7 +386,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            void DefaultValidationEventHandler(object sender, OpenXmlPackageValidationEventArgs e)
+            void DefaultValidationEventHandler(object? sender, OpenXmlPackageValidationEventArgs e)
             {
                 var exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
 
@@ -517,10 +524,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 // TODO: Close resources
                 _package.Close();
-                _package = null;
+                _package = null!;
                 ChildrenRelationshipParts.Clear();
                 ReferenceRelationshipList.Clear();
-                _partUriHelper = null;
+                _partUriHelper = null!;
             }
 
             _disposed = true;
@@ -755,8 +762,13 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            T mainPart = GetSubPartOfType<T>();
-            Dictionary<string, OpenXmlPart> childParts = new Dictionary<string, OpenXmlPart>(StringComparer.Ordinal);
+            var mainPart = GetSubPartOfType<T>();
+            var childParts = new Dictionary<string, OpenXmlPart>(StringComparer.Ordinal);
+
+            if (mainPart is null)
+            {
+                throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentType);
+            }
 
             try
             {
@@ -881,15 +893,9 @@ namespace DocumentFormat.OpenXml.Packaging
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
-        internal sealed override OpenXmlPackage InternalOpenXmlPackage
-        {
-            get { return this; }
-        }
+        internal sealed override OpenXmlPackage InternalOpenXmlPackage => this;
 
-        internal sealed override OpenXmlPart ThisOpenXmlPart
-        {
-            get { return null; }
-        }
+        internal sealed override OpenXmlPart? ThisOpenXmlPart => null;
 
         // find all reachable parts from the package root, the dictionary also used for cycle reference defense
         internal sealed override void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts)
@@ -998,7 +1004,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="partUri">The part URI.</param>
         /// <returns>Returns null if there is no DataPart with the specified URI.</returns>
-        internal DataPart FindDataPart(Uri partUri)
+        internal DataPart? FindDataPart(Uri partUri)
         {
             foreach (var dataPart in DataParts)
             {

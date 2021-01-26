@@ -1999,10 +1999,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="sourcePart">The source part. Be null if loading from the package root.</param>
         /// <param name="relationshipCollection">The relationships of the source part (or the package).</param>
         /// <param name="loadedParts">Temp collection to detect loaded (shared) parts.</param>
-        internal void LoadReferencedPartsAndRelationships(OpenXmlPackage openXmlPackage, OpenXmlPart sourcePart,
-                                                     RelationshipCollection relationshipCollection, Dictionary<Uri, OpenXmlPart> loadedParts)
+        internal void LoadReferencedPartsAndRelationships(OpenXmlPackage openXmlPackage, OpenXmlPart? sourcePart, RelationshipCollection relationshipCollection, Dictionary<Uri, OpenXmlPart> loadedParts)
         {
-            DataPart dataPart;
             foreach (var relationship in relationshipCollection)
             {
                 if (relationship.RelationshipType == HyperlinkRelationship.RelationshipTypeConst)
@@ -2037,7 +2035,9 @@ namespace DocumentFormat.OpenXml.Packaging
                             }
                             else if (DataPartReferenceRelationship.IsDataPartReferenceRelationship(relationship.RelationshipType))
                             {
-                                if ((dataPart = openXmlPackage.FindDataPart(uriTarget)) is null)
+                                var dataPart = openXmlPackage.FindDataPart(uriTarget);
+
+                                if (dataPart is null)
                                 {
                                     // Load the part as MediaDataPart.
                                     dataPart = new MediaDataPart();
@@ -2081,7 +2081,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         abstract internal OpenXmlPackage InternalOpenXmlPackage { get; }
 
-        abstract internal OpenXmlPart ThisOpenXmlPart { get; }
+        abstract internal OpenXmlPart? ThisOpenXmlPart { get; }
 
         internal OpenXmlPartData Data { get; }
 
