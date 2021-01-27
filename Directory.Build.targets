@@ -11,6 +11,7 @@
     FEATURE_PACKAGE_FLUSH            : System.IO.Package.Flush will correctly flush all data
     FEATURE_CONCURRENT_COLLECTIONS   : Concurrent collections are not available
     FEATURE_SERIALIZATION            : Serialization using ISerializable is in the platform
+    FEAUTRE_SPAN                     : Span<> and friends are available
     FEATURE_SCHEMA_GENERATOR         : Provides access to helpers to generate schema information
     FEATURE_SYSTEMEXCEPTION          : SytemException is available in the platform
     FEATURE_XML_DISPOSE_PROTECTED    : XmlWriter.Dispose is protected
@@ -41,6 +42,10 @@
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
     <DefineConstants>$(DefineConstants);FEATURE_PACKAGE_FLUSH</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
+    <DefineConstants>$(DefineConstants);FEATURE_SPAN</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>

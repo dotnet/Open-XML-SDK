@@ -50,6 +50,8 @@
       <ItemGroup>
         <Compile Include="System\HashCode.cs" />
         <Compile Include="System\Lazy{T}.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyDictionary.cs" />
@@ -80,6 +82,8 @@
         <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyDictionary.cs" />
         <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Reflection\TypeExtensions.cs" />
         <Compile Include="System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
         <Compile Include="System\Runtime\CompilerServices\FormattableStringFactory.cs" />
@@ -100,6 +104,8 @@
 
       <ItemGroup>
         <Compile Include="System\HashCode.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
       </ItemGroup>
     </When>
@@ -119,6 +125,8 @@
         <Compile Include="System\ICloneable.cs" />
         <Compile Include="System\NonSerializedAttribute.cs" />
         <Compile Include="System\SerializableAttribute.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Reflection\SubclassExtensions.cs" />
         <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
       </ItemGroup>
@@ -132,6 +140,8 @@
 
       <ItemGroup>
         <Compile Include="System\HashCode.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
       </ItemGroup>
 
