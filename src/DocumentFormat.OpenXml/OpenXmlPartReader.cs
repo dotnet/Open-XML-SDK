@@ -451,6 +451,12 @@ namespace DocumentFormat.OpenXml
                 case ElementState.MiscNode:
                     // cursor is end element, pop stack
                     _elementStack.Pop();
+                    if (_elementStack.Count == 0)
+                    {
+                        _elementState = ElementState.EOF;
+                        return false;
+                    }
+
                     break;
 
                 case ElementState.LeafStart:
