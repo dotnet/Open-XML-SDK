@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        public CustomXmlProperties CustomXmlProperties
+        public CustomXmlProperties? CustomXmlProperties
         {
             get => GetElement<CustomXmlProperties>();
             set => SetElement(value);

@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Gets or sets the SdtProperties.
         /// </summary>
-        public SdtProperties SdtProperties
+        public SdtProperties? SdtProperties
         {
             get => GetElement<SdtProperties>();
             set => SetElement(value);
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Gets or sets the SdtEndCharProperties.
         /// </summary>
-        public SdtEndCharProperties SdtEndCharProperties
+        public SdtEndCharProperties? SdtEndCharProperties
         {
             get => GetElement<SdtEndCharProperties>();
             set => SetElement(value);
