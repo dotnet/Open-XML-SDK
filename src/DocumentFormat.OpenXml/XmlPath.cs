@@ -1,14 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Xml;
@@ -32,7 +31,6 @@ namespace DocumentFormat.OpenXml
             }
 
             PartUri = element.GetPartUri();
-
             XPath = TryBuildXPath(GetElements(element), out var namespaces);
 
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -64,6 +62,12 @@ namespace DocumentFormat.OpenXml
             }
 
             PartUri = part.Uri;
+            XPath = string.Empty;
+
+#pragma warning disable CS0618 // Type or member is obsolete
+            Namespaces = ReadOnlyWrapper.Instance;
+            NamespacesDefinitions = Cached.Array<string>();
+#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         /// <summary>
@@ -93,7 +97,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="element">The OpenXmlElement.</param>
         /// <returns>XmlPath to this element from root element.</returns>
-        internal static XmlPath GetXPath(OpenXmlElement element)
+        internal static XmlPath? GetXPath(OpenXmlElement? element)
         {
             if (element is null)
             {
@@ -103,7 +107,7 @@ namespace DocumentFormat.OpenXml
             return new XmlPath(element);
         }
 
-        internal static XmlPath GetXPath(OpenXmlPart part)
+        internal static XmlPath? GetXPath(OpenXmlPart? part)
         {
             if (part is null)
             {
@@ -113,7 +117,7 @@ namespace DocumentFormat.OpenXml
             return new XmlPath(part);
         }
 
-        private static string TryBuildXPath(Stack<OpenXmlElement> elements, out XmlNamespaceManager namespaces)
+        private static string TryBuildXPath(Stack<OpenXmlElement> elements, [MaybeNullWhen(false)] out XmlNamespaceManager namespaces)
         {
             if (elements.Count == 0)
             {
@@ -163,7 +167,7 @@ namespace DocumentFormat.OpenXml
             return xpath.ToString();
         }
 
-        private static Stack<OpenXmlElement> GetElements(OpenXmlElement element)
+        private static Stack<OpenXmlElement> GetElements(OpenXmlElement? element)
         {
             var elements = new Stack<OpenXmlElement>();
 
@@ -189,9 +193,9 @@ namespace DocumentFormat.OpenXml
 
             public IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope) => _other.GetNamespacesInScope(scope);
 
-            public string LookupNamespace(string prefix) => _other.LookupNamespace(prefix);
+            public string? LookupNamespace(string prefix) => _other.LookupNamespace(prefix);
 
-            public string LookupPrefix(string namespaceName) => _other.LookupPrefix(namespaceName);
+            public string? LookupPrefix(string namespaceName) => _other.LookupPrefix(namespaceName);
         }
     }
 }
