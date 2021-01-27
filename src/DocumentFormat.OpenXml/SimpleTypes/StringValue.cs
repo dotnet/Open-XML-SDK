@@ -72,20 +72,14 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified value.</param>
         /// <returns>A new <see cref="StringValue"/> instance with the value.</returns>
-        public static implicit operator StringValue(string? value)
-        {
-            return FromString(value);
-        }
+        public static implicit operator StringValue(string? value) => FromString(value);
 
         /// <summary>
         /// Returns a new <see cref="StringValue"/> object that was created from a <see cref="string"/> value.
         /// </summary>
         /// <param name="value">A <see cref="string"/> value to use to create a new <see cref="StringValue"/> object.</param>
         /// <returns>A <see cref="StringValue"/> that corresponds to the value parameter.</returns>
-        public static StringValue FromString(string? value)
-        {
-            return new StringValue(value);
-        }
+        public static StringValue FromString(string? value) => new StringValue(value);
 
         /// <summary>
         /// Returns the <see cref="string"/> value representation of a <see cref="StringValue"/> object.
