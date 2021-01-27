@@ -17,7 +17,7 @@ namespace System
 
         public int Length { get; }
 
-        public ref T this[int index]
+        public T this[int index]
         {
             get
             {
@@ -28,7 +28,19 @@ namespace System
                     throw new ArgumentOutOfRangeException(nameof(index));
                 }
 
-                return ref _array[index];
+                return _array[index];
+            }
+
+            set
+            {
+                index += _start;
+
+                if ((uint)index >= (uint)_array.Length)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(index));
+                }
+
+                _array[index] = value;
             }
         }
 
@@ -59,7 +71,7 @@ namespace System
 
         public int Length { get; }
 
-        public ref readonly T this[int index]
+        public T this[int index]
         {
             get
             {
@@ -70,7 +82,7 @@ namespace System
                     throw new ArgumentOutOfRangeException(nameof(index));
                 }
 
-                return ref _array[index];
+                return _array[index];
             }
         }
 
@@ -99,9 +111,9 @@ namespace System
                 return false;
             }
 
-            public ref readonly T Current
+            public T Current
             {
-                get => ref _span[_index];
+                get => _span[_index];
             }
         }
     }
