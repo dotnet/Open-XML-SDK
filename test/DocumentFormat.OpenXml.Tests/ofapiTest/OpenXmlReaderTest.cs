@@ -426,6 +426,66 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
+        /// Test that the OpenXmlReader can handle formatted xml.
+        ///</summary>
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void TestIgnoreWhitespaceWithFormattedXml(bool ignoreWhitespace) {
+            const string PartText = @"
+    <w:document xmlns:v=""urn:schemas-microsoft-com:vml"" xmlns:w=""http://schemas.openxmlformats.org/wordprocessingml/2006/main"">
+      <w:body>
+        <w:p>
+          <w:r>
+            <w:t>First Text</w:t>
+          </w:r>
+          <w:r>
+            <w:t>Second Text</w:t>
+          </w:r>
+        </w:p>
+      </w:body>
+    </w:document>";
+
+            UTF8Encoding utf8Encoding = new UTF8Encoding();
+            var exception = Record.Exception(() => {
+                using var stream = new MemoryStream(utf8Encoding.GetBytes(PartText), false);
+                using var reader = OpenXmlReader.Create(stream, false, ignoreWhitespace);
+                while (reader.Read()) {
+                }
+
+                reader.Close();
+            });
+            Assert.Null(exception);
+        }
+
+        /// <summary>
+        /// Test that the OpenXmlReader can handle a whitespace after the last element.
+        ///</summary>
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void TestIgnoreWhitespaceWhitespaceAfterLastElement(bool ignoreWhitespace) {
+            const string PartText = @"
+    <w:document xmlns:v=""urn:schemas-microsoft-com:vml"" xmlns:w=""http://schemas.openxmlformats.org/wordprocessingml/2006/main"">
+      <w:body>
+        <w:p>
+        </w:p>
+      </w:body>
+    </w:document> ";
+
+            UTF8Encoding utf8Encoding = new UTF8Encoding();
+            var exception = Record.Exception(() => {
+                using var stream = new MemoryStream(utf8Encoding.GetBytes(PartText), false);
+                using var reader = OpenXmlReader.Create(stream, false, ignoreWhitespace);
+                while (reader.Read()) {
+                }
+
+                reader.Close();
+            });
+            Assert.Null(exception);
+        }
+
+        /// <summary>
         ///A test for OpenXmlPartReader
         ///</summary>
         [Fact]
