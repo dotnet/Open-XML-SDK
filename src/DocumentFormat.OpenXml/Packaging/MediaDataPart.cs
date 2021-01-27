@@ -1,6 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
+using System.IO.Packaging;
+
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
@@ -12,11 +15,23 @@ namespace DocumentFormat.OpenXml.Packaging
         private const string DefaultTargetName = "mediadata";
         private const string DefaultTargetExt = ".bin";
 
-        /// <summary>
-        /// Initializes a new instance of the MediaDataPart class.
-        /// </summary>
-        internal MediaDataPart()
-            : base()
+        internal MediaDataPart(OpenXmlPackage openXmlPackage, PackagePart packagePart)
+            : base(openXmlPackage, packagePart)
+        {
+        }
+
+        internal MediaDataPart(OpenXmlPackage openXmlPackage, string contentType, string? extension)
+            : base(openXmlPackage, contentType, extension)
+        {
+        }
+
+        internal MediaDataPart(OpenXmlPackage openXmlPackage, MediaDataPartType mediaDataPartType)
+            : base(openXmlPackage, mediaDataPartType)
+        {
+        }
+
+        internal MediaDataPart(OpenXmlPackage openXmlPackage, string contentType, Uri partUri)
+            : base(openXmlPackage, contentType, partUri)
         {
         }
 

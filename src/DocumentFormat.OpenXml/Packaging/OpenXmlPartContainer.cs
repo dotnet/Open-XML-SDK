@@ -1704,9 +1704,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     {
                         var dataPart = item.Key;
 
-                        var newDataPart = new MediaDataPart();
-
-                        newDataPart.CreateInternal2(InternalOpenXmlPackage, dataPart.ContentType, dataPart.Uri);
+                        var newDataPart = new MediaDataPart(InternalOpenXmlPackage, dataPart.ContentType, dataPart.Uri);
 
                         // copy the stream
                         using (var stream = dataPart.GetStream())
@@ -2040,9 +2038,8 @@ namespace DocumentFormat.OpenXml.Packaging
                                 if (dataPart is null)
                                 {
                                     // Load the part as MediaDataPart.
-                                    dataPart = new MediaDataPart();
                                     var packagePart = openXmlPackage.Package.GetPart(uriTarget);
-                                    dataPart.Load(openXmlPackage, packagePart);
+                                    dataPart = new MediaDataPart(openXmlPackage, packagePart);
                                     openXmlPackage.AddDataPartToList(dataPart);
                                 }
 
