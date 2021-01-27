@@ -3,7 +3,7 @@
 
 namespace System
 {
-    internal readonly ref struct Span<T>
+    internal readonly struct Span<T>
     {
         private readonly T[] _array;
         private readonly int _start;
@@ -35,7 +35,7 @@ namespace System
         public static implicit operator ReadOnlySpan<T>(Span<T> span) => new ReadOnlySpan<T>(span._array, span._start, span.Length);
     }
 
-    internal readonly ref struct ReadOnlySpan<T>
+    internal readonly struct ReadOnlySpan<T>
     {
         private readonly T[] _array;
         private readonly int _start;

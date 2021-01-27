@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The <see cref="HexBinaryValue"/> object to convert.</param>
         /// <returns>The converted HexBinary string. Returns null when <paramref name="value"/> is <c>null</c>.</returns>
-        public static implicit operator string?(HexBinaryValue value)
+        public static implicit operator string?(HexBinaryValue? value)
         {
             if (value is null)
             {
