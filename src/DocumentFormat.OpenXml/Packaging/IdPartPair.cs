@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -10,18 +8,16 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Represents a (RelationshipId, OpenXmlPart) pair.
     /// </summary>
-    public class IdPartPair
+    public class IdPartPair : IEquatable<IdPartPair>
     {
-        private string _id;
-        private OpenXmlPart _part;
-
         /// <summary>
         /// Gets or sets the relationship ID in the pair.
         /// </summary>
         public string RelationshipId
         {
-            get { return _id; }
-            set { _id = value; }
+            get;
+            [Obsolete("This object will be made immutable in a future release. Please use a new instance.")]
+            set;
         }
 
         /// <summary>
@@ -29,8 +25,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public OpenXmlPart OpenXmlPart
         {
-            get { return _part; }
-            set { _part = value; }
+            get;
+            [Obsolete("This object will be made immutable in a future release. Please use a new instance.")]
+            set;
         }
 
         /// <summary>
@@ -40,16 +37,27 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="part">The OpenXmlPart.</param>
         public IdPartPair(string id, OpenXmlPart part)
         {
+#pragma warning disable CS0618 // Type or member is obsolete
             RelationshipId = id;
             OpenXmlPart = part;
+#pragma warning restore CS0618 // Type or member is obsolete
         }
 
-        /// <summary>
-        /// Determines whether this instance and another specified IdPartPair object have the same value.
-        /// </summary>
-        /// <param name="value">An IdPartPair.</param>
-        /// <returns>True if the value of the value parameter is the same as this instance; otherwise, false.</returns>
-        public bool Equals(IdPartPair value)
+        /// <inheritdoc/>
+        public override bool Equals(object? obj) => obj is IdPartPair other && Equals(other);
+
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var code = new HashCode();
+
+            code.Add(RelationshipId, StringComparer.Ordinal);
+
+            return code.ToHashCode();
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(IdPartPair? value)
         {
             //Check for null
             if (value is null)
@@ -57,7 +65,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 return false;
             }
 
-            return string.Equals(_id, value._id, StringComparison.Ordinal) && (_part == value._part);
+            if (ReferenceEquals(this, value))
+            {
+                return true;
+            }
+
+            return string.Equals(RelationshipId, value.RelationshipId, StringComparison.Ordinal) && (OpenXmlPart == value.OpenXmlPart);
         }
     }
 }
