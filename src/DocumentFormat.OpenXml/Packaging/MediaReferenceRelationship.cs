@@ -23,16 +23,6 @@ namespace DocumentFormat.OpenXml.Packaging
         public static string MediaReferenceRelationshipType => RelationshipTypeConst;
 
         /// <summary>
-        /// Initializes a new instance of the MediaReferenceRelationship class.
-        /// </summary>
-        /// <remarks>
-        /// A call to Initialize() must be made after calling this constructor.
-        /// </remarks>
-        internal MediaReferenceRelationship()
-        {
-        }
-
-        /// <summary>
         /// Initializes a new instance of the MediaReferenceRelationship class using
         /// the supplied MediaDataPart and relationship ID.
         /// </summary>

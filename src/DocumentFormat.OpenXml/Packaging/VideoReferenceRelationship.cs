@@ -22,16 +22,6 @@ namespace DocumentFormat.OpenXml.Packaging
         public static string VideoReferenceRelationshipType => RelationshipTypeConst;
 
         /// <summary>
-        /// Initializes a new instance of the VideoReferenceRelationship class.
-        /// </summary>
-        /// <remarks>
-        /// A call to Initialize() must be made after calling this constructor.
-        /// </remarks>
-        internal VideoReferenceRelationship()
-        {
-        }
-
-        /// <summary>
         /// Initializes a new instance of the VideoReferenceRelationship class using the supplied
         /// MediaDataPart and relationship ID.
         /// </summary>

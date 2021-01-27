@@ -279,9 +279,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            MediaDataPart mediaDataPart = new MediaDataPart();
-
-            mediaDataPart.CreateInternal(InternalOpenXmlPackage, contentType, null);
+            var mediaDataPart = new MediaDataPart(InternalOpenXmlPackage, contentType, extension: null);
 
             _dataPartList.AddLast(mediaDataPart);
 
@@ -310,9 +308,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(extension));
             }
 
-            MediaDataPart mediaDataPart = new MediaDataPart();
-
-            mediaDataPart.CreateInternal(InternalOpenXmlPackage, contentType, extension);
+            var mediaDataPart = new MediaDataPart(InternalOpenXmlPackage, contentType, extension);
 
             _dataPartList.AddLast(mediaDataPart);
 
@@ -328,9 +324,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            MediaDataPart mediaDataPart = new MediaDataPart();
-
-            mediaDataPart.CreateInternal(InternalOpenXmlPackage, mediaDataPartType);
+            var mediaDataPart = new MediaDataPart(InternalOpenXmlPackage, mediaDataPartType);
 
             _dataPartList.AddLast(mediaDataPart);
 

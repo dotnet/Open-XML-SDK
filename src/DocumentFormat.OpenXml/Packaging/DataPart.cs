@@ -1,11 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -23,22 +22,15 @@ namespace DocumentFormat.OpenXml.Packaging
         private const string DefaultTargetExt = ".bin";
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private OpenXmlPackage _openXmlPackage;
+        private OpenXmlPackage? _openXmlPackage;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private PackagePart _metroPart;
+        private readonly PackagePart _metroPart;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private Uri _uri;
+        private readonly Uri _uri;
 
         #endregion
-
-        /// <summary>
-        /// Initializes a new instance of the DataPart class.
-        /// </summary>
-        internal DataPart()
-        {
-        }
 
         /// <summary>
         /// Gets the OpenXmlPackage which contains the current part.
@@ -202,7 +194,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         internal virtual string TargetFileExtension => DefaultTargetExt;
 
-        internal void Load(OpenXmlPackage openXmlPackage, PackagePart packagePart)
+        private protected DataPart(OpenXmlPackage openXmlPackage, PackagePart packagePart)
         {
             Debug.Assert(openXmlPackage.Package.GetPart(packagePart.Uri) == packagePart);
 
@@ -218,7 +210,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         // create a new part in this package
-        internal void CreateInternal(OpenXmlPackage openXmlPackage, string contentType, string extension)
+        private protected DataPart(OpenXmlPackage openXmlPackage, string contentType, string? extension)
         {
             _openXmlPackage = openXmlPackage;
             _uri = NewPartUri(openXmlPackage, contentType, extension);
@@ -226,7 +218,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         // create a new part in this package
-        internal void CreateInternal(OpenXmlPackage openXmlPackage, MediaDataPartType mediaDataPartType)
+        private protected DataPart(OpenXmlPackage openXmlPackage, MediaDataPartType mediaDataPartType)
         {
             _openXmlPackage = openXmlPackage;
 
@@ -239,7 +231,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         // create a new part in this package
-        internal void CreateInternal2(OpenXmlPackage openXmlPackage, string contentType, Uri partUri)
+        private protected DataPart(OpenXmlPackage openXmlPackage, string contentType, Uri partUri)
         {
             // openXmlPackage, parent can not be all null
             if (openXmlPackage is null)
@@ -263,13 +255,13 @@ namespace DocumentFormat.OpenXml.Packaging
             _metroPart = _openXmlPackage.CreateMetroPart(_uri, contentType);
         }
 
-        internal Uri NewPartUri(OpenXmlPackage openXmlPackage, string contentType, string extension)
+        private Uri NewPartUri(OpenXmlPackage openXmlPackage, string contentType, string? extension)
         {
-            string targetFileExt;
+            string? targetFileExt;
 
             if (extension is null)
             {
-                if (!_openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out targetFileExt))
+                if (!openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out targetFileExt))
                 {
                     targetFileExt = TargetFileExtension;
                 }
@@ -297,6 +289,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Indicates whether the object is destroyed (deleted from the package).
         /// </summary>
+        [MemberNotNull(nameof(_openXmlPackage))]
         protected void ThrowIfObjectDisposed()
         {
             if (_openXmlPackage is null)
