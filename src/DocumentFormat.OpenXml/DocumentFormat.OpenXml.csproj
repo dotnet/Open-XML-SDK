@@ -27,6 +27,8 @@
          helper files to fill the gaps of the various platforms that are targeted -->
     <Compile Remove="System\**\*.cs" />
     <Compile Include="System\EnumHelper.cs" />
+    <Compile Include="System\Span.cs" />
+    <Compile Include="System\SpanExtensions.cs" />
     <Compile Include="System\UriHelper.cs" />
     <None Include="**\*.md" />
   </ItemGroup>
@@ -50,6 +52,8 @@
       <ItemGroup>
         <Compile Include="System\HashCode.cs" />
         <Compile Include="System\Lazy{T}.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyDictionary.cs" />
@@ -100,6 +104,8 @@
 
       <ItemGroup>
         <Compile Include="System\HashCode.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
       </ItemGroup>
     </When>
@@ -119,6 +125,8 @@
         <Compile Include="System\ICloneable.cs" />
         <Compile Include="System\NonSerializedAttribute.cs" />
         <Compile Include="System\SerializableAttribute.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Reflection\SubclassExtensions.cs" />
         <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
       </ItemGroup>
@@ -132,6 +140,8 @@
 
       <ItemGroup>
         <Compile Include="System\HashCode.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
       </ItemGroup>
 

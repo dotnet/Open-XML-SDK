@@ -6,8 +6,10 @@ using System;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
-using System.Runtime.CompilerServices;
+
+#if !FEATURE_SPAN
 using System.Text;
+#endif
 
 namespace DocumentFormat.OpenXml
 {
@@ -154,10 +156,10 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="bytes">A buffer to write to</param>
         /// <returns>Whether bytes where successfully written.</returns>
-#if NET5_0
+#if FEATURE_SPAN
         public
 #else
-        internal 
+        internal
 #endif
             bool TryWriteBytes(Span<byte> bytes)
         {
@@ -191,7 +193,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="bytes">A byte array to use to create a new <see cref="HexBinaryValue"/> object.</param>
         /// <returns>A <see cref="HexBinaryValue"/> object that corresponds to the value parameter.</returns>
-#if NET5_0
+#if FEATURE_SPAN
         public
 #else
         internal
@@ -203,7 +205,7 @@ namespace DocumentFormat.OpenXml
                 return new HexBinaryValue(string.Empty);
             }
 
-#if NET5_0
+#if FEATURE_SPAN
             Span<char> chars = stackalloc char[bytes.Length * 2];
 
             for (int i = 0; i < bytes.Length; i++)
