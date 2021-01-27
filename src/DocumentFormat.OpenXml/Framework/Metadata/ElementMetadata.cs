@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             ReadOnlyArray<IValidator> constraints,
             FileFormatVersions version,
             OpenXmlQualifiedName qname,
-            CompiledParticle particle,
+            CompiledParticle? particle,
             Lazy<ElementLookup> lookup)
         {
             Attributes = attributes;

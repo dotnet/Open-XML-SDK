@@ -781,10 +781,10 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private protected TElement GetElement<TElement>()
+        private protected TElement? GetElement<TElement>()
             where TElement : OpenXmlElement => Metadata.Particle.Get<TElement>(this);
 
-        private protected bool SetElement<TElement>(TElement value)
+        private protected bool SetElement<TElement>(TElement? value)
             where TElement : OpenXmlElement
             => Metadata.Particle.Set(this, value);
 
