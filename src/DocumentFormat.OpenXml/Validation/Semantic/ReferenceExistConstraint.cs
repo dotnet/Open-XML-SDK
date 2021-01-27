@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -35,7 +33,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override SemanticValidationLevel StateScope => SemanticValidationLevel.Part;
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
             var attribute = element.ParsedState.Attributes[_refAttribute];
