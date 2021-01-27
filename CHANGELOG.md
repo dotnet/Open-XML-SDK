@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added nullability attributes (#840, #849)
 - Added overload for `OpenXmlPartReader` and `OpenXmlReader.Create(...)` to ignore whitespace (#857)
+- Added methods to convert between `byte[]` to `HexBinaryValue` and back (#867)
 
 ## Version 2.12.1 - 2021-01-11
 
