@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="base64Binary">
         /// The <see cref="string"/> value.
         /// </param>
-        public Base64BinaryValue(string base64Binary)
+        public Base64BinaryValue(string? base64Binary)
         {
             TextValue = base64Binary;
         }
@@ -116,14 +116,14 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified base64Binary value.</param>
         /// <returns>A new <see cref="Base64BinaryValue"/> instance with the value.</returns>
-        public static implicit operator Base64BinaryValue(string value) => FromString(value);
+        public static implicit operator Base64BinaryValue(string? value) => FromString(value);
 
         /// <summary>
         /// Returns a new <see cref="Base64BinaryValue"/> object that was created from a <see cref="string"/> value.
         /// </summary>
         /// <param name="value">A <see cref="string"/> value to use to create a new <see cref="Base64BinaryValue"/> object.</param>
         /// <returns>A <see cref="Base64BinaryValue"/> that corresponds to the value parameter.</returns>
-        public new static Base64BinaryValue FromString(string value) => new Base64BinaryValue(value);
+        public new static Base64BinaryValue FromString(string? value) => new Base64BinaryValue(value);
 
         /// <summary>
         /// Returns the <see cref="string"/>  value representation of a <see cref="Base64BinaryValue"/> object.

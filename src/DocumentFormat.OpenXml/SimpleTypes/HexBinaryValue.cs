@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the <see cref="HexBinaryValue"/> class using the supplied string.
         /// </summary>
         /// <param name="hexBinary">The <see cref="string"/> value.</param>
-        public HexBinaryValue(string hexBinary)
+        public HexBinaryValue(string? hexBinary)
         {
             TextValue = hexBinary;
         }
@@ -95,35 +95,6 @@ namespace DocumentFormat.OpenXml
             get => TextValue;
             set => TextValue = value;
         }
-
-        /// <summary>
-        /// Implicitly converts the specified value to a <see cref="string"/> value.
-        /// </summary>
-        /// <param name="value">The <see cref="HexBinaryValue"/> object to convert.</param>
-        /// <returns>The converted HexBinary string. Returns null when <paramref name="value"/> is <c>null</c>.</returns>
-        public static implicit operator string?(HexBinaryValue? value)
-        {
-            if (value is null)
-            {
-                return null;
-            }
-
-            return ToString(value);
-        }
-
-        /// <summary>
-        /// Implicitly converts the specified <see cref="string"/> value to a <see cref="HexBinaryValue"/> object.
-        /// </summary>
-        /// <param name="value">The specified hexBinary value.</param>
-        /// <returns>A new <see cref="HexBinaryValue"/> instance with the value.</returns>
-        public static implicit operator HexBinaryValue(string value) => FromString(value);
-
-        /// <summary>
-        /// Returns a new <see cref="HexBinaryValue"/> object that was created from a <see cref="string"/> value.
-        /// </summary>
-        /// <param name="value">A <see cref="string"/> value to use to create a new <see cref="HexBinaryValue"/> object.</param>
-        /// <returns>A <see cref="HexBinaryValue"/> object that corresponds to the value parameter.</returns>
-        public static new HexBinaryValue FromString(string value) => new HexBinaryValue(value);
 
         /// <summary>
         /// Attempts to retrieve the bytes associated with this <see cref="HexBinaryValue"/> if available.
@@ -249,6 +220,35 @@ namespace DocumentFormat.OpenXml
         /// <returns>A <see cref="HexBinaryValue"/> object that corresponds to the value parameter.</returns>
         public static HexBinaryValue Create(params byte[] bytes)
             => Create(bytes.AsSpan());
+
+        /// <summary>
+        /// Implicitly converts the specified value to a <see cref="string"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="HexBinaryValue"/> object to convert.</param>
+        /// <returns>The converted HexBinary string. Returns null when <paramref name="value"/> is <c>null</c>.</returns>
+        public static implicit operator string?(HexBinaryValue? value)
+        {
+            if (value is null)
+            {
+                return null;
+            }
+
+            return ToString(value);
+        }
+
+        /// <summary>
+        /// Implicitly converts the specified <see cref="string"/> value to a <see cref="HexBinaryValue"/> object.
+        /// </summary>
+        /// <param name="value">The specified hexBinary value.</param>
+        /// <returns>A new <see cref="HexBinaryValue"/> instance with the value.</returns>
+        public static implicit operator HexBinaryValue(string? value) => FromString(value);
+
+        /// <summary>
+        /// Returns a new <see cref="HexBinaryValue"/> object that was created from a <see cref="string"/> value.
+        /// </summary>
+        /// <param name="value">A <see cref="string"/> value to use to create a new <see cref="HexBinaryValue"/> object.</param>
+        /// <returns>A <see cref="HexBinaryValue"/> object that corresponds to the value parameter.</returns>
+        public static new HexBinaryValue FromString(string? value) => new HexBinaryValue(value);
 
         /// <summary>
         /// Returns the <see cref="string"/> value representation of a <see cref="HexBinaryValue"/> object.
