@@ -1,13 +1,12 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -17,7 +16,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("ParticleType={ParticleType}")]
     internal class CompositeParticle : ParticleConstraint
     {
-        private IParticleValidator _particleValidator;
+        private IParticleValidator? _particleValidator;
 
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
@@ -36,7 +35,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         public bool RequireFilter { get; }
 
-        public override ParticleConstraint Build(FileFormatVersions version)
+        public override ParticleConstraint? Build(FileFormatVersions version)
         {
             if (!version.AtLeast(Version))
             {
@@ -79,7 +78,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 _ => throw new InvalidOperationException(),
             };
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (ReferenceEquals(this, obj))
             {
@@ -123,7 +122,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             private readonly FileFormatVersions _version;
             private readonly bool _filterVersion;
 
-            private List<ParticleConstraint> _children;
+            private List<ParticleConstraint>? _children;
 
             public Builder(ParticleType particleType, int minOccurs, int maxOccurs, bool requireFilter = false, FileFormatVersions version = FileFormatVersions.Office2007, bool filterVersion = false)
             {
@@ -137,7 +136,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 _children = null;
             }
 
-            public void Add(ParticleConstraint constraint)
+            public void Add(ParticleConstraint? constraint)
             {
                 if (constraint is null)
                 {
@@ -164,9 +163,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 _children.Add(constraint);
             }
 
-            public IEnumerator<ParticleConstraint> GetEnumerator() => ((IEnumerable<ParticleConstraint>)_children).GetEnumerator();
+            public IEnumerator<ParticleConstraint> GetEnumerator() => _children?.GetEnumerator() ?? Enumerable.Empty<ParticleConstraint>().GetEnumerator();
 
-            IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable)_children).GetEnumerator();
+            IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
             public CompositeParticle Build()
                 => new CompositeParticle(_particleType, _minOccurs, _maxOccurs, _requireFilter, _version, _children?.ToArray());

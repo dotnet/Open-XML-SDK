@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -25,7 +23,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 return;
             }
 
-            HashSet<string> ignorableNamespaces = null;
+            HashSet<string>? ignorableNamespaces = null;
             ValidationErrorInfo errorInfo;
 
             if (element.MCAttributes is not null)
@@ -40,16 +38,19 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     prefixes.InnerText = element.MCAttributes.Ignorable;
                     foreach (var prefix in prefixes.Items)
                     {
-                        var ignorableNamespace = element.LookupNamespace(prefix);
-                        if (string.IsNullOrEmpty(ignorableNamespace))
+                        if (prefix.Value is not null)
                         {
-                            // error, the prefix is not defined.
-                            errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidIgnorableAttribute", element.MCAttributes.Ignorable);
-                            validationContext.AddError(errorInfo);
-                        }
-                        else
-                        {
-                            ignorableNamespaces.Add(ignorableNamespace);
+                            var ignorableNamespace = element.LookupNamespace(prefix.Value);
+                            if (string.IsNullOrEmpty(ignorableNamespace))
+                            {
+                                // error, the prefix is not defined.
+                                errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidIgnorableAttribute", element.MCAttributes.Ignorable);
+                                validationContext.AddError(errorInfo);
+                            }
+                            else
+                            {
+                                ignorableNamespaces.Add(ignorableNamespace);
+                            }
                         }
                     }
                 }
@@ -67,8 +68,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                     else
                     {
-                        string errorQName = ValidateQNameList(element.MCAttributes.PreserveAttributes, ignorableNamespaces, validationContext);
-                        if (!string.IsNullOrEmpty(errorQName))
+                        var errorQName = ValidateQNameList(element.MCAttributes.PreserveAttributes, ignorableNamespaces, validationContext);
+                        if (!errorQName.IsNullOrEmpty())
                         {
                             errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidPreserveAttributesAttribute", element.MCAttributes.PreserveAttributes);
                             validationContext.AddError(errorInfo);
@@ -89,8 +90,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                     else
                     {
-                        string errorQName = ValidateQNameList(element.MCAttributes.PreserveElements, ignorableNamespaces, validationContext);
-                        if (!string.IsNullOrEmpty(errorQName))
+                        var errorQName = ValidateQNameList(element.MCAttributes.PreserveElements, ignorableNamespaces, validationContext);
+                        if (!errorQName.IsNullOrEmpty())
                         {
                             errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidPreserveElementsAttribute", element.MCAttributes.PreserveElements);
                             validationContext.AddError(errorInfo);
@@ -111,8 +112,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                     else
                     {
-                        string errorQName = ValidateQNameList(element.MCAttributes.ProcessContent, ignorableNamespaces, validationContext);
-                        if (!string.IsNullOrEmpty(errorQName))
+                        var errorQName = ValidateQNameList(element.MCAttributes.ProcessContent, ignorableNamespaces, validationContext);
+                        if (!errorQName.IsNullOrEmpty())
                         {
                             errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidProcessContentAttribute", element.MCAttributes.ProcessContent);
                             validationContext.AddError(errorInfo);
@@ -121,7 +122,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                     foreach (var exAttribute in element.ExtendedAttributes)
                     {
-                         // Markup consumers that encounter a non-ignored element that has an xml:lang or xml:space attribute and is also identified by a ProcessContent attribute value might generate an error.
+                        // Markup consumers that encounter a non-ignored element that has an xml:lang or xml:space attribute and is also identified by a ProcessContent attribute value might generate an error.
                         if (AlternateContentValidator.IsXmlSpaceOrXmlLangAttribue(exAttribute))
                         {
                             // report error.
@@ -141,12 +142,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     prefixes.InnerText = element.MCAttributes.MustUnderstand;
                     foreach (var prefix in prefixes.Items)
                     {
-                        var mustunderstandNamespace = element.LookupNamespace(prefix);
-                        if (string.IsNullOrEmpty(mustunderstandNamespace))
+                        if (prefix.Value is not null)
                         {
-                            // report error, the prefix is not defined.
-                            errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidMustUnderstandAttribute", element.MCAttributes.MustUnderstand);
-                            validationContext.AddError(errorInfo);
+                            var mustunderstandNamespace = element.LookupNamespace(prefix.Value);
+                            if (string.IsNullOrEmpty(mustunderstandNamespace))
+                            {
+                                // report error, the prefix is not defined.
+                                errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidMustUnderstandAttribute", element.MCAttributes.MustUnderstand);
+                                validationContext.AddError(errorInfo);
+                            }
                         }
                     }
                 }
@@ -160,15 +164,23 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="ignorableNamespaces">The ignorable namespaces.</param>
         /// <param name="validationContext"></param>
         /// <returns>The QName that is not valid.</returns>
-        internal static string ValidateQNameList(string qnameList, HashSet<string> ignorableNamespaces, ValidationContext validationContext)
+        internal static string? ValidateQNameList(string? qnameList, HashSet<string> ignorableNamespaces, ValidationContext validationContext)
         {
-            Debug.Assert(!string.IsNullOrEmpty(qnameList));
+            if (qnameList is null)
+            {
+                return null;
+            }
 
             var qnames = new ListValue<StringValue>();
             qnames.InnerText = qnameList;
 
             foreach (var qname in qnames.Items)
             {
+                if (qname.Value is null)
+                {
+                    continue;
+                }
+
                 // must be QName
                 var items = qname.Value.Split(':');
                 if (items.Length != 2)

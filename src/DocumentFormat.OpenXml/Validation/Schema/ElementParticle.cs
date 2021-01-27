@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Diagnostics;
 
@@ -89,11 +87,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     particleMatchInfo.Match = ParticleMatch.Partial;
                     if (validationContext.CollectExpectedChildren)
                     {
-                        if (particleMatchInfo.ExpectedChildren is null)
-                        {
-                            particleMatchInfo.InitExpectedChildren();
-                        }
-
                         particleMatchInfo.ExpectedChildren.Add(ElementType);
                     }
                 }
@@ -148,7 +141,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return expectedElements;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (ReferenceEquals(this, obj))
             {

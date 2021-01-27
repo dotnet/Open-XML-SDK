@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 #if NET5_0
 using System;
 #else
@@ -66,12 +64,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets a ParticleValidator for this particle constraint.
         /// </summary>
-        internal virtual IParticleValidator ParticleValidator => null;
+        internal virtual IParticleValidator? ParticleValidator => null;
 
-        public virtual ParticleConstraint Build(FileFormatVersions version)
+        public virtual ParticleConstraint? Build(FileFormatVersions version)
             => version.AtLeast(Version) ? this : null;
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (ReferenceEquals(this, obj))
             {

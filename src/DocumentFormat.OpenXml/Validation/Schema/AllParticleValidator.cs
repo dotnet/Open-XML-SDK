@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -109,11 +107,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 particleMatchInfo.LastMatchedElement = next;
 
                 next = validationContext.GetNextChildMc(next);
-            }
-
-            if (particleMatchInfo.ExpectedChildren is null)
-            {
-                particleMatchInfo.InitExpectedChildren();
             }
 
             if (particleMatchInfo.LastMatchedElement is null)

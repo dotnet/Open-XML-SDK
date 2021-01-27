@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -58,9 +56,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         childParticle.ParticleType == ParticleType.Choice ||
                         childParticle.ParticleType == ParticleType.Sequence);
 
-            childParticle.ParticleValidator.TryMatch(particleMatchInfo, validationContext);
-
-            return;
+            childParticle.ParticleValidator?.TryMatch(particleMatchInfo, validationContext);
         }
     }
 }

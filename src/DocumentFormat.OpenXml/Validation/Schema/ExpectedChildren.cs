@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,8 +12,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class ExpectedChildren
     {
-        private List<Type> _elementTypes;
-        private List<string> _xsdanyNamespaces;
+        private List<Type>? _elementTypes;
+        private List<string>? _xsdanyNamespaces;
 
         /// <summary>
         /// Add a known element of the child.
@@ -113,12 +111,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>The Fmt_ListOfPossibleElements sub string to be used in error reporting.</returns>
         internal string GetExpectedChildrenMessage(OpenXmlElement parent)
         {
-            Debug.Assert(parent is not null);
-
             if (_elementTypes is not null || _xsdanyNamespaces is not null)
             {
-                Debug.Assert(_elementTypes is not null && _elementTypes.Count > 0 ||
-                             _xsdanyNamespaces is not null && _xsdanyNamespaces.Count > 0);
+                Debug.Assert(_elementTypes is not null && _elementTypes.Count > 0 || _xsdanyNamespaces is not null && _xsdanyNamespaces.Count > 0);
 
                 var childrenNames = new List<string>();
 
@@ -126,7 +121,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     foreach (var childElement in parent.Metadata.Children.Elements)
                     {
-                        if (_elementTypes.Contains(childElement.Type))
+                        if (childElement.Type is not null && _elementTypes.Contains(childElement.Type))
                         {
                             // <namespace:localname>, use InvariantCulture
                             childrenNames.Add(SR.Format(ValidationResources.Fmt_ElementName, childElement.QName.Namespace.Uri, childElement.QName.Name));

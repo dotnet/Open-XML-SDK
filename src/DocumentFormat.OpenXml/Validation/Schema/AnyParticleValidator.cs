@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -21,10 +19,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal virtual ParticleConstraint ParticleConstraint
         {
             get { return _particleConstraint; }
-        }
-
-        protected AnyParticleValidator()
-        {
         }
 
         /// <summary>

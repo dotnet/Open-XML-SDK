@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
@@ -124,7 +122,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 
-        private static void ValidateValue(ValidationContext validationContext, ReadOnlyArray<IValidator> validators, OpenXmlSimpleType value, AttributeMetadata state, bool isAttribute)
+        private static void ValidateValue(ValidationContext validationContext, ReadOnlyArray<IValidator> validators, OpenXmlSimpleType? value, AttributeMetadata state, bool isAttribute)
         {
             var errors = validationContext.Errors.Count;
 
@@ -216,8 +214,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 case ParticleType.Choice:
                 case ParticleType.Sequence:
                 case ParticleType.Group:
-                    ParticleValidator particleValidator = (ParticleValidator)particleConstraint.ParticleValidator;
-                    particleValidator.Validate(validationContext);
+                    var particleValidator = (ParticleValidator?)particleConstraint.ParticleValidator;
+                    particleValidator?.Validate(validationContext);
                     break;
 
                 case ParticleType.Invalid:
