@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 
@@ -27,29 +28,31 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remarks>
         /// See §14.4.9/§14.11.9 of ISO/IEC 29500-4 for details on this translation
         /// </remarks>
-        private protected override bool StrictTranslateAttribute(string namespaceUri, string localName, string value)
+        private protected override bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string? value)
         {
-            if (s_attributeMap.TryGetValue(localName, out var result))
+            if (!s_attributeMap.TryGetValue(qname.Name, out var result))
             {
-                localName = "val";
-
-                var isValueTrue = value == "true" || value == "1";
-                var attribute = RawState.Attributes[namespaceUri, localName];
-
-                if (attribute.Value is OpenXmlSimpleType simpleType)
-                {
-                    var current = StringToValue(simpleType.InnerText);
-                    var combined = isValueTrue ? (current | result) : (current & ~result);
-
-                    value = ValueToString(combined);
-                }
-                else
-                {
-                    value = ValueToString(isValueTrue ? result : 0);
-                }
+                return base.StrictTranslateAttribute(qname, value);
             }
 
-            return base.StrictTranslateAttribute(namespaceUri, localName, value);
+            var updated = new OpenXmlQualifiedName(qname.Namespace, "val");
+
+            var isValueTrue = value == "true" || value == "1";
+            var attribute = RawState.Attributes[updated];
+
+            if (attribute.Value is OpenXmlSimpleType simpleType)
+            {
+                var current = StringToValue(simpleType.InnerText);
+                var combined = isValueTrue ? (current | result) : (current & ~result);
+
+                value = ValueToString(combined);
+            }
+            else
+            {
+                value = ValueToString(isValueTrue ? result : 0);
+            }
+
+            return base.StrictTranslateAttribute(updated, value);
         }
 
         /// <remarks>

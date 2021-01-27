@@ -1,10 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework.Schema;
 using DocumentFormat.OpenXml.Validation.Schema;
+using System;
 
 namespace DocumentFormat.OpenXml.Framework
 {
@@ -17,7 +16,7 @@ namespace DocumentFormat.OpenXml.Framework
             where TElement : OpenXmlElement
             => new ParticleCollection(typeof(TElement), compiled, element);
 
-        public static TElement Get<TElement>(this CompiledParticle compiled, OpenXmlCompositeElement element)
+        public static TElement? Get<TElement>(this CompiledParticle? compiled, OpenXmlCompositeElement element)
             where TElement : OpenXmlElement
         {
             if (compiled is null)
@@ -40,33 +39,43 @@ namespace DocumentFormat.OpenXml.Framework
                 }
 
                 child = child.Next;
-            } while (child != element.FirstChild);
+            } while (child is not null && child != element.FirstChild);
 
             return null;
         }
 
-        public static bool Set(this CompiledParticle compiled, OpenXmlCompositeElement parent, OpenXmlElement value)
+        public static bool Set<T>(this CompiledParticle? compiled, OpenXmlCompositeElement parent, T? value)
+            where T : OpenXmlElement
+            => Set(compiled, parent, value, typeof(T));
+
+        public static bool Set(this CompiledParticle? compiled, OpenXmlCompositeElement parent, OpenXmlElement? value, Type? type)
         {
+            if (type is null)
+            {
+                return false;
+            }
+
             if (compiled is null)
             {
                 return false;
             }
 
-            if (value is null)
-            {
-                return false;
-            }
-
-            var collection = new ParticleCollection(value.GetType(), compiled, parent);
+            var collection = new ParticleCollection(type, compiled, parent);
 
             collection.Clear();
-            return collection.Add(value);
+
+            if (value is not null)
+            {
+                return collection.Add(value);
+            }
+
+            return true;
         }
 
         public static CompiledParticle Compile(this CompositeParticle.Builder builder)
             => Compile(builder.Build());
 
-        public static CompiledParticle Compile(this ParticleConstraint particle)
+        public static CompiledParticle Compile(this ParticleConstraint? particle)
             => new CompiledParticle(particle);
     }
 }

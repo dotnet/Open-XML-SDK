@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
                 foreach (var e in root.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (e != element & e.GetType() == elementType)
+                    if (e != element && e.GetType() == elementType)
                     {
                         var eValue = e.ParsedState.Attributes[_attribute];
 

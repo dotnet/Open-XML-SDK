@@ -10,7 +10,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
-using System.Xml;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -109,7 +108,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
         }
 
-        protected static XmlQualifiedName GetAttributeQualifiedName(OpenXmlElement element, byte attributeID) => element.ParsedState.Attributes[attributeID].Property.GetQName();
+        protected static OpenXmlQualifiedName GetAttributeQualifiedName(OpenXmlElement element, byte attributeID) => element.ParsedState.Attributes[attributeID].Property.QName;
 
         private static bool CompareBooleanValue(bool value1, string value2)
         {

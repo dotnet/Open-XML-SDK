@@ -3,6 +3,7 @@
 
 #nullable disable
 
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
@@ -160,7 +161,7 @@ namespace DocumentFormat.OpenXml
             Debug.Assert(parent is OpenXmlCompositeElement);
             Debug.Assert(localName is not null);
 
-            var newElement = parent.ElementFactory(string.Empty, localName, namespaceUri);
+            var newElement = parent.CreateElement(OpenXmlQualifiedName.Create(namespaceUri, string.Empty, localName));
             if (newElement is OpenXmlUnknownElement || !newElement.IsInVersion(fileFormat))
             {
                 return null;

@@ -17,14 +17,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 _ => throw new ArgumentOutOfRangeException(nameof(partType)),
             };
 
-        internal static string GetTargetExtension(CustomXmlPartType partType)
-            => partType switch
-            {
-                CustomXmlPartType.AdditionalCharacteristics => ".xml",
-                CustomXmlPartType.Bibliography => ".xml",
-                CustomXmlPartType.CustomXml => ".xml",
-                CustomXmlPartType.InkContent => ".xml",
-                _ => ".xml",
-            };
+        internal static string GetTargetExtension() => ".xml";
     }
 }

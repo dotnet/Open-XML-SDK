@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified value.</param>
         /// <returns>A new <see cref="StringValue"/> instance with the value.</returns>
-        public static implicit operator StringValue(string value)
+        public static implicit operator StringValue(string? value)
         {
             return FromString(value);
         }
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A <see cref="string"/> value to use to create a new <see cref="StringValue"/> object.</param>
         /// <returns>A <see cref="StringValue"/> that corresponds to the value parameter.</returns>
-        public static StringValue FromString(string value)
+        public static StringValue FromString(string? value)
         {
             return new StringValue(value);
         }

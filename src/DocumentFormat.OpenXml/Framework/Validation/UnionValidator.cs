@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Framework
 
             context.CreateError(
                 id: "Sch_AttributeUnionFailedEx",
-                description: SR.Format(ValidationResources.Sch_AttributeUnionFailedEx, current.Property.GetQName(), current.Value),
+                description: SR.Format(ValidationResources.Sch_AttributeUnionFailedEx, current.Property.QName, current.Value),
                 errorType: ValidationErrorType.Schema);
         }
     }

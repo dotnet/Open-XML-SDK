@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             foreach (var attribute in e.ParsedState.Attributes)
             {
-                yield return new OpenXmlAttribute(attribute);
+                yield return new OpenXmlAttribute(attribute.Property.QName, attribute.Value?.InnerText);
             }
         }
 

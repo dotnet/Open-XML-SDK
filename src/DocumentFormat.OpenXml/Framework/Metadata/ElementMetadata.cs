@@ -26,15 +26,15 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             ReadOnlyArray<IValidator> validators,
             ReadOnlyArray<IValidator> constraints,
             FileFormatVersions version,
-            OpenXmlSchema schema,
-            CompiledParticle particle,
+            OpenXmlQualifiedName qname,
+            CompiledParticle? particle,
             Lazy<ElementLookup> lookup)
         {
             Attributes = attributes;
             Validators = validators;
             Constraints = constraints;
             Availability = version;
-            Schema = schema;
+            QName = qname;
             Particle = particle;
             _children = lookup;
         }
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public CompiledParticle? Particle { get; }
 
-        public OpenXmlSchema Schema { get; }
+        public OpenXmlQualifiedName QName { get; }
 
         public static ElementMetadata Create(OpenXmlElement element)
         {
@@ -94,8 +94,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             private List<IMetadataBuilder<AttributeMetadata>>? _attributes;
             private HashSet<IMetadataBuilder<ElementLookup.ElementChild>>? _children;
             private List<IValidator>? _constraints;
-            private byte _nsId;
-            private string? _localName;
+            private OpenXmlQualifiedName _qname;
 
             public Builder<TElement> AddElement<TElement>()
                 where TElement : OpenXmlElement
@@ -113,16 +112,16 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 _constraints.Add(constraint);
             }
 
-            public void SetSchema(string ns, string localName)
-                => SetSchema(NamespaceIdMap.GetNamespaceId(ns), localName);
-
             public CompositeParticle? Particle { get; set; }
 
+            public void SetSchema(in OpenXmlQualifiedName qname)
+                => _qname = qname;
+
+            public void SetSchema(string ns, string localName)
+                => SetSchema(new OpenXmlQualifiedName(ns, localName));
+
             public void SetSchema(byte nsId, string localName)
-            {
-                _nsId = nsId;
-                _localName = localName;
-            }
+                => SetSchema(new OpenXmlQualifiedName(new OpenXmlNamespace(nsId), localName));
 
             public void AddChild<T>()
                 where T : OpenXmlElement, new()
@@ -149,10 +148,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public ElementMetadata Build()
             {
-                var schema = _localName is null ? default : new OpenXmlSchema(_nsId, _localName);
                 var lookup = _children is null ? _lazy : new Lazy<ElementLookup>(() => new ElementLookup(_children.Select(c => c.Build())), true);
 
-                return new ElementMetadata(BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, schema, Particle.Compile(), lookup);
+                return new ElementMetadata(BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, _qname, Particle.Compile(), lookup);
             }
 
             private AttributeMetadata[]? BuildAttributes()
@@ -180,7 +178,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 private class ElementChild2 : ElementLookup.ElementChild
                 {
                     public ElementChild2(ElementMetadata metadata)
-                        : base(typeof(T), metadata.Schema)
+                        : base(typeof(T), metadata.QName)
                     {
                     }
 
@@ -199,12 +197,12 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 _builder = builder;
             }
 
-            public Builder<TElement> AddAttribute<TSimpleType>(byte nsId, string localName, Expression<Func<TElement, TSimpleType>> expression, Action<AttributeMetadata.Builder<TSimpleType>>? action = null)
+            public Builder<TElement> AddAttribute<TSimpleType>(byte nsId, string localName, Expression<Func<TElement, TSimpleType?>> expression, Action<AttributeMetadata.Builder<TSimpleType>>? action = null)
                 where TSimpleType : OpenXmlSimpleType, new()
             {
                 if (expression.Body is MemberExpression member)
                 {
-                    var builder = new AttributeMetadata.Builder<TSimpleType>(nsId, localName, member.Member.Name);
+                    var builder = new AttributeMetadata.Builder<TSimpleType>(new OpenXmlQualifiedName(new OpenXmlNamespace(nsId), localName), member.Member.Name);
 
                     action?.Invoke(builder);
 

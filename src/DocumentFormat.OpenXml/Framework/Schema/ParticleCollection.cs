@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
         public struct Enumerator : IEnumerator<OpenXmlElement>
         {
             private readonly Type _type;
-            private OpenXmlElement _child;
+            private OpenXmlElement? _child;
 
             internal Enumerator(OpenXmlElement element, Type type)
             {
@@ -245,7 +245,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                     return Complete();
                 }
 
-                return IsComplete ? Complete() : true;
+                return true;
             }
 
             private bool Initialize()
@@ -281,7 +281,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                 {
                     if (Current is null)
                     {
-                        Current = _collection._element.FirstChild;
+                        Current = _collection._element.FirstChild!;
 
                         if (Current is null)
                         {
@@ -290,7 +290,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                     }
                     else
                     {
-                        Current = Current.Next;
+                        Current = Current.Next!;
 
                         if (IsComplete)
                         {

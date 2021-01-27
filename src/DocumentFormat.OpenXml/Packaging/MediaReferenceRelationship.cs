@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using System;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -22,16 +21,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the source relationship type for a media reference.
         /// </summary>
         public static string MediaReferenceRelationshipType => RelationshipTypeConst;
-
-        /// <summary>
-        /// Initializes a new instance of the MediaReferenceRelationship class.
-        /// </summary>
-        /// <remarks>
-        /// A call to Initialize() must be made after calling this constructor.
-        /// </remarks>
-        internal MediaReferenceRelationship()
-        {
-        }
 
         /// <summary>
         /// Initializes a new instance of the MediaReferenceRelationship class using

@@ -13,6 +13,8 @@ namespace DocumentFormat.OpenXml
     [Obsolete("This attribute is no longer used to identify schema information. It didn't contain everything and a new API will be forthcoming.")]
     public sealed class SchemaAttrAttribute : Attribute
     {
+        private readonly OpenXmlQualifiedName _qname;
+
         /// <summary>
         /// Initializes a new instance of the SchemaAttrAttribute.
         /// </summary>
@@ -26,8 +28,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(tag));
             }
 
-            NamespaceId = nsId;
-            Tag = tag;
+            _qname = new OpenXmlQualifiedName(new OpenXmlNamespace(nsId), tag);
         }
 
         /// <summary>
@@ -36,23 +37,23 @@ namespace DocumentFormat.OpenXml
         /// <param name="ns">Specifies the namespace of the schema attribute.</param>
         /// <param name="tag">Specifies the Tag name of the schema attribute.</param>
         public SchemaAttrAttribute(string ns, string tag)
-            : this(NamespaceIdMap.GetNamespaceId(ns), tag)
         {
+            if (string.IsNullOrEmpty(tag))
+            {
+                throw new ArgumentNullException(nameof(tag));
+            }
+
+            _qname = new OpenXmlQualifiedName(ns, tag);
         }
 
         /// <summary>
         /// Gets the tag name of the schema attribute.
         /// </summary>
-        public string Tag { get; }
-
-        /// <summary>
-        /// Gets the id of the namespace
-        /// </summary>
-        internal byte NamespaceId { get; }
+        public string Tag => _qname.Name;
 
         /// <summary>
         /// Gets the Namespace Uri of the schema attribute.
         /// </summary>
-        public string NamespaceUri => NamespaceIdMap.GetNamespaceUri(NamespaceId);
+        public string NamespaceUri => _qname.Namespace.Uri;
     }
 }

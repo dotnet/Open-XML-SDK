@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Framework
         {
             foreach (var validator in validators)
             {
-                if (validator is INameProvider nameProvider && nameProvider?.QName is XmlQualifiedName qname)
+                if (validator is INameProvider nameProvider && nameProvider.QName is XmlQualifiedName qname)
                 {
                     return qname;
                 }

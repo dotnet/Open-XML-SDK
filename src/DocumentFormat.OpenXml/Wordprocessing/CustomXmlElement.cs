@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Represents the attribute in schema: w:uri.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Represents the attribute in schema: w:element.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        public StringValue Element
+        public StringValue? Element
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        public CustomXmlProperties CustomXmlProperties
+        public CustomXmlProperties? CustomXmlProperties
         {
             get => GetElement<CustomXmlProperties>();
             set => SetElement(value);

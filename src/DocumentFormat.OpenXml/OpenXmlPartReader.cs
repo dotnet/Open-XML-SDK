@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, out _standalone, out _encoding);
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: true, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -70,7 +70,23 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, out _standalone, out _encoding);
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: true, out _standalone, out _encoding);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartReader class using the supplied OpenXmlPart and Boolean values.
+        /// </summary>
+        /// <param name="openXmlPart">The OpenXmlPart to read.</param>
+        /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes.</param>
+        /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space.</param>
+        public OpenXmlPartReader(OpenXmlPart openXmlPart, bool readMiscNodes, bool ignoreWhitespace)
+            : this(readMiscNodes)
+        {
+            if (openXmlPart is null) {
+                throw new ArgumentNullException(nameof(openXmlPart));
+            }
+
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -84,7 +100,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            _xmlReader = CreateReader(partStream, false, 0, out _standalone, out _encoding);
+            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace: true, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -100,7 +116,23 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            _xmlReader = CreateReader(partStream, false, 0, out _standalone, out _encoding);
+            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace: true, out _standalone, out _encoding);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartReader class using the supplied stream and Boolean values.
+        /// </summary>
+        /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
+        /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes.</param>
+        /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space.</param>
+        public OpenXmlPartReader(Stream partStream, bool readMiscNodes, bool ignoreWhitespace)
+            : this(readMiscNodes)
+        {
+            if (partStream is null) {
+                throw new ArgumentNullException(nameof(partStream));
+            }
+
+            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -559,14 +591,8 @@ namespace DocumentFormat.OpenXml
                     return;
 
                 case ElementState.Start:
-                    _xmlReader.Skip();
-                    _elementStack.Pop();
-                    GetElementInformation();
-                    return;
-
                 case ElementState.End:
                 case ElementState.MiscNode:
-                    // cursor is end element, pop stack
                     _xmlReader.Skip();
                     _elementStack.Pop();
                     GetElementInformation();
@@ -677,13 +703,13 @@ namespace DocumentFormat.OpenXml
 #endif
         }
 
-        private static XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, out bool? _standalone, out string _encoding)
+        private static XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, bool ignoreWhitespace, out bool? _standalone, out string _encoding)
         {
             var settings = new XmlReaderSettings
             {
                 MaxCharactersInDocument = maxCharactersInPart,
                 CloseInput = closeInput,
-                IgnoreWhitespace = true,
+                IgnoreWhitespace = ignoreWhitespace,
 #if FEATURE_XML_PROHIBIT_DTD
                 ProhibitDtd = true,
 #else
@@ -743,7 +769,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // create the root element object
-            var rootElement = CreateElement(_xmlReader.NamespaceURI, _xmlReader.LocalName);
+            var rootElement = CreateElement(new OpenXmlQualifiedName(_xmlReader.NamespaceURI, _xmlReader.LocalName));
 
             if (rootElement is null)
             {
@@ -767,15 +793,9 @@ namespace DocumentFormat.OpenXml
             return true;
         }
 
-        private static OpenXmlElement CreateElement(string namespaceUri, string name)
+        private static OpenXmlElement CreateElement(in OpenXmlQualifiedName qname)
         {
-            if (string.IsNullOrEmpty(name))
-            {
-                throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(name));
-            }
-
-            if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId)
-                && ElementLookup.Parts.Create(nsId, name) is OpenXmlElement element)
+            if (ElementLookup.Parts.Create(qname) is OpenXmlElement element)
             {
                 return element;
             }

@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System.Collections.Generic;
@@ -80,13 +78,13 @@ namespace DocumentFormat.OpenXml
         /// namespaces a markup consumer needs in order to understand and select that
         /// Choice and process the content.
         /// </summary>
-        public StringValue Requires
+        public StringValue? Requires
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
-        internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
+        internal override OpenXmlElement? ElementFactory(in OpenXmlQualifiedName qname)
         {
             if (Parent is AlternateContent)
             {
@@ -94,7 +92,7 @@ namespace DocumentFormat.OpenXml
 
                 if (parentsParentElement is not null)
                 {
-                    return parentsParentElement.ElementFactory(namespaceId, name);
+                    return parentsParentElement.ElementFactory(qname);
                 }
             }
 
@@ -116,7 +114,7 @@ namespace DocumentFormat.OpenXml
         {
             base.ConfigureMetadata(builder);
 
-            builder.SetSchema(AlternateContent.Namespace, Name);
+            builder.SetSchema(AlternateContent.InternalQName.Namespace.Uri, Name);
 
             builder.AddElement<AlternateContentChoice>()
                 .AddAttribute(0, "Requires", a => a.Requires);

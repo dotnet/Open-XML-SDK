@@ -386,6 +386,46 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
+        ///A test for OpenXmlPartReader to test the ignoreWhitespace option
+        ///</summary>
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void PartReaderIgnoreWhitespaceTest(bool ignoreWhitespace)
+        {
+            const string PartText = "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">" +
+                "<w:body>" +
+                "<w:p w:rsidP=\"001\"><w:r><w:t>  </w:t></w:r></w:p>" +
+                "</w:body>" +
+                "</w:document>";
+
+            UTF8Encoding utf8Encoding = new UTF8Encoding();
+            using var stream = new MemoryStream(utf8Encoding.GetBytes(PartText), false);
+
+            using var reader = OpenXmlReader.Create(stream, false, ignoreWhitespace);
+            Assert.False(reader.EOF);
+
+            reader.Read();
+            Assert.False(reader.EOF);
+
+            reader.ReadFirstChild();
+            Assert.True(reader.IsStartElement);
+            Assert.Equal(typeof(Body), reader.ElementType);
+            reader.Read();
+            Assert.True(reader.IsStartElement);
+            Assert.Equal(typeof(Paragraph), reader.ElementType);
+            reader.Read();
+            Assert.True(reader.IsStartElement);
+            Assert.Equal(typeof(Run), reader.ElementType);
+            reader.Read();
+            Assert.True(reader.IsStartElement);
+            Assert.Equal(typeof(Text), reader.ElementType);
+            Assert.Equal(ignoreWhitespace, reader.GetText() == string.Empty);
+
+            reader.Close();
+        }
+
+        /// <summary>
         ///A test for OpenXmlPartReader
         ///</summary>
         [Fact]
