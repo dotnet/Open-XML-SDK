@@ -436,13 +436,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ForeignMediaDataPart);
             }
 
-            var dataPartReferenceRelationship = ClassActivator.CreateInstance<T>();
-
-            var relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType);
-
-            dataPartReferenceRelationship.Initialize(this, mediaDataPart, dataPartReferenceRelationship.RelationshipType, relationship.Id);
-            ReferenceRelationshipList.AddLast(dataPartReferenceRelationship);
-            return dataPartReferenceRelationship;
+            return AddDataPartReferenceRelationshipInternal<T>(mediaDataPart);
         }
 
         /// <summary>
@@ -474,12 +468,18 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ForeignMediaDataPart);
             }
 
-            var dataPartReferenceRelationship = ClassActivator.CreateInstance<T>();
+            return AddDataPartReferenceRelationshipInternal<T>(mediaDataPart, id);
+        }
 
-            var relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType, id);
+        private T AddDataPartReferenceRelationshipInternal<T>(MediaDataPart mediaDataPart, string? id = null)
+            where T : DataPartReferenceRelationship
+        {
+            var relationshipType = DataPartReferenceRelationship.GetRelationshipType<T>();
+            var relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType);
+            var dataPartReferenceRelationship = (T)DataPartReferenceRelationship.Create(this, mediaDataPart, relationshipType, relationship.Id);
 
-            dataPartReferenceRelationship.Initialize(this, mediaDataPart, dataPartReferenceRelationship.RelationshipType, relationship.Id);
             ReferenceRelationshipList.AddLast(dataPartReferenceRelationship);
+
             return dataPartReferenceRelationship;
         }
 
@@ -1723,7 +1723,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     if (dataPartsDictionary[dataPartReferenceRelationship.DataPart] is MediaDataPart newDataPart)
                     {
-                        var newDataPartReference = DataPartReferenceRelationship.CreateDataPartReferenceRelationship(this, newDataPart, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
+                        var newDataPartReference = DataPartReferenceRelationship.Create(this, newDataPart, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
                         ReferenceRelationshipList.AddLast(newDataPartReference);
                     }
                 }
@@ -2044,7 +2044,7 @@ namespace DocumentFormat.OpenXml.Packaging
                                 }
 
                                 // Already loaded data part. Create reference relationship.
-                                var referenceRelationship = DataPartReferenceRelationship.CreateDataPartReferenceRelationship(this, dataPart, relationship.RelationshipType, relationship.Id);
+                                var referenceRelationship = DataPartReferenceRelationship.Create(this, dataPart, relationship.RelationshipType, relationship.Id);
                                 ReferenceRelationshipList.AddLast(referenceRelationship);
                             }
                             else
