@@ -31,10 +31,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns></returns>
         internal override void Validate(ValidationContext validationContext)
         {
-            Debug.Assert(validationContext is not null);
-
-            var element = validationContext.Stack.Current.Element as OpenXmlCompositeElement;
-            Debug.Assert(element is not null);
+            if (validationContext.Stack.Current.Element is not OpenXmlCompositeElement element)
+            {
+                return;
+            }
 
             var child = validationContext.GetFirstChildMc();
             ValidationErrorInfo errorInfo;

@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         if (prefix.Value is not null)
                         {
                             var ignorableNamespace = element.LookupNamespace(prefix.Value);
-                            if (string.IsNullOrEmpty(ignorableNamespace))
+                            if (ignorableNamespace.IsNullOrEmpty())
                             {
                                 // error, the prefix is not defined.
                                 errorInfo = validationContext.ComposeMcValidationError(element, "MC_InvalidIgnorableAttribute", element.MCAttributes.Ignorable);
@@ -190,7 +190,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 // Prefix must be already defined.
                 var attributeNamesapce = validationContext.Stack.Current.Element.LookupNamespace(items[0]);
-                if (string.IsNullOrEmpty(attributeNamesapce))
+                if (attributeNamesapce.IsNullOrEmpty())
                 {
                     return qname;
                 }

@@ -33,10 +33,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo is not null);
-            Debug.Assert(particleMatchInfo.StartElement is not null);
-
-            if (particleMatchInfo.StartElement.GetType() == ElementType)
+            if (particleMatchInfo.StartElement?.GetType() == ElementType)
             {
                 particleMatchInfo.Match = ParticleMatch.Matched;
                 particleMatchInfo.LastMatchedElement = particleMatchInfo.StartElement;
@@ -52,10 +49,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public void TryMatch(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo is not null);
-            Debug.Assert(particleMatchInfo.StartElement is not null);
-
-            if (ElementType != particleMatchInfo.StartElement.GetType())
+            if (ElementType != particleMatchInfo.StartElement?.GetType())
             {
                 particleMatchInfo.Match = ParticleMatch.Nomatch;
             }

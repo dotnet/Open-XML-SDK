@@ -27,7 +27,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="particleConstraint"></param>
         internal AnyParticleValidator(AnyParticle particleConstraint)
         {
-            Debug.Assert(particleConstraint is not null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.Any);
 
             _particleConstraint = particleConstraint;
@@ -42,11 +41,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The context information for validation.</param>
         public virtual void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo is not null);
-            Debug.Assert(particleMatchInfo.StartElement is not null);
-            Debug.Assert(!(particleMatchInfo.StartElement is OpenXmlMiscNode));
-
             var element = particleMatchInfo.StartElement;
+
+            if (element is null)
+            {
+                return;
+            }
 
             switch (_particleConstraint.NamespaceValue)
             {
@@ -109,8 +109,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The context information for validation.</param>
         public void TryMatch(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo is not null);
-            Debug.Assert(particleMatchInfo.StartElement is not null);
             Debug.Assert(!(particleMatchInfo.StartElement is OpenXmlMiscNode));
 
             if (ParticleConstraint.MaxOccurs == 1)

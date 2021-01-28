@@ -427,8 +427,6 @@ namespace DocumentFormat.OpenXml
         /// <returns>true if the next element was read successfully; false if there are no more elements to read. </returns>
         private bool MoveToNextElement()
         {
-            Debug.Assert(_xmlReader is not null);
-
             switch (_elementState)
             {
                 case ElementState.Null:
@@ -499,8 +497,6 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Only can be called on element start. Current will move to the end tag if no child element.</remarks>
         private bool MoveToFirstChild()
         {
-            Debug.Assert(_xmlReader is not null);
-
             switch (_elementState)
             {
                 case ElementState.EOF:
@@ -578,8 +574,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         private void InnerSkip()
         {
-            Debug.Assert(_xmlReader is not null);
-
             switch (_elementState)
             {
                 case ElementState.Null:
@@ -805,8 +799,6 @@ namespace DocumentFormat.OpenXml
 
         private void LoadAttributes()
         {
-            Debug.Assert(_xmlReader is not null);
-
             _attributeList.Clear();
             _nsDecls.Clear();
 
@@ -890,9 +882,8 @@ namespace DocumentFormat.OpenXml
         private OpenXmlElement CreateChildElement()
         {
             Debug.Assert(_elementStack.Count > 0);
-            Debug.Assert(_xmlReader is not null);
 
-            OpenXmlElement element = _elementStack.Peek();
+            var element = _elementStack.Peek();
 
             // AlternateContent / Choice / Fallback needs special treatment
             // The ElementFactory( ) of the Choice / Fallback depends on the parent of AlternateContentChoice

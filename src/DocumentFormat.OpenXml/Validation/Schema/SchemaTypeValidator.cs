@@ -19,10 +19,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The validation context.</param>
         public static void Validate(ValidationContext validationContext)
         {
-            Debug.Assert(validationContext is not null);
-            Debug.Assert(validationContext.Stack.Current.Element is not null);
-
-            OpenXmlElement theElement = validationContext.Stack.Current.Element;
+            var theElement = validationContext.Stack.Current.Element;
 
             Debug.Assert(!(theElement is OpenXmlUnknownElement));
             Debug.Assert(!(theElement is OpenXmlMiscNode));

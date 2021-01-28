@@ -17,7 +17,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal ChoiceParticleValidator(CompositeParticle particleConstraint)
             : base(particleConstraint)
         {
-            Debug.Assert(particleConstraint is not null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.Choice);
         }
 

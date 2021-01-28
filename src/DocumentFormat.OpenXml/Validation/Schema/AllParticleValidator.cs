@@ -21,7 +21,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal AllParticleValidator(CompositeParticle particleConstraint)
             : base(particleConstraint)
         {
-            Debug.Assert(particleConstraint is not null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.All);
 
             // xsd:all can only contain xsd:element children and maxOccurs of each children can only be 1
