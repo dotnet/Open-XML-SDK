@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -33,10 +31,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns></returns>
         internal override void Validate(ValidationContext validationContext)
         {
-            Debug.Assert(validationContext is not null);
-
-            var element = validationContext.Stack.Current.Element as OpenXmlCompositeElement;
-            Debug.Assert(element is not null);
+            if (validationContext.Stack.Current.Element is not OpenXmlCompositeElement element)
+            {
+                return;
+            }
 
             var child = validationContext.GetFirstChildMc();
             ValidationErrorInfo errorInfo;
@@ -199,7 +197,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 foreach (var constraint in ParticleConstraint.ChildrenParticles)
                 {
-                    if (constraint.ParticleValidator.GetRequiredElements(result))
+                    if (constraint.ParticleValidator is IParticleValidator validator && validator.GetRequiredElements(result))
                     {
                         requiredElements = true;
                     }
@@ -218,7 +216,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             foreach (var constraint in ParticleConstraint.ChildrenParticles)
             {
-                constraint.ParticleValidator.GetExpectedElements(result);
+                if (constraint.ParticleValidator is IParticleValidator validator)
+                {
+                    validator.GetExpectedElements(result);
+                }
             }
 
             return true;
@@ -240,7 +241,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 child = validationContext.GetFirstChildMc();
                 validationContext.CollectExpectedChildren = true;
                 particleMatchInfo.Reset(child);
-                particleMatchInfo.InitExpectedChildren();
+                particleMatchInfo.ExpectedChildren.Clear();
                 TryMatch(particleMatchInfo, validationContext);
                 validationContext.CollectExpectedChildren = false;
 
@@ -261,7 +262,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 
             ValidationErrorInfo errorInfo;
-            string expectedChildren = null;
+            string expectedChildren = string.Empty;
 
             switch (particleMatchInfo.Match)
             {

@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -23,7 +21,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal AllParticleValidator(CompositeParticle particleConstraint)
             : base(particleConstraint)
         {
-            Debug.Assert(particleConstraint is not null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.All);
 
             // xsd:all can only contain xsd:element children and maxOccurs of each children can only be 1
@@ -109,11 +106,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 particleMatchInfo.LastMatchedElement = next;
 
                 next = validationContext.GetNextChildMc(next);
-            }
-
-            if (particleMatchInfo.ExpectedChildren is null)
-            {
-                particleMatchInfo.InitExpectedChildren();
             }
 
             if (particleMatchInfo.LastMatchedElement is null)

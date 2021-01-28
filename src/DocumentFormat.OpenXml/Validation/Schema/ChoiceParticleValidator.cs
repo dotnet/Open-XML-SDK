@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -19,7 +17,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal ChoiceParticleValidator(CompositeParticle particleConstraint)
             : base(particleConstraint)
         {
-            Debug.Assert(particleConstraint is not null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.Choice);
         }
 
@@ -50,7 +47,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 // Use Reset() instead of new() to avoid heavy memory allocation and GC.
                 childMatchInfo.Reset(next);
 
-                childConstraint.ParticleValidator.TryMatch(childMatchInfo, validationContext);
+                childConstraint.ParticleValidator?.TryMatch(childMatchInfo, validationContext);
 
                 // if the _childMatchInfo.StartElement is changed, it means this method of this object is called more than once on the stack.
                 Debug.Assert(childMatchInfo.StartElement == next);
@@ -100,7 +97,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 foreach (var constraint in ParticleConstraint.ChildrenParticles)
                 {
-                    if (!constraint.ParticleValidator.GetRequiredElements(requiredChoiceChildren))
+                    if (constraint.ParticleValidator is IParticleValidator validator && !validator.GetRequiredElements(requiredChoiceChildren))
                     {
                         requiredElements = false;
                     }

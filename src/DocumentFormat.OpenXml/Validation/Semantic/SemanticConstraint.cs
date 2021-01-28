@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
@@ -54,7 +52,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
         }
 
-        public abstract ValidationErrorInfo ValidateCore(ValidationContext context);
+        public abstract ValidationErrorInfo? ValidateCore(ValidationContext context);
 
         private static void Get(ValidationContext context, out SemanticValidationLevel level, out ApplicationType type)
         {
@@ -77,7 +75,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
         }
 
-        protected static OpenXmlPart GetReferencedPart(ValidationContext context, string path)
+        protected static OpenXmlPart? GetReferencedPart(ValidationContext context, string path)
         {
             var current = context.Stack.Current;
 
@@ -209,9 +207,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 CultureInfo.InvariantCulture, out value);
         }
 
-        private static OpenXmlPart GetPartThroughPartPath(IEnumerable<IdPartPair> pairs, string[] path)
+        private static OpenXmlPart? GetPartThroughPartPath(IEnumerable<IdPartPair> pairs, string[] path)
         {
-            OpenXmlPart temp = null;
+            var temp = default(OpenXmlPart);
             var parts = pairs;
 
             for (int i = 0; i < path.Length; i++)
@@ -238,7 +236,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         protected readonly struct PartHolder<T>
         {
-            public PartHolder(T item, OpenXmlPart part)
+            public PartHolder(T item, OpenXmlPart? part)
             {
                 Item = item;
                 Part = part;
@@ -246,7 +244,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             public T Item { get; }
 
-            public OpenXmlPart Part { get; }
+            public OpenXmlPart? Part { get; }
         }
     }
 }

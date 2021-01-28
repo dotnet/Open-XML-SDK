@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -23,17 +21,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             get { return _particleConstraint; }
         }
 
-        protected AnyParticleValidator()
-        {
-        }
-
         /// <summary>
         /// Initializes a new instance of the AnyParticleValidator.
         /// </summary>
         /// <param name="particleConstraint"></param>
         internal AnyParticleValidator(AnyParticle particleConstraint)
         {
-            Debug.Assert(particleConstraint is not null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.Any);
 
             _particleConstraint = particleConstraint;
@@ -48,11 +41,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The context information for validation.</param>
         public virtual void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo is not null);
-            Debug.Assert(particleMatchInfo.StartElement is not null);
-            Debug.Assert(!(particleMatchInfo.StartElement is OpenXmlMiscNode));
-
             var element = particleMatchInfo.StartElement;
+
+            if (element is null)
+            {
+                return;
+            }
 
             switch (_particleConstraint.NamespaceValue)
             {
@@ -115,8 +109,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The context information for validation.</param>
         public void TryMatch(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo is not null);
-            Debug.Assert(particleMatchInfo.StartElement is not null);
             Debug.Assert(!(particleMatchInfo.StartElement is OpenXmlMiscNode));
 
             if (ParticleConstraint.MaxOccurs == 1)

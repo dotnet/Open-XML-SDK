@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Diagnostics;
 
@@ -35,10 +33,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo is not null);
-            Debug.Assert(particleMatchInfo.StartElement is not null);
-
-            if (particleMatchInfo.StartElement.GetType() == ElementType)
+            if (particleMatchInfo.StartElement?.GetType() == ElementType)
             {
                 particleMatchInfo.Match = ParticleMatch.Matched;
                 particleMatchInfo.LastMatchedElement = particleMatchInfo.StartElement;
@@ -54,10 +49,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public void TryMatch(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo is not null);
-            Debug.Assert(particleMatchInfo.StartElement is not null);
-
-            if (ElementType != particleMatchInfo.StartElement.GetType())
+            if (ElementType != particleMatchInfo.StartElement?.GetType())
             {
                 particleMatchInfo.Match = ParticleMatch.Nomatch;
             }
@@ -89,11 +81,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     particleMatchInfo.Match = ParticleMatch.Partial;
                     if (validationContext.CollectExpectedChildren)
                     {
-                        if (particleMatchInfo.ExpectedChildren is null)
-                        {
-                            particleMatchInfo.InitExpectedChildren();
-                        }
-
                         particleMatchInfo.ExpectedChildren.Add(ElementType);
                     }
                 }
@@ -148,7 +135,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return expectedElements;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (ReferenceEquals(this, obj))
             {

@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -35,12 +33,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override SemanticValidationLevel StateScope => SemanticValidationLevel.Part;
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
             var attribute = element.ParsedState.Attributes[_refAttribute];
 
-            if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
+            if (attribute.Value is null || attribute.Value.InnerText.IsNullOrEmpty())
             {
                 return null;
             }
@@ -89,7 +87,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                         var attribute = element.ParsedState.Attributes[_attribute];
 
                         //Attributes whose value is empty string or null don't need to be cached.
-                        if (attribute.Value is not null && !string.IsNullOrEmpty(attribute.Value.InnerText))
+                        if (attribute.Value is not null && !attribute.Value.InnerText.IsNullOrEmpty())
                         {
                             referencedAttributes.Add(attribute.Value.InnerText);
                         }

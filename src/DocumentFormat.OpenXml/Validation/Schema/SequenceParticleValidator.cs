@@ -138,11 +138,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     {
                         if (validationContext.CollectExpectedChildren)
                         {
-                            if (particleMatchInfo.ExpectedChildren is null)
-                            {
-                                particleMatchInfo.InitExpectedChildren();
-                            }
-
                             ParticleConstraint.ChildrenParticles[constraintIndex].ParticleValidator.GetRequiredElements(particleMatchInfo.ExpectedChildren);
                         }
 

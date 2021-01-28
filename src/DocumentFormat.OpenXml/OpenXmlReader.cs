@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
@@ -118,7 +116,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>
         /// Returns null if the encoding is not specified in the XML file.
         /// </remarks>
-        public virtual string Encoding
+        public virtual string? Encoding
         {
             get
             {
@@ -246,7 +244,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The OpenXmlElement that was loaded.</returns>
         /// <exception cref="InvalidOperationException">Thrown when the current is the end element.</exception>
         /// <remarks>The new current element is the end of the element after LoadCurrentElement().</remarks>
-        public abstract OpenXmlElement LoadCurrentElement();
+        public abstract OpenXmlElement? LoadCurrentElement();
 
         /// <summary>
         /// Gets the text of the element if the element is an OpenXmlLeafTextElement. Returns String.Empty for other elements.
