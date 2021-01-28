@@ -3,6 +3,10 @@
 
 using System;
 
+#if !NET5_0
+using DocumentFormat.OpenXml.Framework;
+#endif
+
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
