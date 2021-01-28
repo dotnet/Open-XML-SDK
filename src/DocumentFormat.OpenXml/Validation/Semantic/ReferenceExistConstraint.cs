@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             var element = context.Stack.Current.Element;
             var attribute = element.ParsedState.Attributes[_refAttribute];
 
-            if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
+            if (attribute.Value is null || attribute.Value.InnerText.IsNullOrEmpty())
             {
                 return null;
             }
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                         var attribute = element.ParsedState.Attributes[_attribute];
 
                         //Attributes whose value is empty string or null don't need to be cached.
-                        if (attribute.Value is not null && !string.IsNullOrEmpty(attribute.Value.InnerText))
+                        if (attribute.Value is not null && !attribute.Value.InnerText.IsNullOrEmpty())
                         {
                             referencedAttributes.Add(attribute.Value.InnerText);
                         }

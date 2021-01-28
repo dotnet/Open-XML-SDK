@@ -17,8 +17,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public ParentTypeConstraint(Type parent, bool valid)
             : base(SemanticValidationLevel.Element)
         {
-            Debug.Assert(parent is not null);
-
             _parentType = parent;
             _isValid = valid;
         }
