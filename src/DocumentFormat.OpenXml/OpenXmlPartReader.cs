@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
@@ -27,27 +25,19 @@ namespace DocumentFormat.OpenXml
         private readonly Stack<OpenXmlElement> _elementStack = new Stack<OpenXmlElement>();
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private readonly string _encoding;
+        private readonly string? _encoding;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private readonly bool? _standalone;
 
         private ElementState _elementState;
 
-        private OpenXmlPartReader()
-        {
-        }
-
-        private OpenXmlPartReader(bool readMiscNodes)
-            : base(readMiscNodes)
-        {
-        }
-
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartReader class using the supplied OpenXmlPart class.
         /// </summary>
         /// <param name="openXmlPart">The OpenXmlPart to read.</param>
-        public OpenXmlPartReader(OpenXmlPart openXmlPart) : this()
+        public OpenXmlPartReader(OpenXmlPart openXmlPart)
+            : base()
         {
             if (openXmlPart is null)
             {
@@ -63,7 +53,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlPart">The OpenXmlPart to read.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         public OpenXmlPartReader(OpenXmlPart openXmlPart, bool readMiscNodes)
-            : this(readMiscNodes)
+            : base(readMiscNodes)
         {
             if (openXmlPart is null)
             {
@@ -80,9 +70,10 @@ namespace DocumentFormat.OpenXml
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes.</param>
         /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space.</param>
         public OpenXmlPartReader(OpenXmlPart openXmlPart, bool readMiscNodes, bool ignoreWhitespace)
-            : this(readMiscNodes)
+            : base(readMiscNodes)
         {
-            if (openXmlPart is null) {
+            if (openXmlPart is null)
+            {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
@@ -93,7 +84,8 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the OpenXmlPartReader class using the supplied stream.
         /// </summary>
         /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
-        public OpenXmlPartReader(Stream partStream) : this()
+        public OpenXmlPartReader(Stream partStream)
+            : base()
         {
             if (partStream is null)
             {
@@ -109,7 +101,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         public OpenXmlPartReader(Stream partStream, bool readMiscNodes)
-            : this(readMiscNodes)
+            : base(readMiscNodes)
         {
             if (partStream is null)
             {
@@ -126,9 +118,10 @@ namespace DocumentFormat.OpenXml
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes.</param>
         /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space.</param>
         public OpenXmlPartReader(Stream partStream, bool readMiscNodes, bool ignoreWhitespace)
-            : this(readMiscNodes)
+            : base(readMiscNodes)
         {
-            if (partStream is null) {
+            if (partStream is null)
+            {
                 throw new ArgumentNullException(nameof(partStream));
             }
 
@@ -141,7 +134,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>
         /// Returns null if encoding is not specified in the XML file.
         /// </remarks>
-        public override string Encoding
+        public override string? Encoding
         {
             get
             {
@@ -621,7 +614,7 @@ namespace DocumentFormat.OpenXml
         #endregion
 
         /// <inheritdoc/>
-        public override OpenXmlElement LoadCurrentElement()
+        public override OpenXmlElement? LoadCurrentElement()
         {
             ThrowIfObjectDisposed();
             OpenXmlElement element;
@@ -703,7 +696,7 @@ namespace DocumentFormat.OpenXml
 #endif
         }
 
-        private static XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, bool ignoreWhitespace, out bool? _standalone, out string _encoding)
+        private static XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, bool ignoreWhitespace, out bool? _standalone, out string? _encoding)
         {
             var settings = new XmlReaderSettings
             {
@@ -881,7 +874,7 @@ namespace DocumentFormat.OpenXml
                 default:
                     // non element ( PI, Comment, Notation, XmlDeclaration )
                     element = CreateChildElement();
-                    (element as OpenXmlMiscNode).LoadOuterXml(_xmlReader);
+                    ((OpenXmlMiscNode)element).LoadOuterXml(_xmlReader);
                     _elementStack.Push(element);
                     _elementState = ElementState.MiscNode;
                     break;
