@@ -11,13 +11,19 @@ jobs:
         packageType: 'sdk'
         useGlobalJson: true
 
+    - task: UseDotNet@2
+      displayName: 'Install .NET Runtime 3.1.10'
+      inputs:
+        packageType: 'runtime'
+        version: 3.1.10
+
     - task: PowerShell@2
       displayName: 'Update version'
       name: updateVersion
       inputs:
         targetType: 'inline'
         script: |
-          dotnet tool install --global GitVersion.Tool --version 5.1.2      
+          dotnet tool install --global GitVersion.Tool --version 5.6.3     
           dotnet gitversion /output buildserver /nofetch
 
     - task: DotNetCoreCLI@2

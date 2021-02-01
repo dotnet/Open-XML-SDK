@@ -2660,11 +2660,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Item), 0, 1000),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 0, 16)
@@ -3869,11 +3869,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton), 1, 1)
@@ -4541,15 +4541,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, 1000)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
@@ -4559,9 +4559,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1),
@@ -5579,11 +5579,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton), 1, 1)
@@ -6251,15 +6251,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, 1000)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
@@ -6269,9 +6269,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle), 1, 1),
@@ -10096,9 +10096,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Item), 0, 1000)
                 }
@@ -10926,9 +10926,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Item), 0, 1000),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 0, 16)
@@ -11971,13 +11971,13 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Sequence, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Item), 0, 1000),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 0, 16)
@@ -12682,17 +12682,17 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 0, 1000)
+                        new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                         {
-                            new CompositeParticle(ParticleType.Group, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Choice, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
@@ -12702,9 +12702,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
                                 }
                             },
-                            new CompositeParticle(ParticleType.Group, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Choice, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton), 1, 1),
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1),
@@ -13797,13 +13797,13 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 0, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton), 1, 1)
@@ -14071,9 +14071,9 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
 aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "boxStyle", a => a.BoxStyle);
-            builder.Particle = new CompositeParticle(ParticleType.Group, 0, 1000)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 1000)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ControlClone), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.TextLabel), 1, 1),
@@ -14319,9 +14319,9 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
 {
 aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1000)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
@@ -14464,13 +14464,13 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "itemSize", a => a.ItemSize);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1000)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new CompositeParticle(ParticleType.Group, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
@@ -14480,9 +14480,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
                         }
                     },
-                    new CompositeParticle(ParticleType.Group, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1),
@@ -14592,7 +14592,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Ribbon), 0, 1)
@@ -16192,7 +16192,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "dialogBoxLauncher");
             builder.AddChild<UnsizedButton>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1)
             };
@@ -16715,15 +16715,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L)
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, 1000)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ControlClone), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.TextLabel), 1, 1),
@@ -17418,9 +17418,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "sharedControls");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1000)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
@@ -17486,9 +17486,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "documentControls");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1000)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
@@ -17886,9 +17886,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L)
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 100)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 100)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Group), 1, 1)
                 }
@@ -18010,7 +18010,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Tab), 0, 50)
             };
@@ -18193,13 +18193,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
             builder.AddChild<SplitButtonWithTitle>();
             builder.AddChild<MenuWithTitle>();
             builder.AddChild<UnsizedDynamicMenu>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1000)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new CompositeParticle(ParticleType.Group, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
@@ -18209,9 +18209,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
                         }
                     },
-                    new CompositeParticle(ParticleType.Group, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle), 1, 1),
@@ -18280,7 +18280,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
             builder.SetSchema(34, "qat");
             builder.AddChild<SharedQatControls>();
             builder.AddChild<DocumentSpecificQuickAccessToolbarControls>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls), 0, 1)
@@ -18369,7 +18369,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "tabs");
             builder.AddChild<Tab>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Tab), 1, 100)
             };
@@ -18431,7 +18431,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "contextualTabs");
             builder.AddChild<ContextualTabSet>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet), 1, 100)
             };
@@ -18493,7 +18493,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
             base.ConfigureMetadata(builder);
             builder.SetSchema(34, "commands");
             builder.AddChild<RepurposedCommand>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommand), 1, 5000)
             };
@@ -18579,7 +18579,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
             builder.AddChild<ContextualTabSets>();
             builder.AddElement<Ribbon>()
 .AddAttribute(0, "startFromScratch", a => a.StartFromScratch);
-            builder.Particle = new CompositeParticle(ParticleType.All, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar), 0, 1),

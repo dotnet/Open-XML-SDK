@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             builder.AddChild<CachedView>();
             builder.AddChild<OpenByDefault>();
             builder.AddChild<Scope>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.CachedView), 1, 1),

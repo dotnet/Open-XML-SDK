@@ -7,6 +7,6 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal interface INameProvider
     {
-        XmlQualifiedName QName { get; }
+        XmlQualifiedName? QName { get; }
     }
 }

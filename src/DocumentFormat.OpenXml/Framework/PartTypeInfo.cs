@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Framework
         [Obsolete(ObsoleteAttributeMessages.ObsoleteV1ValidationFunctionality, false)]
         public string PartClassName { get; }
 
-        public string PartContentType { get; }
+        public string? PartContentType { get; }
 
         public FileFormatVersions Availability { get; }
     }

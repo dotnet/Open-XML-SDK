@@ -8,31 +8,31 @@ using System.Xml;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents the Single value for attributes.
+    /// Represents the <see cref="float"/> value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
     public class SingleValue : OpenXmlComparableSimpleValue<float>
     {
         /// <summary>
-        /// Initializes a new instance of the SingleValue class.
+        /// Initializes a new instance of the <see cref="SingleValue"/> class.
         /// </summary>
         public SingleValue()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the SingleValue class using the supplied Single value.
+        /// Initializes a new instance of the <see cref="SingleValue"/> class using the supplied <see cref="float"/> value.
         /// </summary>
-        /// <param name="value">The Single value.</param>
+        /// <param name="value">The <see cref="float"/> value.</param>
         public SingleValue(float value)
             : base(value)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the SingleValue class by deep copying the supplied SingleValue class.
+        /// Initializes a new instance of the <see cref="SingleValue"/> class by deep copying the supplied <see cref="SingleValue"/> class.
         /// </summary>
-        /// <param name="source">The source SingleValue class.</param>
+        /// <param name="source">The source <see cref="SingleValue"/> class.</param>
         public SingleValue(SingleValue source)
             : base(source)
         {
@@ -43,58 +43,52 @@ namespace DocumentFormat.OpenXml
         private protected override float Parse(string input) => XmlConvert.ToSingle(input);
 
         /// <summary>
-        /// Implicitly converts the specified SingleValue object to a Single value.
+        /// Implicitly converts the specified <see cref="SingleValue"/> object to a <see cref="float"/> value.
         /// </summary>
-        /// <param name="xmlAttribute">The SingleValue to convert.</param>
+        /// <param name="value">The <see cref="SingleValue"/> to convert.</param>
         /// <returns>
-        /// The converted Single value.
+        /// The converted <see cref="float"/> value.
         /// </returns>
-        /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator float(SingleValue xmlAttribute)
+        /// <exception cref="InvalidOperationException">Thrown when <paramref name="value"/> is <c>null</c>.</exception>
+        public static implicit operator float(SingleValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return ToSingle(xmlAttribute);
+            return ToSingle(value);
         }
 
         /// <summary>
-        /// Implicitly converts the specified Single value to a SingleValue object.
+        /// Implicitly converts the specified <see cref="float"/> value to a <see cref="SingleValue"/> object.
         /// </summary>
         /// <param name="value">The specified value.</param>
-        /// <returns>A new SingleValue instance with the value.</returns>
-        public static implicit operator SingleValue(float value)
-        {
-            return FromSingle(value);
-        }
+        /// <returns>A new <see cref="SingleValue"/> instance with the value.</returns>
+        public static implicit operator SingleValue(float value) => FromSingle(value);
 
         /// <summary>
-        /// Returns a new SingleValue object that was created from a Single value.
+        /// Returns a new <see cref="SingleValue"/> object that was created from a <see cref="float"/> value.
         /// </summary>
-        /// <param name="value">A Single value to use to create a new SingleValue object.</param>
-        /// <returns>A SingleValue object that corresponds to the value parameter.</returns>
-        public static SingleValue FromSingle(float value)
-        {
-            return new SingleValue(value);
-        }
+        /// <param name="value">A <see cref="float"/> value to use to create a new <see cref="SingleValue"/> object.</param>
+        /// <returns>A <see cref="SingleValue"/> object that corresponds to the value parameter.</returns>
+        public static SingleValue FromSingle(float value) => new SingleValue(value);
 
         /// <summary>
-        /// Returns the Single value representation of a SingleValue object.
+        /// Returns the <see cref="float"/> value representation of a <see cref="SingleValue"/> object.
         /// </summary>
-        /// <param name="xmlAttribute">
-        /// A SingleValue object used to retrieve a Single value representation.
+        /// <param name="value">
+        /// A <see cref="SingleValue"/> object used to retrieve a <see cref="float"/> value representation.
         /// </param>
-        /// <returns>A Single value that represents a SingleValue object.</returns>
-        public static float ToSingle(SingleValue xmlAttribute)
+        /// <returns>A <see cref="float"/> value that represents a <see cref="SingleValue"/> object.</returns>
+        public static float ToSingle(SingleValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return xmlAttribute.Value;
+            return value.Value;
         }
 
         private protected override OpenXmlSimpleType CloneImpl() => new SingleValue(this);

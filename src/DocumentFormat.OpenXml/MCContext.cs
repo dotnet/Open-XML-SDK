@@ -1,8 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using DocumentFormat.OpenXml.Framework;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Xml;
@@ -160,14 +161,19 @@ namespace DocumentFormat.OpenXml
             return _currentIgnorable.Count > 0;
         }
 
-        internal bool IsIgnorableNs(byte namespaceId)
+        internal bool IsIgnorableNs(in OpenXmlNamespace ns)
         {
             if (_currentIgnorable.Count == 0)
             {
                 return false;
             }
 
-            if (_currentIgnorable.Contains(NamespaceIdMap.GetNamespaceUri(namespaceId)))
+            if (ns.IsEmpty)
+            {
+                return false;
+            }
+
+            if (_currentIgnorable.Contains(ns.Uri))
             {
                 return true;
             }
@@ -177,72 +183,50 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal bool IsIgnorableNs(string ns)
+        internal bool IsPreservedAttribute(in OpenXmlQualifiedName qname)
         {
-            if (_currentIgnorable.Count == 0)
-            {
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(ns))
-            {
-                return false;
-            }
-
-            if (_currentIgnorable.Contains(ns))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return ContainsQName(qname, _currentPreserveAttr);
         }
 
-        internal bool IsPreservedAttribute(string ns, string localName)
+        internal bool IsPreservedElement(in OpenXmlQualifiedName qname)
         {
-            return ContainsQName(localName, ns, _currentPreserveAttr);
+            return ContainsQName(qname, _currentPreserveEle);
         }
 
-        internal bool IsPreservedElement(string ns, string localName)
+        internal bool IsProcessContent(in OpenXmlQualifiedName qname)
         {
-            return ContainsQName(localName, ns, _currentPreserveEle);
-        }
-
-        internal bool IsProcessContent(string ns, string localName)
-        {
-            return ContainsQName(localName, ns, _currentProcessContent);
+            return ContainsQName(qname, _currentProcessContent);
         }
 
         internal bool IsProcessContent(OpenXmlElement element)
         {
             // TODO: performance tuning
-            return ContainsQName(element.LocalName, element.NamespaceUri, _currentProcessContent);
+            return ContainsQName(element.QName, _currentProcessContent);
         }
 
-        internal AttributeAction GetAttributeAction(string ns, string localName, FileFormatVersions format)
+        internal AttributeAction GetAttributeAction(in OpenXmlQualifiedName qname, FileFormatVersions format)
         {
             if (format == (FileFormatVersions.Office2010 | FileFormatVersions.Office2007) || format.All())
             {
                 return AttributeAction.Normal;
             }
 
-            if (string.IsNullOrEmpty(ns))
+            if (qname.Namespace.IsEmpty)
             {
                 return AttributeAction.Normal;
             }
 
-            if (NamespaceIdMap.IsInFileFormat(ns, format))
+            if (qname.Namespace.IsInVersion(format))
             {
                 return AttributeAction.Normal;
             }
 
-            if (!IsIgnorableNs(ns))
+            if (!IsIgnorableNs(qname.Namespace))
             {
                 return AttributeAction.Normal;
             }
 
-            if (IsPreservedAttribute(ns, localName))
+            if (IsPreservedAttribute(qname))
             {
                 return AttributeAction.Normal;
             }
@@ -269,12 +253,12 @@ namespace DocumentFormat.OpenXml
 
             if (IsIgnorableNs(element.NamespaceUri))
             {
-                if (IsPreservedElement(element.NamespaceUri, element.LocalName))
+                if (IsPreservedElement(element.QName))
                 {
                     return ElementAction.Normal;
                 }
 
-                if (IsProcessContent(element.NamespaceUri, element.LocalName))
+                if (IsProcessContent(element.QName))
                 {
                     return ElementAction.ProcessContent;
                 }
@@ -287,13 +271,14 @@ namespace DocumentFormat.OpenXml
         #endregion
 
         #region private methods
-        private static bool ContainsQName(string localName, string ns, Stack<XmlQualifiedName> stack)
+        private static bool ContainsQName(in OpenXmlQualifiedName input, Stack<XmlQualifiedName> stack)
         {
-            XmlQualifiedName qname = new XmlQualifiedName(localName, ns);
+            var qname = new XmlQualifiedName(input.Name, input.Namespace.Uri);
+
             foreach (var qn in stack)
             {
                 if (qn == qname ||
-                    qn.Name == "*" && qn.Namespace == ns)
+                    qn.Name == "*" && qn.Namespace == input.Namespace.Uri)
                 {
                     return true;
                 }
@@ -322,7 +307,7 @@ namespace DocumentFormat.OpenXml
         private int PushIgnorable(MarkupCompatibilityAttributes attr)
         {
             int ret = 0;
-            if (attr != null && attr.Ignorable != null && !string.IsNullOrEmpty(attr.Ignorable.Value))
+            if (attr is not null && attr.Ignorable is not null && !string.IsNullOrEmpty(attr.Ignorable.Value))
             {
                 foreach (var ns in ParsePrefixList(attr.Ignorable, OnMcContextError))
                 {
@@ -350,7 +335,7 @@ namespace DocumentFormat.OpenXml
         private int PushPreserveAttribute(MarkupCompatibilityAttributes attr)
         {
             int ret = 0;
-            if (attr != null && attr.PreserveAttributes != null && !string.IsNullOrEmpty(attr.PreserveAttributes.Value))
+            if (attr is not null && attr.PreserveAttributes is not null && !string.IsNullOrEmpty(attr.PreserveAttributes.Value))
             {
                 ret = PushQName(_currentPreserveAttr, attr.PreserveAttributes.Value);
             }
@@ -361,7 +346,7 @@ namespace DocumentFormat.OpenXml
         private int PushPreserveElement(MarkupCompatibilityAttributes attr)
         {
             int ret = 0;
-            if (attr != null && attr.PreserveElements != null && !string.IsNullOrEmpty(attr.PreserveElements.Value))
+            if (attr is not null && attr.PreserveElements is not null && !string.IsNullOrEmpty(attr.PreserveElements.Value))
             {
                 ret = PushQName(_currentPreserveEle, attr.PreserveElements.Value);
             }
@@ -372,7 +357,7 @@ namespace DocumentFormat.OpenXml
         private int PushProcessContent(MarkupCompatibilityAttributes attr)
         {
             int ret = 0;
-            if (attr != null && attr.ProcessContent != null && !string.IsNullOrEmpty(attr.ProcessContent.Value))
+            if (attr is not null && attr.ProcessContent is not null && !string.IsNullOrEmpty(attr.ProcessContent.Value))
             {
                 ret = PushQName(_currentProcessContent, attr.ProcessContent.Value);
             }
@@ -420,7 +405,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (var choice in acblk.ChildElements.OfType<AlternateContentChoice>())
             {
-                if (choice.Requires == null)
+                if (choice.Requires is null)
                 {
                     //should we throw exception here?
                     continue;
@@ -441,8 +426,9 @@ namespace DocumentFormat.OpenXml
                     //bug when we try to GetContentFromACBlock, the reader has already moved to the next element of ACB
                     //so we should use the element's LookupNamespace function to find it
                     //string ns = LookupNamespaceDelegate(req);
-                    string ns = choice.LookupNamespace(req);
-                    if (ns == null)
+                    var ns = new OpenXmlNamespace(choice.LookupNamespace(req));
+
+                    if (ns.IsEmpty)
                     {
                         if (_noExceptionOnError)
                         {
@@ -455,7 +441,7 @@ namespace DocumentFormat.OpenXml
                         }
                     }
 
-                    if (!NamespaceIdMap.IsInFileFormat(ns, format))
+                    if (!ns.IsInVersion(format))
                     {
                         chooce = false;
                         break;
@@ -469,7 +455,7 @@ namespace DocumentFormat.OpenXml
             }
 
             var fallback = acblk.GetFirstChild<AlternateContentFallback>();
-            if (fallback != null)
+            if (fallback is not null)
             {
                 return fallback;
             }

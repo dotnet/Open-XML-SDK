@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Framework
             var current = context.Stack.Current;
             var value = current.Value;
 
-            if (value != null && !value.IsValid)
+            if (value is not null && !value.IsValid)
             {
                 var errorMessageResourceId = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
                 var message = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
@@ -23,14 +23,14 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     context.CreateError(
                         id: errorMessageResourceId,
-                        description: SR.Format(message, current.Property.GetQName(), current.Value.InnerText, ValidationResources.Sch_EmptyAttributeValue),
+                        description: SR.Format(message, current.Property.QName, current.Value.InnerText, ValidationResources.Sch_EmptyAttributeValue),
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
                     context.CreateError(
                         id: errorMessageResourceId,
-                        description: SR.Format(message, current.Property.GetQName(), value, ValidationResources.Sch_EnumerationConstraintFailed),
+                        description: SR.Format(message, current.Property.QName, value, ValidationResources.Sch_EnumerationConstraintFailed),
                         errorType: ValidationErrorType.Schema);
                 }
             }

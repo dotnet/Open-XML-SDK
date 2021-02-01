@@ -2,11 +2,11 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.Text;
@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public abstract class OpenXmlCompositeElement : OpenXmlElement
     {
-        private OpenXmlElement _lastChild;
+        private OpenXmlElement? _lastChild;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlCompositeElement class.
@@ -42,10 +42,11 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the OpenXmlCompositeElement class using the supplied collection of elements.
         /// </summary>
         /// <param name="childrenElements">A collection of elements.</param>
+        [Obsolete("Should use the generic version of this. This overload will be removed in a future version.")]
         protected OpenXmlCompositeElement(IEnumerable childrenElements)
             : this()
         {
-            if (childrenElements == null)
+            if (childrenElements is null)
             {
                 throw new ArgumentNullException(nameof(childrenElements));
             }
@@ -63,12 +64,12 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlCompositeElement(IEnumerable<OpenXmlElement> childrenElements)
             : this()
         {
-            if (childrenElements == null)
+            if (childrenElements is null)
             {
                 throw new ArgumentNullException(nameof(childrenElements));
             }
 
-            foreach (OpenXmlElement child in childrenElements)
+            foreach (var child in childrenElements)
             {
                 AppendChild(child);
             }
@@ -81,12 +82,12 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlCompositeElement(params OpenXmlElement[] childrenElements)
             : this()
         {
-            if (childrenElements == null)
+            if (childrenElements is null)
             {
                 throw new ArgumentNullException(nameof(childrenElements));
             }
 
-            foreach (OpenXmlElement child in childrenElements)
+            foreach (var child in childrenElements)
             {
                 AppendChild(child);
             }
@@ -100,15 +101,15 @@ namespace DocumentFormat.OpenXml
         /// <remarks>
         /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element.
         /// </remarks>
-        public override OpenXmlElement FirstChild
+        public override OpenXmlElement? FirstChild
         {
             get
             {
                 MakeSureParsed();
 
-                OpenXmlElement lastChild = _lastChild;
+                var lastChild = _lastChild;
 
-                if (lastChild != null)
+                if (lastChild is not null)
                 {
                     return lastChild.Next;
                 }
@@ -121,7 +122,7 @@ namespace DocumentFormat.OpenXml
         /// Gets the last child of the current OpenXmlElement element.
         /// Returns null (Nothing in Visual Basic) if there is no such OpenXmlElement element.
         /// </summary>
-        public override OpenXmlElement LastChild
+        public override OpenXmlElement? LastChild
         {
             get
             {
@@ -132,22 +133,16 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        public override bool HasChildren
-        {
-            get
-            {
-                return LastChild != null;
-            }
-        }
+        public override bool HasChildren => LastChild is not null;
 
         /// <inheritdoc/>
         public override string InnerText
         {
             get
             {
-                StringBuilder innerText = new StringBuilder();
+                var innerText = new StringBuilder();
 
-                foreach (OpenXmlElement child in ChildElements)
+                foreach (var child in ChildElements)
                 {
                     innerText.Append(child.InnerText);
                 }
@@ -168,7 +163,7 @@ namespace DocumentFormat.OpenXml
                 {
                     // create an outer XML by wrapping the InnerXml with this element.
                     // because XmlReader can not be created on InnerXml ( InnerXml may have several root elements ).
-                    using (StringWriter w = new StringWriter(CultureInfo.InvariantCulture))
+                    using (var w = new StringWriter(CultureInfo.InvariantCulture))
                     {
                         using (XmlWriter writer2 = new XmlDOMTextWriter(w))
                         {
@@ -181,11 +176,11 @@ namespace DocumentFormat.OpenXml
                         OpenXmlElement newElement = CloneNode(false);
                         newElement.OuterXml = w.ToString();
 
-                        OpenXmlElement child = newElement.FirstChild;
-                        OpenXmlElement next = null;
+                        var child = newElement.FirstChild;
+                        var next = default(OpenXmlElement);
 
                         // then move all children to this element.
-                        while (child != null)
+                        while (child is not null)
                         {
                             next = child.NextSibling();
 
@@ -222,7 +217,7 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            var wasAdded = SetElement(newChild);
+            var wasAdded = Metadata.Particle.Set(this, newChild, newChild?.GetType());
 
             if (throwOnError && !wasAdded)
             {
@@ -232,30 +227,27 @@ namespace DocumentFormat.OpenXml
             return wasAdded;
         }
 
-        /// <summary>
-        /// Appends the specified element to the end of the current element's list of child nodes.
-        /// </summary>
-        /// <param name="newChild">The OpenXmlElement element to append.</param>
-        /// <returns>The OpenXmlElement element that was appended. </returns>
-        /// <remarks>Returns null if <paramref name="newChild"/> equals <c>null</c>.</remarks>
-        public override T AppendChild<T>(T newChild)
+        /// <inheritdoc/>
+        [return: MaybeNull]
+        [return: NotNullIfNotNull("newChild")]
+        public override T AppendChild<T>([AllowNull] T newChild)
         {
-            if (newChild == null)
+            if (newChild is null)
             {
                 return null;
             }
 
-            if (newChild.Parent != null)
+            if (newChild.Parent is not null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
 
             ElementInsertingEvent(newChild);
 
-            OpenXmlElement prevNode = LastChild;
-            OpenXmlElement nextNode = newChild;
+            var prevNode = LastChild;
+            var nextNode = newChild;
 
-            if (prevNode == null)
+            if (prevNode is null)
             {
                 nextNode.Next = nextNode;
                 _lastChild = nextNode;
@@ -274,26 +266,22 @@ namespace DocumentFormat.OpenXml
             return newChild;
         }
 
-        /// <summary>
-        /// Inserts the specified element immediately after the specified reference element.
-        /// </summary>
-        /// <param name="newChild">The OpenXmlElement element to insert.</param>
-        /// <param name="referenceChild">The OpenXmlElement element after which <paramref name="newChild"/> should be added. Must be a child of this element.</param>
-        /// <returns>The OpenXmlElement element that was inserted.</returns>
-        /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> is null. Inserted as first child if <paramref name="referenceChild"/> is <c>null</c>.</remarks>
-        public override T InsertAfter<T>(T newChild, OpenXmlElement referenceChild)
+        /// <inheritdoc/>
+        [return: MaybeNull]
+        [return: NotNullIfNotNull("newChild")]
+        public override T InsertAfter<T>([AllowNull] T newChild, OpenXmlElement? referenceChild)
         {
-            if (newChild == null)
+            if (newChild is null)
             {
                 return null;
             }
 
-            if (newChild.Parent != null)
+            if (newChild.Parent is not null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
 
-            if (referenceChild == null)
+            if (referenceChild is null)
             {
                 return PrependChild(newChild);
             }
@@ -305,11 +293,8 @@ namespace DocumentFormat.OpenXml
 
             ElementInsertingEvent(newChild);
 
-            OpenXmlElement nextNode = newChild;
-            OpenXmlElement prevNode = referenceChild;
-
-            Debug.Assert(nextNode != null);
-            Debug.Assert(prevNode != null);
+            var nextNode = newChild;
+            var prevNode = referenceChild;
 
             if (prevNode == _lastChild)
             {
@@ -319,7 +304,7 @@ namespace DocumentFormat.OpenXml
             }
             else
             {
-                OpenXmlElement next = prevNode.Next;
+                var next = prevNode.Next;
                 nextNode.Next = next;
                 prevNode.Next = nextNode;
             }
@@ -331,26 +316,22 @@ namespace DocumentFormat.OpenXml
             return newChild;
         }
 
-        /// <summary>
-        /// Inserts the specified element immediately before the specified reference element.
-        /// </summary>
-        /// <param name="newChild">The OpenXmlElement to insert.</param>
-        /// <param name="referenceChild">The OpenXmlElement element before which <paramref name="newChild"/> should be added. Must be a child of this element.</param>
-        /// <returns>The OpenXmlElement that was inserted.</returns>
-        /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> is null. Inserted as first child if <paramref name="referenceChild"/> is <c>null</c>.</remarks>
-        public override T InsertBefore<T>(T newChild, OpenXmlElement referenceChild)
+        /// <inheritdoc/>
+        [return: MaybeNull]
+        [return: NotNullIfNotNull("newChild")]
+        public override T InsertBefore<T>([AllowNull] T newChild, OpenXmlElement? referenceChild)
         {
-            if (newChild == null)
+            if (newChild is null)
             {
                 return null;
             }
 
-            if (newChild.Parent != null)
+            if (newChild.Parent is not null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
 
-            if (referenceChild == null)
+            if (referenceChild is null)
             {
                 return AppendChild(newChild);
             }
@@ -362,20 +343,28 @@ namespace DocumentFormat.OpenXml
 
             ElementInsertingEvent(newChild);
 
-            OpenXmlElement prevNode = newChild;
-            OpenXmlElement nextNode = referenceChild;
-
-            Debug.Assert(nextNode != null);
-            Debug.Assert(prevNode != null);
+            var prevNode = newChild;
+            var nextNode = referenceChild;
 
             if (nextNode == FirstChild)
             {
+                if (_lastChild is null)
+                {
+                    throw new InvalidOperationException();
+                }
+
                 prevNode.Next = nextNode;
                 _lastChild.Next = prevNode;
             }
             else
             {
-                OpenXmlElement previousSibling = nextNode.PreviousSibling();
+                var previousSibling = nextNode.PreviousSibling();
+
+                if (previousSibling is null)
+                {
+                    throw new InvalidOperationException();
+                }
+
                 prevNode.Next = nextNode;
                 previousSibling.Next = prevNode;
             }
@@ -387,22 +376,17 @@ namespace DocumentFormat.OpenXml
             return newChild;
         }
 
-        /// <summary>
-        /// Inserts the specified element at the specified index of the current element's children.
-        /// </summary>
-        /// <param name="newChild">The OpenXmlElement element to insert.</param>
-        /// <param name="index">The zero-based index to insert the element to.</param>
-        /// <returns>The OpenXmlElement element that was inserted.</returns>
-        /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> equals <c>null</c>.</remarks>
-        /// <exception cref="ArgumentOutOfRangeException">Thrown when <paramref name="index"/> is less than 0 or is greater than the count of children.</exception>
-        public override T InsertAt<T>(T newChild, int index)
+        /// <inheritdoc/>
+        [return: MaybeNull]
+        [return: NotNullIfNotNull("newChild")]
+        public override T InsertAt<T>([AllowNull] T newChild, int index)
         {
-            if (newChild == null)
+            if (newChild is null)
             {
                 return null;
             }
 
-            if (newChild.Parent != null)
+            if (newChild.Parent is not null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
@@ -421,25 +405,22 @@ namespace DocumentFormat.OpenXml
             }
             else
             {
-                OpenXmlElement refChild = ChildElements[index];
+                var refChild = ChildElements[index];
                 return InsertBefore(newChild, refChild);
             }
         }
 
-        /// <summary>
-        /// Inserts the specified element at the beginning of the current element's list of child nodes.
-        /// </summary>
-        /// <param name="newChild">The OpenXmlElement element to add.</param>
-        /// <returns>The OpenXmlElement that was added.</returns>
-        /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> equals <c>null</c>.</remarks>
-        public override T PrependChild<T>(T newChild)
+        /// <inheritdoc/>
+        [return: MaybeNull]
+        [return: NotNullIfNotNull("newChild")]
+        public override T PrependChild<T>([AllowNull] T newChild)
         {
-            if (newChild == null)
+            if (newChild is null)
             {
                 return null;
             }
 
-            if (newChild.Parent != null)
+            if (newChild.Parent is not null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
@@ -447,15 +428,12 @@ namespace DocumentFormat.OpenXml
             return InsertBefore(newChild, FirstChild);
         }
 
-        /// <summary>
-        /// Removes the specified child element.
-        /// </summary>
-        /// <param name="child">The element to remove. Must be a child of this element.</param>
-        /// <returns>The element that was removed. </returns>
-        /// <remarks>Returns <c>null</c> if <paramref name="child"/> is <c>null</c>.</remarks>
-        public override T RemoveChild<T>(T child)
+        /// <inheritdoc/>
+        [return: MaybeNull]
+        [return: NotNullIfNotNull("newChild")]
+        public override T RemoveChild<T>([AllowNull] T child)
         {
-            if (child == null)
+            if (child is null)
             {
                 return null;
             }
@@ -465,8 +443,8 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ElementIsNotChild);
             }
 
-            T removedElement = child;
-            OpenXmlElement last = _lastChild;
+            var removedElement = child;
+            var last = _lastChild;
 
             ElementRemovingEvent(removedElement);
 
@@ -478,21 +456,38 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    OpenXmlElement nextNode = removedElement.Next;
+                    if (last is null)
+                    {
+                        throw new InvalidOperationException();
+                    }
+
+                    var nextNode = removedElement.Next;
                     last.Next = nextNode;
                 }
             }
             else if (removedElement == _lastChild)
             {
-                OpenXmlElement prevNode = removedElement.PreviousSibling();
-                OpenXmlElement next = removedElement.Next;
+                var prevNode = removedElement.PreviousSibling();
+
+                if (prevNode is null)
+                {
+                    throw new InvalidOperationException();
+                }
+
+                var next = removedElement.Next;
                 prevNode.Next = next;
                 _lastChild = prevNode;
             }
             else
             {
-                OpenXmlElement prevNode = removedElement.PreviousSibling();
-                OpenXmlElement next = removedElement.Next;
+                var prevNode = removedElement.PreviousSibling();
+
+                if (prevNode is null)
+                {
+                    throw new InvalidOperationException();
+                }
+
+                var next = removedElement.Next;
 
                 prevNode.Next = next;
             }
@@ -510,34 +505,30 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override void RemoveAllChildren()
         {
-            OpenXmlElement element = FirstChild;
-            while (element != null)
+            var element = FirstChild;
+            while (element is not null)
             {
-                OpenXmlElement next = element.NextSibling();
+                var next = element.NextSibling();
 
                 RemoveChild(element);
 
                 element = next;
             }
 
-            Debug.Assert(_lastChild == null);
+            Debug.Assert(_lastChild is null);
         }
 
-        /// <summary>
-        /// Replaces one of the current element's child elements with another OpenXmlElement element.
-        /// </summary>
-        /// <param name="newChild">The new OpenXmlElement to put in the child list.</param>
-        /// <param name="oldChild">The OpenXmlElement to be replaced in the child list. Must be a child of the current element.</param>
-        /// <returns>The OpenXmlElement that was replaced.</returns>
-        /// <remarks>Returns <c>null</c> if <paramref name="newChild"/> equals <c>null</c>.</remarks>
-        public override T ReplaceChild<T>(OpenXmlElement newChild, T oldChild)
+        /// <inheritdoc/>
+        [return: MaybeNull]
+        [return: NotNullIfNotNull("oldChild")]
+        public override T ReplaceChild<T>(OpenXmlElement newChild, [AllowNull] T oldChild)
         {
-            if (oldChild == null)
+            if (oldChild is null)
             {
                 return null;
             }
 
-            if (newChild == null)
+            if (newChild is null)
             {
                 throw new ArgumentNullException(nameof(newChild));
             }
@@ -547,12 +538,12 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ElementIsNotChild);
             }
 
-            if (newChild.Parent != null)
+            if (newChild.Parent is not null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ElementIsPartOfTree);
             }
 
-            OpenXmlElement refChild = oldChild.NextSibling();
+            var refChild = oldChild.NextSibling();
             RemoveChild(oldChild);
             InsertBefore(newChild, refChild);
             return oldChild;
@@ -581,7 +572,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="element">The OpenXmlElement element to insert.</param>
         private void ElementInsertingEvent(OpenXmlElement element)
         {
-            if (OpenXmlElementContext != null)
+            if (OpenXmlElementContext is not null)
             {
                 OpenXmlElementContext.ElementInsertingEvent(element, this);
             }
@@ -593,7 +584,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="element">The OpenXmlElement element to insert.</param>
         private void ElementInsertedEvent(OpenXmlElement element)
         {
-            if (OpenXmlElementContext != null)
+            if (OpenXmlElementContext is not null)
             {
                 OpenXmlElementContext.ElementInsertedEvent(element, this);
             }
@@ -605,7 +596,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="element">The OpenXmlElement element to remove.</param>
         private void ElementRemovingEvent(OpenXmlElement element)
         {
-            if (OpenXmlElementContext != null)
+            if (OpenXmlElementContext is not null)
             {
                 OpenXmlElementContext.ElementRemovingEvent(element, this);
             }
@@ -617,7 +608,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="element">The OpenXmlElement element to be removed.</param>
         private void ElementRemovedEvent(OpenXmlElement element)
         {
-            if (OpenXmlElementContext != null)
+            if (OpenXmlElementContext is not null)
             {
                 OpenXmlElementContext.ElementRemovedEvent(element, this);
             }
@@ -657,7 +648,7 @@ namespace DocumentFormat.OpenXml
                     element.Parent = this;
 
                     bool isACB = element is AlternateContent;
-                    if (isACB && element.OpenXmlElementContext != null)
+                    if (isACB && element.OpenXmlElementContext is not null)
                     {
                         element.OpenXmlElementContext.ACBlockLevel++;
                     }
@@ -671,7 +662,7 @@ namespace DocumentFormat.OpenXml
 
                     //Process the element according to the MC behavior
                     var action = ElementAction.Normal;
-                    if (OpenXmlElementContext != null && OpenXmlElementContext.MCSettings.ProcessMode != DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode.NoProcess)
+                    if (OpenXmlElementContext is not null && OpenXmlElementContext.MCSettings.ProcessMode != DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode.NoProcess)
                     {
                         action = OpenXmlElementContext.MCContext.GetElementAction(element, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
                     }
@@ -683,7 +674,7 @@ namespace DocumentFormat.OpenXml
                         PopMcContext();
                     }
 
-                    if (isACB && element.OpenXmlElementContext != null)
+                    if (isACB && element.OpenXmlElementContext is not null)
                     {
                         element.OpenXmlElementContext.ACBlockLevel--;
                     }
@@ -707,14 +698,18 @@ namespace DocumentFormat.OpenXml
                                 element.Parent = null;
                                 while (element.ChildElements.Count > 0)
                                 {
-                                    var node = element.FirstChild;
+                                    if (element.FirstChild is not OpenXmlElement node)
+                                    {
+                                        break;
+                                    }
+
                                     node.Remove();
-                                    OpenXmlElement newnode = null;
+                                    var newnode = default(OpenXmlElement);
 
                                     // If node is an UnknowElement, we should try to see whether the parent element can load the node as strong typed element
                                     if (node is OpenXmlUnknownElement)
                                     {
-                                        newnode = ElementFactory(node.Prefix, node.LocalName, node.NamespaceUri);
+                                        newnode = CreateElement(OpenXmlQualifiedName.Create(node.NamespaceUri, node.Prefix, node.LocalName));
                                         if (!(newnode is OpenXmlUnknownElement))
                                         {
                                             // The following method will load teh element in MCMode.Full
@@ -730,7 +725,7 @@ namespace DocumentFormat.OpenXml
                                         }
                                     }
 
-                                    if (newnode != null)
+                                    if (newnode is not null)
                                     {
                                         AddANode(newnode);
                                     }
@@ -746,15 +741,15 @@ namespace DocumentFormat.OpenXml
 
                         case ElementAction.ACBlock:
                             {
-                                var effectiveNode = OpenXmlElementContext.MCContext.GetContentFromACBlock(element as AlternateContent, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
-                                if (effectiveNode == null)
+                                var effectiveNode = OpenXmlElementContext?.MCContext.GetContentFromACBlock(element as AlternateContent, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
+                                if (effectiveNode is null)
                                 {
                                     break;
                                 }
 
                                 element.Parent = null;
                                 effectiveNode.Parent = null;
-                                while (effectiveNode.FirstChild != null)
+                                while (effectiveNode.FirstChild is not null)
                                 {
                                     var node = effectiveNode.FirstChild;
                                     node.Remove();
@@ -780,22 +775,23 @@ namespace DocumentFormat.OpenXml
         {
             // Reconstruct the _nsMappings for the new node based on the original node
             node.MakeSureParsed();
-            if (newnode.NamespaceDeclField != null && node.NamespaceDeclField != null)
+            if (newnode.NamespaceDeclField is not null && node.NamespaceDeclField is not null)
             {
                 newnode.NamespaceDeclField = new List<KeyValuePair<string, string>>(node.NamespaceDeclField);
             }
         }
 
-        private protected TElement GetElement<TElement>()
+        private protected TElement? GetElement<TElement>()
             where TElement : OpenXmlElement => Metadata.Particle.Get<TElement>(this);
 
-        private protected bool SetElement(OpenXmlElement value)
+        private protected bool SetElement<TElement>(TElement? value)
+            where TElement : OpenXmlElement
             => Metadata.Particle.Set(this, value);
 
         private void AddANode(OpenXmlElement node)
         {
             node.Parent = this;
-            if (_lastChild == null)
+            if (_lastChild is null)
             {
                 node.Next = node;
                 _lastChild = node;

@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
             base.ConfigureMetadata(builder);
             builder.SetSchema(8, "additionalCharacteristics");
             builder.AddChild<Characteristic>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic), 0, 0)
             };

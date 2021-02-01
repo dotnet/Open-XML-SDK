@@ -40,24 +40,19 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc />
-        public int CompareTo(object obj)
+        public int CompareTo(object? obj)
         {
             if(obj is null || !HasValue)
             {
                 return 1;
             }
 
-            switch (obj)
+            return obj switch
             {
-                case OpenXmlComparableSimpleValue<T> other:
-                    return CompareTo(other.Value);
-
-                case T t:
-                    return CompareTo(t);
-
-                default:
-                    return Value.CompareTo(obj);
-            }
+                OpenXmlComparableSimpleValue<T> other => CompareTo(other.Value),
+                T t => CompareTo(t),
+                _ => Value.CompareTo(obj),
+            };
         }
 
         /// <inheritdoc />
@@ -72,7 +67,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc />
-        public int CompareTo(OpenXmlComparableSimpleValue<T> other)
+        public int CompareTo(OpenXmlComparableSimpleValue<T>? other)
         {
             return other is null ? 1 : Value.CompareTo(other.Value);
         }
@@ -89,13 +84,13 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc />
-        public bool Equals(OpenXmlComparableSimpleValue<T> other)
+        public bool Equals(OpenXmlComparableSimpleValue<T>? other)
         {
             return !(other is null) && Value.Equals(other.Value);
         }
 
         /// <inheritdoc />
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj is null)
             {

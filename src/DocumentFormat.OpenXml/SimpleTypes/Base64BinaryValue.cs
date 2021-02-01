@@ -13,30 +13,30 @@ namespace DocumentFormat.OpenXml
     public class Base64BinaryValue : StringValue
     {
         /// <summary>
-        /// Initializes a new instance of the Base64BinaryValue class.
+        /// Initializes a new instance of the <see cref="Base64BinaryValue"/> class.
         /// </summary>
         public Base64BinaryValue()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the Base64BinaryValue class by deep copying
-        /// the supplied String value.
+        /// Initializes a new instance of the <see cref="Base64BinaryValue"/> class by deep copying
+        /// the supplied <see cref="string"/> value.
         /// </summary>
         /// <param name="base64Binary">
-        /// The String value.
+        /// The <see cref="string"/> value.
         /// </param>
-        public Base64BinaryValue(string base64Binary)
+        public Base64BinaryValue(string? base64Binary)
         {
             TextValue = base64Binary;
         }
 
         /// <summary>
-        /// Initializes a new instance of the Base64BinaryValue class by deep copying
-        /// the supplied Base64BinaryValue class.
+        /// Initializes a new instance of the <see cref="Base64BinaryValue"/> class by deep copying
+        /// the supplied <see cref="Base64BinaryValue"/> class.
         /// </summary>
         /// <param name="source">
-        /// The source Base64BinaryValue class.
+        /// The source <see cref="Base64BinaryValue"/> class.
         /// </param>
         public Base64BinaryValue(Base64BinaryValue source)
             : base(source?.InnerText)
@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets the Base64 binary string value.
         /// </summary>
-        public override string Value
+        public override string? Value
         {
             get => TextValue;
             set => TextValue = value;
@@ -84,6 +84,11 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
+                if (InnerText is null)
+                {
+                    return 0;
+                }
+
                 // decoded the data
                 var binaryData = Convert.FromBase64String(InnerText);
                 return binaryData.Length;
@@ -91,50 +96,50 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Implicitly converts the specified value to a String value.
+        /// Implicitly converts the specified value to a <see cref="string"/> value.
         /// </summary>
-        /// <param name="xmlAttribute">The Base64BinaryValue object to convert.</param>
-        /// <returns>The base64Binary string. Returns null when xmlAttribute is null.</returns>
-        public static implicit operator string(Base64BinaryValue xmlAttribute)
+        /// <param name="value">The <see cref="Base64BinaryValue"/> object to convert.</param>
+        /// <returns>The base64Binary string. Returns null when <paramref name="value"/> is <c>null</c>.</returns>
+        public static implicit operator string?(Base64BinaryValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 return null;
             }
 
-            return ToString(xmlAttribute);
+            return ToString(value);
         }
 
         /// <summary>
-        /// Initializes a new instance of a Base64BinaryValue class using the
+        /// Initializes a new instance of a <see cref="Base64BinaryValue"/> class using the
         /// supplied string.
         /// </summary>
         /// <param name="value">The specified base64Binary value.</param>
-        /// <returns>A new Base64BinaryValue instance with the value.</returns>
-        public static implicit operator Base64BinaryValue(string value) => FromString(value);
+        /// <returns>A new <see cref="Base64BinaryValue"/> instance with the value.</returns>
+        public static implicit operator Base64BinaryValue(string? value) => FromString(value);
 
         /// <summary>
-        /// Returns a new Base64BinaryValue object that was created from a String value.
+        /// Returns a new <see cref="Base64BinaryValue"/> object that was created from a <see cref="string"/> value.
         /// </summary>
-        /// <param name="value">A String value to use to create a new Base64BinaryValue object.</param>
-        /// <returns>A Base64BinaryValue that corresponds to the value parameter.</returns>
-        public new static Base64BinaryValue FromString(string value) => new Base64BinaryValue(value);
+        /// <param name="value">A <see cref="string"/> value to use to create a new <see cref="Base64BinaryValue"/> object.</param>
+        /// <returns>A <see cref="Base64BinaryValue"/> that corresponds to the value parameter.</returns>
+        public new static Base64BinaryValue FromString(string? value) => new Base64BinaryValue(value);
 
         /// <summary>
-        /// Returns the String value representation of a Base64BinaryValue object.
+        /// Returns the <see cref="string"/>  value representation of a <see cref="Base64BinaryValue"/> object.
         /// </summary>
-        /// <param name="xmlAttribute">
-        /// A Base64BinaryValue object used to retrieve a String value representation.
+        /// <param name="value">
+        /// A <see cref="Base64BinaryValue"/> object used to retrieve a <see cref="string"/> value representation.
         /// </param>
-        /// <returns>A String value that represents a Base64BinaryValue object.</returns>
-        public static string ToString(Base64BinaryValue xmlAttribute)
+        /// <returns>A <see cref="string"/> value that represents a <see cref="Base64BinaryValue"/> object.</returns>
+        public static string? ToString(Base64BinaryValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return xmlAttribute.Value;
+            return value.Value;
         }
 
         private protected override OpenXmlSimpleType CloneImpl() => new Base64BinaryValue(this);

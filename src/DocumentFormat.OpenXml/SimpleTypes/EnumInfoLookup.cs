@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml
     {
         private static EnumStringLookupImpl Instance { get; } = new EnumStringLookupImpl();
 
-        public static bool TryParse(string name, out TEnum value) => Instance.TryParse(name, out value);
+        public static bool TryParse(string? name, out TEnum value) => Instance.TryParse(name, out value);
 
         public static string ToString(TEnum value) => Instance.ToString(value);
 
@@ -39,17 +39,17 @@ namespace DocumentFormat.OpenXml
 
         private sealed class EnumStringLookupImpl
         {
-            private readonly Dictionary<string, TEnum> _nameLookup;
-            private readonly EnumStringInfo[] _enumInfo;
+            private readonly Dictionary<string, TEnum>? _nameLookup;
+            private readonly EnumStringInfo[]? _enumInfo;
 
-            public bool TryParse(string name, out TEnum value)
+            public bool TryParse(string? name, out TEnum value)
             {
-                if (_nameLookup == null)
+                if (_nameLookup is null)
                 {
                     throw new ArgumentOutOfRangeException(nameof(TEnum));
                 }
 
-                if (name == null)
+                if (name is null)
                 {
                     value = default;
                     return false;
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml
 
             private bool IsDefined(TEnum value, out int index)
             {
-                if (_enumInfo == null)
+                if (_enumInfo is null)
                 {
                     throw new ArgumentOutOfRangeException(nameof(TEnum));
                 }
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml
                     throw new ArgumentOutOfRangeException(nameof(value));
                 }
 
-                return _enumInfo[index];
+                return _enumInfo![index];
             }
 
             public EnumStringLookupImpl()
@@ -120,11 +120,11 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var enumVal in values)
                 {
-                    var field = enumType.GetDeclaredField(enumVal.ToString());
-                    var enumString = field.GetCustomAttribute<EnumStringAttribute>();
+                    var field = enumType.GetDeclaredField(enumVal.ToString()!);
+                    var enumString = field!.GetCustomAttribute<EnumStringAttribute>();
                     var officeAvailability = field.GetCustomAttribute<OfficeAvailabilityAttribute>();
 
-                    if (enumString == null)
+                    if (enumString is null)
                     {
                         return;
                     }

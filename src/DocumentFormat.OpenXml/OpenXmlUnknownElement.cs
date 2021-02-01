@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Diagnostics;
@@ -41,12 +43,15 @@ namespace DocumentFormat.OpenXml
         public OpenXmlUnknownElement(string name)
             : this()
         {
-            if (name == null)
+            if (name is null)
             {
                 throw new ArgumentNullException(nameof(name));
             }
 
-            OpenXmlElement.SplitName(name, out _prefix, out _tagName);
+            var schema = OpenXmlQualifiedName.Parse(name);
+
+            _prefix = schema.Namespace.Prefix;
+            _tagName = schema.Name;
         }
 
         /// <summary>
@@ -58,14 +63,21 @@ namespace DocumentFormat.OpenXml
         public OpenXmlUnknownElement(string qualifiedName, string namespaceUri)
             : this()
         {
-            if (qualifiedName == null)
+            if (qualifiedName is null)
             {
                 throw new ArgumentNullException(nameof(qualifiedName));
             }
 
-            OpenXmlElement.SplitName(qualifiedName, out _prefix, out _tagName);
+            var schema = OpenXmlQualifiedName.Parse(qualifiedName);
 
+            _prefix = schema.Namespace.Prefix;
+            _tagName = schema.Name;
             _namespaceUri = namespaceUri;
+        }
+
+        internal OpenXmlUnknownElement(in OpenXmlQualifiedName qname)
+            : this(qname.Namespace.Prefix, qname.Name, qname.Namespace.Uri)
+        {
         }
 
         /// <summary>
@@ -78,17 +90,17 @@ namespace DocumentFormat.OpenXml
         public OpenXmlUnknownElement(string prefix, string localName, string namespaceUri)
             : this()
         {
-            if (localName == null)
+            if (localName is null)
             {
                 throw new ArgumentNullException(nameof(localName));
             }
 
-            if (prefix == null)
+            if (prefix is null)
             {
                 prefix = string.Empty;
             }
 
-            if (namespaceUri == null)
+            if (namespaceUri is null)
             {
                 namespaceUri = string.Empty;
             }
@@ -118,9 +130,10 @@ namespace DocumentFormat.OpenXml
                 {
                     if (xmlReader.Read() && xmlReader.NodeType == XmlNodeType.Element)
                     {
-                        OpenXmlUnknownElement newElement = new OpenXmlUnknownElement(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI);
-                        newElement.OuterXml = outerXml;
-                        return newElement;
+                        return new OpenXmlUnknownElement(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI)
+                        {
+                            OuterXml = outerXml,
+                        };
                     }
                 } while (xmlReader.NodeType == XmlNodeType.Whitespace);
 
@@ -196,7 +209,7 @@ namespace DocumentFormat.OpenXml
             {
                 base.WriteContentTo(w);
             }
-            else if (Text != null)
+            else if (Text is not null)
             {
                 w.WriteString(Text);
             }
@@ -208,7 +221,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override void WriteTo(XmlWriter xmlWriter)
         {
-            if (xmlWriter == null)
+            if (xmlWriter is null)
             {
                 throw new ArgumentNullException(nameof(xmlWriter));
             }
@@ -255,7 +268,7 @@ namespace DocumentFormat.OpenXml
             // load children elements
             base.Populate(xmlReader, loadMode);
 
-            if (FirstChild != null && FirstChild.NextSibling() == null)
+            if (FirstChild is not null && FirstChild.NextSibling() is null)
             {
                 // only one child
                 if (FirstChild is OpenXmlMiscNode miscNode)

@@ -13,46 +13,35 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public abstract string PropertyName { get; }
 
-        public abstract string Name { get; }
-
-        public abstract byte NamespaceId { get; }
+        public abstract OpenXmlQualifiedName QName { get; }
 
         public abstract ReadOnlyArray<IValidator> Validators { get; }
-
-        public string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
-
-        public string NamespacePrefix => NamespaceIdMap.GetNamespacePrefix(NamespaceId);
 
         public abstract OpenXmlSimpleType CreateNew();
 
         public abstract Type Type { get; }
 
-        public XmlQualifiedName GetQName() => new XmlQualifiedName(Name, Namespace);
-
         public class Builder<TSimpleType> : ValidatorBuilder, IMetadataBuilder<AttributeMetadata>
             where TSimpleType : OpenXmlSimpleType, new()
         {
-            private static IValidator _defaultValidator = GetDefaultValidator();
+            private static readonly IValidator _defaultValidator = GetDefaultValidator();
 
-            public Builder(byte nsId, string name, string propertyName)
+            public Builder(in OpenXmlQualifiedName qname, string propertyName)
             {
-                Namespace = nsId;
-                Name = name;
+                QName = qname;
                 PropertyName = propertyName;
             }
 
             public void AddUnion(Action<Builder<TSimpleType>> action)
             {
-                var union = new Builder<TSimpleType>(Namespace, Name, PropertyName);
+                var union = new Builder<TSimpleType>(QName, PropertyName);
 
                 action(union);
 
                 AddValidator(new UnionValidator(union.GetValidators(), 0));
             }
 
-            public byte Namespace { get; }
-
-            public string Name { get; }
+            public OpenXmlQualifiedName QName { get; }
 
             public string PropertyName { get; }
 
@@ -60,7 +49,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
                 AddValidator(_defaultValidator);
 
-                return new AttributeInfo(Namespace, Name, PropertyName, GetValidators());
+                return new AttributeInfo(QName, PropertyName, GetValidators());
             }
 
             private static IValidator GetDefaultValidator()
@@ -88,19 +77,16 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             [DebuggerDisplay("{PropertyName,nq}")]
             private class AttributeInfo : AttributeMetadata
             {
-                public AttributeInfo(byte ns, string name, string propertyName, IValidator[] validators)
+                public AttributeInfo(in OpenXmlQualifiedName qname, string propertyName, IValidator[] validators)
                 {
                     PropertyName = propertyName;
-                    NamespaceId = ns;
-                    Name = name;
+                    QName = qname;
                     Validators = validators;
                 }
 
                 public override string PropertyName { get; }
 
-                public override string Name { get; }
-
-                public override byte NamespaceId { get; }
+                public override OpenXmlQualifiedName QName { get; }
 
                 public override ReadOnlyArray<IValidator> Validators { get; }
 

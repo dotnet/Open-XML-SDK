@@ -3,11 +3,12 @@
 
 using System;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents a generic value for simple value types (Int32, UInt32, Byte, struct, etc).
+    /// Represents a generic value for simple value types (such as <see cref="int"/> , <see cref="uint"/>, <see cref="byte"/>, etc).
     /// </summary>
     /// <typeparam name="T">The type of the value.</typeparam>
     [DebuggerDisplay("{InnerText}")]
@@ -63,12 +64,12 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (!InnerValue.HasValue && ShouldParse(InnerText))
+                if (!InnerValue.HasValue && ShouldParse(InnerText) && InnerText is not null)
                 {
                     InnerValue = Parse(InnerText);
                 }
 
-                return InnerValue.Value;
+                return InnerValue!.Value;
             }
 
             set
@@ -81,11 +82,11 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc />
-        public override string InnerText
+        public override string? InnerText
         {
             get
             {
-                if (TextValue == null && InnerValue.HasValue)
+                if (TextValue is null && InnerValue.HasValue)
                 {
                     TextValue = GetText(InnerValue.Value);
                 }
@@ -100,10 +101,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private protected virtual bool ShouldParse(string value)
-        {
-            return !string.IsNullOrEmpty(value);
-        }
+        private protected virtual bool ShouldParse(string? value) => !string.IsNullOrEmpty(value);
 
         private protected virtual void ValidateSet(T value)
         {
@@ -121,8 +119,14 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Convert the text to meaningful value with no exceptions
         /// </summary>
-        private protected virtual bool TryParse(string input, out T value)
+        private protected virtual bool TryParse(string? input, [MaybeNullWhen(false)] out T value)
         {
+            if (input is null || !ShouldParse(input))
+            {
+                value = default;
+                return false;
+            }
+
             try
             {
                 value = Parse(input);
@@ -143,7 +147,7 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
         public static implicit operator T(OpenXmlSimpleValue<T> xmlAttribute)
         {
-            if (xmlAttribute == null)
+            if (xmlAttribute is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
@@ -152,7 +156,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc />
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj is OpenXmlSimpleValue<T> openXmlSimpleValue)
             {

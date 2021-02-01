@@ -12,6 +12,7 @@ namespace DocumentFormat.OpenXml {
     using System;
     using System.Reflection;
     
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -879,6 +880,15 @@ namespace DocumentFormat.OpenXml {
         internal static string UnknowMCContent {
             get {
                 return ResourceManager.GetString("UnknowMCContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An unknown error occured. Original message: &apos;{0}&apos;.
+        /// </summary>
+        internal static string UnknownError {
+            get {
+                return ResourceManager.GetString("UnknownError", resourceCulture);
             }
         }
         

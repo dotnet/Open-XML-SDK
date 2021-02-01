@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -112,7 +114,7 @@ namespace DocumentFormat.OpenXml.Validation
 
                     var selectedContent = mcContext.GetContentFromACBlock((AlternateContent)element, version);
 
-                    if (selectedContent != null)
+                    if (selectedContent is not null)
                     {
                         foreach (var child in selectedContent.ChildElements)
                         {
@@ -128,7 +130,7 @@ namespace DocumentFormat.OpenXml.Validation
                 else
                 {
                     Debug.Assert(element is AlternateContentChoice || element is AlternateContentFallback);
-                    Debug.Assert(element.Parent != null && element.Parent is AlternateContent);
+                    Debug.Assert(element.Parent is not null && element.Parent is AlternateContent);
 
                     // should not be here, otherwise, wrong case ( the parent is not AlternateContent).
                 }

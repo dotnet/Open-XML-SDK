@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## Version 2.13.0
+
+### Added
+- Added nullability attributes (#840, #849)
+- Added overload for `OpenXmlPartReader` and `OpenXmlReader.Create(...)` to ignore whitespace (#857)
+- Added `HexBinaryValue.TryGetBytes(...)` and `HexBinaryValue.Create(byte[])` to manage the encoding and decoding of bytes (#867)
+- Implemented `IEquatable<IdPartPair>` on `IdPartPair` to fix equality implementation there and obsoleted setters (#871)
+
+## Version 2.12.1 - 2021-01-11
+
+### Fixed
+- Fixed bug where properties on `OpenXmlCompositeElement` instances could not be set to null to remove element (#850)
+- Fixed `OpenXmlElement.RawOuterXml` to properly set null values without throwing (#818)
+- Allow rewriting of all malformed URIs regardless of target value (#835)
+
 ## Version 2.12.0 - 2020-12-09
 
 ### Added

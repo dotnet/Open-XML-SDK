@@ -46,19 +46,19 @@ namespace DocumentFormat.OpenXml.Benchmarks
             public CustomConfig()
             {
                 // Diagnosers
-                Add(MemoryDiagnoser.Default);
+                AddDiagnoser(MemoryDiagnoser.Default);
 
                 // Columns
-                Add(DefaultConfig.Instance.GetColumnProviders().ToArray());
+                AddColumnProvider(DefaultConfig.Instance.GetColumnProviders().ToArray());
 
                 // Loggers
-                Add(ConsoleLogger.Default);
+                AddLogger(ConsoleLogger.Default);
 
                 // Exporters
-                Add(AsciiDocExporter.Default);
-                Add(HtmlExporter.Default);
+                AddExporter(AsciiDocExporter.Default);
+                AddExporter(HtmlExporter.Default);
 
-                Add(Job.InProcess);
+                AddJob(Job.InProcess);
             }
         }
     }

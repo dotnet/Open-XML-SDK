@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
 using System;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
@@ -23,9 +22,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _comparer = caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
-            if (_parent != null)
+            if (_parent is not null)
             {
                 return null;
             }
@@ -35,7 +34,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             var elementType = element.GetType();
 
             //if the attribute is omitted, semantic validation will do nothing
-            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
+            if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -57,11 +56,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
                 foreach (var e in root.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (e != element & e.GetType() == elementType)
+                    if (e != element && e.GetType() == elementType)
                     {
                         var eValue = e.ParsedState.Attributes[_attribute];
 
-                        if (eValue.HasValue && _comparer.Equals(attributeText, eValue.Value.InnerText))
+                        if (eValue.Value is not null && _comparer.Equals(attributeText, eValue.Value.InnerText))
                         {
                             return true;
                         }
@@ -88,7 +87,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             };
         }
 
-        private OpenXmlElement GetRoot(OpenXmlElement element)
+        private OpenXmlElement? GetRoot(OpenXmlElement element)
         {
             if (_parent is null)
             {

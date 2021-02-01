@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void AllElements()
         {
-            var particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
                 new ElementParticle(typeof(T2), 0, 1),
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void SequenceAdd()
         {
-            var particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
                 new ElementParticle(typeof(T2), 0, 1),
@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void TwoElementInSequenceTestBackwards()
         {
-            var particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
                 new ElementParticle(typeof(T2), 0, 1),
@@ -120,7 +120,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void TwoElementInSequenceTest()
         {
-            var particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
                 new ElementParticle(typeof(T2), 0, 1),
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void TwoElementInAll()
         {
-            var particle = new CompositeParticle(ParticleType.All, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.All, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
                 new ElementParticle(typeof(T2), 0, 1),
@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void ElementInAllList()
         {
-            var particle = new CompositeParticle(ParticleType.All, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.All, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
                 new ElementParticle(typeof(T2), 0, 1),
@@ -191,7 +191,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void CollectionInAll()
         {
-            var particle = new CompositeParticle(ParticleType.All, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.All, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
                 new ElementParticle(typeof(T2), 0, 10),
@@ -238,7 +238,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void TwoElementInAllBackwards()
         {
-            var particle = new CompositeParticle(ParticleType.All, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.All, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
                 new ElementParticle(typeof(T2), 0, 1),
@@ -260,7 +260,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void TwoElementOneCollectionInSequenceTest()
         {
-            var particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
                 new ElementParticle(typeof(T2), 1, 10),
@@ -289,7 +289,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void InvalidElementInSequenceTest()
         {
-            var particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
             }.Compile();
@@ -302,7 +302,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void ElementCollectionTest()
         {
-            var particle = new CompositeParticle(ParticleType.Sequence, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 10),
             }.Compile();
@@ -317,7 +317,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void SingleChoice()
         {
-            var particle = new CompositeParticle(ParticleType.Choice, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
             }.Compile();
@@ -335,7 +335,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void DoubleChoice()
         {
-            var particle = new CompositeParticle(ParticleType.Choice, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
                 new ElementParticle(typeof(T2), 0, 1),
@@ -356,10 +356,10 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void SequenceInChoice()
         {
-            var particle = new CompositeParticle(ParticleType.Choice, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
-                new CompositeParticle(ParticleType.Sequence, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
                 {
                     new ElementParticle(typeof(T2), 0, 1),
                     new ElementParticle(typeof(T3), 0, 1),
@@ -410,16 +410,16 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void TwoSequencesInChoice()
         {
-            var particle = new CompositeParticle(ParticleType.Choice, 0, 1)
+            var particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(T1), 0, 1),
-                new CompositeParticle(ParticleType.Sequence, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
                 {
                     new ElementParticle(typeof(T2), 0, 1),
                     new ElementParticle(typeof(T3), 0, 1),
                 },
                 new ElementParticle(typeof(T4), 0, 1),
-                new CompositeParticle(ParticleType.Sequence, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
                 {
                     new ElementParticle(typeof(T5), 0, 1),
                     new ElementParticle(typeof(T6), 0, 1),

@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using System;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -21,16 +20,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the source relationship type for an audio reference.
         /// </summary>
         public static string VideoReferenceRelationshipType => RelationshipTypeConst;
-
-        /// <summary>
-        /// Initializes a new instance of the VideoReferenceRelationship class.
-        /// </summary>
-        /// <remarks>
-        /// A call to Initialize() must be made after calling this constructor.
-        /// </remarks>
-        internal VideoReferenceRelationship()
-        {
-        }
 
         /// <summary>
         /// Initializes a new instance of the VideoReferenceRelationship class using the supplied

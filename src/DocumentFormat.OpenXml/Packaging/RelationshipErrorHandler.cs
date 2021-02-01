@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="id">Id of relationship</param>
         /// <param name="uri">Invalid <see cref="Uri"/></param>
         /// <returns>Rewritten string if available, otherwise <c>null</c>.</returns>
-        public delegate string Rewriter(Uri partUri, string id, string uri);
+        public delegate string Rewriter(Uri partUri, string? id, string? uri);
 
         /// <summary>
         /// Rewrites an invalid URI with a valid one in order to correctly open a package.
@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="id">Id of relationship</param>
         /// <param name="uri">Invalid <see cref="Uri"/></param>
         /// <returns>Rewritten string if available, otherwise <c>null</c>.</returns>
-        public abstract string Rewrite(Uri partUri, string id, string uri);
+        public abstract string Rewrite(Uri partUri, string? id, string? uri);
 
         /// <summary>
         /// Callback for after a package has been completely loaded and all rewritting has occurred.
@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     var doc = WalkRelationships(part);
 
-                    if (doc != null)
+                    if (doc is not null)
                     {
                         using var stream = part.GetStream(FileMode.Open, FileAccess.Write);
 
@@ -85,13 +85,18 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        private XDocument WalkRelationships(PackagePart part)
+        private XDocument? WalkRelationships(PackagePart part)
         {
             using var stream = part.GetStream(FileMode.Open, FileAccess.Read);
             using var reader = new StreamReader(stream);
 
             var doc = XDocument.Load(reader);
             var changed = false;
+
+            if (doc.Root is null)
+            {
+                return null;
+            }
 
             if (string.Equals(RelationshipsTagName, doc.Root.Name.LocalName, StringComparison.Ordinal)
                 && string.Equals(RelationshipNamespaceUri, doc.Root.Name.Namespace.NamespaceName, StringComparison.Ordinal))
@@ -122,7 +127,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             var target = child.Attribute(TargetAttributeName)?.Value;
 
-            if (Uri.TryCreate(target, UriHelper.RelativeOrAbsolute, out _))
+            if (!string.IsNullOrEmpty(target) && Uri.TryCreate(target, UriHelper.RelativeOrAbsolute, out _))
             {
                 return false;
             }
@@ -154,7 +159,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 _rewriter = rewriter;
             }
 
-            public override string Rewrite(Uri partUri, string id, string uri) => _rewriter(partUri, id, uri);
+            public override string Rewrite(Uri partUri, string? id, string? uri) => _rewriter(partUri, id, uri);
         }
     }
 }

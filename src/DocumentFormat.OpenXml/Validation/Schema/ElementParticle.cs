@@ -1,9 +1,12 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Diagnostics;
+
+#if !NET5_0
+using DocumentFormat.OpenXml.Framework;
+#endif
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -30,10 +33,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo != null);
-            Debug.Assert(particleMatchInfo.StartElement != null);
-
-            if (particleMatchInfo.StartElement.GetType() == ElementType)
+            if (particleMatchInfo.StartElement?.GetType() == ElementType)
             {
                 particleMatchInfo.Match = ParticleMatch.Matched;
                 particleMatchInfo.LastMatchedElement = particleMatchInfo.StartElement;
@@ -49,10 +49,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public void TryMatch(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo != null);
-            Debug.Assert(particleMatchInfo.StartElement != null);
-
-            if (ElementType != particleMatchInfo.StartElement.GetType())
+            if (ElementType != particleMatchInfo.StartElement?.GetType())
             {
                 particleMatchInfo.Match = ParticleMatch.Nomatch;
             }
@@ -68,7 +65,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 var element = particleMatchInfo.StartElement;
                 int count = 0;
 
-                while (element != null && MaxOccursGreaterThan(count) && element.GetType() == ElementType)
+                while (element is not null && MaxOccursGreaterThan(count) && element.GetType() == ElementType)
                 {
                     count++;
                     particleMatchInfo.LastMatchedElement = element;
@@ -84,11 +81,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     particleMatchInfo.Match = ParticleMatch.Partial;
                     if (validationContext.CollectExpectedChildren)
                     {
-                        if (particleMatchInfo.ExpectedChildren == null)
-                        {
-                            particleMatchInfo.InitExpectedChildren();
-                        }
-
                         particleMatchInfo.ExpectedChildren.Add(ElementType);
                     }
                 }
@@ -102,7 +94,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             if (MinOccurs > 0)
             {
-                if (result != null)
+                if (result is not null)
                 {
                     result.Add(ElementType);
                 }
@@ -143,7 +135,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             return expectedElements;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (ReferenceEquals(this, obj))
             {

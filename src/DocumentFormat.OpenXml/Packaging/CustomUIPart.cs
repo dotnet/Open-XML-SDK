@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using System;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -43,7 +45,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (_rootEle == null)
+                if (_rootEle is null)
                 {
                     LoadDomTree<Office.CustomUI.CustomUI>();
                 }
@@ -53,7 +55,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                if (value == null)
+                if (value is null)
                 {
                     throw new ArgumentNullException(nameof(value));
                 }

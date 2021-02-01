@@ -93,9 +93,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         internal static string GetExpectedChildrenMessage(OpenXmlElement parent, ExpectedChildren expectedChildrenIds)
         {
-            Debug.Assert(parent != null);
-
-            if (expectedChildrenIds != null)
+            if (expectedChildrenIds is not null)
             {
                 return expectedChildrenIds.GetExpectedChildrenMessage(parent);
             }

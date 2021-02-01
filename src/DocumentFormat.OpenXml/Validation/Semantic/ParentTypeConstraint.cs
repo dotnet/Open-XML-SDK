@@ -17,18 +17,16 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public ParentTypeConstraint(Type parent, bool valid)
             : base(SemanticValidationLevel.Element)
         {
-            Debug.Assert(parent != null);
-
             _parentType = parent;
             _isValid = valid;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
             var parent = element.Parent;
 
-            if (parent == null)
+            if (parent is null)
             {
                 return null;
             }

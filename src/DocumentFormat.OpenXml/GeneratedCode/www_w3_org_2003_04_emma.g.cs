@@ -146,7 +146,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
   aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(XsdAny.Other, 0, 0)
             };
@@ -292,7 +292,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(44, "time-ref-uri", a => a.TimeReference)
 .AddAttribute(44, "time-ref-anchor-point", a => a.TimeReferenceAnchorPoint);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Arc), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Node), 1, 1)
@@ -931,9 +931,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(44, "dialog-turn", a => a.DialogTurn)
 .AddAttribute(44, "no-input", a => a.NoInput)
 .AddAttribute(44, "uninterpreted", a => a.Uninterpreted);
-            builder.Particle = new CompositeParticle(ParticleType.Group, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
@@ -1517,9 +1517,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
 .AddAttribute(44, "model-ref", a => a.ModelRef)
 .AddAttribute(44, "dialog-turn", a => a.DialogTurn);
-            builder.Particle = new CompositeParticle(ParticleType.Group, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
@@ -2088,9 +2088,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
 .AddAttribute(44, "model-ref", a => a.ModelRef)
 .AddAttribute(44, "dialog-turn", a => a.DialogTurn);
-            builder.Particle = new CompositeParticle(ParticleType.Group, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.GroupInfo), 1, 1),
@@ -2657,9 +2657,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(44, "endpoint-info-ref", a => a.EndpointInfoRef)
 .AddAttribute(44, "model-ref", a => a.ModelRef)
 .AddAttribute(44, "dialog-turn", a => a.DialogTurn);
-            builder.Particle = new CompositeParticle(ParticleType.Group, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
@@ -2741,7 +2741,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(XsdAny.Other, 0, 0)
             };
@@ -2809,7 +2809,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<OneOf>();
             builder.AddChild<Sequence>();
             builder.AddChild<Group>();
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
@@ -2979,7 +2979,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
  aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(XsdAny.Other, 0, 0)
             };
@@ -3063,7 +3063,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), IsNcName = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPoint), 1, 1)
             };
@@ -3340,7 +3340,7 @@ aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), I
 .AddAttribute(44, "media-type", a => a.MediaType)
 .AddAttribute(44, "medium", a => a.Medium)
 .AddAttribute(44, "mode", a => a.Mode);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(XsdAny.Other, 0, 0)
             };
@@ -3470,7 +3470,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (10000000L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
             };
@@ -3781,7 +3781,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 .AddAttribute(44, "medium", a => a.Medium)
 .AddAttribute(44, "mode", a => a.Mode)
 .AddAttribute(44, "source", a => a.Source);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
             };
@@ -3880,9 +3880,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Group, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Derivation), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Grammar), 1, 1),

@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -33,9 +35,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 relationshipProperty.RelationshipType = relationship.RelationshipType;
 
                 // If packageRel.RelationshipType is something for Strict, it tries to get the equivalent in Transitional.
-                if (NamespaceIdMap.TryGetTransitionalRelationship(relationshipProperty.RelationshipType, out var transitionalNamespace))
+                if (new OpenXmlNamespace(relationshipProperty.RelationshipType).TryGetTransitionalRelationship(out var transitionalNamespace))
                 {
-                    relationshipProperty.RelationshipType = transitionalNamespace;
+                    relationshipProperty.RelationshipType = transitionalNamespace.Uri;
                     StrictRelationshipFound = true;
                 }
 

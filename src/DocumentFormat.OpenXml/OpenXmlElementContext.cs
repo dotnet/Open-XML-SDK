@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Xml;
@@ -21,7 +23,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (_mcSettings == null)
+                if (_mcSettings is null)
                 {
                     _mcSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007.AndLater());
                 }

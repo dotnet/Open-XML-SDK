@@ -7,7 +7,7 @@ using System.Diagnostics;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents the data type for attributes that have enum values that are Boolean values that represent 't' or 'f', or 'true' or 'false'.
+    /// Represents the data type for attributes that have enum values that are <see cref="bool"/> values that represent 't' or 'f', or 'true' or 'false'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
     public class TrueFalseValue : OpenXmlComparableSimpleValue<bool>
@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of <see cref="TrueFalseValue"/> class using the supplied Boolean value.
+        /// Initializes a new instance of <see cref="TrueFalseValue"/> class using the supplied <see cref="bool"/> value.
         /// </summary>
         /// <param name="value">The <see cref="bool"/> value.</param>
         public TrueFalseValue(bool value)
@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrueFalseValue"/> class using the supplied TrueFalseValue class.
+        /// Initializes a new instance of the <see cref="TrueFalseValue"/> class using the supplied <see cref="TrueFalseValue"/> class.
         /// </summary>
         /// <param name="source">The source <see cref="TrueFalseValue"/> class.</param>
         public TrueFalseValue(TrueFalseValue source)
@@ -38,89 +38,71 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Implicitly converts a TrueFalseValue class to a <see cref="bool"/> value.
+        /// Implicitly converts a <see cref="TrueFalseValue"/> class to a <see cref="bool"/> value.
         /// </summary>
-        /// <param name="xmlAttribute">The <see cref="TrueFalseValue"/> to convert.</param>
+        /// <param name="value">The <see cref="TrueFalseValue"/> to convert.</param>
         /// <returns>The converted <see cref="bool"/> value.</returns>
-        public static implicit operator bool(TrueFalseValue xmlAttribute)
+        public static implicit operator bool(TrueFalseValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return ToBoolean(xmlAttribute);
+            return ToBoolean(value);
         }
 
         /// <summary>
-        /// Implicitly converts a <see cref="bool"/> value to a TrueFalseValue instance.
+        /// Implicitly converts a <see cref="bool"/> value to a <see cref="TrueFalseValue"/> instance.
         /// </summary>
         /// <param name="value">The <see cref="bool"/> value to convert.</param>
         /// <returns>The converted <see cref="TrueFalseValue"/> value.</returns>
-        public static implicit operator TrueFalseValue(bool value)
-        {
-            return FromBoolean(value);
-        }
+        public static implicit operator TrueFalseValue(bool value) => FromBoolean(value);
 
         /// <summary>
-        /// Returns a new TrueFalseValue object that was created from a Boolean value.
+        /// Returns a new <see cref="TrueFalseValue"/> object that was created from a <see cref="bool"/> value.
         /// </summary>
-        /// <param name="value">A Boolean value to use to create a new TrueFalseValue object.</param>
-        /// <returns>A TrueFalseValue that corresponds to the value parameter.</returns>
-        public static TrueFalseValue FromBoolean(bool value)
-        {
-            return new TrueFalseValue(value);
-        }
+        /// <param name="value">A <see cref="bool"/> value to use to create a new <see cref="TrueFalseValue"/> object.</param>
+        /// <returns>A <see cref="TrueFalseValue"/> that corresponds to the value parameter.</returns>
+        public static TrueFalseValue FromBoolean(bool value) => new TrueFalseValue(value);
 
         /// <summary>
-        /// Returns the internal Boolean representation of a TrueFalseValue object.
+        /// Returns the internal <see cref="bool"/> representation of a <see cref="TrueFalseValue"/> object.
         /// </summary>
-        /// <param name="xmlAttribute">A TrueFalseValue object to retrieve an internal Boolean representation.</param>
-        /// <returns>A Boolean value that represents a TrueFalseValue object.</returns>
-        public static bool ToBoolean(TrueFalseValue xmlAttribute)
+        /// <param name="value">A <see cref="TrueFalseValue"/> object to retrieve an internal <see cref="bool"/> representation.</param>
+        /// <returns>A <see cref="bool"/> value that represents a <see cref="TrueFalseValue"/> object.</returns>
+        public static bool ToBoolean(TrueFalseValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return xmlAttribute.Value;
+            return value.Value;
         }
 
         private protected override OpenXmlSimpleType CloneImpl() => new TrueFalseValue(this);
 
-        private protected override bool ShouldParse(string value) => value != null;
+        private protected override bool ShouldParse(string? value) => value is not null;
 
         /// <summary>
         /// Gets the real boolean value of the text value.
         /// </summary>
         /// <param name="textValue">The text value which could be 't', 'f', 'true', 'false'.</param>
         /// <returns>True on text value is 't', 'true'; False on text value is 'f', 'false'.</returns>
-        private protected override bool Parse(string textValue)
-        {
-            switch (textValue)
+        private protected override bool Parse(string? textValue)
+            => textValue switch
             {
-                case "true":
-                case "t":
-                    return true;
-                case "false":
-                case "f":
-                case null:
-                    return false;
-                default:
-                    throw new FormatException(ExceptionMessages.TextIsInvalidTrueFalseValue);
-            }
-        }
+                "true" or "t" => true,
+                "false" or "f" or null => false,
+                _ => throw new FormatException(ExceptionMessages.TextIsInvalidTrueFalseValue),
+            };
 
         /// <summary>
         /// Gets the default text value.
         /// </summary>
         /// <param name="boolValue">The boolean value.</param>
         /// <returns>"t" false true, "f" for false.</returns>
-        private protected override string GetText(bool boolValue)
-        {
-            // TODO : Needs to decide what are the default text values.
-            return boolValue ? "true" : "false";
-        }
+        private protected override string GetText(bool boolValue) => boolValue ? "true" : "false";
     }
 }

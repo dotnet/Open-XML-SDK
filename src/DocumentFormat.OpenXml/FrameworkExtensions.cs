@@ -3,12 +3,16 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 
 namespace DocumentFormat.OpenXml
 {
-    internal static class StreamExtensions
+    internal static class FrameworkExtensions
     {
+        public static bool IsNullOrEmpty([NotNullWhen(false)] this string? str)
+            => string.IsNullOrEmpty(str);
+
         public static MemoryStream CopyToMemoryStream(this Stream stream)
         {
             if (stream.Length > int.MaxValue)

@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using System;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -60,7 +62,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (subPart == null)
+            if (subPart is null)
             {
                 throw new ArgumentNullException(nameof(subPart));
             }
@@ -69,7 +71,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (IsChildPart(subPart))
                 {
-                    if (rId != null && rId != GetIdOfPart(subPart))
+                    if (rId is not null && rId != GetIdOfPart(subPart))
                     {
                         // Do NOT allow one sub part is referenced more than once.
                         throw new InvalidOperationException(ExceptionMessages.PartExistsWithDifferentRelationshipId);
@@ -97,7 +99,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }

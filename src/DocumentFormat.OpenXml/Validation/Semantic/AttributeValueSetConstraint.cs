@@ -25,13 +25,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _valueSet = valueSet;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
             var attribute = element.ParsedState.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
-            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
+            if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }

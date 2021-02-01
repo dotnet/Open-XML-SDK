@@ -1,7 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
+#nullable disable
+
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -244,7 +245,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override void WriteTo(XmlWriter xmlWriter)
         {
-            if (xmlWriter == null)
+            if (xmlWriter is null)
             {
                 throw new ArgumentNullException(nameof(xmlWriter));
             }
@@ -375,7 +376,7 @@ namespace DocumentFormat.OpenXml
 
         internal static OpenXmlMiscNode CreateFromText(string text)
         {
-            Debug.Assert(text != null);
+            Debug.Assert(text is not null);
 
             return new OpenXmlMiscNode(XmlNodeType.Text)
             {
@@ -386,7 +387,7 @@ namespace DocumentFormat.OpenXml
 
         internal static OpenXmlMiscNode CreateFromCdata(string value)
         {
-            Debug.Assert(value != null);
+            Debug.Assert(value is not null);
 
             return new OpenXmlMiscNode(XmlNodeType.CDATA)
             {
@@ -397,7 +398,7 @@ namespace DocumentFormat.OpenXml
 
         internal static OpenXmlMiscNode CreateFromSignificantWhitespace(string whitespace)
         {
-            Debug.Assert(whitespace != null);
+            Debug.Assert(whitespace is not null);
 
             return new OpenXmlMiscNode(XmlNodeType.SignificantWhitespace)
             {

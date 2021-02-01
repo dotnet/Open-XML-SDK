@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using System;
 using System.IO;
 using System.IO.Packaging;
@@ -44,12 +46,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of SpreadsheetDocument.</returns>
         public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, Stream stream, bool isEditable)
         {
-            if (document == null)
+            if (document is null)
             {
                 throw new ArgumentNullException(nameof(document));
             }
 
-            if (stream == null)
+            if (stream is null)
             {
                 throw new ArgumentNullException(nameof(stream));
             }
@@ -67,12 +69,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of SpreadsheetDocument.</returns>
         public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, string path, bool isEditable)
         {
-            if (document == null)
+            if (document is null)
             {
                 throw new ArgumentNullException(nameof(document));
             }
 
-            if (path == null)
+            if (path is null)
             {
                 throw new ArgumentNullException(nameof(path));
             }
@@ -89,12 +91,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of SpreadsheetDocument.</returns>
         public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, Package package)
         {
-            if (document == null)
+            if (document is null)
             {
                 throw new ArgumentNullException(nameof(document));
             }
 
-            if (package == null)
+            if (package is null)
             {
                 throw new ArgumentNullException(nameof(package));
             }
@@ -111,7 +113,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of SpreadsheetDocument.</returns>
         public static SpreadsheetDocument FromFlatOpcString(string text)
         {
-            if (text == null)
+            if (text is null)
             {
                 throw new ArgumentNullException(nameof(text));
             }
@@ -129,12 +131,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of SpreadsheetDocument.</returns>
         public static SpreadsheetDocument FromFlatOpcString(string text, Stream stream, bool isEditable)
         {
-            if (text == null)
+            if (text is null)
             {
                 throw new ArgumentNullException(nameof(text));
             }
 
-            if (stream == null)
+            if (stream is null)
             {
                 throw new ArgumentNullException(nameof(stream));
             }
@@ -152,12 +154,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of SpreadsheetDocument.</returns>
         public static SpreadsheetDocument FromFlatOpcString(string text, string path, bool isEditable)
         {
-            if (text == null)
+            if (text is null)
             {
                 throw new ArgumentNullException(nameof(text));
             }
 
-            if (path == null)
+            if (path is null)
             {
                 throw new ArgumentNullException(nameof(path));
             }
@@ -174,12 +176,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of SpreadsheetDocument.</returns>
         public static SpreadsheetDocument FromFlatOpcString(string text, Package package)
         {
-            if (text == null)
+            if (text is null)
             {
                 throw new ArgumentNullException(nameof(text));
             }
 
-            if (package == null)
+            if (package is null)
             {
                 throw new ArgumentNullException(nameof(package));
             }

@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 }
 
                 X15.Connection x15connection = connectionsPart.Connections.Descendants<X15.Connection>().FirstOrDefault();
-                if (x15connection == null)
+                if (x15connection is null)
                 {
                     throw new Exception("Unable to obtain the X15.Connection.");
                 }
@@ -82,18 +82,18 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
             {
                 ConnectionsPart connectionsPart = package.WorkbookPart.ConnectionsPart;
                 X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().Where(e => e.Descendants<X15.OleDbPrpoperties>().Any()).First();
-                log.Verify(connection != null, "Unable to obtain the X15.Connection");
+                log.Verify(connection is not null, "Unable to obtain the X15.Connection");
 
                 X15.OleDbPrpoperties oleDbPrpoperties = connection.OleDbPrpoperties;
-                log.Verify(oleDbPrpoperties != null, "Unable to obtain the X15.OleDbPrpoperties");
+                log.Verify(oleDbPrpoperties is not null, "Unable to obtain the X15.OleDbPrpoperties");
 
                 X15.DbTables dbTables = oleDbPrpoperties.DbTables;
 
                 string connectionString = oleDbPrpoperties.Connection;
-                log.Verify(connectionString != null, "Unable to obtain the X15.OleDbPrpoperties on Connection");
+                log.Verify(connectionString is not null, "Unable to obtain the X15.OleDbPrpoperties on Connection");
 
                 X15.DbCommand dbCommand = oleDbPrpoperties.DbCommand;
-                log.Verify(dbCommand != null, "Unable to obtain the X15.DbCommand");
+                log.Verify(dbCommand is not null, "Unable to obtain the X15.DbCommand");
             }
         }
 
@@ -205,16 +205,16 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
 
                 foreach (X15.Connection x15connection in connectionsPart.Connections.Descendants<X15.Connection>())
                 {
-                    if (x15connection.OleDbPrpoperties != null)
+                    if (x15connection.OleDbPrpoperties is not null)
                     {
                         connection = x15connection;
                     }
                 }
 
-                log.Verify(connection.OleDbPrpoperties != null, "Missing X15.OleDbPrpoperties element.");
+                log.Verify(connection.OleDbPrpoperties is not null, "Missing X15.OleDbPrpoperties element.");
                 log.Verify(connection.OleDbPrpoperties.Connection == ConnectionString, "OleDbPrpoperties Connection value is not change.");
 
-                log.Verify(connection.OleDbPrpoperties != null, "Missing X15.DbCommand element.");
+                log.Verify(connection.OleDbPrpoperties is not null, "Missing X15.DbCommand element.");
                 log.Verify(connection.OleDbPrpoperties.DbCommand.Text == DBCommandText, "OleDbPrpoperties Connection value is not change.");
             }
         }

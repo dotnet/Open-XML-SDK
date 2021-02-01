@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using DocumentFormat.OpenXml.Packaging;
 using System.Diagnostics;
 
@@ -69,11 +71,11 @@ namespace DocumentFormat.OpenXml.Validation
             {
                 if (_xmlPath is null)
                 {
-                    if (_element != null)
+                    if (_element is not null)
                     {
                         _xmlPath = XmlPath.GetXPath(_element);
                     }
-                    else if (Part != null)
+                    else if (Part is not null)
                     {
                         _xmlPath = XmlPath.GetXPath(Part);
                     }

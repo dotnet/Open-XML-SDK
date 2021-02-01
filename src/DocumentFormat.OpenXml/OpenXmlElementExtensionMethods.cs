@@ -1,14 +1,14 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Reflection;
-using System.Xml;
 
 namespace DocumentFormat.OpenXml
 {
@@ -24,12 +24,12 @@ namespace DocumentFormat.OpenXml
         /// <returns>The position index in same type element in parent.</returns>
         internal static int GetXPathIndex(this OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            if (element.Parent == null)
+            if (element.Parent is null)
             {
                 return 1;
             }
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The part in which the element is in. Returns null if not in a part.</returns>
         internal static OpenXmlPart GetPart(this OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml
         {
             var part = element.GetPart();
 
-            if (part != null)
+            if (part is not null)
             {
                 return part.Uri;
             }
@@ -159,9 +159,9 @@ namespace DocumentFormat.OpenXml
         internal static OpenXmlElement TryCreateValidChild(this OpenXmlElement parent, FileFormatVersions fileFormat, string namespaceUri, string localName)
         {
             Debug.Assert(parent is OpenXmlCompositeElement);
-            Debug.Assert(localName != null);
+            Debug.Assert(localName is not null);
 
-            var newElement = parent.ElementFactory(string.Empty, localName, namespaceUri);
+            var newElement = parent.CreateElement(OpenXmlQualifiedName.Create(namespaceUri, string.Empty, localName));
             if (newElement is OpenXmlUnknownElement || !newElement.IsInVersion(fileFormat))
             {
                 return null;

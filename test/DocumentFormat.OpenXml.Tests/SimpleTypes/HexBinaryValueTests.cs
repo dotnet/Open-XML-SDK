@@ -43,5 +43,45 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 
             Assert.Equal(expected, type.IsValid);
         }
+
+        [Fact]
+        public void GetBytes()
+        {
+            var type = new HexBinaryValue();
+
+            Assert.False(type.TryGetBytes(out _));
+
+            type.InnerText = "00";
+            Assert.True(type.TryGetBytes(out var result1));
+            Assert.Collection(result1, b => Assert.Equal(0, b));
+
+            type.InnerText = "01";
+            Assert.True(type.TryGetBytes(out var result2));
+            Assert.Collection(result2, b => Assert.Equal(1, b));
+
+            type.InnerText = "FF";
+            Assert.True(type.TryGetBytes(out var result3));
+            Assert.Collection(result3, b => Assert.Equal(0xFF, b));
+
+            type.InnerText = "FFF";
+            Assert.False(type.TryGetBytes(out _));
+
+            type.InnerText = "FF01";
+            Assert.True(type.TryGetBytes(out var result4));
+            Assert.Collection(
+                result4,
+                b => Assert.Equal(0xFF, b),
+                b => Assert.Equal(0x01, b));
+        }
+
+        [Fact]
+        public void CreateFromBytes()
+        {
+            Assert.Equal(string.Empty, HexBinaryValue.Create().Value);
+            Assert.Equal("00", HexBinaryValue.Create(0).Value);
+            Assert.Equal("01", HexBinaryValue.Create(1).Value);
+            Assert.Equal("FF", HexBinaryValue.Create(0xFF).Value);
+            Assert.Equal("FF01", HexBinaryValue.Create(0xFF, 0x01).Value);
+        }
     }
 }

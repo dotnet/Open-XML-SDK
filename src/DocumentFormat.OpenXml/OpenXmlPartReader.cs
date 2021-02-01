@@ -25,34 +25,26 @@ namespace DocumentFormat.OpenXml
         private readonly Stack<OpenXmlElement> _elementStack = new Stack<OpenXmlElement>();
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private readonly string _encoding;
+        private readonly string? _encoding;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private readonly bool? _standalone;
 
         private ElementState _elementState;
 
-        private OpenXmlPartReader()
-        {
-        }
-
-        private OpenXmlPartReader(bool readMiscNodes)
-            : base(readMiscNodes)
-        {
-        }
-
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartReader class using the supplied OpenXmlPart class.
         /// </summary>
         /// <param name="openXmlPart">The OpenXmlPart to read.</param>
-        public OpenXmlPartReader(OpenXmlPart openXmlPart) : this()
+        public OpenXmlPartReader(OpenXmlPart openXmlPart)
+            : base()
         {
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, out _standalone, out _encoding);
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: true, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -61,28 +53,46 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlPart">The OpenXmlPart to read.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         public OpenXmlPartReader(OpenXmlPart openXmlPart, bool readMiscNodes)
-            : this(readMiscNodes)
+            : base(readMiscNodes)
         {
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, out _standalone, out _encoding);
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace: true, out _standalone, out _encoding);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartReader class using the supplied OpenXmlPart and Boolean values.
+        /// </summary>
+        /// <param name="openXmlPart">The OpenXmlPart to read.</param>
+        /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes.</param>
+        /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space.</param>
+        public OpenXmlPartReader(OpenXmlPart openXmlPart, bool readMiscNodes, bool ignoreWhitespace)
+            : base(readMiscNodes)
+        {
+            if (openXmlPart is null)
+            {
+                throw new ArgumentNullException(nameof(openXmlPart));
+            }
+
+            _xmlReader = CreateReader(openXmlPart.GetStream(FileMode.Open), true, openXmlPart.MaxCharactersInPart, ignoreWhitespace, out _standalone, out _encoding);
         }
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartReader class using the supplied stream.
         /// </summary>
         /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
-        public OpenXmlPartReader(Stream partStream) : this()
+        public OpenXmlPartReader(Stream partStream)
+            : base()
         {
-            if (partStream == null)
+            if (partStream is null)
             {
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            _xmlReader = CreateReader(partStream, false, 0, out _standalone, out _encoding);
+            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace: true, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -91,14 +101,31 @@ namespace DocumentFormat.OpenXml
         /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         public OpenXmlPartReader(Stream partStream, bool readMiscNodes)
-            : this(readMiscNodes)
+            : base(readMiscNodes)
         {
-            if (partStream == null)
+            if (partStream is null)
             {
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            _xmlReader = CreateReader(partStream, false, 0, out _standalone, out _encoding);
+            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace: true, out _standalone, out _encoding);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartReader class using the supplied stream and Boolean values.
+        /// </summary>
+        /// <param name="partStream">The part stream of the OpenXmlPart to read.</param>
+        /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes.</param>
+        /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space.</param>
+        public OpenXmlPartReader(Stream partStream, bool readMiscNodes, bool ignoreWhitespace)
+            : base(readMiscNodes)
+        {
+            if (partStream is null)
+            {
+                throw new ArgumentNullException(nameof(partStream));
+            }
+
+            _xmlReader = CreateReader(partStream, false, 0, ignoreWhitespace, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -107,7 +134,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>
         /// Returns null if encoding is not specified in the XML file.
         /// </remarks>
-        public override string Encoding
+        public override string? Encoding
         {
             get
             {
@@ -400,8 +427,6 @@ namespace DocumentFormat.OpenXml
         /// <returns>true if the next element was read successfully; false if there are no more elements to read. </returns>
         private bool MoveToNextElement()
         {
-            Debug.Assert(_xmlReader != null);
-
             switch (_elementState)
             {
                 case ElementState.Null:
@@ -417,6 +442,12 @@ namespace DocumentFormat.OpenXml
                 case ElementState.MiscNode:
                     // cursor is end element, pop stack
                     _elementStack.Pop();
+                    if (_elementStack.Count == 0)
+                    {
+                        _elementState = ElementState.EOF;
+                        return false;
+                    }
+
                     break;
 
                 case ElementState.LeafStart:
@@ -466,8 +497,6 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Only can be called on element start. Current will move to the end tag if no child element.</remarks>
         private bool MoveToFirstChild()
         {
-            Debug.Assert(_xmlReader != null);
-
             switch (_elementState)
             {
                 case ElementState.EOF:
@@ -517,7 +546,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Current will move to the end tag of the parent if no more sibling element.</remarks>
         private bool MoveToNextSibling()
         {
-            Debug.Assert(_xmlReader != null);
+            Debug.Assert(_xmlReader is not null);
 
             if (_elementState == ElementState.EOF)
             {
@@ -545,8 +574,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         private void InnerSkip()
         {
-            Debug.Assert(_xmlReader != null);
-
             switch (_elementState)
             {
                 case ElementState.Null:
@@ -557,14 +584,8 @@ namespace DocumentFormat.OpenXml
                     return;
 
                 case ElementState.Start:
-                    _xmlReader.Skip();
-                    _elementStack.Pop();
-                    GetElementInformation();
-                    return;
-
                 case ElementState.End:
                 case ElementState.MiscNode:
-                    // cursor is end element, pop stack
                     _xmlReader.Skip();
                     _elementStack.Pop();
                     GetElementInformation();
@@ -593,7 +614,7 @@ namespace DocumentFormat.OpenXml
         #endregion
 
         /// <inheritdoc/>
-        public override OpenXmlElement LoadCurrentElement()
+        public override OpenXmlElement? LoadCurrentElement()
         {
             ThrowIfObjectDisposed();
             OpenXmlElement element;
@@ -675,13 +696,13 @@ namespace DocumentFormat.OpenXml
 #endif
         }
 
-        private static XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, out bool? _standalone, out string _encoding)
+        private static XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, bool ignoreWhitespace, out bool? _standalone, out string? _encoding)
         {
             var settings = new XmlReaderSettings
             {
                 MaxCharactersInDocument = maxCharactersInPart,
                 CloseInput = closeInput,
-                IgnoreWhitespace = true,
+                IgnoreWhitespace = ignoreWhitespace,
 #if FEATURE_XML_PROHIBIT_DTD
                 ProhibitDtd = true,
 #else
@@ -741,9 +762,9 @@ namespace DocumentFormat.OpenXml
             }
 
             // create the root element object
-            var rootElement = CreateElement(_xmlReader.NamespaceURI, _xmlReader.LocalName);
+            var rootElement = CreateElement(new OpenXmlQualifiedName(_xmlReader.NamespaceURI, _xmlReader.LocalName));
 
-            if (rootElement == null)
+            if (rootElement is null)
             {
                 throw new InvalidDataException(ExceptionMessages.PartUnknown);
             }
@@ -765,15 +786,9 @@ namespace DocumentFormat.OpenXml
             return true;
         }
 
-        private static OpenXmlElement CreateElement(string namespaceUri, string name)
+        private static OpenXmlElement CreateElement(in OpenXmlQualifiedName qname)
         {
-            if (string.IsNullOrEmpty(name))
-            {
-                throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(name));
-            }
-
-            if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId)
-                && ElementLookup.Parts.Create(nsId, name) is OpenXmlElement element)
+            if (ElementLookup.Parts.Create(qname) is OpenXmlElement element)
             {
                 return element;
             }
@@ -784,8 +799,6 @@ namespace DocumentFormat.OpenXml
 
         private void LoadAttributes()
         {
-            Debug.Assert(_xmlReader != null);
-
             _attributeList.Clear();
             _nsDecls.Clear();
 
@@ -859,7 +872,7 @@ namespace DocumentFormat.OpenXml
                 default:
                     // non element ( PI, Comment, Notation, XmlDeclaration )
                     element = CreateChildElement();
-                    (element as OpenXmlMiscNode).LoadOuterXml(_xmlReader);
+                    ((OpenXmlMiscNode)element).LoadOuterXml(_xmlReader);
                     _elementStack.Push(element);
                     _elementState = ElementState.MiscNode;
                     break;
@@ -869,9 +882,8 @@ namespace DocumentFormat.OpenXml
         private OpenXmlElement CreateChildElement()
         {
             Debug.Assert(_elementStack.Count > 0);
-            Debug.Assert(_xmlReader != null);
 
-            OpenXmlElement element = _elementStack.Peek();
+            var element = _elementStack.Peek();
 
             // AlternateContent / Choice / Fallback needs special treatment
             // The ElementFactory( ) of the Choice / Fallback depends on the parent of AlternateContentChoice

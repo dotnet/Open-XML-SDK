@@ -20,12 +20,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _canEqual = canEqual;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
             var attribute = element.ParsedState.Attributes[_attribute];
 
-            if (!attribute.HasValue)
+            if (attribute.Value is null)
             {
                 return null;
             }
@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var other = element.ParsedState.Attributes[_otherAttribute];
 
-            if (!other.HasValue)
+            if (other.Value is null)
             {
                 return null;
             }

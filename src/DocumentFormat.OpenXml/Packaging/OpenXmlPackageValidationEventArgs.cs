@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using System;
 using System.ComponentModel;
 
@@ -39,7 +41,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (_message == null && MessageId != null)
+                if (_message is null && MessageId is not null)
                 {
                     return ExceptionMessages.ResourceManager.GetString(MessageId);
                 }

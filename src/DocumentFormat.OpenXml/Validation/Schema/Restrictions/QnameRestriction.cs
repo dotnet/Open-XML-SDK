@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// </remarks>
     internal class QnameRestriction
     {
-        public static bool IsValidQName(string qname)
+        public static bool IsValidQName(string? qname)
         {
             //Qualified Name
             //[6]  QName ::=  (Prefix ':')? LocalPart
@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 return false;
             }
 
-            int colonIndex = qname.IndexOf(":", StringComparison.Ordinal);
+            int colonIndex = qname!.IndexOf(":", StringComparison.Ordinal);
 
             if (colonIndex == 0 || colonIndex == qname.Length - 1)
             {

@@ -33,12 +33,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override SemanticValidationLevel StateScope => SemanticValidationLevel.Part;
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
             var attribute = element.ParsedState.Attributes[_refAttribute];
 
-            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
+            if (attribute.Value is null || attribute.Value.InnerText.IsNullOrEmpty())
             {
                 return null;
             }
@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     _elementName,
                     element.LocalName,
                     GetAttributeQualifiedName(element, _refAttribute),
-                    result.Part == null ? _partPath : result.Part.PackagePart.Uri.ToString(),
+                    result.Part is null ? _partPath : result.Part.PackagePart.Uri.ToString(),
                     attribute.Value.InnerText),
             };
         }
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                         var attribute = element.ParsedState.Attributes[_attribute];
 
                         //Attributes whose value is empty string or null don't need to be cached.
-                        if (attribute.HasValue && !string.IsNullOrEmpty(attribute.Value.InnerText))
+                        if (attribute.Value is not null && !attribute.Value.InnerText.IsNullOrEmpty())
                         {
                             referencedAttributes.Add(attribute.Value.InnerText);
                         }

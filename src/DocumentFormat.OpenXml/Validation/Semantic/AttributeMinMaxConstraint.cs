@@ -19,18 +19,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public AttributeMinMaxConstraint(string minAttributeNamespace, string minAttributeLocalName, string maxAttributeNamespace, string maxAttributeLocalName)
             : base(SemanticValidationLevel.Element) // TODO: add error message for this class
         {
-            Debug.Assert(minAttributeNamespace != null);
-            Debug.Assert(maxAttributeNamespace != null);
-            Debug.Assert(!string.IsNullOrEmpty(minAttributeLocalName));
-            Debug.Assert(!string.IsNullOrEmpty(maxAttributeLocalName));
-
             _minAttributeNamesapce = minAttributeNamespace;
             _minAttributeLocalName = minAttributeLocalName;
             _maxAttributeNamesapce = maxAttributeNamespace;
             _maxAttributeLocalName = maxAttributeLocalName;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
             var minAttributeValue = element.GetAttributeValueEx(_minAttributeLocalName, _minAttributeNamesapce);

@@ -83,11 +83,11 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrame>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties), 1, 1),
-                new CompositeParticle(ParticleType.Choice, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TextShape), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape), 1, 1),

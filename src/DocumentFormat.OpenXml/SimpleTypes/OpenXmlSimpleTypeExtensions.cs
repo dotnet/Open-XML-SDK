@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using System;
 using System.Collections.Generic;
 using System.Xml;
@@ -35,7 +37,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public static XmlQualifiedName GetSimpleTypeQualifiedName(this Type type)
         {
-            if (type != null && _simpleTypeMapping.TryGetValue(type, out var value))
+            if (type is not null && _simpleTypeMapping.TryGetValue(type, out var value))
             {
                 return value;
             }
@@ -47,7 +49,7 @@ namespace DocumentFormat.OpenXml.Framework
         {
             foreach (var validator in validators)
             {
-                if (validator is INameProvider nameProvider && nameProvider?.QName is XmlQualifiedName qname)
+                if (validator is INameProvider nameProvider && nameProvider.QName is XmlQualifiedName qname)
                 {
                     return qname;
                 }

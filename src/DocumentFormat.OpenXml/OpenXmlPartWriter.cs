@@ -36,12 +36,12 @@ namespace DocumentFormat.OpenXml
         /// <param name="encoding">The encoding for the XML stream.</param>
         public OpenXmlPartWriter(OpenXmlPart openXmlPart, Encoding encoding)
         {
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            if (encoding == null)
+            if (encoding is null)
             {
                 throw new ArgumentNullException(nameof(encoding));
             }
@@ -72,12 +72,12 @@ namespace DocumentFormat.OpenXml
         /// <param name="encoding">The encoding for the XML stream.</param>
         public OpenXmlPartWriter(Stream partStream, Encoding encoding)
         {
-            if (partStream == null)
+            if (partStream is null)
             {
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            if (encoding == null)
+            if (encoding is null)
             {
                 throw new ArgumentNullException(nameof(encoding));
             }
@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
         public override void WriteStartElement(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            if (elementReader == null)
+            if (elementReader is null)
             {
                 throw new ArgumentNullException(nameof(elementReader));
             }
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml
 
             _xmlWriter.WriteStartElement(elementReader.Prefix, elementReader.LocalName, elementReader.NamespaceUri);
 
-            if (namespaceDeclarations != null)
+            if (namespaceDeclarations is not null)
             {
                 foreach (var item in namespaceDeclarations)
                 {
@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            if (attributes != null)
+            if (attributes is not null)
             {
                 // write attributes
                 foreach (var attribute in attributes)
@@ -204,7 +204,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         public override void WriteStartElement(OpenXmlElement elementObject)
         {
-            if (elementObject == null)
+            if (elementObject is null)
             {
                 throw new ArgumentNullException(nameof(elementObject));
             }
@@ -260,7 +260,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
         public override void WriteStartElement(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            if (elementObject == null)
+            if (elementObject is null)
             {
                 throw new ArgumentNullException(nameof(elementObject));
             }
@@ -274,7 +274,7 @@ namespace DocumentFormat.OpenXml
 
             _xmlWriter.WriteStartElement(elementObject.Prefix, elementObject.LocalName, elementObject.NamespaceUri);
 
-            if (namespaceDeclarations != null)
+            if (namespaceDeclarations is not null)
             {
                 foreach (var item in namespaceDeclarations)
                 {
@@ -282,7 +282,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            if (attributes != null)
+            if (attributes is not null)
             {
                 // write attributes
                 foreach (var attribute in attributes)
@@ -339,7 +339,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         public override void WriteElement(OpenXmlElement elementObject)
         {
-            if (elementObject == null)
+            if (elementObject is null)
             {
                 throw new ArgumentNullException(nameof(elementObject));
             }
@@ -356,7 +356,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override void Close()
         {
-            if (_xmlWriter != null)
+            if (_xmlWriter is not null)
             {
 #if FEATURE_CLOSE
                 _xmlWriter.Close();

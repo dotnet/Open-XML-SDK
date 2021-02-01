@@ -2683,11 +2683,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Item), 0, 1000, version: FileFormatVersions.Office2010),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 0, 16, version: FileFormatVersions.Office2010)
@@ -3915,11 +3915,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton), 1, 1, version: FileFormatVersions.Office2010),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton), 1, 1, version: FileFormatVersions.Office2010)
@@ -4588,15 +4588,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, 1000)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1, 1, version: FileFormatVersions.Office2010),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
@@ -4606,9 +4606,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator), 1, 1, version: FileFormatVersions.Office2010)
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1, 1, version: FileFormatVersions.Office2010),
@@ -5628,11 +5628,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton), 1, 1, version: FileFormatVersions.Office2010),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton), 1, 1, version: FileFormatVersions.Office2010)
@@ -6301,15 +6301,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, 1000)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1, 1, version: FileFormatVersions.Office2010),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
@@ -6319,9 +6319,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator), 1, 1, version: FileFormatVersions.Office2010)
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonWithTitle), 1, 1, version: FileFormatVersions.Office2010),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle), 1, 1, version: FileFormatVersions.Office2010),
@@ -10323,9 +10323,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Item), 0, 1000, version: FileFormatVersions.Office2010)
                 }
@@ -11154,9 +11154,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Item), 0, 1000, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 0, 16, version: FileFormatVersions.Office2010)
@@ -12217,13 +12217,13 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Sequence, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Item), 0, 1000, version: FileFormatVersions.Office2010),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 0, 16, version: FileFormatVersions.Office2010)
@@ -12929,17 +12929,17 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 0, 1000)
+                        new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                         {
-                            new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                            new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                             {
-                                new CompositeParticle(ParticleType.Choice, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1, 1, version: FileFormatVersions.Office2010),
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
@@ -12949,9 +12949,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator), 1, 1, version: FileFormatVersions.Office2010)
                                 }
                             },
-                            new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                            new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                             {
-                                new CompositeParticle(ParticleType.Choice, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1, 1, version: FileFormatVersions.Office2010),
@@ -14046,13 +14046,13 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 0, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 0, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton), 1, 1, version: FileFormatVersions.Office2010),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton), 1, 1, version: FileFormatVersions.Office2010)
@@ -14341,9 +14341,9 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
 aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "boxStyle", a => a.BoxStyle);
-            builder.Particle = new CompositeParticle(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl), 1, 1, version: FileFormatVersions.Office2010),
@@ -14612,9 +14612,9 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
 {
 aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1000)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
@@ -15703,11 +15703,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L)
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, 1000)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup), 1, 1, version: FileFormatVersions.Office2010)
                     }
@@ -17835,7 +17835,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem), 0, 1000, version: FileFormatVersions.Office2010)
             };
@@ -18247,7 +18247,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.RadioButtonBackstageItem), 0, 1000, version: FileFormatVersions.Office2010)
             };
@@ -18679,7 +18679,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem), 0, 1000, version: FileFormatVersions.Office2010)
             };
@@ -19611,11 +19611,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1, version: FileFormatVersions.Office2010),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1, version: FileFormatVersions.Office2010),
@@ -19822,11 +19822,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 .AddAttribute(0, "align", a => a.Align)
 .AddAttribute(0, "expand", a => a.Expand)
 .AddAttribute(0, "layoutChildren", a => a.LayoutChildren);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1, version: FileFormatVersions.Office2010),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1, version: FileFormatVersions.Office2010),
@@ -20520,9 +20520,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem), 0, 1, version: FileFormatVersions.Office2010)
                 },
@@ -20920,7 +20920,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "allowedTaskSizes", a => a.AllowedTaskSizes);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupCategory), 0, 100, version: FileFormatVersions.Office2010)
             };
@@ -21057,13 +21057,13 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "itemSize", a => a.ItemSize);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1000)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                    new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1, 1, version: FileFormatVersions.Office2010),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
@@ -21073,9 +21073,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator), 1, 1, version: FileFormatVersions.Office2010)
                         }
                     },
-                    new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                    new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1, 1, version: FileFormatVersions.Office2010),
@@ -21190,7 +21190,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Commands), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon), 0, 1, version: FileFormatVersions.Office2010),
@@ -22874,7 +22874,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
             builder.SetSchema(57, "dialogBoxLauncher");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ButtonRegular>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010)
             };
@@ -23432,15 +23432,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 })
 .AddAttribute(0, "autoScale", a => a.AutoScale)
 .AddAttribute(0, "centerVertically", a => a.CenterVertically);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, 1000)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone), 1, 1, version: FileFormatVersions.Office2010),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl), 1, 1, version: FileFormatVersions.Office2010),
@@ -24138,9 +24138,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "sharedControls");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1000)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
@@ -24207,9 +24207,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "documentControls");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1000)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
@@ -24608,9 +24608,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L)
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 100)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 100)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Group), 1, 1, version: FileFormatVersions.Office2010)
                 }
@@ -24733,7 +24733,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Tab), 0, 50, version: FileFormatVersions.Office2010)
             };
@@ -24904,7 +24904,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<SharedControlsQatItems>();
             builder.AddChild<DocumentControlsQatItems>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems), 0, 1, version: FileFormatVersions.Office2010)
@@ -24994,7 +24994,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
             builder.SetSchema(57, "tabs");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Tab>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Tab), 1, 100, version: FileFormatVersions.Office2010)
             };
@@ -25057,7 +25057,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
             builder.SetSchema(57, "contextualTabs");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<TabSet>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TabSet), 1, 100, version: FileFormatVersions.Office2010)
             };
@@ -25157,13 +25157,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true), MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1000)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                    new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1, 1, version: FileFormatVersions.Office2010),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
@@ -26149,11 +26149,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L)
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 0, 1000)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup), 1, 1, version: FileFormatVersions.Office2010)
                     }
@@ -26342,13 +26342,13 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "itemSize", a => a.ItemSize);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1000)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                    new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuButton), 1, 1, version: FileFormatVersions.Office2010),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuCheckBox), 1, 1, version: FileFormatVersions.Office2010),
@@ -26419,7 +26419,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackstageRegularButton>();
             builder.AddChild<BackstagePrimaryMenu>();
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu), 0, 1, version: FileFormatVersions.Office2010)
@@ -26518,11 +26518,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "topItems");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 1000)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1, version: FileFormatVersions.Office2010),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1, version: FileFormatVersions.Office2010),
@@ -26606,11 +26606,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "bottomItems");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 1000)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1, version: FileFormatVersions.Office2010),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1, version: FileFormatVersions.Office2010),
@@ -26994,7 +26994,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupTask), 0, 1000, version: FileFormatVersions.Office2010)
             };
@@ -27775,7 +27775,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupTask), 0, 1000, version: FileFormatVersions.Office2010)
             };
@@ -28253,7 +28253,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MinLength = (1L)
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup), 0, 1000, version: FileFormatVersions.Office2010)
             };
@@ -28568,7 +28568,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 })
 .AddAttribute(0, "allowedTaskSizes", a => a.AllowedTaskSizes);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupCategory), 0, 100, version: FileFormatVersions.Office2010)
             };
@@ -28635,17 +28635,17 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<TaskFormGroup>();
             builder.AddChild<BackstageGroup>();
             builder.AddChild<TaskGroup>();
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroup), 1, 1, version: FileFormatVersions.Office2010)
                 },
-                new CompositeParticle(ParticleType.Choice, 0, 1000)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                    new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup), 1, 1, version: FileFormatVersions.Office2010),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup), 1, 1, version: FileFormatVersions.Office2010)
@@ -28714,11 +28714,11 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<BackstageGroup>();
             builder.AddChild<TaskGroup>();
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 1000)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup), 1, 1, version: FileFormatVersions.Office2010),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup), 1, 1, version: FileFormatVersions.Office2010)
@@ -29241,7 +29241,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (10000L), IsPositive = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups), 0, 1, version: FileFormatVersions.Office2010)
@@ -29771,7 +29771,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.SetSchema(57, "commands");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<Command>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Command), 1, 5000, version: FileFormatVersions.Office2010)
             };
@@ -29856,7 +29856,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.AddChild<ContextualTabs>();
             builder.AddElement<Ribbon>()
 .AddAttribute(0, "startFromScratch", a => a.StartFromScratch);
-            builder.Particle = new CompositeParticle(ParticleType.All, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Tabs), 0, 1, version: FileFormatVersions.Office2010),
@@ -30003,9 +30003,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (1024L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 255)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 255)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageFastCommandButton), 1, 1, version: FileFormatVersions.Office2010)
@@ -30070,7 +30070,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.SetSchema(57, "contextMenus");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<ContextMenu>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenu), 1, 1000, version: FileFormatVersions.Office2010)
             };

@@ -20,19 +20,19 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _values = values;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
             var element = context.Stack.Current.Element;
             var attribute = element.ParsedState.Attributes[_absentAttribute];
 
-            if (!attribute.HasValue)
+            if (attribute.Value is null)
             {
                 return null;
             }
 
             var conditionAttribute = element.ParsedState.Attributes[_conditionAttribute];
 
-            if (!conditionAttribute.HasValue)
+            if (conditionAttribute.Value is null)
             {
                 return null;
             }

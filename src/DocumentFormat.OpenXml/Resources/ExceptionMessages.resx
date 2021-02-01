@@ -402,4 +402,7 @@
   <data name="InvalidUriProvided" xml:space="preserve">
     <value>Provided URI was invalid after rewriting malformed relationship URI</value>
   </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>An unknown error occured. Original message: '{0}'</value>
+  </data>
 </root>

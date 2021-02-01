@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml
     internal static class EnumHelper
     {
 #if NET35
-        public static bool TryParse<TEnum>(string value, out TEnum result)
+        public static bool TryParse<TEnum>(string? value, out TEnum result)
             where TEnum : struct
         {
             try
@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 #else
-        public static bool TryParse<TEnum>(string value, out TEnum result)
+        public static bool TryParse<TEnum>(string? value, out TEnum result)
             where TEnum : struct
             => Enum.TryParse(value, out result);
 #endif

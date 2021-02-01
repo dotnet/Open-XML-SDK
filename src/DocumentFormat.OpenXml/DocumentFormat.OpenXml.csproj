@@ -3,6 +3,7 @@
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), DocumentFormat.OpenXml.Package.props))\DocumentFormat.OpenXml.Package.props" />
 
   <PropertyGroup>
+    <Nullable>enable</Nullable>
     <IsShipped>true</IsShipped>
     <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
     <NoWarn>$(NoWarn);3003</NoWarn>
@@ -47,12 +48,16 @@
       </ItemGroup>
 
       <ItemGroup>
+        <Compile Include="System\HashCode.cs" />
+        <Compile Include="System\Lazy{T}.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyDictionary.cs" />
+        <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
         <Compile Include="System\FormattableString.cs" />
         <Compile Include="System\IO\StreamCopyExtensions.cs" />
-        <Compile Include="System\Lazy{T}.cs" />
         <Compile Include="System\Reflection\TypeExtensions.cs" />
         <Compile Include="System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
         <Compile Include="System\Runtime\CompilerServices\FormattableStringFactory.cs" />
@@ -73,8 +78,12 @@
       </ItemGroup>
 
       <ItemGroup>
+        <Compile Include="System\HashCode.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyDictionary.cs" />
+        <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Reflection\TypeExtensions.cs" />
         <Compile Include="System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
         <Compile Include="System\Runtime\CompilerServices\FormattableStringFactory.cs" />
@@ -92,6 +101,13 @@
         <Reference Include="System.Xml" />
         <Reference Include="System.Xml.Linq" />
       </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="System\HashCode.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
+        <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+      </ItemGroup>
     </When>
 
     <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
@@ -105,14 +121,37 @@
       </ItemGroup>
 
       <ItemGroup>
+        <Compile Include="System\HashCode.cs" />
         <Compile Include="System\ICloneable.cs" />
         <Compile Include="System\NonSerializedAttribute.cs" />
         <Compile Include="System\SerializableAttribute.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Reflection\SubclassExtensions.cs" />
+        <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
       </ItemGroup>
+
     </When>
 
     <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+      <ItemGroup>
+        <PackageReference Include="System.IO.Packaging" Version="$(SystemIOPackagingVersion)" />
+      </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="System\HashCode.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
+        <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+      </ItemGroup>
+
+      <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->
+      <ItemGroup>
+        <EmbeddedResource Include="Properties\DocumentFormat.OpenXml.rd.xml" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'net5.0' ">
       <ItemGroup>
         <PackageReference Include="System.IO.Packaging" Version="$(SystemIOPackagingVersion)" />
       </ItemGroup>

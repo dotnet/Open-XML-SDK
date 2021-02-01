@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml
         public static TElement With<TElement>(this TElement element, object content)
             where TElement : OpenXmlElement
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml
 
                 case OpenXmlElement child:
                 {
-                    if (child.Parent != null)
+                    if (child.Parent is not null)
                     {
                         child = child.CloneNode(true);
                     }

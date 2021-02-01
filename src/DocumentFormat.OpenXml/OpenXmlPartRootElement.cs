@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable disable
+
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
@@ -32,7 +34,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlPart">The OpenXmlPart class.</param>
         protected OpenXmlPartRootElement(OpenXmlPart openXmlPart)
         {
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
@@ -130,7 +132,7 @@ namespace DocumentFormat.OpenXml
                 if (xmlReader.NodeType == XmlNodeType.XmlDeclaration)
                 {
                     string standaloneAttribute = xmlReader.GetAttribute("standalone");
-                    if (standaloneAttribute != null)
+                    if (standaloneAttribute is not null)
                     {
                         _standaloneDeclaration = standaloneAttribute.Equals("yes", StringComparison.OrdinalIgnoreCase);
                     }
@@ -149,9 +151,8 @@ namespace DocumentFormat.OpenXml
                     return false;
                 }
 
-                if (!NamespaceIdMap.TryGetNamespaceId(xmlReader.NamespaceURI, out byte nsId) ||
-                    nsId != NamespaceId ||
-                    xmlReader.LocalName != LocalName)
+                var qname = new OpenXmlQualifiedName(xmlReader.NamespaceURI, xmlReader.LocalName);
+                if (!qname.Namespace.IsKnown || !QName.Equals(qname))
                 {
                     var elementQName = new XmlQualifiedName(xmlReader.LocalName, xmlReader.NamespaceURI).ToString();
                     var msg = SR.Format(ExceptionMessages.Fmt_PartRootIsInvalid, elementQName, XmlQualifiedName.ToString());
@@ -183,7 +184,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal void SaveToPart(OpenXmlPart openXmlPart)
         {
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
@@ -212,7 +213,7 @@ namespace DocumentFormat.OpenXml
 
             using (XmlWriter xmlWriter = XmlWriter.Create(stream, settings))
             {
-                if (_standaloneDeclaration != null)
+                if (_standaloneDeclaration is not null)
                 {
                     xmlWriter.WriteStartDocument(_standaloneDeclaration.Value);
                 }
@@ -247,7 +248,7 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidOperationException">Thrown when the tree is not associated with a part.</exception>
         public void Save()
         {
-            if (OpenXmlPart == null)
+            if (OpenXmlPart is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.CannotSaveDomTreeWithoutAssociatedPart);
             }
@@ -263,7 +264,7 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidOperationException">Thrown when the tree is not associated with a part.</exception>
         public void Reload()
         {
-            if (OpenXmlPart == null)
+            if (OpenXmlPart is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.CannotReloadDomTreeWithoutAssociatedPart);
             }
@@ -279,7 +280,7 @@ namespace DocumentFormat.OpenXml
         /// </param>
         public override void WriteTo(XmlWriter xmlWriter)
         {
-            if (xmlWriter == null)
+            if (xmlWriter is null)
             {
                 throw new ArgumentNullException(nameof(xmlWriter));
             }
@@ -290,7 +291,7 @@ namespace DocumentFormat.OpenXml
                 string prefix = LookupNamespaceLocal(NamespaceUri);
 
                 //if not defined in the current node, try the xmlWriter
-                if (Parent != null && string.IsNullOrEmpty(prefix))
+                if (Parent is not null && string.IsNullOrEmpty(prefix))
                 {
                     prefix = xmlWriter.LookupPrefix(NamespaceUri);
                 }
@@ -299,7 +300,7 @@ namespace DocumentFormat.OpenXml
                 //in this case, we use the predefined prefix
                 if (string.IsNullOrEmpty(prefix))
                 {
-                    prefix = NamespaceIdMap.GetNamespacePrefix(NamespaceId);
+                    prefix = QName.Namespace.Prefix;
                 }
 
                 xmlWriter.WriteStartElement(prefix, LocalName, NamespaceUri);
@@ -332,7 +333,7 @@ namespace DocumentFormat.OpenXml
 
                 foreach (OpenXmlElement element in Descendants())
                 {
-                    if (element.NamespaceDeclField != null)
+                    if (element.NamespaceDeclField is not null)
                     {
                         foreach (var item in element.NamespaceDeclField)
                         {
@@ -348,7 +349,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (!string.IsNullOrEmpty(namespacePair.Key))
                     {
-                        if (NamespaceDeclField != null &&
+                        if (NamespaceDeclField is not null &&
                             string.IsNullOrEmpty(LookupPrefixLocal(namespacePair.Value)) &&
                             string.IsNullOrEmpty(LookupNamespaceLocal(namespacePair.Key)))
                         {

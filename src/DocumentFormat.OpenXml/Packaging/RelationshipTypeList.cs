@@ -1,7 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
+#nullable disable
+
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -14,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (_list == null)
+                if (_list is null)
                 {
                     _list = new Dictionary<string, int>();
 

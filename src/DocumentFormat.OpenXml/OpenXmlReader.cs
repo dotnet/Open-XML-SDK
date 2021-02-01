@@ -51,6 +51,15 @@ namespace DocumentFormat.OpenXml
         public static OpenXmlReader Create(OpenXmlPart openXmlPart, bool readMiscNodes) => new OpenXmlPartReader(openXmlPart, readMiscNodes);
 
         /// <summary>
+        /// Creates an OpenXmlReader from the specified OpenXmlPart and Boolean values.
+        /// </summary>
+        /// <param name="openXmlPart">The OpenXmlPart to read.</param>
+        /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
+        /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space. The default value is true.</param>
+        /// <returns>The newly created OpenXmlReader.</returns>
+        public static OpenXmlReader Create(OpenXmlPart openXmlPart, bool readMiscNodes, bool ignoreWhitespace) => new OpenXmlPartReader(openXmlPart, readMiscNodes, ignoreWhitespace);
+
+        /// <summary>
         /// Creates an OpenXmlReader from the specified part stream.
         /// </summary>
         /// <param name="partStream">The part stream.</param>
@@ -64,6 +73,15 @@ namespace DocumentFormat.OpenXml
         /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
         /// <returns></returns>
         public static OpenXmlReader Create(Stream partStream, bool readMiscNodes) => new OpenXmlPartReader(partStream, readMiscNodes);
+
+        /// <summary>
+        /// Creates an OpenXmlReader from the specified part stream and Boolean values.
+        /// </summary>
+        /// <param name="partStream">The part stream.</param>
+        /// <param name="readMiscNodes">Specify false to indicate to the reader to skip all miscellaneous nodes. The default value is false.</param>
+        /// <param name="ignoreWhitespace">Specify true to indicate to the reader to ignore insignificant white space. The default value is true.</param>
+        /// <returns></returns>
+        public static OpenXmlReader Create(Stream partStream, bool readMiscNodes, bool ignoreWhitespace) => new OpenXmlPartReader(partStream, readMiscNodes, ignoreWhitespace);
 
         /// <summary>
         /// Creates an OpenXmlReader from the OpenXmlElement (travel the DOM tree).
@@ -98,7 +116,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>
         /// Returns null if the encoding is not specified in the XML file.
         /// </remarks>
-        public virtual string Encoding
+        public virtual string? Encoding
         {
             get
             {
@@ -226,7 +244,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The OpenXmlElement that was loaded.</returns>
         /// <exception cref="InvalidOperationException">Thrown when the current is the end element.</exception>
         /// <remarks>The new current element is the end of the element after LoadCurrentElement().</remarks>
-        public abstract OpenXmlElement LoadCurrentElement();
+        public abstract OpenXmlElement? LoadCurrentElement();
 
         /// <summary>
         /// Gets the text of the element if the element is an OpenXmlLeafTextElement. Returns String.Empty for other elements.

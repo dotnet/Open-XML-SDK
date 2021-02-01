@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public PackageRelationshipPropertyCollection(Package package)
         {
             BasePackage = package;
-            if (BasePackage == null)
+            if (BasePackage is null)
             {
                 throw new ArgumentNullException(nameof(BasePackage));
             }
