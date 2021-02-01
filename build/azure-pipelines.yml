@@ -79,10 +79,10 @@ stages:
   
   - stage: Feed
     jobs:
-      - job: Feed
-        displayName: Deploy to CI Feed
-        pool:
-          name: Hosted Windows 2019 with VS2019
+    - job: Feed
+      displayName: Deploy to CI Feed
+      pool:
+        name: Hosted Windows 2019 with VS2019
       steps:
         - template: sleet.yml
     dependsOn: 
