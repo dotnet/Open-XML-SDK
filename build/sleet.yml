@@ -1,0 +1,15 @@
+steps:
+  - checkout: none
+
+  - download: current
+    artifact: signed
+
+  - powershell: |
+      dotnet tool install -g sleet
+      gci -r
+      sleet push $(Pipeline.Workspace)/signed/ --skip-existing
+    displayName: Push nuget package to Azure storage
+    env:
+        SLEET_FEED_TYPE: azure
+        SLEET_FEED_CONTAINER: feed
+        SLEET_FEED_CONNECTIONSTRING: $(SLEET_CONNECTIONSTRING)
