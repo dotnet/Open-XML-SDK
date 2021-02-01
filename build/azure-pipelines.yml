@@ -76,6 +76,19 @@ stages:
         - template: sign.yml
     dependsOn: Package
     condition: succeeded()
+  
+  - stage: Feed
+    jobs:
+      - job: Feed
+        displayName: Deploy to CI Feed
+        pool:
+          name: Hosted Windows 2019 with VS2019
+      steps:
+        - template: sleet.yml
+    dependsOn: 
+      - Build
+      - Sign
+    condition: succeeded()
 
   - stage: NuGet
     jobs:
