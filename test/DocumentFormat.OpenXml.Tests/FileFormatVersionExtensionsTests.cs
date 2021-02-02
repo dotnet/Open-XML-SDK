@@ -99,7 +99,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(expected, version.AtLeast(minimum));
         }
 
-        [InlineData(FileFormatVersions.None)]
         [InlineData((FileFormatVersions)(2 << 6))]
         [Theory]
         public void AtLeastExceptions(FileFormatVersions version)

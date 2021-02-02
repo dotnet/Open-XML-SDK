@@ -33,15 +33,11 @@ namespace DocumentFormat.OpenXml.Framework
 
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
 
-        public bool IsInVersion(FileFormatVersions version)
-        {
-            if (_namespaceResolver.TryGetByNamespace(Uri, out var info))
-            {
-                return info.Version == version;
-            }
+        public FileFormatVersions Version
+            => _namespaceResolver.TryGetByNamespace(Uri, out var info) ? info.Version : FileFormatVersions.None;
 
-            return false;
-        }
+        public bool IsInVersion(FileFormatVersions version)
+            => Version == version;
 
         /// <summary>
         /// Attempts to get the Transitional equivalent namespace.
