@@ -112,13 +112,8 @@ namespace DocumentFormat.OpenXml
         /// <returns>True if supplied version is at least of the specified version, otherwise false</returns>
         public static bool AtLeast(this FileFormatVersions version, FileFormatVersions minimum)
         {
-            int MapToInteger(FileFormatVersions v, string name)
+            static int MapToInteger(FileFormatVersions v, string name)
             {
-                if (v == FileFormatVersions.None)
-                {
-                    throw new ArgumentOutOfRangeException(name);
-                }
-
                 if ((FileFormatVersions.Office2007 & v) == FileFormatVersions.Office2007)
                 {
                     return 1;
@@ -145,6 +140,11 @@ namespace DocumentFormat.OpenXml
                 }
 
                 throw new ArgumentOutOfRangeException(name);
+            }
+
+            if (version == FileFormatVersions.None || minimum == FileFormatVersions.None)
+            {
+                return false;
             }
 
             return MapToInteger(version, nameof(version)) >= MapToInteger(minimum, nameof(minimum));

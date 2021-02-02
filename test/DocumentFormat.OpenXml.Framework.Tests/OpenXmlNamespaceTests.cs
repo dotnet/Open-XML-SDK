@@ -113,6 +113,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             foreach (var v in FileFormatVersionExtensions.AllVersions)
             {
+                Assert.Equal(v == version, nsFromNs.Version == v);
                 Assert.Equal(v == version, nsFromNs.IsInVersion(v));
             }
         }
