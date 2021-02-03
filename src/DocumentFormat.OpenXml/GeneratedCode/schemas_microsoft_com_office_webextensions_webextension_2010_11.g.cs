@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         }
 
         /// <summary>
-        /// <para>frozen, this property is only available in Office2013, Office2016</para>
+        /// <para>frozen, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: frozen</para>
         /// </summary>
 
@@ -258,7 +258,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>
@@ -310,7 +310,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>name, this property is only available in Office2013, Office2016</para>
+        /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 
@@ -326,7 +326,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>value, this property is only available in Office2013, Office2016</para>
+        /// <para>value, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
 
@@ -478,7 +478,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -494,7 +494,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>type, this property is only available in Office2013, Office2016</para>
+        /// <para>type, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
 
@@ -510,7 +510,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>appref, this property is only available in Office2013, Office2016</para>
+        /// <para>appref, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: appref</para>
         /// </summary>
 
@@ -615,7 +615,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -631,7 +631,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>version, this property is only available in Office2013, Office2016</para>
+        /// <para>version, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
 
@@ -647,7 +647,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>store, this property is only available in Office2013, Office2016</para>
+        /// <para>store, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: store</para>
         /// </summary>
 
@@ -663,7 +663,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>storeType, this property is only available in Office2013, Office2016</para>
+        /// <para>storeType, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: storeType</para>
         /// </summary>
 

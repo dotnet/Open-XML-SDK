@@ -4412,7 +4412,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>bwMode, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bwMode, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:bwMode</para>
         /// </summary>
         /// <remark>
@@ -4974,7 +4974,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>BookmarkTarget.</para>
+        /// <para>BookmarkTarget, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: p14:bmkTgt.</para>
         /// </summary>
         /// <remark>
@@ -5805,7 +5805,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>bounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bounceEnd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:bounceEnd</para>
         /// </summary>
         /// <remark>
@@ -6325,7 +6325,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>bounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bounceEnd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:bounceEnd</para>
         /// </summary>
         /// <remark>
@@ -6545,7 +6545,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>bounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bounceEnd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:bounceEnd</para>
         /// </summary>
         /// <remark>
@@ -6670,7 +6670,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>bounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bounceEnd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:bounceEnd</para>
         /// </summary>
         /// <remark>
@@ -7579,7 +7579,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>presetBounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>presetBounceEnd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:presetBounceEnd</para>
         /// </summary>
         /// <remark>
@@ -11149,7 +11149,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>RGB Color Model - Percentage Variant.</para>
+        /// <para>RGB Color Model - Percentage Variant, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: a:scrgbClr.</para>
         /// </summary>
         /// <remark>
@@ -11175,7 +11175,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Hue, Saturation, Luminance Color Model.</para>
+        /// <para>Hue, Saturation, Luminance Color Model, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: a:hslClr.</para>
         /// </summary>
         /// <remark>
@@ -11188,7 +11188,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>System Color.</para>
+        /// <para>System Color, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: a:sysClr.</para>
         /// </summary>
         /// <remark>
@@ -11214,7 +11214,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Preset Color.</para>
+        /// <para>Preset Color, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: a:prstClr.</para>
         /// </summary>
         /// <remark>
@@ -18266,7 +18266,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>dur, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>dur, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:dur</para>
         /// </summary>
         /// <remark>
@@ -22625,7 +22625,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>algorithmName, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>algorithmName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: algorithmName</para>
         /// </summary>
 
@@ -22641,7 +22641,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>hashValue, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>hashValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: hashValue</para>
         /// </summary>
 
@@ -22657,7 +22657,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>saltValue, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>saltValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: saltValue</para>
         /// </summary>
 
@@ -22673,7 +22673,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>spinValue, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>spinValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: spinValue</para>
         /// </summary>
 
@@ -27371,7 +27371,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///onMediaBookmark.
         ///<para>When the item is serialized out as xml, its value is "onMediaBookmark".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("onMediaBookmark")]
         [OfficeAvailability(FileFormatVersions.Office2010)]

@@ -125,7 +125,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         }
 
         /// <summary>
-        /// <para>ShapeStyle.</para>
+        /// <para>ShapeStyle, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: pic14:style.</para>
         /// </summary>
         /// <remark>
@@ -138,7 +138,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         }
 
         /// <summary>
-        /// <para>OfficeArtExtensionList.</para>
+        /// <para>OfficeArtExtensionList, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: pic14:extLst.</para>
         /// </summary>
         /// <remark>

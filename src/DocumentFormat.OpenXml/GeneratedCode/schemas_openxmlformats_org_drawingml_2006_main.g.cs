@@ -1879,7 +1879,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>legacySpreadsheetColorIndex, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>legacySpreadsheetColorIndex, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: a14:legacySpreadsheetColorIndex</para>
         /// </summary>
         /// <remark>
@@ -12758,7 +12758,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: thm15:id</para>
         /// </summary>
         /// <remark>
@@ -40051,7 +40051,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkBlue.
         ///<para>When the item is serialized out as xml, its value is "darkBlue".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkBlue")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40059,7 +40059,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkCyan.
         ///<para>When the item is serialized out as xml, its value is "darkCyan".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkCyan")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40067,7 +40067,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkGoldenrod.
         ///<para>When the item is serialized out as xml, its value is "darkGoldenrod".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkGoldenrod")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40075,7 +40075,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkGray.
         ///<para>When the item is serialized out as xml, its value is "darkGray".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkGray")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40083,7 +40083,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkGrey.
         ///<para>When the item is serialized out as xml, its value is "darkGrey".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkGrey")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40091,7 +40091,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkGreen.
         ///<para>When the item is serialized out as xml, its value is "darkGreen".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkGreen")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40099,7 +40099,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkKhaki.
         ///<para>When the item is serialized out as xml, its value is "darkKhaki".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkKhaki")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40107,7 +40107,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkMagenta.
         ///<para>When the item is serialized out as xml, its value is "darkMagenta".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkMagenta")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40115,7 +40115,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkOliveGreen.
         ///<para>When the item is serialized out as xml, its value is "darkOliveGreen".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkOliveGreen")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40123,7 +40123,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkOrange.
         ///<para>When the item is serialized out as xml, its value is "darkOrange".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkOrange")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40131,7 +40131,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkOrchid.
         ///<para>When the item is serialized out as xml, its value is "darkOrchid".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkOrchid")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40139,7 +40139,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkRed.
         ///<para>When the item is serialized out as xml, its value is "darkRed".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkRed")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40147,7 +40147,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkSalmon.
         ///<para>When the item is serialized out as xml, its value is "darkSalmon".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkSalmon")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40155,7 +40155,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkSeaGreen.
         ///<para>When the item is serialized out as xml, its value is "darkSeaGreen".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkSeaGreen")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40163,7 +40163,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkSlateBlue.
         ///<para>When the item is serialized out as xml, its value is "darkSlateBlue".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkSlateBlue")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40171,7 +40171,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkSlateGray.
         ///<para>When the item is serialized out as xml, its value is "darkSlateGray".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkSlateGray")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40179,7 +40179,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkSlateGrey.
         ///<para>When the item is serialized out as xml, its value is "darkSlateGrey".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkSlateGrey")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40187,7 +40187,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkTurquoise.
         ///<para>When the item is serialized out as xml, its value is "darkTurquoise".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkTurquoise")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40195,7 +40195,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///darkViolet.
         ///<para>When the item is serialized out as xml, its value is "darkViolet".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("darkViolet")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40203,7 +40203,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightBlue.
         ///<para>When the item is serialized out as xml, its value is "lightBlue".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightBlue")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40211,7 +40211,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightCoral.
         ///<para>When the item is serialized out as xml, its value is "lightCoral".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightCoral")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40219,7 +40219,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightCyan.
         ///<para>When the item is serialized out as xml, its value is "lightCyan".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightCyan")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40227,7 +40227,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightGoldenrodYellow.
         ///<para>When the item is serialized out as xml, its value is "lightGoldenrodYellow".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightGoldenrodYellow")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40235,7 +40235,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightGray.
         ///<para>When the item is serialized out as xml, its value is "lightGray".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightGray")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40243,7 +40243,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightGrey.
         ///<para>When the item is serialized out as xml, its value is "lightGrey".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightGrey")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40251,7 +40251,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightGreen.
         ///<para>When the item is serialized out as xml, its value is "lightGreen".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightGreen")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40259,7 +40259,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightPink.
         ///<para>When the item is serialized out as xml, its value is "lightPink".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightPink")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40267,7 +40267,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightSalmon.
         ///<para>When the item is serialized out as xml, its value is "lightSalmon".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightSalmon")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40275,7 +40275,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightSeaGreen.
         ///<para>When the item is serialized out as xml, its value is "lightSeaGreen".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightSeaGreen")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40283,7 +40283,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightSkyBlue.
         ///<para>When the item is serialized out as xml, its value is "lightSkyBlue".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightSkyBlue")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40291,7 +40291,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightSlateGray.
         ///<para>When the item is serialized out as xml, its value is "lightSlateGray".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightSlateGray")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40299,7 +40299,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightSlateGrey.
         ///<para>When the item is serialized out as xml, its value is "lightSlateGrey".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightSlateGrey")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40307,7 +40307,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightSteelBlue.
         ///<para>When the item is serialized out as xml, its value is "lightSteelBlue".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightSteelBlue")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40315,7 +40315,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///lightYellow.
         ///<para>When the item is serialized out as xml, its value is "lightYellow".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lightYellow")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40323,7 +40323,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///mediumAquamarine.
         ///<para>When the item is serialized out as xml, its value is "mediumAquamarine".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("mediumAquamarine")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40331,7 +40331,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///mediumBlue.
         ///<para>When the item is serialized out as xml, its value is "mediumBlue".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("mediumBlue")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40339,7 +40339,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///mediumOrchid.
         ///<para>When the item is serialized out as xml, its value is "mediumOrchid".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("mediumOrchid")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40347,7 +40347,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///mediumPurple.
         ///<para>When the item is serialized out as xml, its value is "mediumPurple".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("mediumPurple")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40355,7 +40355,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///mediumSeaGreen.
         ///<para>When the item is serialized out as xml, its value is "mediumSeaGreen".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("mediumSeaGreen")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40363,7 +40363,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///mediumSlateBlue.
         ///<para>When the item is serialized out as xml, its value is "mediumSlateBlue".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("mediumSlateBlue")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40371,7 +40371,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///mediumSpringGreen.
         ///<para>When the item is serialized out as xml, its value is "mediumSpringGreen".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("mediumSpringGreen")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40379,7 +40379,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///mediumTurquoise.
         ///<para>When the item is serialized out as xml, its value is "mediumTurquoise".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("mediumTurquoise")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40387,7 +40387,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///mediumVioletRed.
         ///<para>When the item is serialized out as xml, its value is "mediumVioletRed".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("mediumVioletRed")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40395,7 +40395,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///dkGrey.
         ///<para>When the item is serialized out as xml, its value is "dkGrey".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("dkGrey")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40403,7 +40403,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///dimGrey.
         ///<para>When the item is serialized out as xml, its value is "dimGrey".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("dimGrey")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40411,7 +40411,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///dkSlateGrey.
         ///<para>When the item is serialized out as xml, its value is "dkSlateGrey".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("dkSlateGrey")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40419,7 +40419,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///grey.
         ///<para>When the item is serialized out as xml, its value is "grey".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("grey")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40427,7 +40427,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///ltGrey.
         ///<para>When the item is serialized out as xml, its value is "ltGrey".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("ltGrey")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40435,7 +40435,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///ltSlateGrey.
         ///<para>When the item is serialized out as xml, its value is "ltSlateGrey".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("ltSlateGrey")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -40443,7 +40443,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///slateGrey.
         ///<para>When the item is serialized out as xml, its value is "slateGrey".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("slateGrey")]
         [OfficeAvailability(FileFormatVersions.Office2010)]

@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         }
 
         /// <summary>
-        /// <para>bwMode, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bwMode, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
 
@@ -431,7 +431,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>isComment, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>isComment, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
 
@@ -602,7 +602,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>macro, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>macro, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
 
@@ -618,7 +618,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>fPublished, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>fPublished, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
 
