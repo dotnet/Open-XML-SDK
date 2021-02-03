@@ -11156,7 +11156,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///top.
         ///<para>When the item is serialized out as xml, its value is "top".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("top")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -11164,7 +11164,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///center.
         ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("center")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -11172,7 +11172,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         ///<summary>
         ///bottom.
         ///<para>When the item is serialized out as xml, its value is "bottom".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("bottom")]
         [OfficeAvailability(FileFormatVersions.Office2010)]

@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
         }
 
         /// <summary>
-        /// <para>name, this property is only available in Office2013, Office2016</para>
+        /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 

@@ -774,7 +774,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         }
 
         /// <summary>
-        /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
 
@@ -818,7 +818,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         }
 
         /// <summary>
-        /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
 
@@ -947,7 +947,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.Transi
         }
 
         /// <summary>
-        /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
 
@@ -963,7 +963,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.Transi
         }
 
         /// <summary>
-        /// <para>isContent, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>isContent, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isContent</para>
         /// </summary>
 
@@ -979,7 +979,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.Transi
         }
 
         /// <summary>
-        /// <para>isInverted, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>isInverted, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isInverted</para>
         /// </summary>
 
@@ -1127,7 +1127,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
 
@@ -1143,7 +1143,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>pattern, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>pattern, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pattern</para>
         /// </summary>
 
@@ -1245,7 +1245,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
 
@@ -1261,7 +1261,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>hasBounce, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>hasBounce, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: hasBounce</para>
         /// </summary>
 
@@ -1311,7 +1311,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>pattern, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>pattern, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pattern</para>
         /// </summary>
 
@@ -1327,7 +1327,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
 
@@ -1380,7 +1380,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>thruBlk, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>thruBlk, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: thruBlk</para>
         /// </summary>
 
@@ -1396,7 +1396,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>dir, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
 
@@ -1492,7 +1492,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>spid, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
 
@@ -1508,7 +1508,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>bmkName, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bmkName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: bmkName</para>
         /// </summary>
 
@@ -1687,7 +1687,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>showStatus, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showStatus, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: showStatus</para>
         /// </summary>
 
@@ -1895,7 +1895,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -1944,7 +1944,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -1993,7 +1993,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -2158,7 +2158,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -2608,7 +2608,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>isComment, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>isComment, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
 
@@ -2825,7 +2825,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 
@@ -2841,7 +2841,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>time, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>time, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
 
@@ -2890,7 +2890,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>st, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>st, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
 
@@ -2906,7 +2906,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>end, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>end, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
 
@@ -2953,7 +2953,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>in, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>in, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: in</para>
         /// </summary>
 
@@ -2969,7 +2969,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>out, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>out, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: out</para>
         /// </summary>
 
@@ -3178,7 +3178,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 
@@ -3194,7 +3194,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>slideIdLst, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>slideIdLst, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: slideIdLst</para>
         /// </summary>
 
@@ -3210,7 +3210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -3282,7 +3282,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -3426,7 +3426,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         }
 
         /// <summary>
-        /// <para>name, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>name, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 
@@ -3442,7 +3442,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -3525,7 +3525,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>t, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>t, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
 
@@ -3541,7 +3541,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>x, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>x, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
 
@@ -3557,7 +3557,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>y, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>y, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
 
@@ -3679,7 +3679,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         }
 
         /// <summary>
-        /// <para>type, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
 
@@ -3695,7 +3695,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         }
 
         /// <summary>
-        /// <para>time, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>time, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
 
@@ -3711,7 +3711,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         }
 
         /// <summary>
-        /// <para>objId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>objId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: objId</para>
         /// </summary>
 
@@ -3878,7 +3878,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>time, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>time, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
 
@@ -3894,7 +3894,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>objId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>objId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: objId</para>
         /// </summary>
 
@@ -3942,7 +3942,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>time, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>time, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
 
@@ -3958,7 +3958,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>objId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>objId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: objId</para>
         /// </summary>
 
@@ -3974,7 +3974,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>seek, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>seek, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: seek</para>
         /// </summary>
 
@@ -4031,7 +4031,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>time, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>time, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
 
@@ -4047,7 +4047,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>objId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>objId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: objId</para>
         /// </summary>
 

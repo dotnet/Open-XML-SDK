@@ -127,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>
@@ -280,7 +280,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>dockstate, this property is only available in Office2013, Office2016</para>
+        /// <para>dockstate, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: dockstate</para>
         /// </summary>
 
@@ -296,7 +296,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>visibility, this property is only available in Office2013, Office2016</para>
+        /// <para>visibility, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: visibility</para>
         /// </summary>
 
@@ -312,7 +312,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>width, this property is only available in Office2013, Office2016</para>
+        /// <para>width, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
 
@@ -328,7 +328,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>row, this property is only available in Office2013, Office2016</para>
+        /// <para>row, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: row</para>
         /// </summary>
 
@@ -344,7 +344,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>locked, this property is only available in Office2013, Office2016</para>
+        /// <para>locked, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
 

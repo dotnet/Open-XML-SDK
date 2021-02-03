@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         }
 
         /// <summary>
-        /// <para>cellRange, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>cellRange, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: cellRange</para>
         /// </summary>
 
@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         }
 
         /// <summary>
-        /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>spid, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
 
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         }
 
         /// <summary>
-        /// <para>spid, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>spid, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: spid</para>
         /// </summary>
 
@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -224,7 +224,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>bwMode, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bwMode, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
 
@@ -240,7 +240,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>
@@ -344,7 +344,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -1266,7 +1266,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -1656,7 +1656,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>x1, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>x1, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x1</para>
         /// </summary>
 
@@ -1672,7 +1672,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>y1, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>y1, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: y1</para>
         /// </summary>
 
@@ -1688,7 +1688,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>x2, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>x2, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x2</para>
         /// </summary>
 
@@ -1704,7 +1704,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>y2, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>y2, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: y2</para>
         /// </summary>
 
@@ -1769,7 +1769,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>x1, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>x1, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x1</para>
         /// </summary>
 
@@ -1785,7 +1785,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>y1, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>y1, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: y1</para>
         /// </summary>
 
@@ -1801,7 +1801,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>x2, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>x2, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x2</para>
         /// </summary>
 
@@ -1817,7 +1817,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>y2, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>y2, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: y2</para>
         /// </summary>
 
@@ -1882,7 +1882,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>radius, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>radius, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: radius</para>
         /// </summary>
 
@@ -1931,7 +1931,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -1947,7 +1947,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>crackSpacing, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>crackSpacing, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: crackSpacing</para>
         /// </summary>
 
@@ -2000,7 +2000,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2016,7 +2016,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>pressure, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
 
@@ -2069,7 +2069,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2085,7 +2085,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>pressure, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
 
@@ -2138,7 +2138,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2154,7 +2154,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>numberOfShades, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>numberOfShades, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: numberOfShades</para>
         /// </summary>
 
@@ -2207,7 +2207,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2223,7 +2223,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>grainSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>grainSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: grainSize</para>
         /// </summary>
 
@@ -2276,7 +2276,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2292,7 +2292,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>scaling, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
 
@@ -2345,7 +2345,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2361,7 +2361,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>intensity, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>intensity, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: intensity</para>
         /// </summary>
 
@@ -2414,7 +2414,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2430,7 +2430,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>smoothness, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>smoothness, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: smoothness</para>
         /// </summary>
 
@@ -2483,7 +2483,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2499,7 +2499,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>gridSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>gridSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: gridSize</para>
         /// </summary>
 
@@ -2552,7 +2552,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2568,7 +2568,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>pencilSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>pencilSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pencilSize</para>
         /// </summary>
 
@@ -2621,7 +2621,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2637,7 +2637,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>size, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
 
@@ -2690,7 +2690,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2706,7 +2706,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>pressure, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
 
@@ -2759,7 +2759,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2775,7 +2775,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>intensity, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>intensity, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: intensity</para>
         /// </summary>
 
@@ -2828,7 +2828,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2844,7 +2844,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>brushSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>brushSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: brushSize</para>
         /// </summary>
 
@@ -2897,7 +2897,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2913,7 +2913,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>scaling, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
 
@@ -2966,7 +2966,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -2982,7 +2982,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>pencilSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>pencilSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pencilSize</para>
         /// </summary>
 
@@ -3035,7 +3035,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -3051,7 +3051,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>pressure, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>pressure, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: pressure</para>
         /// </summary>
 
@@ -3104,7 +3104,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -3120,7 +3120,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>detail, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>detail, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: detail</para>
         /// </summary>
 
@@ -3173,7 +3173,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -3189,7 +3189,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>smoothness, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>smoothness, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: smoothness</para>
         /// </summary>
 
@@ -3242,7 +3242,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -3258,7 +3258,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>scaling, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>scaling, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: scaling</para>
         /// </summary>
 
@@ -3311,7 +3311,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>trans, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>trans, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: trans</para>
         /// </summary>
 
@@ -3327,7 +3327,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>brushSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>brushSize, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: brushSize</para>
         /// </summary>
 
@@ -3411,7 +3411,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>t, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>t, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
 
@@ -3427,7 +3427,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>b, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>b, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
 
@@ -3443,7 +3443,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>l, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>l, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
 
@@ -3459,7 +3459,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>r, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>r, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
 
@@ -3531,7 +3531,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>bright, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bright, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: bright</para>
         /// </summary>
 
@@ -3547,7 +3547,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>contrast, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>contrast, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: contrast</para>
         /// </summary>
 
@@ -3600,7 +3600,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         }
 
         /// <summary>
-        /// <para>colorTemp, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>colorTemp, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: colorTemp</para>
         /// </summary>
 
@@ -3649,7 +3649,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1500L), MaxInclusi
         }
 
         /// <summary>
-        /// <para>sat, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>sat, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sat</para>
         /// </summary>
 
@@ -3698,7 +3698,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>amount, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>amount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: amount</para>
         /// </summary>
 
@@ -3803,7 +3803,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -4287,7 +4287,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100000L), MaxIncl
         }
 
         /// <summary>
-        /// <para>embed, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>embed, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: r:embed</para>
         /// </summary>
         /// <remark>
@@ -4572,7 +4572,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>isComment, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>isComment, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
 
