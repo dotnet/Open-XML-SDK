@@ -4412,7 +4412,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>bwMode, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bwMode</para>
         /// <para>Represents the following attribute in the schema: p14:bwMode</para>
         /// </summary>
         /// <remark>
@@ -5805,7 +5805,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>bounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bounceEnd</para>
         /// <para>Represents the following attribute in the schema: p14:bounceEnd</para>
         /// </summary>
         /// <remark>
@@ -6325,7 +6325,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>bounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bounceEnd</para>
         /// <para>Represents the following attribute in the schema: p14:bounceEnd</para>
         /// </summary>
         /// <remark>
@@ -6545,7 +6545,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>bounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bounceEnd</para>
         /// <para>Represents the following attribute in the schema: p14:bounceEnd</para>
         /// </summary>
         /// <remark>
@@ -6670,7 +6670,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>bounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bounceEnd</para>
         /// <para>Represents the following attribute in the schema: p14:bounceEnd</para>
         /// </summary>
         /// <remark>
@@ -7579,7 +7579,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>presetBounceEnd, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>presetBounceEnd</para>
         /// <para>Represents the following attribute in the schema: p14:presetBounceEnd</para>
         /// </summary>
         /// <remark>

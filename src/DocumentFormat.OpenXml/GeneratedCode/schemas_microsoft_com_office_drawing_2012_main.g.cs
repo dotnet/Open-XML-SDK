@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         }
 
         /// <summary>
-        /// <para>bwMode, this property is only available in Office2013, Office2016</para>
+        /// <para>bwMode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
 
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         }
 
         /// <summary>
-        /// <para>bwPure, this property is only available in Office2013, Office2016</para>
+        /// <para>bwPure</para>
         /// <para>Represents the following attribute in the schema: bwPure</para>
         /// </summary>
 
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         }
 
         /// <summary>
-        /// <para>bwNormal, this property is only available in Office2013, Office2016</para>
+        /// <para>bwNormal</para>
         /// <para>Represents the following attribute in the schema: bwNormal</para>
         /// </summary>
 
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         }
 
         /// <summary>
-        /// <para>targetScreenSize, this property is only available in Office2013, Office2016</para>
+        /// <para>targetScreenSize</para>
         /// <para>Represents the following attribute in the schema: targetScreenSize</para>
         /// </summary>
 
@@ -140,7 +140,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>isLegacyGroup, this property is only available in Office2013, Office2016</para>
+        /// <para>isLegacyGroup</para>
         /// <para>Represents the following attribute in the schema: isLegacyGroup</para>
         /// </summary>
 
@@ -186,7 +186,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>objectId, this property is only available in Office2013, Office2016</para>
+        /// <para>objectId</para>
         /// <para>Represents the following attribute in the schema: objectId</para>
         /// </summary>
 
@@ -202,7 +202,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>isActiveX, this property is only available in Office2013, Office2016</para>
+        /// <para>isActiveX</para>
         /// <para>Represents the following attribute in the schema: isActiveX</para>
         /// </summary>
 
@@ -218,7 +218,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>linkType, this property is only available in Office2013, Office2016</para>
+        /// <para>linkType</para>
         /// <para>Represents the following attribute in the schema: linkType</para>
         /// </summary>
 
@@ -266,7 +266,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>isSignatureLine, this property is only available in Office2013, Office2016</para>
+        /// <para>isSignatureLine</para>
         /// <para>Represents the following attribute in the schema: isSignatureLine</para>
         /// </summary>
 
@@ -282,7 +282,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -298,7 +298,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>provId, this property is only available in Office2013, Office2016</para>
+        /// <para>provId</para>
         /// <para>Represents the following attribute in the schema: provId</para>
         /// </summary>
 
@@ -314,7 +314,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>signingInstructionsSet, this property is only available in Office2013, Office2016</para>
+        /// <para>signingInstructionsSet</para>
         /// <para>Represents the following attribute in the schema: signingInstructionsSet</para>
         /// </summary>
 
@@ -330,7 +330,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>allowComments, this property is only available in Office2013, Office2016</para>
+        /// <para>allowComments</para>
         /// <para>Represents the following attribute in the schema: allowComments</para>
         /// </summary>
 
@@ -346,7 +346,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>showSignDate, this property is only available in Office2013, Office2016</para>
+        /// <para>showSignDate</para>
         /// <para>Represents the following attribute in the schema: showSignDate</para>
         /// </summary>
 
@@ -362,7 +362,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>suggestedSigner, this property is only available in Office2013, Office2016</para>
+        /// <para>suggestedSigner</para>
         /// <para>Represents the following attribute in the schema: suggestedSigner</para>
         /// </summary>
 
@@ -378,7 +378,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>suggestedSigner2, this property is only available in Office2013, Office2016</para>
+        /// <para>suggestedSigner2</para>
         /// <para>Represents the following attribute in the schema: suggestedSigner2</para>
         /// </summary>
 
@@ -394,7 +394,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>suggestedSignerEmail, this property is only available in Office2013, Office2016</para>
+        /// <para>suggestedSignerEmail</para>
         /// <para>Represents the following attribute in the schema: suggestedSignerEmail</para>
         /// </summary>
 
@@ -410,7 +410,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>signingInstructions, this property is only available in Office2013, Office2016</para>
+        /// <para>signingInstructions</para>
         /// <para>Represents the following attribute in the schema: signingInstructions</para>
         /// </summary>
 
@@ -426,7 +426,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>addlXml, this property is only available in Office2013, Office2016</para>
+        /// <para>addlXml</para>
         /// <para>Represents the following attribute in the schema: addlXml</para>
         /// </summary>
 
@@ -442,7 +442,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>sigProvUrl, this property is only available in Office2013, Office2016</para>
+        /// <para>sigProvUrl</para>
         /// <para>Represents the following attribute in the schema: sigProvUrl</para>
         /// </summary>
 

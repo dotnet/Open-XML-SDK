@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         }
 
         /// <summary>
-        /// <para>embeddedHtml, this property is only available in Office2013, Office2016</para>
+        /// <para>embeddedHtml</para>
         /// <para>Represents the following attribute in the schema: embeddedHtml</para>
         /// </summary>
 
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         }
 
         /// <summary>
-        /// <para>h, this property is only available in Office2013, Office2016</para>
+        /// <para>h</para>
         /// <para>Represents the following attribute in the schema: h</para>
         /// </summary>
 
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         }
 
         /// <summary>
-        /// <para>w, this property is only available in Office2013, Office2016</para>
+        /// <para>w</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
 

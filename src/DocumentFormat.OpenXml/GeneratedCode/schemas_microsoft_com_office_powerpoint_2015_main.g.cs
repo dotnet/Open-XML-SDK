@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2016</para>
+        /// <para>val</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 

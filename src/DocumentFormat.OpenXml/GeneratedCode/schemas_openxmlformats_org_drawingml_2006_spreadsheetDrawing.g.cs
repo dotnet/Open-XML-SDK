@@ -1199,7 +1199,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>
@@ -1218,7 +1218,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>bwMode, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bwMode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
 

@@ -25772,7 +25772,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>dyDescent, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>dyDescent</para>
         /// <para>Represents the following attribute in the schema: x14ac:dyDescent</para>
         /// </summary>
         /// <remark>
@@ -45241,7 +45241,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>dyDescent, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>dyDescent</para>
         /// <para>Represents the following attribute in the schema: x14ac:dyDescent</para>
         /// </summary>
         /// <remark>
@@ -55024,7 +55024,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>knownFonts, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>knownFonts</para>
         /// <para>Represents the following attribute in the schema: x14ac:knownFonts</para>
         /// </summary>
         /// <remark>

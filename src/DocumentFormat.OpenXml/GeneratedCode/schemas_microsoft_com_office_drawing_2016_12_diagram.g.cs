@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
 {
     /// <summary>
     /// <para>Defines the ShapeProperties Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm1612:spPr.</para>
     /// </summary>
     /// <remark>
@@ -94,6 +94,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(104, "spPr");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
@@ -171,7 +172,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the TextListStyleType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm1612:lstStyle.</para>
     /// </summary>
     /// <remark>
@@ -230,6 +231,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(104, "lstStyle");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();

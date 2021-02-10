@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         }
 
         /// <summary>
-        /// <para>normalEastAsianFlow, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>normalEastAsianFlow</para>
         /// <para>Represents the following attribute in the schema: normalEastAsianFlow</para>
         /// </summary>
 
@@ -971,7 +971,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -1080,7 +1080,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -1096,7 +1096,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>seq, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>seq</para>
         /// <para>Represents the following attribute in the schema: seq</para>
         /// </summary>
 

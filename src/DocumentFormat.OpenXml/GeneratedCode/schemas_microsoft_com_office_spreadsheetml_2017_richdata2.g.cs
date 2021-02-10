@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
 {
     /// <summary>
     /// <para>Defines the RichFilterColumn Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:filterColumn.</para>
     /// </summary>
     /// <remark>
@@ -69,6 +69,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "filterColumn");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichFilters>();
             builder.AddChild<RichTop10>();
             builder.AddChild<CustomRichFilters>();
@@ -76,11 +77,11 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             builder.AddChild<ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 1, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -155,7 +156,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
 
     /// <summary>
     /// <para>Defines the RichSortCondition Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:richSortCondition.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -187,7 +188,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>descending, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>descending</para>
         /// <para>Represents the following attribute in the schema: descending</para>
         /// </summary>
 
@@ -203,7 +204,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>sortBy, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>sortBy</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
 
@@ -219,7 +220,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>ref, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>ref</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
 
@@ -235,7 +236,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>customList, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>customList</para>
         /// <para>Represents the following attribute in the schema: customList</para>
         /// </summary>
 
@@ -251,7 +252,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>dxfId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>dxfId</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
 
@@ -267,7 +268,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>iconSet, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>iconSet</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
 
@@ -283,7 +284,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>iconId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>iconId</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
 
@@ -302,6 +303,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "richSortCondition");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichSortCondition>()
 .AddAttribute(0, "richSortKey", a => a.RichSortKey)
 .AddAttribute(0, "descending", a => a.Descending)
@@ -322,7 +324,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBags Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:supportingPropertyBags.</para>
     /// </summary>
     /// <remark>
@@ -372,12 +374,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "supportingPropertyBags");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<SupportingPropertyBagArrayData>();
             builder.AddChild<SupportingPropertyBagData>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData), 1, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -413,7 +416,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagStructures Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:spbStructures.</para>
     /// </summary>
     /// <remark>
@@ -479,6 +482,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "spbStructures");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<SupportingPropertyBagStructure>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<SupportingPropertyBagStructures>()
@@ -488,8 +492,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -499,7 +503,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ArrayData Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:arrayData.</para>
     /// </summary>
     /// <remark>
@@ -565,6 +569,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "arrayData");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<Array>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<ArrayData>()
@@ -574,8 +579,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -585,7 +590,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichStylesheet Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:richStyleSheet.</para>
     /// </summary>
     /// <remark>
@@ -637,16 +642,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "richStyleSheet");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<Dxfs>();
             builder.AddChild<RichFormatProperties>();
             builder.AddChild<RichStyles>();
             builder.AddChild<ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -708,7 +714,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueTypesInfo Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:rvTypesInfo.</para>
     /// </summary>
     /// <remark>
@@ -759,14 +765,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "rvTypesInfo");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichValueGlobalType>();
             builder.AddChild<RichValueTypes>();
             builder.AddChild<ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -815,7 +822,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichFilters Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:filters.</para>
     /// </summary>
     /// <remark>
@@ -866,14 +873,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "filters");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichFilter>();
             builder.AddChild<RichDateGroupItem>();
             builder.AddChild<ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichDateGroupItem), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichDateGroupItem), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -883,7 +891,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichTop10 Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:top10.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -982,13 +990,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "top10");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichTop10>()
 .AddAttribute(0, "key", a => a.Key)
 .AddAttribute(0, "top", a => a.Top)
 .AddAttribute(0, "percent", a => a.Percent)
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
- aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "filterVal", a => a.FilterValue);
         }
@@ -999,7 +1008,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CustomRichFilters Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:customFilters.</para>
     /// </summary>
     /// <remark>
@@ -1065,6 +1074,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "customFilters");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<CustomRichFilter>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<CustomRichFilters>()
@@ -1073,8 +1083,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 2)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter), 0, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter), 0, 1, version: FileFormatVersions.Office2019),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
                 }
             };
         }
@@ -1085,7 +1095,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DynamicRichFilter Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:dynamicFilter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1200,6 +1210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "dynamicFilter");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<DynamicRichFilter>()
 .AddAttribute(0, "key", a => a.Key)
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
@@ -1224,7 +1235,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the RichExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:richExtLst.</para>
     /// </summary>
     /// <remark>
@@ -1273,10 +1284,11 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "richExtLst");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 1, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -1299,7 +1311,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the ExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:extLst.</para>
     /// </summary>
     /// <remark>
@@ -1348,6 +1360,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "extLst");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1367,7 +1380,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the RichFilter Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:filter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1450,6 +1463,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "filter");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichFilter>()
 .AddAttribute(0, "key", a => a.Key)
 .AddAttribute(0, "val", a => a.Val)
@@ -1463,7 +1477,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the RichDateGroupItem Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:dateGroupItem.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1610,6 +1624,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "dateGroupItem");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichDateGroupItem>()
 .AddAttribute(0, "key", a => a.Key)
 .AddAttribute(0, "year", a => a.Year, aBuilder =>
@@ -1633,7 +1648,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CustomRichFilter Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:customFilter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1700,6 +1715,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "customFilter");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<CustomRichFilter>()
 .AddAttribute(0, "key", a => a.Key)
 .AddAttribute(0, "operator", a => a.Operator)
@@ -1712,7 +1728,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagArrayData Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:spbArrays.</para>
     /// </summary>
     /// <remark>
@@ -1778,6 +1794,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "spbArrays");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<SupportingPropertyBagArray>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<SupportingPropertyBagArrayData>()
@@ -1787,8 +1804,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -1798,7 +1815,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagData Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:spbData.</para>
     /// </summary>
     /// <remark>
@@ -1864,6 +1881,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "spbData");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<SupportingPropertyBag>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<SupportingPropertyBagData>()
@@ -1873,8 +1891,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -1884,7 +1902,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBag Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:spb.</para>
     /// </summary>
     /// <remark>
@@ -1949,6 +1967,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "spb");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<SupportingPropertyBagValue>();
             builder.AddElement<SupportingPropertyBag>()
 .AddAttribute(0, "s", a => a.S, aBuilder =>
@@ -1957,7 +1976,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -1967,7 +1986,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagValue Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:v.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1999,6 +2018,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "v");
+            builder.Availability = FileFormatVersions.Office2019;
         }
 
         /// <inheritdoc/>
@@ -2007,7 +2027,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagStructure Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:s.</para>
     /// </summary>
     /// <remark>
@@ -2056,10 +2076,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "s");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<SupportingPropertyBagKey>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagKey), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagKey), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2069,7 +2090,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagKey Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:k.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2120,12 +2141,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "k");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<SupportingPropertyBagKey>()
- .AddAttribute(0, "n", a => a.N, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- })
- .AddAttribute(0, "t", a => a.T);
+.AddAttribute(0, "n", a => a.N, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+})
+.AddAttribute(0, "t", a => a.T);
         }
 
         /// <inheritdoc/>
@@ -2134,7 +2156,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagArray Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:a.</para>
     /// </summary>
     /// <remark>
@@ -2199,6 +2221,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "a");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<SupportingPropertyBagArrayValue>();
             builder.AddElement<SupportingPropertyBagArray>()
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
@@ -2207,7 +2230,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2217,7 +2240,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagArrayValue Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:v.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2265,8 +2288,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "v");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<SupportingPropertyBagArrayValue>()
- .AddAttribute(0, "t", a => a.T);
+.AddAttribute(0, "t", a => a.T);
         }
 
         /// <inheritdoc/>
@@ -2275,7 +2299,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Array Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:a.</para>
     /// </summary>
     /// <remark>
@@ -2356,6 +2380,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "a");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<ArrayValue>();
             builder.AddElement<Array>()
 .AddAttribute(0, "r", a => a.R, aBuilder =>
@@ -2365,7 +2390,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "c", a => a.C);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2375,7 +2400,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ArrayValue Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:v.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2423,8 +2448,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "v");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<ArrayValue>()
- .AddAttribute(0, "t", a => a.T);
+.AddAttribute(0, "t", a => a.T);
         }
 
         /// <inheritdoc/>
@@ -2433,7 +2459,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Dxfs Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:dxfs.</para>
     /// </summary>
     /// <remark>
@@ -2498,6 +2524,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "dxfs");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
             builder.AddElement<Dxfs>()
 .AddAttribute(0, "count", a => a.Count);
@@ -2513,7 +2540,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichFormatProperties Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:richProperties.</para>
     /// </summary>
     /// <remark>
@@ -2562,10 +2589,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "richProperties");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichFormatProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperty), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperty), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2575,7 +2603,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichStyles Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:richStyles.</para>
     /// </summary>
     /// <remark>
@@ -2624,10 +2652,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "richStyles");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichStyle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2637,7 +2666,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichFormatProperty Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:rPr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2688,14 +2717,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "rPr");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichFormatProperty>()
 .AddAttribute(0, "n", a => a.N, aBuilder =>
 {
-   aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "t", a => a.T, aBuilder =>
 {
-   aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2705,7 +2735,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichStyle Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:rSty.</para>
     /// </summary>
     /// <remark>
@@ -2770,12 +2800,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "rSty");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichStylePropertyValue>();
             builder.AddElement<RichStyle>()
 .AddAttribute(0, "dxfid", a => a.Dxfid);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2785,7 +2816,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichStylePropertyValue Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:rpv.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2833,10 +2864,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "rpv");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichStylePropertyValue>()
 .AddAttribute(0, "i", a => a.I, aBuilder =>
 {
-   aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -2846,7 +2878,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueGlobalType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:global.</para>
     /// </summary>
     /// <remark>
@@ -2896,12 +2928,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "global");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichValueTypeKeyFlags>();
             builder.AddChild<ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2937,7 +2970,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueTypes Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:types.</para>
     /// </summary>
     /// <remark>
@@ -2986,10 +3019,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "types");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichValueType>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -2999,7 +3033,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:type.</para>
     /// </summary>
     /// <remark>
@@ -3065,6 +3099,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "type");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichValueTypeKeyFlags>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<RichValueType>()
@@ -3074,8 +3109,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -3111,7 +3146,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueTypeKeyFlags Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:keyFlags.</para>
     /// </summary>
     /// <remark>
@@ -3160,10 +3195,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "keyFlags");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichValueTypeReservedKey>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -3173,7 +3209,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueTypeReservedKey Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:key.</para>
     /// </summary>
     /// <remark>
@@ -3238,6 +3274,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "key");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichValueTypeReservedKeyFlag>();
             builder.AddElement<RichValueTypeReservedKey>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
@@ -3246,7 +3283,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -3256,7 +3293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueTypeReservedKeyFlag Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:flag.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3307,14 +3344,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(97, "flag");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichValueTypeReservedKeyFlag>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
-  aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "value", a => a.Value, aBuilder =>
 {
-  aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 

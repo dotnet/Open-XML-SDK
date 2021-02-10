@@ -33362,6 +33362,303 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.ColumnBodyDxfDxf",
+    "Children": [
+      {
+        "Name": "alignment",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "border",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "fill",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "font",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "numFmt",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "protection",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.ColumnHeaderDxfDxf",
+    "Children": [
+      {
+        "Name": "alignment",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "border",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "fill",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "font",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "numFmt",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "protection",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.ColumnTotalsDxfDxf",
+    "Children": [
+      {
+        "Name": "alignment",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "border",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "fill",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "font",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "numFmt",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "protection",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.DataDxfDxf",
+    "Children": [
+      {
+        "Name": "alignment",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "border",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "fill",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "font",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "numFmt",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "protection",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.HeaderRowBorderDxfDxf",
+    "Children": [
+      {
+        "Name": "alignment",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "border",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "fill",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "font",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "numFmt",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "protection",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.HeaderRowDxfDxf",
+    "Children": [
+      {
+        "Name": "alignment",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "border",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "fill",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "font",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "numFmt",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "protection",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.TableBorderDxfDxf",
+    "Children": [
+      {
+        "Name": "alignment",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "border",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "fill",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "font",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "numFmt",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "protection",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.TotalsRowBorderDxfDxf",
+    "Children": [
+      {
+        "Name": "alignment",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "border",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "fill",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "font",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "numFmt",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "protection",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.TotalsRowDxfDxf",
+    "Children": [
+      {
+        "Name": "alignment",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "border",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "fill",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "font",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "numFmt",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "protection",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList",
     "Children": [
       {

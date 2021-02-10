@@ -1879,7 +1879,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>legacySpreadsheetColorIndex, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>legacySpreadsheetColorIndex</para>
         /// <para>Represents the following attribute in the schema: a14:legacySpreadsheetColorIndex</para>
         /// </summary>
         /// <remark>
@@ -12758,7 +12758,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: thm15:id</para>
         /// </summary>
         /// <remark>

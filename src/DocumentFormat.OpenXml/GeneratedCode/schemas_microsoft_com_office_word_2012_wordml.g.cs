@@ -250,7 +250,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2013, Office2016</para>
+        /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w15:val</para>
         /// </summary>
         /// <remark>
@@ -791,7 +791,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2013, Office2016</para>
+        /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w15:val</para>
         /// </summary>
         /// <remark>
@@ -896,7 +896,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>paraId, this property is only available in Office2013, Office2016</para>
+        /// <para>paraId</para>
         /// <para>Represents the following attribute in the schema: w15:paraId</para>
         /// </summary>
         /// <remark>
@@ -915,7 +915,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>paraIdParent, this property is only available in Office2013, Office2016</para>
+        /// <para>paraIdParent</para>
         /// <para>Represents the following attribute in the schema: w15:paraIdParent</para>
         /// </summary>
         /// <remark>
@@ -934,7 +934,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>done, this property is only available in Office2013, Office2016</para>
+        /// <para>done</para>
         /// <para>Represents the following attribute in the schema: w15:done</para>
         /// </summary>
         /// <remark>
@@ -1029,7 +1029,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         }
 
         /// <summary>
-        /// <para>author, this property is only available in Office2013, Office2016</para>
+        /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w15:author</para>
         /// </summary>
         /// <remark>
@@ -1048,7 +1048,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         }
 
         /// <summary>
-        /// <para>contact, this property is only available in Office2013, Office2016</para>
+        /// <para>contact</para>
         /// <para>Represents the following attribute in the schema: w15:contact</para>
         /// </summary>
         /// <remark>
@@ -1124,7 +1124,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         }
 
         /// <summary>
-        /// <para>providerId, this property is only available in Office2013, Office2016</para>
+        /// <para>providerId</para>
         /// <para>Represents the following attribute in the schema: w15:providerId</para>
         /// </summary>
         /// <remark>
@@ -1143,7 +1143,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         }
 
         /// <summary>
-        /// <para>userId, this property is only available in Office2013, Office2016</para>
+        /// <para>userId</para>
         /// <para>Represents the following attribute in the schema: w15:userId</para>
         /// </summary>
         /// <remark>

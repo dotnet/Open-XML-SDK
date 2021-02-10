@@ -341,7 +341,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>val</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -713,7 +713,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>val</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -754,7 +754,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>val</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 

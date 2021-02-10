@@ -10612,7 +10612,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>anchorId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>anchorId</para>
         /// <para>Represents the following attribute in the schema: w14:anchorId</para>
         /// </summary>
         /// <remark>
@@ -19310,7 +19310,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>paraId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>paraId</para>
         /// <para>Represents the following attribute in the schema: w14:paraId</para>
         /// </summary>
         /// <remark>
@@ -19329,7 +19329,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>textId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>textId</para>
         /// <para>Represents the following attribute in the schema: w14:textId</para>
         /// </summary>
         /// <remark>
@@ -19348,7 +19348,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>noSpellErr, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>noSpellErr</para>
         /// <para>Represents the following attribute in the schema: w14:noSpellErr</para>
         /// </summary>
         /// <remark>
@@ -20043,7 +20043,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>paraId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>paraId</para>
         /// <para>Represents the following attribute in the schema: w14:paraId</para>
         /// </summary>
         /// <remark>
@@ -20062,7 +20062,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>textId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>textId</para>
         /// <para>Represents the following attribute in the schema: w14:textId</para>
         /// </summary>
         /// <remark>

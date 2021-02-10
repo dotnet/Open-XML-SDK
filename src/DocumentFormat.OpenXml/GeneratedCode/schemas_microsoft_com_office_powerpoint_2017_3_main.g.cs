@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
 {
     /// <summary>
     /// <para>Defines the TracksInfo Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p173:tracksInfo.</para>
     /// </summary>
     /// <remark>
@@ -81,6 +81,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(87, "tracksInfo");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<TrackList>();
             builder.AddElement<TracksInfo>()
 .AddAttribute(0, "displayLoc", a => a.DisplayLoc, aBuilder =>
@@ -89,7 +90,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Presentation.TrackList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Presentation.TrackList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -112,7 +113,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Track Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p173:track.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -217,15 +218,16 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(87, "track");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Track>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
- aBuilder.AddValidator(RequiredValidator.Instance);
- aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
 .AddAttribute(0, "label", a => a.Label, aBuilder =>
 {
- aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "lang", a => a.Lang)
 .AddAttribute(19, "embed", a => a.Embed)
@@ -238,7 +240,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TrackList Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p173:trackLst.</para>
     /// </summary>
     /// <remark>
@@ -287,10 +289,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(87, "trackLst");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<Track>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Presentation.Track), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Presentation.Track), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 

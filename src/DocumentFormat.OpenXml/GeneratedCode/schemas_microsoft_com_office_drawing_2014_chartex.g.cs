@@ -301,7 +301,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         }
 
         /// <summary>
-        /// <para>uri, this property is only available in Office2016</para>
+        /// <para>uri</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
 
@@ -367,7 +367,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>idx, this property is only available in Office2016</para>
+        /// <para>idx</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
 
@@ -429,7 +429,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>idx, this property is only available in Office2016</para>
+        /// <para>idx</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
 
@@ -509,7 +509,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Dimension data type, this property is only available in Office2016</para>
+        /// <para>Dimension data type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
 
@@ -599,7 +599,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Dimension data type, this property is only available in Office2016</para>
+        /// <para>Dimension data type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
 
@@ -721,7 +721,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>RelId of the relationship for the external data, this property is only available in Office2016</para>
+        /// <para>RelId of the relationship for the external data</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>
@@ -740,7 +740,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>True if the external link should automatically update, this property is only available in Office2016</para>
+        /// <para>True if the external link should automatically update</para>
         /// <para>Represents the following attribute in the schema: cx:autoUpdate</para>
         /// </summary>
         /// <remark>
@@ -828,7 +828,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016))
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -1547,7 +1547,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>gapWidth, this property is only available in Office2016</para>
+        /// <para>gapWidth</para>
         /// <para>Represents the following attribute in the schema: gapWidth</para>
         /// </summary>
 
@@ -1600,7 +1600,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>max, this property is only available in Office2016</para>
+        /// <para>max</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
 
@@ -1616,7 +1616,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>min, this property is only available in Office2016</para>
+        /// <para>min</para>
         /// <para>Represents the following attribute in the schema: min</para>
         /// </summary>
 
@@ -1632,7 +1632,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>majorUnit, this property is only available in Office2016</para>
+        /// <para>majorUnit</para>
         /// <para>Represents the following attribute in the schema: majorUnit</para>
         /// </summary>
 
@@ -1648,7 +1648,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>minorUnit, this property is only available in Office2016</para>
+        /// <para>minorUnit</para>
         /// <para>Represents the following attribute in the schema: minorUnit</para>
         /// </summary>
 
@@ -1880,7 +1880,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>unit, this property is only available in Office2016</para>
+        /// <para>unit</para>
         /// <para>Represents the following attribute in the schema: unit</para>
         /// </summary>
 
@@ -2317,7 +2317,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>type, this property is only available in Office2016</para>
+        /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
 
@@ -2448,7 +2448,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>formatCode, this property is only available in Office2016</para>
+        /// <para>formatCode</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
 
@@ -2464,7 +2464,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>sourceLinked, this property is only available in Office2016</para>
+        /// <para>sourceLinked</para>
         /// <para>Represents the following attribute in the schema: sourceLinked</para>
         /// </summary>
 
@@ -2556,7 +2556,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2016</para>
+        /// <para>val</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -2605,7 +2605,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>connectorLines, this property is only available in Office2016</para>
+        /// <para>connectorLines</para>
         /// <para>Represents the following attribute in the schema: connectorLines</para>
         /// </summary>
 
@@ -2621,7 +2621,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>meanLine, this property is only available in Office2016</para>
+        /// <para>meanLine</para>
         /// <para>Represents the following attribute in the schema: meanLine</para>
         /// </summary>
 
@@ -2637,7 +2637,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>meanMarker, this property is only available in Office2016</para>
+        /// <para>meanMarker</para>
         /// <para>Represents the following attribute in the schema: meanMarker</para>
         /// </summary>
 
@@ -2653,7 +2653,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>nonoutliers, this property is only available in Office2016</para>
+        /// <para>nonoutliers</para>
         /// <para>Represents the following attribute in the schema: nonoutliers</para>
         /// </summary>
 
@@ -2669,7 +2669,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>outliers, this property is only available in Office2016</para>
+        /// <para>outliers</para>
         /// <para>Represents the following attribute in the schema: outliers</para>
         /// </summary>
 
@@ -2778,7 +2778,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>intervalClosed, this property is only available in Office2016</para>
+        /// <para>intervalClosed</para>
         /// <para>Represents the following attribute in the schema: intervalClosed</para>
         /// </summary>
 
@@ -2794,7 +2794,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>underflow, this property is only available in Office2016</para>
+        /// <para>underflow</para>
         /// <para>Represents the following attribute in the schema: underflow</para>
         /// </summary>
 
@@ -2810,7 +2810,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>overflow, this property is only available in Office2016</para>
+        /// <para>overflow</para>
         /// <para>Represents the following attribute in the schema: overflow</para>
         /// </summary>
 
@@ -2905,7 +2905,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>quartileMethod, this property is only available in Office2016</para>
+        /// <para>quartileMethod</para>
         /// <para>Represents the following attribute in the schema: quartileMethod</para>
         /// </summary>
 
@@ -3014,7 +3014,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>seriesName, this property is only available in Office2016</para>
+        /// <para>seriesName</para>
         /// <para>Represents the following attribute in the schema: seriesName</para>
         /// </summary>
 
@@ -3030,7 +3030,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>categoryName, this property is only available in Office2016</para>
+        /// <para>categoryName</para>
         /// <para>Represents the following attribute in the schema: categoryName</para>
         /// </summary>
 
@@ -3046,7 +3046,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>value, this property is only available in Office2016</para>
+        /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
 
@@ -3457,7 +3457,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>idx, this property is only available in Office2016</para>
+        /// <para>idx</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
 
@@ -3473,7 +3473,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>pos, this property is only available in Office2016</para>
+        /// <para>pos</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
 
@@ -3616,7 +3616,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>idx, this property is only available in Office2016</para>
+        /// <para>idx</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
 
@@ -3696,7 +3696,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>idx, this property is only available in Office2016</para>
+        /// <para>idx</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
 
@@ -3815,7 +3815,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>pos, this property is only available in Office2016</para>
+        /// <para>pos</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
 
@@ -3945,7 +3945,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2016</para>
+        /// <para>val</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -4275,7 +4275,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>layoutId, this property is only available in Office2016</para>
+        /// <para>layoutId</para>
         /// <para>Represents the following attribute in the schema: layoutId</para>
         /// </summary>
 
@@ -4291,7 +4291,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>hidden, this property is only available in Office2016</para>
+        /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
 
@@ -4307,7 +4307,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>ownerIdx, this property is only available in Office2016</para>
+        /// <para>ownerIdx</para>
         /// <para>Represents the following attribute in the schema: ownerIdx</para>
         /// </summary>
 
@@ -4323,7 +4323,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>uniqueId, this property is only available in Office2016</para>
+        /// <para>uniqueId</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
 
@@ -4339,7 +4339,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>formatIdx, this property is only available in Office2016</para>
+        /// <para>formatIdx</para>
         /// <para>Represents the following attribute in the schema: formatIdx</para>
         /// </summary>
 
@@ -4561,7 +4561,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -4577,7 +4577,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>hidden, this property is only available in Office2016</para>
+        /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
 
@@ -4692,7 +4692,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>pos, this property is only available in Office2016</para>
+        /// <para>pos</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
 
@@ -4708,7 +4708,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>align, this property is only available in Office2016</para>
+        /// <para>align</para>
         /// <para>Represents the following attribute in the schema: align</para>
         /// </summary>
 
@@ -4724,7 +4724,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>overlay, this property is only available in Office2016</para>
+        /// <para>overlay</para>
         /// <para>Represents the following attribute in the schema: overlay</para>
         /// </summary>
 
@@ -4952,7 +4952,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>pos, this property is only available in Office2016</para>
+        /// <para>pos</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
 
@@ -4968,7 +4968,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>align, this property is only available in Office2016</para>
+        /// <para>align</para>
         /// <para>Represents the following attribute in the schema: align</para>
         /// </summary>
 
@@ -4984,7 +4984,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>overlay, this property is only available in Office2016</para>
+        /// <para>overlay</para>
         /// <para>Represents the following attribute in the schema: overlay</para>
         /// </summary>
 
@@ -5115,7 +5115,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>alignWithMargins, this property is only available in Office2016</para>
+        /// <para>alignWithMargins</para>
         /// <para>Represents the following attribute in the schema: alignWithMargins</para>
         /// </summary>
 
@@ -5131,7 +5131,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>differentOddEven, this property is only available in Office2016</para>
+        /// <para>differentOddEven</para>
         /// <para>Represents the following attribute in the schema: differentOddEven</para>
         /// </summary>
 
@@ -5147,7 +5147,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>differentFirst, this property is only available in Office2016</para>
+        /// <para>differentFirst</para>
         /// <para>Represents the following attribute in the schema: differentFirst</para>
         /// </summary>
 
@@ -5288,7 +5288,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>l, this property is only available in Office2016</para>
+        /// <para>l</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
 
@@ -5304,7 +5304,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>r, this property is only available in Office2016</para>
+        /// <para>r</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
 
@@ -5320,7 +5320,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>t, this property is only available in Office2016</para>
+        /// <para>t</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
 
@@ -5336,7 +5336,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>b, this property is only available in Office2016</para>
+        /// <para>b</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
 
@@ -5352,7 +5352,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>header, this property is only available in Office2016</para>
+        /// <para>header</para>
         /// <para>Represents the following attribute in the schema: header</para>
         /// </summary>
 
@@ -5368,7 +5368,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>footer, this property is only available in Office2016</para>
+        /// <para>footer</para>
         /// <para>Represents the following attribute in the schema: footer</para>
         /// </summary>
 
@@ -5437,7 +5437,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>paperSize, this property is only available in Office2016</para>
+        /// <para>paperSize</para>
         /// <para>Represents the following attribute in the schema: paperSize</para>
         /// </summary>
 
@@ -5453,7 +5453,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>firstPageNumber, this property is only available in Office2016</para>
+        /// <para>firstPageNumber</para>
         /// <para>Represents the following attribute in the schema: firstPageNumber</para>
         /// </summary>
 
@@ -5469,7 +5469,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>orientation, this property is only available in Office2016</para>
+        /// <para>orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
 
@@ -5485,7 +5485,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>blackAndWhite, this property is only available in Office2016</para>
+        /// <para>blackAndWhite</para>
         /// <para>Represents the following attribute in the schema: blackAndWhite</para>
         /// </summary>
 
@@ -5501,7 +5501,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>draft, this property is only available in Office2016</para>
+        /// <para>draft</para>
         /// <para>Represents the following attribute in the schema: draft</para>
         /// </summary>
 
@@ -5517,7 +5517,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>useFirstPageNumber, this property is only available in Office2016</para>
+        /// <para>useFirstPageNumber</para>
         /// <para>Represents the following attribute in the schema: useFirstPageNumber</para>
         /// </summary>
 
@@ -5533,7 +5533,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>horizontalDpi, this property is only available in Office2016</para>
+        /// <para>horizontalDpi</para>
         /// <para>Represents the following attribute in the schema: horizontalDpi</para>
         /// </summary>
 
@@ -5549,7 +5549,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>verticalDpi, this property is only available in Office2016</para>
+        /// <para>verticalDpi</para>
         /// <para>Represents the following attribute in the schema: verticalDpi</para>
         /// </summary>
 
@@ -5565,7 +5565,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>copies, this property is only available in Office2016</para>
+        /// <para>copies</para>
         /// <para>Represents the following attribute in the schema: copies</para>
         /// </summary>
 
@@ -6275,7 +6275,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>dir, this property is only available in Office2016</para>
+        /// <para>dir</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
 
@@ -6351,7 +6351,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>ptCount, this property is only available in Office2016</para>
+        /// <para>ptCount</para>
         /// <para>Represents the following attribute in the schema: ptCount</para>
         /// </summary>
 
@@ -6435,7 +6435,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>ptCount, this property is only available in Office2016</para>
+        /// <para>ptCount</para>
         /// <para>Represents the following attribute in the schema: ptCount</para>
         /// </summary>
 
@@ -6451,7 +6451,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>formatCode, this property is only available in Office2016</para>
+        /// <para>formatCode</para>
         /// <para>Represents the following attribute in the schema: formatCode</para>
         /// </summary>
 

@@ -695,7 +695,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>anchorId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>anchorId</para>
         /// <para>Represents the following attribute in the schema: wp14:anchorId</para>
         /// </summary>
         /// <remark>
@@ -714,7 +714,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>editId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>editId</para>
         /// <para>Represents the following attribute in the schema: wp14:editId</para>
         /// </summary>
         /// <remark>
@@ -1073,7 +1073,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         }
 
         /// <summary>
-        /// <para>editId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>editId</para>
         /// <para>Represents the following attribute in the schema: wp14:editId</para>
         /// </summary>
         /// <remark>
@@ -1092,7 +1092,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         }
 
         /// <summary>
-        /// <para>anchorId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>anchorId</para>
         /// <para>Represents the following attribute in the schema: wp14:anchorId</para>
         /// </summary>
         /// <remark>

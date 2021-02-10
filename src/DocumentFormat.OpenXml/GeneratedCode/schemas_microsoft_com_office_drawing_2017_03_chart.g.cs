@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
 {
     /// <summary>
     /// <para>Defines the DataDisplayOptions16 Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16r3:dataDisplayOptions16.</para>
     /// </summary>
     /// <remark>
@@ -64,10 +64,11 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(101, "dataDisplayOptions16");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<BooleanFalse>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -90,7 +91,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
 
     /// <summary>
     /// <para>Defines the BooleanFalse Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16r3:dispNaAsBlank.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -128,6 +129,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(101, "dispNaAsBlank");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<BooleanFalse>()
 .AddAttribute(101, "val", a => a.Val, aBuilder =>
 {

@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
 {
     /// <summary>
     /// <para>Defines the CalcFeatures Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xcalcf:calcFeatures.</para>
     /// </summary>
     /// <remark>
@@ -64,10 +64,11 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(99, "calcFeatures");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<CalcFeature>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -77,7 +78,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
 
     /// <summary>
     /// <para>Defines the CalcFeature Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xcalcf:feature.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -112,6 +113,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(99, "feature");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<CalcFeature>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {

@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -111,7 +111,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -127,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -159,7 +159,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -175,7 +175,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -191,7 +191,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -207,7 +207,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -223,7 +223,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -255,7 +255,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -271,7 +271,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -287,7 +287,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -303,7 +303,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -319,7 +319,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -335,7 +335,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -351,7 +351,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -367,7 +367,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -383,7 +383,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -399,7 +399,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -415,7 +415,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -431,7 +431,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -568,7 +568,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -584,7 +584,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -600,7 +600,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -616,7 +616,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -632,7 +632,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -648,7 +648,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -664,7 +664,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -680,7 +680,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -696,7 +696,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -712,7 +712,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -728,7 +728,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -744,7 +744,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -760,7 +760,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -776,7 +776,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -792,7 +792,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -808,7 +808,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -824,7 +824,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -840,7 +840,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -856,7 +856,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -872,7 +872,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -888,7 +888,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -904,7 +904,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -920,7 +920,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -936,7 +936,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -952,7 +952,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -968,7 +968,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -984,7 +984,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -1000,7 +1000,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -1016,7 +1016,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -1032,7 +1032,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -1186,7 +1186,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
 
@@ -1202,7 +1202,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -1218,7 +1218,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -1234,7 +1234,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -1250,7 +1250,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -1266,7 +1266,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -1282,7 +1282,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -1298,7 +1298,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -1314,7 +1314,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -1330,7 +1330,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -1346,7 +1346,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -1362,7 +1362,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -1378,7 +1378,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -1394,7 +1394,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -1410,7 +1410,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -1426,7 +1426,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -1442,7 +1442,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -1458,7 +1458,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -1474,7 +1474,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -1490,7 +1490,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -1506,7 +1506,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -1522,7 +1522,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -1538,7 +1538,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -1554,7 +1554,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -1720,7 +1720,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -1736,7 +1736,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -1752,7 +1752,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
 
@@ -1768,7 +1768,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>columns, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>columns</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
 
@@ -1784,7 +1784,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>rows, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>rows</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
 
@@ -1800,7 +1800,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>itemWidth, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>itemWidth</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
 
@@ -1816,7 +1816,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>itemHeight, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>itemHeight</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
 
@@ -1832,7 +1832,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemWidth, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemWidth</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
 
@@ -1848,7 +1848,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemHeight, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemHeight</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
 
@@ -1864,7 +1864,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showItemLabel</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
 
@@ -1880,7 +1880,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showInRibbon, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showInRibbon</para>
         /// <para>Represents the following attribute in the schema: showInRibbon</para>
         /// </summary>
 
@@ -1896,7 +1896,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -1912,7 +1912,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -1928,7 +1928,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -1944,7 +1944,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -1960,7 +1960,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -1976,7 +1976,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -1992,7 +1992,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showItemImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
 
@@ -2008,7 +2008,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
 
@@ -2024,7 +2024,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
 
@@ -2040,7 +2040,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
 
@@ -2056,7 +2056,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
 
@@ -2072,7 +2072,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
 
@@ -2088,7 +2088,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
 
@@ -2104,7 +2104,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
 
@@ -2120,7 +2120,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSelectedItemID, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSelectedItemID</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
 
@@ -2136,7 +2136,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
 
@@ -2152,7 +2152,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -2168,7 +2168,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -2184,7 +2184,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -2200,7 +2200,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -2216,7 +2216,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -2232,7 +2232,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -2248,7 +2248,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -2264,7 +2264,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -2280,7 +2280,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -2296,7 +2296,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -2312,7 +2312,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -2328,7 +2328,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -2344,7 +2344,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -2360,7 +2360,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -2376,7 +2376,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -2392,7 +2392,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -2408,7 +2408,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -2424,7 +2424,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -2440,7 +2440,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -2456,7 +2456,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -2472,7 +2472,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -2488,7 +2488,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -2718,7 +2718,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
 
@@ -2734,7 +2734,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -2750,7 +2750,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -2766,7 +2766,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -2782,7 +2782,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -2798,7 +2798,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -2814,7 +2814,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -2830,7 +2830,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -2846,7 +2846,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -2862,7 +2862,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -2878,7 +2878,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -2894,7 +2894,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -2910,7 +2910,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -2926,7 +2926,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -2942,7 +2942,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -2958,7 +2958,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -2974,7 +2974,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -2990,7 +2990,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -3006,7 +3006,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -3022,7 +3022,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -3038,7 +3038,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -3054,7 +3054,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -3070,7 +3070,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -3086,7 +3086,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -3102,7 +3102,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -3118,7 +3118,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -3134,7 +3134,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -3150,7 +3150,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -3166,7 +3166,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -3182,7 +3182,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -3198,7 +3198,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -3355,7 +3355,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -3371,7 +3371,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -3387,7 +3387,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -3403,7 +3403,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -3419,7 +3419,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -3435,7 +3435,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -3451,7 +3451,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -3467,7 +3467,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>title, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
 
@@ -3483,7 +3483,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getTitle, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
 
@@ -3596,7 +3596,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -3612,7 +3612,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -3628,7 +3628,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -3644,7 +3644,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -3660,7 +3660,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -3676,7 +3676,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -3692,7 +3692,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -3708,7 +3708,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -3724,7 +3724,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -3740,7 +3740,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -3756,7 +3756,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -3772,7 +3772,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -3788,7 +3788,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -3804,7 +3804,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -3820,7 +3820,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -3836,7 +3836,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -3989,7 +3989,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
 
@@ -4005,7 +4005,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -4021,7 +4021,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -4037,7 +4037,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -4053,7 +4053,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -4069,7 +4069,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -4085,7 +4085,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -4101,7 +4101,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -4117,7 +4117,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -4133,7 +4133,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -4149,7 +4149,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -4165,7 +4165,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -4181,7 +4181,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -4197,7 +4197,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -4213,7 +4213,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -4229,7 +4229,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -4245,7 +4245,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -4261,7 +4261,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -4277,7 +4277,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -4293,7 +4293,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -4309,7 +4309,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -4325,7 +4325,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -4341,7 +4341,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -4357,7 +4357,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -4373,7 +4373,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -4389,7 +4389,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -4405,7 +4405,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -4421,7 +4421,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -4437,7 +4437,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -4453,7 +4453,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -4642,7 +4642,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -4658,7 +4658,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -4674,7 +4674,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -4690,7 +4690,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -4706,7 +4706,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -4722,7 +4722,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -4738,7 +4738,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getContent, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getContent</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
 
@@ -4754,7 +4754,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
 
@@ -4770,7 +4770,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -4786,7 +4786,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -4802,7 +4802,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -4818,7 +4818,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -4834,7 +4834,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -4850,7 +4850,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -4866,7 +4866,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -4882,7 +4882,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -4898,7 +4898,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -4914,7 +4914,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -4930,7 +4930,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -4946,7 +4946,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -4962,7 +4962,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -4978,7 +4978,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -4994,7 +4994,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -5010,7 +5010,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -5026,7 +5026,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -5042,7 +5042,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -5058,7 +5058,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -5074,7 +5074,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -5090,7 +5090,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -5106,7 +5106,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -5122,7 +5122,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -5309,7 +5309,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -5325,7 +5325,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -5341,7 +5341,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -5357,7 +5357,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -5373,7 +5373,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -5389,7 +5389,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -5405,7 +5405,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -5421,7 +5421,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -5437,7 +5437,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -5453,7 +5453,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -5469,7 +5469,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -5485,7 +5485,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -5501,7 +5501,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -5517,7 +5517,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -5533,7 +5533,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -5549,7 +5549,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -5702,7 +5702,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -5718,7 +5718,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -5734,7 +5734,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -5750,7 +5750,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -5766,7 +5766,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
 
@@ -5782,7 +5782,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>title, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
 
@@ -5798,7 +5798,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getTitle, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
 
@@ -5814,7 +5814,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -5830,7 +5830,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -5846,7 +5846,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -5862,7 +5862,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -5878,7 +5878,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -5894,7 +5894,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -5910,7 +5910,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -5926,7 +5926,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -5942,7 +5942,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -5958,7 +5958,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -5974,7 +5974,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -5990,7 +5990,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -6006,7 +6006,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -6022,7 +6022,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -6038,7 +6038,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -6054,7 +6054,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -6070,7 +6070,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -6086,7 +6086,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -6102,7 +6102,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -6118,7 +6118,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -6134,7 +6134,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -6150,7 +6150,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -6166,7 +6166,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -6355,7 +6355,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -6371,7 +6371,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -6387,7 +6387,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -6403,7 +6403,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -6419,7 +6419,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -6435,7 +6435,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -6451,7 +6451,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -6524,7 +6524,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
 
@@ -6540,7 +6540,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
 
@@ -6556,7 +6556,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -6572,7 +6572,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -6588,7 +6588,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -6604,7 +6604,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -6620,7 +6620,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -6636,7 +6636,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -6652,7 +6652,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -6668,7 +6668,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -6684,7 +6684,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -6700,7 +6700,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -6716,7 +6716,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -6732,7 +6732,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -6748,7 +6748,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -6764,7 +6764,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -6780,7 +6780,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -6796,7 +6796,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -6812,7 +6812,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -6828,7 +6828,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -6844,7 +6844,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -6860,7 +6860,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -6876,7 +6876,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -6892,7 +6892,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -6908,7 +6908,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -6924,7 +6924,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -6940,7 +6940,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -6956,7 +6956,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -6972,7 +6972,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -6988,7 +6988,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -7139,7 +7139,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -7155,7 +7155,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -7171,7 +7171,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -7187,7 +7187,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -7203,7 +7203,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -7219,7 +7219,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -7235,7 +7235,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -7251,7 +7251,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -7267,7 +7267,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -7283,7 +7283,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -7299,7 +7299,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -7315,7 +7315,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -7331,7 +7331,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -7347,7 +7347,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -7363,7 +7363,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -7379,7 +7379,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -7395,7 +7395,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -7411,7 +7411,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -7427,7 +7427,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -7443,7 +7443,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -7559,7 +7559,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
 
@@ -7575,7 +7575,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
 
@@ -7591,7 +7591,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -7607,7 +7607,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -7623,7 +7623,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -7639,7 +7639,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -7655,7 +7655,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -7671,7 +7671,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -7687,7 +7687,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -7703,7 +7703,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -7719,7 +7719,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -7735,7 +7735,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -7751,7 +7751,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -7767,7 +7767,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -7783,7 +7783,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -7799,7 +7799,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -7815,7 +7815,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -7831,7 +7831,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -7847,7 +7847,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -7863,7 +7863,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -7879,7 +7879,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -7895,7 +7895,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -7911,7 +7911,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -7927,7 +7927,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -7943,7 +7943,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -7959,7 +7959,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -7975,7 +7975,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -7991,7 +7991,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -8007,7 +8007,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -8023,7 +8023,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -8039,7 +8039,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -8055,7 +8055,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -8214,7 +8214,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
 
@@ -8230,7 +8230,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
 
@@ -8246,7 +8246,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
 
@@ -8262,7 +8262,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -8278,7 +8278,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -8294,7 +8294,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -8310,7 +8310,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -8326,7 +8326,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -8342,7 +8342,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -8358,7 +8358,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -8374,7 +8374,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -8390,7 +8390,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -8406,7 +8406,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -8422,7 +8422,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -8438,7 +8438,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -8454,7 +8454,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -8470,7 +8470,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -8486,7 +8486,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -8502,7 +8502,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -8518,7 +8518,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -8534,7 +8534,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -8550,7 +8550,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -8566,7 +8566,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -8582,7 +8582,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -8598,7 +8598,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -8614,7 +8614,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -8630,7 +8630,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -8646,7 +8646,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -8662,7 +8662,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -8678,7 +8678,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -8694,7 +8694,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -8710,7 +8710,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -8726,7 +8726,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -8888,7 +8888,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -8904,7 +8904,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -8920,7 +8920,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -8936,7 +8936,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -8952,7 +8952,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -8968,7 +8968,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>maxLength, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>maxLength</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
 
@@ -8984,7 +8984,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getText, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getText</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
 
@@ -9000,7 +9000,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onChange, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onChange</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
 
@@ -9016,7 +9016,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
 
@@ -9032,7 +9032,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -9048,7 +9048,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -9064,7 +9064,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -9080,7 +9080,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -9096,7 +9096,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -9112,7 +9112,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -9128,7 +9128,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -9144,7 +9144,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -9160,7 +9160,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -9176,7 +9176,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -9192,7 +9192,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -9208,7 +9208,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -9224,7 +9224,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -9240,7 +9240,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -9256,7 +9256,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -9272,7 +9272,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -9288,7 +9288,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -9304,7 +9304,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -9320,7 +9320,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -9336,7 +9336,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -9352,7 +9352,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -9368,7 +9368,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -9555,7 +9555,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showItemImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
 
@@ -9571,7 +9571,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
 
@@ -9587,7 +9587,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
 
@@ -9603,7 +9603,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
 
@@ -9619,7 +9619,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
 
@@ -9635,7 +9635,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
 
@@ -9651,7 +9651,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
 
@@ -9667,7 +9667,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
 
@@ -9683,7 +9683,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
 
@@ -9699,7 +9699,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -9715,7 +9715,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -9731,7 +9731,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -9747,7 +9747,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -9763,7 +9763,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -9779,7 +9779,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>maxLength, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>maxLength</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
 
@@ -9795,7 +9795,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getText, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getText</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
 
@@ -9811,7 +9811,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onChange, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onChange</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
 
@@ -9827,7 +9827,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -9843,7 +9843,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -9859,7 +9859,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -9875,7 +9875,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -9891,7 +9891,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -9907,7 +9907,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -9923,7 +9923,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -9939,7 +9939,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -9955,7 +9955,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -9971,7 +9971,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -9987,7 +9987,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -10003,7 +10003,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -10019,7 +10019,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -10035,7 +10035,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -10051,7 +10051,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -10067,7 +10067,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -10083,7 +10083,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -10099,7 +10099,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -10115,7 +10115,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -10131,7 +10131,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -10147,7 +10147,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -10163,7 +10163,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -10385,7 +10385,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -10401,7 +10401,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -10417,7 +10417,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -10433,7 +10433,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -10449,7 +10449,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -10465,7 +10465,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -10481,7 +10481,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showItemImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
 
@@ -10497,7 +10497,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
 
@@ -10513,7 +10513,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
 
@@ -10529,7 +10529,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
 
@@ -10545,7 +10545,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
 
@@ -10561,7 +10561,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
 
@@ -10577,7 +10577,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
 
@@ -10593,7 +10593,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
 
@@ -10609,7 +10609,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSelectedItemID, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSelectedItemID</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
 
@@ -10625,7 +10625,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
 
@@ -10641,7 +10641,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showItemLabel</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
 
@@ -10657,7 +10657,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -10673,7 +10673,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -10689,7 +10689,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -10705,7 +10705,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -10721,7 +10721,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -10737,7 +10737,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -10753,7 +10753,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -10769,7 +10769,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -10785,7 +10785,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -10801,7 +10801,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -10817,7 +10817,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -10833,7 +10833,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -10849,7 +10849,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -10865,7 +10865,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -10881,7 +10881,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -10897,7 +10897,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -10913,7 +10913,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -10929,7 +10929,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -10945,7 +10945,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -10961,7 +10961,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -10977,7 +10977,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -10993,7 +10993,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -11217,7 +11217,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
 
@@ -11233,7 +11233,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
 
@@ -11249,7 +11249,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -11265,7 +11265,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -11281,7 +11281,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
 
@@ -11297,7 +11297,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>columns, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>columns</para>
         /// <para>Represents the following attribute in the schema: columns</para>
         /// </summary>
 
@@ -11313,7 +11313,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>rows, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>rows</para>
         /// <para>Represents the following attribute in the schema: rows</para>
         /// </summary>
 
@@ -11329,7 +11329,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>itemWidth, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>itemWidth</para>
         /// <para>Represents the following attribute in the schema: itemWidth</para>
         /// </summary>
 
@@ -11345,7 +11345,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>itemHeight, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>itemHeight</para>
         /// <para>Represents the following attribute in the schema: itemHeight</para>
         /// </summary>
 
@@ -11361,7 +11361,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemWidth, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemWidth</para>
         /// <para>Represents the following attribute in the schema: getItemWidth</para>
         /// </summary>
 
@@ -11377,7 +11377,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemHeight, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemHeight</para>
         /// <para>Represents the following attribute in the schema: getItemHeight</para>
         /// </summary>
 
@@ -11393,7 +11393,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showItemLabel</para>
         /// <para>Represents the following attribute in the schema: showItemLabel</para>
         /// </summary>
 
@@ -11409,7 +11409,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showInRibbon, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showInRibbon</para>
         /// <para>Represents the following attribute in the schema: showInRibbon</para>
         /// </summary>
 
@@ -11425,7 +11425,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -11441,7 +11441,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -11457,7 +11457,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -11473,7 +11473,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -11489,7 +11489,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -11505,7 +11505,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -11521,7 +11521,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showItemImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showItemImage</para>
         /// <para>Represents the following attribute in the schema: showItemImage</para>
         /// </summary>
 
@@ -11537,7 +11537,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
 
@@ -11553,7 +11553,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
 
@@ -11569,7 +11569,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemScreentip</para>
         /// <para>Represents the following attribute in the schema: getItemScreentip</para>
         /// </summary>
 
@@ -11585,7 +11585,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemSupertip</para>
         /// <para>Represents the following attribute in the schema: getItemSupertip</para>
         /// </summary>
 
@@ -11601,7 +11601,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemImage</para>
         /// <para>Represents the following attribute in the schema: getItemImage</para>
         /// </summary>
 
@@ -11617,7 +11617,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
 
@@ -11633,7 +11633,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
 
@@ -11649,7 +11649,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSelectedItemID, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSelectedItemID</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemID</para>
         /// </summary>
 
@@ -11665,7 +11665,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
 
@@ -11681,7 +11681,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -11697,7 +11697,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -11713,7 +11713,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -11729,7 +11729,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -11745,7 +11745,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -11761,7 +11761,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -11777,7 +11777,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -11793,7 +11793,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -11809,7 +11809,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -11825,7 +11825,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -11841,7 +11841,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -11857,7 +11857,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -11873,7 +11873,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -11889,7 +11889,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -11905,7 +11905,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -11921,7 +11921,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -11937,7 +11937,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -11953,7 +11953,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -11969,7 +11969,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -11985,7 +11985,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -12001,7 +12001,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -12017,7 +12017,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -12293,7 +12293,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
 
@@ -12309,7 +12309,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
 
@@ -12325,7 +12325,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
 
@@ -12341,7 +12341,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -12357,7 +12357,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -12373,7 +12373,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -12389,7 +12389,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -12405,7 +12405,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -12421,7 +12421,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -12437,7 +12437,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -12453,7 +12453,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -12469,7 +12469,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -12485,7 +12485,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -12501,7 +12501,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -12517,7 +12517,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -12533,7 +12533,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -12549,7 +12549,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -12565,7 +12565,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -12581,7 +12581,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -12597,7 +12597,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -12613,7 +12613,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -12629,7 +12629,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -12645,7 +12645,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -12661,7 +12661,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -12677,7 +12677,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -12693,7 +12693,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -12709,7 +12709,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -12725,7 +12725,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -12741,7 +12741,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -12757,7 +12757,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -12773,7 +12773,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -12789,7 +12789,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -12986,7 +12986,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
 
@@ -13002,7 +13002,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
 
@@ -13018,7 +13018,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -13034,7 +13034,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -13050,7 +13050,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -13066,7 +13066,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -13082,7 +13082,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -13098,7 +13098,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -13114,7 +13114,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getContent, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getContent</para>
         /// <para>Represents the following attribute in the schema: getContent</para>
         /// </summary>
 
@@ -13130,7 +13130,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>invalidateContentOnDrop, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>invalidateContentOnDrop</para>
         /// <para>Represents the following attribute in the schema: invalidateContentOnDrop</para>
         /// </summary>
 
@@ -13146,7 +13146,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -13162,7 +13162,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -13178,7 +13178,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -13194,7 +13194,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -13210,7 +13210,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -13226,7 +13226,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -13242,7 +13242,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -13258,7 +13258,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -13274,7 +13274,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -13290,7 +13290,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -13306,7 +13306,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -13322,7 +13322,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -13338,7 +13338,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -13354,7 +13354,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -13370,7 +13370,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -13386,7 +13386,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -13402,7 +13402,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -13418,7 +13418,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -13434,7 +13434,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -13450,7 +13450,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -13466,7 +13466,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -13482,7 +13482,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -13498,7 +13498,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -13690,7 +13690,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
 
@@ -13706,7 +13706,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
 
@@ -13722,7 +13722,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -13738,7 +13738,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -13754,7 +13754,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -13770,7 +13770,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -13786,7 +13786,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -13802,7 +13802,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -13818,7 +13818,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -13834,7 +13834,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -13850,7 +13850,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -13866,7 +13866,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -13882,7 +13882,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -13898,7 +13898,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -13914,7 +13914,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -13930,7 +13930,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -13946,7 +13946,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -13962,7 +13962,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -14128,7 +14128,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -14144,7 +14144,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -14160,7 +14160,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -14176,7 +14176,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -14192,7 +14192,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -14208,7 +14208,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -14224,7 +14224,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -14240,7 +14240,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -14256,7 +14256,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -14272,7 +14272,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>boxStyle, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>boxStyle</para>
         /// <para>Represents the following attribute in the schema: boxStyle</para>
         /// </summary>
 
@@ -14422,7 +14422,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -14438,7 +14438,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -14454,7 +14454,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -14470,7 +14470,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -14486,7 +14486,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -14502,7 +14502,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -14518,7 +14518,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -14534,7 +14534,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -14550,7 +14550,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -14650,7 +14650,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -14666,7 +14666,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -14682,7 +14682,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -14698,7 +14698,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -14714,7 +14714,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -14730,7 +14730,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -14746,7 +14746,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>isDefinitive</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
 
@@ -14762,7 +14762,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -14778,7 +14778,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -14794,7 +14794,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -14810,7 +14810,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -14826,7 +14826,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -14842,7 +14842,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -14858,7 +14858,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -14874,7 +14874,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -14890,7 +14890,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -14906,7 +14906,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -14922,7 +14922,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -15030,7 +15030,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -15046,7 +15046,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -15062,7 +15062,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -15078,7 +15078,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -15094,7 +15094,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -15110,7 +15110,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -15126,7 +15126,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
 
@@ -15142,7 +15142,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -15158,7 +15158,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -15174,7 +15174,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -15190,7 +15190,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -15206,7 +15206,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -15222,7 +15222,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -15238,7 +15238,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -15254,7 +15254,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -15383,7 +15383,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -15399,7 +15399,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -15415,7 +15415,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -15431,7 +15431,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -15447,7 +15447,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -15463,7 +15463,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -15479,7 +15479,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -15495,7 +15495,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -15511,7 +15511,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -15527,7 +15527,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -15543,7 +15543,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -15559,7 +15559,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -15575,7 +15575,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -15591,7 +15591,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -15607,7 +15607,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -15623,7 +15623,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -15737,7 +15737,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -15753,7 +15753,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -15769,7 +15769,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -15785,7 +15785,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -15801,7 +15801,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -15817,7 +15817,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -15833,7 +15833,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -15849,7 +15849,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -15865,7 +15865,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -15881,7 +15881,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
 
@@ -15897,7 +15897,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -15913,7 +15913,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -15929,7 +15929,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -15945,7 +15945,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -15961,7 +15961,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -15977,7 +15977,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -15993,7 +15993,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -16009,7 +16009,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -16120,7 +16120,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>expand</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
 
@@ -16136,7 +16136,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>style, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>style</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
 
@@ -16152,7 +16152,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -16168,7 +16168,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -16184,7 +16184,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -16200,7 +16200,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -16216,7 +16216,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -16232,7 +16232,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -16248,7 +16248,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -16264,7 +16264,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -16280,7 +16280,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>isDefinitive</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
 
@@ -16296,7 +16296,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -16312,7 +16312,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -16328,7 +16328,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -16344,7 +16344,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -16360,7 +16360,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -16376,7 +16376,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -16392,7 +16392,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -16408,7 +16408,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -16424,7 +16424,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -16440,7 +16440,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -16456,7 +16456,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -16574,7 +16574,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>expand</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
 
@@ -16590,7 +16590,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -16606,7 +16606,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -16622,7 +16622,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -16638,7 +16638,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -16654,7 +16654,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -16670,7 +16670,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -16686,7 +16686,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -16702,7 +16702,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -16718,7 +16718,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -16734,7 +16734,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -16750,7 +16750,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
 
@@ -16766,7 +16766,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -16782,7 +16782,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -16798,7 +16798,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -16814,7 +16814,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -16830,7 +16830,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -16846,7 +16846,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -16862,7 +16862,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -16878,7 +16878,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -16994,7 +16994,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -17010,7 +17010,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -17026,7 +17026,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -17042,7 +17042,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>alignLabel</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
 
@@ -17058,7 +17058,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>expand</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
 
@@ -17074,7 +17074,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -17090,7 +17090,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -17106,7 +17106,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -17122,7 +17122,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -17138,7 +17138,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -17154,7 +17154,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -17170,7 +17170,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -17186,7 +17186,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -17202,7 +17202,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getText, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getText</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
 
@@ -17218,7 +17218,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onChange, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onChange</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
 
@@ -17234,7 +17234,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>maxLength, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>maxLength</para>
         /// <para>Represents the following attribute in the schema: maxLength</para>
         /// </summary>
 
@@ -17250,7 +17250,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
 
@@ -17381,7 +17381,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -17397,7 +17397,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -17413,7 +17413,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -17429,7 +17429,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>alignLabel</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
 
@@ -17445,7 +17445,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>expand</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
 
@@ -17461,7 +17461,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -17477,7 +17477,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -17493,7 +17493,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -17509,7 +17509,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -17525,7 +17525,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -17541,7 +17541,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -17557,7 +17557,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -17573,7 +17573,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -17589,7 +17589,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -17605,7 +17605,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -17621,7 +17621,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -17637,7 +17637,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -17653,7 +17653,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -17669,7 +17669,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
 
@@ -17685,7 +17685,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
 
@@ -17701,7 +17701,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
 
@@ -17717,7 +17717,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
 
@@ -17733,7 +17733,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
 
@@ -17893,7 +17893,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -17909,7 +17909,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -17925,7 +17925,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -17941,7 +17941,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>alignLabel</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
 
@@ -17957,7 +17957,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>expand</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
 
@@ -17973,7 +17973,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -17989,7 +17989,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -18005,7 +18005,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -18021,7 +18021,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -18037,7 +18037,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -18053,7 +18053,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -18069,7 +18069,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -18085,7 +18085,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -18101,7 +18101,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -18117,7 +18117,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSelectedItemIndex, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSelectedItemIndex</para>
         /// <para>Represents the following attribute in the schema: getSelectedItemIndex</para>
         /// </summary>
 
@@ -18133,7 +18133,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
 
@@ -18149,7 +18149,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
 
@@ -18165,7 +18165,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
 
@@ -18305,7 +18305,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -18321,7 +18321,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -18337,7 +18337,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -18353,7 +18353,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>alignLabel</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
 
@@ -18369,7 +18369,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>expand</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
 
@@ -18385,7 +18385,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -18401,7 +18401,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -18417,7 +18417,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -18433,7 +18433,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -18449,7 +18449,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -18465,7 +18465,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -18481,7 +18481,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -18497,7 +18497,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -18513,7 +18513,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getText, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getText</para>
         /// <para>Represents the following attribute in the schema: getText</para>
         /// </summary>
 
@@ -18529,7 +18529,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onChange, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onChange</para>
         /// <para>Represents the following attribute in the schema: onChange</para>
         /// </summary>
 
@@ -18545,7 +18545,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>sizeString, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>sizeString</para>
         /// <para>Represents the following attribute in the schema: sizeString</para>
         /// </summary>
 
@@ -18561,7 +18561,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemCount, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemCount</para>
         /// <para>Represents the following attribute in the schema: getItemCount</para>
         /// </summary>
 
@@ -18577,7 +18577,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemLabel</para>
         /// <para>Represents the following attribute in the schema: getItemLabel</para>
         /// </summary>
 
@@ -18593,7 +18593,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getItemID, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getItemID</para>
         /// <para>Represents the following attribute in the schema: getItemID</para>
         /// </summary>
 
@@ -18707,7 +18707,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -18723,7 +18723,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -18739,7 +18739,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -18755,7 +18755,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>alignLabel</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
 
@@ -18771,7 +18771,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>expand</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
 
@@ -18787,7 +18787,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -18803,7 +18803,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -18819,7 +18819,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -18835,7 +18835,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -18851,7 +18851,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -18867,7 +18867,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -18883,7 +18883,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -18899,7 +18899,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -18915,7 +18915,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -18931,7 +18931,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -18947,7 +18947,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -18963,7 +18963,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -18979,7 +18979,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -18995,7 +18995,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -19011,7 +19011,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -19027,7 +19027,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -19043,7 +19043,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>target, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
 
@@ -19059,7 +19059,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getTarget, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getTarget</para>
         /// <para>Represents the following attribute in the schema: getTarget</para>
         /// </summary>
 
@@ -19184,7 +19184,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -19200,7 +19200,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -19216,7 +19216,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -19232,7 +19232,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>alignLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>alignLabel</para>
         /// <para>Represents the following attribute in the schema: alignLabel</para>
         /// </summary>
 
@@ -19248,7 +19248,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>expand</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
 
@@ -19264,7 +19264,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -19280,7 +19280,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -19296,7 +19296,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -19312,7 +19312,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -19328,7 +19328,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -19344,7 +19344,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -19360,7 +19360,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>noWrap, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>noWrap</para>
         /// <para>Represents the following attribute in the schema: noWrap</para>
         /// </summary>
 
@@ -19478,7 +19478,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -19494,7 +19494,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -19510,7 +19510,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -19526,7 +19526,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>expand</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
 
@@ -19542,7 +19542,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -19558,7 +19558,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -19695,7 +19695,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -19711,7 +19711,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -19727,7 +19727,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -19743,7 +19743,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>align, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>align</para>
         /// <para>Represents the following attribute in the schema: align</para>
         /// </summary>
 
@@ -19759,7 +19759,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>expand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>expand</para>
         /// <para>Represents the following attribute in the schema: expand</para>
         /// </summary>
 
@@ -19775,7 +19775,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>layoutChildren, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>layoutChildren</para>
         /// <para>Represents the following attribute in the schema: layoutChildren</para>
         /// </summary>
 
@@ -19866,7 +19866,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -19882,7 +19882,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -19898,7 +19898,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -19914,7 +19914,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -19930,7 +19930,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -19946,7 +19946,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -19962,7 +19962,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -19978,7 +19978,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -19994,7 +19994,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -20010,7 +20010,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -20026,7 +20026,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>altText, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>altText</para>
         /// <para>Represents the following attribute in the schema: altText</para>
         /// </summary>
 
@@ -20042,7 +20042,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getAltText, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getAltText</para>
         /// <para>Represents the following attribute in the schema: getAltText</para>
         /// </summary>
 
@@ -20161,7 +20161,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -20177,7 +20177,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -20193,7 +20193,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -20209,7 +20209,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -20225,7 +20225,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -20241,7 +20241,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -20257,7 +20257,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -20273,7 +20273,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -20289,7 +20289,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -20305,7 +20305,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -20321,7 +20321,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -20337,7 +20337,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -20353,7 +20353,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>style, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>style</para>
         /// <para>Represents the following attribute in the schema: style</para>
         /// </summary>
 
@@ -20369,7 +20369,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getStyle, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getStyle</para>
         /// <para>Represents the following attribute in the schema: getStyle</para>
         /// </summary>
 
@@ -20385,7 +20385,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>helperText, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>helperText</para>
         /// <para>Represents the following attribute in the schema: helperText</para>
         /// </summary>
 
@@ -20401,7 +20401,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getHelperText, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getHelperText</para>
         /// <para>Represents the following attribute in the schema: getHelperText</para>
         /// </summary>
 
@@ -20417,7 +20417,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -20433,7 +20433,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -20583,7 +20583,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -20599,7 +20599,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -20615,7 +20615,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -20631,7 +20631,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -20647,7 +20647,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -20663,7 +20663,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -20679,7 +20679,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -20695,7 +20695,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -20711,7 +20711,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -20727,7 +20727,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -20743,7 +20743,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -20759,7 +20759,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -20775,7 +20775,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>helperText, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>helperText</para>
         /// <para>Represents the following attribute in the schema: helperText</para>
         /// </summary>
 
@@ -20791,7 +20791,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getHelperText, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getHelperText</para>
         /// <para>Represents the following attribute in the schema: getHelperText</para>
         /// </summary>
 
@@ -20807,7 +20807,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -20823,7 +20823,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -20839,7 +20839,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>allowedTaskSizes, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>allowedTaskSizes</para>
         /// <para>Represents the following attribute in the schema: allowedTaskSizes</para>
         /// </summary>
 
@@ -20986,7 +20986,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>title, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
 
@@ -21002,7 +21002,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getTitle, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
 
@@ -21018,7 +21018,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
 
@@ -21141,7 +21141,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onLoad, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onLoad</para>
         /// <para>Represents the following attribute in the schema: onLoad</para>
         /// </summary>
 
@@ -21157,7 +21157,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>loadImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>loadImage</para>
         /// <para>Represents the following attribute in the schema: loadImage</para>
         /// </summary>
 
@@ -21304,7 +21304,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -21320,7 +21320,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -21336,7 +21336,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -21352,7 +21352,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -21368,7 +21368,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -21384,7 +21384,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -21453,7 +21453,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -21469,7 +21469,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -21485,7 +21485,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -21501,7 +21501,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -21517,7 +21517,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -21533,7 +21533,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -21549,7 +21549,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -21565,7 +21565,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -21581,7 +21581,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -21597,7 +21597,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -21613,7 +21613,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -21629,7 +21629,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -21645,7 +21645,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -21661,7 +21661,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -21677,7 +21677,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -21693,7 +21693,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -21709,7 +21709,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -21725,7 +21725,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -21741,7 +21741,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -21757,7 +21757,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -21773,7 +21773,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -21789,7 +21789,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -21805,7 +21805,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -21821,7 +21821,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -21837,7 +21837,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -21853,7 +21853,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -21869,7 +21869,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -21885,7 +21885,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -22033,7 +22033,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getPressed, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getPressed</para>
         /// <para>Represents the following attribute in the schema: getPressed</para>
         /// </summary>
 
@@ -22049,7 +22049,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -22065,7 +22065,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -22081,7 +22081,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -22097,7 +22097,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -22113,7 +22113,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -22129,7 +22129,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -22145,7 +22145,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -22161,7 +22161,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -22177,7 +22177,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -22193,7 +22193,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -22209,7 +22209,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -22225,7 +22225,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -22241,7 +22241,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -22257,7 +22257,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -22273,7 +22273,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -22289,7 +22289,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -22305,7 +22305,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -22321,7 +22321,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -22337,7 +22337,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -22353,7 +22353,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -22369,7 +22369,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -22385,7 +22385,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -22401,7 +22401,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -22417,7 +22417,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -22433,7 +22433,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -22449,7 +22449,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -22465,7 +22465,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -22481,7 +22481,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -22633,7 +22633,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -22649,7 +22649,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -22665,7 +22665,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -22681,7 +22681,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -22697,7 +22697,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -22713,7 +22713,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -22729,7 +22729,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -22745,7 +22745,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -22761,7 +22761,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -22960,7 +22960,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -22976,7 +22976,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -22992,7 +22992,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -23008,7 +23008,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -23024,7 +23024,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -23040,7 +23040,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -23056,7 +23056,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -23072,7 +23072,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -23088,7 +23088,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -23104,7 +23104,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -23120,7 +23120,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -23136,7 +23136,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -23152,7 +23152,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -23168,7 +23168,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -23184,7 +23184,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -23200,7 +23200,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -23216,7 +23216,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -23232,7 +23232,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -23248,7 +23248,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -23264,7 +23264,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -23280,7 +23280,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -23296,7 +23296,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>autoScale, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>autoScale</para>
         /// <para>Represents the following attribute in the schema: autoScale</para>
         /// </summary>
 
@@ -23312,7 +23312,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         }
 
         /// <summary>
-        /// <para>centerVertically, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>centerVertically</para>
         /// <para>Represents the following attribute in the schema: centerVertically</para>
         /// </summary>
 
@@ -23487,7 +23487,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -23503,7 +23503,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -23519,7 +23519,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -23535,7 +23535,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -23551,7 +23551,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -23567,7 +23567,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>size, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
 
@@ -23583,7 +23583,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSize</para>
         /// <para>Represents the following attribute in the schema: getSize</para>
         /// </summary>
 
@@ -23599,7 +23599,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -23615,7 +23615,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -23631,7 +23631,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -23647,7 +23647,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -23663,7 +23663,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -23679,7 +23679,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -23695,7 +23695,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -23711,7 +23711,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -23727,7 +23727,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -23743,7 +23743,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -23759,7 +23759,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -23775,7 +23775,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -23791,7 +23791,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -23807,7 +23807,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -23823,7 +23823,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -23839,7 +23839,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -23855,7 +23855,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -23871,7 +23871,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -23887,7 +23887,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -23903,7 +23903,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -23919,7 +23919,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -23935,7 +23935,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showImage</para>
         /// <para>Represents the following attribute in the schema: showImage</para>
         /// </summary>
 
@@ -23951,7 +23951,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowImage</para>
         /// <para>Represents the following attribute in the schema: getShowImage</para>
         /// </summary>
 
@@ -24325,7 +24325,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -24341,7 +24341,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -24357,7 +24357,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -24373,7 +24373,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -24389,7 +24389,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -24405,7 +24405,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -24421,7 +24421,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -24437,7 +24437,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -24453,7 +24453,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -24469,7 +24469,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -24485,7 +24485,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -24501,7 +24501,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -24517,7 +24517,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -24533,7 +24533,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -24669,7 +24669,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -24685,7 +24685,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -24701,7 +24701,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -24761,7 +24761,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -24777,7 +24777,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -24793,7 +24793,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -24809,7 +24809,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -25123,7 +25123,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -25255,7 +25255,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -25271,7 +25271,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -25287,7 +25287,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -25339,7 +25339,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -25355,7 +25355,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -25371,7 +25371,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -25387,7 +25387,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -25403,7 +25403,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -25419,7 +25419,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -25435,7 +25435,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -25451,7 +25451,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -25467,7 +25467,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>isDefinitive</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
 
@@ -25483,7 +25483,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -25499,7 +25499,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -25515,7 +25515,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -25531,7 +25531,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -25547,7 +25547,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -25563,7 +25563,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -25579,7 +25579,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -25595,7 +25595,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -25611,7 +25611,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -25627,7 +25627,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -25643,7 +25643,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -25789,7 +25789,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>screentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>screentip</para>
         /// <para>Represents the following attribute in the schema: screentip</para>
         /// </summary>
 
@@ -25805,7 +25805,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getScreentip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getScreentip</para>
         /// <para>Represents the following attribute in the schema: getScreentip</para>
         /// </summary>
 
@@ -25821,7 +25821,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>supertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>supertip</para>
         /// <para>Represents the following attribute in the schema: supertip</para>
         /// </summary>
 
@@ -25837,7 +25837,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getSupertip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getSupertip</para>
         /// <para>Represents the following attribute in the schema: getSupertip</para>
         /// </summary>
 
@@ -25853,7 +25853,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -25869,7 +25869,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -25885,7 +25885,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -25901,7 +25901,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -25917,7 +25917,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -25933,7 +25933,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -25949,7 +25949,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -25965,7 +25965,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -25981,7 +25981,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -25997,7 +25997,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -26013,7 +26013,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -26029,7 +26029,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -26045,7 +26045,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -26061,7 +26061,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -26216,7 +26216,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -26232,7 +26232,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -26248,7 +26248,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -26264,7 +26264,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -26280,7 +26280,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -26296,7 +26296,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>itemSize, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>itemSize</para>
         /// <para>Represents the following attribute in the schema: itemSize</para>
         /// </summary>
 
@@ -26751,7 +26751,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -26767,7 +26767,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -26783,7 +26783,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -26799,7 +26799,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -26815,7 +26815,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -26831,7 +26831,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -26847,7 +26847,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -26863,7 +26863,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -26879,7 +26879,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -26895,7 +26895,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -26911,7 +26911,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -26927,7 +26927,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -27022,7 +27022,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -27038,7 +27038,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -27054,7 +27054,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -27070,7 +27070,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -27086,7 +27086,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -27102,7 +27102,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -27118,7 +27118,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -27134,7 +27134,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -27150,7 +27150,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -27166,7 +27166,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>isDefinitive</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
 
@@ -27182,7 +27182,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -27198,7 +27198,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -27214,7 +27214,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -27230,7 +27230,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -27246,7 +27246,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -27262,7 +27262,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -27278,7 +27278,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -27294,7 +27294,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -27310,7 +27310,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -27326,7 +27326,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -27342,7 +27342,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -27358,7 +27358,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -27374,7 +27374,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -27532,7 +27532,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -27548,7 +27548,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -27564,7 +27564,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -27580,7 +27580,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -27596,7 +27596,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -27612,7 +27612,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -27628,7 +27628,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -27644,7 +27644,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -27660,7 +27660,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -27676,7 +27676,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -27692,7 +27692,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -27708,7 +27708,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -27833,7 +27833,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -27849,7 +27849,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -27865,7 +27865,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -27881,7 +27881,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -27897,7 +27897,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -27913,7 +27913,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -27929,7 +27929,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -27945,7 +27945,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -27961,7 +27961,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -27977,7 +27977,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -27993,7 +27993,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -28009,7 +28009,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -28025,7 +28025,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -28041,7 +28041,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -28057,7 +28057,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -28073,7 +28073,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -28089,7 +28089,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -28105,7 +28105,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>description, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
 
@@ -28121,7 +28121,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getDescription, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getDescription</para>
         /// <para>Represents the following attribute in the schema: getDescription</para>
         /// </summary>
 
@@ -28137,7 +28137,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -28153,7 +28153,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -28311,7 +28311,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -28327,7 +28327,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -28343,7 +28343,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -28359,7 +28359,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -28375,7 +28375,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -28391,7 +28391,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -28407,7 +28407,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -28423,7 +28423,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -28439,7 +28439,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>helperText, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>helperText</para>
         /// <para>Represents the following attribute in the schema: helperText</para>
         /// </summary>
 
@@ -28455,7 +28455,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getHelperText, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getHelperText</para>
         /// <para>Represents the following attribute in the schema: getHelperText</para>
         /// </summary>
 
@@ -28471,7 +28471,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>showLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>showLabel</para>
         /// <para>Represents the following attribute in the schema: showLabel</para>
         /// </summary>
 
@@ -28487,7 +28487,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getShowLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getShowLabel</para>
         /// <para>Represents the following attribute in the schema: getShowLabel</para>
         /// </summary>
 
@@ -28503,7 +28503,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>allowedTaskSizes, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>allowedTaskSizes</para>
         /// <para>Represents the following attribute in the schema: allowedTaskSizes</para>
         /// </summary>
 
@@ -28780,7 +28780,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -28796,7 +28796,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -28812,7 +28812,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -28828,7 +28828,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -28844,7 +28844,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -28860,7 +28860,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -28876,7 +28876,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -28892,7 +28892,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -28908,7 +28908,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -28924,7 +28924,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -28940,7 +28940,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -28956,7 +28956,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -28972,7 +28972,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -28988,7 +28988,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -29004,7 +29004,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -29020,7 +29020,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -29036,7 +29036,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>title, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
 
@@ -29052,7 +29052,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>getTitle, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getTitle</para>
         /// <para>Represents the following attribute in the schema: getTitle</para>
         /// </summary>
 
@@ -29068,7 +29068,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>columnWidthPercent, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>columnWidthPercent</para>
         /// <para>Represents the following attribute in the schema: columnWidthPercent</para>
         /// </summary>
 
@@ -29084,7 +29084,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>firstColumnMinWidth, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>firstColumnMinWidth</para>
         /// <para>Represents the following attribute in the schema: firstColumnMinWidth</para>
         /// </summary>
 
@@ -29100,7 +29100,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>firstColumnMaxWidth, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>firstColumnMaxWidth</para>
         /// <para>Represents the following attribute in the schema: firstColumnMaxWidth</para>
         /// </summary>
 
@@ -29116,7 +29116,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>secondColumnMinWidth, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>secondColumnMinWidth</para>
         /// <para>Represents the following attribute in the schema: secondColumnMinWidth</para>
         /// </summary>
 
@@ -29132,7 +29132,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>secondColumnMaxWidth, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>secondColumnMaxWidth</para>
         /// <para>Represents the following attribute in the schema: secondColumnMaxWidth</para>
         /// </summary>
 
@@ -29296,7 +29296,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>idMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idMso</para>
         /// <para>Represents the following attribute in the schema: idMso</para>
         /// </summary>
 
@@ -29312,7 +29312,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>insertAfterMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterMso</para>
         /// <para>Represents the following attribute in the schema: insertAfterMso</para>
         /// </summary>
 
@@ -29328,7 +29328,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>insertBeforeMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeMso</para>
         /// <para>Represents the following attribute in the schema: insertBeforeMso</para>
         /// </summary>
 
@@ -29344,7 +29344,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>insertAfterQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertAfterQ</para>
         /// <para>Represents the following attribute in the schema: insertAfterQ</para>
         /// </summary>
 
@@ -29360,7 +29360,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>insertBeforeQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>insertBeforeQ</para>
         /// <para>Represents the following attribute in the schema: insertBeforeQ</para>
         /// </summary>
 
@@ -29376,7 +29376,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -29392,7 +29392,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>idQ, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>idQ</para>
         /// <para>Represents the following attribute in the schema: idQ</para>
         /// </summary>
 
@@ -29408,7 +29408,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>tag, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tag</para>
         /// <para>Represents the following attribute in the schema: tag</para>
         /// </summary>
 
@@ -29424,7 +29424,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>onAction, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onAction</para>
         /// <para>Represents the following attribute in the schema: onAction</para>
         /// </summary>
 
@@ -29440,7 +29440,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>isDefinitive, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>isDefinitive</para>
         /// <para>Represents the following attribute in the schema: isDefinitive</para>
         /// </summary>
 
@@ -29456,7 +29456,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>enabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>enabled</para>
         /// <para>Represents the following attribute in the schema: enabled</para>
         /// </summary>
 
@@ -29472,7 +29472,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>getEnabled, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getEnabled</para>
         /// <para>Represents the following attribute in the schema: getEnabled</para>
         /// </summary>
 
@@ -29488,7 +29488,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>label, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>label</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -29504,7 +29504,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>getLabel, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getLabel</para>
         /// <para>Represents the following attribute in the schema: getLabel</para>
         /// </summary>
 
@@ -29520,7 +29520,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visible</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -29536,7 +29536,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>getVisible, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getVisible</para>
         /// <para>Represents the following attribute in the schema: getVisible</para>
         /// </summary>
 
@@ -29552,7 +29552,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>keytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>keytip</para>
         /// <para>Represents the following attribute in the schema: keytip</para>
         /// </summary>
 
@@ -29568,7 +29568,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>getKeytip, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getKeytip</para>
         /// <para>Represents the following attribute in the schema: getKeytip</para>
         /// </summary>
 
@@ -29584,7 +29584,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>image, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>image</para>
         /// <para>Represents the following attribute in the schema: image</para>
         /// </summary>
 
@@ -29600,7 +29600,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>imageMso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>imageMso</para>
         /// <para>Represents the following attribute in the schema: imageMso</para>
         /// </summary>
 
@@ -29616,7 +29616,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>getImage, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>getImage</para>
         /// <para>Represents the following attribute in the schema: getImage</para>
         /// </summary>
 
@@ -29831,7 +29831,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>startFromScratch, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>startFromScratch</para>
         /// <para>Represents the following attribute in the schema: startFromScratch</para>
         /// </summary>
 
@@ -29956,7 +29956,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onShow, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onShow</para>
         /// <para>Represents the following attribute in the schema: onShow</para>
         /// </summary>
 
@@ -29972,7 +29972,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         }
 
         /// <summary>
-        /// <para>onHide, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>onHide</para>
         /// <para>Represents the following attribute in the schema: onHide</para>
         /// </summary>
 

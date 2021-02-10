@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
 {
     /// <summary>
     /// <para>Defines the NumberDiagramInfoList Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm1611:autoBuNodeInfoLst.</para>
     /// </summary>
     /// <remark>
@@ -65,10 +65,11 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(103, "autoBuNodeInfoLst");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<NumberDiagramInfo>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -78,7 +79,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
 
     /// <summary>
     /// <para>Defines the DiagramAutoBullet Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm1611:buPr.</para>
     /// </summary>
     /// <remark>
@@ -162,6 +163,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(103, "buPr");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoBullet>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AutoNumberedBullet>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CharacterBullet>();
@@ -239,7 +241,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
 
     /// <summary>
     /// <para>Defines the NumberDiagramInfo Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm1611:autoBuNodeInfo.</para>
     /// </summary>
     /// <remark>
@@ -320,6 +322,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(103, "autoBuNodeInfo");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DiagramAutoBullet>();
             builder.AddElement<NumberDiagramInfo>()
 .AddAttribute(0, "lvl", a => a.Lvl, aBuilder =>
@@ -333,7 +336,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet), 1, 1, version: FileFormatVersions.Office2019)
             };
         }
 

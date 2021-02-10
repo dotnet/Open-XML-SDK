@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
 {
     /// <summary>
     /// <para>Defines the HyperlinkColor Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ahyp:hlinkClr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -49,6 +49,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(106, "hlinkClr");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<HyperlinkColor>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {

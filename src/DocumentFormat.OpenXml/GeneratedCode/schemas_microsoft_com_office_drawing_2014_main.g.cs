@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2016</para>
+        /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -80,7 +80,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>pred, this property is only available in Office2016</para>
+        /// <para>pred</para>
         /// <para>Represents the following attribute in the schema: pred</para>
         /// </summary>
 
@@ -129,7 +129,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>st, this property is only available in Office2016</para>
+        /// <para>st</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
 
@@ -145,7 +145,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>end, this property is only available in Office2016</para>
+        /// <para>end</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
 
@@ -251,7 +251,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2016</para>
+        /// <para>val</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 

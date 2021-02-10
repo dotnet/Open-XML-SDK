@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
 {
     /// <summary>
     /// <para>Defines the RichValueBlock Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:rvb.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -50,10 +50,11 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(98, "rvb");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichValueBlock>()
 .AddAttribute(0, "i", a => a.I, aBuilder =>
 {
-   aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(RequiredValidator.Instance);
 });
         }
 
@@ -63,7 +64,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
 
     /// <summary>
     /// <para>Defines the RichValueData Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:rvData.</para>
     /// </summary>
     /// <remark>
@@ -129,6 +130,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(98, "rvData");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichValue>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<RichValueData>()
@@ -138,8 +140,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -149,7 +151,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueStructures Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:rvStructures.</para>
     /// </summary>
     /// <remark>
@@ -215,6 +217,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(98, "rvStructures");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichValueStructure>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<RichValueStructures>()
@@ -224,8 +227,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -235,7 +238,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValue Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:rv.</para>
     /// </summary>
     /// <remark>
@@ -301,6 +304,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(98, "rv");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichValueFallback>();
             builder.AddChild<Value>();
             builder.AddElement<RichValue>()
@@ -310,8 +314,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.Value), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.Value), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -334,7 +338,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:extLst.</para>
     /// </summary>
     /// <remark>
@@ -383,6 +387,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(98, "extLst");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -402,7 +407,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueFallback Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:fb.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -450,6 +455,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(98, "fb");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichValueFallback>()
 .AddAttribute(0, "t", a => a.T);
         }
@@ -460,7 +466,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Value Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:v.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -492,6 +498,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(98, "v");
+            builder.Availability = FileFormatVersions.Office2019;
         }
 
         /// <inheritdoc/>
@@ -500,7 +507,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueStructure Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:s.</para>
     /// </summary>
     /// <remark>
@@ -565,6 +572,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(98, "s");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<Key>();
             builder.AddElement<RichValueStructure>()
 .AddAttribute(0, "t", a => a.T, aBuilder =>
@@ -573,7 +581,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.Key), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.Key), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -583,7 +591,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Key Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2019 or above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:k.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -634,12 +642,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(98, "k");
+            builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Key>()
- .AddAttribute(0, "n", a => a.N, aBuilder =>
- {
-     aBuilder.AddValidator(RequiredValidator.Instance);
- })
- .AddAttribute(0, "t", a => a.T);
+.AddAttribute(0, "n", a => a.N, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+})
+.AddAttribute(0, "t", a => a.T);
         }
 
         /// <inheritdoc/>
