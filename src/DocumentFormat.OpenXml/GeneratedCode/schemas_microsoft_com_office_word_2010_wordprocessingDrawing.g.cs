@@ -145,7 +145,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         }
 
         /// <summary>
-        /// <para>relativeFrom</para>
+        /// <para>relativeFrom, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
 
@@ -243,7 +243,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>relativeFrom</para>
+        /// <para>relativeFrom, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
 

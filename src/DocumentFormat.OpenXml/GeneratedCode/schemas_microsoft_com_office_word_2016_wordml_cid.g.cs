@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
         }
 
         /// <summary>
-        /// <para>paraId</para>
+        /// <para>paraId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: w16cid:paraId</para>
         /// </summary>
         /// <remark>
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
         }
 
         /// <summary>
-        /// <para>durableId</para>
+        /// <para>durableId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: w16cid:durableId</para>
         /// </summary>
         /// <remark>

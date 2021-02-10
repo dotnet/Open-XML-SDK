@@ -8323,7 +8323,7 @@ aBuilder.AddUnion(union =>
         }
 
         /// <summary>
-        /// <para>start, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>start, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:start</para>
         /// </summary>
         /// <remark>
@@ -8361,7 +8361,7 @@ aBuilder.AddUnion(union =>
         }
 
         /// <summary>
-        /// <para>startChars, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>startChars, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:startChars</para>
         /// </summary>
         /// <remark>
@@ -8399,7 +8399,7 @@ aBuilder.AddUnion(union =>
         }
 
         /// <summary>
-        /// <para>end, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>end, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:end</para>
         /// </summary>
         /// <remark>
@@ -8437,7 +8437,7 @@ aBuilder.AddUnion(union =>
         }
 
         /// <summary>
-        /// <para>endChars, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>endChars, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:endChars</para>
         /// </summary>
         /// <remark>
@@ -10612,7 +10612,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>anchorId</para>
+        /// <para>anchorId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:anchorId</para>
         /// </summary>
         /// <remark>
@@ -10759,7 +10759,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         }
 
         /// <summary>
-        /// <para>anchorId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>anchorId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:anchorId</para>
         /// </summary>
         /// <remark>
@@ -14713,7 +14713,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>Glow.</para>
+        /// <para>Glow, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:glow.</para>
         /// </summary>
         /// <remark>
@@ -14726,7 +14726,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>Shadow14.</para>
+        /// <para>Shadow14, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:shadow.</para>
         /// </summary>
         /// <remark>
@@ -14739,7 +14739,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>Reflection.</para>
+        /// <para>Reflection, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:reflection.</para>
         /// </summary>
         /// <remark>
@@ -14752,7 +14752,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>TextOutlineEffect.</para>
+        /// <para>TextOutlineEffect, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:textOutline.</para>
         /// </summary>
         /// <remark>
@@ -14765,7 +14765,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>FillTextEffect.</para>
+        /// <para>FillTextEffect, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:textFill.</para>
         /// </summary>
         /// <remark>
@@ -14778,7 +14778,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>Scene3D.</para>
+        /// <para>Scene3D, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:scene3d.</para>
         /// </summary>
         /// <remark>
@@ -14791,7 +14791,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>Properties3D.</para>
+        /// <para>Properties3D, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:props3d.</para>
         /// </summary>
         /// <remark>
@@ -14804,7 +14804,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>Ligatures.</para>
+        /// <para>Ligatures, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:ligatures.</para>
         /// </summary>
         /// <remark>
@@ -14817,7 +14817,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>NumberingFormat.</para>
+        /// <para>NumberingFormat, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:numForm.</para>
         /// </summary>
         /// <remark>
@@ -14830,7 +14830,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>NumberSpacing.</para>
+        /// <para>NumberSpacing, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:numSpacing.</para>
         /// </summary>
         /// <remark>
@@ -14843,7 +14843,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>StylisticSets.</para>
+        /// <para>StylisticSets, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:stylisticSets.</para>
         /// </summary>
         /// <remark>
@@ -14856,7 +14856,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>ContextualAlternatives.</para>
+        /// <para>ContextualAlternatives, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:cntxtAlts.</para>
         /// </summary>
         /// <remark>
@@ -19310,7 +19310,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>paraId</para>
+        /// <para>paraId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:paraId</para>
         /// </summary>
         /// <remark>
@@ -19329,7 +19329,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>textId</para>
+        /// <para>textId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:textId</para>
         /// </summary>
         /// <remark>
@@ -19348,7 +19348,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>noSpellErr</para>
+        /// <para>noSpellErr, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:noSpellErr</para>
         /// </summary>
         /// <remark>
@@ -20043,7 +20043,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>paraId</para>
+        /// <para>paraId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:paraId</para>
         /// </summary>
         /// <remark>
@@ -20062,7 +20062,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>textId</para>
+        /// <para>textId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:textId</para>
         /// </summary>
         /// <remark>
@@ -23459,7 +23459,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         }
 
         /// <summary>
-        /// <para>firstRow, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>firstRow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:firstRow</para>
         /// </summary>
         /// <remark>
@@ -23478,7 +23478,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         }
 
         /// <summary>
-        /// <para>lastRow, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>lastRow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:lastRow</para>
         /// </summary>
         /// <remark>
@@ -23497,7 +23497,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         }
 
         /// <summary>
-        /// <para>firstColumn, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>firstColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:firstColumn</para>
         /// </summary>
         /// <remark>
@@ -23516,7 +23516,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         }
 
         /// <summary>
-        /// <para>lastColumn, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>lastColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:lastColumn</para>
         /// </summary>
         /// <remark>
@@ -23535,7 +23535,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         }
 
         /// <summary>
-        /// <para>oddVBand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>oddVBand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:oddVBand</para>
         /// </summary>
         /// <remark>
@@ -23554,7 +23554,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         }
 
         /// <summary>
-        /// <para>evenVBand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>evenVBand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:evenVBand</para>
         /// </summary>
         /// <remark>
@@ -23573,7 +23573,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         }
 
         /// <summary>
-        /// <para>oddHBand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>oddHBand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:oddHBand</para>
         /// </summary>
         /// <remark>
@@ -23592,7 +23592,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         }
 
         /// <summary>
-        /// <para>evenHBand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>evenHBand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:evenHBand</para>
         /// </summary>
         /// <remark>
@@ -23611,7 +23611,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         }
 
         /// <summary>
-        /// <para>firstRowFirstColumn, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>firstRowFirstColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:firstRowFirstColumn</para>
         /// </summary>
         /// <remark>
@@ -23630,7 +23630,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         }
 
         /// <summary>
-        /// <para>firstRowLastColumn, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>firstRowLastColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:firstRowLastColumn</para>
         /// </summary>
         /// <remark>
@@ -23649,7 +23649,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         }
 
         /// <summary>
-        /// <para>lastRowFirstColumn, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>lastRowFirstColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:lastRowFirstColumn</para>
         /// </summary>
         /// <remark>
@@ -23668,7 +23668,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
         }
 
         /// <summary>
-        /// <para>lastRowLastColumn, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>lastRowLastColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:lastRowLastColumn</para>
         /// </summary>
         /// <remark>
@@ -24335,7 +24335,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>StartBorder.</para>
+        /// <para>StartBorder, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:start.</para>
         /// </summary>
         /// <remark>
@@ -24374,7 +24374,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>EndBorder.</para>
+        /// <para>EndBorder, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:end.</para>
         /// </summary>
         /// <remark>
@@ -25096,7 +25096,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>StartMargin.</para>
+        /// <para>StartMargin, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:start.</para>
         /// </summary>
         /// <remark>
@@ -25135,7 +25135,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>EndMargin.</para>
+        /// <para>EndMargin, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:end.</para>
         /// </summary>
         /// <remark>
@@ -25951,7 +25951,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>StartBorder.</para>
+        /// <para>StartBorder, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:start.</para>
         /// </summary>
         /// <remark>
@@ -25990,7 +25990,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>EndBorder.</para>
+        /// <para>EndBorder, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:end.</para>
         /// </summary>
         /// <remark>
@@ -26180,7 +26180,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>StartMargin.</para>
+        /// <para>StartMargin, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:start.</para>
         /// </summary>
         /// <remark>
@@ -26219,7 +26219,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>EndMargin.</para>
+        /// <para>EndMargin, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:end.</para>
         /// </summary>
         /// <remark>
@@ -26472,7 +26472,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>firstRow, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>firstRow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:firstRow</para>
         /// </summary>
         /// <remark>
@@ -26491,7 +26491,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>lastRow, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>lastRow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:lastRow</para>
         /// </summary>
         /// <remark>
@@ -26510,7 +26510,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>firstColumn, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>firstColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:firstColumn</para>
         /// </summary>
         /// <remark>
@@ -26529,7 +26529,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>lastColumn, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>lastColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:lastColumn</para>
         /// </summary>
         /// <remark>
@@ -26548,7 +26548,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>noHBand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>noHBand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:noHBand</para>
         /// </summary>
         /// <remark>
@@ -26567,7 +26567,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>noVBand, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>noVBand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:noVBand</para>
         /// </summary>
         /// <remark>
@@ -31677,7 +31677,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>TableCaption.</para>
+        /// <para>TableCaption, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:tblCaption.</para>
         /// </summary>
         /// <remark>
@@ -31690,7 +31690,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>TableDescription.</para>
+        /// <para>TableDescription, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:tblDescription.</para>
         /// </summary>
         /// <remark>
@@ -32168,7 +32168,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         }
 
         /// <summary>
-        /// <para>FootnoteColumns.</para>
+        /// <para>FootnoteColumns, this property is only available in Office 2013 and later..</para>
         /// <para>Represents the following element tag in the schema: w15:footnoteColumns.</para>
         /// </summary>
         /// <remark>
@@ -39899,7 +39899,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>TableCaption.</para>
+        /// <para>TableCaption, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:tblCaption.</para>
         /// </summary>
         /// <remark>
@@ -39912,7 +39912,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>TableDescription.</para>
+        /// <para>TableDescription, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:tblDescription.</para>
         /// </summary>
         /// <remark>
@@ -40100,7 +40100,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>format, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>format, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:format</para>
         /// </summary>
         /// <remark>
@@ -55521,7 +55521,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>algorithmName, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>algorithmName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:algorithmName</para>
         /// </summary>
         /// <remark>
@@ -55540,7 +55540,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>hashValue, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>hashValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:hashValue</para>
         /// </summary>
         /// <remark>
@@ -55559,7 +55559,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>saltValue, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>saltValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:saltValue</para>
         /// </summary>
         /// <remark>
@@ -55578,7 +55578,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>spinCount, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>spinCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:spinCount</para>
         /// </summary>
         /// <remark>
@@ -56047,7 +56047,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>allStyles, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>allStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:allStyles</para>
         /// </summary>
         /// <remark>
@@ -56066,7 +56066,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>customStyles, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>customStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:customStyles</para>
         /// </summary>
         /// <remark>
@@ -56085,7 +56085,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>latentStyles, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>latentStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:latentStyles</para>
         /// </summary>
         /// <remark>
@@ -56104,7 +56104,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>stylesInUse, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>stylesInUse, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:stylesInUse</para>
         /// </summary>
         /// <remark>
@@ -56123,7 +56123,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>headingStyles, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>headingStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:headingStyles</para>
         /// </summary>
         /// <remark>
@@ -56142,7 +56142,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>numberingStyles, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>numberingStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:numberingStyles</para>
         /// </summary>
         /// <remark>
@@ -56161,7 +56161,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>tableStyles, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>tableStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:tableStyles</para>
         /// </summary>
         /// <remark>
@@ -56180,7 +56180,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>directFormattingOnRuns, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>directFormattingOnRuns, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:directFormattingOnRuns</para>
         /// </summary>
         /// <remark>
@@ -56199,7 +56199,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>directFormattingOnParagraphs, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>directFormattingOnParagraphs, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:directFormattingOnParagraphs</para>
         /// </summary>
         /// <remark>
@@ -56218,7 +56218,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>directFormattingOnNumbering, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>directFormattingOnNumbering, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:directFormattingOnNumbering</para>
         /// </summary>
         /// <remark>
@@ -56237,7 +56237,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>directFormattingOnTables, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>directFormattingOnTables, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:directFormattingOnTables</para>
         /// </summary>
         /// <remark>
@@ -56256,7 +56256,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>clearFormatting, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>clearFormatting, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:clearFormatting</para>
         /// </summary>
         /// <remark>
@@ -56275,7 +56275,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>top3HeadingStyles, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>top3HeadingStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:top3HeadingStyles</para>
         /// </summary>
         /// <remark>
@@ -56294,7 +56294,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>visibleStyles, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>visibleStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:visibleStyles</para>
         /// </summary>
         /// <remark>
@@ -56313,7 +56313,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>alternateStyleNames, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>alternateStyleNames, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:alternateStyleNames</para>
         /// </summary>
         /// <remark>
@@ -57257,7 +57257,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>algorithmName, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>algorithmName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:algorithmName</para>
         /// </summary>
         /// <remark>
@@ -57276,7 +57276,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>hashValue, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>hashValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:hashValue</para>
         /// </summary>
         /// <remark>
@@ -57295,7 +57295,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>saltValue, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>saltValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:saltValue</para>
         /// </summary>
         /// <remark>
@@ -57314,7 +57314,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>spinCount, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>spinCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:spinCount</para>
         /// </summary>
         /// <remark>
@@ -64300,7 +64300,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///umalqura.
         ///<para>When the item is serialized out as xml, its value is "umalqura".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("umalqura")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64356,7 +64356,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///gregorianUs.
         ///<para>When the item is serialized out as xml, its value is "gregorianUs".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("gregorianUs")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64364,7 +64364,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///gregorianMeFrench.
         ///<para>When the item is serialized out as xml, its value is "gregorianMeFrench".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("gregorianMeFrench")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64372,7 +64372,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///gregorianArabic.
         ///<para>When the item is serialized out as xml, its value is "gregorianArabic".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("gregorianArabic")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64380,7 +64380,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///none.
         ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("none")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64755,7 +64755,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///bahtText.
         ///<para>When the item is serialized out as xml, its value is "bahtText".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("bahtText")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64763,7 +64763,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///dollarText.
         ///<para>When the item is serialized out as xml, its value is "dollarText".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("dollarText")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64771,7 +64771,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///custom.
         ///<para>When the item is serialized out as xml, its value is "custom".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("custom")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64792,7 +64792,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///tb.
         ///<para>When the item is serialized out as xml, its value is "tb".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("tb")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64806,7 +64806,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///rl.
         ///<para>When the item is serialized out as xml, its value is "rl".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("rl")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64820,7 +64820,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///lr.
         ///<para>When the item is serialized out as xml, its value is "lr".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lr")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64834,7 +64834,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///tbV.
         ///<para>When the item is serialized out as xml, its value is "tbV".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("tbV")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64848,7 +64848,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///rlV.
         ///<para>When the item is serialized out as xml, its value is "rlV".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("rlV")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64862,7 +64862,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///lrV.
         ///<para>When the item is serialized out as xml, its value is "lrV".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("lrV")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64883,7 +64883,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///custom.
         ///<para>When the item is serialized out as xml, its value is "custom".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("custom")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64904,7 +64904,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///custom.
         ///<para>When the item is serialized out as xml, its value is "custom".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("custom")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64931,7 +64931,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///custom.
         ///<para>When the item is serialized out as xml, its value is "custom".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("custom")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64952,7 +64952,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///start.
         ///<para>When the item is serialized out as xml, its value is "start".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("start")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -64972,7 +64972,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///end.
         ///<para>When the item is serialized out as xml, its value is "end".</para>
-        ///<para>This item is only available in Office2010.</para>
+        ///<para>This item is only available in Office 2010 and later.</para>
         ///</summary>
         [EnumString("end")]
         [OfficeAvailability(FileFormatVersions.Office2010)]
@@ -66469,7 +66469,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///useWord2013TrackBottomHyphenation.
         ///<para>When the item is serialized out as xml, its value is "useWord2013TrackBottomHyphenation".</para>
-        ///<para>This item is only available in Office2016.</para>
+        ///<para>This item is only available in Office 2016 and later.</para>
         ///</summary>
         [EnumString("useWord2013TrackBottomHyphenation")]
         [OfficeAvailability(FileFormatVersions.Office2016)]
@@ -66477,7 +66477,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///allowHyphenationAtTrackBottom.
         ///<para>When the item is serialized out as xml, its value is "allowHyphenationAtTrackBottom".</para>
-        ///<para>This item is only available in Office2016.</para>
+        ///<para>This item is only available in Office 2016 and later.</para>
         ///</summary>
         [EnumString("allowHyphenationAtTrackBottom")]
         [OfficeAvailability(FileFormatVersions.Office2016)]
@@ -66485,7 +66485,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         ///<summary>
         ///allowTextAfterFloatingTableBreak.
         ///<para>When the item is serialized out as xml, its value is "allowTextAfterFloatingTableBreak".</para>
-        ///<para>This item is only available in Office2013.</para>
+        ///<para>This item is only available in Office 2013 and later.</para>
         ///</summary>
         [EnumString("allowTextAfterFloatingTableBreak")]
         [OfficeAvailability(FileFormatVersions.Office2013)]

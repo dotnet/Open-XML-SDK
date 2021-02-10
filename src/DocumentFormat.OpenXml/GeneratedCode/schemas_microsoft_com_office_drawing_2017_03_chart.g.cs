@@ -107,7 +107,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: c16r3:val</para>
         /// </summary>
         /// <remark>

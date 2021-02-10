@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         }
 
         /// <summary>
-        /// <para>displayLoc</para>
+        /// <para>displayLoc, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: displayLoc</para>
         /// </summary>
 
@@ -129,7 +129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>id</para>
+        /// <para>id, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -145,7 +145,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>label</para>
+        /// <para>label, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: label</para>
         /// </summary>
 
@@ -161,7 +161,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>lang</para>
+        /// <para>lang, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
 

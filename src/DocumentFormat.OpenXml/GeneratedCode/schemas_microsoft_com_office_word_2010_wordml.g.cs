@@ -1060,7 +1060,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -1109,7 +1109,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -1328,7 +1328,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -1415,7 +1415,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -1537,7 +1537,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (3L) });
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -1619,7 +1619,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>ang</para>
+        /// <para>ang, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:ang</para>
         /// </summary>
         /// <remark>
@@ -1638,7 +1638,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>scaled</para>
+        /// <para>scaled, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:scaled</para>
         /// </summary>
         /// <remark>
@@ -1725,7 +1725,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>path</para>
+        /// <para>path, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:path</para>
         /// </summary>
         /// <remark>
@@ -2113,7 +2113,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -2165,7 +2165,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>lim</para>
+        /// <para>lim, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:lim</para>
         /// </summary>
         /// <remark>
@@ -2249,7 +2249,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         }
 
         /// <summary>
-        /// <para>rad</para>
+        /// <para>rad, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:rad</para>
         /// </summary>
         /// <remark>
@@ -2372,7 +2372,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>blurRad</para>
+        /// <para>blurRad, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:blurRad</para>
         /// </summary>
         /// <remark>
@@ -2391,7 +2391,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>dist</para>
+        /// <para>dist, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:dist</para>
         /// </summary>
         /// <remark>
@@ -2410,7 +2410,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>dir</para>
+        /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:dir</para>
         /// </summary>
         /// <remark>
@@ -2429,7 +2429,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>sx</para>
+        /// <para>sx, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:sx</para>
         /// </summary>
         /// <remark>
@@ -2448,7 +2448,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>sy</para>
+        /// <para>sy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:sy</para>
         /// </summary>
         /// <remark>
@@ -2467,7 +2467,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>kx</para>
+        /// <para>kx, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:kx</para>
         /// </summary>
         /// <remark>
@@ -2486,7 +2486,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>ky</para>
+        /// <para>ky, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:ky</para>
         /// </summary>
         /// <remark>
@@ -2505,7 +2505,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>algn</para>
+        /// <para>algn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:algn</para>
         /// </summary>
         /// <remark>
@@ -2629,7 +2629,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>blurRad</para>
+        /// <para>blurRad, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:blurRad</para>
         /// </summary>
         /// <remark>
@@ -2648,7 +2648,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>stA</para>
+        /// <para>stA, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:stA</para>
         /// </summary>
         /// <remark>
@@ -2667,7 +2667,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>stPos</para>
+        /// <para>stPos, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:stPos</para>
         /// </summary>
         /// <remark>
@@ -2686,7 +2686,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>endA</para>
+        /// <para>endA, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:endA</para>
         /// </summary>
         /// <remark>
@@ -2705,7 +2705,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>endPos</para>
+        /// <para>endPos, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:endPos</para>
         /// </summary>
         /// <remark>
@@ -2724,7 +2724,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>dist</para>
+        /// <para>dist, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:dist</para>
         /// </summary>
         /// <remark>
@@ -2743,7 +2743,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>dir</para>
+        /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:dir</para>
         /// </summary>
         /// <remark>
@@ -2762,7 +2762,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>fadeDir</para>
+        /// <para>fadeDir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:fadeDir</para>
         /// </summary>
         /// <remark>
@@ -2781,7 +2781,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>sx</para>
+        /// <para>sx, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:sx</para>
         /// </summary>
         /// <remark>
@@ -2800,7 +2800,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>sy</para>
+        /// <para>sy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:sy</para>
         /// </summary>
         /// <remark>
@@ -2819,7 +2819,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>kx</para>
+        /// <para>kx, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:kx</para>
         /// </summary>
         /// <remark>
@@ -2838,7 +2838,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>ky</para>
+        /// <para>ky, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:ky</para>
         /// </summary>
         /// <remark>
@@ -2857,7 +2857,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>algn</para>
+        /// <para>algn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:algn</para>
         /// </summary>
         /// <remark>
@@ -3003,7 +3003,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>w</para>
+        /// <para>w, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:w</para>
         /// </summary>
         /// <remark>
@@ -3022,7 +3022,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>cap</para>
+        /// <para>cap, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:cap</para>
         /// </summary>
         /// <remark>
@@ -3041,7 +3041,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>cmpd</para>
+        /// <para>cmpd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:cmpd</para>
         /// </summary>
         /// <remark>
@@ -3060,7 +3060,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>algn</para>
+        /// <para>algn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:algn</para>
         /// </summary>
         /// <remark>
@@ -3399,7 +3399,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>extrusionH</para>
+        /// <para>extrusionH, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:extrusionH</para>
         /// </summary>
         /// <remark>
@@ -3418,7 +3418,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>contourW</para>
+        /// <para>contourW, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:contourW</para>
         /// </summary>
         /// <remark>
@@ -3437,7 +3437,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>prstMaterial</para>
+        /// <para>prstMaterial, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:prstMaterial</para>
         /// </summary>
         /// <remark>
@@ -3563,7 +3563,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -3616,7 +3616,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -3669,7 +3669,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -3894,7 +3894,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -3973,7 +3973,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>bwMode</para>
+        /// <para>bwMode, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:bwMode</para>
         /// </summary>
         /// <remark>
@@ -3992,7 +3992,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>id</para>
+        /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>
@@ -4097,7 +4097,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -4257,7 +4257,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -4449,7 +4449,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>pos</para>
+        /// <para>pos, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:pos</para>
         /// </summary>
         /// <remark>
@@ -4542,7 +4542,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>l</para>
+        /// <para>l, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:l</para>
         /// </summary>
         /// <remark>
@@ -4561,7 +4561,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>t</para>
+        /// <para>t, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:t</para>
         /// </summary>
         /// <remark>
@@ -4580,7 +4580,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>r</para>
+        /// <para>r, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:r</para>
         /// </summary>
         /// <remark>
@@ -4599,7 +4599,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>b</para>
+        /// <para>b, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:b</para>
         /// </summary>
         /// <remark>
@@ -4726,7 +4726,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>lat</para>
+        /// <para>lat, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:lat</para>
         /// </summary>
         /// <remark>
@@ -4745,7 +4745,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>lon</para>
+        /// <para>lon, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:lon</para>
         /// </summary>
         /// <remark>
@@ -4764,7 +4764,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>rev</para>
+        /// <para>rev, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:rev</para>
         /// </summary>
         /// <remark>
@@ -4830,7 +4830,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         }
 
         /// <summary>
-        /// <para>prst</para>
+        /// <para>prst, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:prst</para>
         /// </summary>
         /// <remark>
@@ -4914,7 +4914,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>rig</para>
+        /// <para>rig, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:rig</para>
         /// </summary>
         /// <remark>
@@ -4933,7 +4933,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>dir</para>
+        /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:dir</para>
         /// </summary>
         /// <remark>
@@ -5064,7 +5064,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>w</para>
+        /// <para>w, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:w</para>
         /// </summary>
         /// <remark>
@@ -5083,7 +5083,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>h</para>
+        /// <para>h, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:h</para>
         /// </summary>
         /// <remark>
@@ -5102,7 +5102,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>prst</para>
+        /// <para>prst, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:prst</para>
         /// </summary>
         /// <remark>
@@ -5379,7 +5379,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>id</para>
+        /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:id</para>
         /// </summary>
         /// <remark>
@@ -5398,7 +5398,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -5509,7 +5509,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>font</para>
+        /// <para>font, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:font</para>
         /// </summary>
         /// <remark>
@@ -5528,7 +5528,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:val</para>
         /// </summary>
         /// <remark>
@@ -5811,7 +5811,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>isComment</para>
+        /// <para>isComment, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: isComment</para>
         /// </summary>
 

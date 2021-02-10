@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         }
 
         /// <summary>
-        /// <para>fDynamic</para>
+        /// <para>fDynamic, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: fDynamic</para>
         /// </summary>
 
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         }
 
         /// <summary>
-        /// <para>fCollapsed</para>
+        /// <para>fCollapsed, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: fCollapsed</para>
         /// </summary>
 

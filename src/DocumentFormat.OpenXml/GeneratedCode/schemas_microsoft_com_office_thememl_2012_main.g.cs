@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         }
 
         /// <summary>
-        /// <para>name</para>
+        /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         }
 
         /// <summary>
-        /// <para>id</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         }
 
         /// <summary>
-        /// <para>vid</para>
+        /// <para>vid, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: vid</para>
         /// </summary>
 
@@ -271,7 +271,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>name</para>
+        /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 
@@ -287,7 +287,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>vid</para>
+        /// <para>vid, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: vid</para>
         /// </summary>
 
@@ -303,7 +303,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>cx</para>
+        /// <para>cx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
 
@@ -319,7 +319,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>cy</para>
+        /// <para>cy, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
 
@@ -335,7 +335,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>id</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>

@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         }
 
         /// <summary>
-        /// <para>i</para>
+        /// <para>i, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
 
@@ -111,7 +111,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>count</para>
+        /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
 
@@ -198,7 +198,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>count</para>
+        /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
 
@@ -285,7 +285,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>s</para>
+        /// <para>s, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
 
@@ -436,7 +436,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>t</para>
+        /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
 
@@ -553,7 +553,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>t</para>
+        /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
 
@@ -607,7 +607,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>n</para>
+        /// <para>n, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
 
@@ -623,7 +623,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>t</para>
+        /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
 

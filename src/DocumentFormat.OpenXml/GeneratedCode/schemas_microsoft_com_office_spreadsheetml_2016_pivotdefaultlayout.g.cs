@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
         }
 
         /// <summary>
-        /// <para>EnabledSubtotalsDefault</para>
+        /// <para>EnabledSubtotalsDefault, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: EnabledSubtotalsDefault</para>
         /// </summary>
 
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
         }
 
         /// <summary>
-        /// <para>SubtotalsOnTopDefault</para>
+        /// <para>SubtotalsOnTopDefault, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: SubtotalsOnTopDefault</para>
         /// </summary>
 
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
         }
 
         /// <summary>
-        /// <para>InsertBlankRowDefault</para>
+        /// <para>InsertBlankRowDefault, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: InsertBlankRowDefault</para>
         /// </summary>
 

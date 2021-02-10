@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         }
 
         /// <summary>
-        /// <para>prst</para>
+        /// <para>prst, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: prst</para>
         /// </summary>
 
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         }
 
         /// <summary>
-        /// <para>invX</para>
+        /// <para>invX, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: invX</para>
         /// </summary>
 
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         }
 
         /// <summary>
-        /// <para>invY</para>
+        /// <para>invY, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: invY</para>
         /// </summary>
 
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         }
 
         /// <summary>
-        /// <para>userId</para>
+        /// <para>userId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: userId</para>
         /// </summary>
 
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         }
 
         /// <summary>
-        /// <para>providerId</para>
+        /// <para>providerId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: providerId</para>
         /// </summary>
 
@@ -214,7 +214,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>timeZoneBias</para>
+        /// <para>timeZoneBias, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: timeZoneBias</para>
         /// </summary>
 
@@ -459,7 +459,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -508,7 +508,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>authorId</para>
+        /// <para>authorId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: authorId</para>
         /// </summary>
 
@@ -524,7 +524,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>idx</para>
+        /// <para>idx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
 
@@ -833,7 +833,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>id</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -849,7 +849,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>name</para>
+        /// <para>name, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 
@@ -865,7 +865,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>orient</para>
+        /// <para>orient, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: orient</para>
         /// </summary>
 
@@ -881,7 +881,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>pos</para>
+        /// <para>pos, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: pos</para>
         /// </summary>
 
@@ -897,7 +897,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>userDrawn</para>
+        /// <para>userDrawn, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: userDrawn</para>
         /// </summary>
 

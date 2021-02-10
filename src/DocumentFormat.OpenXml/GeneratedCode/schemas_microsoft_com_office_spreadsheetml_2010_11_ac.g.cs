@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
         }
 
         /// <summary>
-        /// <para>url</para>
+        /// <para>url, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: url</para>
         /// </summary>
 

@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
         }
 
         /// <summary>
-        /// <para>name</para>
+        /// <para>name, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 

@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         }
 
         /// <summary>
-        /// <para>meth</para>
+        /// <para>meth, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: meth</para>
         /// </summary>
 
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         }
 
         /// <summary>
-        /// <para>id</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -256,7 +256,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>id</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -1092,7 +1092,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -1484,7 +1484,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>idx</para>
+        /// <para>idx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
 
@@ -1500,7 +1500,7 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>mods</para>
+        /// <para>mods, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: mods</para>
         /// </summary>
 
@@ -1630,7 +1630,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>idx</para>
+        /// <para>idx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
 
@@ -1646,7 +1646,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>mods</para>
+        /// <para>mods, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: mods</para>
         /// </summary>
 
@@ -2917,7 +2917,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>visible</para>
+        /// <para>visible, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -2933,7 +2933,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>majorTick</para>
+        /// <para>majorTick, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: majorTick</para>
         /// </summary>
 
@@ -2949,7 +2949,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>minorTick</para>
+        /// <para>minorTick, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: minorTick</para>
         /// </summary>
 
@@ -2965,7 +2965,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>labelPosition</para>
+        /// <para>labelPosition, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: labelPosition</para>
         /// </summary>
 
@@ -2981,7 +2981,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>majorGridlines</para>
+        /// <para>majorGridlines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: majorGridlines</para>
         /// </summary>
 
@@ -2997,7 +2997,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>minorGridlines</para>
+        /// <para>minorGridlines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: minorGridlines</para>
         /// </summary>
 
@@ -3013,7 +3013,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>title</para>
+        /// <para>title, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
 
@@ -3081,7 +3081,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>overlap</para>
+        /// <para>overlap, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: overlap</para>
         /// </summary>
 
@@ -3097,7 +3097,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>gapWidth</para>
+        /// <para>gapWidth, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: gapWidth</para>
         /// </summary>
 
@@ -3113,7 +3113,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>gapDepth</para>
+        /// <para>gapDepth, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: gapDepth</para>
         /// </summary>
 
@@ -3129,7 +3129,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>doughnutHoleSize</para>
+        /// <para>doughnutHoleSize, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: doughnutHoleSize</para>
         /// </summary>
 
@@ -3145,7 +3145,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>markerVisible</para>
+        /// <para>markerVisible, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: markerVisible</para>
         /// </summary>
 
@@ -3161,7 +3161,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>hiloLines</para>
+        /// <para>hiloLines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: hiloLines</para>
         /// </summary>
 
@@ -3177,7 +3177,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>dropLines</para>
+        /// <para>dropLines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: dropLines</para>
         /// </summary>
 
@@ -3193,7 +3193,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>seriesLines</para>
+        /// <para>seriesLines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: seriesLines</para>
         /// </summary>
 
@@ -3270,7 +3270,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>position</para>
+        /// <para>position, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
 
@@ -3286,7 +3286,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>value</para>
+        /// <para>value, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
 
@@ -3302,7 +3302,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>seriesName</para>
+        /// <para>seriesName, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: seriesName</para>
         /// </summary>
 
@@ -3318,7 +3318,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>categoryName</para>
+        /// <para>categoryName, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: categoryName</para>
         /// </summary>
 
@@ -3334,7 +3334,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>legendKey</para>
+        /// <para>legendKey, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: legendKey</para>
         /// </summary>
 
@@ -3350,7 +3350,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>percentage</para>
+        /// <para>percentage, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: percentage</para>
         /// </summary>
 
@@ -3419,7 +3419,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>legendKeys</para>
+        /// <para>legendKeys, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: legendKeys</para>
         /// </summary>
 
@@ -3435,7 +3435,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>horizontalBorder</para>
+        /// <para>horizontalBorder, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: horizontalBorder</para>
         /// </summary>
 
@@ -3451,7 +3451,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>verticalBorder</para>
+        /// <para>verticalBorder, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: verticalBorder</para>
         /// </summary>
 
@@ -3467,7 +3467,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>outlineBorder</para>
+        /// <para>outlineBorder, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: outlineBorder</para>
         /// </summary>
 
@@ -3528,7 +3528,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>visible</para>
+        /// <para>visible, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
 
@@ -3544,7 +3544,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>includeInLayout</para>
+        /// <para>includeInLayout, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: includeInLayout</para>
         /// </summary>
 
@@ -3560,7 +3560,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>position</para>
+        /// <para>position, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
 
@@ -3617,7 +3617,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>position</para>
+        /// <para>position, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
 
@@ -3666,7 +3666,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>add</para>
+        /// <para>add, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: add</para>
         /// </summary>
 
@@ -3682,7 +3682,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>equation</para>
+        /// <para>equation, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: equation</para>
         /// </summary>
 
@@ -3698,7 +3698,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>rsquared</para>
+        /// <para>rsquared, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rsquared</para>
         /// </summary>
 
@@ -3755,7 +3755,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>rotX</para>
+        /// <para>rotX, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rotX</para>
         /// </summary>
 
@@ -3771,7 +3771,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>rotY</para>
+        /// <para>rotY, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rotY</para>
         /// </summary>
 
@@ -3787,7 +3787,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>rAngAx</para>
+        /// <para>rAngAx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rAngAx</para>
         /// </summary>
 
@@ -3803,7 +3803,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>perspective</para>
+        /// <para>perspective, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: perspective</para>
         /// </summary>
 
@@ -3819,7 +3819,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>heightPercent</para>
+        /// <para>heightPercent, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: heightPercent</para>
         /// </summary>
 
@@ -3835,7 +3835,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>depthPercent</para>
+        /// <para>depthPercent, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: depthPercent</para>
         /// </summary>
 
@@ -6279,7 +6279,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         }
 
         /// <summary>
-        /// <para>mods</para>
+        /// <para>mods, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: mods</para>
         /// </summary>
 
@@ -6446,7 +6446,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         }
 
         /// <summary>
-        /// <para>symbol</para>
+        /// <para>symbol, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: symbol</para>
         /// </summary>
 
@@ -6462,7 +6462,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         }
 
         /// <summary>
-        /// <para>size</para>
+        /// <para>size, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
 

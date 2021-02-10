@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         }
 
         /// <summary>
-        /// <para>font</para>
+        /// <para>font, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: w16se:font</para>
         /// </summary>
         /// <remark>
@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         }
 
         /// <summary>
-        /// <para>char</para>
+        /// <para>char, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: w16se:char</para>
         /// </summary>
         /// <remark>

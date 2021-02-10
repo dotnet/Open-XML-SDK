@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         }
 
         /// <summary>
-        /// <para>tableName</para>
+        /// <para>tableName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: tableName</para>
         /// </summary>
 
@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         }
 
         /// <summary>
-        /// <para>columnName</para>
+        /// <para>columnName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: columnName</para>
         /// </summary>
 
@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         }
 
         /// <summary>
-        /// <para>columnId</para>
+        /// <para>columnId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: columnId</para>
         /// </summary>
 
@@ -218,7 +218,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>columnName</para>
+        /// <para>columnName, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: columnName</para>
         /// </summary>
 
@@ -234,7 +234,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>columnId</para>
+        /// <para>columnId, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: columnId</para>
         /// </summary>
 
@@ -250,7 +250,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>contentType</para>
+        /// <para>contentType, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: contentType</para>
         /// </summary>
 
@@ -266,7 +266,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>isSelected</para>
+        /// <para>isSelected, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: isSelected</para>
         /// </summary>
 

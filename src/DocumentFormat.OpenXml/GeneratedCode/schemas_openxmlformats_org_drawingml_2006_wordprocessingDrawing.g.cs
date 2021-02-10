@@ -695,7 +695,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>anchorId</para>
+        /// <para>anchorId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: wp14:anchorId</para>
         /// </summary>
         /// <remark>
@@ -714,7 +714,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>editId</para>
+        /// <para>editId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: wp14:editId</para>
         /// </summary>
         /// <remark>
@@ -1073,7 +1073,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         }
 
         /// <summary>
-        /// <para>editId</para>
+        /// <para>editId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: wp14:editId</para>
         /// </summary>
         /// <remark>
@@ -1092,7 +1092,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         }
 
         /// <summary>
-        /// <para>anchorId</para>
+        /// <para>anchorId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: wp14:anchorId</para>
         /// </summary>
         /// <remark>
@@ -1732,7 +1732,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>PercentagePositionHeightOffset.</para>
+        /// <para>PercentagePositionHeightOffset, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: wp14:pctPosHOffset.</para>
         /// </summary>
         /// <remark>
@@ -1864,7 +1864,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>PercentagePositionVerticalOffset.</para>
+        /// <para>PercentagePositionVerticalOffset, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: wp14:pctPosVOffset.</para>
         /// </summary>
         /// <remark>

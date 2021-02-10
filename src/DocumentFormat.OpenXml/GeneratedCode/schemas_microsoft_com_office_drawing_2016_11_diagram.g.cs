@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         }
 
         /// <summary>
-        /// <para>prefix</para>
+        /// <para>prefix, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: prefix</para>
         /// </summary>
 
@@ -144,7 +144,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         }
 
         /// <summary>
-        /// <para>leadZeros</para>
+        /// <para>leadZeros, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: leadZeros</para>
         /// </summary>
 
@@ -287,7 +287,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         }
 
         /// <summary>
-        /// <para>lvl</para>
+        /// <para>lvl, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: lvl</para>
         /// </summary>
 
@@ -303,7 +303,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         }
 
         /// <summary>
-        /// <para>ptType</para>
+        /// <para>ptType, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: ptType</para>
         /// </summary>
 

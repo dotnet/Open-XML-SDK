@@ -172,7 +172,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>richSortKey</para>
+        /// <para>richSortKey, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: richSortKey</para>
         /// </summary>
 
@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>descending</para>
+        /// <para>descending, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: descending</para>
         /// </summary>
 
@@ -204,7 +204,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>sortBy</para>
+        /// <para>sortBy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
 
@@ -220,7 +220,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>ref</para>
+        /// <para>ref, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: ref</para>
         /// </summary>
 
@@ -236,7 +236,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>customList</para>
+        /// <para>customList, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: customList</para>
         /// </summary>
 
@@ -252,7 +252,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>dxfId</para>
+        /// <para>dxfId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dxfId</para>
         /// </summary>
 
@@ -268,7 +268,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>iconSet</para>
+        /// <para>iconSet, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconSet</para>
         /// </summary>
 
@@ -284,7 +284,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         }
 
         /// <summary>
-        /// <para>iconId</para>
+        /// <para>iconId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: iconId</para>
         /// </summary>
 
@@ -463,7 +463,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>count</para>
+        /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
 
@@ -550,7 +550,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>count</para>
+        /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
 
@@ -907,7 +907,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>key</para>
+        /// <para>key, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: key</para>
         /// </summary>
 
@@ -1055,7 +1055,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>and</para>
+        /// <para>and, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: and</para>
         /// </summary>
 
@@ -1111,7 +1111,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>key</para>
+        /// <para>key, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: key</para>
         /// </summary>
 
@@ -1175,7 +1175,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>valIso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>valIso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: valIso</para>
         /// </summary>
 
@@ -1191,7 +1191,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>maxValIso, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>maxValIso, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: maxValIso</para>
         /// </summary>
 
@@ -1396,7 +1396,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>key</para>
+        /// <para>key, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: key</para>
         /// </summary>
 
@@ -1412,7 +1412,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>val</para>
+        /// <para>val, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
 
@@ -1428,7 +1428,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>blank</para>
+        /// <para>blank, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: blank</para>
         /// </summary>
 
@@ -1444,7 +1444,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>nodata</para>
+        /// <para>nodata, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: nodata</para>
         /// </summary>
 
@@ -1493,7 +1493,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         }
 
         /// <summary>
-        /// <para>key</para>
+        /// <para>key, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: key</para>
         /// </summary>
 
@@ -1664,7 +1664,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>key</para>
+        /// <para>key, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: key</para>
         /// </summary>
 
@@ -1775,7 +1775,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>count</para>
+        /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
 
@@ -1862,7 +1862,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>count</para>
+        /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
 
@@ -1948,7 +1948,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>s</para>
+        /// <para>s, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: s</para>
         /// </summary>
 
@@ -2106,7 +2106,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>n</para>
+        /// <para>n, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
 
@@ -2122,7 +2122,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>t</para>
+        /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
 
@@ -2202,7 +2202,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>count</para>
+        /// <para>count, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: count</para>
         /// </summary>
 
@@ -2269,7 +2269,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>t</para>
+        /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
 
@@ -2345,7 +2345,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>r</para>
+        /// <para>r, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
 
@@ -2361,7 +2361,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>c</para>
+        /// <para>c, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: c</para>
         /// </summary>
 
@@ -2429,7 +2429,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>t</para>
+        /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
 
@@ -2682,7 +2682,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>n</para>
+        /// <para>n, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: n</para>
         /// </summary>
 
@@ -2698,7 +2698,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>t</para>
+        /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
 
@@ -2781,7 +2781,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>dxfid</para>
+        /// <para>dxfid, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: dxfid</para>
         /// </summary>
 
@@ -2845,7 +2845,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>i</para>
+        /// <para>i, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
 
@@ -3080,7 +3080,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>name</para>
+        /// <para>name, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 
@@ -3255,7 +3255,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>name</para>
+        /// <para>name, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 
@@ -3309,7 +3309,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>name</para>
+        /// <para>name, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 
@@ -3325,7 +3325,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>value</para>
+        /// <para>value, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
 
