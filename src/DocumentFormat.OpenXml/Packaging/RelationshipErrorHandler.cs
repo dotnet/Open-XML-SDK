@@ -79,7 +79,12 @@ namespace DocumentFormat.OpenXml.Packaging
                     {
                         using var stream = part.GetStream(FileMode.Open, FileAccess.Write);
 
-                        doc.Save(stream);
+                        // Saving directly to the zip stream can cause issues if there are less bytes being written than the original
+                        using var ms = new MemoryStream();
+                        doc.Save(ms);
+                        stream.SetLength(ms.Length);
+                        ms.Position = 0;
+                        ms.CopyTo(stream);
                     }
                 }
             }
