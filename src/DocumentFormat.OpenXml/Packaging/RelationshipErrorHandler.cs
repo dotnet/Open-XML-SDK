@@ -81,7 +81,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
                         // Saving directly to the zip stream can cause issues if there are less bytes being written than the original
                         using var ms = new MemoryStream();
-                        doc.Save(ms);
+                        using var writer = new StreamWriter(ms);
+                        doc.Save(writer);
                         stream.SetLength(ms.Length);
                         ms.Position = 0;
                         ms.CopyTo(stream);
