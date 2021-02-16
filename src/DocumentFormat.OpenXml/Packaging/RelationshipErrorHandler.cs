@@ -79,6 +79,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     {
                         using var stream = part.GetStream(FileMode.Open, FileAccess.Write);
 
+                        stream.SetLength(0);
                         doc.Save(stream);
                     }
                 }

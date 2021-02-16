@@ -56,6 +56,8 @@ namespace DocumentFormat.OpenXml.Tests
 
             public const string malformed_uri_xlsx = "TestFiles.malformed_uri.xlsx";
 
+            public const string malformed_uri_long_xlsx = "TestFiles.malformed_uri_long.xlsx";
+
             public const string May_12_04 = "TestFiles.May_12_04.docx";
 
             public const string mcdoc = "TestFiles.mcdoc.docx";
