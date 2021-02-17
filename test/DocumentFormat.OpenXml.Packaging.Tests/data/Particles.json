@@ -47674,6 +47674,1358 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office2019.Drawing.Chart.DataDisplayOptions16",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ElementType": "DocumentFormat.OpenXml.Drawing.NoBullet"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Drawing.AutoNumberedBullet"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Drawing.CharacterBullet"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Drawing.PictureBullet"
+        }
+       ],
+       "ParticleType": "Choice"
+      }
+     ],
+     "ParticleType": "Group"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.ShapeProperties",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Transform2D",
+       "MinOccurs": 0
+      },
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.CustomGeometry"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.PresetGeometry"
+          }
+         ],
+         "ParticleType": "Choice"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      },
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.NoFill"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.SolidFill"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.GradientFill"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.BlipFill"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.PatternFill"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.GroupFill"
+          }
+         ],
+         "ParticleType": "Choice"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Outline",
+       "MinOccurs": 0
+      },
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.EffectList"
+          },
+          {
+           "ElementType": "DocumentFormat.OpenXml.Drawing.EffectDag"
+          }
+         ],
+         "ParticleType": "Choice"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Scene3DType",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Shape3DType",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeatures",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature",
+       "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.DynamicArrayProperties",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Extension",
+           "MaxOccurs": 0,
+           "MinOccurs": 0
+          }
+         ],
+         "ParticleType": "Sequence"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.ColumnBodyDxfDxf",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Font",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.NumberingFormat",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Fill",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Alignment",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Border",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Protection",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.ColumnHeaderDxfDxf",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Font",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.NumberingFormat",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Fill",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Alignment",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Border",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Protection",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.ColumnTotalsDxfDxf",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Font",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.NumberingFormat",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Fill",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Alignment",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Border",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Protection",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.DataDxfDxf",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Font",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.NumberingFormat",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Fill",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Alignment",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Border",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Protection",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.HeaderRowBorderDxfDxf",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Font",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.NumberingFormat",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Fill",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Alignment",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Border",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Protection",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.HeaderRowDxfDxf",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Font",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.NumberingFormat",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Fill",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Alignment",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Border",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Protection",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.TableBorderDxfDxf",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Font",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.NumberingFormat",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Fill",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Alignment",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Border",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Protection",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.TotalsRowBorderDxfDxf",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Font",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.NumberingFormat",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Fill",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Alignment",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Border",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Protection",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.Revision5.TotalsRowDxfDxf",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Font",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.NumberingFormat",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Fill",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Alignment",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Border",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Protection",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Extension",
+           "MaxOccurs": 0,
+           "MinOccurs": 0
+          }
+         ],
+         "ParticleType": "Sequence"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData.Value",
+       "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueData",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData.Key",
+       "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructures",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue",
+       "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayData",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter",
+         "MinOccurs": 0
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList",
+         "MinOccurs": 0
+        }
+       ],
+       "MaxOccurs": 2,
+       "ParticleType": "Choice"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Extension",
+           "MaxOccurs": 0,
+           "MinOccurs": 0
+          }
+         ],
+         "ParticleType": "Sequence"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichExtensionList",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilterColumn",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList"
+      }
+     ],
+     "MinOccurs": 0,
+     "ParticleType": "Choice"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichDateGroupItem",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperty",
+       "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle",
+       "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylesheet",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey",
+       "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag",
+       "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypesInfo",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue",
+       "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue",
+       "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagKey",
+       "MaxOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructures",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBags",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Presentation.TrackList",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Presentation.Track",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Presentation.TracksInfo",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Presentation.TrackList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Word.Cid.CommentsIds",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Presentation.Animate",
   "Value": [
    {
