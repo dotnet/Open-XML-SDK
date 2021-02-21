@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="text">The text to convert.</param>
         /// <returns>An OpenXmlSimpleType value.</returns>
         /// <remarks>All generated classes that are derived from this class will generate this method.</remarks>
-        internal virtual OpenXmlSimpleType? InnerTextToValue(string text) => null;
+        internal virtual OpenXmlSimpleType InnerTextToValue(string text) => null!;
 
         /// <inheritdoc/>
         public override bool HasChildren
