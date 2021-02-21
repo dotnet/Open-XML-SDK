@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml
         private readonly object _sync = new object();
 
         private T? _value;
-        private Func<T?> _factory;
+        private Func<T?>? _factory;
         private bool _isValueCreated;
 
         public Lazy(Func<T?> factory, bool threadSafe)
@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml
                 {
                     lock(_sync)
                     {
-                        if(!_isValueCreated)
+                        if(!_isValueCreated && _factory is not null)
                         {
                             _value = _factory();
                             _isValueCreated = true;

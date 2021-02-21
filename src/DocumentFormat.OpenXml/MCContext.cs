@@ -331,7 +331,7 @@ namespace DocumentFormat.OpenXml
         private int PushPreserveAttribute(MarkupCompatibilityAttributes attr)
         {
             int ret = 0;
-            if (attr is not null && attr.PreserveAttributes is not null && !string.IsNullOrEmpty(attr.PreserveAttributes.Value))
+            if (attr is not null && attr.PreserveAttributes is not null && !attr.PreserveAttributes.Value.IsNullOrEmpty())
             {
                 ret = PushQName(_currentPreserveAttr, attr.PreserveAttributes.Value);
             }
@@ -342,7 +342,7 @@ namespace DocumentFormat.OpenXml
         private int PushPreserveElement(MarkupCompatibilityAttributes attr)
         {
             int ret = 0;
-            if (attr is not null && attr.PreserveElements is not null && !string.IsNullOrEmpty(attr.PreserveElements.Value))
+            if (attr is not null && attr.PreserveElements is not null && !attr.PreserveElements.Value.IsNullOrEmpty())
             {
                 ret = PushQName(_currentPreserveEle, attr.PreserveElements.Value);
             }
@@ -353,7 +353,7 @@ namespace DocumentFormat.OpenXml
         private int PushProcessContent(MarkupCompatibilityAttributes attr)
         {
             int ret = 0;
-            if (attr is not null && attr.ProcessContent is not null && !string.IsNullOrEmpty(attr.ProcessContent.Value))
+            if (attr is not null && attr.ProcessContent is not null && !attr.ProcessContent.Value.IsNullOrEmpty())
             {
                 ret = PushQName(_currentProcessContent, attr.ProcessContent.Value);
             }
