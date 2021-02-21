@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
@@ -114,24 +112,26 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
+            var context = RootElementContext;
+
             // set MaxCharactersInDocument to limit the part size on loading DOM.
-            OpenXmlElementContext.XmlReaderSettings.MaxCharactersInDocument = openXmlPart.MaxCharactersInPart;
+            context.XmlReaderSettings.MaxCharactersInDocument = openXmlPart.MaxCharactersInPart;
 
 #if FEATURE_XML_PROHIBIT_DTD
-            OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
+            context.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
 #else
-            OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
+            context.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
 #endif
 
-            using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(partStream, OpenXmlElementContext.XmlReaderSettings, openXmlPart.OpenXmlPackage.StrictRelationshipFound))
+            using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, context.XmlReaderSettings, openXmlPart.OpenXmlPackage.StrictRelationshipFound))
             {
-                OpenXmlElementContext.MCSettings = openXmlPart.MCSettings;
+                context.MCSettings = openXmlPart.MCSettings;
 
                 xmlReader.Read();
 
                 if (xmlReader.NodeType == XmlNodeType.XmlDeclaration)
                 {
-                    string standaloneAttribute = xmlReader.GetAttribute("standalone");
+                    var standaloneAttribute = xmlReader.GetAttribute("standalone");
                     if (standaloneAttribute is not null)
                     {
                         _standaloneDeclaration = standaloneAttribute.Equals("yes", StringComparison.OrdinalIgnoreCase);
@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml
                 // remove all children and clear all attributes
                 OuterXml = string.Empty;
                 var mcContextPushed = PushMcContext(xmlReader);
-                Load(xmlReader, OpenXmlElementContext.LoadMode);
+                Load(xmlReader, context.LoadMode);
                 if (mcContextPushed)
                 {
                     PopMcContext();
@@ -171,12 +171,6 @@ namespace DocumentFormat.OpenXml
             }
 
             return true;
-        }
-
-        internal void LoadFromPart(OpenXmlPart openXmlPart, OpenXmlLoadMode loadMode)
-        {
-            OpenXmlElementContext.LoadMode = loadMode;
-            LoadFromPart(openXmlPart);
         }
 
         /// <summary>
@@ -203,7 +197,7 @@ namespace DocumentFormat.OpenXml
         /// </param>
         public void Save(Stream stream)
         {
-            XmlWriterSettings settings = new XmlWriterSettings
+            var settings = new XmlWriterSettings
             {
                 CloseOutput = true,
 
@@ -211,7 +205,7 @@ namespace DocumentFormat.OpenXml
                 Encoding = new UTF8Encoding(false),
             };
 
-            using (XmlWriter xmlWriter = XmlWriter.Create(stream, settings))
+            using (var xmlWriter = XmlWriter.Create(stream, settings))
             {
                 if (_standaloneDeclaration is not null)
                 {
@@ -235,7 +229,7 @@ namespace DocumentFormat.OpenXml
         /// Gets or sets the part that is associated with the DOM tree.
         /// It returns null when the DOM tree is not associated with a part.
         /// </summary>
-        internal OpenXmlPart OpenXmlPart { get; set; }
+        internal OpenXmlPart? OpenXmlPart { get; set; }
 
         /// <summary>
         /// Saves the data in the DOM tree back to the part. This method can
@@ -288,17 +282,17 @@ namespace DocumentFormat.OpenXml
             if (XmlParsed)
             {
                 //check the namespace mapping defined in this node first. because till now xmlWriter don't know the mapping defined in the current node.
-                string prefix = LookupNamespaceLocal(NamespaceUri);
+                var prefix = LookupNamespaceLocal(NamespaceUri);
 
                 //if not defined in the current node, try the xmlWriter
-                if (Parent is not null && string.IsNullOrEmpty(prefix))
+                if (Parent is not null && prefix.IsNullOrEmpty())
                 {
                     prefix = xmlWriter.LookupPrefix(NamespaceUri);
                 }
 
                 //if xmlWriter didn't find it, it means the node is constructed by user and is not in the tree yet
                 //in this case, we use the predefined prefix
-                if (string.IsNullOrEmpty(prefix))
+                if (prefix.IsNullOrEmpty())
                 {
                     prefix = QName.Namespace.Prefix;
                 }
@@ -329,7 +323,7 @@ namespace DocumentFormat.OpenXml
         {
             if (WriteAllNamespaceOnRoot)
             {
-                Dictionary<string, string> namespaces = new Dictionary<string, string>();
+                var namespaces = new Dictionary<string, string>();
 
                 foreach (OpenXmlElement element in Descendants())
                 {
@@ -347,7 +341,7 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var namespacePair in namespaces)
                 {
-                    if (!string.IsNullOrEmpty(namespacePair.Key))
+                    if (!namespacePair.Key.IsNullOrEmpty())
                     {
                         if (NamespaceDeclField is not null &&
                             string.IsNullOrEmpty(LookupPrefixLocal(namespacePair.Value)) &&

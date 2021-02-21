@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Packaging;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
@@ -42,7 +40,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Gets the StylesPart associated with this element, it could either be a StyleDefinitionsPart or a StylesWithEffectsPart.
         /// </summary>
-        public StylesPart StylesPart
+        public StylesPart? StylesPart
         {
             get
             {

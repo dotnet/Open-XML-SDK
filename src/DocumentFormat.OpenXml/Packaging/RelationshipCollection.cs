@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -14,16 +12,23 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the base class for PackageRelationshipPropertyCollection and PackagePartRelationshipPropertyCollection objects.
     /// </summary>
-    abstract internal class RelationshipCollection : List<RelationshipProperty>
+    internal abstract class RelationshipCollection : List<RelationshipProperty>
     {
-        protected PackageRelationshipCollection BasePackageRelationshipCollection { get; set; }
+        protected PackageRelationshipCollection BasePackageRelationshipCollection { get; }
 
         internal bool StrictRelationshipFound { get; set; }
+
+        public RelationshipCollection(PackageRelationshipCollection collection)
+        {
+            BasePackageRelationshipCollection = collection;
+
+            Build();
+        }
 
         /// <summary>
         /// This method fills the collection with PackageRels from the PackageRelationshipCollection that is given in the sub class.
         /// </summary>
-        protected void Build()
+        private void Build()
         {
             foreach (PackageRelationship relationship in BasePackageRelationshipCollection)
             {

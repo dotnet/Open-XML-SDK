@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="instruction">The processing instruction.</param>
         /// <returns>The OpenXml package in Flat OPC format.</returns>
-        protected XDocument ToFlatOpcDocument(XProcessingInstruction instruction)
+        protected XDocument ToFlatOpcDocument(XProcessingInstruction? instruction)
         {
             // Save the contents of all parts and relationships that are contained
             // in the OpenXml package to make sure we convert a consistent state.
@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // namespace declaration and one child element for each part.
             return new XDocument(
                 new XDeclaration("1.0", "UTF-8", "yes"),
-                instruction,
+                instruction!,
                 new XElement(
                     Pkg + "package",
                     new XAttribute(XNamespace.Xmlns + "pkg", Pkg.ToString()),
