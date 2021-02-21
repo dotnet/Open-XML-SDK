@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -17,8 +15,6 @@ namespace DocumentFormat.OpenXml
     [DebuggerDisplay("{Text}")]
     public abstract class OpenXmlLeafTextElement : OpenXmlLeafElement
     {
-        private string _rawInnerText;
-
         /// <summary>
         /// Initializes a new instance of the OpenXmlLeafTextElement class.
         /// </summary>
@@ -33,14 +29,10 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlLeafTextElement(string text)
             : base()
         {
-            _rawInnerText = text;
+            RawInnerText = text;
         }
 
-        internal string RawInnerText
-        {
-            get { return _rawInnerText; }
-            set { _rawInnerText = value; }
-        }
+        internal string? RawInnerText { get; set; }
 
         /// <summary>
         /// Convert the text into value (depends on the type defined in the schema).
@@ -48,10 +40,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="text">The text to convert.</param>
         /// <returns>An OpenXmlSimpleType value.</returns>
         /// <remarks>All generated classes that are derived from this class will generate this method.</remarks>
-        internal virtual OpenXmlSimpleType InnerTextToValue(string text)
-        {
-            return null;
-        }
+        internal virtual OpenXmlSimpleType InnerTextToValue(string text) => null!;
 
         /// <inheritdoc/>
         public override bool HasChildren
@@ -67,7 +56,7 @@ namespace DocumentFormat.OpenXml
                 MakeSureParsed();
                 if (RawInnerText is not null)
                 {
-                    return _rawInnerText;
+                    return RawInnerText;
                 }
                 else
                 {
@@ -222,7 +211,7 @@ namespace DocumentFormat.OpenXml
                 else if (textNodePosition > -1)
                 {
                     // place an OpenXmlMiscNode for the loaded text in the ShadowElement so that we can write out correct content in serialization.
-                    OpenXmlMiscNode textNode = null;
+                    var textNode = default(OpenXmlMiscNode);
                     switch (textNodeType)
                     {
                         case XmlNodeType.Text:
@@ -239,7 +228,7 @@ namespace DocumentFormat.OpenXml
                             break;
                     }
 
-                    ShadowElement.InsertAt(textNode, textNodePosition);
+                    ShadowElement?.InsertAt(textNode, textNodePosition);
                 }
                 else
                 {
@@ -256,8 +245,14 @@ namespace DocumentFormat.OpenXml
         internal override T CloneImp<T>(bool deep)
         {
             T element = base.CloneImp<T>(deep);
-            Debug.Assert(element is OpenXmlLeafTextElement);
-            (element as OpenXmlLeafTextElement).Text = Text;
+
+            if (element is not OpenXmlLeafTextElement leaf)
+            {
+                throw new InvalidOperationException();
+            }
+
+            leaf.Text = Text;
+
             return element;
         }
     }

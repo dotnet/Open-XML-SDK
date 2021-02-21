@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Diagnostics;
 using System.Xml;
@@ -17,7 +15,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets represents a shadow element to hold child elements if there are any.
         /// </summary>
-        internal OpenXmlElement ShadowElement { get; set; }
+        internal OpenXmlElement? ShadowElement { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlLeafElement class.

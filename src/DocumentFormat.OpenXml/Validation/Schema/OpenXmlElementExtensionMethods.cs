@@ -1,10 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -13,13 +10,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal static partial class OpenXmlElementExtensionMethods
     {
-        internal static OpenXmlElement GetFirstChildMc(this OpenXmlElement parent, MCContext mcContext, FileFormatVersions format)
+        internal static OpenXmlElement? GetFirstChildMc(this OpenXmlElement parent, MCContext mcContext, FileFormatVersions format)
         {
             var child = parent.GetFirstNonMiscElementChild();
             return parent.GetChildMc(child, mcContext, format);
         }
 
-        internal static OpenXmlElement GetNextChildMc(this OpenXmlElement parent, OpenXmlElement child, MCContext mcContext, FileFormatVersions format)
+        internal static OpenXmlElement? GetNextChildMc(this OpenXmlElement parent, OpenXmlElement child, MCContext mcContext, FileFormatVersions format)
         {
             var next = child.GetNextNonMiscElementSibling();
             var mcTier = child.Parent;
@@ -32,10 +29,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     mcTier = mcTier.Parent;
                 }
 
-                Debug.Assert(mcTier is not null);
-
-                // there is no more next sibling in this level, then try to find the next siblig of the up level.
-                return parent.GetNextChildMc(mcTier, mcContext, format);
+                // there is no more next sibling in this level, then try to find the next sibling of the up level.
+                return parent.GetNextChildMc(mcTier!, mcContext, format);
             }
 
             return parent.GetChildMc(next, mcContext, format);
@@ -49,10 +44,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="mcContext">Markup Compatibility context.</param>
         /// <param name="format">Targeting file format (Office2007 or Office201).</param>
         /// <returns>The logic child (when we apply a MC preprocessor).</returns>
-        private static OpenXmlElement GetChildMc(this OpenXmlElement parent, OpenXmlElement child, MCContext mcContext, FileFormatVersions format)
+        private static OpenXmlElement? GetChildMc(this OpenXmlElement parent, OpenXmlElement? child, MCContext mcContext, FileFormatVersions format)
         {
             // Use stack to cache the next siblings in different levels.
-            Stack<OpenXmlElement> nextSiblings = new Stack<OpenXmlElement>();
+            var nextSiblings = new Stack<OpenXmlElement?>();
 
             while (child is not null)
             {
@@ -63,7 +58,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
                 else
                 {
-                    mcContext.PushMCAttributes2(child.MCAttributes, child.LookupNamespace);
+                    mcContext.PushMCAttributes2(child.MCAttributes!, child.LookupNamespace);
+
                     if (acb is not null)
                     {
                         nextSiblings.Push(child.GetNextNonMiscElementSibling());

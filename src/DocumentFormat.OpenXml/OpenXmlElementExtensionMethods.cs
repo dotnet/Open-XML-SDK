@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
@@ -85,7 +83,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The part in which the element is in. Returns null if not in a part.</returns>
-        internal static OpenXmlPart GetPart(this OpenXmlElement element)
+        internal static OpenXmlPart? GetPart(this OpenXmlElement element)
         {
             if (element is null)
             {
@@ -100,7 +98,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The URI of the part the element is in. Returns null if not in a part.</returns>
-        internal static Uri GetPartUri(this OpenXmlElement element)
+        internal static Uri? GetPartUri(this OpenXmlElement element)
         {
             var part = element.GetPart();
 
@@ -119,12 +117,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="localName"></param>
         /// <param name="namespaceUri"></param>
         /// <returns></returns>
-        internal static string GetAttributeValueEx(this OpenXmlElement element, string localName, string namespaceUri)
+        internal static string? GetAttributeValueEx(this OpenXmlElement element, string localName, string namespaceUri)
         {
             try
             {
-                OpenXmlAttribute attribute = element.GetAttribute(localName, namespaceUri);
-                return attribute.Value;
+                return element.GetAttribute(localName, namespaceUri).Value;
             }
             catch (KeyNotFoundException)
             {
@@ -138,7 +135,7 @@ namespace DocumentFormat.OpenXml
             {
                 foreach (var element in parent.Metadata.Children.Elements)
                 {
-                    if (element.Type.GetTypeInfo().IsAssignableFrom(child.GetType().GetTypeInfo()))
+                    if (element.Type is not null && element.Type.GetTypeInfo().IsAssignableFrom(child.GetType().GetTypeInfo()))
                     {
                         return true;
                     }
@@ -156,10 +153,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="namespaceUri">The namespace URI of the requested child element.</param>
         /// <param name="localName">The local name of the requested child element.</param>
         /// <returns>A new OpenXmlElement if the parent element can contains a child with the specified namespace and local name. Otherwise, returns null.</returns>
-        internal static OpenXmlElement TryCreateValidChild(this OpenXmlElement parent, FileFormatVersions fileFormat, string namespaceUri, string localName)
+        internal static OpenXmlElement? TryCreateValidChild(this OpenXmlElement parent, FileFormatVersions fileFormat, string namespaceUri, string localName)
         {
             Debug.Assert(parent is OpenXmlCompositeElement);
-            Debug.Assert(localName is not null);
 
             var newElement = parent.CreateElement(OpenXmlQualifiedName.Create(namespaceUri, string.Empty, localName));
             if (newElement is OpenXmlUnknownElement || !newElement.IsInVersion(fileFormat))

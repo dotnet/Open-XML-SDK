@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Collections.Generic;
 using System.Xml;
@@ -42,10 +40,10 @@ namespace DocumentFormat.OpenXml.Framework
                 return value;
             }
 
-            return null;
+            return XmlQualifiedName.Empty;
         }
 
-        public static XmlQualifiedName GetSimpleTypeQualifiedName(this ReadOnlyArray<IValidator> validators, Type type = null)
+        public static XmlQualifiedName GetSimpleTypeQualifiedName(this ReadOnlyArray<IValidator> validators, Type type)
         {
             foreach (var validator in validators)
             {

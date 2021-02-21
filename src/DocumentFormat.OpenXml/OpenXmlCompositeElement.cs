@@ -741,7 +741,12 @@ namespace DocumentFormat.OpenXml
 
                         case ElementAction.ACBlock:
                             {
-                                var effectiveNode = OpenXmlElementContext?.MCContext.GetContentFromACBlock(element as AlternateContent, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
+                                if (element is not AlternateContent acb)
+                                {
+                                    break;
+                                }
+
+                                var effectiveNode = OpenXmlElementContext?.MCContext.GetContentFromACBlock(acb, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
                                 if (effectiveNode is null)
                                 {
                                     break;

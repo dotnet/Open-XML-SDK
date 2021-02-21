@@ -47,6 +47,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
+            if (part is null)
+            {
+                return null;
+            }
+
             var attributeText = attribute.Value.InnerText;
 
             var added = false;
