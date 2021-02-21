@@ -29,8 +29,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     mcTier = mcTier.Parent;
                 }
 
-                // there is no more next sibling in this level, then try to find the next siblig of the up level.
-                return parent.GetNextChildMc(mcTier, mcContext, format);
+                if (mcTier is not null)
+                {
+                    // there is no more next sibling in this level, then try to find the next sibling of the up level.
+                    return parent.GetNextChildMc(mcTier, mcContext, format);
+                }
             }
 
             return parent.GetChildMc(next, mcContext, format);
