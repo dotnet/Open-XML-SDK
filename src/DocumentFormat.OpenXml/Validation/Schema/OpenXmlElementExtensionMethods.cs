@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -29,8 +28,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     mcTier = mcTier.Parent;
                 }
-
-                Debug.Assert(mcTier is not null);
 
                 // there is no more next sibling in this level, then try to find the next siblig of the up level.
                 return parent.GetNextChildMc(mcTier, mcContext, format);
