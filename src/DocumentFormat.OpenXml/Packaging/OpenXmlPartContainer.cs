@@ -1986,7 +1986,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
             else
             {
-                return GlobalPartFactory.CreateOpenXmlPart(InternalOpenXmlPackage, relationshipType);
+                return new ExtendedPart(relationshipType);
             }
         }
 
