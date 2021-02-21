@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Diagnostics;
@@ -31,6 +29,7 @@ namespace DocumentFormat.OpenXml
             _tagName = string.Empty;
             _prefix = string.Empty;
             _namespaceUri = string.Empty;
+            _text = string.Empty;
         }
 
         /// <summary>

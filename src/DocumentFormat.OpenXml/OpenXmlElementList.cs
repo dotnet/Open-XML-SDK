@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Collections.Generic;
 
@@ -58,7 +56,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T First<T>()
+        public T? First<T>()
             where T : OpenXmlElement
         {
             foreach (OpenXmlElement item in this)

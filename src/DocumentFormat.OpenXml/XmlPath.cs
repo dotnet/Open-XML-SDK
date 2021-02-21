@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the internal URI of the part relative to the package root.
         /// </summary>
-        public Uri PartUri { get; }
+        public Uri? PartUri { get; }
 
         /// <summary>
         /// Gets XmlPath information of the specified OpenXmlElement.

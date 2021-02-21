@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,7 +10,7 @@ namespace DocumentFormat.OpenXml
 {
     internal class MCContext
     {
-        internal delegate string LookupNamespace(string prefix);
+        internal delegate string? LookupNamespace(string prefix);
 
         private readonly Stack<string> _currentIgnorable;
         private readonly Stack<XmlQualifiedName> _currentPreserveAttr;
@@ -44,7 +42,7 @@ namespace DocumentFormat.OpenXml
             _noExceptionOnError = !exceptionOnError;
         }
 
-        internal LookupNamespace LookupNamespaceDelegate { get; set; }
+        internal LookupNamespace? LookupNamespaceDelegate { get; set; }
 
         #region methods to maintain the MC Context
         internal void PushMCAttributes(MarkupCompatibilityAttributes attr)
@@ -94,13 +92,11 @@ namespace DocumentFormat.OpenXml
 
         internal IEnumerable<string> ParsePrefixList(string ignorable, OnInvalidValue onInvalidPrefix)
         {
-            Debug.Assert(!string.IsNullOrEmpty(ignorable));
-
             var prefixes = ignorable.Trim().Split(new char[] { ' ' });
             foreach (var prefix in prefixes)
             {
-                var ns = LookupNamespaceDelegate(prefix);
-                if (string.IsNullOrEmpty(ns))
+                var ns = LookupNamespaceDelegate?.Invoke(prefix);
+                if (ns.IsNullOrEmpty())
                 {
                     if (onInvalidPrefix(ignorable))
                     {
@@ -136,8 +132,8 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                var ns = LookupNamespaceDelegate(items[0]);
-                if (string.IsNullOrEmpty(ns))
+                var ns = LookupNamespaceDelegate?.Invoke(items[0]);
+                if (ns.IsNullOrEmpty())
                 {
                     if (onInvalidQName(qnameList))
                     {
@@ -307,9 +303,9 @@ namespace DocumentFormat.OpenXml
         private int PushIgnorable(MarkupCompatibilityAttributes attr)
         {
             int ret = 0;
-            if (attr is not null && attr.Ignorable is not null && !string.IsNullOrEmpty(attr.Ignorable.Value))
+            if (attr is not null && attr.Ignorable is not null && !attr.Ignorable.Value.IsNullOrEmpty())
             {
-                foreach (var ns in ParsePrefixList(attr.Ignorable, OnMcContextError))
+                foreach (var ns in ParsePrefixList(attr.Ignorable.Value, OnMcContextError))
                 {
                     _currentIgnorable.Push(ns);
                     ret++;
@@ -399,7 +395,7 @@ namespace DocumentFormat.OpenXml
         #endregion
 
         #region Helper functions
-        internal OpenXmlCompositeElement GetContentFromACBlock(AlternateContent acblk, FileFormatVersions format)
+        internal OpenXmlCompositeElement? GetContentFromACBlock(AlternateContent acblk, FileFormatVersions format)
         {
             Debug.Assert(format != FileFormatVersions.Office2007.AndLater());
 
@@ -411,8 +407,8 @@ namespace DocumentFormat.OpenXml
                     continue;
                 }
 
-                string reqs = choice.Requires.InnerText.Trim();
-                if (string.IsNullOrEmpty(reqs))
+                var reqs = choice.Requires.InnerText?.Trim();
+                if (reqs.IsNullOrEmpty())
                 {
                     //should we throw exception here?
                     continue;

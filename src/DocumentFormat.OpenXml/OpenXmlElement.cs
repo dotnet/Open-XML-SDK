@@ -775,7 +775,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T">Type of element.</typeparam>
         /// <returns></returns>
-        public T GetFirstChild<T>()
+        public T? GetFirstChild<T>()
             where T : OpenXmlElement
             => ChildElements.First<T>();
 
@@ -1105,7 +1105,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The <see cref="OpenXmlElement"/> element that was appended. </returns>
         [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T AppendChild<T>([AllowNull] T newChild)
+        public virtual T AppendChild<T>(T? newChild)
             where T : OpenXmlElement?
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
@@ -1117,7 +1117,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The <see cref="OpenXmlElement"/> element that was inserted.</returns>
         [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T InsertAfter<T>([AllowNull] T newChild, OpenXmlElement? referenceChild)
+        public virtual T InsertAfter<T>(T? newChild, OpenXmlElement? referenceChild)
             where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
@@ -1129,7 +1129,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The <see cref="OpenXmlElement"/> element that was inserted.</returns>
         [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T InsertBefore<T>([AllowNull] T newChild, OpenXmlElement? referenceChild)
+        public virtual T InsertBefore<T>(T? newChild, OpenXmlElement? referenceChild)
             where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
@@ -1188,7 +1188,7 @@ namespace DocumentFormat.OpenXml
         /// <remarks>Returns <c>null</c>if <paramref name="newChild"/> equals <c>null</c>.</remarks>
         [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T InsertAt<T>([AllowNull] T newChild, int index)
+        public virtual T InsertAt<T>(T? newChild, int index)
             where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
@@ -1199,7 +1199,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The <see cref="OpenXmlElement"/> element that was added.</returns>
         [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T PrependChild<T>([AllowNull] T newChild)
+        public virtual T PrependChild<T>(T? newChild)
             where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
@@ -1210,7 +1210,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The element that was removed. </returns>
         [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T RemoveChild<T>([AllowNull] T oldChild)
+        public virtual T RemoveChild<T>(T? oldChild)
             where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
@@ -1222,7 +1222,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The <see cref="OpenXmlElement"/> element that was replaced.</returns>
         [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T ReplaceChild<T>(OpenXmlElement newChild, [AllowNull] T oldChild)
+        public virtual T ReplaceChild<T>(OpenXmlElement newChild, T? oldChild)
             where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 

@@ -235,7 +235,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Value = element.InnerTextToValue(element.Text);
             }
 
-            public OpenXmlSimpleType Value { get; }
+            public OpenXmlSimpleType? Value { get; }
 
             public override string PropertyName => "Value";
 
@@ -243,7 +243,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             public override ReadOnlyArray<IValidator> Validators => _element.ParsedState.Metadata.Validators;
 
-            public override Type Type => Value.GetType();
+            public override Type? Type => Value?.GetType();
 
             public override OpenXmlSimpleType CreateNew() => throw new NotImplementedException();
         }

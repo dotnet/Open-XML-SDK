@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public abstract OpenXmlSimpleType CreateNew();
 
-        public abstract Type Type { get; }
+        public abstract Type? Type { get; }
 
         public class Builder<TSimpleType> : ValidatorBuilder, IMetadataBuilder<AttributeMetadata>
             where TSimpleType : OpenXmlSimpleType, new()

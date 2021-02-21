@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Xml;
@@ -17,7 +15,7 @@ namespace DocumentFormat.OpenXml
         internal const string xmlnsUri = @"http://www.w3.org/2000/xmlns/";
         internal const string xmlnsPrefix = "xmlns";
 
-        private MarkupCompatibilityProcessSettings _mcSettings;
+        private MarkupCompatibilityProcessSettings? _mcSettings;
 
         internal MarkupCompatibilityProcessSettings MCSettings
         {
@@ -92,7 +90,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if nsUri equals @"http://www.w3.org/2000/xmlns/".</returns>
         internal bool IsXmlnsUri(string nsUri)
         {
-            return string.Equals(XmlReaderSettings.NameTable.Get(nsUri), xmlnsUri, StringComparison.Ordinal);
+            return string.Equals(XmlReaderSettings.NameTable?.Get(nsUri), xmlnsUri, StringComparison.Ordinal);
         }
 
         /// <summary>
@@ -138,21 +136,21 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Occurs when an element is about to be inserted into the element hierarchy.
         /// </summary>
-        public event EventHandler<ElementEventArgs> ElementInserting;
+        public event EventHandler<ElementEventArgs>? ElementInserting;
 
         /// <summary>
         /// Occurs when an element has been inserted into the element hierarchy.
         /// </summary>
-        public event EventHandler<ElementEventArgs> ElementInserted;
+        public event EventHandler<ElementEventArgs>? ElementInserted;
 
         /// <summary>
         /// Occurs when an element is being removed from the element hierarchy.
         /// </summary>
-        public event EventHandler<ElementEventArgs> ElementRemoving;
+        public event EventHandler<ElementEventArgs>? ElementRemoving;
 
         /// <summary>
         /// Occurs when an element has been removed from the element hierarchy.
         /// </summary>
-        public event EventHandler<ElementEventArgs> ElementRemoved;
+        public event EventHandler<ElementEventArgs>? ElementRemoved;
     }
 }
