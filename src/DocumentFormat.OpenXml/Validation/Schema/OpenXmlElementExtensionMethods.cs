@@ -29,11 +29,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     mcTier = mcTier.Parent;
                 }
 
-                if (mcTier is not null)
-                {
-                    // there is no more next sibling in this level, then try to find the next sibling of the up level.
-                    return parent.GetNextChildMc(mcTier, mcContext, format);
-                }
+                // there is no more next sibling in this level, then try to find the next sibling of the up level.
+                return parent.GetNextChildMc(mcTier!, mcContext, format);
             }
 
             return parent.GetChildMc(next, mcContext, format);
@@ -61,10 +58,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
                 else
                 {
-                    if (child.MCAttributes is not null)
-                    {
-                        mcContext.PushMCAttributes2(child.MCAttributes, child.LookupNamespace);
-                    }
+                    mcContext.PushMCAttributes2(child.MCAttributes!, child.LookupNamespace);
 
                     if (acb is not null)
                     {
