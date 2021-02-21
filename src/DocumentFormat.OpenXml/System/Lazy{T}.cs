@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        public T? Value
+        public T Value
         {
             get
             {
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                return _value;
+                return _value!;
             }
         }
     }
