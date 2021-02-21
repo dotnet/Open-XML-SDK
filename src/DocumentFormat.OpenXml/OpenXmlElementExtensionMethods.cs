@@ -156,7 +156,6 @@ namespace DocumentFormat.OpenXml
         internal static OpenXmlElement? TryCreateValidChild(this OpenXmlElement parent, FileFormatVersions fileFormat, string namespaceUri, string localName)
         {
             Debug.Assert(parent is OpenXmlCompositeElement);
-            Debug.Assert(localName is not null);
 
             var newElement = parent.CreateElement(OpenXmlQualifiedName.Create(namespaceUri, string.Empty, localName));
             if (newElement is OpenXmlUnknownElement || !newElement.IsInVersion(fileFormat))

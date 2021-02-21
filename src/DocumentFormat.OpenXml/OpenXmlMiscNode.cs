@@ -351,33 +351,21 @@ namespace DocumentFormat.OpenXml
         }
 
         internal static OpenXmlMiscNode CreateFromText(string text)
-        {
-            Debug.Assert(text is not null);
-
-            return new OpenXmlMiscNode(XmlNodeType.Text)
+            => new OpenXmlMiscNode(XmlNodeType.Text)
             {
                 RawOuterXml = text,
             };
-        }
 
         internal static OpenXmlMiscNode CreateFromCdata(string value)
-        {
-            Debug.Assert(value is not null);
-
-            return new OpenXmlMiscNode(XmlNodeType.CDATA)
+            => new OpenXmlMiscNode(XmlNodeType.CDATA)
             {
                 RawOuterXml = Invariant($"<![CDATA[{value}]]>"),
             };
-        }
 
         internal static OpenXmlMiscNode CreateFromSignificantWhitespace(string whitespace)
-        {
-            Debug.Assert(whitespace is not null);
-
-            return new OpenXmlMiscNode(XmlNodeType.SignificantWhitespace)
+            => new OpenXmlMiscNode(XmlNodeType.SignificantWhitespace)
             {
                 RawOuterXml = whitespace,
             };
-        }
     }
 }
