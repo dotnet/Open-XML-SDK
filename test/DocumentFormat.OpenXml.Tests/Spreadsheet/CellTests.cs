@@ -19,6 +19,8 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData("false", CellValues.Boolean, true)]
         [InlineData("true", CellValues.Boolean, true)]
         [InlineData("other", CellValues.Boolean, false)]
+        [InlineData("0", CellValues.Boolean, true)]
+        [InlineData("1", CellValues.Boolean, true)]
 
         // Dates
         [InlineData("DateValue", CellValues.Date, false)]
