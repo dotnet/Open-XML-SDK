@@ -23,7 +23,7 @@ jobs:
       inputs:
         targetType: 'inline'
         script: |
-          dotnet tool install --global GitVersion.Tool --version 5.6.3     
+          dotnet tool install --global GitVersion.Tool
           dotnet gitversion /output buildserver /nofetch
 
     - task: DotNetCoreCLI@2
