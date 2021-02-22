@@ -1,12 +1,12 @@
 trigger:
-- master
+- main
 - release/*
 
 pr:
   autoCancel: true
   branches:
     include:
-    - master
+    - main
     - release/*
 
 variables:
