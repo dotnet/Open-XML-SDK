@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the root element of this part. The DOM tree will be loaded on demand.
         /// </summary>
-        internal override OpenXmlPartRootElement PartRootElement => Styles;
+        internal override OpenXmlPartRootElement? PartRootElement => Styles;
 
         /// <summary>
         /// Gets or sets the root element of this part.
