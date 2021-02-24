@@ -237,6 +237,30 @@ namespace DocumentFormat.OpenXml.Framework
             { "http://schemas.microsoft.com/office/spreadsheetml/2014/11/main", "x16", FileFormatVersions.Office2016 },
             { "http://schemas.microsoft.com/office/spreadsheetml/2015/02/main", "x16r2", FileFormatVersions.Office2016 },
             { "http://schemas.microsoft.com/office/word/2015/wordml/symex", "w16se", FileFormatVersions.Office2016 },
+
+            // O19
+            { "http://schemas.microsoft.com/office/powerpoint/2017/3/main", "p173", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/pivotdefaultlayout", "xpdl", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/01/main", "xlPr", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2015/revision2", "xr2", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/revision3", "xr3", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/revision5", "xr5", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/revision6", "xr6", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/revision9", "xr9", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/revision10", "xr10", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2017/revision16", "xr16", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "xlrd2", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "xlrd", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2018/calcfeatures", "xcalcf", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "xltc", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2017/03/chart", "c16r3", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray", "xda", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2016/11/diagram", "dgm1611", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2016/12/diagram", "dgm1612", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2016/ink", "aink", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor", "ahyp", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/word/2016/wordml/cid", "w16cid", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2016/SVG/main", "asvg", FileFormatVersions.Office2019 },
         };
 
         internal static int Count => _namespaceResolver.Count;
