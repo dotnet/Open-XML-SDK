@@ -4,7 +4,6 @@ Open XML SDK
 [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
 [![Downloads](https://img.shields.io/nuget/dt/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
 [![Build Status](https://office.visualstudio.com/OC/_apis/build/status/OpenXmlSdk/OfficeDev.Open-XML-SDK?branchName=master)](https://office.visualstudio.com/OC/_build/latest?definitionId=7420&branchName=master)
-[![MyGet](https://img.shields.io/dotnet.myget/open-xml-sdk/vpre/DocumentFormat.OpenXml.svg)](https://dotnet.myget.org/feed/open-xml-sdk/package/nuget/DocumentFormat.OpenXml)
 
 The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:
 
