@@ -653,15 +653,15 @@ namespace DocumentFormat.OpenXml.Packaging
                 // For ISO Strict documents, we read and save the part anyway to translate the contents. The contents are translated when PartRootElement is being loaded.
                 if (part.PartRootElement is not null)
                 {
-                    SavePartContent(part);
+                    part.PartRootElement.Save();
                 }
             }
             else
             {
                 // For Transitional documents, we only save the 'changed' part.
-                if (IsPartContentChanged(part))
+                if (IsPartContentChanged(part) && part.PartRootElement is not null)
                 {
-                    SavePartContent(part);
+                    part.PartRootElement.Save();
                 }
             }
         }
@@ -683,12 +683,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return part.IsRootElementLoaded;
         }
 
-        // Save the content of a part to its stream.
-        private static void SavePartContent(OpenXmlPart part)
-        {
-            // Save PartRootElement to the part stream.
-            part.PartRootElement.Save();
-        }
         #endregion
 
         #region internal methods related main part

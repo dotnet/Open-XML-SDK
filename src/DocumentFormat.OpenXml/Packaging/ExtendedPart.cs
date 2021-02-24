@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -15,9 +13,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Default constructor.
         /// </summary>
+        [Obsolete("Does not set a RelationshipType")]
         protected ExtendedPart()
             : base()
         {
+            RelationshipType = null!;
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "subPart" is null reference.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the part is no allowed to be added.</exception>
         /// <exception cref="OpenXmlPackageException">Thrown when one instance of same type part already exists and multiple instance of that type is not allowed.</exception>
-        internal override OpenXmlPart AddPartFrom(OpenXmlPart subPart, string rId)
+        internal override OpenXmlPart AddPartFrom(OpenXmlPart subPart, string? rId)
         {
             ThrowIfObjectDisposed();
 
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="newPart">The part to be initialized.</param>
         /// <param name="contentType">The content type of the part.</param>
         /// <param name="id">The relationship id.</param>
-        internal override void InitPart<T>(T newPart, string contentType, string id)
+        internal override void InitPart<T>(T newPart, string contentType, string? id)
         {
             ThrowIfObjectDisposed();
 

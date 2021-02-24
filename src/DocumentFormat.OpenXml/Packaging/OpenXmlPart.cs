@@ -1,12 +1,11 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 
@@ -22,9 +21,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract class OpenXmlPart : OpenXmlPartContainer
     {
-        private OpenXmlPackage _openXmlPackage;
-        private PackagePart _packagePart;
-        private Uri _uri;
+        private OpenXmlPackage? _openXmlPackage;
+        private PackagePart? _packagePart;
+        private Uri? _uri;
 
         /// <summary>
         /// Create an instance of <see cref="OpenXmlPart"/>
@@ -36,7 +35,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #region methods for LoadPart(), NewPart( ), AddPartFrom( )
 
-        internal void Load(OpenXmlPackage openXmlPackage, OpenXmlPart parent, Uri uriTarget, string id, Dictionary<Uri, OpenXmlPart> loadedParts)
+        internal void Load(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, Uri uriTarget, string id, Dictionary<Uri, OpenXmlPart> loadedParts)
         {
             if (uriTarget is null)
             {
@@ -62,6 +61,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 openXmlPackage = parent.OpenXmlPackage;
             }
 
+            if (openXmlPackage is null)
+            {
+                throw new ArgumentNullException(nameof(openXmlPackage));
+            }
+
             _openXmlPackage = openXmlPackage;
 
             Debug.Assert(loadedParts.ContainsKey(uriTarget));
@@ -69,7 +73,7 @@ namespace DocumentFormat.OpenXml.Packaging
             _uri = uriTarget;
 
             // TODO: should we delay load?
-            PackagePart metroPart = OpenXmlPackage.Package.GetPart(uriTarget);
+            var metroPart = openXmlPackage.Package.GetPart(uriTarget);
 
             if (IsContentTypeFixed && metroPart.ContentType != ContentType)
             {
@@ -85,14 +89,14 @@ namespace DocumentFormat.OpenXml.Packaging
             _packagePart = metroPart;
 
             // add the _uri to be reserved
-            OpenXmlPackage.ReserveUri(ContentType, Uri);
+            openXmlPackage.ReserveUri(ContentType, Uri);
 
             // load recursively
-            RelationshipCollection relationshipCollection = new PackagePartRelationshipPropertyCollection(PackagePart);
+            var relationshipCollection = new PackagePartRelationshipPropertyCollection(PackagePart);
             LoadReferencedPartsAndRelationships(openXmlPackage, this, relationshipCollection, loadedParts);
         }
 
-        // can not use generic, at it will emit error
+        // cannot use generic, at it will emit error
         // Compiler Error CS0310
         // The type 'typename' must have a public parameterless constructor in order to use it as parameter 'parameter' in the generic type or method 'generic'
         internal sealed override OpenXmlPart NewPart(string relationshipType, string contentType)
@@ -131,17 +135,17 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         // get app specific TargetPath if exists
-        internal string GetTargetPath(string defaultPath)
+        private string? GetTargetPath(OpenXmlPackage package, string? defaultPath)
         {
-            if (TargetPathOfWord is not null && _openXmlPackage.ApplicationType == ApplicationType.Word)
+            if (TargetPathOfWord is not null && package.ApplicationType == ApplicationType.Word)
             {
                 return TargetPathOfWord;
             }
-            else if (TargetPathOfExcel is not null && _openXmlPackage.ApplicationType == ApplicationType.Excel)
+            else if (TargetPathOfExcel is not null && package.ApplicationType == ApplicationType.Excel)
             {
                 return TargetPathOfExcel;
             }
-            else if (TargetPathOfPPT is not null && _openXmlPackage.ApplicationType == ApplicationType.PowerPoint)
+            else if (TargetPathOfPPT is not null && package.ApplicationType == ApplicationType.PowerPoint)
             {
                 return TargetPathOfPPT;
             }
@@ -150,7 +154,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         // create a new part in this package
-        internal void CreateInternal(OpenXmlPackage openXmlPackage, OpenXmlPart parent, string contentType, string targetExt)
+        internal void CreateInternal(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, string contentType, string? targetExt)
         {
             // openXmlPackage, parent can not be all null
             if (openXmlPackage is null && parent is null)
@@ -169,6 +173,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
             // throw exception to catch error in our code
             if (_packagePart is not null)
+            {
+                throw new InvalidOperationException();
+            }
+
+            if (openXmlPackage is null)
             {
                 throw new InvalidOperationException();
             }
@@ -190,18 +199,18 @@ namespace DocumentFormat.OpenXml.Packaging
             //OpenXmlPart parentPart = this._ownerPart;
 
             //Uri is auto generated to make sure it's unique
-            string targetPath = GetTargetPath(TargetPath);
+            var targetPath = GetTargetPath(openXmlPackage, TargetPath);
 
             if (targetPath is null)
             {
                 targetPath = ".";
             }
 
-            string targetFileExt = targetExt;
+            string? targetFileExt = targetExt;
 
             if (!IsContentTypeFixed)
             {
-                if (!_openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out targetFileExt))
+                if (!openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out targetFileExt))
                 {
                     targetFileExt = targetExt;
                 }
@@ -218,7 +227,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         // create a new part in this package
-        internal void CreateInternal2(OpenXmlPackage openXmlPackage, OpenXmlPart parent, string contentType, Uri partUri)
+        internal void CreateInternal2(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, string contentType, Uri partUri)
         {
             // openXmlPackage, parent can not be all null
             if (openXmlPackage is null && parent is null)
@@ -241,6 +250,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException();
             }
 
+            if (openXmlPackage is null)
+            {
+                throw new InvalidOperationException();
+            }
+
             // set the _openXmlPackage so ThrowIfObjectDisposed( ) do not throw.
             _openXmlPackage = openXmlPackage;
 
@@ -255,9 +269,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 parentUri = new Uri("/", UriKind.Relative);
             }
 
-            _uri = _openXmlPackage.GetUniquePartUri(contentType, parentUri, partUri);
+            _uri = openXmlPackage.GetUniquePartUri(contentType, parentUri, partUri);
 
-            _packagePart = _openXmlPackage.CreateMetroPart(_uri, contentType);
+            _packagePart = openXmlPackage.CreateMetroPart(_uri, contentType);
         }
 
         #endregion
@@ -464,9 +478,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <summary>
         /// Gets the root element of the current part.
-        /// Returns null when the current part is empty or is not and XML content type.
+        /// Returns null when the current part is empty or is not an XML content type.
         /// </summary>
-        public OpenXmlPartRootElement RootElement
+        public OpenXmlPartRootElement? RootElement
         {
             get
             {
@@ -549,22 +563,22 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the internal path to be used for the part name.
         /// </summary>
-        internal virtual string TargetPath => null;
+        internal virtual string? TargetPath => null;
 
         /// <summary>
         /// Gets the internal path (Word specific TargetPath) to be used for the part name.
         /// </summary>
-        internal virtual string TargetPathOfWord => null;
+        internal virtual string? TargetPathOfWord => null;
 
         /// <summary>
         /// Gets the internal path (Excel specific TargetPath) to be used for the part name.
         /// </summary>
-        internal virtual string TargetPathOfExcel => null;
+        internal virtual string? TargetPathOfExcel => null;
 
         /// <summary>
         /// Gets the internal path (PPT specific TargetPath) to be used for the part name.
         /// </summary>
-        internal virtual string TargetPathOfPPT => null;
+        internal virtual string? TargetPathOfPPT => null;
 
         /// <summary>
         /// Gets the file base name to be used for the part name in the package.
@@ -581,15 +595,11 @@ namespace DocumentFormat.OpenXml.Packaging
             get { return DefaultTargetExt; }
         }
 
-        // inherited class should have a static properties
-        // public static string RelationshipType { get {return "xx"; } }
-        // internal abstract string PartRelationshipType { get; }
-
         /// <summary>
         /// Gets or sets the root element field.
         /// </summary>
         /// <exception cref="InvalidOperationException">If the part does not have root element defined.</exception>
-        private protected virtual OpenXmlPartRootElement InternalRootElement
+        private protected virtual OpenXmlPartRootElement? InternalRootElement
         {
             get { return null; }
             set { throw new InvalidOperationException(); }
@@ -599,7 +609,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the root element of the current part.
         /// </summary>
         /// <remarks>Returns null if the part is not a defined XML part.</remarks>
-        internal virtual OpenXmlPartRootElement PartRootElement
+        internal virtual OpenXmlPartRootElement? PartRootElement
         {
             get { return null; }
         }
@@ -630,7 +640,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <remarks>
         /// Used by validator. To release the DOM and so the memory can be GC'ed.
         /// </remarks>
-        internal OpenXmlPartRootElement SetPartRootElementToNull()
+        internal OpenXmlPartRootElement? SetPartRootElementToNull()
         {
             var rootElement = InternalRootElement;
             if (InternalRootElement is not null)
@@ -737,9 +747,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Indicates whether the object is already disposed.
         /// </summary>
+        [MemberNotNull(nameof(_openXmlPackage))]
+        [MemberNotNull(nameof(_packagePart))]
+        [MemberNotNull(nameof(_uri))]
         protected sealed override void ThrowIfObjectDisposed()
         {
-            if (_openXmlPackage is null)
+            if (_openXmlPackage is null || _packagePart is null || _uri is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.PartIsDestroyed);
             }
@@ -747,7 +760,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal sealed override OpenXmlPackage InternalOpenXmlPackage
         {
-            get { return _openXmlPackage; }
+            get
+            {
+                ThrowIfObjectDisposed();
+                return _openXmlPackage;
+            }
         }
 
         internal sealed override OpenXmlPart ThisOpenXmlPart
@@ -779,7 +796,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion
 
         #region MC Staffs
-        internal MarkupCompatibilityProcessSettings MCSettings;
+        internal MarkupCompatibilityProcessSettings? MCSettings;
         #endregion
 
     }
