@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Office.Word;
 using System;
 
@@ -13,25 +11,17 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public partial class MailMergeRecipientDataPart : OpenXmlPart
     {
-        [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
-        private DocumentFormat.OpenXml.OpenXmlPartRootElement _rootEle;
+        private OpenXmlPartRootElement? _rootEle;
 
         /// <inheritdoc/>
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
-            get
-            {
-                return _rootEle;
-            }
-
-            set
-            {
-                _rootEle = value;
-            }
+            get => _rootEle;
+            set => _rootEle = value;
         }
 
         /// <inheritdoc/>
-        internal override OpenXmlPartRootElement PartRootElement
+        internal override OpenXmlPartRootElement? PartRootElement
         {
             get
             {
@@ -50,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets or sets the part's root element when the part's content type is MailMergeRecipientDataPartType.OpenXmlMailMergeRecipientData.
         /// Setting this property will throw InvalidOperationException if the MailMergeRecipients property is not null.
         /// </summary>
-        public Wordprocessing.Recipients Recipients
+        public Wordprocessing.Recipients? Recipients
         {
             get
             {
@@ -78,7 +68,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets or sets the part's root element when the part's content type is MailMergeRecipientDataPartType.MsWordMailMergeRecipientData.
         /// Setting this property will throw InvalidOperationException if the Recipients property is not null.
         /// </summary>
-        public MailMergeRecipients MailMergeRecipients
+        public MailMergeRecipients? MailMergeRecipients
         {
             get
             {
@@ -108,7 +98,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 try
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Recipients>();
+                    LoadDomTree<Wordprocessing.Recipients>();
                 }
                 catch (System.IO.InvalidDataException)
                 {
@@ -116,7 +106,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 if (_rootEle is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office.Word.MailMergeRecipients>();
+                    LoadDomTree<MailMergeRecipients>();
                 }
             }
         }
