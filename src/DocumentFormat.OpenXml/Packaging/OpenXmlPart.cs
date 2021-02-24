@@ -701,8 +701,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when the part's root element has already be associated with another OpenXmlPart.</exception>
         internal void SetDomTree(OpenXmlPartRootElement partRootElement)
         {
-            Debug.Assert(partRootElement is not null);
-
             if (partRootElement.OpenXmlPart is not null)
             {
                 throw new ArgumentException(ExceptionMessages.PartRootAlreadyHasAssociation, nameof(partRootElement));
