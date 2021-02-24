@@ -116,25 +116,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="value">The result if successful.</param>
         /// <returns>Success or failure</returns>
         public bool TryGetBoolean(out bool value)
-            => bool.TryParse(InnerText, out value) || TryGetBooleanFromInteger(out value);
-
-        private bool TryGetBooleanFromInteger(out bool value)
         {
-            if (int.TryParse(InnerText, out var result))
+            switch (InnerText)
             {
-                switch (result)
-                {
-                    case 0:
-                        value = false;
-                        return true;
-                    case 1:
-                        value = true;
-                        return true;
-                }
+                case "0":
+                case "false":
+                    value = false;
+                    return true;
+                case "1":
+                case "true":
+                    value = true;
+                    return true;
+                default:
+                    value = false;
+                    return false;
             }
-
-            value = false;
-            return false;
         }
 
         private static string ToCellFormat(DateTime dateTime)

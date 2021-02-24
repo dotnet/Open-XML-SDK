@@ -17,7 +17,9 @@ namespace DocumentFormat.OpenXml.Tests
 
         // Boolean
         [InlineData("false", CellValues.Boolean, true)]
+        [InlineData("False", CellValues.Boolean, false)]
         [InlineData("true", CellValues.Boolean, true)]
+        [InlineData("True", CellValues.Boolean, false)]
         [InlineData("other", CellValues.Boolean, false)]
         [InlineData("0", CellValues.Boolean, true)]
         [InlineData("1", CellValues.Boolean, true)]
@@ -29,7 +31,7 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData("2017-11-28T12:25:02.000", CellValues.Date, true)]
         [InlineData("2017-11-28T12:25:02.000+00:00", CellValues.Date, true)]
         [Theory]
-        public void CellValidationTest(string value, CellValues type, bool success)
+        public void CellValidationTest(string value, CellValues type, bool isValid)
         {
             var cell = new Cell
             {
@@ -40,7 +42,7 @@ namespace DocumentFormat.OpenXml.Tests
             var validator = new OpenXmlValidator();
             var results = validator.Validate(cell);
 
-            if (success)
+            if (isValid)
             {
                 Assert.Empty(results);
             }
