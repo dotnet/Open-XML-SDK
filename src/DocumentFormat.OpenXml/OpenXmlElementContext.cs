@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -17,6 +18,7 @@ namespace DocumentFormat.OpenXml
 
         private MarkupCompatibilityProcessSettings? _mcSettings;
 
+        [AllowNull]
         internal MarkupCompatibilityProcessSettings MCSettings
         {
             get

@@ -42,15 +42,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </summary>
         public CustomUIPart? CustomUIPart
         {
-            get
-            {
-                return OpenXmlPart as CustomUIPart;
-            }
-
-            internal set
-            {
-                OpenXmlPart = value;
-            }
+            get => OpenXmlPart as CustomUIPart;
+            internal set => OpenXmlPart = value;
         }
     }
 }

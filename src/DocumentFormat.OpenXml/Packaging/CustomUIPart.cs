@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -13,10 +11,10 @@ namespace DocumentFormat.OpenXml.Packaging
     public abstract partial class CustomUIPart : OpenXmlPart
     {
         [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
-        private Office.CustomUI.CustomUI _rootEle;
+        private Office.CustomUI.CustomUI? _rootEle;
 
         /// <inheritdoc/>
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -30,7 +28,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <inheritdoc/>
-        internal override OpenXmlPartRootElement PartRootElement
+        internal override OpenXmlPartRootElement? PartRootElement
         {
             get
             {
@@ -41,7 +39,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public Office.CustomUI.CustomUI CustomUI
+        public Office.CustomUI.CustomUI? CustomUI
         {
             get
             {
