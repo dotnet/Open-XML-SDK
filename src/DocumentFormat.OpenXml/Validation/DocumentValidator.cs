@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System.Collections.Generic;
@@ -120,22 +118,36 @@ namespace DocumentFormat.OpenXml.Validation
 
         public void Validate(ValidationContext validationContext)
         {
-            Debug.Assert(validationContext is not null);
-            Debug.Assert(validationContext.Stack.Current.Element is not null);
+            var openxmlElement = validationContext.Stack.Current?.Element;
 
-            var openxmlElement = validationContext.Stack.Current.Element;
+            if (openxmlElement is null)
+            {
+                return;
+            }
 
-            Debug.Assert(!(openxmlElement is OpenXmlUnknownElement || openxmlElement is OpenXmlMiscNode));
+            if (openxmlElement is OpenXmlUnknownElement || openxmlElement is OpenXmlMiscNode)
+            {
+                return;
+            }
 
             // Can not just validate AlternateContent / Choice / Fallback
-            // Debug.Assert(!(openxmlElement is AlternateContent))
-            Debug.Assert(!(openxmlElement is AlternateContentChoice || openxmlElement is AlternateContentFallback));
+            if (openxmlElement is AlternateContentChoice || openxmlElement is AlternateContentFallback || openxmlElement is AlternateContentChoice)
+            {
+                return;
+            }
 
             ValidationTraverser.ValidatingTraverse(validationContext, SchemaTypeValidator.Validate);
 
             ValidationTraverser.ValidatingTraverse(validationContext, context =>
             {
-                foreach (var constraint in context.Stack.Current.Element.Metadata.Constraints)
+                var element = context.Stack.Current?.Element;
+
+                if (element is null)
+                {
+                    return;
+                }
+
+                foreach (var constraint in element.Metadata.Constraints)
                 {
                     constraint.Validate(context);
                 }

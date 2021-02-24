@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="attr"></param>
         /// <param name="lookupNamespaceDelegate"></param>
-        internal void PushMCAttributes2(MarkupCompatibilityAttributes attr, LookupNamespace lookupNamespaceDelegate)
+        internal void PushMCAttributes2(MarkupCompatibilityAttributes? attr, LookupNamespace lookupNamespaceDelegate)
         {
             LookupNamespaceDelegate = lookupNamespaceDelegate;
 
@@ -300,7 +300,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private int PushIgnorable(MarkupCompatibilityAttributes attr)
+        private int PushIgnorable(MarkupCompatibilityAttributes? attr)
         {
             int ret = 0;
             if (attr is not null && attr.Ignorable is not null && !attr.Ignorable.Value.IsNullOrEmpty())
@@ -350,7 +350,7 @@ namespace DocumentFormat.OpenXml
             return ret;
         }
 
-        private int PushProcessContent(MarkupCompatibilityAttributes attr)
+        private int PushProcessContent(MarkupCompatibilityAttributes? attr)
         {
             int ret = 0;
             if (attr is not null && attr.ProcessContent is not null && !attr.ProcessContent.Value.IsNullOrEmpty())

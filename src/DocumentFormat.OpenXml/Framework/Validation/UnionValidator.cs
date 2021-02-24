@@ -22,6 +22,13 @@ namespace DocumentFormat.OpenXml.Framework
 
         public void Validate(ValidationContext context)
         {
+            var current = context.Stack.Current;
+
+            if (current?.Property is null)
+            {
+                return;
+            }
+
             var errorRaised = false;
 
             using (context.Stack.Push(_ => errorRaised = true))
@@ -38,8 +45,6 @@ namespace DocumentFormat.OpenXml.Framework
                     errorRaised = false;
                 }
             }
-
-            var current = context.Stack.Current;
 
             context.CreateError(
                 id: "Sch_AttributeUnionFailedEx",

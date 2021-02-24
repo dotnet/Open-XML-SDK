@@ -103,6 +103,11 @@ namespace DocumentFormat.OpenXml.Framework
         {
             var current = context.Stack.Current;
 
+            if (current is null)
+            {
+                return;
+            }
+
             if (current.Value is StringValue str)
             {
                 Validate(str, context, current, includeDetails: true);
@@ -133,6 +138,11 @@ namespace DocumentFormat.OpenXml.Framework
 
         private void Validate(StringValue str, ValidationContext context, in ValidationElement current, bool includeDetails)
         {
+            if (current.Property is null || current.Value is null)
+            {
+                return;
+            }
+
             var id = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
             var description = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
 
@@ -286,15 +296,20 @@ namespace DocumentFormat.OpenXml.Framework
 
         private static void InvalidEmpty(ValidationContext context, in ValidationElement current, string id, string description)
         {
+            if (current.Property is null || current.Value is null)
+            {
+                return;
+            }
+
             context.CreateError(
                 id: id,
                 description: SR.Format(description, current.Property.QName, current.Value.InnerText, ValidationResources.Sch_EmptyAttributeValue),
                 errorType: ValidationErrorType.Schema);
         }
 
-        private static bool IsValidNcName(OpenXmlSimpleType attributeValue)
+        private static bool IsValidNcName(OpenXmlSimpleType? attributeValue)
         {
-            if (string.IsNullOrEmpty(attributeValue.InnerText))
+            if (attributeValue is null || attributeValue.InnerText.IsNullOrEmpty())
             {
                 return false;
             }

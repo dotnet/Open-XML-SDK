@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -12,7 +10,7 @@ namespace DocumentFormat.OpenXml.Validation
 {
     internal static class ValidationTraverser
     {
-        public static IEnumerable<OpenXmlElement> Descendants(this OpenXmlElement element, FileFormatVersions version = FileFormatVersions.Office2007, TraversalOptions options = TraversalOptions.None)
+        public static IEnumerable<OpenXmlElement> Descendants(this OpenXmlElement? element, FileFormatVersions version = FileFormatVersions.Office2007, TraversalOptions options = TraversalOptions.None)
         {
             if (element is null)
             {
@@ -37,7 +35,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <param name="validateAction">The delegate method to do the validating.</param>
         internal static void ValidatingTraverse(ValidationContext validationContext, Action<ValidationContext> validateAction)
         {
-            var children = ValidatingTraverse(validationContext.Stack.Current.Element, validationContext.McContext, validationContext.FileFormat);
+            var children = ValidatingTraverse(validationContext.Stack.Current?.Element, validationContext.McContext, validationContext.FileFormat);
 
             foreach (var child in children)
             {
@@ -53,9 +51,14 @@ namespace DocumentFormat.OpenXml.Validation
             }
         }
 
-        private static IEnumerable<OpenXmlElement> ValidatingTraverse(OpenXmlElement inElement, MCContext mcContext, FileFormatVersions version)
+        private static IEnumerable<OpenXmlElement> ValidatingTraverse(OpenXmlElement? inElement, MCContext mcContext, FileFormatVersions version)
         {
-            var stack = new Stack<OpenXmlElement>();
+            if (inElement is null)
+            {
+                yield break;
+            }
+
+            var stack = new Stack<OpenXmlElement?>();
 
             stack.Push(inElement);
 

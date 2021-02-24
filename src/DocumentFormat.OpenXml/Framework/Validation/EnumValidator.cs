@@ -12,14 +12,18 @@ namespace DocumentFormat.OpenXml.Framework
         protected override void ValidateVersion(ValidationContext context)
         {
             var current = context.Stack.Current;
-            var value = current.Value;
 
-            if (value is not null && !value.IsValid)
+            if (current is null || current.Value is null || current.Property is null)
+            {
+                return;
+            }
+
+            if (!current.Value.IsValid)
             {
                 var errorMessageResourceId = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
                 var message = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
 
-                if (!value.IsEnum && string.IsNullOrEmpty(value.InnerText))
+                if (!current.Value.IsEnum && string.IsNullOrEmpty(current.Value.InnerText))
                 {
                     context.CreateError(
                         id: errorMessageResourceId,
@@ -30,7 +34,7 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     context.CreateError(
                         id: errorMessageResourceId,
-                        description: SR.Format(message, current.Property.QName, value, ValidationResources.Sch_EnumerationConstraintFailed),
+                        description: SR.Format(message, current.Property.QName, current.Value, ValidationResources.Sch_EnumerationConstraintFailed),
                         errorType: ValidationErrorType.Schema);
                 }
             }

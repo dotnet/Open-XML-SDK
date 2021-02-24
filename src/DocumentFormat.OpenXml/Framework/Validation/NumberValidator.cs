@@ -68,9 +68,8 @@ namespace DocumentFormat.OpenXml.Framework
         protected override void ValidateVersion(ValidationContext context)
         {
             var current = context.Stack.Current;
-            var stValue = current.Value;
 
-            if (stValue is null)
+            if (current is null || current.Value is null || current.Property is null)
             {
                 return;
             }
@@ -78,9 +77,9 @@ namespace DocumentFormat.OpenXml.Framework
             var id = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
             var description = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
 
-            if (!stValue.IsValid)
+            if (!current.Value.IsValid)
             {
-                if (string.IsNullOrEmpty(stValue.InnerText))
+                if (string.IsNullOrEmpty(current.Value.InnerText))
                 {
                     context.CreateError(
                         id: id,
@@ -91,14 +90,14 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, current.Property.QName, current.Value.InnerText, SR.Format(ValidationResources.Sch_StringIsNotValidValue, stValue.InnerText, current.Property.TypeName)),
+                        description: SR.Format(description, current.Property.QName, current.Value.InnerText, SR.Format(ValidationResources.Sch_StringIsNotValidValue, current.Value.InnerText, current.Property.TypeName)),
                         errorType: ValidationErrorType.Schema);
                 }
 
                 return;
             }
 
-            if (TryGetValue(stValue, out var value))
+            if (TryGetValue(current.Value, out var value))
             {
                 if (IsNonNegative && (value < 0 || !IsValidNumber(value)))
                 {

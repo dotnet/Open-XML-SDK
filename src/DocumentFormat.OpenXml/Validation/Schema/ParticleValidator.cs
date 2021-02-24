@@ -50,10 +50,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="result"></param>
         /// <returns>True if there are required elements in this particle.</returns>
-        public virtual bool GetRequiredElements(ExpectedChildren result)
-        {
-            return false;
-        }
+        public virtual bool GetRequiredElements(ExpectedChildren? result) => false;
 
         /// <summary>
         /// Get the required elements - elements which minOccurs > 0.

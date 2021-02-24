@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <inheritdoc/>
-        public bool GetRequiredElements(ExpectedChildren result)
+        public bool GetRequiredElements(ExpectedChildren? result)
         {
             if (MinOccurs > 0)
             {

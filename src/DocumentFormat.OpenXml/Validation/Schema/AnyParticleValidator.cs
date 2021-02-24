@@ -168,7 +168,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="result"></param>
         /// <returns>True if there are required elements in this particle.</returns>
-        public virtual bool GetRequiredElements(ExpectedChildren result)
+        public virtual bool GetRequiredElements(ExpectedChildren? result)
         {
             if (ParticleConstraint.MinOccurs > 0)
             {

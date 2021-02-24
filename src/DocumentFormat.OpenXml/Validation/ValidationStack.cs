@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
@@ -26,18 +24,18 @@ namespace DocumentFormat.OpenXml.Validation
             _popDisposable = new ValidationContextDisposable(this);
         }
 
-        public ValidationElement Current => _elements.Count > 0 ? _elements.Peek() : default;
+        public ValidationElement? Current => _elements.Count > 0 ? _elements.Peek() : default;
 
-        public IDisposable Push(OpenXmlPackage package = null, OpenXmlPart part = null, OpenXmlElement element = null)
+        public IDisposable Push(OpenXmlPackage? package = null, OpenXmlPart? part = null, OpenXmlElement? element = null)
         {
             var current = Current;
             var updated = GetOrCreateElement();
 
             updated.CopyFrom(current);
 
-            updated.Package = package ?? current.Package;
-            updated.Part = part ?? current.Part;
-            updated.Element = element ?? current.Element;
+            updated.Package = package ?? current?.Package;
+            updated.Part = part ?? current?.Part;
+            updated.Element = element ?? current?.Element;
 
             _elements.Push(updated);
 
@@ -58,7 +56,7 @@ namespace DocumentFormat.OpenXml.Validation
             return _popDisposable;
         }
 
-        public IDisposable Push(OpenXmlSimpleType value, AttributeMetadata property, bool isAttribute)
+        public IDisposable Push(OpenXmlSimpleType? value, AttributeMetadata property, bool isAttribute)
         {
             var current = Current;
             var element = GetOrCreateElement();
