@@ -12,6 +12,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added `HexBinaryValue.TryGetBytes(...)` and `HexBinaryValue.Create(byte[])` to manage the encoding and decoding of bytes (#867)
 - Implemented `IEquatable<IdPartPair>` on `IdPartPair` to fix equality implementation there and obsoleted setters (#871)
 
+## Version 2.12.3 - 2021-02-24
+
+### Fixed
+- Fixed issue where `CellValue` may validate incorrectly for boolean values (#890)
+
 ## Version 2.12.2 - 2021-02-16
 
 ### Fixed
