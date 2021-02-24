@@ -8,7 +8,7 @@ using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    public class SpreadsheetCellTests
+    public class CellValueTests
     {
         [Fact]
         public void CellDateTimeTest()
@@ -74,6 +74,17 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(num, result);
         }
 
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData("other")]
+        [Theory]
+        public void CellDoubleTestFalse(string input)
+        {
+            var value = new CellValue { Text = input };
+
+            Assert.False(value.TryGetDouble(out _));
+        }
+
         [InlineData(int.MinValue)]
         [InlineData(int.MinValue + 1)]
         [InlineData(-1)]
@@ -93,6 +104,17 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(num, result);
         }
 
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData("other")]
+        [Theory]
+        public void CellIntTestNegative(string input)
+        {
+            var value = new CellValue { Text = input };
+
+            Assert.False(value.TryGetInt(out _));
+        }
+
         [MemberData(nameof(DecimalTests))]
         [Theory]
         public void CellDecimalTest(decimal num)
@@ -104,6 +126,43 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(@$"<x:v xmlns:x=""http://schemas.openxmlformats.org/spreadsheetml/2006/main"">{num}</x:v>", value.OuterXml);
             Assert.True(value.TryGetDecimal(out var result));
             Assert.Equal(num, result);
+        }
+
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData("other")]
+        [Theory]
+        public void CellDecimalTestNegative(string input)
+        {
+            var value = new CellValue { Text = input };
+
+            Assert.False(value.TryGetDecimal(out _));
+        }
+
+        [InlineData("0", false)]
+        [InlineData("false", false)]
+        [InlineData("1", true)]
+        [InlineData("true", true)]
+        [Theory]
+        public void CellBooleanTest(string input, bool expected)
+        {
+            var value = new CellValue { Text = input };
+
+            Assert.True(value.TryGetBoolean(out var result));
+            Assert.Equal(expected, result);
+        }
+
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData("other")]
+        [InlineData("False")]
+        [InlineData("True")]
+        [Theory]
+        public void CellBooleanTestNegative(string input)
+        {
+            var value = new CellValue { Text = input };
+
+            Assert.False(value.TryGetBoolean(out _));
         }
 
         private static readonly decimal[] _decimalValues = new decimal[]
