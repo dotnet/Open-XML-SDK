@@ -29,7 +29,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var element = context.Stack.Current.Element;
+            var element = context.Stack.Current?.Element;
+
+            if (element is null)
+            {
+                return null;
+            }
+
             var attribute = element.ParsedState.Attributes[_attribute];
             var elementType = element.GetType();
 

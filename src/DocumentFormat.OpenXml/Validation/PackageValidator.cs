@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
@@ -45,6 +43,11 @@ namespace DocumentFormat.OpenXml.Validation
             }
 
             var handler = validationSettings.GetEventHandler();
+
+            if (handler is null)
+            {
+                return;
+            }
 
             foreach (var result in Validate(validationSettings.FileFormat))
             {

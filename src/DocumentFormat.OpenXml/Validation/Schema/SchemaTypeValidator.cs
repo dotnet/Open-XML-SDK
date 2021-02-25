@@ -19,7 +19,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The validation context.</param>
         public static void Validate(ValidationContext validationContext)
         {
-            var theElement = validationContext.Stack.Current.Element;
+            var theElement = validationContext.Stack.Current?.Element;
+
+            if (theElement is null)
+            {
+                return;
+            }
 
             Debug.Assert(!(theElement is OpenXmlUnknownElement));
             Debug.Assert(!(theElement is OpenXmlMiscNode));
@@ -86,7 +91,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The validation context.</param>
         private static void ValidateAttributes(ValidationContext validationContext)
         {
-            var element = validationContext.Stack.Current.Element;
+            var element = validationContext.Stack.Current?.Element;
+
+            if (element is null)
+            {
+                return;
+            }
 
             ValidationErrorInfo errorInfo;
 
@@ -143,7 +153,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         private static void ValidateEmptyComplexType(ValidationContext validationContext)
         {
-            OpenXmlLeafElement leafElement = (OpenXmlLeafElement)validationContext.Stack.Current.Element;
+            if (validationContext.Stack.Current?.Element is not OpenXmlLeafElement leafElement)
+            {
+                return;
+            }
+
             ValidationErrorInfo errorInfo;
 
             if (leafElement.ShadowElement is not null)
@@ -165,7 +179,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         private static void ValidateEmptyRootComplexType(ValidationContext validationContext)
         {
-            var element = (OpenXmlCompositeElement)validationContext.Stack.Current.Element;
+            if (validationContext.Stack.Current?.Element is not OpenXmlCompositeElement element)
+            {
+                return;
+            }
+
             ValidationErrorInfo errorInfo;
 
             foreach (var child in element.ChildElements)
@@ -187,10 +205,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // first check whether there are invalid children under this OpenXmlLeafTextElement.
             ValidateEmptyComplexType(validationContext);
 
-            var element = (OpenXmlLeafTextElement)validationContext.Stack.Current.Element;
+            if (validationContext.Stack.Current?.Element is not OpenXmlLeafTextElement element)
+            {
+                return;
+            }
+
             var state = new LeafAccessor(element);
 
-            SchemaTypeValidator.ValidateValue(validationContext, element.ParsedState.Metadata.Validators, state.Value, state, false);
+            ValidateValue(validationContext, element.ParsedState.Metadata.Validators, state.Value, state, false);
         }
 
         /// <summary>

@@ -22,7 +22,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
-            var element = context.Stack.Current.Element;
+            var element = context.Stack.Current?.Element;
+
+            if (element is null)
+            {
+                return null;
+            }
+
             var requiredAttribute = element.ParsedState.Attributes[_requiredAttribute];
 
             if (requiredAttribute.Value is not null)

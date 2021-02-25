@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 
-        internal void Reset(OpenXmlElement startElement)
+        internal void Reset(OpenXmlElement? startElement)
         {
             StartElement = startElement;
             Match = ParticleMatch.Nomatch;

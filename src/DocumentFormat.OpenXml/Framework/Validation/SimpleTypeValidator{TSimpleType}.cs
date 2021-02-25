@@ -18,7 +18,12 @@ namespace DocumentFormat.OpenXml.Framework
 
         public void Validate(ValidationContext context)
         {
-            if (TryTransformValue(context.Stack.Current, out var updated))
+            if(context.Stack.Current is not ValidationElement current)
+            {
+                return;
+            }
+
+            if (TryTransformValue(current, out var updated))
             {
                 using (context.Stack.Push(updated))
                 {

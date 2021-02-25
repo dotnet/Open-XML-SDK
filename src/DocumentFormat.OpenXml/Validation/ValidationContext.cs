@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
@@ -81,20 +79,16 @@ namespace DocumentFormat.OpenXml.Validation
         /// Get the first child of this.Element according to the MC Mode.
         /// </summary>
         /// <returns>The first child in the MC mode.</returns>
-        internal OpenXmlElement GetFirstChildMc()
-        {
-            return Stack.Current.Element.GetFirstChildMc(McContext, FileFormat);
-        }
+        internal OpenXmlElement? GetFirstChildMc()
+            => Stack.Current?.Element?.GetFirstChildMc(McContext, FileFormat);
 
         /// <summary>
         /// Get the next child of this.Element according to the MC Mode.
         /// </summary>
         /// <param name="child">The child after which the next child going to be retrieved.</param>
         /// <returns>The next child after the specified child in the MC mode.</returns>
-        internal OpenXmlElement GetNextChildMc(OpenXmlElement child)
-        {
-            return Stack.Current.Element.GetNextChildMc(child, McContext, FileFormat);
-        }
+        internal OpenXmlElement? GetNextChildMc(OpenXmlElement? child)
+            => child is null ? null : Stack.Current?.Element?.GetNextChildMc(child, McContext, FileFormat);
 
         /// <summary>
         /// Gets the maximum number of errors. A zero (0) value means no limitation.
@@ -104,27 +98,27 @@ namespace DocumentFormat.OpenXml.Validation
 
         public ValidationStack Stack { get; }
 
-        public ParticleConstraint GetParticleConstraint() => Cache.GetConstraint(Stack.Current.Element);
+        public ParticleConstraint? GetParticleConstraint() => Stack.Current?.Element is OpenXmlElement element ? Cache.GetConstraint(element) : null;
 
         public void AddError(ValidationErrorInfo error)
         {
             if (error is not null && !CheckIfCancelled())
             {
-                Stack.Current.AddError(error);
+                Stack.Current?.AddError?.Invoke(error);
             }
         }
 
-        public void CreateError(string id, ValidationErrorType errorType, string description = null)
+        public void CreateError(string id, ValidationErrorType errorType, string? description = null)
         {
             var current = Stack.Current;
 
             var error = new ValidationErrorInfo
             {
                 Id = id,
-                Description = description,
-                Part = current.Part,
+                Description = description ?? string.Empty,
+                Part = current?.Part,
                 ErrorType = errorType,
-                Node = current.Element,
+                Node = current?.Element,
             };
 
             AddError(error);

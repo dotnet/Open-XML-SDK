@@ -58,6 +58,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             var current = context.Stack.Current;
 
+            if (current is null)
+            {
+                throw new InvalidOperationException();
+            }
+
             if (current.Package is not null)
             {
                 level = SemanticValidationLevel.Package;
@@ -79,9 +84,19 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             var current = context.Stack.Current;
 
+            if (current is null || current.Part is null)
+            {
+                return null;
+            }
+
             if (path == ".")
             {
                 return current.Part;
+            }
+
+            if (current.Package is null)
+            {
+                return null;
             }
 
             string[] parts = path.Split('/');

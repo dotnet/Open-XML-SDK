@@ -17,8 +17,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The validation context.</param>
         internal static void ValidateMcAttributes(ValidationContext validationContext)
         {
-            var element = validationContext.Stack.Current.Element;
-            if (element.MCAttributes is null)
+            var element = validationContext.Stack.Current?.Element;
+
+            if (element?.MCAttributes is null)
             {
                 return;
             }
@@ -171,6 +172,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 return null;
             }
 
+            var element = validationContext.Stack.Current?.Element;
+
+            if (element is null)
+            {
+                return null;
+            }
+
             var qnames = new ListValue<StringValue>();
             qnames.InnerText = qnameList;
 
@@ -189,7 +197,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
 
                 // Prefix must be already defined.
-                var attributeNamesapce = validationContext.Stack.Current.Element.LookupNamespace(items[0]);
+                var attributeNamesapce = element.LookupNamespace(items[0]);
                 if (attributeNamesapce.IsNullOrEmpty())
                 {
                     return qname;

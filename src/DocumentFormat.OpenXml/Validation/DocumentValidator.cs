@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System.Collections.Generic;
@@ -120,22 +118,36 @@ namespace DocumentFormat.OpenXml.Validation
 
         public void Validate(ValidationContext validationContext)
         {
-            Debug.Assert(validationContext is not null);
-            Debug.Assert(validationContext.Stack.Current.Element is not null);
+            var openxmlElement = validationContext.Stack.Current?.Element;
 
-            var openxmlElement = validationContext.Stack.Current.Element;
+            if (openxmlElement is null)
+            {
+                return;
+            }
 
-            Debug.Assert(!(openxmlElement is OpenXmlUnknownElement || openxmlElement is OpenXmlMiscNode));
+            if (openxmlElement is OpenXmlUnknownElement || openxmlElement is OpenXmlMiscNode)
+            {
+                return;
+            }
 
             // Can not just validate AlternateContent / Choice / Fallback
-            // Debug.Assert(!(openxmlElement is AlternateContent))
-            Debug.Assert(!(openxmlElement is AlternateContentChoice || openxmlElement is AlternateContentFallback));
+            if (openxmlElement is AlternateContentChoice || openxmlElement is AlternateContentFallback || openxmlElement is AlternateContentChoice)
+            {
+                return;
+            }
 
             ValidationTraverser.ValidatingTraverse(validationContext, SchemaTypeValidator.Validate);
 
             ValidationTraverser.ValidatingTraverse(validationContext, context =>
             {
-                foreach (var constraint in context.Stack.Current.Element.Metadata.Constraints)
+                var element = context.Stack.Current?.Element;
+
+                if (element is null)
+                {
+                    return;
+                }
+
+                foreach (var constraint in element.Metadata.Constraints)
                 {
                     constraint.Validate(context);
                 }
@@ -183,7 +195,6 @@ namespace DocumentFormat.OpenXml.Validation
                     switch (errorInfo.Id)
                     {
                         case "Pkg_PartIsNotAllowed":
-                            Debug.Assert(e.SubPart is not null);
                             name = e.Part is not null ? GetPartNameAndUri(e.Part) : documentName;
                             errorInfo.Description = SR.Format(ValidationResources.Pkg_PartIsNotAllowed, name, GetPartNameAndUri(e.SubPart));
                             break;
@@ -202,14 +213,12 @@ namespace DocumentFormat.OpenXml.Validation
                             break;
 
                         case "Pkg_ExtendedPartIsOpenXmlPart":
-                            Debug.Assert(e.SubPart is not null);
                             errorInfo.Description = SR.Format(ValidationResources.Pkg_ExtendedPartIsOpenXmlPart, GetPartUri(e.SubPart));
                             break;
 
                         case "Pkg_DataPartReferenceIsNotAllowed":
-                            Debug.Assert(e.DataPartReferenceRelationship is not null);
                             name = e.Part is not null ? GetPartNameAndUri(e.Part) : documentName;
-                            errorInfo.Description = SR.Format(ValidationResources.Pkg_PartIsNotAllowed, name, e.DataPartReferenceRelationship.Uri);
+                            errorInfo.Description = SR.Format(ValidationResources.Pkg_PartIsNotAllowed, name, e.DataPartReferenceRelationship!.Uri);
                             break;
 
                         case "Pkg_InvalidContentTypePart":  // won't get this error.
@@ -231,18 +240,25 @@ namespace DocumentFormat.OpenXml.Validation
             context.Errors.AddRange(errors);
         }
 
-        private static string GetPartNameAndUri(OpenXmlPart part)
+        private static string GetPartNameAndUri(OpenXmlPart? part)
         {
-            Debug.Assert(part is not null);
+            if (part is null)
+            {
+                return string.Empty;
+            }
+
             string partClassName = part.GetType().Name;
 
             // Example: WordprocessingCommentsPart{/word/comments.xml}
             return SR.Format("{0}{1}{2}{3}", partClassName, '{', part.Uri, '}');
         }
 
-        private static string GetPartUri(OpenXmlPart part)
+        private static string GetPartUri(OpenXmlPart? part)
         {
-            Debug.Assert(part is not null);
+            if (part is null)
+            {
+                return string.Empty;
+            }
 
             // Example: WordprocessingCommentsPart{/word/comments.xml}
             return SR.Format("{0}{1}{2}", '{', part.Uri, '}');

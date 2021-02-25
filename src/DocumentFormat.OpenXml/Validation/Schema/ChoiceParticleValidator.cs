@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="result"></param>
         /// <returns>True if there are required elements in this particle.</returns>
-        public override bool GetRequiredElements(ExpectedChildren result)
+        public override bool GetRequiredElements(ExpectedChildren? result)
         {
             bool requiredElements = true;
             var requiredChoiceChildren = new ExpectedChildren();

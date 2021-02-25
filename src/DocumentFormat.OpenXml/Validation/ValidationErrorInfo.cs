@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using DocumentFormat.OpenXml.Packaging;
 using System.Diagnostics;
 
@@ -14,21 +12,21 @@ namespace DocumentFormat.OpenXml.Validation
     [DebuggerDisplay("Description={Description}")]
     public class ValidationErrorInfo
     {
-        private XmlPath _xmlPath;
-        private OpenXmlElement _element;
-        private OpenXmlPart _part;
+        private XmlPath? _xmlPath;
+        private OpenXmlElement? _element;
+        private OpenXmlPart? _part;
 
 #if DEBUG
         /// <summary>
         /// Gets the XML qualified name for the attribute.
         /// Returns null if the error is not for attribute.
         /// </summary>
-        public string AttributeQualifiedName { get; private set; }
+        public string? AttributeQualifiedName { get; private set; }
 
         /// <summary>
         /// Gets schema validation error category.
         /// </summary>
-        public string ValidationErrorCategory { get; private set; }
+        public string? ValidationErrorCategory { get; private set; }
 #endif
 
         /// <summary>
@@ -38,7 +36,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <param name="validationErrorCategory"></param>
         [Conditional("DEBUG")]
 #pragma warning disable CA1822 // Mark members as static
-        public void SetDebugField(string attributeQualifiedName, string validationErrorCategory)
+        internal void SetDebugField(string attributeQualifiedName, string validationErrorCategory)
 #pragma warning restore CA1822 // Mark members as static
         {
 #if DEBUG
@@ -50,7 +48,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Gets the unique identifier of this error.
         /// </summary>
-        public string Id { get; internal set; }
+        public string Id { get; internal set; } = null!;
 
         /// <summary>
         /// Gets the type of this error.
@@ -60,12 +58,12 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Gets the description and the suggestion on how to resolve the errors.
         /// </summary>
-        public string Description { get; internal set; }
+        public string Description { get; internal set; } = string.Empty;
 
         /// <summary>
         /// Gets the XmlPath information of this error.
         /// </summary>
-        public XmlPath Path
+        public XmlPath? Path
         {
             get
             {
@@ -88,7 +86,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Gets the OpenXmlElement of the invalid node.
         /// </summary>
-        public OpenXmlElement Node
+        public OpenXmlElement? Node
         {
             get
             {
@@ -97,7 +95,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             internal set
             {
-                Part = value.GetPart();
+                Part = value?.GetPart();
                 _element = value;
             }
         }
@@ -105,7 +103,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Gets the part which the invalid element is in.
         /// </summary>
-        public OpenXmlPart Part
+        public OpenXmlPart? Part
         {
             get => _part;
 
@@ -120,11 +118,11 @@ namespace DocumentFormat.OpenXml.Validation
         /// <summary>
         /// Gets elements related with the invalid node.
         /// </summary>
-        public OpenXmlElement RelatedNode { get; internal set; }
+        public OpenXmlElement? RelatedNode { get; internal set; }
 
         /// <summary>
         /// Gets parts related with the invalid node.
         /// </summary>
-        public OpenXmlPart RelatedPart { get; internal set; }
+        public OpenXmlPart? RelatedPart { get; internal set; }
     }
 }

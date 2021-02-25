@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#nullable disable
-
 using System;
 using System.ComponentModel;
 
@@ -15,13 +13,13 @@ namespace DocumentFormat.OpenXml.Packaging
     [EditorBrowsable(EditorBrowsableState.Never)]
     public class OpenXmlPackageValidationSettings
     {
-        private EventHandler<OpenXmlPackageValidationEventArgs> valEventHandler;
+        private EventHandler<OpenXmlPackageValidationEventArgs>? valEventHandler;
 
         /// <summary>
         /// Gets the event handler.
         /// </summary>
         /// <returns></returns>
-        internal EventHandler<OpenXmlPackageValidationEventArgs> GetEventHandler()
+        internal EventHandler<OpenXmlPackageValidationEventArgs>? GetEventHandler()
         {
             return valEventHandler;
         }
@@ -38,17 +36,13 @@ namespace DocumentFormat.OpenXml.Packaging
 
             remove
             {
-                valEventHandler = (EventHandler<OpenXmlPackageValidationEventArgs>)Delegate.Remove(valEventHandler, value);
+                valEventHandler = (EventHandler<OpenXmlPackageValidationEventArgs>?)Delegate.Remove(valEventHandler, value);
             }
         }
 
         /// <summary>
         /// Gets or sets the file format version that the validation is targeting.
         /// </summary>
-        internal FileFormatVersions FileFormat
-        {
-            get;
-            set;
-        }
+        internal FileFormatVersions FileFormat { get; set; }
     }
 }
