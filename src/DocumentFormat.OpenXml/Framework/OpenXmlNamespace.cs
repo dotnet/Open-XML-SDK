@@ -33,6 +33,8 @@ namespace DocumentFormat.OpenXml.Framework
 
         public bool IsEmpty => string.IsNullOrEmpty(Uri);
 
+        internal byte NsId => TryGetNamespaceId(Uri, out var id) ? id : throw new InvalidOperationException();
+
         public FileFormatVersions Version
             => _namespaceResolver.TryGetByNamespace(Uri, out var info) ? info.Version : FileFormatVersions.None;
 
