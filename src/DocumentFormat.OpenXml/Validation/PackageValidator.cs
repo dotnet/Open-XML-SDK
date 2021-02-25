@@ -44,6 +44,11 @@ namespace DocumentFormat.OpenXml.Validation
 
             var handler = validationSettings.GetEventHandler();
 
+            if (handler is null)
+            {
+                return;
+            }
+
             foreach (var result in Validate(validationSettings.FileFormat))
             {
                 handler(result.Sender, result);

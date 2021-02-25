@@ -195,7 +195,6 @@ namespace DocumentFormat.OpenXml.Validation
                     switch (errorInfo.Id)
                     {
                         case "Pkg_PartIsNotAllowed":
-                            Debug.Assert(e.SubPart is not null);
                             name = e.Part is not null ? GetPartNameAndUri(e.Part) : documentName;
                             errorInfo.Description = SR.Format(ValidationResources.Pkg_PartIsNotAllowed, name, GetPartNameAndUri(e.SubPart));
                             break;
@@ -214,14 +213,12 @@ namespace DocumentFormat.OpenXml.Validation
                             break;
 
                         case "Pkg_ExtendedPartIsOpenXmlPart":
-                            Debug.Assert(e.SubPart is not null);
                             errorInfo.Description = SR.Format(ValidationResources.Pkg_ExtendedPartIsOpenXmlPart, GetPartUri(e.SubPart));
                             break;
 
                         case "Pkg_DataPartReferenceIsNotAllowed":
-                            Debug.Assert(e.DataPartReferenceRelationship is not null);
                             name = e.Part is not null ? GetPartNameAndUri(e.Part) : documentName;
-                            errorInfo.Description = SR.Format(ValidationResources.Pkg_PartIsNotAllowed, name, e.DataPartReferenceRelationship.Uri);
+                            errorInfo.Description = SR.Format(ValidationResources.Pkg_PartIsNotAllowed, name, e.DataPartReferenceRelationship!.Uri);
                             break;
 
                         case "Pkg_InvalidContentTypePart":  // won't get this error.
@@ -243,18 +240,25 @@ namespace DocumentFormat.OpenXml.Validation
             context.Errors.AddRange(errors);
         }
 
-        private static string GetPartNameAndUri(OpenXmlPart part)
+        private static string GetPartNameAndUri(OpenXmlPart? part)
         {
-            Debug.Assert(part is not null);
+            if (part is null)
+            {
+                return string.Empty;
+            }
+
             string partClassName = part.GetType().Name;
 
             // Example: WordprocessingCommentsPart{/word/comments.xml}
             return SR.Format("{0}{1}{2}{3}", partClassName, '{', part.Uri, '}');
         }
 
-        private static string GetPartUri(OpenXmlPart part)
+        private static string GetPartUri(OpenXmlPart? part)
         {
-            Debug.Assert(part is not null);
+            if (part is null)
+            {
+                return string.Empty;
+            }
 
             // Example: WordprocessingCommentsPart{/word/comments.xml}
             return SR.Format("{0}{1}{2}", '{', part.Uri, '}');
