@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
 {
     /// <summary>
     /// <para>Defines the TracksInfo Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p173:tracksInfo.</para>
     /// </summary>
     /// <remark>
@@ -113,7 +113,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Track Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p173:track.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -240,7 +240,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TrackList Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p173:trackLst.</para>
     /// </summary>
     /// <remark>

@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
 {
     /// <summary>
     /// <para>Custom File Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is op:Properties.</para>
     /// </summary>
     /// <remark>
@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
 
     /// <summary>
     /// <para>Custom File Property.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is op:property.</para>
     /// </summary>
     /// <remark>

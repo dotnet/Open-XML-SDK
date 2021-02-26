@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
 {
     /// <summary>
     /// <para>Defines the PresetTransition Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:prstTrans.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
 
     /// <summary>
     /// <para>Defines the PresenceInfo Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:presenceInfo.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -168,7 +168,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ThreadingInfo Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:threadingInfo.</para>
     /// </summary>
     /// <remark>
@@ -262,7 +262,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SlideGuideList Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:sldGuideLst.</para>
     /// </summary>
     /// <remark>
@@ -326,7 +326,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the NotesGuideList Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:notesGuideLst.</para>
     /// </summary>
     /// <remark>
@@ -390,7 +390,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ExtendedGuideList Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -443,7 +443,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ChartTrackingReferenceBased Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:chartTrackingRefBased.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -492,7 +492,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ParentCommentIdentifier Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:parentCm.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -555,7 +555,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ColorType Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:clr.</para>
     /// </summary>
     /// <remark>
@@ -717,7 +717,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ExtensionList Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:extLst.</para>
     /// </summary>
     /// <remark>
@@ -786,7 +786,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ExtendedGuide Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:guide.</para>
     /// </summary>
     /// <remark>

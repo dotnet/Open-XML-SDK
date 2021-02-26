@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 {
     /// <summary>
     /// <para>Defines the ConditionalFormattings Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:conditionalFormattings.</para>
     /// </summary>
     /// <remark>
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the DataValidations Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dataValidations.</para>
     /// </summary>
     /// <remark>
@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the SparklineGroups Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sparklineGroups.</para>
     /// </summary>
     /// <remark>
@@ -277,7 +277,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the SlicerList Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerList.</para>
     /// </summary>
     /// <remark>
@@ -340,7 +340,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the ProtectedRanges Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:protectedRanges.</para>
     /// </summary>
     /// <remark>
@@ -403,7 +403,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the IgnoredErrors Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:ignoredErrors.</para>
     /// </summary>
     /// <remark>
@@ -469,7 +469,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the DefinedNames Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:definedNames.</para>
     /// </summary>
     /// <remark>
@@ -532,7 +532,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the PivotCaches Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotCaches.</para>
     /// </summary>
     /// <remark>
@@ -595,7 +595,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the SlicerCaches Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerCaches.</para>
     /// </summary>
     /// <remark>
@@ -658,7 +658,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the WorkbookProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:workbookPr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -739,7 +739,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the CalculatedMember Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:calculatedMember.</para>
     /// </summary>
     /// <remark>
@@ -903,7 +903,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the CacheHierarchy Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cacheHierarchy.</para>
     /// </summary>
     /// <remark>
@@ -1051,7 +1051,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the DataField Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dataField.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1133,7 +1133,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the PivotField Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotField.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1196,7 +1196,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the PivotTableDefinition Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotTableDefinition.</para>
     /// </summary>
     /// <remark>
@@ -1478,7 +1478,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the PivotCacheDefinition Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotCacheDefinition.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1592,7 +1592,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the Connection Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:connection.</para>
     /// </summary>
     /// <remark>
@@ -1705,7 +1705,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the Table Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:table.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1770,7 +1770,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
 
     /// <summary>
     /// <para>Defines the SlicerStyles Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerStyles.</para>
     /// </summary>
     /// <remark>
@@ -1855,7 +1855,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DifferentialFormats Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dxfs.</para>
     /// </summary>
     /// <remark>
@@ -1936,7 +1936,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OleItem Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:oleItem.</para>
     /// </summary>
     /// <remark>
@@ -2084,7 +2084,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotHierarchy Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotHierarchy.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2130,7 +2130,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CacheField Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cacheField.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2176,7 +2176,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Id Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:id.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2218,7 +2218,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the IconFilter Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:iconFilter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2287,7 +2287,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Filter Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:filter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2333,7 +2333,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CustomFilters Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:customFilters.</para>
     /// </summary>
     /// <remark>
@@ -2414,7 +2414,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SortCondition Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sortCondition.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2568,7 +2568,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SourceConnection Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sourceConnection.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2617,7 +2617,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DatastoreItem Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:datastoreItem.</para>
     /// </summary>
     /// <remark>
@@ -2746,7 +2746,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the FormControlProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:formControlPr.</para>
     /// </summary>
     /// <remark>
@@ -3417,7 +3417,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the Slicers Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicers.</para>
     /// </summary>
     /// <remark>
@@ -3511,7 +3511,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the SlicerCacheDefinition Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerCacheDefinition.</para>
     /// </summary>
     /// <remark>
@@ -3691,7 +3691,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ConditionalFormatting Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:conditionalFormatting.</para>
     /// </summary>
     /// <remark>
@@ -3778,7 +3778,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ConditionalFormattingRule Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cfRule.</para>
     /// </summary>
     /// <remark>
@@ -4107,7 +4107,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the ExtensionList Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:extLst.</para>
     /// </summary>
     /// <remark>
@@ -4176,7 +4176,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the DataValidation Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dataValidation.</para>
     /// </summary>
     /// <remark>
@@ -4492,7 +4492,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the DataValidationForumla1 Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:formula1.</para>
     /// </summary>
     /// <remark>
@@ -4554,7 +4554,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the DataValidationForumla2 Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:formula2.</para>
     /// </summary>
     /// <remark>
@@ -4616,7 +4616,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the DataValidationFormulaType Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -4680,7 +4680,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the SparklineGroup Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sparklineGroup.</para>
     /// </summary>
     /// <remark>
@@ -5192,7 +5192,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the SeriesColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorSeries.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5221,7 +5221,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the NegativeColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorNegative.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5250,7 +5250,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the AxisColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorAxis.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5279,7 +5279,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the MarkersColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorMarkers.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5308,7 +5308,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the FirstMarkerColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorFirst.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5337,7 +5337,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the LastMarkerColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorLast.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5366,7 +5366,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the HighMarkerColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorHigh.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5395,7 +5395,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the LowMarkerColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorLow.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5423,7 +5423,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the Color Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:color.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5451,7 +5451,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the FillColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:fillColor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5479,7 +5479,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the BorderColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:borderColor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5507,7 +5507,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the NegativeFillColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:negativeFillColor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5535,7 +5535,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the NegativeBorderColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:negativeBorderColor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5563,7 +5563,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the BarAxisColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:axisColor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5591,7 +5591,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the ColorType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class ColorType : OpenXmlLeafElement
@@ -5700,7 +5700,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the Sparklines Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sparklines.</para>
     /// </summary>
     /// <remark>
@@ -5763,7 +5763,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the Sparkline Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sparkline.</para>
     /// </summary>
     /// <remark>
@@ -5855,7 +5855,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the SlicerRef Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicer.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5908,7 +5908,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SlicerCache Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerCache.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5961,7 +5961,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DefinedName Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:definedName.</para>
     /// </summary>
     /// <remark>
@@ -6059,7 +6059,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ArgumentDescriptions Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:argumentDescriptions.</para>
     /// </summary>
     /// <remark>
@@ -6140,7 +6140,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ArgumentDescription Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:argumentDescription.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6203,7 +6203,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TupleSet Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:tupleSet.</para>
     /// </summary>
     /// <remark>
@@ -6330,7 +6330,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TupleSetHeaders Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:headers.</para>
     /// </summary>
     /// <remark>
@@ -6393,7 +6393,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TupleSetRows Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:rows.</para>
     /// </summary>
     /// <remark>
@@ -6456,7 +6456,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TupleSetHeader Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:header.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6521,7 +6521,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TupleSetRow Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:row.</para>
     /// </summary>
     /// <remark>
@@ -6584,7 +6584,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TupleSetRowItem Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:rowItem.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6649,7 +6649,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SetLevel Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:setLevel.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6699,7 +6699,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SetLevels Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:setLevels.</para>
     /// </summary>
     /// <remark>
@@ -6780,7 +6780,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ColorScale Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorScale.</para>
     /// </summary>
     /// <remark>
@@ -6846,7 +6846,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DataBar Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dataBar.</para>
     /// </summary>
     /// <remark>
@@ -7080,7 +7080,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the IconSet Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:iconSet.</para>
     /// </summary>
     /// <remark>
@@ -7232,7 +7232,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DifferentialType Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dxf.</para>
     /// </summary>
     /// <remark>
@@ -7404,7 +7404,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ConditionalFormattingValueObject Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cfvo.</para>
     /// </summary>
     /// <remark>
@@ -7534,7 +7534,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ConditionalFormattingIcon Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cfIcon.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7603,7 +7603,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotEdits Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotEdits.</para>
     /// </summary>
     /// <remark>
@@ -7666,7 +7666,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotChanges Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotChanges.</para>
     /// </summary>
     /// <remark>
@@ -7729,7 +7729,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ConditionalFormats Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:conditionalFormats.</para>
     /// </summary>
     /// <remark>
@@ -7810,7 +7810,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CalculatedMembers Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:calculatedMembers.</para>
     /// </summary>
     /// <remark>
@@ -7891,7 +7891,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotEdit Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotEdit.</para>
     /// </summary>
     /// <remark>
@@ -8015,7 +8015,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotUserEdit Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:userEdit.</para>
     /// </summary>
     /// <remark>
@@ -8107,7 +8107,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TupleItems Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:tupleItems.</para>
     /// </summary>
     /// <remark>
@@ -8170,7 +8170,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotArea Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotArea.</para>
     /// </summary>
     /// <remark>
@@ -8467,7 +8467,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotChange Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotChange.</para>
     /// </summary>
     /// <remark>
@@ -8611,7 +8611,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotEditValue Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:editValue.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8674,7 +8674,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Xstring Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:tupleItem.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8715,7 +8715,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SlicerStyleElements Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerStyleElements.</para>
     /// </summary>
     /// <remark>
@@ -8778,7 +8778,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DdeValues Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:values.</para>
     /// </summary>
     /// <remark>
@@ -8876,7 +8876,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ConditionalFormat Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:conditionalFormat.</para>
     /// </summary>
     /// <remark>
@@ -9044,7 +9044,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the PivotAreas Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotAreas.</para>
     /// </summary>
     /// <remark>
@@ -9125,7 +9125,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the SlicerStyle Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerStyle.</para>
     /// </summary>
     /// <remark>
@@ -9225,7 +9225,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SlicerStyleElement Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerStyleElement.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9293,7 +9293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the IgnoredError Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:ignoredError.</para>
     /// </summary>
     /// <remark>
@@ -9523,7 +9523,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ProtectedRange Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:protectedRange.</para>
     /// </summary>
     /// <remark>
@@ -9728,7 +9728,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CustomFilter Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:customFilter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9791,7 +9791,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ListItem Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:item.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9840,7 +9840,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ListItems Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:itemLst.</para>
     /// </summary>
     /// <remark>
@@ -9906,7 +9906,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Slicer Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicer.</para>
     /// </summary>
     /// <remark>
@@ -10166,7 +10166,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OlapSlicerCache Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:olap.</para>
     /// </summary>
     /// <remark>
@@ -10295,7 +10295,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TabularSlicerCache Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:tabular.</para>
     /// </summary>
     /// <remark>
@@ -10476,7 +10476,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SlicerCachePivotTable Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotTable.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10546,7 +10546,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OlapSlicerCacheItemParent Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:p.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10595,7 +10595,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OlapSlicerCacheItem Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:i.</para>
     /// </summary>
     /// <remark>
@@ -10713,7 +10713,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OlapSlicerCacheRange Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:range.</para>
     /// </summary>
     /// <remark>
@@ -10798,7 +10798,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OlapSlicerCacheRanges Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:ranges.</para>
     /// </summary>
     /// <remark>
@@ -10861,7 +10861,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OlapSlicerCacheLevelData Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:level.</para>
     /// </summary>
     /// <remark>
@@ -11030,7 +11030,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OlapSlicerCacheLevelsData Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:levels.</para>
     /// </summary>
     /// <remark>
@@ -11111,7 +11111,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OlapSlicerCacheSelections Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:selections.</para>
     /// </summary>
     /// <remark>
@@ -11192,7 +11192,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OlapSlicerCacheSelection Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:selection.</para>
     /// </summary>
     /// <remark>
@@ -11276,7 +11276,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TabularSlicerCacheItems Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:items.</para>
     /// </summary>
     /// <remark>
@@ -11357,7 +11357,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TabularSlicerCacheItem Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:i.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11441,7 +11441,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SlicerCachePivotTables Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotTables.</para>
     /// </summary>
     /// <remark>
@@ -11504,7 +11504,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SlicerCacheData Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:data.</para>
     /// </summary>
     /// <remark>
@@ -11596,7 +11596,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SlicerCacheDefinitionExtensionList Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:extLst.</para>
     /// </summary>
     /// <remark>

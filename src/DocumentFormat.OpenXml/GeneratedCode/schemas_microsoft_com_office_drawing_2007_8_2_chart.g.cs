@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
 {
     /// <summary>
     /// <para>Defines the PivotOptions Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:pivotOptions.</para>
     /// </summary>
     /// <remark>
@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
 
     /// <summary>
     /// <para>Defines the SketchOptions Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:sketchOptions.</para>
     /// </summary>
     /// <remark>
@@ -249,7 +249,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
 
     /// <summary>
     /// <para>Defines the InvertSolidFillFormat Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:invertSolidFillFmt.</para>
     /// </summary>
     /// <remark>
@@ -325,7 +325,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
 
     /// <summary>
     /// <para>Defines the Style Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:style.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -375,7 +375,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (101L), MaxInclusiv
 
     /// <summary>
     /// <para>Defines the ShapeProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:spPr.</para>
     /// </summary>
     /// <remark>
@@ -532,7 +532,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the DropZoneFilter Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneFilter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -560,7 +560,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the DropZoneCategories Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneCategories.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -588,7 +588,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the DropZoneData Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneData.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -616,7 +616,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the DropZoneSeries Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZoneSeries.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -644,7 +644,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the DropZonesVisible Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:dropZonesVisible.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -672,7 +672,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the InSketchMode Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:inSketchMode.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -700,7 +700,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the BooleanFalseType Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class BooleanFalseType : OpenXmlLeafElement
@@ -738,7 +738,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the ShowSketchButton Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:showSketchBtn.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

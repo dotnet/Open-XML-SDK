@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Math
 {
     /// <summary>
     /// <para>Script.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:scr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>style.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sty.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the Run Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:r.</para>
     /// </summary>
     /// <remark>
@@ -322,7 +322,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Accent.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:acc.</para>
     /// </summary>
     /// <remark>
@@ -413,7 +413,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Bar.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:bar.</para>
     /// </summary>
     /// <remark>
@@ -504,7 +504,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Box Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:box.</para>
     /// </summary>
     /// <remark>
@@ -595,7 +595,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Border-Box Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:borderBox.</para>
     /// </summary>
     /// <remark>
@@ -686,7 +686,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Delimiter Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:d.</para>
     /// </summary>
     /// <remark>
@@ -764,7 +764,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Equation-Array Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:eqArr.</para>
     /// </summary>
     /// <remark>
@@ -842,7 +842,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Fraction Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:f.</para>
     /// </summary>
     /// <remark>
@@ -949,7 +949,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Function Apply Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:func.</para>
     /// </summary>
     /// <remark>
@@ -1056,7 +1056,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Group-Character Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:groupChr.</para>
     /// </summary>
     /// <remark>
@@ -1147,7 +1147,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Lower-Limit Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limLow.</para>
     /// </summary>
     /// <remark>
@@ -1254,7 +1254,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Upper-Limit Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limUpp.</para>
     /// </summary>
     /// <remark>
@@ -1361,7 +1361,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Matrix Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:m.</para>
     /// </summary>
     /// <remark>
@@ -1439,7 +1439,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>n-ary Operator Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:nary.</para>
     /// </summary>
     /// <remark>
@@ -1562,7 +1562,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Phantom Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:phant.</para>
     /// </summary>
     /// <remark>
@@ -1653,7 +1653,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Radical Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rad.</para>
     /// </summary>
     /// <remark>
@@ -1760,7 +1760,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Pre-Sub-Superscript Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sPre.</para>
     /// </summary>
     /// <remark>
@@ -1883,7 +1883,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Subscript Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSub.</para>
     /// </summary>
     /// <remark>
@@ -1990,7 +1990,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Sub-Superscript Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSubSup.</para>
     /// </summary>
     /// <remark>
@@ -2113,7 +2113,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Superscript Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSup.</para>
     /// </summary>
     /// <remark>
@@ -2220,7 +2220,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the Paragraph Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:oMathPara.</para>
     /// </summary>
     /// <remark>
@@ -2451,7 +2451,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the OfficeMath Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:oMath.</para>
     /// </summary>
     /// <remark>
@@ -2794,7 +2794,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Math Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mathPr.</para>
     /// </summary>
     /// <remark>
@@ -3060,7 +3060,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Literal.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lit.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3087,7 +3087,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Normal Text.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:nor.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3114,7 +3114,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Align.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:aln.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3141,7 +3141,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Operator Emulator.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:opEmu.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3168,7 +3168,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>No Break.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:noBreak.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3195,7 +3195,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Differential.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:diff.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3222,7 +3222,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Top Edge.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideTop.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3249,7 +3249,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Bottom Edge.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideBot.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3276,7 +3276,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Left Edge.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideLeft.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3303,7 +3303,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Right Edge.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideRight.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3330,7 +3330,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Border Box Strikethrough Horizontal.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeH.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3357,7 +3357,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Border Box Strikethrough Vertical.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeV.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3384,7 +3384,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Border Box Strikethrough Bottom-Left to Top-Right.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeBLTR.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3411,7 +3411,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Border Box Strikethrough Top-Left to Bottom-Right.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeTLBR.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3438,7 +3438,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Delimiter Grow.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:grow.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3465,7 +3465,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Maximum Distribution.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:maxDist.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3492,7 +3492,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Object Distribution.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:objDist.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3519,7 +3519,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Placeholders (Matrix).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:plcHide.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3546,7 +3546,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Subscript (n-ary).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:subHide.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3573,7 +3573,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Superscript (n-ary).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:supHide.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3600,7 +3600,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Phantom Show.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:show.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3627,7 +3627,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Phantom Zero Width.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroWid.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3654,7 +3654,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Phantom Zero Ascent.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroAsc.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3681,7 +3681,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Phantom Zero Descent.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroDesc.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3708,7 +3708,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Transparent (Phantom).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:transp.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3735,7 +3735,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Degree.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:degHide.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3762,7 +3762,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Align Scripts.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:alnScr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3789,7 +3789,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Small Fraction.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:smallFrac.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3816,7 +3816,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Use Display Math Defaults.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:dispDef.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3843,7 +3843,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Wrap Right.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:wrapRight.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3870,7 +3870,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the OnOffType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class OnOffType : OpenXmlLeafElement
@@ -3911,7 +3911,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Break.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brk.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3985,7 +3985,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Run Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rPr.</para>
     /// </summary>
     /// <remark>
@@ -4087,7 +4087,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Text.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:t.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4148,7 +4148,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Accent Character.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:chr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4175,7 +4175,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Delimiter Beginning Character.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:begChr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4202,7 +4202,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Delimiter Separator Character.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sepChr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4229,7 +4229,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Delimiter Ending Character.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:endChr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4256,7 +4256,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the CharType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class CharType : OpenXmlLeafElement
@@ -4301,7 +4301,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Control Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:ctrlPr.</para>
     /// </summary>
     /// <remark>
@@ -4399,7 +4399,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Accent Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:accPr.</para>
     /// </summary>
     /// <remark>
@@ -4490,7 +4490,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Base.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:e.</para>
     /// </summary>
     /// <remark>
@@ -4781,7 +4781,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Numerator.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:num.</para>
     /// </summary>
     /// <remark>
@@ -5072,7 +5072,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Denominator.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:den.</para>
     /// </summary>
     /// <remark>
@@ -5363,7 +5363,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Function Name.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:fName.</para>
     /// </summary>
     /// <remark>
@@ -5654,7 +5654,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Limit (Lower).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lim.</para>
     /// </summary>
     /// <remark>
@@ -5945,7 +5945,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Lower limit (n-ary) .</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sub.</para>
     /// </summary>
     /// <remark>
@@ -6236,7 +6236,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Upper limit (n-ary).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sup.</para>
     /// </summary>
     /// <remark>
@@ -6527,7 +6527,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Degree.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:deg.</para>
     /// </summary>
     /// <remark>
@@ -6818,7 +6818,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the OfficeMathArgumentType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -6996,7 +6996,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Position (Bar).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:pos.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7023,7 +7023,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Vertical Justification.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:vertJc.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7050,7 +7050,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the TopBottomType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class TopBottomType : OpenXmlLeafElement
@@ -7094,7 +7094,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Bar Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:barPr.</para>
     /// </summary>
     /// <remark>
@@ -7185,7 +7185,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Box Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:boxPr.</para>
     /// </summary>
     /// <remark>
@@ -7340,7 +7340,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Border Box Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:borderBoxPr.</para>
     /// </summary>
     /// <remark>
@@ -7543,7 +7543,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Shape (Delimiters).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:shp.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7594,7 +7594,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Delimiter Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:dPr.</para>
     /// </summary>
     /// <remark>
@@ -7749,7 +7749,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Equation Array Base Justification.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:baseJc.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7800,7 +7800,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Row Spacing Rule.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rSpRule.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7827,7 +7827,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column Gap Rule.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cGpRule.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7854,7 +7854,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SpacingRuleType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class SpacingRuleType : OpenXmlLeafElement
@@ -7899,7 +7899,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Row Spacing (Equation Array).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rSp.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7926,7 +7926,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column Gap.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cGp.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7953,7 +7953,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the UnsignedShortType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class UnsignedShortType : OpenXmlLeafElement
@@ -7997,7 +7997,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Equation Array Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:eqArrPr.</para>
     /// </summary>
     /// <remark>
@@ -8152,7 +8152,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Fraction type.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:type.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8203,7 +8203,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Fraction Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:fPr.</para>
     /// </summary>
     /// <remark>
@@ -8294,7 +8294,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Function Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:funcPr.</para>
     /// </summary>
     /// <remark>
@@ -8369,7 +8369,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Group-Character Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:groupChrPr.</para>
     /// </summary>
     /// <remark>
@@ -8492,7 +8492,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Lower Limit Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limLowPr.</para>
     /// </summary>
     /// <remark>
@@ -8567,7 +8567,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Upper Limit Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limUppPr.</para>
     /// </summary>
     /// <remark>
@@ -8642,7 +8642,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column Count.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:count.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8694,7 +8694,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column Justification.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mcJc.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8745,7 +8745,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mcPr.</para>
     /// </summary>
     /// <remark>
@@ -8836,7 +8836,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mc.</para>
     /// </summary>
     /// <remark>
@@ -8911,7 +8911,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column Spacing.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cSp.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8938,7 +8938,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Left Margin.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lMargin.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8965,7 +8965,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Right Margin.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rMargin.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8992,7 +8992,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Pre-Equation Spacing.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:preSp.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9019,7 +9019,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Post-Equation Spacing.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:postSp.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9046,7 +9046,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Inter-Equation Spacing.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:interSp.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9073,7 +9073,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Intra-Equation Spacing.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:intraSp.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9100,7 +9100,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Wrap Indent.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:wrapIndent.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9127,7 +9127,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TwipsMeasureType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class TwipsMeasureType : OpenXmlLeafElement
@@ -9172,7 +9172,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Columns.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mcs.</para>
     /// </summary>
     /// <remark>
@@ -9234,7 +9234,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mPr.</para>
     /// </summary>
     /// <remark>
@@ -9437,7 +9437,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Row.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mr.</para>
     /// </summary>
     /// <remark>
@@ -9499,7 +9499,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>n-ary Limit Location.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limLoc.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9526,7 +9526,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Integral Limit Locations.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:intLim.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9553,7 +9553,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>n-ary Limit Location.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:naryLim.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9580,7 +9580,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the LimitLocationType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class LimitLocationType : OpenXmlLeafElement
@@ -9624,7 +9624,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>n-ary Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:naryPr.</para>
     /// </summary>
     /// <remark>
@@ -9779,7 +9779,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Phantom Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:phantPr.</para>
     /// </summary>
     /// <remark>
@@ -9934,7 +9934,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Radical Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:radPr.</para>
     /// </summary>
     /// <remark>
@@ -10025,7 +10025,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Pre-Sub-Superscript Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sPrePr.</para>
     /// </summary>
     /// <remark>
@@ -10100,7 +10100,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Subscript Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSubPr.</para>
     /// </summary>
     /// <remark>
@@ -10175,7 +10175,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Sub-Superscript Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSubSupPr.</para>
     /// </summary>
     /// <remark>
@@ -10266,7 +10266,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Superscript Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSupPr.</para>
     /// </summary>
     /// <remark>
@@ -10341,7 +10341,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Argument Size.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:argSz.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10393,7 +10393,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Argument Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:argPr.</para>
     /// </summary>
     /// <remark>
@@ -10468,7 +10468,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Justification.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:jc.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10495,7 +10495,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Default Justification.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:defJc.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10522,7 +10522,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OfficeMathJustificationType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
@@ -10566,7 +10566,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Math Font.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mathFont.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10618,7 +10618,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
 
     /// <summary>
     /// <para>Break on Binary Operators.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brkBin.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10666,7 +10666,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
 
     /// <summary>
     /// <para>Break on Binary Subtraction.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brkBinSub.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10718,7 +10718,7 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
 
     /// <summary>
     /// <para>Office Math Paragraph Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:oMathParaPr.</para>
     /// </summary>
     /// <remark>

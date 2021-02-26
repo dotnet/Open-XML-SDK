@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
 {
     /// <summary>
     /// <para>Defines the HeaderRowDxfDxf Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr5:headerRowDxf.</para>
     /// </summary>
     /// <remark>
@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
 
     /// <summary>
     /// <para>Defines the DataDxfDxf Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr5:dataDxf.</para>
     /// </summary>
     /// <remark>
@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
 
     /// <summary>
     /// <para>Defines the TotalsRowDxfDxf Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr5:totalsRowDxf.</para>
     /// </summary>
     /// <remark>
@@ -237,7 +237,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
 
     /// <summary>
     /// <para>Defines the HeaderRowBorderDxfDxf Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr5:headerRowBorderDxf.</para>
     /// </summary>
     /// <remark>
@@ -311,7 +311,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
 
     /// <summary>
     /// <para>Defines the TableBorderDxfDxf Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr5:tableBorderDxf.</para>
     /// </summary>
     /// <remark>
@@ -385,7 +385,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
 
     /// <summary>
     /// <para>Defines the TotalsRowBorderDxfDxf Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr5:totalsRowBorderDxf.</para>
     /// </summary>
     /// <remark>
@@ -459,7 +459,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
 
     /// <summary>
     /// <para>Defines the ColumnHeaderDxfDxf Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr5:columnHeaderDxf.</para>
     /// </summary>
     /// <remark>
@@ -533,7 +533,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
 
     /// <summary>
     /// <para>Defines the ColumnBodyDxfDxf Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr5:columnBodyDxf.</para>
     /// </summary>
     /// <remark>
@@ -607,7 +607,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
 
     /// <summary>
     /// <para>Defines the ColumnTotalsDxfDxf Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr5:columnTotalsDxf.</para>
     /// </summary>
     /// <remark>
@@ -681,7 +681,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
 
     /// <summary>
     /// <para>Defines the DifferentialFormatType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>

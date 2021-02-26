@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
 {
     /// <summary>
     /// <para>Defines the Color Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:color.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -139,7 +139,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
 
     /// <summary>
     /// <para>Defines the DataBinding Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:dataBinding.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -234,7 +234,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Appearance Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:appearance.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -286,7 +286,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the CommentsEx Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:commentsEx.</para>
     /// </summary>
     /// <remark>
@@ -380,7 +380,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the People Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:people.</para>
     /// </summary>
     /// <remark>
@@ -474,7 +474,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the SdtRepeatedSection Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:repeatingSection.</para>
     /// </summary>
     /// <remark>
@@ -566,7 +566,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the SdtRepeatedSectionItem Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:repeatingSectionItem.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -594,7 +594,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the ChartTrackingRefBased Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:chartTrackingRefBased.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -622,7 +622,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the DefaultCollapsed Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:collapsed.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -650,7 +650,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the WebExtensionLinked Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:webExtensionLinked.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -678,7 +678,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the WebExtensionCreated Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:webExtensionCreated.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -706,7 +706,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the DoNotAllowInsertDeleteSection Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:doNotAllowInsertDeleteSection.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -734,7 +734,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the OnOffType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class OnOffType : OpenXmlLeafElement
@@ -775,7 +775,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the PersistentDocumentId Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:docId.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -828,7 +828,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the FootnoteColumns Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:footnoteColumns.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -880,7 +880,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CommentEx Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:commentEx.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -983,7 +983,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the Person Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:person.</para>
     /// </summary>
     /// <remark>
@@ -1108,7 +1108,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the PresenceInfo Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:presenceInfo.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1187,7 +1187,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the SectionTitle Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:sectionTitle.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

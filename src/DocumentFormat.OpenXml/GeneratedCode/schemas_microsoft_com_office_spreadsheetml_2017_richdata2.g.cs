@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
 {
     /// <summary>
     /// <para>Defines the RichFilterColumn Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:filterColumn.</para>
     /// </summary>
     /// <remark>
@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
 
     /// <summary>
     /// <para>Defines the RichSortCondition Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:richSortCondition.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -324,7 +324,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBags Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:supportingPropertyBags.</para>
     /// </summary>
     /// <remark>
@@ -416,7 +416,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagStructures Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:spbStructures.</para>
     /// </summary>
     /// <remark>
@@ -503,7 +503,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ArrayData Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:arrayData.</para>
     /// </summary>
     /// <remark>
@@ -590,7 +590,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichStylesheet Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:richStyleSheet.</para>
     /// </summary>
     /// <remark>
@@ -714,7 +714,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueTypesInfo Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:rvTypesInfo.</para>
     /// </summary>
     /// <remark>
@@ -822,7 +822,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichFilters Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:filters.</para>
     /// </summary>
     /// <remark>
@@ -891,7 +891,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichTop10 Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:top10.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1008,7 +1008,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CustomRichFilters Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:customFilters.</para>
     /// </summary>
     /// <remark>
@@ -1095,7 +1095,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DynamicRichFilter Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:dynamicFilter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1235,7 +1235,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the RichExtensionList Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:richExtLst.</para>
     /// </summary>
     /// <remark>
@@ -1311,7 +1311,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the ExtensionList Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:extLst.</para>
     /// </summary>
     /// <remark>
@@ -1380,7 +1380,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the RichFilter Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:filter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1477,7 +1477,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the RichDateGroupItem Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:dateGroupItem.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1648,7 +1648,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CustomRichFilter Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:customFilter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1728,7 +1728,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagArrayData Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:spbArrays.</para>
     /// </summary>
     /// <remark>
@@ -1815,7 +1815,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagData Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:spbData.</para>
     /// </summary>
     /// <remark>
@@ -1902,7 +1902,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBag Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:spb.</para>
     /// </summary>
     /// <remark>
@@ -1986,7 +1986,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagValue Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:v.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2027,7 +2027,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagStructure Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:s.</para>
     /// </summary>
     /// <remark>
@@ -2090,7 +2090,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagKey Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:k.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2156,7 +2156,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagArray Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:a.</para>
     /// </summary>
     /// <remark>
@@ -2240,7 +2240,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SupportingPropertyBagArrayValue Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:v.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2299,7 +2299,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Array Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:a.</para>
     /// </summary>
     /// <remark>
@@ -2400,7 +2400,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ArrayValue Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:v.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2459,7 +2459,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Dxfs Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:dxfs.</para>
     /// </summary>
     /// <remark>
@@ -2540,7 +2540,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichFormatProperties Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:richProperties.</para>
     /// </summary>
     /// <remark>
@@ -2603,7 +2603,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichStyles Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:richStyles.</para>
     /// </summary>
     /// <remark>
@@ -2666,7 +2666,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichFormatProperty Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:rPr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2735,7 +2735,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichStyle Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:rSty.</para>
     /// </summary>
     /// <remark>
@@ -2816,7 +2816,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichStylePropertyValue Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:rpv.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2878,7 +2878,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueGlobalType Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:global.</para>
     /// </summary>
     /// <remark>
@@ -2970,7 +2970,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueTypes Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:types.</para>
     /// </summary>
     /// <remark>
@@ -3033,7 +3033,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueType Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:type.</para>
     /// </summary>
     /// <remark>
@@ -3146,7 +3146,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueTypeKeyFlags Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:keyFlags.</para>
     /// </summary>
     /// <remark>
@@ -3209,7 +3209,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueTypeReservedKey Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:key.</para>
     /// </summary>
     /// <remark>
@@ -3293,7 +3293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RichValueTypeReservedKeyFlag Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:flag.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

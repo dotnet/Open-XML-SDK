@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
 {
     /// <summary>
     /// <para>Defines the NonVisualDrawingProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm14:cNvPr.</para>
     /// </summary>
     /// <remark>
@@ -215,7 +215,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RecolorImages Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm14:recolorImg.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

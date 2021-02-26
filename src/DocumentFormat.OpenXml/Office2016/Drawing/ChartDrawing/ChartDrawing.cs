@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
 {
     /// <summary>
     /// <para>Defines the IdxXsdunsignedInt Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:idx.</para>
     /// </summary>
     [Obsolete("Please use UnsignedIntegerType as this type will be removed in a future version")]

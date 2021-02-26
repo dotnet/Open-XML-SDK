@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
 {
     /// <summary>
     /// <para>Defines the WordprocessingShape Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wps:wsp.</para>
     /// </summary>
     /// <remark>
@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
 
     /// <summary>
     /// <para>Defines the OfficeArtExtensionList Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wps:extLst.</para>
     /// </summary>
     /// <remark>
@@ -209,7 +209,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
 
     /// <summary>
     /// <para>Defines the NonVisualDrawingProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wps:cNvPr.</para>
     /// </summary>
     /// <remark>
@@ -409,7 +409,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the NonVisualDrawingShapeProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wps:cNvSpPr.</para>
     /// </summary>
     /// <remark>
@@ -519,7 +519,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the NonVisualConnectorProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wps:cNvCnPr.</para>
     /// </summary>
     /// <remark>
@@ -643,7 +643,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ShapeProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wps:spPr.</para>
     /// </summary>
     /// <remark>
@@ -800,7 +800,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the ShapeStyle Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wps:style.</para>
     /// </summary>
     /// <remark>
@@ -924,7 +924,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the TextBoxInfo2 Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wps:txbx.</para>
     /// </summary>
     /// <remark>
@@ -1034,7 +1034,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the LinkedTextBox Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wps:linkedTxbx.</para>
     /// </summary>
     /// <remark>
@@ -1151,7 +1151,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TextBodyProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wps:bodyPr.</para>
     /// </summary>
     /// <remark>

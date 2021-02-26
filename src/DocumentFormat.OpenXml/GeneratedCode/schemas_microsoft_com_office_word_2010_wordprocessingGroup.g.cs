@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 {
     /// <summary>
     /// <para>Defines the WordprocessingGroup Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpg:wgp.</para>
     /// </summary>
     /// <remark>
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 
     /// <summary>
     /// <para>Defines the GroupShape Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpg:grpSp.</para>
     /// </summary>
     /// <remark>
@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 
     /// <summary>
     /// <para>Defines the WordprocessingGroupType Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -286,7 +286,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 
     /// <summary>
     /// <para>Defines the NonVisualDrawingProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpg:cNvPr.</para>
     /// </summary>
     /// <remark>
@@ -486,7 +486,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the NonVisualGraphicFrameProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpg:cNvFrPr.</para>
     /// </summary>
     /// <remark>
@@ -578,7 +578,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Transform2D Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpg:xfrm.</para>
     /// </summary>
     /// <remark>
@@ -722,7 +722,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OfficeArtExtensionList Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpg:extLst.</para>
     /// </summary>
     /// <remark>
@@ -791,7 +791,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the NonVisualGroupDrawingShapeProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpg:cNvGrpSpPr.</para>
     /// </summary>
     /// <remark>
@@ -883,7 +883,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the GroupShapeProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpg:grpSpPr.</para>
     /// </summary>
     /// <remark>
@@ -1022,7 +1022,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the GraphicFrame Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpg:graphicFrame.</para>
     /// </summary>
     /// <remark>

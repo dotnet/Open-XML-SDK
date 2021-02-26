@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
 {
     /// <summary>
     /// <para>Defines the ModelTimeGroupings Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x16:modelTimeGroupings.</para>
     /// </summary>
     /// <remark>
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
 
     /// <summary>
     /// <para>Defines the ModelTimeGrouping Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x16:modelTimeGrouping.</para>
     /// </summary>
     /// <remark>
@@ -202,7 +202,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CalculatedTimeColumn Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x16:calculatedTimeColumn.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

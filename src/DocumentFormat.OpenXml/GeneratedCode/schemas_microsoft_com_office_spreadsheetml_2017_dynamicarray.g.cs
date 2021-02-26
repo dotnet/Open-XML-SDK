@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
 {
     /// <summary>
     /// <para>Defines the DynamicArrayProperties Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xda:dynamicArrayProperties.</para>
     /// </summary>
     /// <remark>
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
 
     /// <summary>
     /// <para>Defines the ExtensionList Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xda:extLst.</para>
     /// </summary>
     /// <remark>

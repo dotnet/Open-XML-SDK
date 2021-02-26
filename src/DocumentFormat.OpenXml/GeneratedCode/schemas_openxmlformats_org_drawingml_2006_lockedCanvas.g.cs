@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
 {
     /// <summary>
     /// <para>Locked Canvas Container.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is lc:lockedCanvas.</para>
     /// </summary>
     /// <remark>

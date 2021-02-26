@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
 {
     /// <summary>
     /// <para>Defines the CalcFeatures Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xcalcf:calcFeatures.</para>
     /// </summary>
     /// <remark>
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
 
     /// <summary>
     /// <para>Defines the CalcFeature Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xcalcf:feature.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 {
     /// <summary>
     /// <para>Application Specific File Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Properties.</para>
     /// </summary>
     /// <remark>
@@ -537,7 +537,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Name of Document Template.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Template.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -577,7 +577,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Name of Manager.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Manager.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -617,7 +617,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Name of Company.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Company.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -657,7 +657,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Intended Format of Presentation.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:PresentationFormat.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -697,7 +697,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Relative Hyperlink Base.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HyperlinkBase.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -737,7 +737,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Application Name.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Application.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -777,7 +777,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Application Version.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:AppVersion.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -817,7 +817,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Total Number of Pages.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Pages.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -858,7 +858,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Word Count.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Words.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -899,7 +899,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Total Number of Characters.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Characters.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -940,7 +940,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Number of Lines.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Lines.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -981,7 +981,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Total Number of Paragraphs.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Paragraphs.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1022,7 +1022,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Slides Metadata Element.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Slides.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1063,7 +1063,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Number of Slides Containing Notes.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Notes.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1104,7 +1104,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Total Edit Time Metadata Element.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:TotalTime.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1145,7 +1145,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Number of Hidden Slides.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HiddenSlides.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1186,7 +1186,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Total Number of Multimedia Clips.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:MMClips.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1227,7 +1227,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Number of Characters (With Spaces).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:CharactersWithSpaces.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1268,7 +1268,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Document Security.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:DocSecurity.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1309,7 +1309,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Thumbnail Display Mode.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:ScaleCrop.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1350,7 +1350,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Links Up-to-Date.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:LinksUpToDate.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1391,7 +1391,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Shared Document.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:SharedDoc.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1432,7 +1432,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Hyperlinks Changed.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HyperlinksChanged.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1473,7 +1473,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Heading Pairs.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HeadingPairs.</para>
     /// </summary>
     /// <remark>
@@ -1534,7 +1534,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Hyperlink List.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HLinks.</para>
     /// </summary>
     /// <remark>
@@ -1595,7 +1595,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Defines the VectorVariantType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -1659,7 +1659,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Part Titles.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:TitlesOfParts.</para>
     /// </summary>
     /// <remark>
@@ -1734,7 +1734,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
 
     /// <summary>
     /// <para>Digital Signature.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:DigSig.</para>
     /// </summary>
     /// <remark>

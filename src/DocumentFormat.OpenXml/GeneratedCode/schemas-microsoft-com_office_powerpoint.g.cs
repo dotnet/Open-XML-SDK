@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
 {
     /// <summary>
     /// <para>Ink Annotation Flag.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pvml:iscomment.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
 
     /// <summary>
     /// <para>VML Diagram Text.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pvml:textdata.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

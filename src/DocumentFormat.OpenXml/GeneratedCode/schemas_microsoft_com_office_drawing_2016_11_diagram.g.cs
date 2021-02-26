@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
 {
     /// <summary>
     /// <para>Defines the NumberDiagramInfoList Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm1611:autoBuNodeInfoLst.</para>
     /// </summary>
     /// <remark>
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
 
     /// <summary>
     /// <para>Defines the DiagramAutoBullet Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm1611:buPr.</para>
     /// </summary>
     /// <remark>
@@ -241,7 +241,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
 
     /// <summary>
     /// <para>Defines the NumberDiagramInfo Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm1611:autoBuNodeInfo.</para>
     /// </summary>
     /// <remark>

@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
 {
     /// <summary>
     /// <para>Defines the ContextNode Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:context.</para>
     /// </summary>
     /// <remark>
@@ -501,7 +501,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("-?[0-9]+,-?[0-9]+") })
 
     /// <summary>
     /// <para>Defines the ContextNodeProperty Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:property.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -562,7 +562,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the SourceLink Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:sourceLink.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -589,7 +589,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the DestinationLink Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:destinationLink.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -616,7 +616,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the ContextLinkType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class ContextLinkType : OpenXmlLeafElement

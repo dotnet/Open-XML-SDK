@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
 {
     /// <summary>
     /// <para>Defines the RunConflictInsertion Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:conflictIns.</para>
     /// </summary>
     /// <remark>
@@ -271,7 +271,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
 
     /// <summary>
     /// <para>Defines the RunConflictDeletion Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:conflictDel.</para>
     /// </summary>
     /// <remark>
@@ -524,7 +524,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
 
     /// <summary>
     /// <para>Defines the RunTrackChangeType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -758,7 +758,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 
     /// <summary>
     /// <para>Defines the ConflictInsertion Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:conflictIns.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -786,7 +786,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 
     /// <summary>
     /// <para>Defines the ConflictDeletion Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:conflictDel.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -814,7 +814,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 
     /// <summary>
     /// <para>Defines the CustomXmlConflictInsertionRangeStart Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:customXmlConflictInsRangeStart.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -842,7 +842,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 
     /// <summary>
     /// <para>Defines the CustomXmlConflictDeletionRangeStart Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:customXmlConflictDelRangeStart.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -870,7 +870,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 
     /// <summary>
     /// <para>Defines the TrackChangeType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class TrackChangeType : OpenXmlLeafElement
@@ -963,7 +963,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 
     /// <summary>
     /// <para>Defines the Tint Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:tint.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -991,7 +991,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 
     /// <summary>
     /// <para>Defines the Shade Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:shade.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1019,7 +1019,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 
     /// <summary>
     /// <para>Defines the Alpha Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:alpha.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1047,7 +1047,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 
     /// <summary>
     /// <para>Defines the PositiveFixedPercentageType Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class PositiveFixedPercentageType : OpenXmlLeafElement
@@ -1093,7 +1093,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
 
     /// <summary>
     /// <para>Defines the HueModulation Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:hueMod.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1147,7 +1147,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 
     /// <summary>
     /// <para>Defines the Saturation Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:sat.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1175,7 +1175,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 
     /// <summary>
     /// <para>Defines the SaturationOffset Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:satOff.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1203,7 +1203,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 
     /// <summary>
     /// <para>Defines the SaturationModulation Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:satMod.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1231,7 +1231,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 
     /// <summary>
     /// <para>Defines the Luminance Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lum.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1259,7 +1259,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 
     /// <summary>
     /// <para>Defines the LuminanceOffset Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lumOff.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1287,7 +1287,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 
     /// <summary>
     /// <para>Defines the LuminanceModulation Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lumMod.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1315,7 +1315,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 
     /// <summary>
     /// <para>Defines the PercentageType Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class PercentageType : OpenXmlLeafElement
@@ -1360,7 +1360,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 
     /// <summary>
     /// <para>Defines the RgbColorModelHex Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:srgbClr.</para>
     /// </summary>
     /// <remark>
@@ -1482,7 +1482,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (3L) });
 
     /// <summary>
     /// <para>Defines the SchemeColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:schemeClr.</para>
     /// </summary>
     /// <remark>
@@ -1603,7 +1603,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the LinearShadeProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lin.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1679,7 +1679,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the PathShadeProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:path.</para>
     /// </summary>
     /// <remark>
@@ -1779,7 +1779,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the NoFillEmpty Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:noFill.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1807,7 +1807,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the RoundEmpty Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:round.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1835,7 +1835,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the BevelEmpty Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:bevel.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1863,7 +1863,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the EntityPickerEmpty Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:entityPicker.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1891,7 +1891,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the EmptyType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class EmptyType : OpenXmlLeafElement
@@ -1911,7 +1911,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the SolidColorFillProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:solidFill.</para>
     /// </summary>
     /// <remark>
@@ -2009,7 +2009,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the GradientFillProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:gradFill.</para>
     /// </summary>
     /// <remark>
@@ -2097,7 +2097,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the PresetLineDashProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:prstDash.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2149,7 +2149,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the LineJoinMiterProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:miter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2202,7 +2202,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 
     /// <summary>
     /// <para>Defines the Glow Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:glow.</para>
     /// </summary>
     /// <remark>
@@ -2325,7 +2325,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Defines the Shadow Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:shadow.</para>
     /// </summary>
     /// <remark>
@@ -2613,7 +2613,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the Reflection Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:reflection.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2951,7 +2951,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the TextOutlineEffect Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:textOutline.</para>
     /// </summary>
     /// <remark>
@@ -3144,7 +3144,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the FillTextEffect Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:textFill.</para>
     /// </summary>
     /// <remark>
@@ -3258,7 +3258,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the Scene3D Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:scene3d.</para>
     /// </summary>
     /// <remark>
@@ -3350,7 +3350,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the Properties3D Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:props3d.</para>
     /// </summary>
     /// <remark>
@@ -3547,7 +3547,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the Ligatures Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:ligatures.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3600,7 +3600,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the NumberingFormat Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:numForm.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3653,7 +3653,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the NumberSpacing Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:numSpacing.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3706,7 +3706,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the StylisticSets Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:stylisticSets.</para>
     /// </summary>
     /// <remark>
@@ -3769,7 +3769,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the ContextualAlternatives Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:cntxtAlts.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3797,7 +3797,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the ConflictMode Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:conflictMode.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3825,7 +3825,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the DiscardImageEditingData Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:discardImageEditingData.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3853,7 +3853,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the Checked Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:checked.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3881,7 +3881,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the OnOffType Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class OnOffType : OpenXmlLeafElement
@@ -3925,7 +3925,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the ContentPart Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:contentPart.</para>
     /// </summary>
     /// <remark>
@@ -4081,7 +4081,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DocumentId Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:docId.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4136,7 +4136,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Defines the CustomXmlConflictInsertionRangeEnd Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:customXmlConflictInsRangeEnd.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4164,7 +4164,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Defines the CustomXmlConflictDeletionRangeEnd Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:customXmlConflictDelRangeEnd.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4192,7 +4192,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Defines the MarkupType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class MarkupType : OpenXmlLeafElement
@@ -4241,7 +4241,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Defines the DefaultImageDpi Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:defaultImageDpi.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4294,7 +4294,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the SdtContentCheckBox Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:checkbox.</para>
     /// </summary>
     /// <remark>
@@ -4402,7 +4402,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the GradientStop Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:gs.</para>
     /// </summary>
     /// <remark>
@@ -4526,7 +4526,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Defines the FillToRectangle Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:fillToRect.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4647,7 +4647,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the GradientStopList Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:gsLst.</para>
     /// </summary>
     /// <remark>
@@ -4710,7 +4710,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the SphereCoordinates Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:rot.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4814,7 +4814,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
 
     /// <summary>
     /// <para>Defines the Camera Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:camera.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4868,7 +4868,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the LightRig Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lightRig.</para>
     /// </summary>
     /// <remark>
@@ -4995,7 +4995,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the BevelTop Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:bevelT.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5023,7 +5023,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the BevelBottom Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:bevelB.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5051,7 +5051,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the BevelType Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class BevelType : OpenXmlLeafElement
@@ -5144,7 +5144,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the ExtrusionColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:extrusionClr.</para>
     /// </summary>
     /// <remark>
@@ -5214,7 +5214,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the ContourColor Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:contourClr.</para>
     /// </summary>
     /// <remark>
@@ -5284,7 +5284,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the ColorType Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -5363,7 +5363,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the StyleSet Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:styleSet.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5440,7 +5440,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the CheckedState Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:checkedState.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5468,7 +5468,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the UncheckedState Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:uncheckedState.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5496,7 +5496,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the CheckBoxSymbolType Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class CheckBoxSymbolType : OpenXmlLeafElement
@@ -5564,7 +5564,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
 
     /// <summary>
     /// <para>Defines the NonVisualDrawingProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:cNvPr.</para>
     /// </summary>
     /// <remark>
@@ -5764,7 +5764,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the NonVisualInkContentPartProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:cNvContentPartPr.</para>
     /// </summary>
     /// <remark>
@@ -5874,7 +5874,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the WordNonVisualContentPartShapeProperties Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:nvContentPartPr.</para>
     /// </summary>
     /// <remark>
@@ -5966,7 +5966,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Transform2D Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:xfrm.</para>
     /// </summary>
     /// <remark>
@@ -6110,7 +6110,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OfficeArtExtensionList Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:extLst.</para>
     /// </summary>
     /// <remark>

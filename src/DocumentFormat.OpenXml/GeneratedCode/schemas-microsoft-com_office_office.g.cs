@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
 {
     /// <summary>
     /// <para>New Shape Defaults.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:shapedefaults.</para>
     /// </summary>
     /// <remark>
@@ -434,7 +434,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
 
     /// <summary>
     /// <para>Shape Layout Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:shapelayout.</para>
     /// </summary>
     /// <remark>
@@ -562,7 +562,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
 
     /// <summary>
     /// <para>Digital Signature Line.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:signatureline.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -830,7 +830,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Ink.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:ink.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -892,7 +892,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>VML Diagram.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:diagram.</para>
     /// </summary>
     /// <remark>
@@ -1141,7 +1141,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Skew Transform.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:skew.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1274,7 +1274,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>3D Extrusion.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:extrusion.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1836,7 +1836,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the Callout Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:callout.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2106,7 +2106,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the Lock Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:lock.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2341,7 +2341,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Embedded OLE Object.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:OLEObject.</para>
     /// </summary>
     /// <remark>
@@ -2573,7 +2573,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Complex.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:complex.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2621,7 +2621,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Text Box Left Stroke.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:left.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2648,7 +2648,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Text Box Top Stroke.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:top.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2675,7 +2675,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Text Box Right Stroke.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:right.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2702,7 +2702,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Text Box Bottom Stroke.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:bottom.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2731,7 +2731,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Text Box Interior Stroke.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:column.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2759,7 +2759,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the StrokeChildType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class StrokeChildType : OpenXmlLeafElement
@@ -3254,7 +3254,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Shape Clipping Path.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:clippath.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3305,7 +3305,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Shape Fill Extended Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:fill.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3370,7 +3370,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Shape ID Map.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:idmap.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3435,7 +3435,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Shape Grouping History.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:regrouptable.</para>
     /// </summary>
     /// <remark>
@@ -3518,7 +3518,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Rule Set.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:rules.</para>
     /// </summary>
     /// <remark>
@@ -3601,7 +3601,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Regroup Entry.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:entry.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3663,7 +3663,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Rule.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:r.</para>
     /// </summary>
     /// <remark>
@@ -3800,7 +3800,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Diagram Relationship Table.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:relationtable.</para>
     /// </summary>
     /// <remark>
@@ -3883,7 +3883,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Diagram Relationship.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:rel.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3991,7 +3991,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Embedded Object Alternate Image Request.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:LinkType.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4032,7 +4032,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Embedded Object Cannot Be Refreshed.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:LockedField.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4073,7 +4073,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>WordprocessingML Field Switches.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:FieldCodes.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4113,7 +4113,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Shape Reference.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:proxy.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4216,7 +4216,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Most Recently Used Colors.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:colormru.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4281,7 +4281,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>UI Default Colors.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:colormenu.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

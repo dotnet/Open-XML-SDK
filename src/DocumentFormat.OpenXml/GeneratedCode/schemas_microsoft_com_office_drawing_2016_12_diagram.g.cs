@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
 {
     /// <summary>
     /// <para>Defines the ShapeProperties Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm1612:spPr.</para>
     /// </summary>
     /// <remark>
@@ -172,7 +172,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the TextListStyleType Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm1612:lstStyle.</para>
     /// </summary>
     /// <remark>

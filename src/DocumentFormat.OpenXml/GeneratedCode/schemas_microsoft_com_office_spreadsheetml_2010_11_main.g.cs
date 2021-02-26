@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 {
     /// <summary>
     /// <para>Defines the PivotCaches Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotCaches.</para>
     /// </summary>
     /// <remark>
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 
     /// <summary>
     /// <para>Defines the TimelineCachePivotCaches Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineCachePivotCaches.</para>
     /// </summary>
     /// <remark>
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 
     /// <summary>
     /// <para>Defines the OpenXmlPivotCachesElement Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -193,7 +193,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 
     /// <summary>
     /// <para>Defines the PivotTableReferences Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTableReferences.</para>
     /// </summary>
     /// <remark>
@@ -256,7 +256,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 
     /// <summary>
     /// <para>Defines the QueryTable Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:queryTable.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -336,7 +336,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 
     /// <summary>
     /// <para>Defines the WebExtensions Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:webExtensions.</para>
     /// </summary>
     /// <remark>
@@ -399,7 +399,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 
     /// <summary>
     /// <para>Defines the TimelineCacheReferences Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineCacheRefs.</para>
     /// </summary>
     /// <remark>
@@ -462,7 +462,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 
     /// <summary>
     /// <para>Defines the TimelineReferences Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineRefs.</para>
     /// </summary>
     /// <remark>
@@ -525,7 +525,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 
     /// <summary>
     /// <para>Defines the WorkbookProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:workbookPr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -571,7 +571,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
 
     /// <summary>
     /// <para>Defines the TimelineStyles Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineStyles.</para>
     /// </summary>
     /// <remark>
@@ -655,7 +655,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DifferentialFormats Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dxfs.</para>
     /// </summary>
     /// <remark>
@@ -736,7 +736,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Connection Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:connection.</para>
     /// </summary>
     /// <remark>
@@ -965,7 +965,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CalculatedMember Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:calculatedMember.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1045,7 +1045,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotTableUISettings Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTableUISettings.</para>
     /// </summary>
     /// <remark>
@@ -1146,7 +1146,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotFilter Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotFilter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1195,7 +1195,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CachedUniqueNames Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:cachedUniqueNames.</para>
     /// </summary>
     /// <remark>
@@ -1258,7 +1258,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CacheHierarchy Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:cacheHierarchy.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1307,7 +1307,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TimelinePivotCacheDefinition Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelinePivotCacheDefinition.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1353,7 +1353,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotCacheIdVersion Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotCacheIdVersion.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1422,7 +1422,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DataModel Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dataModel.</para>
     /// </summary>
     /// <remark>
@@ -1548,7 +1548,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotTableData Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTableData.</para>
     /// </summary>
     /// <remark>
@@ -1669,7 +1669,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotCacheDecoupled Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotCacheDecoupled.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1715,7 +1715,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DataField Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dataField.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1761,7 +1761,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the MovingPeriodState Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:movingPeriodState.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1890,7 +1890,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SlicerCaches Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:slicerCaches.</para>
     /// </summary>
     /// <remark>
@@ -1953,7 +1953,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TableSlicerCache Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:tableSlicerCache.</para>
     /// </summary>
     /// <remark>
@@ -2121,7 +2121,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SlicerCacheHideItemsWithNoData Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:slicerCacheHideItemsWithNoData.</para>
     /// </summary>
     /// <remark>
@@ -2202,7 +2202,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SlicerCachePivotTables Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:slicerCachePivotTables.</para>
     /// </summary>
     /// <remark>
@@ -2265,7 +2265,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Survey Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:survey.</para>
     /// </summary>
     /// <remark>
@@ -2481,7 +2481,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the Timelines Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelines.</para>
     /// </summary>
     /// <remark>
@@ -2575,7 +2575,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the TimelineCacheDefinition Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineCacheDefinition.</para>
     /// </summary>
     /// <remark>
@@ -2755,7 +2755,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotTableReference Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTableReference.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2807,7 +2807,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the WebExtension Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:webExtension.</para>
     /// </summary>
     /// <remark>
@@ -2904,7 +2904,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TimelineCacheReference Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineCacheRef.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2956,7 +2956,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TimelineReference Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineRef.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3008,7 +3008,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TimelineStyle Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineStyle.</para>
     /// </summary>
     /// <remark>
@@ -3105,7 +3105,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TimelineStyleElement Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineStyleElement.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3171,7 +3171,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TimelineStyleElements Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineStyleElements.</para>
     /// </summary>
     /// <remark>
@@ -3234,7 +3234,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DbTable Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dbTable.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3283,7 +3283,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DbTables Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dbTables.</para>
     /// </summary>
     /// <remark>
@@ -3346,7 +3346,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DbCommand Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dbCommand.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3395,7 +3395,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TextProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:textPr.</para>
     /// </summary>
     /// <remark>
@@ -3744,7 +3744,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ModelTextProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelTextPr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3790,7 +3790,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RangeProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:rangePr.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3839,7 +3839,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OleDbPrpoperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:oledbPr.</para>
     /// </summary>
     /// <remark>
@@ -3949,7 +3949,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DataFeedProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dataFeedPr.</para>
     /// </summary>
     /// <remark>
@@ -4046,7 +4046,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the FieldListActiveTabTopLevelEntity Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:activeTabTopLevelEntity.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4112,7 +4112,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ExtensionList Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:extLst.</para>
     /// </summary>
     /// <remark>
@@ -4181,7 +4181,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CachedUniqueName Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:cachedUniqueName.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4250,7 +4250,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ModelTable Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelTable.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4339,7 +4339,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ModelRelationship Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelRelationship.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4448,7 +4448,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ModelTables Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelTables.</para>
     /// </summary>
     /// <remark>
@@ -4511,7 +4511,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ModelRelationships Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelRelationships.</para>
     /// </summary>
     /// <remark>
@@ -4574,7 +4574,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotValueCell Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:c.</para>
     /// </summary>
     /// <remark>
@@ -4701,7 +4701,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Xstring Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:v.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4742,7 +4742,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotValueCellExtra Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:x.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4896,7 +4896,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Defines the PivotTableServerFormats Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTableServerFormats.</para>
     /// </summary>
     /// <remark>
@@ -4980,7 +4980,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ServerFormat Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:serverFormat.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5043,7 +5043,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SlicerCacheOlapLevelName Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:slicerCacheOlapLevelName.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5112,7 +5112,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SurveyPrSurveyElementPr Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:surveyPr.</para>
     /// </summary>
     /// <remark>
@@ -5174,7 +5174,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TitlePrSurveyElementPr Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:titlePr.</para>
     /// </summary>
     /// <remark>
@@ -5236,7 +5236,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the DescriptionPrSurveyElementPr Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:descriptionPr.</para>
     /// </summary>
     /// <remark>
@@ -5298,7 +5298,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the QuestionsPrSurveyElementPr Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:questionsPr.</para>
     /// </summary>
     /// <remark>
@@ -5360,7 +5360,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the QuestionPrSurveyElementPr Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:questionPr.</para>
     /// </summary>
     /// <remark>
@@ -5422,7 +5422,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OpenXmlSurveyElementPrElement Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -5623,7 +5623,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SurveyQuestions Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:questions.</para>
     /// </summary>
     /// <remark>
@@ -5702,7 +5702,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SurveyQuestion Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:question.</para>
     /// </summary>
     /// <remark>
@@ -5951,7 +5951,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Timeline Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timeline.</para>
     /// </summary>
     /// <remark>
@@ -6228,7 +6228,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TimelineCachePivotTable Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTable.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6297,7 +6297,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SelectionTimelineRange Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:selection.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6325,7 +6325,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the BoundsTimelineRange Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:bounds.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6353,7 +6353,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TimelineRange Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class TimelineRange : OpenXmlLeafElement
@@ -6414,7 +6414,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the AutoFilter Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:autoFilter.</para>
     /// </summary>
     /// <remark>
@@ -6501,7 +6501,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TimelineCachePivotTables Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTables.</para>
     /// </summary>
     /// <remark>
@@ -6564,7 +6564,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TimelineState Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:state.</para>
     /// </summary>
     /// <remark>
@@ -6837,7 +6837,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PivotRow Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotRow.</para>
     /// </summary>
     /// <remark>

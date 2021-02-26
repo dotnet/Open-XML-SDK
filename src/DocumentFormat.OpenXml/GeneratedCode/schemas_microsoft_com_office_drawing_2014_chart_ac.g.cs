@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
 {
     /// <summary>
     /// <para>Defines the MultiLvlStrData Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16ac:multiLvlStrLit.</para>
     /// </summary>
     /// <remark>

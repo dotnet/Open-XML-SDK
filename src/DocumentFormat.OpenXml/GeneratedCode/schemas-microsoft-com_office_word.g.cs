@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 {
     /// <summary>
     /// <para>Top Border.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:bordertop.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
     /// <summary>
     /// <para>Left Border.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderleft.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
     /// <summary>
     /// <para>Right Border.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderright.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
     /// <summary>
     /// <para>Bottom Border.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:borderbottom.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
     /// <summary>
     /// <para>Defines the BorderType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class BorderType : OpenXmlLeafElement
@@ -197,7 +197,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
     /// <summary>
     /// <para>Text Wrapping.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:wrap.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -293,7 +293,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 
     /// <summary>
     /// <para>Anchor Location Is Locked.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:anchorlock.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

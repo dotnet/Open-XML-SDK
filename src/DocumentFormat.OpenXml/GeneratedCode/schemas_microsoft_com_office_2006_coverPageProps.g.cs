@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
 {
     /// <summary>
     /// <para>Defines the CoverPageProperties Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CoverPageProperties.</para>
     /// </summary>
     /// <remark>
@@ -169,7 +169,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
 
     /// <summary>
     /// <para>Defines the PublishDate Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:PublishDate.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -209,7 +209,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
 
     /// <summary>
     /// <para>Defines the DocumentAbstract Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:Abstract.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -249,7 +249,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
 
     /// <summary>
     /// <para>Defines the CompanyAddress Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyAddress.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -289,7 +289,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
 
     /// <summary>
     /// <para>Defines the CompanyPhoneNumber Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyPhone.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -329,7 +329,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
 
     /// <summary>
     /// <para>Defines the CompanyFaxNumber Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyFax.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -369,7 +369,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
 
     /// <summary>
     /// <para>Defines the CompanyEmailAddress Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyEmail.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

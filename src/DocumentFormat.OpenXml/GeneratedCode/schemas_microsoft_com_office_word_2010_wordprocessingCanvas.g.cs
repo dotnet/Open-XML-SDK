@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
 {
     /// <summary>
     /// <para>Defines the WordprocessingCanvas Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpc:wpc.</para>
     /// </summary>
     /// <remark>
@@ -132,7 +132,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
 
     /// <summary>
     /// <para>Defines the BackgroundFormatting Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpc:bg.</para>
     /// </summary>
     /// <remark>
@@ -228,7 +228,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
 
     /// <summary>
     /// <para>Defines the WholeFormatting Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpc:whole.</para>
     /// </summary>
     /// <remark>
@@ -316,7 +316,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
 
     /// <summary>
     /// <para>Defines the GraphicFrameType Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpc:graphicFrame.</para>
     /// </summary>
     /// <remark>
@@ -456,7 +456,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
 
     /// <summary>
     /// <para>Defines the OfficeArtExtensionList Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpc:extLst.</para>
     /// </summary>
     /// <remark>

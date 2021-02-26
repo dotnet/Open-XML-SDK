@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.EMMA
 {
     /// <summary>
     /// <para>Defines the DerivedFrom Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:derived-from.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -82,7 +82,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Info Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:info.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -158,7 +158,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Lattice Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:lattice.</para>
     /// </summary>
     /// <remark>
@@ -305,7 +305,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Literal Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:literal.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -345,7 +345,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Interpretation Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:interpretation.</para>
     /// </summary>
     /// <remark>
@@ -952,7 +952,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Defines the OneOf Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:one-of.</para>
     /// </summary>
     /// <remark>
@@ -1538,7 +1538,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Defines the Group Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:group.</para>
     /// </summary>
     /// <remark>
@@ -2109,7 +2109,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Defines the Sequence Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:sequence.</para>
     /// </summary>
     /// <remark>
@@ -2677,7 +2677,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Defines the GroupInfo Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:group-info.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2753,7 +2753,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Derivation Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:derivation.</para>
     /// </summary>
     /// <remark>
@@ -2824,7 +2824,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Grammar Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:grammar.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2894,7 +2894,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Model Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:model.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2991,7 +2991,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the EndPointInfo Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:endpoint-info.</para>
     /// </summary>
     /// <remark>
@@ -3075,7 +3075,7 @@ aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), I
 
     /// <summary>
     /// <para>Defines the EndPoint Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:endpoint.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3352,7 +3352,7 @@ aBuilder.AddValidator(new StringValidator() { IsId = (true), IsToken = (true), I
 
     /// <summary>
     /// <para>Defines the Node Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:node.</para>
     /// </summary>
     /// <remark>
@@ -3482,7 +3482,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Defines the Arc Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:arc.</para>
     /// </summary>
     /// <remark>
@@ -3793,7 +3793,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Defines the Emma Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:emma.</para>
     /// </summary>
     /// <remark>

@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
 {
     /// <summary>
     /// <para>No Text Wrapping.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapNone.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
 
     /// <summary>
     /// <para>Square Wrapping.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapSquare.</para>
     /// </summary>
     /// <remark>
@@ -209,7 +209,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Tight Wrapping.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapTight.</para>
     /// </summary>
     /// <remark>
@@ -340,7 +340,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Through Wrapping.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapThrough.</para>
     /// </summary>
     /// <remark>
@@ -471,7 +471,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Top and Bottom Wrapping.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapTopAndBottom.</para>
     /// </summary>
     /// <remark>
@@ -581,7 +581,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Inline DrawingML Object.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:inline.</para>
     /// </summary>
     /// <remark>
@@ -837,7 +837,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Anchor for Floating DrawingML Object.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:anchor.</para>
     /// </summary>
     /// <remark>
@@ -1266,7 +1266,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Wrapping Polygon Start.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:start.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1293,7 +1293,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Wrapping Polygon Line End Position.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:lineTo.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1320,7 +1320,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Simple Positioning Coordinates.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:simplePos.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1347,7 +1347,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Defines the Point2DType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class Point2DType : OpenXmlLeafElement
@@ -1410,7 +1410,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Object Extents Including Effects.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:effectExtent.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1522,7 +1522,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
 
     /// <summary>
     /// <para>Tight Wrapping Extents Polygon.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapPolygon.</para>
     /// </summary>
     /// <remark>
@@ -1618,7 +1618,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
 
     /// <summary>
     /// <para>Horizontal Positioning.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:positionH.</para>
     /// </summary>
     /// <remark>
@@ -1750,7 +1750,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Vertical Positioning.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:positionV.</para>
     /// </summary>
     /// <remark>
@@ -1882,7 +1882,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Inline Drawing Object Extents.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:extent.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1952,7 +1952,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Drawing Object Non-Visual Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:docPr.</para>
     /// </summary>
     /// <remark>
@@ -2152,7 +2152,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the NonVisualGraphicFrameDrawingProperties Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:cNvGraphicFramePr.</para>
     /// </summary>
     /// <remark>
@@ -2243,7 +2243,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Relative Vertical Alignment.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:align.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2285,7 +2285,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PositionOffset Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:posOffset.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2326,7 +2326,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Relative Horizontal Alignment.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:align.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

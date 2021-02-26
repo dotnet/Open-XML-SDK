@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.InkML
 {
     /// <summary>
     /// <para>Defines the Ink Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:ink.</para>
     /// </summary>
     /// <remark>
@@ -116,7 +116,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Bind Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:bind.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -212,7 +212,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Table Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:table.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -307,7 +307,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Matrix Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:matrix.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -368,7 +368,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Mapping Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:mapping.</para>
     /// </summary>
     /// <remark>
@@ -506,7 +506,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Channel Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:channel.</para>
     /// </summary>
     /// <remark>
@@ -760,7 +760,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the IntermittentChannels Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:intermittentChannels.</para>
     /// </summary>
     /// <remark>
@@ -822,7 +822,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ChannelProperty Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:channelProperty.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -954,7 +954,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TraceFormat Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:traceFormat.</para>
     /// </summary>
     /// <remark>
@@ -1040,7 +1040,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SampleRate Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:sampleRate.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1105,7 +1105,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Latency Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:latency.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1153,7 +1153,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ActiveArea Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:activeArea.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1266,7 +1266,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SourceProperty Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:srcProperty.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1368,7 +1368,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ChannelProperties Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:channelProperties.</para>
     /// </summary>
     /// <remark>
@@ -1430,7 +1430,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Annotation Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:annotation.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1505,7 +1505,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the AnnotationXml Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:annotationXML.</para>
     /// </summary>
     /// <remark>
@@ -1635,7 +1635,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the BrushProperty Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:brushProperty.</para>
     /// </summary>
     /// <remark>
@@ -1788,7 +1788,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Canvas Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:canvas.</para>
     /// </summary>
     /// <remark>
@@ -1904,7 +1904,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the CanvasTransform Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:canvasTransform.</para>
     /// </summary>
     /// <remark>
@@ -2004,7 +2004,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the InkSource Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:inkSource.</para>
     /// </summary>
     /// <remark>
@@ -2245,7 +2245,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Brush Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:brush.</para>
     /// </summary>
     /// <remark>
@@ -2354,7 +2354,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Timestamp Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:timestamp.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2476,7 +2476,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Trace Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:trace.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2665,7 +2665,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the TraceGroup Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:traceGroup.</para>
     /// </summary>
     /// <remark>
@@ -2797,7 +2797,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the TraceView Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:traceView.</para>
     /// </summary>
     /// <remark>
@@ -2960,7 +2960,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Context Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:context.</para>
     /// </summary>
     /// <remark>
@@ -3276,7 +3276,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Definitions Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:definitions.</para>
     /// </summary>
     /// <remark>
