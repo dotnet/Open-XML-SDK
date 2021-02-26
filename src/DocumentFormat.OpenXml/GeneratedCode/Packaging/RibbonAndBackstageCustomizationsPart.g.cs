@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -18,7 +20,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility";
-        private DocumentFormat.OpenXml.Office2010.CustomUI.CustomUI _rootElement;
+        private DocumentFormat.OpenXml.Office2010.CustomUI.CustomUI? _rootElement;
 
         /// <summary>
         /// Creates an instance of the RibbonAndBackstageCustomizationsPart OpenXmlType
@@ -42,7 +44,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Office2010.CustomUI.CustomUI>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -61,7 +63,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -74,7 +76,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => CustomUI;
+        internal override OpenXmlPartRootElement? PartRootElement => CustomUI;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

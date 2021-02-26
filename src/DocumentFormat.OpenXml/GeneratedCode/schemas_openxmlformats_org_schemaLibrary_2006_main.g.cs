@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -105,7 +107,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         [SchemaAttr(25, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -124,7 +126,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         [SchemaAttr(25, "manifestLocation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ManifestLocation
+        public StringValue? ManifestLocation
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -143,7 +145,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         [SchemaAttr(25, "schemaLocation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SchemaLocation
+        public StringValue? SchemaLocation
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

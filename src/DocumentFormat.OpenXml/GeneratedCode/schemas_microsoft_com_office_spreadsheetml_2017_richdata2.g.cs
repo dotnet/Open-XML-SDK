@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -92,7 +94,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichFilters RichFilters
+        public RichFilters? RichFilters
         {
             get => GetElement<RichFilters>();
             set => SetElement(value);
@@ -105,7 +107,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichTop10 RichTop10
+        public RichTop10? RichTop10
         {
             get => GetElement<RichTop10>();
             set => SetElement(value);
@@ -118,7 +120,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public CustomRichFilters CustomRichFilters
+        public CustomRichFilters? CustomRichFilters
         {
             get => GetElement<CustomRichFilters>();
             set => SetElement(value);
@@ -131,7 +133,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DynamicRichFilter DynamicRichFilter
+        public DynamicRichFilter? DynamicRichFilter
         {
             get => GetElement<DynamicRichFilter>();
             set => SetElement(value);
@@ -144,7 +146,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -181,7 +183,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         [SchemaAttr(0, "richSortKey")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RichSortKey
+        public StringValue? RichSortKey
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -197,7 +199,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         [SchemaAttr(0, "descending")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Descending
+        public BooleanValue? Descending
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -213,7 +215,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         [SchemaAttr(0, "sortBy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues> SortBy
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
             set => SetAttribute(value);
@@ -229,7 +231,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -245,7 +247,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         [SchemaAttr(0, "customList")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CustomList
+        public StringValue? CustomList
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -261,7 +263,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         [SchemaAttr(0, "dxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatId
+        public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -277,7 +279,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         [SchemaAttr(0, "iconSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues> IconSet
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>? IconSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>();
             set => SetAttribute(value);
@@ -293,7 +295,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         [SchemaAttr(0, "iconId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value IconId
+        public UInt32Value? IconId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -391,7 +393,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public SupportingPropertyBagArrayData SupportingPropertyBagArrayData
+        public SupportingPropertyBagArrayData? SupportingPropertyBagArrayData
         {
             get => GetElement<SupportingPropertyBagArrayData>();
             set => SetElement(value);
@@ -404,7 +406,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public SupportingPropertyBagData SupportingPropertyBagData
+        public SupportingPropertyBagData? SupportingPropertyBagData
         {
             get => GetElement<SupportingPropertyBagData>();
             set => SetElement(value);
@@ -472,7 +474,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -559,7 +561,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -663,7 +665,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public Dxfs Dxfs
+        public Dxfs? Dxfs
         {
             get => GetElement<Dxfs>();
             set => SetElement(value);
@@ -676,7 +678,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichFormatProperties RichFormatProperties
+        public RichFormatProperties? RichFormatProperties
         {
             get => GetElement<RichFormatProperties>();
             set => SetElement(value);
@@ -689,7 +691,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichStyles RichStyles
+        public RichStyles? RichStyles
         {
             get => GetElement<RichStyles>();
             set => SetElement(value);
@@ -702,7 +704,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -784,7 +786,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichValueGlobalType RichValueGlobalType
+        public RichValueGlobalType? RichValueGlobalType
         {
             get => GetElement<RichValueGlobalType>();
             set => SetElement(value);
@@ -797,7 +799,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichValueTypes RichValueTypes
+        public RichValueTypes? RichValueTypes
         {
             get => GetElement<RichValueTypes>();
             set => SetElement(value);
@@ -810,7 +812,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -916,7 +918,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "key")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Key
+        public StringValue? Key
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -932,7 +934,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "top")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Top
+        public BooleanValue? Top
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -948,7 +950,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "percent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Percent
+        public BooleanValue? Percent
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -964,7 +966,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Val
+        public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -980,7 +982,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "filterVal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue FilterValue
+        public DoubleValue? FilterValue
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -1064,7 +1066,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "and")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue And
+        public BooleanValue? And
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1120,7 +1122,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "key")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Key
+        public StringValue? Key
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1136,7 +1138,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues>>();
             set => SetAttribute(value);
@@ -1152,7 +1154,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Val
+        public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -1168,7 +1170,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "maxVal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue MaxVal
+        public DoubleValue? MaxVal
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -1184,7 +1186,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "valIso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue ValIso
+        public DateTimeValue? ValIso
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -1200,7 +1202,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "maxValIso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue MaxValIso
+        public DateTimeValue? MaxValIso
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -1299,7 +1301,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -1405,7 +1407,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "key")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Key
+        public StringValue? Key
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1421,7 +1423,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1437,7 +1439,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "blank")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Blank
+        public BooleanValue? Blank
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1453,7 +1455,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "nodata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Nodata
+        public BooleanValue? Nodata
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1502,7 +1504,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "key")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Key
+        public StringValue? Key
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1518,7 +1520,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "year")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Year
+        public UInt16Value? Year
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -1534,7 +1536,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "month")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Month
+        public UInt16Value? Month
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -1550,7 +1552,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "day")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Day
+        public UInt16Value? Day
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -1566,7 +1568,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "hour")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Hour
+        public UInt16Value? Hour
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -1582,7 +1584,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "minute")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Minute
+        public UInt16Value? Minute
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -1598,7 +1600,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "second")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Second
+        public UInt16Value? Second
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -1614,7 +1616,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "dateTimeGrouping")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues> DateTimeGrouping
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues>? DateTimeGrouping
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues>>();
             set => SetAttribute(value);
@@ -1673,7 +1675,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "key")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Key
+        public StringValue? Key
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1689,7 +1691,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "operator")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues> Operator
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>? Operator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>>();
             set => SetAttribute(value);
@@ -1705,7 +1707,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1784,7 +1786,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -1871,7 +1873,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -1957,7 +1959,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "s")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value S
+        public UInt32Value? S
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2115,7 +2117,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue N
+        public StringValue? N
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2131,7 +2133,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValueType> T
+        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValueType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValueType>>();
             set => SetAttribute(value);
@@ -2211,7 +2213,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2278,7 +2280,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValueType> T
+        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValueType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValueType>>();
             set => SetAttribute(value);
@@ -2354,7 +2356,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value R
+        public UInt32Value? R
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2370,7 +2372,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "c")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value C
+        public UInt32Value? C
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2438,7 +2440,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValueType> T
+        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValueType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValueType>>();
             set => SetAttribute(value);
@@ -2514,7 +2516,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2691,7 +2693,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue N
+        public StringValue? N
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2707,7 +2709,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatPropertyType> T
+        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatPropertyType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatPropertyType>>();
             set => SetAttribute(value);
@@ -2790,7 +2792,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dxfid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Dxfid
+        public UInt32Value? Dxfid
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2854,7 +2856,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "i")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value I
+        public UInt32Value? I
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2945,7 +2947,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichValueTypeKeyFlags RichValueTypeKeyFlags
+        public RichValueTypeKeyFlags? RichValueTypeKeyFlags
         {
             get => GetElement<RichValueTypeKeyFlags>();
             set => SetElement(value);
@@ -2958,7 +2960,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -3089,7 +3091,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3121,7 +3123,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichValueTypeKeyFlags RichValueTypeKeyFlags
+        public RichValueTypeKeyFlags? RichValueTypeKeyFlags
         {
             get => GetElement<RichValueTypeKeyFlags>();
             set => SetElement(value);
@@ -3134,7 +3136,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -3264,7 +3266,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3318,7 +3320,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3334,7 +3336,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "value")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Value
+        public BooleanValue? Value
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);

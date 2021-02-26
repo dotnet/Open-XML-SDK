@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -76,7 +78,7 @@ namespace DocumentFormat.OpenXml.InkML
         [SchemaAttr(0, "documentID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DocumentId
+        public StringValue? DocumentId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -141,7 +143,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "source")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Source
+        public StringValue? Source
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -157,7 +159,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -173,7 +175,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "column")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Column
+        public StringValue? Column
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -189,7 +191,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "variable")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Variable
+        public StringValue? Variable
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -253,7 +255,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -269,7 +271,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "apply")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues> Apply
+        public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>? Apply
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>>();
             set => SetAttribute(value);
@@ -285,7 +287,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "interpolation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues> Interpolation
+        public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>? Interpolation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>>();
             set => SetAttribute(value);
@@ -348,7 +350,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -429,7 +431,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -445,7 +447,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues> Type
+        public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>>();
             set => SetAttribute(value);
@@ -461,7 +463,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "mappingRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue MappingRef
+        public StringValue? MappingRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -564,7 +566,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -580,7 +582,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -596,7 +598,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues> Type
+        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>>();
             set => SetAttribute(value);
@@ -612,7 +614,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "default")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Default
+        public StringValue? Default
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -628,7 +630,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "min")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue Min
+        public DecimalValue? Min
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -644,7 +646,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "max")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue Max
+        public DecimalValue? Max
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -660,7 +662,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "orientation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues> Orientation
+        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>? Orientation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>>();
             set => SetAttribute(value);
@@ -676,7 +678,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "respectTo")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RespectTo
+        public StringValue? RespectTo
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -692,7 +694,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "units")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Units
+        public StringValue? Units
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -847,7 +849,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "channel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Channel
+        public StringValue? Channel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -863,7 +865,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -879,7 +881,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "value")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue Value
+        public DecimalValue? Value
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -895,7 +897,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "units")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Units
+        public StringValue? Units
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1013,7 +1015,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1065,7 +1067,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "uniform")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Uniform
+        public BooleanValue? Uniform
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1081,7 +1083,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "value")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue Value
+        public DecimalValue? Value
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -1130,7 +1132,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "value")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue Value
+        public DecimalValue? Value
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -1178,7 +1180,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Size
+        public StringValue? Size
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1194,7 +1196,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "height")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue Height
+        public DecimalValue? Height
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -1210,7 +1212,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "width")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue Width
+        public DecimalValue? Width
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -1226,7 +1228,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "units")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Units
+        public StringValue? Units
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1291,7 +1293,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1307,7 +1309,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "value")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue Value
+        public DecimalValue? Value
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -1323,7 +1325,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "units")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Units
+        public StringValue? Units
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1468,7 +1470,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Type
+        public StringValue? Type
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1484,7 +1486,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "encoding")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Encoding
+        public StringValue? Encoding
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1560,7 +1562,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Type
+        public StringValue? Type
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1576,7 +1578,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "encoding")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Encoding
+        public StringValue? Encoding
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1592,7 +1594,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1623,7 +1625,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:emma = http://www.w3.org/2003/04/emma
         /// </remark>
-        public DocumentFormat.OpenXml.EMMA.Emma Emma
+        public DocumentFormat.OpenXml.EMMA.Emma? Emma
         {
             get => GetElement<DocumentFormat.OpenXml.EMMA.Emma>();
             set => SetElement(value);
@@ -1691,7 +1693,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1707,7 +1709,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "value")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Value
+        public StringValue? Value
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1723,7 +1725,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "units")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Units
+        public StringValue? Units
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1846,7 +1848,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1862,7 +1864,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "traceFormatRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TraceFormatRef
+        public StringValue? TraceFormatRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1892,7 +1894,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public TraceFormat TraceFormat
+        public TraceFormat? TraceFormat
         {
             get => GetElement<TraceFormat>();
             set => SetElement(value);
@@ -1962,7 +1964,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1978,7 +1980,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "invertible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Invertible
+        public BooleanValue? Invertible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2067,7 +2069,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2083,7 +2085,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "manufacturer")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Manufacturer
+        public StringValue? Manufacturer
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2099,7 +2101,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "model")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Model
+        public StringValue? Model
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2115,7 +2117,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "serialNo")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SerialNo
+        public StringValue? SerialNo
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2131,7 +2133,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "specificationRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SpecificationRef
+        public StringValue? SpecificationRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2147,7 +2149,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2194,7 +2196,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public TraceFormat TraceFormat
+        public TraceFormat? TraceFormat
         {
             get => GetElement<TraceFormat>();
             set => SetElement(value);
@@ -2207,7 +2209,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public SampleRate SampleRate
+        public SampleRate? SampleRate
         {
             get => GetElement<SampleRate>();
             set => SetElement(value);
@@ -2220,7 +2222,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public Latency Latency
+        public Latency? Latency
         {
             get => GetElement<Latency>();
             set => SetElement(value);
@@ -2233,7 +2235,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public ActiveArea ActiveArea
+        public ActiveArea? ActiveArea
         {
             get => GetElement<ActiveArea>();
             set => SetElement(value);
@@ -2305,7 +2307,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2321,7 +2323,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "brushRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BrushRef
+        public StringValue? BrushRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2382,7 +2384,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2398,7 +2400,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "time")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue Time
+        public DecimalValue? Time
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -2414,7 +2416,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "timestampRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TimestampRef
+        public StringValue? TimestampRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2430,7 +2432,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "timeString")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue TimeString
+        public DateTimeValue? TimeString
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -2446,7 +2448,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "timeOffset")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue TimeOffset
+        public DecimalValue? TimeOffset
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -2517,7 +2519,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2533,7 +2535,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues> Type
+        public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>>();
             set => SetAttribute(value);
@@ -2549,7 +2551,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "continuation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues> Continuation
+        public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>? Continuation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>>();
             set => SetAttribute(value);
@@ -2565,7 +2567,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "priorRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue PriorRef
+        public StringValue? PriorRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2581,7 +2583,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "contextRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ContextRef
+        public StringValue? ContextRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2597,7 +2599,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "brushRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BrushRef
+        public StringValue? BrushRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2613,7 +2615,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "duration")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue Duration
+        public DecimalValue? Duration
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -2629,7 +2631,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "timeOffset")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue TimeOffset
+        public DecimalValue? TimeOffset
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -2726,7 +2728,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2742,7 +2744,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "contextRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ContextRef
+        public StringValue? ContextRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2758,7 +2760,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "brushRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BrushRef
+        public StringValue? BrushRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2857,7 +2859,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2873,7 +2875,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "contextRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ContextRef
+        public StringValue? ContextRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2889,7 +2891,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "traceDataRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TraceDataRef
+        public StringValue? TraceDataRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2905,7 +2907,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "from")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue From
+        public StringValue? From
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2921,7 +2923,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "to")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue To
+        public StringValue? To
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3023,7 +3025,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(1, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3039,7 +3041,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "contextRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ContextRef
+        public StringValue? ContextRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3055,7 +3057,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "canvasRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CanvasRef
+        public StringValue? CanvasRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3071,7 +3073,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "canvasTransformRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CanvasTransformRef
+        public StringValue? CanvasTransformRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3087,7 +3089,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "traceFormatRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TraceFromatRef
+        public StringValue? TraceFromatRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3103,7 +3105,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "inkSourceRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InkSourceRef
+        public StringValue? InkSourceRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3119,7 +3121,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "brushRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BrushRef
+        public StringValue? BrushRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3135,7 +3137,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         [SchemaAttr(0, "timestampRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TimestampRef
+        public StringValue? TimestampRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3199,7 +3201,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public Canvas Canvas
+        public Canvas? Canvas
         {
             get => GetElement<Canvas>();
             set => SetElement(value);
@@ -3212,7 +3214,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public CanvasTransform CanvasTransform
+        public CanvasTransform? CanvasTransform
         {
             get => GetElement<CanvasTransform>();
             set => SetElement(value);
@@ -3225,7 +3227,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public TraceFormat TraceFormat
+        public TraceFormat? TraceFormat
         {
             get => GetElement<TraceFormat>();
             set => SetElement(value);
@@ -3238,7 +3240,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public InkSource InkSource
+        public InkSource? InkSource
         {
             get => GetElement<InkSource>();
             set => SetElement(value);
@@ -3251,7 +3253,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public Brush Brush
+        public Brush? Brush
         {
             get => GetElement<Brush>();
             set => SetElement(value);
@@ -3264,7 +3266,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public Timestamp Timestamp
+        public Timestamp? Timestamp
         {
             get => GetElement<Timestamp>();
             set => SetElement(value);

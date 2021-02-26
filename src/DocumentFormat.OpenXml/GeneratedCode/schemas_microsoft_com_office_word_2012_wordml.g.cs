@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -44,7 +46,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         [SchemaAttr(23, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -63,7 +65,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         [SchemaAttr(23, "themeColor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
             set => SetAttribute(value);
@@ -82,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         [SchemaAttr(23, "themeTint")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ThemeTint
+        public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -101,7 +103,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         [SchemaAttr(23, "themeShade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ThemeShade
+        public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -167,7 +169,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         [SchemaAttr(23, "prefixMappings")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue PrefixMappings
+        public StringValue? PrefixMappings
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -186,7 +188,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         [SchemaAttr(23, "xpath")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue XPath
+        public StringValue? XPath
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -205,7 +207,7 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         [SchemaAttr(23, "storeItemID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StoreItemId
+        public StringValue? StoreItemId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -262,7 +264,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(69, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>>();
             set => SetAttribute(value);
@@ -371,7 +373,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <summary>
         /// Gets the WordprocessingCommentsExPart associated with this element.
         /// </summary>
-        public WordprocessingCommentsExPart WordprocessingCommentsExPart
+        public WordprocessingCommentsExPart? WordprocessingCommentsExPart
         {
             get => OpenXmlPart as WordprocessingCommentsExPart;
             internal set => OpenXmlPart = value;
@@ -465,7 +467,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <summary>
         /// Gets the WordprocessingPeoplePart associated with this element.
         /// </summary>
-        public WordprocessingPeoplePart WordprocessingPeoplePart
+        public WordprocessingPeoplePart? WordprocessingPeoplePart
         {
             get => OpenXmlPart as WordprocessingPeoplePart;
             internal set => OpenXmlPart = value;
@@ -541,7 +543,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public SectionTitle SectionTitle
+        public SectionTitle? SectionTitle
         {
             get => GetElement<SectionTitle>();
             set => SetElement(value);
@@ -554,7 +556,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public DoNotAllowInsertDeleteSection DoNotAllowInsertDeleteSection
+        public DoNotAllowInsertDeleteSection? DoNotAllowInsertDeleteSection
         {
             get => GetElement<DoNotAllowInsertDeleteSection>();
             set => SetElement(value);
@@ -759,7 +761,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         [SchemaAttr(23, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public OnOffValue Val
+        public OnOffValue? Val
         {
             get => GetAttribute<OnOffValue>();
             set => SetAttribute(value);
@@ -803,7 +805,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         [SchemaAttr(69, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -856,7 +858,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(23, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Val
+        public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -908,7 +910,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(69, "paraId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue ParaId
+        public HexBinaryValue? ParaId
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -927,7 +929,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(69, "paraIdParent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue ParaIdParent
+        public HexBinaryValue? ParaIdParent
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -946,7 +948,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(69, "done")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public OnOffValue Done
+        public OnOffValue? Done
         {
             get => GetAttribute<OnOffValue>();
             set => SetAttribute(value);
@@ -1041,7 +1043,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         [SchemaAttr(69, "author")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Author
+        public StringValue? Author
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1060,7 +1062,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         [SchemaAttr(69, "contact")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Contact
+        public StringValue? Contact
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1096,7 +1098,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public PresenceInfo PresenceInfo
+        public PresenceInfo? PresenceInfo
         {
             get => GetElement<PresenceInfo>();
             set => SetElement(value);
@@ -1136,7 +1138,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         [SchemaAttr(69, "providerId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ProviderId
+        public StringValue? ProviderId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1155,7 +1157,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         [SchemaAttr(69, "userId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UserId
+        public StringValue? UserId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1215,7 +1217,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         [SchemaAttr(23, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

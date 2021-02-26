@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -86,7 +88,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public XsnLocation XsnLocation
+        public XsnLocation? XsnLocation
         {
             get => GetElement<XsnLocation>();
             set => SetElement(value);
@@ -99,7 +101,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public CachedView CachedView
+        public CachedView? CachedView
         {
             get => GetElement<CachedView>();
             set => SetElement(value);
@@ -112,7 +114,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public OpenByDefault OpenByDefault
+        public OpenByDefault? OpenByDefault
         {
             get => GetElement<OpenByDefault>();
             set => SetElement(value);
@@ -125,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public Scope Scope
+        public Scope? Scope
         {
             get => GetElement<Scope>();
             set => SetElement(value);

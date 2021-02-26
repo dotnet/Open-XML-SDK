@@ -12,11 +12,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     {
         private readonly byte _attribute;
         private readonly string _refPartType;
-        private readonly Type _refElementParent;
+        private readonly Type? _refElementParent;
         private readonly Type _refElement;
         private readonly int _indexBase;
 
-        public IndexReferenceConstraint(byte attribute, string referencedPart, Type referencedElementParent, Type referencedElement, string referencedElementName, int indexBase)
+        public IndexReferenceConstraint(byte attribute, string referencedPart, Type? referencedElementParent, Type referencedElement, string referencedElementName, int indexBase)
             : base(SemanticValidationLevel.Package)
         {
             _attribute = attribute;

@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -39,7 +41,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "decimals")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Decimals
+        public StringValue? Decimals
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -55,7 +57,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "default")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Default
+        public StringValue? Default
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -71,7 +73,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -87,7 +89,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "displayName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DisplayName
+        public StringValue? DisplayName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -103,7 +105,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "fieldsID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FieldsID
+        public StringValue? FieldsID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -119,7 +121,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "format")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Format
+        public StringValue? Format
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -135,7 +137,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Hidden
+        public StringValue? Hidden
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -151,7 +153,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "index")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Index
+        public Int32Value? Index
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -167,7 +169,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "internalName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InternalName
+        public StringValue? InternalName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -183,7 +185,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "LCID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value LCID
+        public Int32Value? LCID
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -199,7 +201,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "list")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue List
+        public StringValue? List
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -215,7 +217,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "percentage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Percentage
+        public StringValue? Percentage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -231,7 +233,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "readOnly")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ReadOnly
+        public StringValue? ReadOnly
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -247,7 +249,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "requiredMultiChoice")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RequiredMultiChoice
+        public StringValue? RequiredMultiChoice
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -263,7 +265,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "root")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues> Root
+        public EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues>? Root
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues>>();
             set => SetAttribute(value);
@@ -279,7 +281,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "showField")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ShowField
+        public StringValue? ShowField
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -295,7 +297,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         [SchemaAttr(0, "web")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Web
+        public StringValue? Web
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

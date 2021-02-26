@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -102,7 +104,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// <summary>
         /// Gets the WebExTaskpanesPart associated with this element.
         /// </summary>
-        public WebExTaskpanesPart WebExTaskpanesPart
+        public WebExTaskpanesPart? WebExTaskpanesPart
         {
             get => OpenXmlPart as WebExTaskpanesPart;
             internal set => OpenXmlPart = value;
@@ -139,7 +141,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -289,7 +291,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dockstate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DockState
+        public StringValue? DockState
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -305,7 +307,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "visibility")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visibility
+        public BooleanValue? Visibility
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -321,7 +323,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "width")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Width
+        public DoubleValue? Width
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -337,7 +339,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "row")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Row
+        public UInt32Value? Row
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -353,7 +355,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "locked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Locked
+        public BooleanValue? Locked
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -398,7 +400,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
         /// </remark>
-        public WebExtensionPartReference WebExtensionPartReference
+        public WebExtensionPartReference? WebExtensionPartReference
         {
             get => GetElement<WebExtensionPartReference>();
             set => SetElement(value);
@@ -411,7 +413,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
         /// </remark>
-        public OfficeArtExtensionList OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);

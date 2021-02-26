@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -40,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         [SchemaAttr(0, "bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Mode
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? Mode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
             set => SetAttribute(value);
@@ -56,7 +58,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         [SchemaAttr(0, "bwPure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Pure
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? Pure
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
             set => SetAttribute(value);
@@ -72,7 +74,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         [SchemaAttr(0, "bwNormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Normal
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? Normal
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
             set => SetAttribute(value);
@@ -88,7 +90,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
         [SchemaAttr(0, "targetScreenSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize> TargetScreenSize
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>? TargetScreenSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>>();
             set => SetAttribute(value);
@@ -149,7 +151,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "isLegacyGroup")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsLegacyGroup
+        public BooleanValue? IsLegacyGroup
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -195,7 +197,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "objectId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -211,7 +213,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "isActiveX")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsActiveX
+        public BooleanValue? IsActiveX
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -227,7 +229,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "linkType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue LinkType
+        public StringValue? LinkType
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -275,7 +277,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "isSignatureLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsSignatureLine
+        public BooleanValue? IsSignatureLine
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -291,7 +293,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -307,7 +309,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "provId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ProviderId
+        public StringValue? ProviderId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -323,7 +325,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "signingInstructionsSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SigningInstructionsSet
+        public BooleanValue? SigningInstructionsSet
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -339,7 +341,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "allowComments")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AllowComments
+        public BooleanValue? AllowComments
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -355,7 +357,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "showSignDate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowSignDate
+        public BooleanValue? ShowSignDate
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -371,7 +373,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "suggestedSigner")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SuggestedSigner
+        public StringValue? SuggestedSigner
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -387,7 +389,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "suggestedSigner2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SuggestedSigner2
+        public StringValue? SuggestedSigner2
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -403,7 +405,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "suggestedSignerEmail")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SuggestedSignerEmail
+        public StringValue? SuggestedSignerEmail
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -419,7 +421,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "signingInstructions")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SigningInstructions
+        public StringValue? SigningInstructions
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -435,7 +437,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "addlXml")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AdditionalXml
+        public StringValue? AdditionalXml
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -451,7 +453,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "sigProvUrl")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SignatureProviderUrl
+        public StringValue? SignatureProviderUrl
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

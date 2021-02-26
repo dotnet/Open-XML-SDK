@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -83,7 +85,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public ShowOnOpen ShowOnOpen
+        public ShowOnOpen? ShowOnOpen
         {
             get => GetElement<ShowOnOpen>();
             set => SetElement(value);
@@ -96,7 +98,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public DefaultPropertyEditorNamespace DefaultPropertyEditorNamespace
+        public DefaultPropertyEditorNamespace? DefaultPropertyEditorNamespace
         {
             get => GetElement<DefaultPropertyEditorNamespace>();
             set => SetElement(value);
@@ -337,7 +339,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public PropertyEditorNamespace PropertyEditorNamespace
+        public PropertyEditorNamespace? PropertyEditorNamespace
         {
             get => GetElement<PropertyEditorNamespace>();
             set => SetElement(value);
@@ -350,7 +352,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public XsnFileLocation XsnFileLocation
+        public XsnFileLocation? XsnFileLocation
         {
             get => GetElement<XsnFileLocation>();
             set => SetElement(value);

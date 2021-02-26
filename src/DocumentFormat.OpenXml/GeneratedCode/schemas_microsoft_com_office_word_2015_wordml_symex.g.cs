@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -43,7 +45,7 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         [SchemaAttr(86, "font")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Font
+        public StringValue? Font
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -62,7 +64,7 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         [SchemaAttr(86, "char")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue Char
+        public HexBinaryValue? Char
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);

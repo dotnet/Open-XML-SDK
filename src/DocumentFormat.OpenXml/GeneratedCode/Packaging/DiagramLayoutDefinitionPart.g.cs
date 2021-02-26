@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -17,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout";
-        private DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinition _rootElement;
+        private DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinition? _rootElement;
 
         /// <summary>
         /// Creates an instance of the DiagramLayoutDefinitionPart OpenXmlType
@@ -34,7 +36,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -59,7 +61,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinition>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -73,7 +75,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => LayoutDefinition;
+        internal override OpenXmlPartRootElement? PartRootElement => LayoutDefinition;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

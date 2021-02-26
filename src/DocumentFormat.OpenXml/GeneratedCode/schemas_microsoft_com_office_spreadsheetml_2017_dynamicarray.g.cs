@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -70,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         [SchemaAttr(0, "fDynamic")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FDynamic
+        public BooleanValue? FDynamic
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -86,7 +88,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         [SchemaAttr(0, "fCollapsed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FCollapsed
+        public BooleanValue? FCollapsed
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -114,7 +116,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         /// <remark>
         /// xmlns:xda = http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);

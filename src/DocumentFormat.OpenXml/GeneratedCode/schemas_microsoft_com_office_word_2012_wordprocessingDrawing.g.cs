@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -40,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         [SchemaAttr(0, "embeddedHtml")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue EmbeddedHtml
+        public StringValue? EmbeddedHtml
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -56,7 +58,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         [SchemaAttr(0, "h")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Height
+        public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -72,7 +74,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
         [SchemaAttr(0, "w")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Width
+        public UInt32Value? Width
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);

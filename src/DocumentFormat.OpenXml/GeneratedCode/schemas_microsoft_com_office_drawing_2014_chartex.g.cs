@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Charts;
@@ -98,7 +100,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ChartData ChartData
+        public ChartData? ChartData
         {
             get => GetElement<ChartData>();
             set => SetElement(value);
@@ -111,7 +113,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Chart Chart
+        public Chart? Chart
         {
             get => GetElement<Chart>();
             set => SetElement(value);
@@ -124,7 +126,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -137,7 +139,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody TxPrTextBody
+        public TxPrTextBody? TxPrTextBody
         {
             get => GetElement<TxPrTextBody>();
             set => SetElement(value);
@@ -150,7 +152,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ColorMappingType ColorMappingType
+        public ColorMappingType? ColorMappingType
         {
             get => GetElement<ColorMappingType>();
             set => SetElement(value);
@@ -163,7 +165,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public PrintSettings PrintSettings
+        public PrintSettings? PrintSettings
         {
             get => GetElement<PrintSettings>();
             set => SetElement(value);
@@ -176,7 +178,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -210,7 +212,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <summary>
         /// Gets the ExtendedChartPart associated with this element.
         /// </summary>
-        public ExtendedChartPart ExtendedChartPart
+        public ExtendedChartPart? ExtendedChartPart
         {
             get => OpenXmlPart as ExtendedChartPart;
             internal set => OpenXmlPart = value;
@@ -310,7 +312,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -376,7 +378,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "idx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Index
+        public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -438,7 +440,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "idx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Idx
+        public UInt32Value? Idx
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -518,7 +520,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimensionType> Type
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimensionType>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimensionType>>();
             set => SetAttribute(value);
@@ -608,7 +610,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimensionType> Type
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimensionType>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimensionType>>();
             set => SetAttribute(value);
@@ -733,7 +735,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -752,7 +754,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(80, "autoUpdate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoUpdate
+        public BooleanValue? AutoUpdate
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -837,7 +839,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2016))
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -1133,7 +1135,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.BodyProperties BodyProperties
+        public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             set => SetElement(value);
@@ -1146,7 +1148,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ListStyle ListStyle
+        public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
             set => SetElement(value);
@@ -1225,7 +1227,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TextData TextData
+        public TextData? TextData
         {
             get => GetElement<TextData>();
             set => SetElement(value);
@@ -1238,7 +1240,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public RichTextBody RichTextBody
+        public RichTextBody? RichTextBody
         {
             get => GetElement<RichTextBody>();
             set => SetElement(value);
@@ -1319,7 +1321,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
             set => SetAttribute(value);
@@ -1395,7 +1397,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
+        public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
             set => SetElement(value);
@@ -1480,7 +1482,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Text Text
+        public Text? Text
         {
             get => GetElement<Text>();
             set => SetElement(value);
@@ -1493,7 +1495,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -1506,7 +1508,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody TxPrTextBody
+        public TxPrTextBody? TxPrTextBody
         {
             get => GetElement<TxPrTextBody>();
             set => SetElement(value);
@@ -1519,7 +1521,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -1556,7 +1558,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "gapWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GapWidth
+        public StringValue? GapWidth
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1609,7 +1611,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "max")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Max
+        public StringValue? Max
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1625,7 +1627,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "min")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Min
+        public StringValue? Min
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1641,7 +1643,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "majorUnit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue MajorUnit
+        public StringValue? MajorUnit
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1657,7 +1659,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "minorUnit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue MinorUnit
+        public StringValue? MinorUnit
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1782,7 +1784,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Text Text
+        public Text? Text
         {
             get => GetElement<Text>();
             set => SetElement(value);
@@ -1795,7 +1797,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -1808,7 +1810,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody TxPrTextBody
+        public TxPrTextBody? TxPrTextBody
         {
             get => GetElement<TxPrTextBody>();
             set => SetElement(value);
@@ -1821,7 +1823,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -1889,7 +1891,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "unit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnit> Unit
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnit>? Unit
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnit>>();
             set => SetAttribute(value);
@@ -1918,7 +1920,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public AxisUnitsLabel AxisUnitsLabel
+        public AxisUnitsLabel? AxisUnitsLabel
         {
             get => GetElement<AxisUnitsLabel>();
             set => SetElement(value);
@@ -1931,7 +1933,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -2128,7 +2130,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -2141,7 +2143,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -2326,7 +2328,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickMarksType> Type
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickMarksType>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickMarksType>>();
             set => SetAttribute(value);
@@ -2347,7 +2349,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -2420,7 +2422,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -2457,7 +2459,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "formatCode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FormatCode
+        public StringValue? FormatCode
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2473,7 +2475,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "sourceLinked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SourceLinked
+        public BooleanValue? SourceLinked
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2565,7 +2567,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayoutVal> ParentLabelLayoutVal
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayoutVal>? ParentLabelLayoutVal
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayoutVal>>();
             set => SetAttribute(value);
@@ -2614,7 +2616,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "connectorLines")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ConnectorLines
+        public BooleanValue? ConnectorLines
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2630,7 +2632,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "meanLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MeanLine
+        public BooleanValue? MeanLine
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2646,7 +2648,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "meanMarker")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MeanMarker
+        public BooleanValue? MeanMarker
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2662,7 +2664,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "nonoutliers")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Nonoutliers
+        public BooleanValue? Nonoutliers
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2678,7 +2680,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "outliers")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Outliers
+        public BooleanValue? Outliers
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2787,7 +2789,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "intervalClosed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IntervalClosedSide> IntervalClosed
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IntervalClosedSide>? IntervalClosed
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.IntervalClosedSide>>();
             set => SetAttribute(value);
@@ -2803,7 +2805,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "underflow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Underflow
+        public StringValue? Underflow
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2819,7 +2821,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "overflow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Overflow
+        public StringValue? Overflow
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2864,7 +2866,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Xsddouble Xsddouble
+        public Xsddouble? Xsddouble
         {
             get => GetElement<Xsddouble>();
             set => SetElement(value);
@@ -2877,7 +2879,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public BinCountXsdunsignedInt BinCountXsdunsignedInt
+        public BinCountXsdunsignedInt? BinCountXsdunsignedInt
         {
             get => GetElement<BinCountXsdunsignedInt>();
             set => SetElement(value);
@@ -2914,7 +2916,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "quartileMethod")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.QuartileMethod> QuartileMethod
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.QuartileMethod>? QuartileMethod
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.QuartileMethod>>();
             set => SetAttribute(value);
@@ -3023,7 +3025,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "seriesName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SeriesName
+        public BooleanValue? SeriesName
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3039,7 +3041,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "categoryName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CategoryName
+        public BooleanValue? CategoryName
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3055,7 +3057,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "value")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Value
+        public BooleanValue? Value
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3466,7 +3468,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "idx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Idx
+        public UInt32Value? Idx
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3482,7 +3484,7 @@ union.AddValidator(StringValidator.Instance);
         [SchemaAttr(0, "pos")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos> Pos
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos>? Pos
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos>>();
             set => SetAttribute(value);
@@ -3523,7 +3525,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public NumberFormat NumberFormat
+        public NumberFormat? NumberFormat
         {
             get => GetElement<NumberFormat>();
             set => SetElement(value);
@@ -3536,7 +3538,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -3549,7 +3551,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody TxPrTextBody
+        public TxPrTextBody? TxPrTextBody
         {
             get => GetElement<TxPrTextBody>();
             set => SetElement(value);
@@ -3562,7 +3564,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public DataLabelVisibilities DataLabelVisibilities
+        public DataLabelVisibilities? DataLabelVisibilities
         {
             get => GetElement<DataLabelVisibilities>();
             set => SetElement(value);
@@ -3575,7 +3577,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public SeparatorXsdstring SeparatorXsdstring
+        public SeparatorXsdstring? SeparatorXsdstring
         {
             get => GetElement<SeparatorXsdstring>();
             set => SetElement(value);
@@ -3588,7 +3590,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -3625,7 +3627,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "idx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Idx
+        public UInt32Value? Idx
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3705,7 +3707,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "idx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Idx
+        public UInt32Value? Idx
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3737,7 +3739,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -3750,7 +3752,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -3824,7 +3826,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pos")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos> Pos
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos>? Pos
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelPos>>();
             set => SetAttribute(value);
@@ -3865,7 +3867,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public NumberFormat NumberFormat
+        public NumberFormat? NumberFormat
         {
             get => GetElement<NumberFormat>();
             set => SetElement(value);
@@ -3878,7 +3880,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -3891,7 +3893,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody TxPrTextBody
+        public TxPrTextBody? TxPrTextBody
         {
             get => GetElement<TxPrTextBody>();
             set => SetElement(value);
@@ -3904,7 +3906,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public DataLabelVisibilities DataLabelVisibilities
+        public DataLabelVisibilities? DataLabelVisibilities
         {
             get => GetElement<DataLabelVisibilities>();
             set => SetElement(value);
@@ -3917,7 +3919,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public SeparatorXsdstring SeparatorXsdstring
+        public SeparatorXsdstring? SeparatorXsdstring
         {
             get => GetElement<SeparatorXsdstring>();
             set => SetElement(value);
@@ -3954,7 +3956,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Val
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -4063,7 +4065,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ParentLabelLayout ParentLabelLayout
+        public ParentLabelLayout? ParentLabelLayout
         {
             get => GetElement<ParentLabelLayout>();
             set => SetElement(value);
@@ -4076,7 +4078,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public SeriesElementVisibilities SeriesElementVisibilities
+        public SeriesElementVisibilities? SeriesElementVisibilities
         {
             get => GetElement<SeriesElementVisibilities>();
             set => SetElement(value);
@@ -4197,7 +4199,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -4210,7 +4212,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -4284,7 +4286,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "layoutId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayout> LayoutId
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayout>? LayoutId
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayout>>();
             set => SetAttribute(value);
@@ -4300,7 +4302,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -4316,7 +4318,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ownerIdx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value OwnerIdx
+        public UInt32Value? OwnerIdx
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -4332,7 +4334,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UniqueId
+        public StringValue? UniqueId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4348,7 +4350,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "formatIdx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatIdx
+        public UInt32Value? FormatIdx
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -4396,7 +4398,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Text Text
+        public Text? Text
         {
             get => GetElement<Text>();
             set => SetElement(value);
@@ -4409,7 +4411,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -4491,7 +4493,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public PlotSurface PlotSurface
+        public PlotSurface? PlotSurface
         {
             get => GetElement<PlotSurface>();
             set => SetElement(value);
@@ -4570,7 +4572,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -4586,7 +4588,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -4701,7 +4703,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pos")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos> Pos
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos>? Pos
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos>>();
             set => SetAttribute(value);
@@ -4717,7 +4719,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "align")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign> Align
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign>? Align
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign>>();
             set => SetAttribute(value);
@@ -4733,7 +4735,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "overlay")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Overlay
+        public BooleanValue? Overlay
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -4768,7 +4770,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Text Text
+        public Text? Text
         {
             get => GetElement<Text>();
             set => SetElement(value);
@@ -4781,7 +4783,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -4794,7 +4796,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody TxPrTextBody
+        public TxPrTextBody? TxPrTextBody
         {
             get => GetElement<TxPrTextBody>();
             set => SetElement(value);
@@ -4807,7 +4809,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -4892,7 +4894,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public PlotAreaRegion PlotAreaRegion
+        public PlotAreaRegion? PlotAreaRegion
         {
             get => GetElement<PlotAreaRegion>();
             set => SetElement(value);
@@ -4961,7 +4963,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pos")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos> Pos
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos>? Pos
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SidePos>>();
             set => SetAttribute(value);
@@ -4977,7 +4979,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "align")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign> Align
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign>? Align
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PosAlign>>();
             set => SetAttribute(value);
@@ -4993,7 +4995,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "overlay")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Overlay
+        public BooleanValue? Overlay
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5026,7 +5028,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -5039,7 +5041,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public TxPrTextBody TxPrTextBody
+        public TxPrTextBody? TxPrTextBody
         {
             get => GetElement<TxPrTextBody>();
             set => SetElement(value);
@@ -5052,7 +5054,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -5124,7 +5126,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "alignWithMargins")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AlignWithMargins
+        public BooleanValue? AlignWithMargins
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5140,7 +5142,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "differentOddEven")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DifferentOddEven
+        public BooleanValue? DifferentOddEven
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5156,7 +5158,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "differentFirst")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DifferentFirst
+        public BooleanValue? DifferentFirst
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5195,7 +5197,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public OddHeaderXsdstring OddHeaderXsdstring
+        public OddHeaderXsdstring? OddHeaderXsdstring
         {
             get => GetElement<OddHeaderXsdstring>();
             set => SetElement(value);
@@ -5208,7 +5210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public OddFooterXsdstring OddFooterXsdstring
+        public OddFooterXsdstring? OddFooterXsdstring
         {
             get => GetElement<OddFooterXsdstring>();
             set => SetElement(value);
@@ -5221,7 +5223,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public EvenHeaderXsdstring EvenHeaderXsdstring
+        public EvenHeaderXsdstring? EvenHeaderXsdstring
         {
             get => GetElement<EvenHeaderXsdstring>();
             set => SetElement(value);
@@ -5234,7 +5236,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public EvenFooterXsdstring EvenFooterXsdstring
+        public EvenFooterXsdstring? EvenFooterXsdstring
         {
             get => GetElement<EvenFooterXsdstring>();
             set => SetElement(value);
@@ -5247,7 +5249,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public FirstHeaderXsdstring FirstHeaderXsdstring
+        public FirstHeaderXsdstring? FirstHeaderXsdstring
         {
             get => GetElement<FirstHeaderXsdstring>();
             set => SetElement(value);
@@ -5260,7 +5262,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public FirstFooterXsdstring FirstFooterXsdstring
+        public FirstFooterXsdstring? FirstFooterXsdstring
         {
             get => GetElement<FirstFooterXsdstring>();
             set => SetElement(value);
@@ -5297,7 +5299,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "l")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue L
+        public DoubleValue? L
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -5313,7 +5315,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue R
+        public DoubleValue? R
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -5329,7 +5331,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue T
+        public DoubleValue? T
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -5345,7 +5347,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "b")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue B
+        public DoubleValue? B
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -5361,7 +5363,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "header")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Header
+        public DoubleValue? Header
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -5377,7 +5379,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "footer")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Footer
+        public DoubleValue? Footer
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -5446,7 +5448,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "paperSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PaperSize
+        public UInt32Value? PaperSize
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5462,7 +5464,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "firstPageNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FirstPageNumber
+        public UInt32Value? FirstPageNumber
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5478,7 +5480,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "orientation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageOrientation> Orientation
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageOrientation>? Orientation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageOrientation>>();
             set => SetAttribute(value);
@@ -5494,7 +5496,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "blackAndWhite")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue BlackAndWhite
+        public BooleanValue? BlackAndWhite
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5510,7 +5512,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "draft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Draft
+        public BooleanValue? Draft
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5526,7 +5528,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "useFirstPageNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UseFirstPageNumber
+        public BooleanValue? UseFirstPageNumber
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5542,7 +5544,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "horizontalDpi")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value HorizontalDpi
+        public Int32Value? HorizontalDpi
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -5558,7 +5560,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "verticalDpi")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value VerticalDpi
+        public Int32Value? VerticalDpi
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -5574,7 +5576,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "copies")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Copies
+        public UInt32Value? Copies
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5673,7 +5675,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExternalData ExternalData
+        public ExternalData? ExternalData
         {
             get => GetElement<ExternalData>();
             set => SetElement(value);
@@ -5758,7 +5760,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ChartTitle ChartTitle
+        public ChartTitle? ChartTitle
         {
             get => GetElement<ChartTitle>();
             set => SetElement(value);
@@ -5771,7 +5773,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public PlotArea PlotArea
+        public PlotArea? PlotArea
         {
             get => GetElement<PlotArea>();
             set => SetElement(value);
@@ -5784,7 +5786,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public Legend Legend
+        public Legend? Legend
         {
             get => GetElement<Legend>();
             set => SetElement(value);
@@ -5797,7 +5799,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -5864,7 +5866,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bg1")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -5880,7 +5882,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tx1")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -5896,7 +5898,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bg2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -5912,7 +5914,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tx2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -5928,7 +5930,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "accent1")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -5944,7 +5946,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "accent2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -5960,7 +5962,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "accent3")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent3
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -5976,7 +5978,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "accent4")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent4
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -5992,7 +5994,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "accent5")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent5
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -6008,7 +6010,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "accent6")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent6
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -6024,7 +6026,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hlink")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Hyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -6040,7 +6042,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "folHlink")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? FollowedHyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -6126,7 +6128,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
@@ -6208,7 +6210,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public HeaderFooter HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
             get => GetElement<HeaderFooter>();
             set => SetElement(value);
@@ -6221,7 +6223,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public PageMargins PageMargins
+        public PageMargins? PageMargins
         {
             get => GetElement<PageMargins>();
             set => SetElement(value);
@@ -6234,7 +6236,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
         /// </remark>
-        public PageSetup PageSetup
+        public PageSetup? PageSetup
         {
             get => GetElement<PageSetup>();
             set => SetElement(value);
@@ -6284,7 +6286,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection> Dir
+        public EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection>? Dir
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormulaDirection>>();
             set => SetAttribute(value);
@@ -6360,7 +6362,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "ptCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PtCount
+        public UInt32Value? PtCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -6444,7 +6446,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ptCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PtCount
+        public UInt32Value? PtCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -6460,7 +6462,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "formatCode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FormatCode
+        public StringValue? FormatCode
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6515,7 +6517,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Val
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);

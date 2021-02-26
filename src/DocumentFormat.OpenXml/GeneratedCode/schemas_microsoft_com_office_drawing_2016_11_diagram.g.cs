@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
@@ -137,7 +139,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         [SchemaAttr(0, "prefix")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AutoBulletPrefix
+        public StringValue? AutoBulletPrefix
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -153,7 +155,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         [SchemaAttr(0, "leadZeros")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue LeadZeros
+        public BooleanValue? LeadZeros
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -190,7 +192,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NoBullet NoBullet
+        public DocumentFormat.OpenXml.Drawing.NoBullet? NoBullet
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NoBullet>();
             set => SetElement(value);
@@ -203,7 +205,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.AutoNumberedBullet AutoNumberedBullet
+        public DocumentFormat.OpenXml.Drawing.AutoNumberedBullet? AutoNumberedBullet
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.AutoNumberedBullet>();
             set => SetElement(value);
@@ -216,7 +218,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.CharacterBullet CharacterBullet
+        public DocumentFormat.OpenXml.Drawing.CharacterBullet? CharacterBullet
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.CharacterBullet>();
             set => SetElement(value);
@@ -229,7 +231,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.PictureBullet PictureBullet
+        public DocumentFormat.OpenXml.Drawing.PictureBullet? PictureBullet
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PictureBullet>();
             set => SetElement(value);
@@ -296,7 +298,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         [SchemaAttr(0, "lvl")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Lvl
+        public UInt32Value? Lvl
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -312,7 +314,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         [SchemaAttr(0, "ptType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.STorageType> PtType
+        public EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.STorageType>? PtType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.STorageType>>();
             set => SetAttribute(value);
@@ -347,7 +349,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:dgm1611 = http://schemas.microsoft.com/office/drawing/2016/11/diagram
         /// </remark>
-        public DiagramAutoBullet DiagramAutoBullet
+        public DiagramAutoBullet? DiagramAutoBullet
         {
             get => GetElement<DiagramAutoBullet>();
             set => SetElement(value);

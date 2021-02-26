@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -40,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -56,7 +58,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -72,7 +74,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -88,7 +90,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -104,7 +106,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -120,7 +122,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -136,7 +138,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -152,7 +154,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -168,7 +170,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -184,7 +186,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -200,7 +202,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -216,7 +218,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -232,7 +234,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -248,7 +250,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -264,7 +266,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -280,7 +282,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -296,7 +298,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -312,7 +314,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -328,7 +330,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -344,7 +346,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -360,7 +362,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -376,7 +378,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -392,7 +394,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -408,7 +410,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -424,7 +426,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -440,7 +442,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -577,7 +579,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -593,7 +595,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -609,7 +611,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -625,7 +627,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -641,7 +643,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -657,7 +659,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -673,7 +675,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -689,7 +691,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -705,7 +707,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -721,7 +723,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -737,7 +739,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -753,7 +755,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -769,7 +771,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -785,7 +787,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -801,7 +803,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -817,7 +819,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -833,7 +835,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -849,7 +851,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -865,7 +867,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -881,7 +883,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -897,7 +899,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -913,7 +915,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -929,7 +931,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -945,7 +947,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -961,7 +963,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -977,7 +979,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -993,7 +995,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1009,7 +1011,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1025,7 +1027,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1041,7 +1043,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1195,7 +1197,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getPressed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetPressed
+        public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1211,7 +1213,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1227,7 +1229,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1243,7 +1245,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1259,7 +1261,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1275,7 +1277,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1291,7 +1293,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1307,7 +1309,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1323,7 +1325,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1339,7 +1341,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1355,7 +1357,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1371,7 +1373,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1387,7 +1389,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1403,7 +1405,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1419,7 +1421,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1435,7 +1437,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1451,7 +1453,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1467,7 +1469,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1483,7 +1485,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1499,7 +1501,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1515,7 +1517,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1531,7 +1533,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1547,7 +1549,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1563,7 +1565,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1729,7 +1731,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1745,7 +1747,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1761,7 +1763,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "invalidateContentOnDrop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InvalidateContentOnDrop
+        public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1777,7 +1779,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "columns")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue Columns
+        public IntegerValue? Columns
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -1793,7 +1795,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "rows")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue Rows
+        public IntegerValue? Rows
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -1809,7 +1811,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "itemWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue ItemWidth
+        public IntegerValue? ItemWidth
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -1825,7 +1827,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "itemHeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue ItemHeight
+        public IntegerValue? ItemHeight
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -1841,7 +1843,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemWidth
+        public StringValue? GetItemWidth
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1857,7 +1859,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemHeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemHeight
+        public StringValue? GetItemHeight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1873,7 +1875,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showItemLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowItemLabel
+        public BooleanValue? ShowItemLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1889,7 +1891,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showInRibbon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>? ShowInRibbon
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>>();
             set => SetAttribute(value);
@@ -1905,7 +1907,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1921,7 +1923,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1937,7 +1939,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1953,7 +1955,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1969,7 +1971,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1985,7 +1987,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2001,7 +2003,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showItemImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowItemImage
+        public BooleanValue? ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2017,7 +2019,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemCount
+        public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2033,7 +2035,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemLabel
+        public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2049,7 +2051,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemScreentip
+        public StringValue? GetItemScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2065,7 +2067,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemSupertip
+        public StringValue? GetItemSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2081,7 +2083,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemImage
+        public StringValue? GetItemImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2097,7 +2099,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemID
+        public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2113,7 +2115,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "sizeString")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SizeString
+        public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2129,7 +2131,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSelectedItemID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSelectedItemID
+        public StringValue? GetSelectedItemID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2145,7 +2147,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSelectedItemIndex")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSelectedItemIndex
+        public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2161,7 +2163,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2177,7 +2179,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2193,7 +2195,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2209,7 +2211,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2225,7 +2227,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2241,7 +2243,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2257,7 +2259,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2273,7 +2275,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2289,7 +2291,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2305,7 +2307,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2321,7 +2323,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2337,7 +2339,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2353,7 +2355,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2369,7 +2371,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2385,7 +2387,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2401,7 +2403,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2417,7 +2419,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2433,7 +2435,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2449,7 +2451,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2465,7 +2467,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2481,7 +2483,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2497,7 +2499,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2727,7 +2729,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getPressed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetPressed
+        public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2743,7 +2745,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2759,7 +2761,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2775,7 +2777,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2791,7 +2793,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2807,7 +2809,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2823,7 +2825,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2839,7 +2841,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2855,7 +2857,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2871,7 +2873,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2887,7 +2889,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2903,7 +2905,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2919,7 +2921,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2935,7 +2937,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2951,7 +2953,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2967,7 +2969,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2983,7 +2985,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2999,7 +3001,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3015,7 +3017,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3031,7 +3033,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3047,7 +3049,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3063,7 +3065,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3079,7 +3081,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3095,7 +3097,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3111,7 +3113,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3127,7 +3129,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3143,7 +3145,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3159,7 +3161,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3175,7 +3177,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3191,7 +3193,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3207,7 +3209,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3364,7 +3366,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3380,7 +3382,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3396,7 +3398,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3412,7 +3414,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3428,7 +3430,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3444,7 +3446,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3460,7 +3462,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3476,7 +3478,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3492,7 +3494,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetTitle
+        public StringValue? GetTitle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3605,7 +3607,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3621,7 +3623,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3637,7 +3639,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3653,7 +3655,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3669,7 +3671,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3685,7 +3687,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3701,7 +3703,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3717,7 +3719,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3733,7 +3735,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3749,7 +3751,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3765,7 +3767,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3781,7 +3783,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3797,7 +3799,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3813,7 +3815,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3829,7 +3831,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3845,7 +3847,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3998,7 +4000,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "itemSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
             set => SetAttribute(value);
@@ -4014,7 +4016,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4030,7 +4032,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4046,7 +4048,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4062,7 +4064,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4078,7 +4080,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4094,7 +4096,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4110,7 +4112,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4126,7 +4128,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4142,7 +4144,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4158,7 +4160,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4174,7 +4176,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4190,7 +4192,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4206,7 +4208,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4222,7 +4224,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -4238,7 +4240,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4254,7 +4256,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4270,7 +4272,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4286,7 +4288,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4302,7 +4304,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4318,7 +4320,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4334,7 +4336,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4350,7 +4352,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -4366,7 +4368,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4382,7 +4384,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4398,7 +4400,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4414,7 +4416,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -4430,7 +4432,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4446,7 +4448,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -4462,7 +4464,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4651,7 +4653,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4667,7 +4669,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4683,7 +4685,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4699,7 +4701,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4715,7 +4717,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4731,7 +4733,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4747,7 +4749,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getContent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetContent
+        public StringValue? GetContent
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4763,7 +4765,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "invalidateContentOnDrop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InvalidateContentOnDrop
+        public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -4779,7 +4781,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4795,7 +4797,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4811,7 +4813,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4827,7 +4829,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4843,7 +4845,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4859,7 +4861,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4875,7 +4877,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4891,7 +4893,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -4907,7 +4909,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4923,7 +4925,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4939,7 +4941,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4955,7 +4957,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4971,7 +4973,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4987,7 +4989,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5003,7 +5005,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5019,7 +5021,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5035,7 +5037,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5051,7 +5053,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5067,7 +5069,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5083,7 +5085,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5099,7 +5101,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5115,7 +5117,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5131,7 +5133,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5318,7 +5320,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5334,7 +5336,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5350,7 +5352,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5366,7 +5368,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5382,7 +5384,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5398,7 +5400,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5414,7 +5416,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5430,7 +5432,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5446,7 +5448,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5462,7 +5464,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5478,7 +5480,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5494,7 +5496,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5510,7 +5512,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5526,7 +5528,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5542,7 +5544,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5558,7 +5560,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5711,7 +5713,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5727,7 +5729,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5743,7 +5745,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5759,7 +5761,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5775,7 +5777,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "itemSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
             set => SetAttribute(value);
@@ -5791,7 +5793,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5807,7 +5809,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetTitle
+        public StringValue? GetTitle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5823,7 +5825,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5839,7 +5841,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5855,7 +5857,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5871,7 +5873,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5887,7 +5889,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5903,7 +5905,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5919,7 +5921,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5935,7 +5937,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5951,7 +5953,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5967,7 +5969,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5983,7 +5985,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5999,7 +6001,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6015,7 +6017,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6031,7 +6033,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6047,7 +6049,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6063,7 +6065,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6079,7 +6081,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6095,7 +6097,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6111,7 +6113,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6127,7 +6129,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6143,7 +6145,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6159,7 +6161,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6175,7 +6177,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6364,7 +6366,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6380,7 +6382,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6396,7 +6398,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6412,7 +6414,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6428,7 +6430,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6444,7 +6446,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6460,7 +6462,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6533,7 +6535,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
             set => SetAttribute(value);
@@ -6549,7 +6551,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSize
+        public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6565,7 +6567,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6581,7 +6583,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6597,7 +6599,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6613,7 +6615,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6629,7 +6631,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6645,7 +6647,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6661,7 +6663,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6677,7 +6679,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6693,7 +6695,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6709,7 +6711,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6725,7 +6727,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6741,7 +6743,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6757,7 +6759,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6773,7 +6775,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6789,7 +6791,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6805,7 +6807,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6821,7 +6823,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6837,7 +6839,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6853,7 +6855,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6869,7 +6871,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6885,7 +6887,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6901,7 +6903,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6917,7 +6919,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6933,7 +6935,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6949,7 +6951,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6965,7 +6967,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6981,7 +6983,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6997,7 +6999,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7148,7 +7150,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7164,7 +7166,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7180,7 +7182,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7196,7 +7198,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7212,7 +7214,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7228,7 +7230,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7244,7 +7246,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7260,7 +7262,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7276,7 +7278,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -7292,7 +7294,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7308,7 +7310,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7324,7 +7326,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7340,7 +7342,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7356,7 +7358,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7372,7 +7374,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7388,7 +7390,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7404,7 +7406,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -7420,7 +7422,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7436,7 +7438,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -7452,7 +7454,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7568,7 +7570,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
             set => SetAttribute(value);
@@ -7584,7 +7586,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSize
+        public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7600,7 +7602,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7616,7 +7618,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -7632,7 +7634,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7648,7 +7650,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7664,7 +7666,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7680,7 +7682,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7696,7 +7698,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7712,7 +7714,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7728,7 +7730,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7744,7 +7746,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7760,7 +7762,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7776,7 +7778,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7792,7 +7794,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7808,7 +7810,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7824,7 +7826,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7840,7 +7842,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7856,7 +7858,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7872,7 +7874,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7888,7 +7890,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7904,7 +7906,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7920,7 +7922,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7936,7 +7938,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7952,7 +7954,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -7968,7 +7970,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7984,7 +7986,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8000,7 +8002,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8016,7 +8018,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8032,7 +8034,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8048,7 +8050,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8064,7 +8066,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8223,7 +8225,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
             set => SetAttribute(value);
@@ -8239,7 +8241,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSize
+        public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8255,7 +8257,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getPressed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetPressed
+        public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8271,7 +8273,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8287,7 +8289,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8303,7 +8305,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8319,7 +8321,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8335,7 +8337,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8351,7 +8353,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8367,7 +8369,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8383,7 +8385,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8399,7 +8401,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8415,7 +8417,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8431,7 +8433,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8447,7 +8449,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8463,7 +8465,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8479,7 +8481,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8495,7 +8497,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8511,7 +8513,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8527,7 +8529,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8543,7 +8545,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8559,7 +8561,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8575,7 +8577,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8591,7 +8593,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8607,7 +8609,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8623,7 +8625,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8639,7 +8641,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8655,7 +8657,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8671,7 +8673,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8687,7 +8689,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8703,7 +8705,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8719,7 +8721,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8735,7 +8737,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8897,7 +8899,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8913,7 +8915,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8929,7 +8931,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8945,7 +8947,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8961,7 +8963,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8977,7 +8979,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "maxLength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue MaxLength
+        public IntegerValue? MaxLength
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -8993,7 +8995,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetText
+        public StringValue? GetText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9009,7 +9011,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onChange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnChange
+        public StringValue? OnChange
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9025,7 +9027,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "sizeString")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SizeString
+        public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9041,7 +9043,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9057,7 +9059,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9073,7 +9075,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9089,7 +9091,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9105,7 +9107,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9121,7 +9123,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9137,7 +9139,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9153,7 +9155,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9169,7 +9171,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9185,7 +9187,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9201,7 +9203,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9217,7 +9219,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9233,7 +9235,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9249,7 +9251,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9265,7 +9267,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9281,7 +9283,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9297,7 +9299,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9313,7 +9315,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9329,7 +9331,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9345,7 +9347,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9361,7 +9363,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9377,7 +9379,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9564,7 +9566,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showItemImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowItemImage
+        public BooleanValue? ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9580,7 +9582,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemCount
+        public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9596,7 +9598,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemLabel
+        public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9612,7 +9614,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemScreentip
+        public StringValue? GetItemScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9628,7 +9630,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemSupertip
+        public StringValue? GetItemSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9644,7 +9646,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemImage
+        public StringValue? GetItemImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9660,7 +9662,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemID
+        public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9676,7 +9678,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "sizeString")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SizeString
+        public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9692,7 +9694,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "invalidateContentOnDrop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InvalidateContentOnDrop
+        public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9708,7 +9710,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9724,7 +9726,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9740,7 +9742,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9756,7 +9758,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9772,7 +9774,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9788,7 +9790,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "maxLength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue MaxLength
+        public IntegerValue? MaxLength
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -9804,7 +9806,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetText
+        public StringValue? GetText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9820,7 +9822,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onChange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnChange
+        public StringValue? OnChange
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9836,7 +9838,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9852,7 +9854,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9868,7 +9870,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9884,7 +9886,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9900,7 +9902,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9916,7 +9918,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9932,7 +9934,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9948,7 +9950,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9964,7 +9966,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9980,7 +9982,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9996,7 +9998,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10012,7 +10014,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10028,7 +10030,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10044,7 +10046,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10060,7 +10062,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10076,7 +10078,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10092,7 +10094,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10108,7 +10110,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10124,7 +10126,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10140,7 +10142,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10156,7 +10158,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10172,7 +10174,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10394,7 +10396,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10410,7 +10412,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10426,7 +10428,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10442,7 +10444,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10458,7 +10460,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10474,7 +10476,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10490,7 +10492,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showItemImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowItemImage
+        public BooleanValue? ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10506,7 +10508,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemCount
+        public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10522,7 +10524,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemLabel
+        public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10538,7 +10540,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemScreentip
+        public StringValue? GetItemScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10554,7 +10556,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemSupertip
+        public StringValue? GetItemSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10570,7 +10572,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemImage
+        public StringValue? GetItemImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10586,7 +10588,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemID
+        public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10602,7 +10604,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "sizeString")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SizeString
+        public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10618,7 +10620,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSelectedItemID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSelectedItemID
+        public StringValue? GetSelectedItemID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10634,7 +10636,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSelectedItemIndex")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSelectedItemIndex
+        public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10650,7 +10652,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showItemLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowItemLabel
+        public BooleanValue? ShowItemLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10666,7 +10668,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10682,7 +10684,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10698,7 +10700,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10714,7 +10716,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10730,7 +10732,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10746,7 +10748,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10762,7 +10764,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10778,7 +10780,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10794,7 +10796,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10810,7 +10812,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10826,7 +10828,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10842,7 +10844,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10858,7 +10860,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10874,7 +10876,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10890,7 +10892,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10906,7 +10908,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10922,7 +10924,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10938,7 +10940,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10954,7 +10956,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10970,7 +10972,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10986,7 +10988,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11002,7 +11004,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11226,7 +11228,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
             set => SetAttribute(value);
@@ -11242,7 +11244,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSize
+        public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11258,7 +11260,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11274,7 +11276,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11290,7 +11292,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "invalidateContentOnDrop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InvalidateContentOnDrop
+        public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11306,7 +11308,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "columns")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue Columns
+        public IntegerValue? Columns
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -11322,7 +11324,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "rows")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue Rows
+        public IntegerValue? Rows
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -11338,7 +11340,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "itemWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue ItemWidth
+        public IntegerValue? ItemWidth
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -11354,7 +11356,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "itemHeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue ItemHeight
+        public IntegerValue? ItemHeight
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -11370,7 +11372,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemWidth
+        public StringValue? GetItemWidth
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11386,7 +11388,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemHeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemHeight
+        public StringValue? GetItemHeight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11402,7 +11404,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showItemLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowItemLabel
+        public BooleanValue? ShowItemLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11418,7 +11420,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showInRibbon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>? ShowInRibbon
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>>();
             set => SetAttribute(value);
@@ -11434,7 +11436,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11450,7 +11452,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11466,7 +11468,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11482,7 +11484,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11498,7 +11500,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11514,7 +11516,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11530,7 +11532,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showItemImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowItemImage
+        public BooleanValue? ShowItemImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11546,7 +11548,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemCount
+        public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11562,7 +11564,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemLabel
+        public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11578,7 +11580,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemScreentip
+        public StringValue? GetItemScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11594,7 +11596,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemSupertip
+        public StringValue? GetItemSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11610,7 +11612,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemImage
+        public StringValue? GetItemImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11626,7 +11628,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemID
+        public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11642,7 +11644,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "sizeString")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SizeString
+        public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11658,7 +11660,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSelectedItemID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSelectedItemID
+        public StringValue? GetSelectedItemID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11674,7 +11676,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSelectedItemIndex")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSelectedItemIndex
+        public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11690,7 +11692,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11706,7 +11708,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11722,7 +11724,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11738,7 +11740,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11754,7 +11756,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11770,7 +11772,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11786,7 +11788,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11802,7 +11804,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11818,7 +11820,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11834,7 +11836,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11850,7 +11852,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11866,7 +11868,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11882,7 +11884,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11898,7 +11900,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11914,7 +11916,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11930,7 +11932,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11946,7 +11948,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11962,7 +11964,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11978,7 +11980,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11994,7 +11996,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12010,7 +12012,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -12026,7 +12028,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12302,7 +12304,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
             set => SetAttribute(value);
@@ -12318,7 +12320,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSize
+        public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12334,7 +12336,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "itemSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
             set => SetAttribute(value);
@@ -12350,7 +12352,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12366,7 +12368,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12382,7 +12384,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12398,7 +12400,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12414,7 +12416,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12430,7 +12432,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12446,7 +12448,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12462,7 +12464,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12478,7 +12480,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12494,7 +12496,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12510,7 +12512,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12526,7 +12528,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12542,7 +12544,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12558,7 +12560,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -12574,7 +12576,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12590,7 +12592,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12606,7 +12608,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12622,7 +12624,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12638,7 +12640,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12654,7 +12656,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12670,7 +12672,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12686,7 +12688,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -12702,7 +12704,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12718,7 +12720,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12734,7 +12736,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12750,7 +12752,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -12766,7 +12768,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12782,7 +12784,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -12798,7 +12800,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12995,7 +12997,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
             set => SetAttribute(value);
@@ -13011,7 +13013,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSize
+        public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13027,7 +13029,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13043,7 +13045,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13059,7 +13061,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13075,7 +13077,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13091,7 +13093,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13107,7 +13109,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13123,7 +13125,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getContent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetContent
+        public StringValue? GetContent
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13139,7 +13141,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "invalidateContentOnDrop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InvalidateContentOnDrop
+        public BooleanValue? InvalidateContentOnDrop
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -13155,7 +13157,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13171,7 +13173,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13187,7 +13189,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13203,7 +13205,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13219,7 +13221,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13235,7 +13237,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13251,7 +13253,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13267,7 +13269,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -13283,7 +13285,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13299,7 +13301,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13315,7 +13317,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13331,7 +13333,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13347,7 +13349,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13363,7 +13365,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13379,7 +13381,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13395,7 +13397,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -13411,7 +13413,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13427,7 +13429,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13443,7 +13445,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13459,7 +13461,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -13475,7 +13477,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13491,7 +13493,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -13507,7 +13509,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13699,7 +13701,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
             set => SetAttribute(value);
@@ -13715,7 +13717,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSize
+        public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13731,7 +13733,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -13747,7 +13749,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13763,7 +13765,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13779,7 +13781,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13795,7 +13797,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13811,7 +13813,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13827,7 +13829,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13843,7 +13845,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13859,7 +13861,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13875,7 +13877,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13891,7 +13893,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -13907,7 +13909,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13923,7 +13925,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13939,7 +13941,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13955,7 +13957,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -13971,7 +13973,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14137,7 +14139,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14153,7 +14155,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14169,7 +14171,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14185,7 +14187,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14201,7 +14203,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14217,7 +14219,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14233,7 +14235,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14249,7 +14251,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14265,7 +14267,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14281,7 +14283,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "boxStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues> BoxStyle
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues>? BoxStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues>>();
             set => SetAttribute(value);
@@ -14431,7 +14433,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14447,7 +14449,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14463,7 +14465,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14479,7 +14481,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14495,7 +14497,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14511,7 +14513,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14527,7 +14529,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14543,7 +14545,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14559,7 +14561,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14659,7 +14661,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14675,7 +14677,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14691,7 +14693,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14707,7 +14709,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14723,7 +14725,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14739,7 +14741,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14755,7 +14757,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "isDefinitive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsDefinitive
+        public BooleanValue? IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14771,7 +14773,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14787,7 +14789,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14803,7 +14805,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14819,7 +14821,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14835,7 +14837,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14851,7 +14853,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14867,7 +14869,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14883,7 +14885,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14899,7 +14901,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14915,7 +14917,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14931,7 +14933,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15039,7 +15041,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15055,7 +15057,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15071,7 +15073,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15087,7 +15089,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15103,7 +15105,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15119,7 +15121,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15135,7 +15137,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getPressed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetPressed
+        public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15151,7 +15153,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15167,7 +15169,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15183,7 +15185,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15199,7 +15201,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15215,7 +15217,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15231,7 +15233,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15247,7 +15249,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15263,7 +15265,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15392,7 +15394,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15408,7 +15410,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15424,7 +15426,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15440,7 +15442,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15456,7 +15458,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15472,7 +15474,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15488,7 +15490,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15504,7 +15506,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15520,7 +15522,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15536,7 +15538,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15552,7 +15554,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15568,7 +15570,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15584,7 +15586,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15600,7 +15602,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15616,7 +15618,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15632,7 +15634,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15746,7 +15748,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15762,7 +15764,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15778,7 +15780,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15794,7 +15796,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15810,7 +15812,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15826,7 +15828,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15842,7 +15844,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15858,7 +15860,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15874,7 +15876,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15890,7 +15892,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getPressed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetPressed
+        public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15906,7 +15908,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15922,7 +15924,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15938,7 +15940,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15954,7 +15956,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15970,7 +15972,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15986,7 +15988,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16002,7 +16004,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16018,7 +16020,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16129,7 +16131,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "expand")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -16145,7 +16147,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values> Style
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values>? Style
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values>>();
             set => SetAttribute(value);
@@ -16161,7 +16163,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16177,7 +16179,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16193,7 +16195,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16209,7 +16211,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16225,7 +16227,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16241,7 +16243,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16257,7 +16259,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16273,7 +16275,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16289,7 +16291,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "isDefinitive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsDefinitive
+        public BooleanValue? IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16305,7 +16307,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16321,7 +16323,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16337,7 +16339,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16353,7 +16355,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16369,7 +16371,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16385,7 +16387,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16401,7 +16403,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16417,7 +16419,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16433,7 +16435,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16449,7 +16451,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16465,7 +16467,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16583,7 +16585,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "expand")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -16599,7 +16601,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16615,7 +16617,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16631,7 +16633,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16647,7 +16649,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16663,7 +16665,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16679,7 +16681,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16695,7 +16697,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16711,7 +16713,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16727,7 +16729,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16743,7 +16745,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16759,7 +16761,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getPressed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetPressed
+        public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16775,7 +16777,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16791,7 +16793,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16807,7 +16809,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16823,7 +16825,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16839,7 +16841,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16855,7 +16857,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16871,7 +16873,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16887,7 +16889,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17003,7 +17005,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17019,7 +17021,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17035,7 +17037,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17051,7 +17053,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "alignLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -17067,7 +17069,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "expand")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -17083,7 +17085,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17099,7 +17101,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17115,7 +17117,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17131,7 +17133,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17147,7 +17149,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17163,7 +17165,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17179,7 +17181,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17195,7 +17197,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17211,7 +17213,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetText
+        public StringValue? GetText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17227,7 +17229,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onChange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnChange
+        public StringValue? OnChange
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17243,7 +17245,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "maxLength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue MaxLength
+        public IntegerValue? MaxLength
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -17259,7 +17261,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "sizeString")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SizeString
+        public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17390,7 +17392,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17406,7 +17408,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17422,7 +17424,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17438,7 +17440,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "alignLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -17454,7 +17456,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "expand")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -17470,7 +17472,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17486,7 +17488,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17502,7 +17504,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17518,7 +17520,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17534,7 +17536,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17550,7 +17552,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17566,7 +17568,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17582,7 +17584,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17598,7 +17600,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17614,7 +17616,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17630,7 +17632,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17646,7 +17648,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17662,7 +17664,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17678,7 +17680,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSelectedItemIndex")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSelectedItemIndex
+        public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17694,7 +17696,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "sizeString")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SizeString
+        public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17710,7 +17712,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemCount
+        public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17726,7 +17728,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemLabel
+        public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17742,7 +17744,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemID
+        public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17902,7 +17904,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17918,7 +17920,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17934,7 +17936,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17950,7 +17952,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "alignLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -17966,7 +17968,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "expand")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -17982,7 +17984,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17998,7 +18000,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18014,7 +18016,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18030,7 +18032,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18046,7 +18048,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18062,7 +18064,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18078,7 +18080,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18094,7 +18096,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18110,7 +18112,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18126,7 +18128,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSelectedItemIndex")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSelectedItemIndex
+        public StringValue? GetSelectedItemIndex
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18142,7 +18144,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemCount
+        public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18158,7 +18160,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemLabel
+        public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18174,7 +18176,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemID
+        public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18314,7 +18316,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18330,7 +18332,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18346,7 +18348,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18362,7 +18364,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "alignLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -18378,7 +18380,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "expand")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -18394,7 +18396,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18410,7 +18412,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18426,7 +18428,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18442,7 +18444,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18458,7 +18460,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18474,7 +18476,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18490,7 +18492,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18506,7 +18508,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18522,7 +18524,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetText
+        public StringValue? GetText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18538,7 +18540,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onChange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnChange
+        public StringValue? OnChange
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18554,7 +18556,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "sizeString")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SizeString
+        public StringValue? SizeString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18570,7 +18572,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemCount
+        public StringValue? GetItemCount
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18586,7 +18588,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemLabel
+        public StringValue? GetItemLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18602,7 +18604,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getItemID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetItemID
+        public StringValue? GetItemID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18716,7 +18718,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18732,7 +18734,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18748,7 +18750,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18764,7 +18766,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "alignLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -18780,7 +18782,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "expand")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -18796,7 +18798,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18812,7 +18814,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18828,7 +18830,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18844,7 +18846,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18860,7 +18862,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18876,7 +18878,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18892,7 +18894,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18908,7 +18910,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18924,7 +18926,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18940,7 +18942,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18956,7 +18958,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18972,7 +18974,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18988,7 +18990,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19004,7 +19006,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19020,7 +19022,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19036,7 +19038,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19052,7 +19054,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19068,7 +19070,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getTarget")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetTarget
+        public StringValue? GetTarget
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19193,7 +19195,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19209,7 +19211,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19225,7 +19227,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19241,7 +19243,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "alignLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? AlignLabel
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -19257,7 +19259,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "expand")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -19273,7 +19275,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -19289,7 +19291,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19305,7 +19307,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19321,7 +19323,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19337,7 +19339,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -19353,7 +19355,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19369,7 +19371,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "noWrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue NoWrap
+        public BooleanValue? NoWrap
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -19487,7 +19489,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19503,7 +19505,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19519,7 +19521,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19535,7 +19537,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "expand")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -19551,7 +19553,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19567,7 +19569,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19704,7 +19706,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19720,7 +19722,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19736,7 +19738,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19752,7 +19754,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "align")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Align
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Align
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -19768,7 +19770,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "expand")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>? Expand
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>();
             set => SetAttribute(value);
@@ -19784,7 +19786,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "layoutChildren")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues> LayoutChildren
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues>? LayoutChildren
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues>>();
             set => SetAttribute(value);
@@ -19875,7 +19877,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19891,7 +19893,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19907,7 +19909,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19923,7 +19925,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -19939,7 +19941,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19955,7 +19957,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -19971,7 +19973,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19987,7 +19989,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20003,7 +20005,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20019,7 +20021,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20035,7 +20037,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "altText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AltText
+        public StringValue? AltText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20051,7 +20053,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getAltText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetAltText
+        public StringValue? GetAltText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20170,7 +20172,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20186,7 +20188,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20202,7 +20204,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20218,7 +20220,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20234,7 +20236,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20250,7 +20252,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20266,7 +20268,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20282,7 +20284,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20298,7 +20300,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20314,7 +20316,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20330,7 +20332,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -20346,7 +20348,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20362,7 +20364,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues> Style
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues>? Style
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues>>();
             set => SetAttribute(value);
@@ -20378,7 +20380,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetStyle
+        public StringValue? GetStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20394,7 +20396,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "helperText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue HelperText
+        public StringValue? HelperText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20410,7 +20412,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getHelperText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetHelperText
+        public StringValue? GetHelperText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20426,7 +20428,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -20442,7 +20444,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20592,7 +20594,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20608,7 +20610,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20624,7 +20626,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20640,7 +20642,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20656,7 +20658,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20672,7 +20674,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20688,7 +20690,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20704,7 +20706,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20720,7 +20722,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20736,7 +20738,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20752,7 +20754,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -20768,7 +20770,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20784,7 +20786,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "helperText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue HelperText
+        public StringValue? HelperText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20800,7 +20802,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getHelperText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetHelperText
+        public StringValue? GetHelperText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20816,7 +20818,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -20832,7 +20834,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20848,7 +20850,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "allowedTaskSizes")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>? AllowedTaskSizes
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>>();
             set => SetAttribute(value);
@@ -20995,7 +20997,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21011,7 +21013,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetTitle
+        public StringValue? GetTitle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21027,7 +21029,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "itemSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
             set => SetAttribute(value);
@@ -21150,7 +21152,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onLoad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnLoad
+        public StringValue? OnLoad
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21166,7 +21168,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "loadImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue LoadImage
+        public StringValue? LoadImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21206,7 +21208,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public Commands Commands
+        public Commands? Commands
         {
             get => GetElement<Commands>();
             set => SetElement(value);
@@ -21219,7 +21221,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public Ribbon Ribbon
+        public Ribbon? Ribbon
         {
             get => GetElement<Ribbon>();
             set => SetElement(value);
@@ -21232,7 +21234,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public Backstage Backstage
+        public Backstage? Backstage
         {
             get => GetElement<Backstage>();
             set => SetElement(value);
@@ -21245,7 +21247,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public ContextMenus ContextMenus
+        public ContextMenus? ContextMenus
         {
             get => GetElement<ContextMenus>();
             set => SetElement(value);
@@ -21279,7 +21281,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <summary>
         /// Gets the RibbonAndBackstageCustomizationsPart associated with this element.
         /// </summary>
-        public RibbonAndBackstageCustomizationsPart RibbonAndBackstageCustomizationsPart
+        public RibbonAndBackstageCustomizationsPart? RibbonAndBackstageCustomizationsPart
         {
             get => OpenXmlPart as RibbonAndBackstageCustomizationsPart;
             internal set => OpenXmlPart = value;
@@ -21313,7 +21315,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21329,7 +21331,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21345,7 +21347,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21361,7 +21363,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21377,7 +21379,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21393,7 +21395,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21462,7 +21464,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21478,7 +21480,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21494,7 +21496,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21510,7 +21512,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21526,7 +21528,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21542,7 +21544,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21558,7 +21560,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21574,7 +21576,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21590,7 +21592,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21606,7 +21608,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21622,7 +21624,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21638,7 +21640,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21654,7 +21656,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21670,7 +21672,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21686,7 +21688,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21702,7 +21704,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21718,7 +21720,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21734,7 +21736,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21750,7 +21752,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21766,7 +21768,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21782,7 +21784,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21798,7 +21800,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21814,7 +21816,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21830,7 +21832,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21846,7 +21848,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21862,7 +21864,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21878,7 +21880,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21894,7 +21896,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22042,7 +22044,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getPressed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetPressed
+        public StringValue? GetPressed
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22058,7 +22060,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22074,7 +22076,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22090,7 +22092,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22106,7 +22108,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22122,7 +22124,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22138,7 +22140,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22154,7 +22156,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22170,7 +22172,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22186,7 +22188,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22202,7 +22204,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22218,7 +22220,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22234,7 +22236,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22250,7 +22252,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22266,7 +22268,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22282,7 +22284,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22298,7 +22300,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22314,7 +22316,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22330,7 +22332,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22346,7 +22348,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22362,7 +22364,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22378,7 +22380,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22394,7 +22396,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22410,7 +22412,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22426,7 +22428,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22442,7 +22444,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22458,7 +22460,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22474,7 +22476,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22490,7 +22492,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22642,7 +22644,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22658,7 +22660,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22674,7 +22676,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22690,7 +22692,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22706,7 +22708,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22722,7 +22724,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22738,7 +22740,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22754,7 +22756,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22770,7 +22772,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22887,7 +22889,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public ButtonRegular ButtonRegular
+        public ButtonRegular? ButtonRegular
         {
             get => GetElement<ButtonRegular>();
             set => SetElement(value);
@@ -22969,7 +22971,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22985,7 +22987,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23001,7 +23003,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23017,7 +23019,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23033,7 +23035,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23049,7 +23051,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23065,7 +23067,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23081,7 +23083,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23097,7 +23099,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23113,7 +23115,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23129,7 +23131,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23145,7 +23147,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23161,7 +23163,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23177,7 +23179,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23193,7 +23195,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23209,7 +23211,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23225,7 +23227,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23241,7 +23243,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23257,7 +23259,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23273,7 +23275,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23289,7 +23291,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23305,7 +23307,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "autoScale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoScale
+        public BooleanValue? AutoScale
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23321,7 +23323,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
         [SchemaAttr(0, "centerVertically")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CenterVertically
+        public BooleanValue? CenterVertically
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23496,7 +23498,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23512,7 +23514,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdQ
+        public StringValue? IdQ
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23528,7 +23530,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23544,7 +23546,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23560,7 +23562,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23576,7 +23578,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>? Size
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>>();
             set => SetAttribute(value);
@@ -23592,7 +23594,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSize
+        public StringValue? GetSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23608,7 +23610,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23624,7 +23626,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23640,7 +23642,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23656,7 +23658,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23672,7 +23674,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23688,7 +23690,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23704,7 +23706,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23720,7 +23722,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23736,7 +23738,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23752,7 +23754,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23768,7 +23770,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23784,7 +23786,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23800,7 +23802,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23816,7 +23818,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23832,7 +23834,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23848,7 +23850,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23864,7 +23866,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23880,7 +23882,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23896,7 +23898,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23912,7 +23914,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23928,7 +23930,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23944,7 +23946,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImage
+        public BooleanValue? ShowImage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23960,7 +23962,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowImage
+        public StringValue? GetShowImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24334,7 +24336,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24350,7 +24352,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24366,7 +24368,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24382,7 +24384,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24398,7 +24400,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24414,7 +24416,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24430,7 +24432,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24446,7 +24448,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24462,7 +24464,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24478,7 +24480,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24494,7 +24496,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -24510,7 +24512,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24526,7 +24528,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24542,7 +24544,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24678,7 +24680,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24694,7 +24696,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -24710,7 +24712,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24770,7 +24772,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24786,7 +24788,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -24802,7 +24804,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24818,7 +24820,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24918,7 +24920,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public SharedControlsQatItems SharedControlsQatItems
+        public SharedControlsQatItems? SharedControlsQatItems
         {
             get => GetElement<SharedControlsQatItems>();
             set => SetElement(value);
@@ -24931,7 +24933,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public DocumentControlsQatItems DocumentControlsQatItems
+        public DocumentControlsQatItems? DocumentControlsQatItems
         {
             get => GetElement<DocumentControlsQatItems>();
             set => SetElement(value);
@@ -25132,7 +25134,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25264,7 +25266,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25280,7 +25282,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25296,7 +25298,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25348,7 +25350,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25364,7 +25366,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25380,7 +25382,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25396,7 +25398,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25412,7 +25414,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25428,7 +25430,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25444,7 +25446,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25460,7 +25462,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25476,7 +25478,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "isDefinitive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsDefinitive
+        public BooleanValue? IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25492,7 +25494,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25508,7 +25510,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25524,7 +25526,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25540,7 +25542,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25556,7 +25558,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25572,7 +25574,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25588,7 +25590,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25604,7 +25606,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25620,7 +25622,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25636,7 +25638,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25652,7 +25654,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25798,7 +25800,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "screentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Screentip
+        public StringValue? Screentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25814,7 +25816,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getScreentip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetScreentip
+        public StringValue? GetScreentip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25830,7 +25832,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "supertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Supertip
+        public StringValue? Supertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25846,7 +25848,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getSupertip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetSupertip
+        public StringValue? GetSupertip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25862,7 +25864,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25878,7 +25880,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25894,7 +25896,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25910,7 +25912,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25926,7 +25928,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25942,7 +25944,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25958,7 +25960,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25974,7 +25976,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25990,7 +25992,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26006,7 +26008,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26022,7 +26024,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26038,7 +26040,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26054,7 +26056,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26070,7 +26072,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26225,7 +26227,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26241,7 +26243,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26257,7 +26259,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26273,7 +26275,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26289,7 +26291,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26305,7 +26307,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "itemSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>? ItemSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>();
             set => SetAttribute(value);
@@ -26433,7 +26435,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public BackstageRegularButton BackstageRegularButton
+        public BackstageRegularButton? BackstageRegularButton
         {
             get => GetElement<BackstageRegularButton>();
             set => SetElement(value);
@@ -26446,7 +26448,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public BackstagePrimaryMenu BackstagePrimaryMenu
+        public BackstagePrimaryMenu? BackstagePrimaryMenu
         {
             get => GetElement<BackstagePrimaryMenu>();
             set => SetElement(value);
@@ -26760,7 +26762,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26776,7 +26778,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26792,7 +26794,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26808,7 +26810,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26824,7 +26826,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26840,7 +26842,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26856,7 +26858,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26872,7 +26874,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26888,7 +26890,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26904,7 +26906,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26920,7 +26922,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26936,7 +26938,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27031,7 +27033,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27047,7 +27049,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27063,7 +27065,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27079,7 +27081,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27095,7 +27097,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27111,7 +27113,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27127,7 +27129,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27143,7 +27145,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27159,7 +27161,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27175,7 +27177,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "isDefinitive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsDefinitive
+        public BooleanValue? IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27191,7 +27193,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27207,7 +27209,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27223,7 +27225,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27239,7 +27241,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27255,7 +27257,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27271,7 +27273,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27287,7 +27289,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27303,7 +27305,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27319,7 +27321,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27335,7 +27337,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27351,7 +27353,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27367,7 +27369,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27383,7 +27385,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27541,7 +27543,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27557,7 +27559,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27573,7 +27575,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27589,7 +27591,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27605,7 +27607,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27621,7 +27623,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27637,7 +27639,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27653,7 +27655,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27669,7 +27671,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27685,7 +27687,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27701,7 +27703,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27717,7 +27719,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27842,7 +27844,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27858,7 +27860,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27874,7 +27876,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27890,7 +27892,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27906,7 +27908,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27922,7 +27924,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27938,7 +27940,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27954,7 +27956,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27970,7 +27972,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27986,7 +27988,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28002,7 +28004,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28018,7 +28020,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28034,7 +28036,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28050,7 +28052,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28066,7 +28068,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28082,7 +28084,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28098,7 +28100,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28114,7 +28116,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28130,7 +28132,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetDescription
+        public StringValue? GetDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28146,7 +28148,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28162,7 +28164,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28320,7 +28322,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28336,7 +28338,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28352,7 +28354,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28368,7 +28370,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28384,7 +28386,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28400,7 +28402,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28416,7 +28418,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28432,7 +28434,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28448,7 +28450,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "helperText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue HelperText
+        public StringValue? HelperText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28464,7 +28466,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getHelperText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetHelperText
+        public StringValue? GetHelperText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28480,7 +28482,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "showLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLabel
+        public BooleanValue? ShowLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28496,7 +28498,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getShowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetShowLabel
+        public StringValue? GetShowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28512,7 +28514,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "allowedTaskSizes")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes
+        public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>? AllowedTaskSizes
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>>();
             set => SetAttribute(value);
@@ -28789,7 +28791,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28805,7 +28807,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28821,7 +28823,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28837,7 +28839,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28853,7 +28855,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28869,7 +28871,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28885,7 +28887,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28901,7 +28903,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28917,7 +28919,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28933,7 +28935,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28949,7 +28951,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28965,7 +28967,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28981,7 +28983,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28997,7 +28999,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29013,7 +29015,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29029,7 +29031,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29045,7 +29047,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29061,7 +29063,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "getTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetTitle
+        public StringValue? GetTitle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29077,7 +29079,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "columnWidthPercent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue ColumnWidthPercent
+        public IntegerValue? ColumnWidthPercent
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -29093,7 +29095,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "firstColumnMinWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue FirstColumnMinWidth
+        public IntegerValue? FirstColumnMinWidth
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -29109,7 +29111,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "firstColumnMaxWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue FirstColumnMaxWidth
+        public IntegerValue? FirstColumnMaxWidth
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -29125,7 +29127,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "secondColumnMinWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue SecondColumnMinWidth
+        public IntegerValue? SecondColumnMinWidth
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -29141,7 +29143,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "secondColumnMaxWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue SecondColumnMaxWidth
+        public IntegerValue? SecondColumnMaxWidth
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -29255,7 +29257,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public BackstageGroups BackstageGroups
+        public BackstageGroups? BackstageGroups
         {
             get => GetElement<BackstageGroups>();
             set => SetElement(value);
@@ -29268,7 +29270,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public SimpleGroups SimpleGroups
+        public SimpleGroups? SimpleGroups
         {
             get => GetElement<SimpleGroups>();
             set => SetElement(value);
@@ -29305,7 +29307,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "idMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue IdMso
+        public StringValue? IdMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29321,7 +29323,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "insertAfterMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterMso
+        public StringValue? InsertAfterMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29337,7 +29339,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "insertBeforeMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeMso
+        public StringValue? InsertBeforeMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29353,7 +29355,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "insertAfterQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertAfterQulifiedId
+        public StringValue? InsertAfterQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29369,7 +29371,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "insertBeforeQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InsertBeforeQulifiedId
+        public StringValue? InsertBeforeQulifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29385,7 +29387,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29401,7 +29403,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "idQ")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue QualifiedId
+        public StringValue? QualifiedId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29417,7 +29419,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29433,7 +29435,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "onAction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnAction
+        public StringValue? OnAction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29449,7 +29451,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "isDefinitive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsDefinitive
+        public BooleanValue? IsDefinitive
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29465,7 +29467,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "enabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Enabled
+        public BooleanValue? Enabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29481,7 +29483,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "getEnabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetEnabled
+        public StringValue? GetEnabled
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29497,7 +29499,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29513,7 +29515,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "getLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetLabel
+        public StringValue? GetLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29529,7 +29531,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "visible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Visible
+        public BooleanValue? Visible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29545,7 +29547,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "getVisible")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetVisible
+        public StringValue? GetVisible
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29561,7 +29563,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "keytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Keytip
+        public StringValue? Keytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29577,7 +29579,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "getKeytip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetKeytip
+        public StringValue? GetKeytip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29593,7 +29595,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "image")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Image
+        public StringValue? Image
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29609,7 +29611,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "imageMso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageMso
+        public StringValue? ImageMso
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29625,7 +29627,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "getImage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GetImage
+        public StringValue? GetImage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29840,7 +29842,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "startFromScratch")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue StartFromScratch
+        public BooleanValue? StartFromScratch
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29871,7 +29873,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public QuickAccessToolbar QuickAccessToolbar
+        public QuickAccessToolbar? QuickAccessToolbar
         {
             get => GetElement<QuickAccessToolbar>();
             set => SetElement(value);
@@ -29884,7 +29886,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public Tabs Tabs
+        public Tabs? Tabs
         {
             get => GetElement<Tabs>();
             set => SetElement(value);
@@ -29897,7 +29899,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         /// <remark>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
         /// </remark>
-        public ContextualTabs ContextualTabs
+        public ContextualTabs? ContextualTabs
         {
             get => GetElement<ContextualTabs>();
             set => SetElement(value);
@@ -29965,7 +29967,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onShow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnShow
+        public StringValue? OnShow
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29981,7 +29983,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         [SchemaAttr(0, "onHide")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OnHide
+        public StringValue? OnHide
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

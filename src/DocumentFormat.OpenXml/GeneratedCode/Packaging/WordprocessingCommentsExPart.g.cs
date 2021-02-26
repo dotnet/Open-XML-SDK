@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -30,7 +32,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/commentsExtended";
-        private DocumentFormat.OpenXml.Office2013.Word.CommentsEx _rootElement;
+        private DocumentFormat.OpenXml.Office2013.Word.CommentsEx? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WordprocessingCommentsExPart OpenXmlType
@@ -61,7 +63,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Office2013.Word.CommentsEx>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -128,7 +130,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -141,7 +143,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => CommentsEx;
+        internal override OpenXmlPartRootElement? PartRootElement => CommentsEx;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

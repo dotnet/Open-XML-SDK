@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -18,7 +20,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.webextension+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/webextension";
-        private DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension _rootElement;
+        private DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WebExtensionPart OpenXmlType
@@ -35,7 +37,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -48,7 +50,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => WebExtension;
+        internal override OpenXmlPartRootElement? PartRootElement => WebExtension;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -71,7 +73,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set

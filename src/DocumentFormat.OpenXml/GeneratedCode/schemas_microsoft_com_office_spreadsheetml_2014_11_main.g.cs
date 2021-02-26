@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -133,7 +135,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         [SchemaAttr(0, "tableName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TableName
+        public StringValue? TableName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -149,7 +151,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         [SchemaAttr(0, "columnName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ColumnName
+        public StringValue? ColumnName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -165,7 +167,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
         [SchemaAttr(0, "columnId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ColumnId
+        public StringValue? ColumnId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -227,7 +229,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "columnName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ColumnName
+        public StringValue? ColumnName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -243,7 +245,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "columnId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ColumnId
+        public StringValue? ColumnId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -259,7 +261,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "contentType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType> ContentType
+        public EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>? ContentType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGroupingContentType>>();
             set => SetAttribute(value);
@@ -275,7 +277,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "isSelected")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsSelected
+        public BooleanValue? IsSelected
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);

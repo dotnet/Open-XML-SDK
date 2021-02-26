@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -40,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -89,7 +91,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "pred")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Pred
+        public StringValue? Pred
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -138,7 +140,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "st")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue St
+        public StringValue? St
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -154,7 +156,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "end")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue End
+        public StringValue? End
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -260,7 +262,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Val
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);

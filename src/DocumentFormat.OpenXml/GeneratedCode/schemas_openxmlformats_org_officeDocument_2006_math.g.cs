@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -43,7 +45,7 @@ namespace DocumentFormat.OpenXml.Math
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>>();
             set => SetAttribute(value);
@@ -94,7 +96,7 @@ namespace DocumentFormat.OpenXml.Math
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Math.StyleValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.StyleValues>>();
             set => SetAttribute(value);
@@ -297,7 +299,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RunProperties MathRunProperties
+        public RunProperties? MathRunProperties
         {
             get => GetElement<RunProperties>();
             set => SetElement(value);
@@ -310,7 +312,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Wordprocessing.RunProperties RunProperties
+        public DocumentFormat.OpenXml.Wordprocessing.RunProperties? RunProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
             set => SetElement(value);
@@ -388,7 +390,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public AccentProperties AccentProperties
+        public AccentProperties? AccentProperties
         {
             get => GetElement<AccentProperties>();
             set => SetElement(value);
@@ -401,7 +403,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -479,7 +481,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BarProperties BarProperties
+        public BarProperties? BarProperties
         {
             get => GetElement<BarProperties>();
             set => SetElement(value);
@@ -492,7 +494,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -570,7 +572,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BoxProperties BoxProperties
+        public BoxProperties? BoxProperties
         {
             get => GetElement<BoxProperties>();
             set => SetElement(value);
@@ -583,7 +585,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -661,7 +663,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BorderBoxProperties BorderBoxProperties
+        public BorderBoxProperties? BorderBoxProperties
         {
             get => GetElement<BorderBoxProperties>();
             set => SetElement(value);
@@ -674,7 +676,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -752,7 +754,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public DelimiterProperties DelimiterProperties
+        public DelimiterProperties? DelimiterProperties
         {
             get => GetElement<DelimiterProperties>();
             set => SetElement(value);
@@ -830,7 +832,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EquationArrayProperties EquationArrayProperties
+        public EquationArrayProperties? EquationArrayProperties
         {
             get => GetElement<EquationArrayProperties>();
             set => SetElement(value);
@@ -911,7 +913,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public FractionProperties FractionProperties
+        public FractionProperties? FractionProperties
         {
             get => GetElement<FractionProperties>();
             set => SetElement(value);
@@ -924,7 +926,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Numerator Numerator
+        public Numerator? Numerator
         {
             get => GetElement<Numerator>();
             set => SetElement(value);
@@ -937,7 +939,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Denominator Denominator
+        public Denominator? Denominator
         {
             get => GetElement<Denominator>();
             set => SetElement(value);
@@ -1018,7 +1020,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public FunctionProperties FunctionProperties
+        public FunctionProperties? FunctionProperties
         {
             get => GetElement<FunctionProperties>();
             set => SetElement(value);
@@ -1031,7 +1033,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public FunctionName FunctionName
+        public FunctionName? FunctionName
         {
             get => GetElement<FunctionName>();
             set => SetElement(value);
@@ -1044,7 +1046,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1122,7 +1124,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public GroupCharProperties GroupCharProperties
+        public GroupCharProperties? GroupCharProperties
         {
             get => GetElement<GroupCharProperties>();
             set => SetElement(value);
@@ -1135,7 +1137,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1216,7 +1218,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public LimitLowerProperties LimitLowerProperties
+        public LimitLowerProperties? LimitLowerProperties
         {
             get => GetElement<LimitLowerProperties>();
             set => SetElement(value);
@@ -1229,7 +1231,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1242,7 +1244,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Limit Limit
+        public Limit? Limit
         {
             get => GetElement<Limit>();
             set => SetElement(value);
@@ -1323,7 +1325,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public LimitUpperProperties LimitUpperProperties
+        public LimitUpperProperties? LimitUpperProperties
         {
             get => GetElement<LimitUpperProperties>();
             set => SetElement(value);
@@ -1336,7 +1338,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1349,7 +1351,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Limit Limit
+        public Limit? Limit
         {
             get => GetElement<Limit>();
             set => SetElement(value);
@@ -1427,7 +1429,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MatrixProperties MatrixProperties
+        public MatrixProperties? MatrixProperties
         {
             get => GetElement<MatrixProperties>();
             set => SetElement(value);
@@ -1511,7 +1513,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public NaryProperties NaryProperties
+        public NaryProperties? NaryProperties
         {
             get => GetElement<NaryProperties>();
             set => SetElement(value);
@@ -1524,7 +1526,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SubArgument SubArgument
+        public SubArgument? SubArgument
         {
             get => GetElement<SubArgument>();
             set => SetElement(value);
@@ -1537,7 +1539,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SuperArgument SuperArgument
+        public SuperArgument? SuperArgument
         {
             get => GetElement<SuperArgument>();
             set => SetElement(value);
@@ -1550,7 +1552,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1628,7 +1630,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public PhantomProperties PhantomProperties
+        public PhantomProperties? PhantomProperties
         {
             get => GetElement<PhantomProperties>();
             set => SetElement(value);
@@ -1641,7 +1643,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1722,7 +1724,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RadicalProperties RadicalProperties
+        public RadicalProperties? RadicalProperties
         {
             get => GetElement<RadicalProperties>();
             set => SetElement(value);
@@ -1735,7 +1737,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Degree Degree
+        public Degree? Degree
         {
             get => GetElement<Degree>();
             set => SetElement(value);
@@ -1748,7 +1750,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1832,7 +1834,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public PreSubSuperProperties PreSubSuperProperties
+        public PreSubSuperProperties? PreSubSuperProperties
         {
             get => GetElement<PreSubSuperProperties>();
             set => SetElement(value);
@@ -1845,7 +1847,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SubArgument SubArgument
+        public SubArgument? SubArgument
         {
             get => GetElement<SubArgument>();
             set => SetElement(value);
@@ -1858,7 +1860,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SuperArgument SuperArgument
+        public SuperArgument? SuperArgument
         {
             get => GetElement<SuperArgument>();
             set => SetElement(value);
@@ -1871,7 +1873,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1952,7 +1954,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SubscriptProperties SubscriptProperties
+        public SubscriptProperties? SubscriptProperties
         {
             get => GetElement<SubscriptProperties>();
             set => SetElement(value);
@@ -1965,7 +1967,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1978,7 +1980,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SubArgument SubArgument
+        public SubArgument? SubArgument
         {
             get => GetElement<SubArgument>();
             set => SetElement(value);
@@ -2062,7 +2064,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SubSuperscriptProperties SubSuperscriptProperties
+        public SubSuperscriptProperties? SubSuperscriptProperties
         {
             get => GetElement<SubSuperscriptProperties>();
             set => SetElement(value);
@@ -2075,7 +2077,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -2088,7 +2090,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SubArgument SubArgument
+        public SubArgument? SubArgument
         {
             get => GetElement<SubArgument>();
             set => SetElement(value);
@@ -2101,7 +2103,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SuperArgument SuperArgument
+        public SuperArgument? SuperArgument
         {
             get => GetElement<SuperArgument>();
             set => SetElement(value);
@@ -2182,7 +2184,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SuperscriptProperties SuperscriptProperties
+        public SuperscriptProperties? SuperscriptProperties
         {
             get => GetElement<SuperscriptProperties>();
             set => SetElement(value);
@@ -2195,7 +2197,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -2208,7 +2210,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SuperArgument SuperArgument
+        public SuperArgument? SuperArgument
         {
             get => GetElement<SuperArgument>();
             set => SetElement(value);
@@ -2439,7 +2441,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ParagraphProperties ParagraphProperties
+        public ParagraphProperties? ParagraphProperties
         {
             get => GetElement<ParagraphProperties>();
             set => SetElement(value);
@@ -2905,7 +2907,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MathFont MathFont
+        public MathFont? MathFont
         {
             get => GetElement<MathFont>();
             set => SetElement(value);
@@ -2918,7 +2920,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BreakBinary BreakBinary
+        public BreakBinary? BreakBinary
         {
             get => GetElement<BreakBinary>();
             set => SetElement(value);
@@ -2931,7 +2933,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BreakBinarySubtraction BreakBinarySubtraction
+        public BreakBinarySubtraction? BreakBinarySubtraction
         {
             get => GetElement<BreakBinarySubtraction>();
             set => SetElement(value);
@@ -2944,7 +2946,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SmallFraction SmallFraction
+        public SmallFraction? SmallFraction
         {
             get => GetElement<SmallFraction>();
             set => SetElement(value);
@@ -2957,7 +2959,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public DisplayDefaults DisplayDefaults
+        public DisplayDefaults? DisplayDefaults
         {
             get => GetElement<DisplayDefaults>();
             set => SetElement(value);
@@ -2970,7 +2972,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public LeftMargin LeftMargin
+        public LeftMargin? LeftMargin
         {
             get => GetElement<LeftMargin>();
             set => SetElement(value);
@@ -2983,7 +2985,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RightMargin RightMargin
+        public RightMargin? RightMargin
         {
             get => GetElement<RightMargin>();
             set => SetElement(value);
@@ -2996,7 +2998,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public DefaultJustification DefaultJustification
+        public DefaultJustification? DefaultJustification
         {
             get => GetElement<DefaultJustification>();
             set => SetElement(value);
@@ -3009,7 +3011,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public PreSpacing PreSpacing
+        public PreSpacing? PreSpacing
         {
             get => GetElement<PreSpacing>();
             set => SetElement(value);
@@ -3022,7 +3024,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public PostSpacing PostSpacing
+        public PostSpacing? PostSpacing
         {
             get => GetElement<PostSpacing>();
             set => SetElement(value);
@@ -3035,7 +3037,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public InterSpacing InterSpacing
+        public InterSpacing? InterSpacing
         {
             get => GetElement<InterSpacing>();
             set => SetElement(value);
@@ -3048,7 +3050,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public IntraSpacing IntraSpacing
+        public IntraSpacing? IntraSpacing
         {
             get => GetElement<IntraSpacing>();
             set => SetElement(value);
@@ -3895,7 +3897,7 @@ namespace DocumentFormat.OpenXml.Math
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>>();
             set => SetAttribute(value);
@@ -3939,7 +3941,7 @@ namespace DocumentFormat.OpenXml.Math
         [SchemaAttr(21, "alnAt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue AlignAt
+        public IntegerValue? AlignAt
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -3958,7 +3960,7 @@ namespace DocumentFormat.OpenXml.Math
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue Val
+        public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -4075,7 +4077,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Literal Literal
+        public Literal? Literal
         {
             get => GetElement<Literal>();
             set => SetElement(value);
@@ -4128,7 +4130,7 @@ namespace DocumentFormat.OpenXml.Math
         [SchemaAttr(1, "space")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
             set => SetAttribute(value);
@@ -4281,7 +4283,7 @@ namespace DocumentFormat.OpenXml.Math
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4465,7 +4467,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public AccentChar AccentChar
+        public AccentChar? AccentChar
         {
             get => GetElement<AccentChar>();
             set => SetElement(value);
@@ -4478,7 +4480,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -6987,7 +6989,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ArgumentProperties ArgumentProperties
+        public ArgumentProperties? ArgumentProperties
         {
             get => GetElement<ArgumentProperties>();
             set => SetElement(value);
@@ -7075,7 +7077,7 @@ namespace DocumentFormat.OpenXml.Math
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>>();
             set => SetAttribute(value);
@@ -7160,7 +7162,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Position Position
+        public Position? Position
         {
             get => GetElement<Position>();
             set => SetElement(value);
@@ -7173,7 +7175,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -7263,7 +7265,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public OperatorEmulator OperatorEmulator
+        public OperatorEmulator? OperatorEmulator
         {
             get => GetElement<OperatorEmulator>();
             set => SetElement(value);
@@ -7276,7 +7278,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public NoBreak NoBreak
+        public NoBreak? NoBreak
         {
             get => GetElement<NoBreak>();
             set => SetElement(value);
@@ -7289,7 +7291,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Differential Differential
+        public Differential? Differential
         {
             get => GetElement<Differential>();
             set => SetElement(value);
@@ -7302,7 +7304,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Break Break
+        public Break? Break
         {
             get => GetElement<Break>();
             set => SetElement(value);
@@ -7315,7 +7317,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Alignment Alignment
+        public Alignment? Alignment
         {
             get => GetElement<Alignment>();
             set => SetElement(value);
@@ -7328,7 +7330,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -7427,7 +7429,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideTop HideTop
+        public HideTop? HideTop
         {
             get => GetElement<HideTop>();
             set => SetElement(value);
@@ -7440,7 +7442,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideBottom HideBottom
+        public HideBottom? HideBottom
         {
             get => GetElement<HideBottom>();
             set => SetElement(value);
@@ -7453,7 +7455,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideLeft HideLeft
+        public HideLeft? HideLeft
         {
             get => GetElement<HideLeft>();
             set => SetElement(value);
@@ -7466,7 +7468,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideRight HideRight
+        public HideRight? HideRight
         {
             get => GetElement<HideRight>();
             set => SetElement(value);
@@ -7479,7 +7481,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public StrikeHorizontal StrikeHorizontal
+        public StrikeHorizontal? StrikeHorizontal
         {
             get => GetElement<StrikeHorizontal>();
             set => SetElement(value);
@@ -7492,7 +7494,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public StrikeVertical StrikeVertical
+        public StrikeVertical? StrikeVertical
         {
             get => GetElement<StrikeVertical>();
             set => SetElement(value);
@@ -7505,7 +7507,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public StrikeBottomLeftToTopRight StrikeBottomLeftToTopRight
+        public StrikeBottomLeftToTopRight? StrikeBottomLeftToTopRight
         {
             get => GetElement<StrikeBottomLeftToTopRight>();
             set => SetElement(value);
@@ -7518,7 +7520,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public StrikeTopLeftToBottomRight StrikeTopLeftToBottomRight
+        public StrikeTopLeftToBottomRight? StrikeTopLeftToBottomRight
         {
             get => GetElement<StrikeTopLeftToBottomRight>();
             set => SetElement(value);
@@ -7531,7 +7533,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -7571,7 +7573,7 @@ namespace DocumentFormat.OpenXml.Math
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>>();
             set => SetAttribute(value);
@@ -7672,7 +7674,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BeginChar BeginChar
+        public BeginChar? BeginChar
         {
             get => GetElement<BeginChar>();
             set => SetElement(value);
@@ -7685,7 +7687,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SeparatorChar SeparatorChar
+        public SeparatorChar? SeparatorChar
         {
             get => GetElement<SeparatorChar>();
             set => SetElement(value);
@@ -7698,7 +7700,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EndChar EndChar
+        public EndChar? EndChar
         {
             get => GetElement<EndChar>();
             set => SetElement(value);
@@ -7711,7 +7713,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public GrowOperators GrowOperators
+        public GrowOperators? GrowOperators
         {
             get => GetElement<GrowOperators>();
             set => SetElement(value);
@@ -7724,7 +7726,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Shape Shape
+        public Shape? Shape
         {
             get => GetElement<Shape>();
             set => SetElement(value);
@@ -7737,7 +7739,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -7777,7 +7779,7 @@ namespace DocumentFormat.OpenXml.Math
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>>();
             set => SetAttribute(value);
@@ -7879,7 +7881,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue Val
+        public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -7978,7 +7980,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Val
+        public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -8075,7 +8077,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BaseJustification BaseJustification
+        public BaseJustification? BaseJustification
         {
             get => GetElement<BaseJustification>();
             set => SetElement(value);
@@ -8088,7 +8090,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MaxDistribution MaxDistribution
+        public MaxDistribution? MaxDistribution
         {
             get => GetElement<MaxDistribution>();
             set => SetElement(value);
@@ -8101,7 +8103,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ObjectDistribution ObjectDistribution
+        public ObjectDistribution? ObjectDistribution
         {
             get => GetElement<ObjectDistribution>();
             set => SetElement(value);
@@ -8114,7 +8116,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RowSpacingRule RowSpacingRule
+        public RowSpacingRule? RowSpacingRule
         {
             get => GetElement<RowSpacingRule>();
             set => SetElement(value);
@@ -8127,7 +8129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RowSpacing RowSpacing
+        public RowSpacing? RowSpacing
         {
             get => GetElement<RowSpacing>();
             set => SetElement(value);
@@ -8140,7 +8142,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -8180,7 +8182,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>>();
             set => SetAttribute(value);
@@ -8269,7 +8271,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public FractionType FractionType
+        public FractionType? FractionType
         {
             get => GetElement<FractionType>();
             set => SetElement(value);
@@ -8282,7 +8284,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -8357,7 +8359,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -8441,7 +8443,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public AccentChar AccentChar
+        public AccentChar? AccentChar
         {
             get => GetElement<AccentChar>();
             set => SetElement(value);
@@ -8454,7 +8456,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Position Position
+        public Position? Position
         {
             get => GetElement<Position>();
             set => SetElement(value);
@@ -8467,7 +8469,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public VerticalJustification VerticalJustification
+        public VerticalJustification? VerticalJustification
         {
             get => GetElement<VerticalJustification>();
             set => SetElement(value);
@@ -8480,7 +8482,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -8555,7 +8557,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -8630,7 +8632,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -8670,7 +8672,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue Val
+        public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -8722,7 +8724,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>>();
             set => SetAttribute(value);
@@ -8811,7 +8813,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MatrixColumnCount MatrixColumnCount
+        public MatrixColumnCount? MatrixColumnCount
         {
             get => GetElement<MatrixColumnCount>();
             set => SetElement(value);
@@ -8824,7 +8826,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MatrixColumnJustification MatrixColumnJustification
+        public MatrixColumnJustification? MatrixColumnJustification
         {
             get => GetElement<MatrixColumnJustification>();
             set => SetElement(value);
@@ -8899,7 +8901,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MatrixColumnProperties MatrixColumnProperties
+        public MatrixColumnProperties? MatrixColumnProperties
         {
             get => GetElement<MatrixColumnProperties>();
             set => SetElement(value);
@@ -9152,7 +9154,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Val
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -9321,7 +9323,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BaseJustification BaseJustification
+        public BaseJustification? BaseJustification
         {
             get => GetElement<BaseJustification>();
             set => SetElement(value);
@@ -9334,7 +9336,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HidePlaceholder HidePlaceholder
+        public HidePlaceholder? HidePlaceholder
         {
             get => GetElement<HidePlaceholder>();
             set => SetElement(value);
@@ -9347,7 +9349,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RowSpacingRule RowSpacingRule
+        public RowSpacingRule? RowSpacingRule
         {
             get => GetElement<RowSpacingRule>();
             set => SetElement(value);
@@ -9360,7 +9362,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ColumnGapRule ColumnGapRule
+        public ColumnGapRule? ColumnGapRule
         {
             get => GetElement<ColumnGapRule>();
             set => SetElement(value);
@@ -9373,7 +9375,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RowSpacing RowSpacing
+        public RowSpacing? RowSpacing
         {
             get => GetElement<RowSpacing>();
             set => SetElement(value);
@@ -9386,7 +9388,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ColumnSpacing ColumnSpacing
+        public ColumnSpacing? ColumnSpacing
         {
             get => GetElement<ColumnSpacing>();
             set => SetElement(value);
@@ -9399,7 +9401,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ColumnGap ColumnGap
+        public ColumnGap? ColumnGap
         {
             get => GetElement<ColumnGap>();
             set => SetElement(value);
@@ -9412,7 +9414,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MatrixColumns MatrixColumns
+        public MatrixColumns? MatrixColumns
         {
             get => GetElement<MatrixColumns>();
             set => SetElement(value);
@@ -9425,7 +9427,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -9605,7 +9607,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>>();
             set => SetAttribute(value);
@@ -9702,7 +9704,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public AccentChar AccentChar
+        public AccentChar? AccentChar
         {
             get => GetElement<AccentChar>();
             set => SetElement(value);
@@ -9715,7 +9717,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public LimitLocation LimitLocation
+        public LimitLocation? LimitLocation
         {
             get => GetElement<LimitLocation>();
             set => SetElement(value);
@@ -9728,7 +9730,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public GrowOperators GrowOperators
+        public GrowOperators? GrowOperators
         {
             get => GetElement<GrowOperators>();
             set => SetElement(value);
@@ -9741,7 +9743,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideSubArgument HideSubArgument
+        public HideSubArgument? HideSubArgument
         {
             get => GetElement<HideSubArgument>();
             set => SetElement(value);
@@ -9754,7 +9756,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideSuperArgument HideSuperArgument
+        public HideSuperArgument? HideSuperArgument
         {
             get => GetElement<HideSuperArgument>();
             set => SetElement(value);
@@ -9767,7 +9769,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -9857,7 +9859,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ShowPhantom ShowPhantom
+        public ShowPhantom? ShowPhantom
         {
             get => GetElement<ShowPhantom>();
             set => SetElement(value);
@@ -9870,7 +9872,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ZeroWidth ZeroWidth
+        public ZeroWidth? ZeroWidth
         {
             get => GetElement<ZeroWidth>();
             set => SetElement(value);
@@ -9883,7 +9885,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ZeroAscent ZeroAscent
+        public ZeroAscent? ZeroAscent
         {
             get => GetElement<ZeroAscent>();
             set => SetElement(value);
@@ -9896,7 +9898,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ZeroDescent ZeroDescent
+        public ZeroDescent? ZeroDescent
         {
             get => GetElement<ZeroDescent>();
             set => SetElement(value);
@@ -9909,7 +9911,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Transparent Transparent
+        public Transparent? Transparent
         {
             get => GetElement<Transparent>();
             set => SetElement(value);
@@ -9922,7 +9924,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -10000,7 +10002,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideDegree HideDegree
+        public HideDegree? HideDegree
         {
             get => GetElement<HideDegree>();
             set => SetElement(value);
@@ -10013,7 +10015,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -10088,7 +10090,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -10163,7 +10165,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -10241,7 +10243,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public AlignScripts AlignScripts
+        public AlignScripts? AlignScripts
         {
             get => GetElement<AlignScripts>();
             set => SetElement(value);
@@ -10254,7 +10256,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -10329,7 +10331,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -10369,7 +10371,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue Val
+        public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -10456,7 +10458,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ArgumentSize ArgumentSize
+        public ArgumentSize? ArgumentSize
         {
             get => GetElement<ArgumentSize>();
             set => SetElement(value);
@@ -10547,7 +10549,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>>();
             set => SetAttribute(value);
@@ -10594,7 +10596,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10646,7 +10648,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>>();
             set => SetAttribute(value);
@@ -10694,7 +10696,7 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
         [SchemaAttr(21, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>>();
             set => SetAttribute(value);
@@ -10781,7 +10783,7 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Justification Justification
+        public Justification? Justification
         {
             get => GetElement<Justification>();
             set => SetElement(value);

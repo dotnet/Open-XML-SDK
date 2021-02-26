@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -154,7 +156,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         [SchemaAttr(0, "relativeFrom")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>? ObjectId
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>>();
             set => SetAttribute(value);
@@ -185,7 +187,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public PercentageWidth PercentageWidth
+        public PercentageWidth? PercentageWidth
         {
             get => GetElement<PercentageWidth>();
             set => SetElement(value);
@@ -252,7 +254,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "relativeFrom")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>? RelativeFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>>();
             set => SetAttribute(value);
@@ -283,7 +285,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public PercentageHeight PercentageHeight
+        public PercentageHeight? PercentageHeight
         {
             get => GetElement<PercentageHeight>();
             set => SetElement(value);

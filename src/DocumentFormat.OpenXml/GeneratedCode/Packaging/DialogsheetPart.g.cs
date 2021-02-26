@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -20,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet";
-        private DocumentFormat.OpenXml.Spreadsheet.DialogSheet _rootElement;
+        private DocumentFormat.OpenXml.Spreadsheet.DialogSheet? _rootElement;
 
         /// <summary>
         /// Creates an instance of the DialogsheetPart OpenXmlType
@@ -44,7 +46,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.DialogSheet>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -61,14 +63,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the DrawingsPart of the DialogsheetPart
         /// </summary>
-        public DrawingsPart DrawingsPart => GetSubPartOfType<DrawingsPart>();
+        public DrawingsPart? DrawingsPart => GetSubPartOfType<DrawingsPart>();
 
         /// <summary>
         /// Gets the EmbeddedObjectParts of the DialogsheetPart
         /// </summary>
         public IEnumerable<EmbeddedObjectPart> EmbeddedObjectParts => GetPartsOfType<EmbeddedObjectPart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -81,7 +83,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => DialogSheet;
+        internal override OpenXmlPartRootElement? PartRootElement => DialogSheet;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -69,7 +71,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         [SchemaAttr(0, "SelectedStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SelectedStyle
+        public StringValue? SelectedStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -85,7 +87,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         [SchemaAttr(0, "StyleName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StyleName
+        public StringValue? StyleName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -101,7 +103,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         [SchemaAttr(0, "URI")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3390,7 +3392,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public NameList NameList
+        public NameList? NameList
         {
             get => GetElement<NameList>();
             set => SetElement(value);
@@ -3588,7 +3590,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public NameList NameList
+        public NameList? NameList
         {
             get => GetElement<NameList>();
             set => SetElement(value);
@@ -3601,7 +3603,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Corporate Corporate
+        public Corporate? Corporate
         {
             get => GetElement<Corporate>();
             set => SetElement(value);
@@ -3721,7 +3723,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Artist Artist
+        public Artist? Artist
         {
             get => GetElement<Artist>();
             set => SetElement(value);
@@ -3734,7 +3736,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Author Author
+        public Author? Author
         {
             get => GetElement<Author>();
             set => SetElement(value);
@@ -3747,7 +3749,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public BookAuthor BookAuthor
+        public BookAuthor? BookAuthor
         {
             get => GetElement<BookAuthor>();
             set => SetElement(value);
@@ -3760,7 +3762,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Compiler Compiler
+        public Compiler? Compiler
         {
             get => GetElement<Compiler>();
             set => SetElement(value);
@@ -3773,7 +3775,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Composer Composer
+        public Composer? Composer
         {
             get => GetElement<Composer>();
             set => SetElement(value);
@@ -3786,7 +3788,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Conductor Conductor
+        public Conductor? Conductor
         {
             get => GetElement<Conductor>();
             set => SetElement(value);
@@ -3799,7 +3801,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Counsel Counsel
+        public Counsel? Counsel
         {
             get => GetElement<Counsel>();
             set => SetElement(value);
@@ -3812,7 +3814,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Director Director
+        public Director? Director
         {
             get => GetElement<Director>();
             set => SetElement(value);
@@ -3825,7 +3827,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Editor Editor
+        public Editor? Editor
         {
             get => GetElement<Editor>();
             set => SetElement(value);
@@ -3838,7 +3840,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Interviewee Interviewee
+        public Interviewee? Interviewee
         {
             get => GetElement<Interviewee>();
             set => SetElement(value);
@@ -3851,7 +3853,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Interviewer Interviewer
+        public Interviewer? Interviewer
         {
             get => GetElement<Interviewer>();
             set => SetElement(value);
@@ -3864,7 +3866,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Inventor Inventor
+        public Inventor? Inventor
         {
             get => GetElement<Inventor>();
             set => SetElement(value);
@@ -3877,7 +3879,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Performer Performer
+        public Performer? Performer
         {
             get => GetElement<Performer>();
             set => SetElement(value);
@@ -3890,7 +3892,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ProducerName ProducerName
+        public ProducerName? ProducerName
         {
             get => GetElement<ProducerName>();
             set => SetElement(value);
@@ -3903,7 +3905,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Translator Translator
+        public Translator? Translator
         {
             get => GetElement<Translator>();
             set => SetElement(value);
@@ -3916,7 +3918,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Writer Writer
+        public Writer? Writer
         {
             get => GetElement<Writer>();
             set => SetElement(value);
@@ -4188,7 +4190,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public AbbreviatedCaseNumber AbbreviatedCaseNumber
+        public AbbreviatedCaseNumber? AbbreviatedCaseNumber
         {
             get => GetElement<AbbreviatedCaseNumber>();
             set => SetElement(value);
@@ -4201,7 +4203,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public AlbumTitle AlbumTitle
+        public AlbumTitle? AlbumTitle
         {
             get => GetElement<AlbumTitle>();
             set => SetElement(value);
@@ -4214,7 +4216,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public AuthorList AuthorList
+        public AuthorList? AuthorList
         {
             get => GetElement<AuthorList>();
             set => SetElement(value);
@@ -4227,7 +4229,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public BookTitle BookTitle
+        public BookTitle? BookTitle
         {
             get => GetElement<BookTitle>();
             set => SetElement(value);
@@ -4240,7 +4242,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Broadcaster Broadcaster
+        public Broadcaster? Broadcaster
         {
             get => GetElement<Broadcaster>();
             set => SetElement(value);
@@ -4253,7 +4255,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public BroadcastTitle BroadcastTitle
+        public BroadcastTitle? BroadcastTitle
         {
             get => GetElement<BroadcastTitle>();
             set => SetElement(value);
@@ -4266,7 +4268,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public CaseNumber CaseNumber
+        public CaseNumber? CaseNumber
         {
             get => GetElement<CaseNumber>();
             set => SetElement(value);
@@ -4279,7 +4281,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ChapterNumber ChapterNumber
+        public ChapterNumber? ChapterNumber
         {
             get => GetElement<ChapterNumber>();
             set => SetElement(value);
@@ -4292,7 +4294,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public City City
+        public City? City
         {
             get => GetElement<City>();
             set => SetElement(value);
@@ -4305,7 +4307,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Comments Comments
+        public Comments? Comments
         {
             get => GetElement<Comments>();
             set => SetElement(value);
@@ -4318,7 +4320,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ConferenceName ConferenceName
+        public ConferenceName? ConferenceName
         {
             get => GetElement<ConferenceName>();
             set => SetElement(value);
@@ -4331,7 +4333,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public CountryRegion CountryRegion
+        public CountryRegion? CountryRegion
         {
             get => GetElement<CountryRegion>();
             set => SetElement(value);
@@ -4344,7 +4346,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Court Court
+        public Court? Court
         {
             get => GetElement<Court>();
             set => SetElement(value);
@@ -4357,7 +4359,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Day Day
+        public Day? Day
         {
             get => GetElement<Day>();
             set => SetElement(value);
@@ -4370,7 +4372,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DayAccessed DayAccessed
+        public DayAccessed? DayAccessed
         {
             get => GetElement<DayAccessed>();
             set => SetElement(value);
@@ -4383,7 +4385,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Department Department
+        public Department? Department
         {
             get => GetElement<Department>();
             set => SetElement(value);
@@ -4396,7 +4398,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Distributor Distributor
+        public Distributor? Distributor
         {
             get => GetElement<Distributor>();
             set => SetElement(value);
@@ -4409,7 +4411,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Edition Edition
+        public Edition? Edition
         {
             get => GetElement<Edition>();
             set => SetElement(value);
@@ -4422,7 +4424,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public GuidString GuidString
+        public GuidString? GuidString
         {
             get => GetElement<GuidString>();
             set => SetElement(value);
@@ -4435,7 +4437,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Institution Institution
+        public Institution? Institution
         {
             get => GetElement<Institution>();
             set => SetElement(value);
@@ -4448,7 +4450,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public InternetSiteTitle InternetSiteTitle
+        public InternetSiteTitle? InternetSiteTitle
         {
             get => GetElement<InternetSiteTitle>();
             set => SetElement(value);
@@ -4461,7 +4463,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Issue Issue
+        public Issue? Issue
         {
             get => GetElement<Issue>();
             set => SetElement(value);
@@ -4474,7 +4476,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public JournalName JournalName
+        public JournalName? JournalName
         {
             get => GetElement<JournalName>();
             set => SetElement(value);
@@ -4487,7 +4489,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public LcId LcId
+        public LcId? LcId
         {
             get => GetElement<LcId>();
             set => SetElement(value);
@@ -4500,7 +4502,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Medium Medium
+        public Medium? Medium
         {
             get => GetElement<Medium>();
             set => SetElement(value);
@@ -4513,7 +4515,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Month Month
+        public Month? Month
         {
             get => GetElement<Month>();
             set => SetElement(value);
@@ -4526,7 +4528,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public MonthAccessed MonthAccessed
+        public MonthAccessed? MonthAccessed
         {
             get => GetElement<MonthAccessed>();
             set => SetElement(value);
@@ -4539,7 +4541,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public NumberVolumes NumberVolumes
+        public NumberVolumes? NumberVolumes
         {
             get => GetElement<NumberVolumes>();
             set => SetElement(value);
@@ -4552,7 +4554,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Pages Pages
+        public Pages? Pages
         {
             get => GetElement<Pages>();
             set => SetElement(value);
@@ -4565,7 +4567,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PatentNumber PatentNumber
+        public PatentNumber? PatentNumber
         {
             get => GetElement<PatentNumber>();
             set => SetElement(value);
@@ -4578,7 +4580,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PeriodicalTitle PeriodicalTitle
+        public PeriodicalTitle? PeriodicalTitle
         {
             get => GetElement<PeriodicalTitle>();
             set => SetElement(value);
@@ -4591,7 +4593,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ProductionCompany ProductionCompany
+        public ProductionCompany? ProductionCompany
         {
             get => GetElement<ProductionCompany>();
             set => SetElement(value);
@@ -4604,7 +4606,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PublicationTitle PublicationTitle
+        public PublicationTitle? PublicationTitle
         {
             get => GetElement<PublicationTitle>();
             set => SetElement(value);
@@ -4617,7 +4619,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Publisher Publisher
+        public Publisher? Publisher
         {
             get => GetElement<Publisher>();
             set => SetElement(value);
@@ -4630,7 +4632,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public RecordingNumber RecordingNumber
+        public RecordingNumber? RecordingNumber
         {
             get => GetElement<RecordingNumber>();
             set => SetElement(value);
@@ -4643,7 +4645,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ReferenceOrder ReferenceOrder
+        public ReferenceOrder? ReferenceOrder
         {
             get => GetElement<ReferenceOrder>();
             set => SetElement(value);
@@ -4656,7 +4658,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Reporter Reporter
+        public Reporter? Reporter
         {
             get => GetElement<Reporter>();
             set => SetElement(value);
@@ -4669,7 +4671,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public SourceType SourceType
+        public SourceType? SourceType
         {
             get => GetElement<SourceType>();
             set => SetElement(value);
@@ -4682,7 +4684,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ShortTitle ShortTitle
+        public ShortTitle? ShortTitle
         {
             get => GetElement<ShortTitle>();
             set => SetElement(value);
@@ -4695,7 +4697,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public StandardNumber StandardNumber
+        public StandardNumber? StandardNumber
         {
             get => GetElement<StandardNumber>();
             set => SetElement(value);
@@ -4708,7 +4710,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public StateProvince StateProvince
+        public StateProvince? StateProvince
         {
             get => GetElement<StateProvince>();
             set => SetElement(value);
@@ -4721,7 +4723,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Station Station
+        public Station? Station
         {
             get => GetElement<Station>();
             set => SetElement(value);
@@ -4734,7 +4736,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Tag Tag
+        public Tag? Tag
         {
             get => GetElement<Tag>();
             set => SetElement(value);
@@ -4747,7 +4749,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Theater Theater
+        public Theater? Theater
         {
             get => GetElement<Theater>();
             set => SetElement(value);
@@ -4760,7 +4762,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ThesisType ThesisType
+        public ThesisType? ThesisType
         {
             get => GetElement<ThesisType>();
             set => SetElement(value);
@@ -4773,7 +4775,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Title Title
+        public Title? Title
         {
             get => GetElement<Title>();
             set => SetElement(value);
@@ -4786,7 +4788,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PatentType PatentType
+        public PatentType? PatentType
         {
             get => GetElement<PatentType>();
             set => SetElement(value);
@@ -4799,7 +4801,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public UrlString UrlString
+        public UrlString? UrlString
         {
             get => GetElement<UrlString>();
             set => SetElement(value);
@@ -4812,7 +4814,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Version Version
+        public Version? Version
         {
             get => GetElement<Version>();
             set => SetElement(value);
@@ -4825,7 +4827,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Volume Volume
+        public Volume? Volume
         {
             get => GetElement<Volume>();
             set => SetElement(value);
@@ -4838,7 +4840,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Year Year
+        public Year? Year
         {
             get => GetElement<Year>();
             set => SetElement(value);
@@ -4851,7 +4853,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public YearAccessed YearAccessed
+        public YearAccessed? YearAccessed
         {
             get => GetElement<YearAccessed>();
             set => SetElement(value);

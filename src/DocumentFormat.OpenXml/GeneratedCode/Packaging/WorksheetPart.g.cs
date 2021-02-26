@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -34,7 +36,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet";
-        private DocumentFormat.OpenXml.Spreadsheet.Worksheet _rootElement;
+        private DocumentFormat.OpenXml.Spreadsheet.Worksheet? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorksheetPart OpenXmlType
@@ -59,7 +61,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the DrawingsPart of the WorksheetPart
         /// </summary>
-        public DrawingsPart DrawingsPart => GetSubPartOfType<DrawingsPart>();
+        public DrawingsPart? DrawingsPart => GetSubPartOfType<DrawingsPart>();
 
         /// <summary>
         /// Gets the EmbeddedControlPersistenceBinaryDataParts of the WorksheetPart
@@ -86,7 +88,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -99,7 +101,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => Worksheet;
+        internal override OpenXmlPartRootElement? PartRootElement => Worksheet;
 
         /// <summary>
         /// Gets the PivotTableParts of the WorksheetPart
@@ -117,7 +119,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the SingleCellTablePart of the WorksheetPart
         /// </summary>
-        public SingleCellTablePart SingleCellTablePart => GetSubPartOfType<SingleCellTablePart>();
+        public SingleCellTablePart? SingleCellTablePart => GetSubPartOfType<SingleCellTablePart>();
 
         /// <summary>
         /// Gets the SlicersParts of the WorksheetPart
@@ -162,7 +164,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Worksheet>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -179,12 +181,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the WorksheetCommentsPart of the WorksheetPart
         /// </summary>
-        public WorksheetCommentsPart WorksheetCommentsPart => GetSubPartOfType<WorksheetCommentsPart>();
+        public WorksheetCommentsPart? WorksheetCommentsPart => GetSubPartOfType<WorksheetCommentsPart>();
 
         /// <summary>
         /// Gets the WorksheetSortMapPart of the WorksheetPart
         /// </summary>
-        public WorksheetSortMapPart WorksheetSortMapPart => GetSubPartOfType<WorksheetSortMapPart>();
+        public WorksheetSortMapPart? WorksheetSortMapPart => GetSubPartOfType<WorksheetSortMapPart>();
 
         /// <summary>
         /// Adds a CustomPropertyPart to the WorksheetPart

@@ -11,10 +11,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     internal class UniqueAttributeValueConstraint : SemanticConstraint
     {
         private readonly byte _attribute;
-        private readonly Type _parent;
+        private readonly Type? _parent;
         private readonly StringComparer _comparer;
 
-        public UniqueAttributeValueConstraint(byte attribute, bool caseSensitive, Type parent)
+        public UniqueAttributeValueConstraint(byte attribute, bool caseSensitive, Type? parent)
             : base(SemanticValidationLevel.Part)
         {
             _attribute = attribute;

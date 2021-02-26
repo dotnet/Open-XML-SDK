@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -88,7 +90,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.LineReference LineReference
+        public DocumentFormat.OpenXml.Drawing.LineReference? LineReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
             set => SetElement(value);
@@ -101,7 +103,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.FillReference FillReference
+        public DocumentFormat.OpenXml.Drawing.FillReference? FillReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
             set => SetElement(value);
@@ -114,7 +116,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
+        public DocumentFormat.OpenXml.Drawing.EffectReference? EffectReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
             set => SetElement(value);
@@ -127,7 +129,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.FontReference FontReference
+        public DocumentFormat.OpenXml.Drawing.FontReference? FontReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
             set => SetElement(value);

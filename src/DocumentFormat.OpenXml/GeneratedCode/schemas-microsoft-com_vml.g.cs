@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -45,7 +47,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -61,7 +63,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "v")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Value
+        public StringValue? Value
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -77,7 +79,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "limo")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Limo
+        public StringValue? Limo
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -93,7 +95,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "textboxrect")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TextboxRectangle
+        public StringValue? TextboxRectangle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -109,7 +111,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "fillok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowFill
+        public TrueFalseValue? AllowFill
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -125,7 +127,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "strokeok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowStroke
+        public TrueFalseValue? AllowStroke
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -141,7 +143,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "shadowok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowShading
+        public TrueFalseValue? AllowShading
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -157,7 +159,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "arrowok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ShowArrowhead
+        public TrueFalseValue? ShowArrowhead
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -173,7 +175,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "gradientshapeok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowGradientShape
+        public TrueFalseValue? AllowGradientShape
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -189,7 +191,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "textpathok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowTextPath
+        public TrueFalseValue? AllowTextPath
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -205,7 +207,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "insetpenok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowInsetPen
+        public TrueFalseValue? AllowInsetPen
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -224,7 +226,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "connecttype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues> ConnectionPointType
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues>? ConnectionPointType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues>>();
             set => SetAttribute(value);
@@ -243,7 +245,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "connectlocs")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ConnectionPoints
+        public StringValue? ConnectionPoints
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -262,7 +264,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "connectangles")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ConnectAngles
+        public StringValue? ConnectAngles
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -281,7 +283,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "extrusionok")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowExtrusion
+        public TrueFalseValue? AllowExtrusion
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -495,7 +497,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -511,7 +513,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>>();
             set => SetAttribute(value);
@@ -527,7 +529,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "on")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue On
+        public TrueFalseValue? On
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -543,7 +545,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "color")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Color
+        public StringValue? Color
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -559,7 +561,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "opacity")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Opacity
+        public StringValue? Opacity
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -575,7 +577,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "color2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Color2
+        public StringValue? Color2
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -591,7 +593,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "src")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Source
+        public StringValue? Source
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -610,7 +612,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -629,7 +631,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "althref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AlternateImageReference
+        public StringValue? AlternateImageReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -645,7 +647,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Size
+        public StringValue? Size
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -661,7 +663,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "origin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Origin
+        public StringValue? Origin
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -677,7 +679,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "position")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Position
+        public StringValue? Position
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -693,7 +695,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "aspect")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> Aspect
+        public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>? Aspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>>();
             set => SetAttribute(value);
@@ -709,7 +711,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "colors")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Colors
+        public StringValue? Colors
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -725,7 +727,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "angle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue Angle
+        public DecimalValue? Angle
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -741,7 +743,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "alignshape")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AlignShape
+        public TrueFalseValue? AlignShape
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -757,7 +759,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "focus")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Focus
+        public StringValue? Focus
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -773,7 +775,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "focussize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FocusSize
+        public StringValue? FocusSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -789,7 +791,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "focusposition")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FocusPosition
+        public StringValue? FocusPosition
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -805,7 +807,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "method")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues> Method
+        public EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues>? Method
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues>>();
             set => SetAttribute(value);
@@ -824,7 +826,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "detectmouseclick")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DetectMouseClick
+        public TrueFalseValue? DetectMouseClick
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -843,7 +845,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -862,7 +864,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "opacity2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Opacity2
+        public StringValue? Opacity2
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -878,7 +880,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "recolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Recolor
+        public TrueFalseValue? Recolor
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -894,7 +896,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "rotate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Rotate
+        public TrueFalseValue? Rotate
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -913,7 +915,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RelationshipId
+        public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -971,7 +973,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties FillExtendedProperties
+        public DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties? FillExtendedProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>();
             set => SetElement(value);
@@ -1042,7 +1044,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1058,7 +1060,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "on")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue On
+        public TrueFalseValue? On
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -1074,7 +1076,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "weight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Weight
+        public StringValue? Weight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1090,7 +1092,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "color")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Color
+        public StringValue? Color
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1106,7 +1108,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "opacity")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Opacity
+        public StringValue? Opacity
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1122,7 +1124,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "linestyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues> LineStyle
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>? LineStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>>();
             set => SetAttribute(value);
@@ -1138,7 +1140,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "miterlimit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Miterlimit
+        public StringValue? Miterlimit
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1154,7 +1156,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "joinstyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues> JoinStyle
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>? JoinStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>>();
             set => SetAttribute(value);
@@ -1170,7 +1172,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "endcap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues> EndCap
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>? EndCap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>>();
             set => SetAttribute(value);
@@ -1186,7 +1188,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "dashstyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DashStyle
+        public StringValue? DashStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1202,7 +1204,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "filltype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues> FillType
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues>? FillType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues>>();
             set => SetAttribute(value);
@@ -1218,7 +1220,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "src")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Source
+        public StringValue? Source
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1234,7 +1236,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "imageaspect")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> ImageAspect
+        public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>? ImageAspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>>();
             set => SetAttribute(value);
@@ -1250,7 +1252,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "imagesize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ImageSize
+        public StringValue? ImageSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1266,7 +1268,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "imagealignshape")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ImageAlignShape
+        public TrueFalseValue? ImageAlignShape
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -1282,7 +1284,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "color2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Color2
+        public StringValue? Color2
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1298,7 +1300,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "startarrow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> StartArrow
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>? StartArrow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>();
             set => SetAttribute(value);
@@ -1314,7 +1316,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "startarrowwidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> StartArrowWidth
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>? StartArrowWidth
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>();
             set => SetAttribute(value);
@@ -1330,7 +1332,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "startarrowlength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> StartArrowLength
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>? StartArrowLength
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>();
             set => SetAttribute(value);
@@ -1346,7 +1348,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "endarrow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> EndArrow
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>? EndArrow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>();
             set => SetAttribute(value);
@@ -1362,7 +1364,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "endarrowwidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> EndArrowWidth
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>? EndArrowWidth
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>();
             set => SetAttribute(value);
@@ -1378,7 +1380,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "endarrowlength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> EndArrowLength
+        public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>? EndArrowLength
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>();
             set => SetAttribute(value);
@@ -1397,7 +1399,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1416,7 +1418,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "althref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AlternateImageReference
+        public StringValue? AlternateImageReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1435,7 +1437,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1454,7 +1456,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ForceDash
+        public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -1473,7 +1475,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RelationshipId
+        public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1489,7 +1491,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Insetpen
+        public TrueFalseValue? Insetpen
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -1555,7 +1557,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.LeftStroke LeftStroke
+        public DocumentFormat.OpenXml.Vml.Office.LeftStroke? LeftStroke
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.LeftStroke>();
             set => SetElement(value);
@@ -1568,7 +1570,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.TopStroke TopStroke
+        public DocumentFormat.OpenXml.Vml.Office.TopStroke? TopStroke
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.TopStroke>();
             set => SetElement(value);
@@ -1581,7 +1583,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.RightStroke RightStroke
+        public DocumentFormat.OpenXml.Vml.Office.RightStroke? RightStroke
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.RightStroke>();
             set => SetElement(value);
@@ -1594,7 +1596,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.BottomStroke BottomStroke
+        public DocumentFormat.OpenXml.Vml.Office.BottomStroke? BottomStroke
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.BottomStroke>();
             set => SetElement(value);
@@ -1607,7 +1609,7 @@ namespace DocumentFormat.OpenXml.Vml
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.ColumnStroke ColumnStroke
+        public DocumentFormat.OpenXml.Vml.Office.ColumnStroke? ColumnStroke
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>();
             set => SetElement(value);
@@ -1644,7 +1646,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1660,7 +1662,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "on")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue On
+        public TrueFalseValue? On
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -1676,7 +1678,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues>>();
             set => SetAttribute(value);
@@ -1692,7 +1694,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "obscured")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Obscured
+        public TrueFalseValue? Obscured
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -1708,7 +1710,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "color")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Color
+        public StringValue? Color
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1724,7 +1726,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "opacity")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Opacity
+        public StringValue? Opacity
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1740,7 +1742,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "offset")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Offset
+        public StringValue? Offset
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1756,7 +1758,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "color2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Color2
+        public StringValue? Color2
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1772,7 +1774,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "offset2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Offset2
+        public StringValue? Offset2
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1788,7 +1790,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "origin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Origin
+        public StringValue? Origin
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1804,7 +1806,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "matrix")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Matrix
+        public StringValue? Matrix
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1890,7 +1892,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1906,7 +1908,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1922,7 +1924,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "inset")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Inset
+        public StringValue? Inset
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1941,7 +1943,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "singleclick")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue SingleClick
+        public TrueFalseValue? SingleClick
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -1996,7 +1998,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2012,7 +2014,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2028,7 +2030,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "on")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue On
+        public TrueFalseValue? On
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2044,7 +2046,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "fitshape")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue FitShape
+        public TrueFalseValue? FitShape
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2060,7 +2062,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "fitpath")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue FitPath
+        public TrueFalseValue? FitPath
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2076,7 +2078,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "trim")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Trim
+        public TrueFalseValue? Trim
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2092,7 +2094,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "xscale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue XScale
+        public TrueFalseValue? XScale
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2108,7 +2110,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "string")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue String
+        public StringValue? String
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2161,7 +2163,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2177,7 +2179,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "chromakey")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ChromAKey
+        public StringValue? ChromAKey
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2193,7 +2195,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "cropleft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CropLeft
+        public StringValue? CropLeft
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2209,7 +2211,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "croptop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CropTop
+        public StringValue? CropTop
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2225,7 +2227,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "cropright")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CropRight
+        public StringValue? CropRight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2241,7 +2243,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "cropbottom")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CropBottom
+        public StringValue? CropBottom
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2257,7 +2259,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "gain")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Gain
+        public StringValue? Gain
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2273,7 +2275,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "blacklevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BlackLevel
+        public StringValue? BlackLevel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2289,7 +2291,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "gamma")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Gamma
+        public StringValue? Gamma
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2305,7 +2307,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "grayscale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Grayscale
+        public TrueFalseValue? Grayscale
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2321,7 +2323,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "bilevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue BiLevel
+        public TrueFalseValue? BiLevel
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2337,7 +2339,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "embosscolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue EmbossColor
+        public StringValue? EmbossColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2353,7 +2355,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "recolortarget")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RecolorTarget
+        public StringValue? RecolorTarget
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2372,7 +2374,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2391,7 +2393,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "detectmouseclick")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DetectMouseClick
+        public TrueFalseValue? DetectMouseClick
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2410,7 +2412,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "relid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RelId
+        public StringValue? RelId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2429,7 +2431,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RelationshipId
+        public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2448,7 +2450,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(19, "pict")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Picture
+        public StringValue? Picture
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2467,7 +2469,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(19, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RelHref
+        public StringValue? RelHref
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2592,7 +2594,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2608,7 +2610,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2624,7 +2626,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2640,7 +2642,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2656,7 +2658,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Class
+        public StringValue? Class
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2672,7 +2674,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2688,7 +2690,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Alternate
+        public StringValue? Alternate
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2704,7 +2706,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateSize
+        public StringValue? CoordinateSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2720,7 +2722,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateOrigin
+        public StringValue? CoordinateOrigin
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2736,7 +2738,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue WrapCoordinates
+        public StringValue? WrapCoordinates
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2752,7 +2754,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Print
+        public TrueFalseValue? Print
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2771,7 +2773,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OptionalString
+        public StringValue? OptionalString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2790,7 +2792,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Oned
+        public TrueFalseValue? Oned
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2809,7 +2811,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue RegroupId
+        public IntegerValue? RegroupId
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -2828,7 +2830,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DoubleClickNotify
+        public TrueFalseValue? DoubleClickNotify
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2847,7 +2849,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Button
+        public TrueFalseValue? Button
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2866,7 +2868,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserHidden
+        public TrueFalseValue? UserHidden
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2885,7 +2887,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Bullet
+        public TrueFalseValue? Bullet
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2904,7 +2906,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Horizontal
+        public TrueFalseValue? Horizontal
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2923,7 +2925,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalStandard
+        public TrueFalseValue? HorizontalStandard
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2942,7 +2944,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalNoShade
+        public TrueFalseValue? HorizontalNoShade
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -2961,7 +2963,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SingleValue HorizontalPercentage
+        public SingleValue? HorizontalPercentage
         {
             get => GetAttribute<SingleValue>();
             set => SetAttribute(value);
@@ -2980,7 +2982,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
             set => SetAttribute(value);
@@ -2999,7 +3001,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowInCell
+        public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -3018,7 +3020,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowOverlap
+        public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -3037,7 +3039,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserDrawn
+        public TrueFalseValue? UserDrawn
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -3056,7 +3058,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderTopColor
+        public StringValue? BorderTopColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3075,7 +3077,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderLeftColor
+        public StringValue? BorderLeftColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3094,7 +3096,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderBottomColor
+        public StringValue? BorderBottomColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3113,7 +3115,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderRightColor
+        public StringValue? BorderRightColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3132,7 +3134,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayout
+        public IntegerValue? DiagramLayout
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -3151,7 +3153,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramNodeKind
+        public IntegerValue? DiagramNodeKind
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -3170,7 +3172,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayoutMostRecentUsed
+        public IntegerValue? DiagramLayoutMostRecentUsed
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -3189,7 +3191,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
             set => SetAttribute(value);
@@ -3205,7 +3207,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Filled
+        public TrueFalseValue? Filled
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -3221,7 +3223,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FillColor
+        public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3237,7 +3239,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Stroked
+        public TrueFalseValue? Stroked
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -3253,7 +3255,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeColor
+        public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3269,7 +3271,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeWeight
+        public StringValue? StrokeWeight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3285,7 +3287,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue InsetPen
+        public TrueFalseValue? InsetPen
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -3304,7 +3306,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value OptionalNumber
+        public Int32Value? OptionalNumber
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -3323,7 +3325,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
             set => SetAttribute(value);
@@ -3342,7 +3344,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -3361,7 +3363,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -3380,7 +3382,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -3399,7 +3401,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ForceDash
+        public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -3418,7 +3420,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue OleIcon
+        public TrueFalseValue? OleIcon
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -3437,7 +3439,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue Ole
+        public TrueFalseBlankValue? Ole
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -3456,7 +3458,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue PreferRelative
+        public TrueFalseValue? PreferRelative
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -3475,7 +3477,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ClipToWrap
+        public TrueFalseValue? ClipToWrap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -3494,7 +3496,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Clip
+        public TrueFalseValue? Clip
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -3510,7 +3512,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Type
+        public StringValue? Type
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3526,7 +3528,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "adj")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Adjustment
+        public StringValue? Adjustment
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3542,7 +3544,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "path")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue EdgePath
+        public StringValue? EdgePath
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3561,7 +3563,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(27, "gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue EncodedPackage
+        public Base64BinaryValue? EncodedPackage
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -3577,7 +3579,7 @@ namespace DocumentFormat.OpenXml.Vml
         [SchemaAttr(0, "equationxml")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue EquationXml
+        public StringValue? EquationXml
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3795,7 +3797,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3811,7 +3813,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3827,7 +3829,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3843,7 +3845,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3859,7 +3861,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Class
+        public StringValue? Class
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3875,7 +3877,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3891,7 +3893,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Alternate
+        public StringValue? Alternate
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3907,7 +3909,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateSize
+        public StringValue? CoordinateSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3923,7 +3925,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateOrigin
+        public StringValue? CoordinateOrigin
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3939,7 +3941,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue WrapCoordinates
+        public StringValue? WrapCoordinates
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3955,7 +3957,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Print
+        public TrueFalseValue? Print
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -3974,7 +3976,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OptionalString
+        public StringValue? OptionalString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3993,7 +3995,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Oned
+        public TrueFalseValue? Oned
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4012,7 +4014,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue RegroupId
+        public IntegerValue? RegroupId
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -4031,7 +4033,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DoubleClickNotify
+        public TrueFalseValue? DoubleClickNotify
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4050,7 +4052,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Button
+        public TrueFalseValue? Button
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4069,7 +4071,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserHidden
+        public TrueFalseValue? UserHidden
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4088,7 +4090,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Bullet
+        public TrueFalseValue? Bullet
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4107,7 +4109,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Horizontal
+        public TrueFalseValue? Horizontal
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4126,7 +4128,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalStandard
+        public TrueFalseValue? HorizontalStandard
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4145,7 +4147,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalNoShade
+        public TrueFalseValue? HorizontalNoShade
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4164,7 +4166,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SingleValue HorizontalPercentage
+        public SingleValue? HorizontalPercentage
         {
             get => GetAttribute<SingleValue>();
             set => SetAttribute(value);
@@ -4183,7 +4185,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
             set => SetAttribute(value);
@@ -4202,7 +4204,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowInCell
+        public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4221,7 +4223,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowOverlap
+        public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4240,7 +4242,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserDrawn
+        public TrueFalseValue? UserDrawn
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4259,7 +4261,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderTopColor
+        public StringValue? BorderTopColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4278,7 +4280,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderLeftColor
+        public StringValue? BorderLeftColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4297,7 +4299,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderBottomColor
+        public StringValue? BorderBottomColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4316,7 +4318,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderRightColor
+        public StringValue? BorderRightColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4335,7 +4337,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayout
+        public IntegerValue? DiagramLayout
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -4354,7 +4356,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramNodeKind
+        public IntegerValue? DiagramNodeKind
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -4373,7 +4375,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayoutMostRecentUsed
+        public IntegerValue? DiagramLayoutMostRecentUsed
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -4392,7 +4394,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
             set => SetAttribute(value);
@@ -4408,7 +4410,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Filled
+        public TrueFalseValue? Filled
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4424,7 +4426,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FillColor
+        public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4440,7 +4442,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Stroked
+        public TrueFalseValue? Stroked
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4456,7 +4458,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeColor
+        public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4472,7 +4474,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeWeight
+        public StringValue? StrokeWeight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4488,7 +4490,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue InsetPen
+        public TrueFalseValue? InsetPen
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4507,7 +4509,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value OptionalNumber
+        public Int32Value? OptionalNumber
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -4526,7 +4528,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
             set => SetAttribute(value);
@@ -4545,7 +4547,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -4564,7 +4566,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -4583,7 +4585,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -4602,7 +4604,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ForceDash
+        public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4621,7 +4623,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue OleIcon
+        public TrueFalseValue? OleIcon
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4640,7 +4642,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue Ole
+        public TrueFalseBlankValue? Ole
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -4659,7 +4661,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue PreferRelative
+        public TrueFalseValue? PreferRelative
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4678,7 +4680,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ClipToWrap
+        public TrueFalseValue? ClipToWrap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4697,7 +4699,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Clip
+        public TrueFalseValue? Clip
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -4713,7 +4715,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "adj")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Adjustment
+        public StringValue? Adjustment
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4729,7 +4731,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "path")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue EdgePath
+        public StringValue? EdgePath
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4748,7 +4750,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "master")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Master
+        public StringValue? Master
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4955,7 +4957,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4971,7 +4973,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4987,7 +4989,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5003,7 +5005,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5019,7 +5021,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Class
+        public StringValue? Class
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5035,7 +5037,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5051,7 +5053,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Alternate
+        public StringValue? Alternate
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5067,7 +5069,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateSize
+        public StringValue? CoordinateSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5083,7 +5085,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateOrigin
+        public StringValue? CoordinateOrigin
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5099,7 +5101,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue WrapCoordinates
+        public StringValue? WrapCoordinates
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5115,7 +5117,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Print
+        public TrueFalseValue? Print
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5134,7 +5136,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OptionalString
+        public StringValue? OptionalString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5153,7 +5155,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Oned
+        public TrueFalseValue? Oned
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5172,7 +5174,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue RegroupId
+        public IntegerValue? RegroupId
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -5191,7 +5193,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DoubleClickNotify
+        public TrueFalseValue? DoubleClickNotify
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5210,7 +5212,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Button
+        public TrueFalseValue? Button
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5229,7 +5231,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserHidden
+        public TrueFalseValue? UserHidden
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5248,7 +5250,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Bullet
+        public TrueFalseValue? Bullet
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5267,7 +5269,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Horizontal
+        public TrueFalseValue? Horizontal
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5286,7 +5288,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalStandard
+        public TrueFalseValue? HorizontalStandard
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5305,7 +5307,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalNoShade
+        public TrueFalseValue? HorizontalNoShade
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5324,7 +5326,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SingleValue HorizontalPercentage
+        public SingleValue? HorizontalPercentage
         {
             get => GetAttribute<SingleValue>();
             set => SetAttribute(value);
@@ -5343,7 +5345,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
             set => SetAttribute(value);
@@ -5362,7 +5364,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowInCell
+        public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5381,7 +5383,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowOverlap
+        public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5400,7 +5402,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserDrawn
+        public TrueFalseValue? UserDrawn
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5419,7 +5421,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayout
+        public IntegerValue? DiagramLayout
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -5438,7 +5440,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramNodeKind
+        public IntegerValue? DiagramNodeKind
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -5457,7 +5459,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayoutMostRecentUsed
+        public IntegerValue? DiagramLayoutMostRecentUsed
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -5476,7 +5478,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
             set => SetAttribute(value);
@@ -5495,7 +5497,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue Gfxdata
+        public Base64BinaryValue? Gfxdata
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -5511,7 +5513,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "editas")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues> EditAs
+        public EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues>? EditAs
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues>>();
             set => SetAttribute(value);
@@ -5530,7 +5532,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "tableproperties")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TableProperties
+        public StringValue? TableProperties
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5549,7 +5551,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "tablelimits")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TableLimits
+        public StringValue? TableLimits
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5698,7 +5700,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5714,7 +5716,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "fill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Filled
+        public TrueFalseValue? Filled
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5730,7 +5732,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Fillcolor
+        public StringValue? Fillcolor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5749,7 +5751,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -5768,7 +5770,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -5787,7 +5789,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -5806,7 +5808,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "targetscreensize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues> TargetScreenSize
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues>? TargetScreenSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues>>();
             set => SetAttribute(value);
@@ -5842,7 +5844,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         /// <remark>
         /// xmlns:v = urn:schemas-microsoft-com:vml
         /// </remark>
-        public Fill Fill
+        public Fill? Fill
         {
             get => GetElement<Fill>();
             set => SetElement(value);
@@ -5934,7 +5936,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OptionalString
+        public StringValue? OptionalString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5953,7 +5955,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Oned
+        public TrueFalseValue? Oned
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -5972,7 +5974,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue RegroupId
+        public IntegerValue? RegroupId
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -5991,7 +5993,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DoubleClickNotify
+        public TrueFalseValue? DoubleClickNotify
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6010,7 +6012,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Button
+        public TrueFalseValue? Button
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6029,7 +6031,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserHidden
+        public TrueFalseValue? UserHidden
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6048,7 +6050,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Bullet
+        public TrueFalseValue? Bullet
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6067,7 +6069,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Horizontal
+        public TrueFalseValue? Horizontal
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6086,7 +6088,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalStandard
+        public TrueFalseValue? HorizontalStandard
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6105,7 +6107,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalNoShade
+        public TrueFalseValue? HorizontalNoShade
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6124,7 +6126,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SingleValue HorizontalPercentage
+        public SingleValue? HorizontalPercentage
         {
             get => GetAttribute<SingleValue>();
             set => SetAttribute(value);
@@ -6143,7 +6145,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
             set => SetAttribute(value);
@@ -6162,7 +6164,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowInCell
+        public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6181,7 +6183,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowOverlap
+        public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6200,7 +6202,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserDrawn
+        public TrueFalseValue? UserDrawn
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6219,7 +6221,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderTopColor
+        public StringValue? BorderTopColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6238,7 +6240,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderLeftColor
+        public StringValue? BorderLeftColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6257,7 +6259,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderBottomColor
+        public StringValue? BorderBottomColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6276,7 +6278,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderRightColor
+        public StringValue? BorderRightColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6295,7 +6297,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayout
+        public IntegerValue? DiagramLayout
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -6314,7 +6316,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramNodeKind
+        public IntegerValue? DiagramNodeKind
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -6333,7 +6335,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayoutMostRecentUsed
+        public IntegerValue? DiagramLayoutMostRecentUsed
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -6352,7 +6354,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
             set => SetAttribute(value);
@@ -6368,7 +6370,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Filled
+        public TrueFalseValue? Filled
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6384,7 +6386,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FillColor
+        public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6400,7 +6402,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Stroked
+        public TrueFalseValue? Stroked
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6416,7 +6418,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeColor
+        public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6432,7 +6434,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeWeight
+        public StringValue? StrokeWeight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6448,7 +6450,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue InsetPen
+        public TrueFalseValue? InsetPen
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6467,7 +6469,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value OptionalNumber
+        public Int32Value? OptionalNumber
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -6486,7 +6488,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
             set => SetAttribute(value);
@@ -6505,7 +6507,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -6524,7 +6526,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -6543,7 +6545,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -6562,7 +6564,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ForceDash
+        public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6581,7 +6583,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue OleIcon
+        public TrueFalseValue? OleIcon
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6600,7 +6602,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue Ole
+        public TrueFalseBlankValue? Ole
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -6619,7 +6621,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue PreferRelative
+        public TrueFalseValue? PreferRelative
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6638,7 +6640,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ClipToWrap
+        public TrueFalseValue? ClipToWrap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6657,7 +6659,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Clip
+        public TrueFalseValue? Clip
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6676,7 +6678,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue Gfxdata
+        public Base64BinaryValue? Gfxdata
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -6692,7 +6694,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6708,7 +6710,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6724,7 +6726,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6740,7 +6742,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6756,7 +6758,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6772,7 +6774,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Alternate
+        public StringValue? Alternate
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6788,7 +6790,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateSize
+        public StringValue? CoordinateSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6804,7 +6806,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateOrigin
+        public StringValue? CoordinateOrigin
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6820,7 +6822,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Wrapcoords
+        public StringValue? Wrapcoords
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -6836,7 +6838,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Print
+        public TrueFalseValue? Print
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -6852,7 +6854,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "startangle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue StartAngle
+        public DecimalValue? StartAngle
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -6868,7 +6870,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "endangle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DecimalValue EndAngle
+        public DecimalValue? EndAngle
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -7084,7 +7086,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7100,7 +7102,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7116,7 +7118,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7132,7 +7134,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7148,7 +7150,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Class
+        public StringValue? Class
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7164,7 +7166,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7180,7 +7182,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Alternate
+        public StringValue? Alternate
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7196,7 +7198,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateSize
+        public StringValue? CoordinateSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7212,7 +7214,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateOrigin
+        public StringValue? CoordinateOrigin
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7228,7 +7230,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue WrapCoordinates
+        public StringValue? WrapCoordinates
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7244,7 +7246,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Print
+        public TrueFalseValue? Print
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7263,7 +7265,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OptionalString
+        public StringValue? OptionalString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7282,7 +7284,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Oned
+        public TrueFalseValue? Oned
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7301,7 +7303,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue RegroupId
+        public IntegerValue? RegroupId
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -7320,7 +7322,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DoubleClickNotify
+        public TrueFalseValue? DoubleClickNotify
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7339,7 +7341,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Button
+        public TrueFalseValue? Button
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7358,7 +7360,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserHidden
+        public TrueFalseValue? UserHidden
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7377,7 +7379,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Bullet
+        public TrueFalseValue? Bullet
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7396,7 +7398,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Horizontal
+        public TrueFalseValue? Horizontal
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7415,7 +7417,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalStandard
+        public TrueFalseValue? HorizontalStandard
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7434,7 +7436,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalNoShade
+        public TrueFalseValue? HorizontalNoShade
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7453,7 +7455,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SingleValue HorizontalPercentage
+        public SingleValue? HorizontalPercentage
         {
             get => GetAttribute<SingleValue>();
             set => SetAttribute(value);
@@ -7472,7 +7474,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
             set => SetAttribute(value);
@@ -7491,7 +7493,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowInCell
+        public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7510,7 +7512,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowOverlap
+        public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7529,7 +7531,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserDrawn
+        public TrueFalseValue? UserDrawn
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7548,7 +7550,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderTopColor
+        public StringValue? BorderTopColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7567,7 +7569,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderLeftColor
+        public StringValue? BorderLeftColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7586,7 +7588,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderBottomColor
+        public StringValue? BorderBottomColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7605,7 +7607,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderRightColor
+        public StringValue? BorderRightColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7624,7 +7626,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayout
+        public IntegerValue? DiagramLayout
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -7643,7 +7645,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramNodeKind
+        public IntegerValue? DiagramNodeKind
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -7662,7 +7664,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayoutMostRecentUsed
+        public IntegerValue? DiagramLayoutMostRecentUsed
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -7681,7 +7683,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
             set => SetAttribute(value);
@@ -7697,7 +7699,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Filled
+        public TrueFalseValue? Filled
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7713,7 +7715,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FillColor
+        public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7729,7 +7731,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Stroked
+        public TrueFalseValue? Stroked
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7745,7 +7747,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeColor
+        public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7761,7 +7763,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeWeight
+        public StringValue? StrokeWeight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7777,7 +7779,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue InsetPen
+        public TrueFalseValue? InsetPen
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7796,7 +7798,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value OptionalNumber
+        public Int32Value? OptionalNumber
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -7815,7 +7817,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
             set => SetAttribute(value);
@@ -7834,7 +7836,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -7853,7 +7855,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -7872,7 +7874,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -7891,7 +7893,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ForceDash
+        public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7910,7 +7912,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue OleIcon
+        public TrueFalseValue? OleIcon
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7929,7 +7931,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue Ole
+        public TrueFalseBlankValue? Ole
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -7948,7 +7950,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue PreferRelative
+        public TrueFalseValue? PreferRelative
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7967,7 +7969,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ClipToWrap
+        public TrueFalseValue? ClipToWrap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -7986,7 +7988,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Clip
+        public TrueFalseValue? Clip
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8005,7 +8007,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(27, "gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue Gfxdata
+        public Base64BinaryValue? Gfxdata
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -8021,7 +8023,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "from")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue From
+        public StringValue? From
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8037,7 +8039,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "control1")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Control1
+        public StringValue? Control1
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8053,7 +8055,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "control2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Control2
+        public StringValue? Control2
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8069,7 +8071,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         [SchemaAttr(0, "to")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue To
+        public StringValue? To
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8283,7 +8285,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8299,7 +8301,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8315,7 +8317,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8331,7 +8333,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8347,7 +8349,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Class
+        public StringValue? Class
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8363,7 +8365,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8379,7 +8381,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Alternate
+        public StringValue? Alternate
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8395,7 +8397,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateSize
+        public StringValue? CoordinateSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8411,7 +8413,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue WrapCoordinates
+        public StringValue? WrapCoordinates
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8427,7 +8429,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Print
+        public TrueFalseValue? Print
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8446,7 +8448,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OptionalString
+        public StringValue? OptionalString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8465,7 +8467,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Oned
+        public TrueFalseValue? Oned
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8484,7 +8486,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue RegroupId
+        public IntegerValue? RegroupId
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -8503,7 +8505,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DoubleClickNotify
+        public TrueFalseValue? DoubleClickNotify
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8522,7 +8524,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Button
+        public TrueFalseValue? Button
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8541,7 +8543,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserHidden
+        public TrueFalseValue? UserHidden
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8560,7 +8562,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Bullet
+        public TrueFalseValue? Bullet
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8579,7 +8581,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Horizontal
+        public TrueFalseValue? Horizontal
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8598,7 +8600,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalStandard
+        public TrueFalseValue? HorizontalStandard
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8617,7 +8619,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalNoShade
+        public TrueFalseValue? HorizontalNoShade
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8636,7 +8638,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SingleValue HorizontalPercentage
+        public SingleValue? HorizontalPercentage
         {
             get => GetAttribute<SingleValue>();
             set => SetAttribute(value);
@@ -8655,7 +8657,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
             set => SetAttribute(value);
@@ -8674,7 +8676,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowInCell
+        public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8693,7 +8695,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowOverlap
+        public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8712,7 +8714,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserDrawn
+        public TrueFalseValue? UserDrawn
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8731,7 +8733,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderTopColor
+        public StringValue? BorderTopColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8750,7 +8752,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderLeftColor
+        public StringValue? BorderLeftColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8769,7 +8771,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderBottomColor
+        public StringValue? BorderBottomColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8788,7 +8790,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderRightColor
+        public StringValue? BorderRightColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8807,7 +8809,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayout
+        public IntegerValue? DiagramLayout
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -8826,7 +8828,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramNodeKind
+        public IntegerValue? DiagramNodeKind
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -8845,7 +8847,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayoutMostRecentUsed
+        public IntegerValue? DiagramLayoutMostRecentUsed
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -8864,7 +8866,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
             set => SetAttribute(value);
@@ -8880,7 +8882,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Filled
+        public TrueFalseValue? Filled
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8896,7 +8898,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FillColor
+        public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8912,7 +8914,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Stroked
+        public TrueFalseValue? Stroked
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8928,7 +8930,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeColor
+        public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8944,7 +8946,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeWeight
+        public StringValue? StrokeWeight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8960,7 +8962,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue InsetPen
+        public TrueFalseValue? InsetPen
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -8979,7 +8981,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value OptionalNumber
+        public Int32Value? OptionalNumber
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -8998,7 +9000,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
             set => SetAttribute(value);
@@ -9017,7 +9019,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -9036,7 +9038,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -9055,7 +9057,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -9074,7 +9076,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ForceDash
+        public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9093,7 +9095,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue OleIcon
+        public TrueFalseValue? OleIcon
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9112,7 +9114,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue Ole
+        public TrueFalseBlankValue? Ole
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -9131,7 +9133,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue PreferRelative
+        public TrueFalseValue? PreferRelative
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9150,7 +9152,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ClipToWrap
+        public TrueFalseValue? ClipToWrap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9169,7 +9171,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Clip
+        public TrueFalseValue? Clip
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9185,7 +9187,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "src")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Source
+        public StringValue? Source
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9201,7 +9203,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "cropleft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CropLeft
+        public StringValue? CropLeft
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9217,7 +9219,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "croptop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CropTop
+        public StringValue? CropTop
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9233,7 +9235,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "cropright")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CropRight
+        public StringValue? CropRight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9249,7 +9251,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "cropbottom")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CropBottom
+        public StringValue? CropBottom
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9265,7 +9267,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "gain")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Gain
+        public StringValue? Gain
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9281,7 +9283,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "blacklevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BlackLevel
+        public StringValue? BlackLevel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9297,7 +9299,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "gamma")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Gamma
+        public StringValue? Gamma
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9313,7 +9315,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "grayscale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue GrayScale
+        public TrueFalseValue? GrayScale
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9329,7 +9331,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "bilevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue BiLevel
+        public TrueFalseValue? BiLevel
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9348,7 +9350,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue Gfxdata
+        public Base64BinaryValue? Gfxdata
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -9567,7 +9569,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9583,7 +9585,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9599,7 +9601,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9615,7 +9617,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9631,7 +9633,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Class
+        public StringValue? Class
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9647,7 +9649,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9663,7 +9665,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Alternate
+        public StringValue? Alternate
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9679,7 +9681,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateSize
+        public StringValue? CoordinateSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9695,7 +9697,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateOrigin
+        public StringValue? CoordinateOrigin
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9711,7 +9713,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue WrapCoordinates
+        public StringValue? WrapCoordinates
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9727,7 +9729,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Print
+        public TrueFalseValue? Print
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9746,7 +9748,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OptionalString
+        public StringValue? OptionalString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9765,7 +9767,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Oned
+        public TrueFalseValue? Oned
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9784,7 +9786,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue RegroupId
+        public IntegerValue? RegroupId
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -9803,7 +9805,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DoubleClickNotify
+        public TrueFalseValue? DoubleClickNotify
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9822,7 +9824,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Button
+        public TrueFalseValue? Button
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9841,7 +9843,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserHidden
+        public TrueFalseValue? UserHidden
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9860,7 +9862,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Bullet
+        public TrueFalseValue? Bullet
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9879,7 +9881,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Horizontal
+        public TrueFalseValue? Horizontal
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9898,7 +9900,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalStandard
+        public TrueFalseValue? HorizontalStandard
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9917,7 +9919,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalNoShade
+        public TrueFalseValue? HorizontalNoShade
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9936,7 +9938,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SingleValue HorizontalPercentage
+        public SingleValue? HorizontalPercentage
         {
             get => GetAttribute<SingleValue>();
             set => SetAttribute(value);
@@ -9955,7 +9957,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
             set => SetAttribute(value);
@@ -9974,7 +9976,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowInCell
+        public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -9993,7 +9995,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowOverlap
+        public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10012,7 +10014,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserDrawn
+        public TrueFalseValue? UserDrawn
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10031,7 +10033,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderTopColor
+        public StringValue? BorderTopColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10050,7 +10052,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderLeftColor
+        public StringValue? BorderLeftColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10069,7 +10071,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderBottomColor
+        public StringValue? BorderBottomColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10088,7 +10090,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderRightColor
+        public StringValue? BorderRightColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10107,7 +10109,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayout
+        public IntegerValue? DiagramLayout
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -10126,7 +10128,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramNodeKind
+        public IntegerValue? DiagramNodeKind
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -10145,7 +10147,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayoutMostRecentUsed
+        public IntegerValue? DiagramLayoutMostRecentUsed
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -10164,7 +10166,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
             set => SetAttribute(value);
@@ -10180,7 +10182,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Filled
+        public TrueFalseValue? Filled
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10196,7 +10198,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FillColor
+        public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10212,7 +10214,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Stroked
+        public TrueFalseValue? Stroked
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10228,7 +10230,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeColor
+        public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10244,7 +10246,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeWeight
+        public StringValue? StrokeWeight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10260,7 +10262,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue InsetPen
+        public TrueFalseValue? InsetPen
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10279,7 +10281,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value OptionalNumber
+        public Int32Value? OptionalNumber
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -10298,7 +10300,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
             set => SetAttribute(value);
@@ -10317,7 +10319,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -10336,7 +10338,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -10355,7 +10357,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -10374,7 +10376,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ForceDash
+        public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10393,7 +10395,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue OleIcon
+        public TrueFalseValue? OleIcon
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10412,7 +10414,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue Ole
+        public TrueFalseBlankValue? Ole
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -10431,7 +10433,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue PreferRelative
+        public TrueFalseValue? PreferRelative
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10450,7 +10452,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ClipToWrap
+        public TrueFalseValue? ClipToWrap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10469,7 +10471,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Clip
+        public TrueFalseValue? Clip
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10488,7 +10490,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue Gfxdata
+        public Base64BinaryValue? Gfxdata
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -10504,7 +10506,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "from")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue From
+        public StringValue? From
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10520,7 +10522,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "to")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue To
+        public StringValue? To
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10730,7 +10732,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10746,7 +10748,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10762,7 +10764,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10778,7 +10780,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10794,7 +10796,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Class
+        public StringValue? Class
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10810,7 +10812,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10826,7 +10828,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Alternate
+        public StringValue? Alternate
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10842,7 +10844,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateSize
+        public StringValue? CoordinateSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10858,7 +10860,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateOrigin
+        public StringValue? CoordinateOrigin
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10874,7 +10876,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue WrapCoordinates
+        public StringValue? WrapCoordinates
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10890,7 +10892,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Print
+        public TrueFalseValue? Print
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10909,7 +10911,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OptionalString
+        public StringValue? OptionalString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10928,7 +10930,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Oned
+        public TrueFalseValue? Oned
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10947,7 +10949,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue RegroupId
+        public IntegerValue? RegroupId
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -10966,7 +10968,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DoubleClickNotify
+        public TrueFalseValue? DoubleClickNotify
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -10985,7 +10987,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Button
+        public TrueFalseValue? Button
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11004,7 +11006,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserHidden
+        public TrueFalseValue? UserHidden
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11023,7 +11025,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Bullet
+        public TrueFalseValue? Bullet
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11042,7 +11044,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Horizontal
+        public TrueFalseValue? Horizontal
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11061,7 +11063,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalStandard
+        public TrueFalseValue? HorizontalStandard
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11080,7 +11082,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalNoShade
+        public TrueFalseValue? HorizontalNoShade
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11099,7 +11101,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SingleValue HorizontalPercentage
+        public SingleValue? HorizontalPercentage
         {
             get => GetAttribute<SingleValue>();
             set => SetAttribute(value);
@@ -11118,7 +11120,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
             set => SetAttribute(value);
@@ -11137,7 +11139,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowInCell
+        public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11156,7 +11158,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowOverlap
+        public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11175,7 +11177,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserDrawn
+        public TrueFalseValue? UserDrawn
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11194,7 +11196,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderTopColor
+        public StringValue? BorderTopColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11213,7 +11215,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderLeftColor
+        public StringValue? BorderLeftColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11232,7 +11234,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderBottomColor
+        public StringValue? BorderBottomColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11251,7 +11253,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderRightColor
+        public StringValue? BorderRightColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11270,7 +11272,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayout
+        public IntegerValue? DiagramLayout
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -11289,7 +11291,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramNodeKind
+        public IntegerValue? DiagramNodeKind
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -11308,7 +11310,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayoutMostRecentUsed
+        public IntegerValue? DiagramLayoutMostRecentUsed
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -11327,7 +11329,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
             set => SetAttribute(value);
@@ -11343,7 +11345,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Filled
+        public TrueFalseValue? Filled
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11359,7 +11361,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FillColor
+        public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11375,7 +11377,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Stroked
+        public TrueFalseValue? Stroked
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11391,7 +11393,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeColor
+        public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11407,7 +11409,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeWeight
+        public StringValue? StrokeWeight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11423,7 +11425,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue InsetPen
+        public TrueFalseValue? InsetPen
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11442,7 +11444,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value OptionalNumber
+        public Int32Value? OptionalNumber
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -11461,7 +11463,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
             set => SetAttribute(value);
@@ -11480,7 +11482,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -11499,7 +11501,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -11518,7 +11520,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -11537,7 +11539,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ForceDash
+        public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11556,7 +11558,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue OleIcon
+        public TrueFalseValue? OleIcon
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11575,7 +11577,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue Ole
+        public TrueFalseBlankValue? Ole
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -11594,7 +11596,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue PreferRelative
+        public TrueFalseValue? PreferRelative
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11613,7 +11615,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ClipToWrap
+        public TrueFalseValue? ClipToWrap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11632,7 +11634,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Clip
+        public TrueFalseValue? Clip
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -11651,7 +11653,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue Gfxdata
+        public Base64BinaryValue? Gfxdata
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -11862,7 +11864,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11878,7 +11880,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11894,7 +11896,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11910,7 +11912,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11926,7 +11928,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Class
+        public StringValue? Class
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11942,7 +11944,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11958,7 +11960,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Alternate
+        public StringValue? Alternate
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11974,7 +11976,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateSize
+        public StringValue? CoordinateSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11990,7 +11992,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateOrigin
+        public StringValue? CoordinateOrigin
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12006,7 +12008,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue WrapCoordinates
+        public StringValue? WrapCoordinates
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12022,7 +12024,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Print
+        public TrueFalseValue? Print
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12041,7 +12043,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OptionalString
+        public StringValue? OptionalString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12060,7 +12062,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Oned
+        public TrueFalseValue? Oned
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12079,7 +12081,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue RegroupId
+        public IntegerValue? RegroupId
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -12098,7 +12100,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DoubleClickNotify
+        public TrueFalseValue? DoubleClickNotify
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12117,7 +12119,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Button
+        public TrueFalseValue? Button
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12136,7 +12138,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserHidden
+        public TrueFalseValue? UserHidden
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12155,7 +12157,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Bullet
+        public TrueFalseValue? Bullet
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12174,7 +12176,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Horizontal
+        public TrueFalseValue? Horizontal
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12193,7 +12195,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalStandard
+        public TrueFalseValue? HorizontalStandard
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12212,7 +12214,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalNoShade
+        public TrueFalseValue? HorizontalNoShade
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12231,7 +12233,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SingleValue HorizontalPercentage
+        public SingleValue? HorizontalPercentage
         {
             get => GetAttribute<SingleValue>();
             set => SetAttribute(value);
@@ -12250,7 +12252,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
             set => SetAttribute(value);
@@ -12269,7 +12271,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowInCell
+        public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12288,7 +12290,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowOverlap
+        public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12307,7 +12309,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserDrawn
+        public TrueFalseValue? UserDrawn
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12326,7 +12328,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderTopColor
+        public StringValue? BorderTopColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12345,7 +12347,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderLeftColor
+        public StringValue? BorderLeftColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12364,7 +12366,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderBottomColor
+        public StringValue? BorderBottomColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12383,7 +12385,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderRightColor
+        public StringValue? BorderRightColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12402,7 +12404,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayout
+        public IntegerValue? DiagramLayout
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -12421,7 +12423,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramNodeKind
+        public IntegerValue? DiagramNodeKind
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -12440,7 +12442,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayoutMostRecentUsed
+        public IntegerValue? DiagramLayoutMostRecentUsed
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -12459,7 +12461,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
             set => SetAttribute(value);
@@ -12475,7 +12477,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Filled
+        public TrueFalseValue? Filled
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12491,7 +12493,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FillColor
+        public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12507,7 +12509,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Stroked
+        public TrueFalseValue? Stroked
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12523,7 +12525,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeColor
+        public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12539,7 +12541,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeWeight
+        public StringValue? StrokeWeight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12555,7 +12557,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue InsetPen
+        public TrueFalseValue? InsetPen
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12574,7 +12576,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value OptionalNumber
+        public Int32Value? OptionalNumber
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -12593,7 +12595,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
             set => SetAttribute(value);
@@ -12612,7 +12614,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -12631,7 +12633,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -12650,7 +12652,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -12669,7 +12671,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ForceDash
+        public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12688,7 +12690,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue OleIcon
+        public TrueFalseValue? OleIcon
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12707,7 +12709,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue Ole
+        public TrueFalseBlankValue? Ole
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -12726,7 +12728,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue PreferRelative
+        public TrueFalseValue? PreferRelative
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12745,7 +12747,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ClipToWrap
+        public TrueFalseValue? ClipToWrap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12764,7 +12766,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Clip
+        public TrueFalseValue? Clip
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -12783,7 +12785,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue Gfxdata
+        public Base64BinaryValue? Gfxdata
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -12799,7 +12801,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "points")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Points
+        public StringValue? Points
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13011,7 +13013,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13027,7 +13029,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13043,7 +13045,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13059,7 +13061,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13075,7 +13077,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Class
+        public StringValue? Class
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13091,7 +13093,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13107,7 +13109,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Alternate
+        public StringValue? Alternate
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13123,7 +13125,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateSize
+        public StringValue? CoordinateSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13139,7 +13141,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordorigin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateOrigin
+        public StringValue? CoordinateOrigin
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13155,7 +13157,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue WrapCoordinates
+        public StringValue? WrapCoordinates
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13171,7 +13173,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Print
+        public TrueFalseValue? Print
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13190,7 +13192,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OptionalString
+        public StringValue? OptionalString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13209,7 +13211,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Oned
+        public TrueFalseValue? Oned
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13228,7 +13230,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue RegroupId
+        public IntegerValue? RegroupId
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -13247,7 +13249,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DoubleClickNotify
+        public TrueFalseValue? DoubleClickNotify
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13266,7 +13268,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Button
+        public TrueFalseValue? Button
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13285,7 +13287,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserHidden
+        public TrueFalseValue? UserHidden
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13304,7 +13306,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Bullet
+        public TrueFalseValue? Bullet
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13323,7 +13325,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Horizontal
+        public TrueFalseValue? Horizontal
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13342,7 +13344,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalStandard
+        public TrueFalseValue? HorizontalStandard
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13361,7 +13363,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalNoShade
+        public TrueFalseValue? HorizontalNoShade
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13380,7 +13382,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SingleValue HorizontalPercentage
+        public SingleValue? HorizontalPercentage
         {
             get => GetAttribute<SingleValue>();
             set => SetAttribute(value);
@@ -13399,7 +13401,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
             set => SetAttribute(value);
@@ -13418,7 +13420,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowInCell
+        public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13437,7 +13439,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowOverlap
+        public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13456,7 +13458,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserDrawn
+        public TrueFalseValue? UserDrawn
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13475,7 +13477,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderTopColor
+        public StringValue? BorderTopColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13494,7 +13496,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderLeftColor
+        public StringValue? BorderLeftColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13513,7 +13515,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderBottomColor
+        public StringValue? BorderBottomColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13532,7 +13534,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderRightColor
+        public StringValue? BorderRightColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13551,7 +13553,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayout
+        public IntegerValue? DiagramLayout
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -13570,7 +13572,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramNodeKind
+        public IntegerValue? DiagramNodeKind
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -13589,7 +13591,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayoutMostRecentUsed
+        public IntegerValue? DiagramLayoutMostRecentUsed
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -13608,7 +13610,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
             set => SetAttribute(value);
@@ -13624,7 +13626,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Filled
+        public TrueFalseValue? Filled
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13640,7 +13642,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FillColor
+        public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13656,7 +13658,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Stroked
+        public TrueFalseValue? Stroked
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13672,7 +13674,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeColor
+        public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13688,7 +13690,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeWeight
+        public StringValue? StrokeWeight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13704,7 +13706,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue InsetPen
+        public TrueFalseValue? InsetPen
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13723,7 +13725,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value OptionalNumber
+        public Int32Value? OptionalNumber
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -13742,7 +13744,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
             set => SetAttribute(value);
@@ -13761,7 +13763,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -13780,7 +13782,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -13799,7 +13801,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -13818,7 +13820,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ForceDash
+        public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13837,7 +13839,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue OleIcon
+        public TrueFalseValue? OleIcon
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13856,7 +13858,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue Ole
+        public TrueFalseBlankValue? Ole
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -13875,7 +13877,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue PreferRelative
+        public TrueFalseValue? PreferRelative
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13894,7 +13896,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ClipToWrap
+        public TrueFalseValue? ClipToWrap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13913,7 +13915,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Clip
+        public TrueFalseValue? Clip
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -13932,7 +13934,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue Gfxdata
+        public Base64BinaryValue? Gfxdata
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -14142,7 +14144,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14158,7 +14160,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Style
+        public StringValue? Style
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14174,7 +14176,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "href")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Href
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14190,7 +14192,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "target")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Target
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14206,7 +14208,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "class")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Class
+        public StringValue? Class
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14222,7 +14224,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14238,7 +14240,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "alt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Alternate
+        public StringValue? Alternate
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14254,7 +14256,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "coordsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CoordinateSize
+        public StringValue? CoordinateSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14270,7 +14272,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "wrapcoords")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue WrapCoordinates
+        public StringValue? WrapCoordinates
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14286,7 +14288,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Print
+        public TrueFalseValue? Print
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14305,7 +14307,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OptionalString
+        public StringValue? OptionalString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14324,7 +14326,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oned")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Oned
+        public TrueFalseValue? Oned
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14343,7 +14345,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "regroupid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue RegroupId
+        public IntegerValue? RegroupId
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -14362,7 +14364,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "doubleclicknotify")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue DoubleClickNotify
+        public TrueFalseValue? DoubleClickNotify
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14381,7 +14383,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "button")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Button
+        public TrueFalseValue? Button
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14400,7 +14402,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userhidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserHidden
+        public TrueFalseValue? UserHidden
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14419,7 +14421,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bullet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Bullet
+        public TrueFalseValue? Bullet
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14438,7 +14440,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Horizontal
+        public TrueFalseValue? Horizontal
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14457,7 +14459,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrstd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalStandard
+        public TrueFalseValue? HorizontalStandard
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14476,7 +14478,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrnoshade")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue HorizontalNoShade
+        public TrueFalseValue? HorizontalNoShade
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14495,7 +14497,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hrpct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SingleValue HorizontalPercentage
+        public SingleValue? HorizontalPercentage
         {
             get => GetAttribute<SingleValue>();
             set => SetAttribute(value);
@@ -14514,7 +14516,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "hralign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>? HorizontalAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>();
             set => SetAttribute(value);
@@ -14533,7 +14535,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowincell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowInCell
+        public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14552,7 +14554,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "allowoverlap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue AllowOverlap
+        public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14571,7 +14573,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "userdrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue UserDrawn
+        public TrueFalseValue? UserDrawn
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14590,7 +14592,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bordertopcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderTopColor
+        public StringValue? BorderTopColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14609,7 +14611,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderleftcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderLeftColor
+        public StringValue? BorderLeftColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14628,7 +14630,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderbottomcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderBottomColor
+        public StringValue? BorderBottomColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14647,7 +14649,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "borderrightcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BorderRightColor
+        public StringValue? BorderRightColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14666,7 +14668,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayout
+        public IntegerValue? DiagramLayout
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -14685,7 +14687,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmnodekind")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramNodeKind
+        public IntegerValue? DiagramNodeKind
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -14704,7 +14706,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "dgmlayoutmru")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue DiagramLayoutMostRecentUsed
+        public IntegerValue? DiagramLayoutMostRecentUsed
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -14723,7 +14725,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "insetmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
             set => SetAttribute(value);
@@ -14739,7 +14741,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "filled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Filled
+        public TrueFalseValue? Filled
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14755,7 +14757,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "fillcolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FillColor
+        public StringValue? FillColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14771,7 +14773,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "stroked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Stroked
+        public TrueFalseValue? Stroked
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14787,7 +14789,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokecolor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeColor
+        public StringValue? StrokeColor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14803,7 +14805,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "strokeweight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StrokeWeight
+        public StringValue? StrokeWeight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14819,7 +14821,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "insetpen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue InsetPen
+        public TrueFalseValue? InsetPen
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14838,7 +14840,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "spt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value OptionalNumber
+        public Int32Value? OptionalNumber
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -14857,7 +14859,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "connectortype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>? ConnectorType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>();
             set => SetAttribute(value);
@@ -14876,7 +14878,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwmode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -14895,7 +14897,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwpure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? PureBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -14914,7 +14916,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "bwnormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>? NormalBlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>();
             set => SetAttribute(value);
@@ -14933,7 +14935,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "forcedash")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ForceDash
+        public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14952,7 +14954,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "oleicon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue OleIcon
+        public TrueFalseValue? OleIcon
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -14971,7 +14973,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue Ole
+        public TrueFalseBlankValue? Ole
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -14990,7 +14992,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "preferrelative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue PreferRelative
+        public TrueFalseValue? PreferRelative
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -15009,7 +15011,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "cliptowrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue ClipToWrap
+        public TrueFalseValue? ClipToWrap
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -15028,7 +15030,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "clip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Clip
+        public TrueFalseValue? Clip
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -15047,7 +15049,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(27, "gfxdata")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue Gfxdata
+        public Base64BinaryValue? Gfxdata
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -15063,7 +15065,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "arcsize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ArcSize
+        public StringValue? ArcSize
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15221,7 +15223,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "position")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Position
+        public StringValue? Position
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15237,7 +15239,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "polar")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Polar
+        public StringValue? Polar
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15253,7 +15255,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "map")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Map
+        public StringValue? Map
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15269,7 +15271,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "invx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue InvertX
+        public TrueFalseBlankValue? InvertX
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -15285,7 +15287,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "invy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue InvertY
+        public TrueFalseBlankValue? InvertY
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -15301,7 +15303,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "switch")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseBlankValue Switch
+        public TrueFalseBlankValue? Switch
         {
             get => GetAttribute<TrueFalseBlankValue>();
             set => SetAttribute(value);
@@ -15317,7 +15319,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "xrange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue XRange
+        public StringValue? XRange
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15333,7 +15335,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "yrange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue YRange
+        public StringValue? YRange
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15349,7 +15351,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "radiusrange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RadiusRange
+        public StringValue? RadiusRange
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15402,7 +15404,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "eqn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Equation
+        public StringValue? Equation
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

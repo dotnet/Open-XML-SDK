@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -144,7 +146,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues>>();
             set => SetAttribute(value);
@@ -160,7 +162,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         [SchemaAttr(0, "width")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue Width
+        public IntegerValue? Width
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -176,7 +178,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         [SchemaAttr(0, "shadow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public TrueFalseValue Shadow
+        public TrueFalseValue? Shadow
         {
             get => GetAttribute<TrueFalseValue>();
             set => SetAttribute(value);
@@ -222,7 +224,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues>>();
             set => SetAttribute(value);
@@ -238,7 +240,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         [SchemaAttr(0, "side")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues> Side
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues>? Side
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues>>();
             set => SetAttribute(value);
@@ -254,7 +256,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         [SchemaAttr(0, "anchorx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues> AnchorX
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>? AnchorX
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>>();
             set => SetAttribute(value);
@@ -270,7 +272,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         [SchemaAttr(0, "anchory")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues> AnchorY
+        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>? AnchorY
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>>();
             set => SetAttribute(value);

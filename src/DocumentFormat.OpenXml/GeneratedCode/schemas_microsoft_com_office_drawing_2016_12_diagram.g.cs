@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -84,7 +86,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         [SchemaAttr(0, "bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
             set => SetAttribute(value);
@@ -160,7 +162,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
+        public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
             set => SetElement(value);
@@ -266,7 +268,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties DefaultParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties? DefaultParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
             set => SetElement(value);
@@ -279,7 +281,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties Level1ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties? Level1ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
             set => SetElement(value);
@@ -292,7 +294,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties Level2ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties? Level2ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
             set => SetElement(value);
@@ -305,7 +307,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties Level3ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties? Level3ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
             set => SetElement(value);
@@ -318,7 +320,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties Level4ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties? Level4ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
             set => SetElement(value);
@@ -331,7 +333,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties Level5ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties? Level5ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
             set => SetElement(value);
@@ -344,7 +346,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties Level6ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties? Level6ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
             set => SetElement(value);
@@ -357,7 +359,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties Level7ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties? Level7ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
             set => SetElement(value);
@@ -370,7 +372,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties Level8ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties? Level8ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
             set => SetElement(value);
@@ -383,7 +385,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties Level9ParagraphProperties
+        public DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties? Level9ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
             set => SetElement(value);
@@ -396,7 +398,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
