@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -17,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition";
-        private DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinition _rootElement;
+        private DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinition? _rootElement;
 
         /// <summary>
         /// Creates an instance of the PivotTableCacheDefinitionPart OpenXmlType
@@ -29,7 +31,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -42,7 +44,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => PivotCacheDefinition;
+        internal override OpenXmlPartRootElement? PartRootElement => PivotCacheDefinition;
 
         /// <summary>
         /// Gets or sets the root element of this part.
@@ -56,7 +58,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinition>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -73,7 +75,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the PivotTableCacheRecordsPart of the PivotTableCacheDefinitionPart
         /// </summary>
-        public PivotTableCacheRecordsPart PivotTableCacheRecordsPart => GetSubPartOfType<PivotTableCacheRecordsPart>();
+        public PivotTableCacheRecordsPart? PivotTableCacheRecordsPart => GetSubPartOfType<PivotTableCacheRecordsPart>();
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

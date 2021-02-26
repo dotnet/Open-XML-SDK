@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -67,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         [SchemaAttr(38, "_")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UnderScore
+        public StringValue? UnderScore
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -86,7 +88,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         [SchemaAttr(41, "_")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ReservedAttributeString
+        public StringValue? ReservedAttributeString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -105,7 +107,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         [SchemaAttr(41, "contentTypeName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ContentTypeName
+        public StringValue? ContentTypeName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -124,7 +126,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         [SchemaAttr(41, "contentTypeID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ContentTypeID
+        public StringValue? ContentTypeID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -143,7 +145,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         [SchemaAttr(41, "contentTypeVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value ContentTypeVersion
+        public Int32Value? ContentTypeVersion
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -162,7 +164,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         [SchemaAttr(41, "contentTypeDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ContentTypeDescription
+        public StringValue? ContentTypeDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -181,7 +183,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         [SchemaAttr(41, "contentTypeScope")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ContentTypeScope
+        public StringValue? ContentTypeScope
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -200,7 +202,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         [SchemaAttr(41, "versionID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue VersionID
+        public StringValue? VersionID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

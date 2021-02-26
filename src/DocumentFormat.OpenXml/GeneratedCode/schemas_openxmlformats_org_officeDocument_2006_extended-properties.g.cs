@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -156,7 +158,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Template Template
+        public Template? Template
         {
             get => GetElement<Template>();
             set => SetElement(value);
@@ -169,7 +171,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Manager Manager
+        public Manager? Manager
         {
             get => GetElement<Manager>();
             set => SetElement(value);
@@ -182,7 +184,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Company Company
+        public Company? Company
         {
             get => GetElement<Company>();
             set => SetElement(value);
@@ -195,7 +197,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Pages Pages
+        public Pages? Pages
         {
             get => GetElement<Pages>();
             set => SetElement(value);
@@ -208,7 +210,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Words Words
+        public Words? Words
         {
             get => GetElement<Words>();
             set => SetElement(value);
@@ -221,7 +223,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Characters Characters
+        public Characters? Characters
         {
             get => GetElement<Characters>();
             set => SetElement(value);
@@ -234,7 +236,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public PresentationFormat PresentationFormat
+        public PresentationFormat? PresentationFormat
         {
             get => GetElement<PresentationFormat>();
             set => SetElement(value);
@@ -247,7 +249,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Lines Lines
+        public Lines? Lines
         {
             get => GetElement<Lines>();
             set => SetElement(value);
@@ -260,7 +262,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Paragraphs Paragraphs
+        public Paragraphs? Paragraphs
         {
             get => GetElement<Paragraphs>();
             set => SetElement(value);
@@ -273,7 +275,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Slides Slides
+        public Slides? Slides
         {
             get => GetElement<Slides>();
             set => SetElement(value);
@@ -286,7 +288,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Notes Notes
+        public Notes? Notes
         {
             get => GetElement<Notes>();
             set => SetElement(value);
@@ -299,7 +301,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public TotalTime TotalTime
+        public TotalTime? TotalTime
         {
             get => GetElement<TotalTime>();
             set => SetElement(value);
@@ -312,7 +314,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public HiddenSlides HiddenSlides
+        public HiddenSlides? HiddenSlides
         {
             get => GetElement<HiddenSlides>();
             set => SetElement(value);
@@ -325,7 +327,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public MultimediaClips MultimediaClips
+        public MultimediaClips? MultimediaClips
         {
             get => GetElement<MultimediaClips>();
             set => SetElement(value);
@@ -338,7 +340,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public ScaleCrop ScaleCrop
+        public ScaleCrop? ScaleCrop
         {
             get => GetElement<ScaleCrop>();
             set => SetElement(value);
@@ -351,7 +353,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public HeadingPairs HeadingPairs
+        public HeadingPairs? HeadingPairs
         {
             get => GetElement<HeadingPairs>();
             set => SetElement(value);
@@ -364,7 +366,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public TitlesOfParts TitlesOfParts
+        public TitlesOfParts? TitlesOfParts
         {
             get => GetElement<TitlesOfParts>();
             set => SetElement(value);
@@ -377,7 +379,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public LinksUpToDate LinksUpToDate
+        public LinksUpToDate? LinksUpToDate
         {
             get => GetElement<LinksUpToDate>();
             set => SetElement(value);
@@ -390,7 +392,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public CharactersWithSpaces CharactersWithSpaces
+        public CharactersWithSpaces? CharactersWithSpaces
         {
             get => GetElement<CharactersWithSpaces>();
             set => SetElement(value);
@@ -403,7 +405,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public SharedDocument SharedDocument
+        public SharedDocument? SharedDocument
         {
             get => GetElement<SharedDocument>();
             set => SetElement(value);
@@ -416,7 +418,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public HyperlinkBase HyperlinkBase
+        public HyperlinkBase? HyperlinkBase
         {
             get => GetElement<HyperlinkBase>();
             set => SetElement(value);
@@ -429,7 +431,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public HyperlinkList HyperlinkList
+        public HyperlinkList? HyperlinkList
         {
             get => GetElement<HyperlinkList>();
             set => SetElement(value);
@@ -442,7 +444,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public HyperlinksChanged HyperlinksChanged
+        public HyperlinksChanged? HyperlinksChanged
         {
             get => GetElement<HyperlinksChanged>();
             set => SetElement(value);
@@ -455,7 +457,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public DigitalSignature DigitalSignature
+        public DigitalSignature? DigitalSignature
         {
             get => GetElement<DigitalSignature>();
             set => SetElement(value);
@@ -468,7 +470,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public Application Application
+        public Application? Application
         {
             get => GetElement<Application>();
             set => SetElement(value);
@@ -481,7 +483,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public ApplicationVersion ApplicationVersion
+        public ApplicationVersion? ApplicationVersion
         {
             get => GetElement<ApplicationVersion>();
             set => SetElement(value);
@@ -494,7 +496,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
         /// </remark>
-        public DocumentSecurity DocumentSecurity
+        public DocumentSecurity? DocumentSecurity
         {
             get => GetElement<DocumentSecurity>();
             set => SetElement(value);
@@ -528,7 +530,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <summary>
         /// Gets the ExtendedFilePropertiesPart associated with this element.
         /// </summary>
-        public ExtendedFilePropertiesPart ExtendedFilePropertiesPart
+        public ExtendedFilePropertiesPart? ExtendedFilePropertiesPart
         {
             get => OpenXmlPart as ExtendedFilePropertiesPart;
             internal set => OpenXmlPart = value;
@@ -1650,7 +1652,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector
+        public DocumentFormat.OpenXml.VariantTypes.VTVector? VTVector
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>();
             set => SetElement(value);
@@ -1722,7 +1724,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector
+        public DocumentFormat.OpenXml.VariantTypes.VTVector? VTVector
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>();
             set => SetElement(value);
@@ -1797,7 +1799,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTBlob VTBlob
+        public DocumentFormat.OpenXml.VariantTypes.VTBlob? VTBlob
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
             set => SetElement(value);

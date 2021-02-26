@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Pictures;
@@ -107,7 +109,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpc = http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas
         /// </remark>
-        public BackgroundFormatting BackgroundFormatting
+        public BackgroundFormatting? BackgroundFormatting
         {
             get => GetElement<BackgroundFormatting>();
             set => SetElement(value);
@@ -120,7 +122,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpc = http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas
         /// </remark>
-        public WholeFormatting WholeFormatting
+        public WholeFormatting? WholeFormatting
         {
             get => GetElement<WholeFormatting>();
             set => SetElement(value);
@@ -304,7 +306,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Outline Outline
+        public DocumentFormat.OpenXml.Drawing.Outline? Outline
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>();
             set => SetElement(value);
@@ -392,7 +394,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
             set => SetElement(value);
@@ -405,7 +407,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties>();
             set => SetElement(value);
@@ -418,7 +420,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D Transform2D
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>();
             set => SetElement(value);
@@ -431,7 +433,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Graphic Graphic
+        public DocumentFormat.OpenXml.Drawing.Graphic? Graphic
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
             set => SetElement(value);
@@ -444,7 +446,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <remark>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList>();
             set => SetElement(value);

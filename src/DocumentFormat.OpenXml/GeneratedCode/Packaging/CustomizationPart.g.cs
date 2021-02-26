@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -17,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-word.keyMapCustomizations+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations";
-        private DocumentFormat.OpenXml.Office.Word.TemplateCommandGroup _rootElement;
+        private DocumentFormat.OpenXml.Office.Word.TemplateCommandGroup? _rootElement;
 
         /// <summary>
         /// Creates an instance of the CustomizationPart OpenXmlType
@@ -29,7 +31,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -42,7 +44,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => TemplateCommandGroup;
+        internal override OpenXmlPartRootElement? PartRootElement => TemplateCommandGroup;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -65,7 +67,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Office.Word.TemplateCommandGroup>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -82,7 +84,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the WordAttachedToolbarsPart of the CustomizationPart
         /// </summary>
-        public WordAttachedToolbarsPart WordAttachedToolbarsPart => GetSubPartOfType<WordAttachedToolbarsPart>();
+        public WordAttachedToolbarsPart? WordAttachedToolbarsPart => GetSubPartOfType<WordAttachedToolbarsPart>();
 
         /// <inheritdoc/>
         internal sealed override OpenXmlPart CreatePartCore(string relationshipType)

@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -72,7 +74,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         [SchemaAttr(35, "classid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ActiveXControlClassId
+        public StringValue? ActiveXControlClassId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -91,7 +93,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         [SchemaAttr(35, "license")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue License
+        public StringValue? License
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -110,7 +112,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -129,7 +131,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         [SchemaAttr(35, "persistence")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence
+        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>? Persistence
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
             set => SetAttribute(value);
@@ -222,7 +224,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(35, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -241,7 +243,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(35, "value")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Value
+        public StringValue? Value
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -276,7 +278,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public SharedComFont SharedComFont
+        public SharedComFont? SharedComFont
         {
             get => GetElement<SharedComFont>();
             set => SetElement(value);
@@ -289,7 +291,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public SharedComPicture SharedComPicture
+        public SharedComPicture? SharedComPicture
         {
             get => GetElement<SharedComPicture>();
             set => SetElement(value);
@@ -359,7 +361,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(35, "persistence")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence
+        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>? Persistence
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
             set => SetAttribute(value);
@@ -378,7 +380,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -432,7 +434,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

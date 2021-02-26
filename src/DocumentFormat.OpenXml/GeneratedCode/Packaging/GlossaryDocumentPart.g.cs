@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -45,7 +47,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.document.glossary+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument";
-        private DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument _rootElement;
+        private DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument? _rootElement;
 
         /// <summary>
         /// Creates an instance of the GlossaryDocumentPart OpenXmlType
@@ -70,7 +72,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CustomizationPart of the GlossaryDocumentPart
         /// </summary>
-        public CustomizationPart CustomizationPart => GetSubPartOfType<CustomizationPart>();
+        public CustomizationPart? CustomizationPart => GetSubPartOfType<CustomizationPart>();
 
         /// <summary>
         /// Gets the DiagramColorsParts of the GlossaryDocumentPart
@@ -100,7 +102,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the DocumentSettingsPart of the GlossaryDocumentPart
         /// </summary>
-        public DocumentSettingsPart DocumentSettingsPart => GetSubPartOfType<DocumentSettingsPart>();
+        public DocumentSettingsPart? DocumentSettingsPart => GetSubPartOfType<DocumentSettingsPart>();
 
         /// <summary>
         /// Gets the EmbeddedControlPersistenceParts of the GlossaryDocumentPart
@@ -120,7 +122,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the EndnotesPart of the GlossaryDocumentPart
         /// </summary>
-        public EndnotesPart EndnotesPart => GetSubPartOfType<EndnotesPart>();
+        public EndnotesPart? EndnotesPart => GetSubPartOfType<EndnotesPart>();
 
         /// <summary>
         /// Gets the ExtendedChartParts of the GlossaryDocumentPart
@@ -130,7 +132,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the FontTablePart of the GlossaryDocumentPart
         /// </summary>
-        public FontTablePart FontTablePart => GetSubPartOfType<FontTablePart>();
+        public FontTablePart? FontTablePart => GetSubPartOfType<FontTablePart>();
 
         /// <summary>
         /// Gets the FooterParts of the GlossaryDocumentPart
@@ -140,7 +142,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the FootnotesPart of the GlossaryDocumentPart
         /// </summary>
-        public FootnotesPart FootnotesPart => GetSubPartOfType<FootnotesPart>();
+        public FootnotesPart? FootnotesPart => GetSubPartOfType<FootnotesPart>();
 
         /// <summary>
         /// Gets or sets the root element of this part.
@@ -154,7 +156,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -178,7 +180,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -194,9 +196,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the NumberingDefinitionsPart of the GlossaryDocumentPart
         /// </summary>
-        public NumberingDefinitionsPart NumberingDefinitionsPart => GetSubPartOfType<NumberingDefinitionsPart>();
+        public NumberingDefinitionsPart? NumberingDefinitionsPart => GetSubPartOfType<NumberingDefinitionsPart>();
 
-        internal override OpenXmlPartRootElement PartRootElement => GlossaryDocument;
+        internal override OpenXmlPartRootElement? PartRootElement => GlossaryDocument;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -204,12 +206,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the StyleDefinitionsPart of the GlossaryDocumentPart
         /// </summary>
-        public StyleDefinitionsPart StyleDefinitionsPart => GetSubPartOfType<StyleDefinitionsPart>();
+        public StyleDefinitionsPart? StyleDefinitionsPart => GetSubPartOfType<StyleDefinitionsPart>();
 
         /// <summary>
         /// Gets the StylesWithEffectsPart of the GlossaryDocumentPart
         /// </summary>
-        public StylesWithEffectsPart StylesWithEffectsPart => GetSubPartOfType<StylesWithEffectsPart>();
+        public StylesWithEffectsPart? StylesWithEffectsPart => GetSubPartOfType<StylesWithEffectsPart>();
 
         /// <inheritdoc/>
         internal sealed override string TargetName => "document";
@@ -220,27 +222,27 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the VbaProjectPart of the GlossaryDocumentPart
         /// </summary>
-        public VbaProjectPart VbaProjectPart => GetSubPartOfType<VbaProjectPart>();
+        public VbaProjectPart? VbaProjectPart => GetSubPartOfType<VbaProjectPart>();
 
         /// <summary>
         /// Gets the WebSettingsPart of the GlossaryDocumentPart
         /// </summary>
-        public WebSettingsPart WebSettingsPart => GetSubPartOfType<WebSettingsPart>();
+        public WebSettingsPart? WebSettingsPart => GetSubPartOfType<WebSettingsPart>();
 
         /// <summary>
         /// Gets the WordprocessingCommentsExPart of the GlossaryDocumentPart
         /// </summary>
-        public WordprocessingCommentsExPart WordprocessingCommentsExPart => GetSubPartOfType<WordprocessingCommentsExPart>();
+        public WordprocessingCommentsExPart? WordprocessingCommentsExPart => GetSubPartOfType<WordprocessingCommentsExPart>();
 
         /// <summary>
         /// Gets the WordprocessingCommentsPart of the GlossaryDocumentPart
         /// </summary>
-        public WordprocessingCommentsPart WordprocessingCommentsPart => GetSubPartOfType<WordprocessingCommentsPart>();
+        public WordprocessingCommentsPart? WordprocessingCommentsPart => GetSubPartOfType<WordprocessingCommentsPart>();
 
         /// <summary>
         /// Gets the WordprocessingPeoplePart of the GlossaryDocumentPart
         /// </summary>
-        public WordprocessingPeoplePart WordprocessingPeoplePart => GetSubPartOfType<WordprocessingPeoplePart>();
+        public WordprocessingPeoplePart? WordprocessingPeoplePart => GetSubPartOfType<WordprocessingPeoplePart>();
 
         /// <summary>
         /// Gets the WordprocessingPrinterSettingsParts of the GlossaryDocumentPart

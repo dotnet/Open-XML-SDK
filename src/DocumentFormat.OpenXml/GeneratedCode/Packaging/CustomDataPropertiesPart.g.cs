@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -18,7 +20,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.customDataProperties+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/customDataProps";
-        private DocumentFormat.OpenXml.Office2010.Excel.DatastoreItem _rootElement;
+        private DocumentFormat.OpenXml.Office2010.Excel.DatastoreItem? _rootElement;
 
         /// <summary>
         /// Creates an instance of the CustomDataPropertiesPart OpenXmlType
@@ -33,7 +35,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CustomDataPart of the CustomDataPropertiesPart
         /// </summary>
-        public CustomDataPart CustomDataPart => GetSubPartOfType<CustomDataPart>();
+        public CustomDataPart? CustomDataPart => GetSubPartOfType<CustomDataPart>();
 
         /// <summary>
         /// Gets or sets the root element of this part.
@@ -47,7 +49,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Office2010.Excel.DatastoreItem>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -61,7 +63,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -74,7 +76,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => DatastoreItem;
+        internal override OpenXmlPartRootElement? PartRootElement => DatastoreItem;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

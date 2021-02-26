@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -34,7 +36,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster";
-        private DocumentFormat.OpenXml.Presentation.HandoutMaster _rootElement;
+        private DocumentFormat.OpenXml.Presentation.HandoutMaster? _rootElement;
 
         /// <summary>
         /// Creates an instance of the HandoutMasterPart OpenXmlType
@@ -113,7 +115,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Presentation.HandoutMaster>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -132,7 +134,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -145,7 +147,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => HandoutMaster;
+        internal override OpenXmlPartRootElement? PartRootElement => HandoutMaster;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -153,7 +155,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the SlidePart of the HandoutMasterPart
         /// </summary>
-        public SlidePart SlidePart => GetSubPartOfType<SlidePart>();
+        public SlidePart? SlidePart => GetSubPartOfType<SlidePart>();
 
         /// <inheritdoc/>
         internal sealed override string TargetName => "handoutMaster";
@@ -164,7 +166,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ThemePart of the HandoutMasterPart
         /// </summary>
-        public ThemePart ThemePart => GetSubPartOfType<ThemePart>();
+        public ThemePart? ThemePart => GetSubPartOfType<ThemePart>();
 
         /// <summary>
         /// Gets the UserDefinedTagsParts of the HandoutMasterPart

@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -18,7 +20,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings";
-        private DocumentFormat.OpenXml.Wordprocessing.Settings _rootElement;
+        private DocumentFormat.OpenXml.Wordprocessing.Settings? _rootElement;
 
         /// <summary>
         /// Creates an instance of the DocumentSettingsPart OpenXmlType
@@ -35,7 +37,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -51,9 +53,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the MailMergeRecipientDataPart of the DocumentSettingsPart
         /// </summary>
-        public MailMergeRecipientDataPart MailMergeRecipientDataPart => GetSubPartOfType<MailMergeRecipientDataPart>();
+        public MailMergeRecipientDataPart? MailMergeRecipientDataPart => GetSubPartOfType<MailMergeRecipientDataPart>();
 
-        internal override OpenXmlPartRootElement PartRootElement => Settings;
+        internal override OpenXmlPartRootElement? PartRootElement => Settings;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -70,7 +72,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Settings>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set

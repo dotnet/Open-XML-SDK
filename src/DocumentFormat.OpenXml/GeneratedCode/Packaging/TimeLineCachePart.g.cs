@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -17,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.timelineCache+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/timelineCache";
-        private DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheDefinition _rootElement;
+        private DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheDefinition? _rootElement;
 
         /// <summary>
         /// Creates an instance of the TimeLineCachePart OpenXmlType
@@ -29,7 +31,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -42,7 +44,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => TimelineCacheDefinition;
+        internal override OpenXmlPartRootElement? PartRootElement => TimelineCacheDefinition;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -65,7 +67,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheDefinition>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set

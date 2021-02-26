@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing.Charts;
 using DocumentFormat.OpenXml.Framework;
@@ -79,7 +81,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         /// <remark>
         /// xmlns:c16r3 = http://schemas.microsoft.com/office/drawing/2017/03/chart
         /// </remark>
-        public BooleanFalse BooleanFalse
+        public BooleanFalse? BooleanFalse
         {
             get => GetElement<BooleanFalse>();
             set => SetElement(value);
@@ -119,7 +121,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         [SchemaAttr(101, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Val
+        public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);

@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -634,7 +636,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         [SchemaAttr(23, "author")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Author
+        public StringValue? Author
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -653,7 +655,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         [SchemaAttr(23, "date")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue Date
+        public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -672,7 +674,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         [SchemaAttr(23, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -895,7 +897,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         [SchemaAttr(23, "author")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Author
+        public StringValue? Author
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -914,7 +916,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         [SchemaAttr(23, "date")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue Date
+        public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -933,7 +935,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         [SchemaAttr(23, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1072,7 +1074,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Val
+        public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -1121,7 +1123,7 @@ union.AddValidator<Int32Value>(new NumberValidator() { MaxInclusive = (-2L) });
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Val
+        public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -1340,7 +1342,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Val
+        public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -1427,7 +1429,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue Val
+        public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -1549,7 +1551,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (3L) });
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues>>();
             set => SetAttribute(value);
@@ -1631,7 +1633,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "ang")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Angle
+        public Int32Value? Angle
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -1650,7 +1652,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "scaled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Scaled
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>? Scaled
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>();
             set => SetAttribute(value);
@@ -1737,7 +1739,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "path")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues> Path
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues>? Path
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues>>();
             set => SetAttribute(value);
@@ -1767,7 +1769,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public FillToRectangle FillToRectangle
+        public FillToRectangle? FillToRectangle
         {
             get => GetElement<FillToRectangle>();
             set => SetElement(value);
@@ -1984,7 +1986,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public RgbColorModelHex RgbColorModelHex
+        public RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<RgbColorModelHex>();
             set => SetElement(value);
@@ -1997,7 +1999,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public SchemeColor SchemeColor
+        public SchemeColor? SchemeColor
         {
             get => GetElement<SchemeColor>();
             set => SetElement(value);
@@ -2085,7 +2087,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public GradientStopList GradientStopList
+        public GradientStopList? GradientStopList
         {
             get => GetElement<GradientStopList>();
             set => SetElement(value);
@@ -2125,7 +2127,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues>>();
             set => SetAttribute(value);
@@ -2177,7 +2179,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "lim")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Limit
+        public Int32Value? Limit
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2261,7 +2263,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         [SchemaAttr(52, "rad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int64Value GlowRadius
+        public Int64Value? GlowRadius
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -2300,7 +2302,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public RgbColorModelHex RgbColorModelHex
+        public RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<RgbColorModelHex>();
             set => SetElement(value);
@@ -2313,7 +2315,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public SchemeColor SchemeColor
+        public SchemeColor? SchemeColor
         {
             get => GetElement<SchemeColor>();
             set => SetElement(value);
@@ -2384,7 +2386,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(52, "blurRad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int64Value BlurRadius
+        public Int64Value? BlurRadius
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -2403,7 +2405,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(52, "dist")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int64Value DistanceFromText
+        public Int64Value? DistanceFromText
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -2422,7 +2424,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(52, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value DirectionAngle
+        public Int32Value? DirectionAngle
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2441,7 +2443,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(52, "sx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value HorizontalScalingFactor
+        public Int32Value? HorizontalScalingFactor
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2460,7 +2462,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(52, "sy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value VerticalScalingFactor
+        public Int32Value? VerticalScalingFactor
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2479,7 +2481,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(52, "kx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value HorizontalSkewAngle
+        public Int32Value? HorizontalSkewAngle
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2498,7 +2500,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(52, "ky")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value VerticalSkewAngle
+        public Int32Value? VerticalSkewAngle
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2517,7 +2519,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(52, "algn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>();
             set => SetAttribute(value);
@@ -2588,7 +2590,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public RgbColorModelHex RgbColorModelHex
+        public RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<RgbColorModelHex>();
             set => SetElement(value);
@@ -2601,7 +2603,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public SchemeColor SchemeColor
+        public SchemeColor? SchemeColor
         {
             get => GetElement<SchemeColor>();
             set => SetElement(value);
@@ -2641,7 +2643,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "blurRad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int64Value BlurRadius
+        public Int64Value? BlurRadius
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -2660,7 +2662,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "stA")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value StartingOpacity
+        public Int32Value? StartingOpacity
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2679,7 +2681,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "stPos")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value StartPosition
+        public Int32Value? StartPosition
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2698,7 +2700,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "endA")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value EndingOpacity
+        public Int32Value? EndingOpacity
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2717,7 +2719,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "endPos")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value EndPosition
+        public Int32Value? EndPosition
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2736,7 +2738,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "dist")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int64Value DistanceFromText
+        public Int64Value? DistanceFromText
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -2755,7 +2757,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value DirectionAngle
+        public Int32Value? DirectionAngle
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2774,7 +2776,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "fadeDir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value FadeDirection
+        public Int32Value? FadeDirection
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2793,7 +2795,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "sx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value HorizontalScalingFactor
+        public Int32Value? HorizontalScalingFactor
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2812,7 +2814,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "sy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value VerticalScalingFactor
+        public Int32Value? VerticalScalingFactor
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2831,7 +2833,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "kx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value HorizontalSkewAngle
+        public Int32Value? HorizontalSkewAngle
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2850,7 +2852,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "ky")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value VerticalSkewAngle
+        public Int32Value? VerticalSkewAngle
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2869,7 +2871,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "algn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>();
             set => SetAttribute(value);
@@ -3015,7 +3017,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "w")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value LineWidth
+        public Int32Value? LineWidth
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -3034,7 +3036,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "cap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues> CapType
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues>? CapType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues>>();
             set => SetAttribute(value);
@@ -3053,7 +3055,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "cmpd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues> Compound
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues>? Compound
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues>>();
             set => SetAttribute(value);
@@ -3072,7 +3074,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "algn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues> Alignment
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues>>();
             set => SetAttribute(value);
@@ -3220,7 +3222,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public NoFillEmpty NoFillEmpty
+        public NoFillEmpty? NoFillEmpty
         {
             get => GetElement<NoFillEmpty>();
             set => SetElement(value);
@@ -3233,7 +3235,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public SolidColorFillProperties SolidColorFillProperties
+        public SolidColorFillProperties? SolidColorFillProperties
         {
             get => GetElement<SolidColorFillProperties>();
             set => SetElement(value);
@@ -3246,7 +3248,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public GradientFillProperties GradientFillProperties
+        public GradientFillProperties? GradientFillProperties
         {
             get => GetElement<GradientFillProperties>();
             set => SetElement(value);
@@ -3325,7 +3327,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Camera Camera
+        public Camera? Camera
         {
             get => GetElement<Camera>();
             set => SetElement(value);
@@ -3338,7 +3340,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public LightRig LightRig
+        public LightRig? LightRig
         {
             get => GetElement<LightRig>();
             set => SetElement(value);
@@ -3411,7 +3413,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "extrusionH")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int64Value ExtrusionHeight
+        public Int64Value? ExtrusionHeight
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -3430,7 +3432,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "contourW")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int64Value ContourWidth
+        public Int64Value? ContourWidth
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -3449,7 +3451,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "prstMaterial")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues> PresetMaterialType
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues>? PresetMaterialType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues>>();
             set => SetAttribute(value);
@@ -3496,7 +3498,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public BevelTop BevelTop
+        public BevelTop? BevelTop
         {
             get => GetElement<BevelTop>();
             set => SetElement(value);
@@ -3509,7 +3511,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public BevelBottom BevelBottom
+        public BevelBottom? BevelBottom
         {
             get => GetElement<BevelBottom>();
             set => SetElement(value);
@@ -3522,7 +3524,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public ExtrusionColor ExtrusionColor
+        public ExtrusionColor? ExtrusionColor
         {
             get => GetElement<ExtrusionColor>();
             set => SetElement(value);
@@ -3535,7 +3537,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public ContourColor ContourColor
+        public ContourColor? ContourColor
         {
             get => GetElement<ContourColor>();
             set => SetElement(value);
@@ -3575,7 +3577,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues>>();
             set => SetAttribute(value);
@@ -3628,7 +3630,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues>>();
             set => SetAttribute(value);
@@ -3681,7 +3683,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues>>();
             set => SetAttribute(value);
@@ -3906,7 +3908,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>();
             set => SetAttribute(value);
@@ -3985,7 +3987,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
             set => SetAttribute(value);
@@ -4004,7 +4006,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RelationshipId
+        public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4043,7 +4045,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public WordNonVisualContentPartShapeProperties WordNonVisualContentPartShapeProperties
+        public WordNonVisualContentPartShapeProperties? WordNonVisualContentPartShapeProperties
         {
             get => GetElement<WordNonVisualContentPartShapeProperties>();
             set => SetElement(value);
@@ -4056,7 +4058,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Transform2D Transform2D
+        public Transform2D? Transform2D
         {
             get => GetElement<Transform2D>();
             set => SetElement(value);
@@ -4069,7 +4071,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public OfficeArtExtensionList OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
@@ -4109,7 +4111,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue Val
+        public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -4217,7 +4219,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(23, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4269,7 +4271,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Val
+        public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -4364,7 +4366,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public Checked Checked
+        public Checked? Checked
         {
             get => GetElement<Checked>();
             set => SetElement(value);
@@ -4377,7 +4379,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public CheckedState CheckedState
+        public CheckedState? CheckedState
         {
             get => GetElement<CheckedState>();
             set => SetElement(value);
@@ -4390,7 +4392,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public UncheckedState UncheckedState
+        public UncheckedState? UncheckedState
         {
             get => GetElement<UncheckedState>();
             set => SetElement(value);
@@ -4461,7 +4463,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "pos")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value StopPosition
+        public Int32Value? StopPosition
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -4501,7 +4503,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public RgbColorModelHex RgbColorModelHex
+        public RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<RgbColorModelHex>();
             set => SetElement(value);
@@ -4514,7 +4516,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public SchemeColor SchemeColor
+        public SchemeColor? SchemeColor
         {
             get => GetElement<SchemeColor>();
             set => SetElement(value);
@@ -4554,7 +4556,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(52, "l")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Left
+        public Int32Value? Left
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -4573,7 +4575,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(52, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Top
+        public Int32Value? Top
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -4592,7 +4594,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(52, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Right
+        public Int32Value? Right
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -4611,7 +4613,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(52, "b")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Bottom
+        public Int32Value? Bottom
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -4738,7 +4740,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "lat")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Lattitude
+        public Int32Value? Lattitude
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -4757,7 +4759,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "lon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Longitude
+        public Int32Value? Longitude
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -4776,7 +4778,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "rev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Revolution
+        public Int32Value? Revolution
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -4842,7 +4844,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (21600000L), MinInc
         [SchemaAttr(52, "prst")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues> PresetCameraType
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues>? PresetCameraType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues>>();
             set => SetAttribute(value);
@@ -4926,7 +4928,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(52, "rig")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues> LightRigType
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues>? LightRigType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues>>();
             set => SetAttribute(value);
@@ -4945,7 +4947,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(52, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues> LightDirectionType
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues>? LightDirectionType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues>>();
             set => SetAttribute(value);
@@ -4983,7 +4985,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public SphereCoordinates SphereCoordinates
+        public SphereCoordinates? SphereCoordinates
         {
             get => GetElement<SphereCoordinates>();
             set => SetElement(value);
@@ -5076,7 +5078,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(52, "w")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int64Value Width
+        public Int64Value? Width
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -5095,7 +5097,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(52, "h")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int64Value Height
+        public Int64Value? Height
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -5114,7 +5116,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(52, "prst")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues> PresetProfileType
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues>? PresetProfileType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues>>();
             set => SetAttribute(value);
@@ -5341,7 +5343,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public RgbColorModelHex RgbColorModelHex
+        public RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<RgbColorModelHex>();
             set => SetElement(value);
@@ -5354,7 +5356,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public SchemeColor SchemeColor
+        public SchemeColor? SchemeColor
         {
             get => GetElement<SchemeColor>();
             set => SetElement(value);
@@ -5391,7 +5393,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(52, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5410,7 +5412,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>();
             set => SetAttribute(value);
@@ -5521,7 +5523,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "font")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Font
+        public StringValue? Font
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5540,7 +5542,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(52, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue Val
+        public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -5621,7 +5623,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5637,7 +5639,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5653,7 +5655,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "descr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5669,7 +5671,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5685,7 +5687,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5726,7 +5728,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
+        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             set => SetElement(value);
@@ -5739,7 +5741,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
+        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             set => SetElement(value);
@@ -5752,7 +5754,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
+        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             set => SetElement(value);
@@ -5820,7 +5822,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "isComment")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsComment
+        public BooleanValue? IsComment
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5849,7 +5851,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks
+        public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks? ContentPartLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
             set => SetElement(value);
@@ -5862,7 +5864,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             set => SetElement(value);
@@ -5941,7 +5943,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public NonVisualDrawingProperties NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
@@ -5954,7 +5956,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public NonVisualInkContentPartProperties NonVisualInkContentPartProperties
+        public NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
             get => GetElement<NonVisualInkContentPartProperties>();
             set => SetElement(value);
@@ -6022,7 +6024,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rot")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Rotation
+        public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -6038,7 +6040,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "flipH")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HorizontalFlip
+        public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6054,7 +6056,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "flipV")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue VerticalFlip
+        public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6085,7 +6087,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Offset Offset
+        public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
             set => SetElement(value);
@@ -6098,7 +6100,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Extents Extents
+        public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
             set => SetElement(value);

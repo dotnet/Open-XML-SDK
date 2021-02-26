@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -40,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         [SchemaAttr(0, "i")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value I
+        public UInt32Value? I
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -120,7 +122,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -207,7 +209,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -294,7 +296,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "s")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value S
+        public UInt32Value? S
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -326,7 +328,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata
         /// </remark>
-        public RichValueFallback RichValueFallback
+        public RichValueFallback? RichValueFallback
         {
             get => GetElement<RichValueFallback>();
             set => SetElement(value);
@@ -445,7 +447,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallbackType> T
+        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallbackType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallbackType>>();
             set => SetAttribute(value);
@@ -562,7 +564,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue T
+        public StringValue? T
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -616,7 +618,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue N
+        public StringValue? N
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -632,7 +634,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueValueType> T
+        public EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueValueType>? T
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueValueType>>();
             set => SetAttribute(value);

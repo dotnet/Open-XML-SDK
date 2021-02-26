@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing.Spreadsheet;
 using DocumentFormat.OpenXml.Framework;
@@ -69,7 +71,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -184,7 +186,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <summary>
         /// Gets the CalculationChainPart associated with this element.
         /// </summary>
-        public CalculationChainPart CalculationChainPart
+        public CalculationChainPart? CalculationChainPart
         {
             get => OpenXmlPart as CalculationChainPart;
             internal set => OpenXmlPart = value;
@@ -262,7 +264,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Authors Authors
+        public Authors? Authors
         {
             get => GetElement<Authors>();
             set => SetElement(value);
@@ -275,7 +277,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CommentList CommentList
+        public CommentList? CommentList
         {
             get => GetElement<CommentList>();
             set => SetElement(value);
@@ -288,7 +290,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -322,7 +324,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <summary>
         /// Gets the WorksheetCommentsPart associated with this element.
         /// </summary>
-        public WorksheetCommentsPart WorksheetCommentsPart
+        public WorksheetCommentsPart? WorksheetCommentsPart
         {
             get => OpenXmlPart as WorksheetCommentsPart;
             internal set => OpenXmlPart = value;
@@ -387,7 +389,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         [SchemaAttr(0, "SelectionNamespaces")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SelectionNamespaces
+        public StringValue? SelectionNamespaces
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -439,7 +441,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <summary>
         /// Gets the CustomXmlMappingsPart associated with this element.
         /// </summary>
-        public CustomXmlMappingsPart CustomXmlMappingsPart
+        public CustomXmlMappingsPart? CustomXmlMappingsPart
         {
             get => OpenXmlPart as CustomXmlMappingsPart;
             internal set => OpenXmlPart = value;
@@ -532,7 +534,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <summary>
         /// Gets the ConnectionsPart associated with this element.
         /// </summary>
-        public ConnectionsPart ConnectionsPart
+        public ConnectionsPart? ConnectionsPart
         {
             get => OpenXmlPart as ConnectionsPart;
             internal set => OpenXmlPart = value;
@@ -609,7 +611,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -625,7 +627,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "invalid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Invalid
+        public BooleanValue? Invalid
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -641,7 +643,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "saveData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SaveData
+        public BooleanValue? SaveData
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -657,7 +659,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "refreshOnLoad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RefreshOnLoad
+        public BooleanValue? RefreshOnLoad
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -673,7 +675,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "optimizeMemory")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue OptimizeMemory
+        public BooleanValue? OptimizeMemory
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -689,7 +691,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "enableRefresh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue EnableRefresh
+        public BooleanValue? EnableRefresh
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -705,7 +707,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "refreshedBy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RefreshedBy
+        public StringValue? RefreshedBy
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -721,7 +723,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "refreshedDateIso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue LastRefreshedDateIso
+        public DateTimeValue? LastRefreshedDateIso
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -737,7 +739,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "refreshedDate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue RefreshedDate
+        public DoubleValue? RefreshedDate
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -753,7 +755,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "backgroundQuery")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue BackgroundQuery
+        public BooleanValue? BackgroundQuery
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -769,7 +771,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "missingItemsLimit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MissingItemsLimit
+        public UInt32Value? MissingItemsLimit
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -785,7 +787,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "createdVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue CreatedVersion
+        public ByteValue? CreatedVersion
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -801,7 +803,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "refreshedVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue RefreshedVersion
+        public ByteValue? RefreshedVersion
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -817,7 +819,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "minRefreshableVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue MinRefreshableVersion
+        public ByteValue? MinRefreshableVersion
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -833,7 +835,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "recordCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RecordCount
+        public UInt32Value? RecordCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -849,7 +851,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "upgradeOnRefresh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UpgradeOnRefresh
+        public BooleanValue? UpgradeOnRefresh
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -865,7 +867,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tupleCache")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsTupleCache
+        public BooleanValue? IsTupleCache
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -881,7 +883,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "supportSubquery")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SupportSubquery
+        public BooleanValue? SupportSubquery
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -897,7 +899,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "supportAdvancedDrill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SupportAdvancedDrill
+        public BooleanValue? SupportAdvancedDrill
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -962,7 +964,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CacheSource CacheSource
+        public CacheSource? CacheSource
         {
             get => GetElement<CacheSource>();
             set => SetElement(value);
@@ -975,7 +977,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CacheFields CacheFields
+        public CacheFields? CacheFields
         {
             get => GetElement<CacheFields>();
             set => SetElement(value);
@@ -988,7 +990,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CacheHierarchies CacheHierarchies
+        public CacheHierarchies? CacheHierarchies
         {
             get => GetElement<CacheHierarchies>();
             set => SetElement(value);
@@ -1001,7 +1003,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Kpis Kpis
+        public Kpis? Kpis
         {
             get => GetElement<Kpis>();
             set => SetElement(value);
@@ -1014,7 +1016,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public TupleCache TupleCache
+        public TupleCache? TupleCache
         {
             get => GetElement<TupleCache>();
             set => SetElement(value);
@@ -1027,7 +1029,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CalculatedItems CalculatedItems
+        public CalculatedItems? CalculatedItems
         {
             get => GetElement<CalculatedItems>();
             set => SetElement(value);
@@ -1040,7 +1042,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CalculatedMembers CalculatedMembers
+        public CalculatedMembers? CalculatedMembers
         {
             get => GetElement<CalculatedMembers>();
             set => SetElement(value);
@@ -1053,7 +1055,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Dimensions Dimensions
+        public Dimensions? Dimensions
         {
             get => GetElement<Dimensions>();
             set => SetElement(value);
@@ -1066,7 +1068,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public MeasureGroups MeasureGroups
+        public MeasureGroups? MeasureGroups
         {
             get => GetElement<MeasureGroups>();
             set => SetElement(value);
@@ -1079,7 +1081,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Maps Maps
+        public Maps? Maps
         {
             get => GetElement<Maps>();
             set => SetElement(value);
@@ -1092,7 +1094,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotCacheDefinitionExtensionList PivotCacheDefinitionExtensionList
+        public PivotCacheDefinitionExtensionList? PivotCacheDefinitionExtensionList
         {
             get => GetElement<PivotCacheDefinitionExtensionList>();
             set => SetElement(value);
@@ -1126,7 +1128,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <summary>
         /// Gets the PivotTableCacheDefinitionPart associated with this element.
         /// </summary>
-        public PivotTableCacheDefinitionPart PivotTableCacheDefinitionPart
+        public PivotTableCacheDefinitionPart? PivotTableCacheDefinitionPart
         {
             get => OpenXmlPart as PivotTableCacheDefinitionPart;
             internal set => OpenXmlPart = value;
@@ -1191,7 +1193,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -1240,7 +1242,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <summary>
         /// Gets the PivotTableCacheRecordsPart associated with this element.
         /// </summary>
-        public PivotTableCacheRecordsPart PivotTableCacheRecordsPart
+        public PivotTableCacheRecordsPart? PivotTableCacheRecordsPart
         {
             get => OpenXmlPart as PivotTableCacheRecordsPart;
             internal set => OpenXmlPart = value;
@@ -1320,7 +1322,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1336,7 +1338,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cacheId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value CacheId
+        public UInt32Value? CacheId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -1352,7 +1354,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dataOnRows")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DataOnRows
+        public BooleanValue? DataOnRows
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1368,7 +1370,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dataPosition")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value DataPosition
+        public UInt32Value? DataPosition
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -1384,7 +1386,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoFormatId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value AutoFormatId
+        public UInt32Value? AutoFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -1400,7 +1402,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyNumberFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyNumberFormats
+        public BooleanValue? ApplyNumberFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1416,7 +1418,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyBorderFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyBorderFormats
+        public BooleanValue? ApplyBorderFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1432,7 +1434,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyFontFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyFontFormats
+        public BooleanValue? ApplyFontFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1448,7 +1450,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyPatternFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyPatternFormats
+        public BooleanValue? ApplyPatternFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1464,7 +1466,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyAlignmentFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyAlignmentFormats
+        public BooleanValue? ApplyAlignmentFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1480,7 +1482,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyWidthHeightFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyWidthHeightFormats
+        public BooleanValue? ApplyWidthHeightFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1496,7 +1498,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dataCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DataCaption
+        public StringValue? DataCaption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1512,7 +1514,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "grandTotalCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue GrandTotalCaption
+        public StringValue? GrandTotalCaption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1528,7 +1530,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "errorCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ErrorCaption
+        public StringValue? ErrorCaption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1544,7 +1546,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showError")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowError
+        public BooleanValue? ShowError
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1560,7 +1562,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "missingCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue MissingCaption
+        public StringValue? MissingCaption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1576,7 +1578,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showMissing")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowMissing
+        public BooleanValue? ShowMissing
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1592,7 +1594,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pageStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue PageStyle
+        public StringValue? PageStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1608,7 +1610,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pivotTableStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue PivotTableStyleName
+        public StringValue? PivotTableStyleName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1624,7 +1626,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "vacatedStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue VacatedStyle
+        public StringValue? VacatedStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1640,7 +1642,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tag")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tag
+        public StringValue? Tag
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1656,7 +1658,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "updatedVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue UpdatedVersion
+        public ByteValue? UpdatedVersion
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -1672,7 +1674,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "minRefreshableVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue MinRefreshableVersion
+        public ByteValue? MinRefreshableVersion
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -1688,7 +1690,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "asteriskTotals")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AsteriskTotals
+        public BooleanValue? AsteriskTotals
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1704,7 +1706,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showItems")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowItems
+        public BooleanValue? ShowItems
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1720,7 +1722,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "editData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue EditData
+        public BooleanValue? EditData
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1736,7 +1738,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "disableFieldList")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DisableFieldList
+        public BooleanValue? DisableFieldList
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1752,7 +1754,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showCalcMbrs")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowCalculatedMembers
+        public BooleanValue? ShowCalculatedMembers
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1768,7 +1770,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "visualTotals")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue VisualTotals
+        public BooleanValue? VisualTotals
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1784,7 +1786,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showMultipleLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowMultipleLabel
+        public BooleanValue? ShowMultipleLabel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1800,7 +1802,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showDataDropDown")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowDataDropDown
+        public BooleanValue? ShowDataDropDown
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1816,7 +1818,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showDrill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowDrill
+        public BooleanValue? ShowDrill
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1832,7 +1834,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "printDrill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PrintDrill
+        public BooleanValue? PrintDrill
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1848,7 +1850,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showMemberPropertyTips")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowMemberPropertyTips
+        public BooleanValue? ShowMemberPropertyTips
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1864,7 +1866,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showDataTips")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowDataTips
+        public BooleanValue? ShowDataTips
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1880,7 +1882,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "enableWizard")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue EnableWizard
+        public BooleanValue? EnableWizard
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1896,7 +1898,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "enableDrill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue EnableDrill
+        public BooleanValue? EnableDrill
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1912,7 +1914,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "enableFieldProperties")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue EnableFieldProperties
+        public BooleanValue? EnableFieldProperties
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1928,7 +1930,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "preserveFormatting")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PreserveFormatting
+        public BooleanValue? PreserveFormatting
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1944,7 +1946,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "useAutoFormatting")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UseAutoFormatting
+        public BooleanValue? UseAutoFormatting
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1960,7 +1962,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pageWrap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PageWrap
+        public UInt32Value? PageWrap
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -1976,7 +1978,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pageOverThenDown")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PageOverThenDown
+        public BooleanValue? PageOverThenDown
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1992,7 +1994,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "subtotalHiddenItems")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SubtotalHiddenItems
+        public BooleanValue? SubtotalHiddenItems
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2008,7 +2010,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rowGrandTotals")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RowGrandTotals
+        public BooleanValue? RowGrandTotals
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2024,7 +2026,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "colGrandTotals")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ColumnGrandTotals
+        public BooleanValue? ColumnGrandTotals
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2040,7 +2042,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fieldPrintTitles")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FieldPrintTitles
+        public BooleanValue? FieldPrintTitles
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2056,7 +2058,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "itemPrintTitles")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ItemPrintTitles
+        public BooleanValue? ItemPrintTitles
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2072,7 +2074,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "mergeItem")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MergeItem
+        public BooleanValue? MergeItem
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2088,7 +2090,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showDropZones")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowDropZones
+        public BooleanValue? ShowDropZones
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2104,7 +2106,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "createdVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue CreatedVersion
+        public ByteValue? CreatedVersion
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -2120,7 +2122,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "indent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Indent
+        public UInt32Value? Indent
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2136,7 +2138,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showEmptyRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowEmptyRow
+        public BooleanValue? ShowEmptyRow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2152,7 +2154,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showEmptyCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowEmptyColumn
+        public BooleanValue? ShowEmptyColumn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2168,7 +2170,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showHeaders")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowHeaders
+        public BooleanValue? ShowHeaders
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2184,7 +2186,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "compact")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Compact
+        public BooleanValue? Compact
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2200,7 +2202,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "outline")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Outline
+        public BooleanValue? Outline
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2216,7 +2218,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "outlineData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue OutlineData
+        public BooleanValue? OutlineData
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2232,7 +2234,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "compactData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CompactData
+        public BooleanValue? CompactData
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2248,7 +2250,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "published")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Published
+        public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2264,7 +2266,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "gridDropZones")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue GridDropZones
+        public BooleanValue? GridDropZones
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2280,7 +2282,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "immersive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue StopImmersiveUi
+        public BooleanValue? StopImmersiveUi
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2296,7 +2298,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "multipleFieldFilters")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MultipleFieldFilters
+        public BooleanValue? MultipleFieldFilters
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2312,7 +2314,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "chartFormat")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ChartFormat
+        public UInt32Value? ChartFormat
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2328,7 +2330,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rowHeaderCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RowHeaderCaption
+        public StringValue? RowHeaderCaption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2344,7 +2346,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "colHeaderCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ColumnHeaderCaption
+        public StringValue? ColumnHeaderCaption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2360,7 +2362,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fieldListSortAscending")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FieldListSortAscending
+        public BooleanValue? FieldListSortAscending
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2376,7 +2378,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "mdxSubqueries")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MdxSubqueries
+        public BooleanValue? MdxSubqueries
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2392,7 +2394,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "customListSort")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CustomListSort
+        public BooleanValue? CustomListSort
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2539,7 +2541,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Location Location
+        public Location? Location
         {
             get => GetElement<Location>();
             set => SetElement(value);
@@ -2552,7 +2554,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotFields PivotFields
+        public PivotFields? PivotFields
         {
             get => GetElement<PivotFields>();
             set => SetElement(value);
@@ -2565,7 +2567,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public RowFields RowFields
+        public RowFields? RowFields
         {
             get => GetElement<RowFields>();
             set => SetElement(value);
@@ -2578,7 +2580,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public RowItems RowItems
+        public RowItems? RowItems
         {
             get => GetElement<RowItems>();
             set => SetElement(value);
@@ -2591,7 +2593,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ColumnFields ColumnFields
+        public ColumnFields? ColumnFields
         {
             get => GetElement<ColumnFields>();
             set => SetElement(value);
@@ -2604,7 +2606,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ColumnItems ColumnItems
+        public ColumnItems? ColumnItems
         {
             get => GetElement<ColumnItems>();
             set => SetElement(value);
@@ -2617,7 +2619,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PageFields PageFields
+        public PageFields? PageFields
         {
             get => GetElement<PageFields>();
             set => SetElement(value);
@@ -2630,7 +2632,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DataFields DataFields
+        public DataFields? DataFields
         {
             get => GetElement<DataFields>();
             set => SetElement(value);
@@ -2643,7 +2645,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Formats Formats
+        public Formats? Formats
         {
             get => GetElement<Formats>();
             set => SetElement(value);
@@ -2656,7 +2658,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ConditionalFormats ConditionalFormats
+        public ConditionalFormats? ConditionalFormats
         {
             get => GetElement<ConditionalFormats>();
             set => SetElement(value);
@@ -2669,7 +2671,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ChartFormats ChartFormats
+        public ChartFormats? ChartFormats
         {
             get => GetElement<ChartFormats>();
             set => SetElement(value);
@@ -2682,7 +2684,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotHierarchies PivotHierarchies
+        public PivotHierarchies? PivotHierarchies
         {
             get => GetElement<PivotHierarchies>();
             set => SetElement(value);
@@ -2695,7 +2697,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotTableStyle PivotTableStyle
+        public PivotTableStyle? PivotTableStyle
         {
             get => GetElement<PivotTableStyle>();
             set => SetElement(value);
@@ -2708,7 +2710,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotFilters PivotFilters
+        public PivotFilters? PivotFilters
         {
             get => GetElement<PivotFilters>();
             set => SetElement(value);
@@ -2721,7 +2723,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public RowHierarchiesUsage RowHierarchiesUsage
+        public RowHierarchiesUsage? RowHierarchiesUsage
         {
             get => GetElement<RowHierarchiesUsage>();
             set => SetElement(value);
@@ -2734,7 +2736,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ColumnHierarchiesUsage ColumnHierarchiesUsage
+        public ColumnHierarchiesUsage? ColumnHierarchiesUsage
         {
             get => GetElement<ColumnHierarchiesUsage>();
             set => SetElement(value);
@@ -2747,7 +2749,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotTableDefinitionExtensionList PivotTableDefinitionExtensionList
+        public PivotTableDefinitionExtensionList? PivotTableDefinitionExtensionList
         {
             get => GetElement<PivotTableDefinitionExtensionList>();
             set => SetElement(value);
@@ -2781,7 +2783,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <summary>
         /// Gets the PivotTablePart associated with this element.
         /// </summary>
-        public PivotTablePart PivotTablePart
+        public PivotTablePart? PivotTablePart
         {
             get => OpenXmlPart as PivotTablePart;
             internal set => OpenXmlPart = value;
@@ -2846,7 +2848,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2862,7 +2864,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "headers")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Headers
+        public BooleanValue? Headers
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2878,7 +2880,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rowNumbers")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RowNumbers
+        public BooleanValue? RowNumbers
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2894,7 +2896,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "disableRefresh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DisableRefresh
+        public BooleanValue? DisableRefresh
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2910,7 +2912,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "backgroundRefresh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue BackgroundRefresh
+        public BooleanValue? BackgroundRefresh
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2926,7 +2928,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "firstBackgroundRefresh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FirstBackgroundRefresh
+        public BooleanValue? FirstBackgroundRefresh
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2942,7 +2944,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "refreshOnLoad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RefreshOnLoad
+        public BooleanValue? RefreshOnLoad
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2958,7 +2960,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "growShrinkType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.GrowShrinkValues> GrowShrinkType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.GrowShrinkValues>? GrowShrinkType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.GrowShrinkValues>>();
             set => SetAttribute(value);
@@ -2974,7 +2976,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fillFormulas")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FillFormulas
+        public BooleanValue? FillFormulas
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2990,7 +2992,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "removeDataOnSave")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RemoveDataOnSave
+        public BooleanValue? RemoveDataOnSave
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3006,7 +3008,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "disableEdit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DisableEdit
+        public BooleanValue? DisableEdit
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3022,7 +3024,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "preserveFormatting")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PreserveFormatting
+        public BooleanValue? PreserveFormatting
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3038,7 +3040,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "adjustColumnWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AdjustColumnWidth
+        public BooleanValue? AdjustColumnWidth
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3054,7 +3056,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "intermediate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Intermediate
+        public BooleanValue? Intermediate
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3070,7 +3072,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "connectionId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ConnectionId
+        public UInt32Value? ConnectionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3086,7 +3088,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoFormatId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value AutoFormatId
+        public UInt32Value? AutoFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3102,7 +3104,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyNumberFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyNumberFormats
+        public BooleanValue? ApplyNumberFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3118,7 +3120,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyBorderFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyBorderFormats
+        public BooleanValue? ApplyBorderFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3134,7 +3136,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyFontFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyFontFormats
+        public BooleanValue? ApplyFontFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3150,7 +3152,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyPatternFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyPatternFormats
+        public BooleanValue? ApplyPatternFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3166,7 +3168,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyAlignmentFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyAlignmentFormats
+        public BooleanValue? ApplyAlignmentFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3182,7 +3184,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyWidthHeightFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyWidthHeightFormats
+        public BooleanValue? ApplyWidthHeightFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3241,7 +3243,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public QueryTableRefresh QueryTableRefresh
+        public QueryTableRefresh? QueryTableRefresh
         {
             get => GetElement<QueryTableRefresh>();
             set => SetElement(value);
@@ -3254,7 +3256,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public QueryTableExtensionList QueryTableExtensionList
+        public QueryTableExtensionList? QueryTableExtensionList
         {
             get => GetElement<QueryTableExtensionList>();
             set => SetElement(value);
@@ -3288,7 +3290,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <summary>
         /// Gets the QueryTablePart associated with this element.
         /// </summary>
-        public QueryTablePart QueryTablePart
+        public QueryTablePart? QueryTablePart
         {
             get => OpenXmlPart as QueryTablePart;
             internal set => OpenXmlPart = value;
@@ -3353,7 +3355,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3369,7 +3371,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value UniqueCount
+        public UInt32Value? UniqueCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3421,7 +3423,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <summary>
         /// Gets the SharedStringTablePart associated with this element.
         /// </summary>
-        public SharedStringTablePart SharedStringTablePart
+        public SharedStringTablePart? SharedStringTablePart
         {
             get => OpenXmlPart as SharedStringTablePart;
             internal set => OpenXmlPart = value;
@@ -3485,7 +3487,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "guid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Guid
+        public StringValue? Guid
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3501,7 +3503,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "lastGuid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue LastGuid
+        public StringValue? LastGuid
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3517,7 +3519,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "shared")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Shared
+        public BooleanValue? Shared
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3533,7 +3535,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "diskRevisions")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DiskRevisions
+        public BooleanValue? DiskRevisions
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3549,7 +3551,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "history")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue History
+        public BooleanValue? History
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3565,7 +3567,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "trackRevisions")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue TrackRevisions
+        public BooleanValue? TrackRevisions
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3581,7 +3583,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "exclusive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Exclusive
+        public BooleanValue? Exclusive
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3597,7 +3599,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "revisionId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RevisionId
+        public UInt32Value? RevisionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3613,7 +3615,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "version")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Version
+        public Int32Value? Version
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -3629,7 +3631,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "keepChangeHistory")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue KeepChangeHistory
+        public BooleanValue? KeepChangeHistory
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3645,7 +3647,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "protected")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Protected
+        public BooleanValue? Protected
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3661,7 +3663,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "preserveHistory")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PreserveHistory
+        public UInt32Value? PreserveHistory
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3730,7 +3732,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <summary>
         /// Gets the WorkbookRevisionHeaderPart associated with this element.
         /// </summary>
-        public WorkbookRevisionHeaderPart WorkbookRevisionHeaderPart
+        public WorkbookRevisionHeaderPart? WorkbookRevisionHeaderPart
         {
             get => OpenXmlPart as WorkbookRevisionHeaderPart;
             internal set => OpenXmlPart = value;
@@ -3856,7 +3858,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <summary>
         /// Gets the WorkbookRevisionLogPart associated with this element.
         /// </summary>
-        public WorkbookRevisionLogPart WorkbookRevisionLogPart
+        public WorkbookRevisionLogPart? WorkbookRevisionLogPart
         {
             get => OpenXmlPart as WorkbookRevisionLogPart;
             internal set => OpenXmlPart = value;
@@ -3920,7 +3922,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3968,7 +3970,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <summary>
         /// Gets the WorkbookUserDataPart associated with this element.
         /// </summary>
-        public WorkbookUserDataPart WorkbookUserDataPart
+        public WorkbookUserDataPart? WorkbookUserDataPart
         {
             get => OpenXmlPart as WorkbookUserDataPart;
             internal set => OpenXmlPart = value;
@@ -4151,7 +4153,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SheetProperties SheetProperties
+        public SheetProperties? SheetProperties
         {
             get => GetElement<SheetProperties>();
             set => SetElement(value);
@@ -4164,7 +4166,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SheetDimension SheetDimension
+        public SheetDimension? SheetDimension
         {
             get => GetElement<SheetDimension>();
             set => SetElement(value);
@@ -4177,7 +4179,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SheetViews SheetViews
+        public SheetViews? SheetViews
         {
             get => GetElement<SheetViews>();
             set => SetElement(value);
@@ -4190,7 +4192,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SheetFormatProperties SheetFormatProperties
+        public SheetFormatProperties? SheetFormatProperties
         {
             get => GetElement<SheetFormatProperties>();
             set => SetElement(value);
@@ -4224,7 +4226,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <summary>
         /// Gets the WorksheetPart associated with this element.
         /// </summary>
-        public WorksheetPart WorksheetPart
+        public WorksheetPart? WorksheetPart
         {
             get => OpenXmlPart as WorksheetPart;
             internal set => OpenXmlPart = value;
@@ -4335,7 +4337,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ChartSheetProperties ChartSheetProperties
+        public ChartSheetProperties? ChartSheetProperties
         {
             get => GetElement<ChartSheetProperties>();
             set => SetElement(value);
@@ -4348,7 +4350,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ChartSheetViews ChartSheetViews
+        public ChartSheetViews? ChartSheetViews
         {
             get => GetElement<ChartSheetViews>();
             set => SetElement(value);
@@ -4361,7 +4363,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ChartSheetProtection ChartSheetProtection
+        public ChartSheetProtection? ChartSheetProtection
         {
             get => GetElement<ChartSheetProtection>();
             set => SetElement(value);
@@ -4374,7 +4376,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CustomChartsheetViews CustomChartsheetViews
+        public CustomChartsheetViews? CustomChartsheetViews
         {
             get => GetElement<CustomChartsheetViews>();
             set => SetElement(value);
@@ -4387,7 +4389,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PageMargins PageMargins
+        public PageMargins? PageMargins
         {
             get => GetElement<PageMargins>();
             set => SetElement(value);
@@ -4400,7 +4402,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ChartSheetPageSetup ChartSheetPageSetup
+        public ChartSheetPageSetup? ChartSheetPageSetup
         {
             get => GetElement<ChartSheetPageSetup>();
             set => SetElement(value);
@@ -4413,7 +4415,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public HeaderFooter HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
             get => GetElement<HeaderFooter>();
             set => SetElement(value);
@@ -4426,7 +4428,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Drawing Drawing
+        public Drawing? Drawing
         {
             get => GetElement<Drawing>();
             set => SetElement(value);
@@ -4439,7 +4441,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public LegacyDrawing LegacyDrawing
+        public LegacyDrawing? LegacyDrawing
         {
             get => GetElement<LegacyDrawing>();
             set => SetElement(value);
@@ -4452,7 +4454,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public LegacyDrawingHeaderFooter LegacyDrawingHeaderFooter
+        public LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
             get => GetElement<LegacyDrawingHeaderFooter>();
             set => SetElement(value);
@@ -4465,7 +4467,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DrawingHeaderFooter DrawingHeaderFooter
+        public DrawingHeaderFooter? DrawingHeaderFooter
         {
             get => GetElement<DrawingHeaderFooter>();
             set => SetElement(value);
@@ -4478,7 +4480,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Picture Picture
+        public Picture? Picture
         {
             get => GetElement<Picture>();
             set => SetElement(value);
@@ -4491,7 +4493,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public WebPublishItems WebPublishItems
+        public WebPublishItems? WebPublishItems
         {
             get => GetElement<WebPublishItems>();
             set => SetElement(value);
@@ -4504,7 +4506,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -4538,7 +4540,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <summary>
         /// Gets the ChartsheetPart associated with this element.
         /// </summary>
-        public ChartsheetPart ChartsheetPart
+        public ChartsheetPart? ChartsheetPart
         {
             get => OpenXmlPart as ChartsheetPart;
             internal set => OpenXmlPart = value;
@@ -4655,7 +4657,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SheetProperties SheetProperties
+        public SheetProperties? SheetProperties
         {
             get => GetElement<SheetProperties>();
             set => SetElement(value);
@@ -4668,7 +4670,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SheetViews SheetViews
+        public SheetViews? SheetViews
         {
             get => GetElement<SheetViews>();
             set => SetElement(value);
@@ -4681,7 +4683,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SheetFormatProperties SheetFormatProperties
+        public SheetFormatProperties? SheetFormatProperties
         {
             get => GetElement<SheetFormatProperties>();
             set => SetElement(value);
@@ -4694,7 +4696,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SheetProtection SheetProtection
+        public SheetProtection? SheetProtection
         {
             get => GetElement<SheetProtection>();
             set => SetElement(value);
@@ -4707,7 +4709,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CustomSheetViews CustomSheetViews
+        public CustomSheetViews? CustomSheetViews
         {
             get => GetElement<CustomSheetViews>();
             set => SetElement(value);
@@ -4720,7 +4722,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PrintOptions PrintOptions
+        public PrintOptions? PrintOptions
         {
             get => GetElement<PrintOptions>();
             set => SetElement(value);
@@ -4733,7 +4735,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PageMargins PageMargins
+        public PageMargins? PageMargins
         {
             get => GetElement<PageMargins>();
             set => SetElement(value);
@@ -4746,7 +4748,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PageSetup PageSetup
+        public PageSetup? PageSetup
         {
             get => GetElement<PageSetup>();
             set => SetElement(value);
@@ -4759,7 +4761,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public HeaderFooter HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
             get => GetElement<HeaderFooter>();
             set => SetElement(value);
@@ -4772,7 +4774,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Drawing Drawing
+        public Drawing? Drawing
         {
             get => GetElement<Drawing>();
             set => SetElement(value);
@@ -4785,7 +4787,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public LegacyDrawing LegacyDrawing
+        public LegacyDrawing? LegacyDrawing
         {
             get => GetElement<LegacyDrawing>();
             set => SetElement(value);
@@ -4798,7 +4800,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public LegacyDrawingHeaderFooter LegacyDrawingHeaderFooter
+        public LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
             get => GetElement<LegacyDrawingHeaderFooter>();
             set => SetElement(value);
@@ -4811,7 +4813,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DrawingHeaderFooter DrawingHeaderFooter
+        public DrawingHeaderFooter? DrawingHeaderFooter
         {
             get => GetElement<DrawingHeaderFooter>();
             set => SetElement(value);
@@ -4824,7 +4826,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public OleObjects OleObjects
+        public OleObjects? OleObjects
         {
             get => GetElement<OleObjects>();
             set => SetElement(value);
@@ -4837,7 +4839,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Controls Controls
+        public Controls? Controls
         {
             get => GetElement<Controls>();
             set => SetElement(value);
@@ -4850,7 +4852,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -4884,7 +4886,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <summary>
         /// Gets the DialogsheetPart associated with this element.
         /// </summary>
-        public DialogsheetPart DialogsheetPart
+        public DialogsheetPart? DialogsheetPart
         {
             get => OpenXmlPart as DialogsheetPart;
             internal set => OpenXmlPart = value;
@@ -4974,7 +4976,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public MetadataTypes MetadataTypes
+        public MetadataTypes? MetadataTypes
         {
             get => GetElement<MetadataTypes>();
             set => SetElement(value);
@@ -4987,7 +4989,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public MetadataStrings MetadataStrings
+        public MetadataStrings? MetadataStrings
         {
             get => GetElement<MetadataStrings>();
             set => SetElement(value);
@@ -5000,7 +5002,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public MdxMetadata MdxMetadata
+        public MdxMetadata? MdxMetadata
         {
             get => GetElement<MdxMetadata>();
             set => SetElement(value);
@@ -5034,7 +5036,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <summary>
         /// Gets the CellMetadataPart associated with this element.
         /// </summary>
-        public CellMetadataPart CellMetadataPart
+        public CellMetadataPart? CellMetadataPart
         {
             get => OpenXmlPart as CellMetadataPart;
             internal set => OpenXmlPart = value;
@@ -5127,7 +5129,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <summary>
         /// Gets the SingleCellTablePart associated with this element.
         /// </summary>
-        public SingleCellTablePart SingleCellTablePart
+        public SingleCellTablePart? SingleCellTablePart
         {
             get => OpenXmlPart as SingleCellTablePart;
             internal set => OpenXmlPart = value;
@@ -5229,7 +5231,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public NumberingFormats NumberingFormats
+        public NumberingFormats? NumberingFormats
         {
             get => GetElement<NumberingFormats>();
             set => SetElement(value);
@@ -5242,7 +5244,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Fonts Fonts
+        public Fonts? Fonts
         {
             get => GetElement<Fonts>();
             set => SetElement(value);
@@ -5255,7 +5257,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Fills Fills
+        public Fills? Fills
         {
             get => GetElement<Fills>();
             set => SetElement(value);
@@ -5268,7 +5270,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Borders Borders
+        public Borders? Borders
         {
             get => GetElement<Borders>();
             set => SetElement(value);
@@ -5281,7 +5283,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CellStyleFormats CellStyleFormats
+        public CellStyleFormats? CellStyleFormats
         {
             get => GetElement<CellStyleFormats>();
             set => SetElement(value);
@@ -5294,7 +5296,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CellFormats CellFormats
+        public CellFormats? CellFormats
         {
             get => GetElement<CellFormats>();
             set => SetElement(value);
@@ -5307,7 +5309,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CellStyles CellStyles
+        public CellStyles? CellStyles
         {
             get => GetElement<CellStyles>();
             set => SetElement(value);
@@ -5320,7 +5322,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DifferentialFormats DifferentialFormats
+        public DifferentialFormats? DifferentialFormats
         {
             get => GetElement<DifferentialFormats>();
             set => SetElement(value);
@@ -5333,7 +5335,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public TableStyles TableStyles
+        public TableStyles? TableStyles
         {
             get => GetElement<TableStyles>();
             set => SetElement(value);
@@ -5346,7 +5348,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Colors Colors
+        public Colors? Colors
         {
             get => GetElement<Colors>();
             set => SetElement(value);
@@ -5359,7 +5361,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public StylesheetExtensionList StylesheetExtensionList
+        public StylesheetExtensionList? StylesheetExtensionList
         {
             get => GetElement<StylesheetExtensionList>();
             set => SetElement(value);
@@ -5393,7 +5395,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <summary>
         /// Gets the WorkbookStylesPart associated with this element.
         /// </summary>
-        public WorkbookStylesPart WorkbookStylesPart
+        public WorkbookStylesPart? WorkbookStylesPart
         {
             get => OpenXmlPart as WorkbookStylesPart;
             internal set => OpenXmlPart = value;
@@ -5498,7 +5500,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <summary>
         /// Gets the ExternalWorkbookPart associated with this element.
         /// </summary>
-        public ExternalWorkbookPart ExternalWorkbookPart
+        public ExternalWorkbookPart? ExternalWorkbookPart
         {
             get => OpenXmlPart as ExternalWorkbookPart;
             internal set => OpenXmlPart = value;
@@ -5566,7 +5568,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5582,7 +5584,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5598,7 +5600,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "displayName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DisplayName
+        public StringValue? DisplayName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5614,7 +5616,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "comment")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Comment
+        public StringValue? Comment
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5630,7 +5632,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5646,7 +5648,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "tableType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableValues> TableType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableValues>? TableType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableValues>>();
             set => SetAttribute(value);
@@ -5662,7 +5664,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "headerRowCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value HeaderRowCount
+        public UInt32Value? HeaderRowCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5678,7 +5680,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "insertRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InsertRow
+        public BooleanValue? InsertRow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5694,7 +5696,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "insertRowShift")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InsertRowShift
+        public BooleanValue? InsertRowShift
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5710,7 +5712,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "totalsRowCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value TotalsRowCount
+        public UInt32Value? TotalsRowCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5726,7 +5728,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "totalsRowShown")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue TotalsRowShown
+        public BooleanValue? TotalsRowShown
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5742,7 +5744,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "published")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Published
+        public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -5758,7 +5760,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "headerRowDxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value HeaderRowFormatId
+        public UInt32Value? HeaderRowFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5774,7 +5776,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "dataDxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value DataFormatId
+        public UInt32Value? DataFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5790,7 +5792,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "totalsRowDxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value TotalsRowFormatId
+        public UInt32Value? TotalsRowFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5806,7 +5808,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "headerRowBorderDxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value HeaderRowBorderFormatId
+        public UInt32Value? HeaderRowBorderFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5822,7 +5824,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "tableBorderDxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value BorderFormatId
+        public UInt32Value? BorderFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5838,7 +5840,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "totalsRowBorderDxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value TotalsRowBorderFormatId
+        public UInt32Value? TotalsRowBorderFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5854,7 +5856,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "headerRowCellStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue HeaderRowCellStyle
+        public StringValue? HeaderRowCellStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5870,7 +5872,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "dataCellStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DataCellStyle
+        public StringValue? DataCellStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5886,7 +5888,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "totalsRowCellStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TotalsRowCellStyle
+        public StringValue? TotalsRowCellStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5902,7 +5904,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "connectionId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ConnectionId
+        public UInt32Value? ConnectionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5981,7 +5983,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public AutoFilter AutoFilter
+        public AutoFilter? AutoFilter
         {
             get => GetElement<AutoFilter>();
             set => SetElement(value);
@@ -5994,7 +5996,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SortState SortState
+        public SortState? SortState
         {
             get => GetElement<SortState>();
             set => SetElement(value);
@@ -6007,7 +6009,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public TableColumns TableColumns
+        public TableColumns? TableColumns
         {
             get => GetElement<TableColumns>();
             set => SetElement(value);
@@ -6020,7 +6022,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public TableStyleInfo TableStyleInfo
+        public TableStyleInfo? TableStyleInfo
         {
             get => GetElement<TableStyleInfo>();
             set => SetElement(value);
@@ -6033,7 +6035,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public TableExtensionList TableExtensionList
+        public TableExtensionList? TableExtensionList
         {
             get => GetElement<TableExtensionList>();
             set => SetElement(value);
@@ -6067,7 +6069,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <summary>
         /// Gets the TableDefinitionPart associated with this element.
         /// </summary>
-        public TableDefinitionPart TableDefinitionPart
+        public TableDefinitionPart? TableDefinitionPart
         {
             get => OpenXmlPart as TableDefinitionPart;
             internal set => OpenXmlPart = value;
@@ -6163,7 +6165,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <summary>
         /// Gets the VolatileDependenciesPart associated with this element.
         /// </summary>
-        public VolatileDependenciesPart VolatileDependenciesPart
+        public VolatileDependenciesPart? VolatileDependenciesPart
         {
             get => OpenXmlPart as VolatileDependenciesPart;
             internal set => OpenXmlPart = value;
@@ -6244,7 +6246,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "conformance")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConformanceClass> Conformance
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConformanceClass>? Conformance
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConformanceClass>>();
             set => SetAttribute(value);
@@ -6304,7 +6306,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FileVersion FileVersion
+        public FileVersion? FileVersion
         {
             get => GetElement<FileVersion>();
             set => SetElement(value);
@@ -6317,7 +6319,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FileSharing FileSharing
+        public FileSharing? FileSharing
         {
             get => GetElement<FileSharing>();
             set => SetElement(value);
@@ -6330,7 +6332,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public WorkbookProperties WorkbookProperties
+        public WorkbookProperties? WorkbookProperties
         {
             get => GetElement<WorkbookProperties>();
             set => SetElement(value);
@@ -6343,7 +6345,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x15ac = http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac
         /// </remark>
-        public DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath AbsolutePath
+        public DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath? AbsolutePath
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath>();
             set => SetElement(value);
@@ -6356,7 +6358,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public WorkbookProtection WorkbookProtection
+        public WorkbookProtection? WorkbookProtection
         {
             get => GetElement<WorkbookProtection>();
             set => SetElement(value);
@@ -6369,7 +6371,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public BookViews BookViews
+        public BookViews? BookViews
         {
             get => GetElement<BookViews>();
             set => SetElement(value);
@@ -6382,7 +6384,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Sheets Sheets
+        public Sheets? Sheets
         {
             get => GetElement<Sheets>();
             set => SetElement(value);
@@ -6395,7 +6397,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FunctionGroups FunctionGroups
+        public FunctionGroups? FunctionGroups
         {
             get => GetElement<FunctionGroups>();
             set => SetElement(value);
@@ -6408,7 +6410,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExternalReferences ExternalReferences
+        public ExternalReferences? ExternalReferences
         {
             get => GetElement<ExternalReferences>();
             set => SetElement(value);
@@ -6421,7 +6423,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DefinedNames DefinedNames
+        public DefinedNames? DefinedNames
         {
             get => GetElement<DefinedNames>();
             set => SetElement(value);
@@ -6434,7 +6436,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CalculationProperties CalculationProperties
+        public CalculationProperties? CalculationProperties
         {
             get => GetElement<CalculationProperties>();
             set => SetElement(value);
@@ -6447,7 +6449,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public OleSize OleSize
+        public OleSize? OleSize
         {
             get => GetElement<OleSize>();
             set => SetElement(value);
@@ -6460,7 +6462,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CustomWorkbookViews CustomWorkbookViews
+        public CustomWorkbookViews? CustomWorkbookViews
         {
             get => GetElement<CustomWorkbookViews>();
             set => SetElement(value);
@@ -6473,7 +6475,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotCaches PivotCaches
+        public PivotCaches? PivotCaches
         {
             get => GetElement<PivotCaches>();
             set => SetElement(value);
@@ -6486,7 +6488,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public WebPublishing WebPublishing
+        public WebPublishing? WebPublishing
         {
             get => GetElement<WebPublishing>();
             set => SetElement(value);
@@ -6520,7 +6522,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <summary>
         /// Gets the WorkbookPart associated with this element.
         /// </summary>
-        public WorkbookPart WorkbookPart
+        public WorkbookPart? WorkbookPart
         {
             get => OpenXmlPart as WorkbookPart;
             internal set => OpenXmlPart = value;
@@ -6592,7 +6594,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "colId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ColumnId
+        public UInt32Value? ColumnId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -6608,7 +6610,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hiddenButton")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HiddenButton
+        public BooleanValue? HiddenButton
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6624,7 +6626,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showButton")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowButton
+        public BooleanValue? ShowButton
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6671,7 +6673,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Filters Filters
+        public Filters? Filters
         {
             get => GetElement<Filters>();
             set => SetElement(value);
@@ -6684,7 +6686,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Top10 Top10
+        public Top10? Top10
         {
             get => GetElement<Top10>();
             set => SetElement(value);
@@ -6697,7 +6699,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.CustomFilters CustomFilters14
+        public DocumentFormat.OpenXml.Office2010.Excel.CustomFilters? CustomFilters14
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
             set => SetElement(value);
@@ -6710,7 +6712,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CustomFilters CustomFilters
+        public CustomFilters? CustomFilters
         {
             get => GetElement<CustomFilters>();
             set => SetElement(value);
@@ -6723,7 +6725,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DynamicFilter DynamicFilter
+        public DynamicFilter? DynamicFilter
         {
             get => GetElement<DynamicFilter>();
             set => SetElement(value);
@@ -6736,7 +6738,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ColorFilter ColorFilter
+        public ColorFilter? ColorFilter
         {
             get => GetElement<ColorFilter>();
             set => SetElement(value);
@@ -6749,7 +6751,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.IconFilter IconFilter14
+        public DocumentFormat.OpenXml.Office2010.Excel.IconFilter? IconFilter14
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
             set => SetElement(value);
@@ -6762,7 +6764,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public IconFilter IconFilter
+        public IconFilter? IconFilter
         {
             get => GetElement<IconFilter>();
             set => SetElement(value);
@@ -6775,7 +6777,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -6844,7 +6846,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "columnSort")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ColumnSort
+        public BooleanValue? ColumnSort
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6860,7 +6862,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "caseSensitive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CaseSensitive
+        public BooleanValue? CaseSensitive
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -6876,7 +6878,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sortMethod")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues> SortMethod
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues>? SortMethod
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues>>();
             set => SetAttribute(value);
@@ -6892,7 +6894,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7023,7 +7025,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "operator")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues> Operator
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>? Operator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>>();
             set => SetAttribute(value);
@@ -7039,7 +7041,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7085,7 +7087,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CellReference
+        public StringValue? CellReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7101,7 +7103,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "i")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value SheetId
+        public Int32Value? SheetId
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -7117,7 +7119,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "s")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InChildChain
+        public BooleanValue? InChildChain
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -7133,7 +7135,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "l")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue NewLevel
+        public BooleanValue? NewLevel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -7149,7 +7151,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue NewThread
+        public BooleanValue? NewThread
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -7165,7 +7167,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "a")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Array
+        public BooleanValue? Array
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -7376,7 +7378,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7392,7 +7394,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "authorId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value AuthorId
+        public UInt32Value? AuthorId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -7408,7 +7410,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "guid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Guid
+        public StringValue? Guid
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -7424,7 +7426,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "shapeId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ShapeId
+        public UInt32Value? ShapeId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -7469,7 +7471,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CommentText CommentText
+        public CommentText? CommentText
         {
             get => GetElement<CommentText>();
             set => SetElement(value);
@@ -7482,7 +7484,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CommentProperties CommentProperties
+        public CommentProperties? CommentProperties
         {
             get => GetElement<CommentProperties>();
             set => SetElement(value);
@@ -8132,7 +8134,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(1, "space")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
             set => SetAttribute(value);
@@ -8197,7 +8199,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "ID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8213,7 +8215,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "SchemaRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SchemaReference
+        public StringValue? SchemaReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8229,7 +8231,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "Namespace")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Namespace
+        public StringValue? Namespace
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8317,7 +8319,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ID
+        public UInt32Value? ID
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -8333,7 +8335,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "Name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8349,7 +8351,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "RootElement")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RootElement
+        public StringValue? RootElement
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8365,7 +8367,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "SchemaID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SchemaId
+        public StringValue? SchemaId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8381,7 +8383,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ShowImportExportValidationErrors")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowImportExportErrors
+        public BooleanValue? ShowImportExportErrors
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8397,7 +8399,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "AutoFit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoFit
+        public BooleanValue? AutoFit
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8413,7 +8415,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "Append")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AppendData
+        public BooleanValue? AppendData
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8429,7 +8431,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "PreserveSortAFLayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PreserveAutoFilterState
+        public BooleanValue? PreserveAutoFilterState
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8445,7 +8447,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "PreserveFormat")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PreserveFormat
+        public BooleanValue? PreserveFormat
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8510,7 +8512,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DataBinding DataBinding
+        public DataBinding? DataBinding
         {
             get => GetElement<DataBinding>();
             set => SetElement(value);
@@ -8571,7 +8573,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "DataBindingName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DataBindingName
+        public StringValue? DataBindingName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8587,7 +8589,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "FileBinding")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FileBinding
+        public BooleanValue? FileBinding
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8603,7 +8605,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ConnectionID")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ConnectionId
+        public UInt32Value? ConnectionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -8619,7 +8621,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "FileBindingName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FileBindingName
+        public StringValue? FileBindingName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8635,7 +8637,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "DataBindingLoadMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value DataBindingLoadMode
+        public UInt32Value? DataBindingLoadMode
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -8735,7 +8737,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -8751,7 +8753,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sourceFile")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SourceFile
+        public StringValue? SourceFile
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8767,7 +8769,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "odcFile")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ConnectionFile
+        public StringValue? ConnectionFile
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8783,7 +8785,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "keepAlive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue KeepAlive
+        public BooleanValue? KeepAlive
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8799,7 +8801,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "interval")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Interval
+        public UInt32Value? Interval
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -8815,7 +8817,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8831,7 +8833,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -8847,7 +8849,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Type
+        public UInt32Value? Type
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -8863,7 +8865,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "reconnectionMethod")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ReconnectionMethod
+        public UInt32Value? ReconnectionMethod
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -8879,7 +8881,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "refreshedVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue RefreshedVersion
+        public ByteValue? RefreshedVersion
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -8895,7 +8897,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "minRefreshableVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue MinRefreshableVersion
+        public ByteValue? MinRefreshableVersion
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -8911,7 +8913,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "savePassword")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SavePassword
+        public BooleanValue? SavePassword
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8927,7 +8929,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "new")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue New
+        public BooleanValue? New
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8943,7 +8945,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "deleted")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Deleted
+        public BooleanValue? Deleted
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8959,7 +8961,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "onlyUseConnectionFile")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue OnlyUseConnectionFile
+        public BooleanValue? OnlyUseConnectionFile
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8975,7 +8977,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "background")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Background
+        public BooleanValue? Background
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -8991,7 +8993,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "refreshOnLoad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RefreshOnLoad
+        public BooleanValue? RefreshOnLoad
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9007,7 +9009,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "saveData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SaveData
+        public BooleanValue? SaveData
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9023,7 +9025,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "credentials")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CredentialsMethodValues> Credentials
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CredentialsMethodValues>? Credentials
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CredentialsMethodValues>>();
             set => SetAttribute(value);
@@ -9039,7 +9041,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "singleSignOnId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SingleSignOnId
+        public StringValue? SingleSignOnId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9109,7 +9111,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DatabaseProperties DatabaseProperties
+        public DatabaseProperties? DatabaseProperties
         {
             get => GetElement<DatabaseProperties>();
             set => SetElement(value);
@@ -9122,7 +9124,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public OlapProperties OlapProperties
+        public OlapProperties? OlapProperties
         {
             get => GetElement<OlapProperties>();
             set => SetElement(value);
@@ -9135,7 +9137,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public WebQueryProperties WebQueryProperties
+        public WebQueryProperties? WebQueryProperties
         {
             get => GetElement<WebQueryProperties>();
             set => SetElement(value);
@@ -9148,7 +9150,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public TextProperties TextProperties
+        public TextProperties? TextProperties
         {
             get => GetElement<TextProperties>();
             set => SetElement(value);
@@ -9161,7 +9163,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Parameters Parameters
+        public Parameters? Parameters
         {
             get => GetElement<Parameters>();
             set => SetElement(value);
@@ -9174,7 +9176,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ConnectionExtensionList ConnectionExtensionList
+        public ConnectionExtensionList? ConnectionExtensionList
         {
             get => GetElement<ConnectionExtensionList>();
             set => SetElement(value);
@@ -9243,7 +9245,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -9297,7 +9299,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9313,7 +9315,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sqlType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value SqlType
+        public Int32Value? SqlType
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -9329,7 +9331,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "parameterType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ParameterValues> ParameterType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ParameterValues>? ParameterType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ParameterValues>>();
             set => SetAttribute(value);
@@ -9345,7 +9347,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "refreshOnChange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RefreshOnChange
+        public BooleanValue? RefreshOnChange
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9361,7 +9363,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "prompt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Prompt
+        public StringValue? Prompt
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9377,7 +9379,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "boolean")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Boolean
+        public BooleanValue? Boolean
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9393,7 +9395,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "double")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Double
+        public DoubleValue? Double
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -9409,7 +9411,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "integer")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Integer
+        public Int32Value? Integer
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -9425,7 +9427,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "string")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue String
+        public StringValue? String
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9441,7 +9443,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Cell
+        public StringValue? Cell
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9527,7 +9529,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "v")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9575,7 +9577,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "v")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Val
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -9623,7 +9625,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ExternalConnectionValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ExternalConnectionValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ExternalConnectionValues>>();
             set => SetAttribute(value);
@@ -9639,7 +9641,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "position")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Position
+        public UInt32Value? Position
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -9719,7 +9721,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9735,7 +9737,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "caption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9751,7 +9753,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "propertyName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue PropertyName
+        public StringValue? PropertyName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9767,7 +9769,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "serverField")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ServerField
+        public BooleanValue? ServerField
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9783,7 +9785,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueList")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UniqueList
+        public BooleanValue? UniqueList
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9799,7 +9801,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "numFmtId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NumberFormatId
+        public UInt32Value? NumberFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -9815,7 +9817,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "formula")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Formula
+        public StringValue? Formula
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -9831,7 +9833,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sqlType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value SqlType
+        public Int32Value? SqlType
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -9847,7 +9849,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hierarchy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Hierarchy
+        public Int32Value? Hierarchy
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -9863,7 +9865,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "level")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Level
+        public UInt32Value? Level
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -9879,7 +9881,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "databaseField")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DatabaseField
+        public BooleanValue? DatabaseField
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9895,7 +9897,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "mappingCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MappingCount
+        public UInt32Value? MappingCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -9911,7 +9913,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "memberPropertyField")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MemberPropertyField
+        public BooleanValue? MemberPropertyField
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -9959,7 +9961,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SharedItems SharedItems
+        public SharedItems? SharedItems
         {
             get => GetElement<SharedItems>();
             set => SetElement(value);
@@ -9972,7 +9974,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FieldGroup FieldGroup
+        public FieldGroup? FieldGroup
         {
             get => GetElement<FieldGroup>();
             set => SetElement(value);
@@ -10039,7 +10041,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -10119,7 +10121,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -10199,7 +10201,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -10249,7 +10251,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10297,7 +10299,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "i1")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FieldItemIndexPage1
+        public UInt32Value? FieldItemIndexPage1
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -10313,7 +10315,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "i2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FieldItemIndexPage2
+        public UInt32Value? FieldItemIndexPage2
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -10329,7 +10331,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "i3")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FieldItemIndexPage3
+        public UInt32Value? FieldItemIndexPage3
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -10345,7 +10347,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "i4")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FieldItemIndexPage4
+        public UInt32Value? FieldItemIndexPage4
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -10361,7 +10363,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10377,7 +10379,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10393,7 +10395,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Sheet
+        public StringValue? Sheet
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10412,7 +10414,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10497,7 +10499,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "u")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Unused
+        public BooleanValue? Unused
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10513,7 +10515,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "f")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Calculated
+        public BooleanValue? Calculated
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10529,7 +10531,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "c")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10545,7 +10547,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PropertyCount
+        public UInt32Value? PropertyCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -10561,7 +10563,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "in")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatIndex
+        public UInt32Value? FormatIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -10577,7 +10579,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue BackgroundColor
+        public HexBinaryValue? BackgroundColor
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -10593,7 +10595,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue ForegroundColor
+        public HexBinaryValue? ForegroundColor
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -10609,7 +10611,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "i")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Italic
+        public BooleanValue? Italic
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10625,7 +10627,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "un")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Underline
+        public BooleanValue? Underline
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10641,7 +10643,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "st")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Strikethrough
+        public BooleanValue? Strikethrough
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10657,7 +10659,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "b")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Bold
+        public BooleanValue? Bold
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10758,7 +10760,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "v")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Val
+        public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -10774,7 +10776,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "u")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Unused
+        public BooleanValue? Unused
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10790,7 +10792,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "f")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Calculated
+        public BooleanValue? Calculated
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10806,7 +10808,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "c")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10822,7 +10824,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "cp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PropertyCount
+        public UInt32Value? PropertyCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -10838,7 +10840,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "in")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatIndex
+        public UInt32Value? FormatIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -10854,7 +10856,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "bc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue BackgroundColor
+        public HexBinaryValue? BackgroundColor
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -10870,7 +10872,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "fc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue ForegroundColor
+        public HexBinaryValue? ForegroundColor
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -10886,7 +10888,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "i")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Italic
+        public BooleanValue? Italic
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10902,7 +10904,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "un")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Underline
+        public BooleanValue? Underline
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10918,7 +10920,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "st")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Strikethrough
+        public BooleanValue? Strikethrough
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10934,7 +10936,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "b")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Bold
+        public BooleanValue? Bold
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11039,7 +11041,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "v")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Val
+        public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11055,7 +11057,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "u")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Unused
+        public BooleanValue? Unused
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11071,7 +11073,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "f")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Calculated
+        public BooleanValue? Calculated
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11087,7 +11089,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "c")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11103,7 +11105,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "cp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PropertyCount
+        public UInt32Value? PropertyCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -11192,7 +11194,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "v")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11208,7 +11210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "u")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Unused
+        public BooleanValue? Unused
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11224,7 +11226,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "f")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Calculated
+        public BooleanValue? Calculated
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11240,7 +11242,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "c")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11256,7 +11258,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PropertyCount
+        public UInt32Value? PropertyCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -11272,7 +11274,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "in")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatIndex
+        public UInt32Value? FormatIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -11288,7 +11290,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue BackgroundColor
+        public HexBinaryValue? BackgroundColor
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -11304,7 +11306,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue ForegroundColor
+        public HexBinaryValue? ForegroundColor
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -11320,7 +11322,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "i")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Italic
+        public BooleanValue? Italic
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11336,7 +11338,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "un")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Underline
+        public BooleanValue? Underline
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11352,7 +11354,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "st")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Strikethrough
+        public BooleanValue? Strikethrough
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11368,7 +11370,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "b")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Bold
+        public BooleanValue? Bold
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11418,7 +11420,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Tuples Tuples
+        public Tuples? Tuples
         {
             get => GetElement<Tuples>();
             set => SetElement(value);
@@ -11486,7 +11488,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "v")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11502,7 +11504,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "u")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Unused
+        public BooleanValue? Unused
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11518,7 +11520,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "f")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Calculated
+        public BooleanValue? Calculated
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11534,7 +11536,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "c")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11550,7 +11552,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "cp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PropertyCount
+        public UInt32Value? PropertyCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -11566,7 +11568,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "in")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatIndex
+        public UInt32Value? FormatIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -11582,7 +11584,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "bc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue BackgroundColor
+        public HexBinaryValue? BackgroundColor
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -11598,7 +11600,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "fc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue ForegroundColor
+        public HexBinaryValue? ForegroundColor
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -11614,7 +11616,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "i")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Italic
+        public BooleanValue? Italic
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11630,7 +11632,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "un")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Underline
+        public BooleanValue? Underline
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11646,7 +11648,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "st")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Strikethrough
+        public BooleanValue? Strikethrough
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11662,7 +11664,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "b")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Bold
+        public BooleanValue? Bold
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11766,7 +11768,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "v")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue Val
+        public DateTimeValue? Val
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -11782,7 +11784,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "u")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Unused
+        public BooleanValue? Unused
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11798,7 +11800,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "f")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Calculated
+        public BooleanValue? Calculated
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11814,7 +11816,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "c")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -11830,7 +11832,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "cp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PropertyCount
+        public UInt32Value? PropertyCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -12037,7 +12039,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "c")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MemberNameCount
+        public UInt32Value? MemberNameCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -12131,7 +12133,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "v")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Val
+        public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -12252,7 +12254,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UniqueName
+        public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12268,7 +12270,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "caption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12284,7 +12286,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "displayFolder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DisplayFolder
+        public StringValue? DisplayFolder
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12300,7 +12302,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "measureGroup")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue MeasureGroup
+        public StringValue? MeasureGroup
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12316,7 +12318,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "parent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ParentKpi
+        public StringValue? ParentKpi
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12332,7 +12334,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "value")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Value
+        public StringValue? Value
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12348,7 +12350,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "goal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Goal
+        public StringValue? Goal
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12364,7 +12366,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "status")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Status
+        public StringValue? Status
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12380,7 +12382,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "trend")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Trend
+        public StringValue? Trend
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12396,7 +12398,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "weight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Weight
+        public StringValue? Weight
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12469,7 +12471,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "x")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Index
+        public Int32Value? Index
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -12550,7 +12552,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UniqueName
+        public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12566,7 +12568,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "caption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12582,7 +12584,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "user")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue User
+        public BooleanValue? User
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -12598,7 +12600,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "customRollUp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CustomRollUp
+        public BooleanValue? CustomRollUp
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -12636,7 +12638,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Groups Groups
+        public Groups? Groups
         {
             get => GetElement<Groups>();
             set => SetElement(value);
@@ -12649,7 +12651,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -12716,7 +12718,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -12796,7 +12798,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12812,7 +12814,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UniqueName
+        public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12828,7 +12830,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "caption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12844,7 +12846,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueParent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UniqueParent
+        public StringValue? UniqueParent
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -12860,7 +12862,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Id
+        public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -12903,7 +12905,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public GroupMembers GroupMembers
+        public GroupMembers? GroupMembers
         {
             get => GetElement<GroupMembers>();
             set => SetElement(value);
@@ -12970,7 +12972,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -13020,7 +13022,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UniqueName
+        public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13036,7 +13038,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "group")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Group
+        public BooleanValue? Group
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -13120,7 +13122,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -13206,7 +13208,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -13286,7 +13288,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -13366,7 +13368,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -13416,7 +13418,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "culture")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Culture
+        public StringValue? Culture
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13432,7 +13434,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "format")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Format
+        public StringValue? Format
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13481,7 +13483,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fld")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Field
+        public UInt32Value? Field
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -13497,7 +13499,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hier")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Hierarchy
+        public UInt32Value? Hierarchy
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -13513,7 +13515,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "item")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Item
+        public UInt32Value? Item
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -13597,7 +13599,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -13613,7 +13615,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "maxRank")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value MaxRank
+        public Int32Value? MaxRank
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -13629,7 +13631,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "setDefinition")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SetDefinition
+        public StringValue? SetDefinition
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13645,7 +13647,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sortType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortValues> SortType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortValues>? SortType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortValues>>();
             set => SetAttribute(value);
@@ -13661,7 +13663,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "queryFailed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue QueryFailed
+        public BooleanValue? QueryFailed
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -13755,7 +13757,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "mdx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Mdx
+        public StringValue? Mdx
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13785,7 +13787,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Tuples Tuples
+        public Tuples? Tuples
         {
             get => GetElement<Tuples>();
             set => SetElement(value);
@@ -13853,7 +13855,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "field")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Field
+        public UInt32Value? Field
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -13869,7 +13871,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "formula")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Formula
+        public StringValue? Formula
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -13898,7 +13900,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotArea PivotArea
+        public PivotArea? PivotArea
         {
             get => GetElement<PivotArea>();
             set => SetElement(value);
@@ -13911,7 +13913,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -13979,7 +13981,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "field")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Field
+        public Int32Value? Field
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -13995,7 +13997,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues>>();
             set => SetAttribute(value);
@@ -14011,7 +14013,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dataOnly")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DataOnly
+        public BooleanValue? DataOnly
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14027,7 +14029,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "labelOnly")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue LabelOnly
+        public BooleanValue? LabelOnly
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14043,7 +14045,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "grandRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue GrandRow
+        public BooleanValue? GrandRow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14059,7 +14061,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "grandCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue GrandColumn
+        public BooleanValue? GrandColumn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14075,7 +14077,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cacheIndex")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CacheIndex
+        public BooleanValue? CacheIndex
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14091,7 +14093,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "outline")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Outline
+        public BooleanValue? Outline
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14107,7 +14109,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "offset")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Offset
+        public StringValue? Offset
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14123,7 +14125,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "collapsedLevelsAreSubtotals")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CollapsedLevelsAreSubtotals
+        public BooleanValue? CollapsedLevelsAreSubtotals
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14139,7 +14141,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "axis")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues> Axis
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>? Axis
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>();
             set => SetAttribute(value);
@@ -14155,7 +14157,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fieldPosition")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FieldPosition
+        public UInt32Value? FieldPosition
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -14195,7 +14197,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotAreaReferences PivotAreaReferences
+        public PivotAreaReferences? PivotAreaReferences
         {
             get => GetElement<PivotAreaReferences>();
             set => SetElement(value);
@@ -14208,7 +14210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -14275,7 +14277,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14291,7 +14293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "mdx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Mdx
+        public StringValue? Mdx
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14307,7 +14309,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "memberName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue MemberName
+        public StringValue? MemberName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14323,7 +14325,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hierarchy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Hierarchy
+        public StringValue? Hierarchy
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14339,7 +14341,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "parent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ParentName
+        public StringValue? ParentName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14355,7 +14357,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "solveOrder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value SolveOrder
+        public Int32Value? SolveOrder
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -14371,7 +14373,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "set")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Set
+        public BooleanValue? Set
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14418,7 +14420,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CalculatedMemberExtensionList CalculatedMemberExtensionList
+        public CalculatedMemberExtensionList? CalculatedMemberExtensionList
         {
             get => GetElement<CalculatedMemberExtensionList>();
             set => SetElement(value);
@@ -14487,7 +14489,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14503,7 +14505,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "axis")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues> Axis
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>? Axis
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>();
             set => SetAttribute(value);
@@ -14519,7 +14521,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dataField")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DataField
+        public BooleanValue? DataField
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14535,7 +14537,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "subtotalCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SubtotalCaption
+        public StringValue? SubtotalCaption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14551,7 +14553,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showDropDowns")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowDropDowns
+        public BooleanValue? ShowDropDowns
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14567,7 +14569,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hiddenLevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HiddenLevel
+        public BooleanValue? HiddenLevel
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14583,7 +14585,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueMemberProperty")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UniqueMemberProperty
+        public StringValue? UniqueMemberProperty
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14599,7 +14601,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "compact")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Compact
+        public BooleanValue? Compact
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14615,7 +14617,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "allDrilled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AllDrilled
+        public BooleanValue? AllDrilled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14631,7 +14633,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "numFmtId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NumberFormatId
+        public UInt32Value? NumberFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -14647,7 +14649,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "outline")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Outline
+        public BooleanValue? Outline
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14663,7 +14665,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "subtotalTop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SubtotalTop
+        public BooleanValue? SubtotalTop
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14679,7 +14681,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dragToRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DragToRow
+        public BooleanValue? DragToRow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14695,7 +14697,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dragToCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DragToColumn
+        public BooleanValue? DragToColumn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14711,7 +14713,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "multipleItemSelectionAllowed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MultipleItemSelectionAllowed
+        public BooleanValue? MultipleItemSelectionAllowed
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14727,7 +14729,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dragToPage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DragToPage
+        public BooleanValue? DragToPage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14743,7 +14745,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dragToData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DragToData
+        public BooleanValue? DragToData
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14759,7 +14761,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dragOff")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DragOff
+        public BooleanValue? DragOff
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14775,7 +14777,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showAll")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowAll
+        public BooleanValue? ShowAll
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14791,7 +14793,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "insertBlankRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InsertBlankRow
+        public BooleanValue? InsertBlankRow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14807,7 +14809,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "serverField")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ServerField
+        public BooleanValue? ServerField
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14823,7 +14825,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "insertPageBreak")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InsertPageBreak
+        public BooleanValue? InsertPageBreak
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14839,7 +14841,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoShow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoShow
+        public BooleanValue? AutoShow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14855,7 +14857,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "topAutoShow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue TopAutoShow
+        public BooleanValue? TopAutoShow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14871,7 +14873,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hideNewItems")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HideNewItems
+        public BooleanValue? HideNewItems
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14887,7 +14889,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "measureFilter")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MeasureFilter
+        public BooleanValue? MeasureFilter
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14903,7 +14905,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "includeNewItemsInFilter")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IncludeNewItemsInFilter
+        public BooleanValue? IncludeNewItemsInFilter
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14919,7 +14921,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "itemPageCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ItemPageCount
+        public UInt32Value? ItemPageCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -14935,7 +14937,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sortType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FieldSortValues> SortType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FieldSortValues>? SortType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FieldSortValues>>();
             set => SetAttribute(value);
@@ -14951,7 +14953,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dataSourceSort")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DataSourceSort
+        public BooleanValue? DataSourceSort
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14967,7 +14969,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "nonAutoSortDefault")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue NonAutoSortDefault
+        public BooleanValue? NonAutoSortDefault
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -14983,7 +14985,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rankBy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RankBy
+        public UInt32Value? RankBy
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -14999,7 +15001,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "defaultSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DefaultSubtotal
+        public BooleanValue? DefaultSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15015,7 +15017,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sumSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SumSubtotal
+        public BooleanValue? SumSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15031,7 +15033,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "countASubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CountASubtotal
+        public BooleanValue? CountASubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15047,7 +15049,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "avgSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AverageSubTotal
+        public BooleanValue? AverageSubTotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15063,7 +15065,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "maxSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MaxSubtotal
+        public BooleanValue? MaxSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15079,7 +15081,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "minSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MinSubtotal
+        public BooleanValue? MinSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15095,7 +15097,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "productSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyProductInSubtotal
+        public BooleanValue? ApplyProductInSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15111,7 +15113,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "countSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CountSubtotal
+        public BooleanValue? CountSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15127,7 +15129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "stdDevSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyStandardDeviationInSubtotal
+        public BooleanValue? ApplyStandardDeviationInSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15143,7 +15145,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "stdDevPSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyStandardDeviationPInSubtotal
+        public BooleanValue? ApplyStandardDeviationPInSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15159,7 +15161,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "varSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyVarianceInSubtotal
+        public BooleanValue? ApplyVarianceInSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15175,7 +15177,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "varPSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyVariancePInSubtotal
+        public BooleanValue? ApplyVariancePInSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15191,7 +15193,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showPropCell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowPropCell
+        public BooleanValue? ShowPropCell
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15207,7 +15209,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showPropTip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowPropertyTooltip
+        public BooleanValue? ShowPropertyTooltip
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15223,7 +15225,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showPropAsCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowPropAsCaption
+        public BooleanValue? ShowPropAsCaption
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15239,7 +15241,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "defaultAttributeDrillState")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DefaultAttributeDrillState
+        public BooleanValue? DefaultAttributeDrillState
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15317,7 +15319,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Items Items
+        public Items? Items
         {
             get => GetElement<Items>();
             set => SetElement(value);
@@ -15330,7 +15332,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public AutoSortScope AutoSortScope
+        public AutoSortScope? AutoSortScope
         {
             get => GetElement<AutoSortScope>();
             set => SetElement(value);
@@ -15343,7 +15345,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotFieldExtensionList PivotFieldExtensionList
+        public PivotFieldExtensionList? PivotFieldExtensionList
         {
             get => GetElement<PivotFieldExtensionList>();
             set => SetElement(value);
@@ -15380,7 +15382,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ItemName
+        public StringValue? ItemName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15396,7 +15398,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues> ItemType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues>? ItemType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues>>();
             set => SetAttribute(value);
@@ -15412,7 +15414,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "h")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15428,7 +15430,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "s")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HasStringVlue
+        public BooleanValue? HasStringVlue
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15444,7 +15446,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HideDetails
+        public BooleanValue? HideDetails
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15460,7 +15462,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "f")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Calculated
+        public BooleanValue? Calculated
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15476,7 +15478,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "m")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Missing
+        public BooleanValue? Missing
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15492,7 +15494,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "c")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ChildItems
+        public BooleanValue? ChildItems
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15508,7 +15510,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "x")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Index
+        public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -15524,7 +15526,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "d")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Expanded
+        public BooleanValue? Expanded
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15540,7 +15542,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "e")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DrillAcrossAttributes
+        public BooleanValue? DrillAcrossAttributes
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -15628,7 +15630,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15644,7 +15646,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fld")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Field
+        public UInt32Value? Field
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -15660,7 +15662,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "subtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues> Subtotal
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues>? Subtotal
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues>>();
             set => SetAttribute(value);
@@ -15676,7 +15678,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showDataAs")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ShowDataAsValues> ShowDataAs
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ShowDataAsValues>? ShowDataAs
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ShowDataAsValues>>();
             set => SetAttribute(value);
@@ -15692,7 +15694,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "baseField")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value BaseField
+        public Int32Value? BaseField
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -15708,7 +15710,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "baseItem")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value BaseItem
+        public UInt32Value? BaseItem
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -15724,7 +15726,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "numFmtId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NumberFormatId
+        public UInt32Value? NumberFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -15760,7 +15762,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DataFieldExtensionList DataFieldExtensionList
+        public DataFieldExtensionList? DataFieldExtensionList
         {
             get => GetElement<DataFieldExtensionList>();
             set => SetElement(value);
@@ -15827,7 +15829,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues> ItemType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues>? ItemType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ItemValues>>();
             set => SetAttribute(value);
@@ -15843,7 +15845,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RepeatedItemCount
+        public UInt32Value? RepeatedItemCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -15859,7 +15861,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "i")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Index
+        public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -15912,7 +15914,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "x")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Index
+        public Int32Value? Index
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -15992,7 +15994,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "action")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormatActionValues> Action
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormatActionValues>? Action
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormatActionValues>>();
             set => SetAttribute(value);
@@ -16008,7 +16010,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatId
+        public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -16038,7 +16040,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotArea PivotArea
+        public PivotArea? PivotArea
         {
             get => GetElement<PivotArea>();
             set => SetElement(value);
@@ -16051,7 +16053,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -16119,7 +16121,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "scope")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues> Scope
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues>? Scope
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues>>();
             set => SetAttribute(value);
@@ -16135,7 +16137,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues>>();
             set => SetAttribute(value);
@@ -16151,7 +16153,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "priority")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Priority
+        public UInt32Value? Priority
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -16185,7 +16187,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotAreas PivotAreas
+        public PivotAreas? PivotAreas
         {
             get => GetElement<PivotAreas>();
             set => SetElement(value);
@@ -16198,7 +16200,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -16265,7 +16267,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -16345,7 +16347,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "chart")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Chart
+        public UInt32Value? Chart
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -16361,7 +16363,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "format")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Format
+        public UInt32Value? Format
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -16377,7 +16379,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "series")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Series
+        public BooleanValue? Series
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16411,7 +16413,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotArea PivotArea
+        public PivotArea? PivotArea
         {
             get => GetElement<PivotArea>();
             set => SetElement(value);
@@ -16480,7 +16482,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "outline")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Outline
+        public BooleanValue? Outline
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16496,7 +16498,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "multipleItemSelectionAllowed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MultipleItemSelectionAllowed
+        public BooleanValue? MultipleItemSelectionAllowed
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16512,7 +16514,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "subtotalTop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SubtotalTop
+        public BooleanValue? SubtotalTop
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16528,7 +16530,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showInFieldList")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowInFieldList
+        public BooleanValue? ShowInFieldList
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16544,7 +16546,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dragToRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DragToRow
+        public BooleanValue? DragToRow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16560,7 +16562,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dragToCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DragToColumn
+        public BooleanValue? DragToColumn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16576,7 +16578,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dragToPage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DragToPage
+        public BooleanValue? DragToPage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16592,7 +16594,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dragToData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DragToData
+        public BooleanValue? DragToData
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16608,7 +16610,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dragOff")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DragOff
+        public BooleanValue? DragOff
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16624,7 +16626,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "includeNewItemsInFilter")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IncludeNewItemsInFilter
+        public BooleanValue? IncludeNewItemsInFilter
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16640,7 +16642,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "caption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16681,7 +16683,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public MemberProperties MemberProperties
+        public MemberProperties? MemberProperties
         {
             get => GetElement<MemberProperties>();
             set => SetElement(value);
@@ -16769,7 +16771,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hierarchyUsage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Value
+        public Int32Value? Value
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -16813,7 +16815,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16829,7 +16831,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showCell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowCell
+        public BooleanValue? ShowCell
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16845,7 +16847,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showTip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowTip
+        public BooleanValue? ShowTip
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16861,7 +16863,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showAsCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowAsCaption
+        public BooleanValue? ShowAsCaption
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -16877,7 +16879,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "nameLen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NameLength
+        public UInt32Value? NameLength
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -16893,7 +16895,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pPos")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PropertyNamePosition
+        public UInt32Value? PropertyNamePosition
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -16909,7 +16911,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pLen")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PropertyNameLength
+        public UInt32Value? PropertyNameLength
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -16925,7 +16927,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "level")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Level
+        public UInt32Value? Level
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -16941,7 +16943,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "field")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Field
+        public UInt32Value? Field
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -16998,7 +17000,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17046,7 +17048,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "measure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Measure
+        public BooleanValue? Measure
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17062,7 +17064,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17078,7 +17080,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UniqueName
+        public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17094,7 +17096,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "caption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17155,7 +17157,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17171,7 +17173,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "caption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17225,7 +17227,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "measureGroup")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MeasureGroup
+        public UInt32Value? MeasureGroup
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -17241,7 +17243,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dimension")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Dimension
+        public UInt32Value? Dimension
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -17324,7 +17326,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fld")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Field
+        public UInt32Value? Field
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -17340,7 +17342,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "mpFld")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MemberPropertyFieldId
+        public UInt32Value? MemberPropertyFieldId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -17356,7 +17358,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotFilterValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotFilterValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotFilterValues>>();
             set => SetAttribute(value);
@@ -17372,7 +17374,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "evalOrder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value EvaluationOrder
+        public Int32Value? EvaluationOrder
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -17388,7 +17390,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -17404,7 +17406,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "iMeasureHier")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MeasureHierarchy
+        public UInt32Value? MeasureHierarchy
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -17420,7 +17422,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "iMeasureFld")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MeasureField
+        public UInt32Value? MeasureField
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -17436,7 +17438,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17452,7 +17454,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17468,7 +17470,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "stringValue1")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StringValue1
+        public StringValue? StringValue1
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17484,7 +17486,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "stringValue2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StringValue2
+        public StringValue? StringValue2
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17535,7 +17537,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public AutoFilter AutoFilter
+        public AutoFilter? AutoFilter
         {
             get => GetElement<AutoFilter>();
             set => SetElement(value);
@@ -17548,7 +17550,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotFilterExtensionList PivotFilterExtensionList
+        public PivotFilterExtensionList? PivotFilterExtensionList
         {
             get => GetElement<PivotFilterExtensionList>();
             set => SetElement(value);
@@ -17617,7 +17619,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UniqueName
+        public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17633,7 +17635,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "caption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17649,7 +17651,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "measure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Measure
+        public BooleanValue? Measure
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17665,7 +17667,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "set")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Set
+        public BooleanValue? Set
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17681,7 +17683,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "parentSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ParentSet
+        public UInt32Value? ParentSet
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -17697,7 +17699,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "iconSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value IconSet
+        public Int32Value? IconSet
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -17713,7 +17715,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "attribute")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Attribute
+        public BooleanValue? Attribute
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17729,7 +17731,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "time")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Time
+        public BooleanValue? Time
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17745,7 +17747,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "keyAttribute")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue KeyAttribute
+        public BooleanValue? KeyAttribute
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17761,7 +17763,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "defaultMemberUniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DefaultMemberUniqueName
+        public StringValue? DefaultMemberUniqueName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17777,7 +17779,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "allUniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AllUniqueName
+        public StringValue? AllUniqueName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17793,7 +17795,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "allCaption")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AllCaption
+        public StringValue? AllCaption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17809,7 +17811,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dimensionUniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DimensionUniqueName
+        public StringValue? DimensionUniqueName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17825,7 +17827,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "displayFolder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DisplayFolder
+        public StringValue? DisplayFolder
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17841,7 +17843,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "measureGroup")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue MeasureGroup
+        public StringValue? MeasureGroup
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17857,7 +17859,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "measures")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Measures
+        public BooleanValue? Measures
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17873,7 +17875,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -17889,7 +17891,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oneField")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue OneField
+        public BooleanValue? OneField
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17905,7 +17907,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "memberValueDatatype")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value MemberValueDatatype
+        public UInt16Value? MemberValueDatatype
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -17921,7 +17923,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "unbalanced")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Unbalanced
+        public BooleanValue? Unbalanced
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17937,7 +17939,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "unbalancedGroup")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UnbalancedGroup
+        public BooleanValue? UnbalancedGroup
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -17953,7 +17955,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18016,7 +18018,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FieldsUsage FieldsUsage
+        public FieldsUsage? FieldsUsage
         {
             get => GetElement<FieldsUsage>();
             set => SetElement(value);
@@ -18029,7 +18031,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public GroupLevels GroupLevels
+        public GroupLevels? GroupLevels
         {
             get => GetElement<GroupLevels>();
             set => SetElement(value);
@@ -18042,7 +18044,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CacheHierarchyExtensionList CacheHierarchyExtensionList
+        public CacheHierarchyExtensionList? CacheHierarchyExtensionList
         {
             get => GetElement<CacheHierarchyExtensionList>();
             set => SetElement(value);
@@ -18079,7 +18081,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoStart")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoStart
+        public BooleanValue? AutoStart
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18095,7 +18097,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoEnd")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoEnd
+        public BooleanValue? AutoEnd
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18111,7 +18113,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "groupBy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.GroupByValues> GroupBy
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.GroupByValues>? GroupBy
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.GroupByValues>>();
             set => SetAttribute(value);
@@ -18127,7 +18129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "startNum")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue StartNumber
+        public DoubleValue? StartNumber
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -18143,7 +18145,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "endNum")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue EndNum
+        public DoubleValue? EndNum
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -18159,7 +18161,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "startDate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue StartDate
+        public DateTimeValue? StartDate
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -18175,7 +18177,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "endDate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue EndDate
+        public DateTimeValue? EndDate
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -18191,7 +18193,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "groupInterval")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue GroupInterval
+        public DoubleValue? GroupInterval
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -18274,7 +18276,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -18359,7 +18361,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -18449,7 +18451,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fld")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Field
+        public Int32Value? Field
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -18465,7 +18467,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "item")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Item
+        public UInt32Value? Item
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -18481,7 +18483,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hier")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Hierarchy
+        public Int32Value? Hierarchy
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -18497,7 +18499,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18513,7 +18515,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cap")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Caption
+        public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -18548,7 +18550,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -18615,7 +18617,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -18696,7 +18698,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "field")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Field
+        public UInt32Value? Field
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -18712,7 +18714,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -18728,7 +18730,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "selected")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Selected
+        public BooleanValue? Selected
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18744,7 +18746,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "byPosition")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ByPosition
+        public BooleanValue? ByPosition
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18760,7 +18762,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "relative")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Relative
+        public BooleanValue? Relative
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18776,7 +18778,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "defaultSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DefaultSubtotal
+        public BooleanValue? DefaultSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18792,7 +18794,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sumSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SumSubtotal
+        public BooleanValue? SumSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18808,7 +18810,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "countASubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CountASubtotal
+        public BooleanValue? CountASubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18824,7 +18826,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "avgSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AverageSubtotal
+        public BooleanValue? AverageSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18840,7 +18842,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "maxSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MaxSubtotal
+        public BooleanValue? MaxSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18856,7 +18858,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "minSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MinSubtotal
+        public BooleanValue? MinSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18872,7 +18874,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "productSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyProductInSubtotal
+        public BooleanValue? ApplyProductInSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18888,7 +18890,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "countSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CountSubtotal
+        public BooleanValue? CountSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18904,7 +18906,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "stdDevSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyStandardDeviationInSubtotal
+        public BooleanValue? ApplyStandardDeviationInSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18920,7 +18922,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "stdDevPSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyStandardDeviationPInSubtotal
+        public BooleanValue? ApplyStandardDeviationPInSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18936,7 +18938,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "varSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyVarianceInSubtotal
+        public BooleanValue? ApplyVarianceInSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -18952,7 +18954,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "varPSubtotal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyVariancePInSubtotal
+        public BooleanValue? ApplyVariancePInSubtotal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -19050,7 +19052,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -19130,7 +19132,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -19180,7 +19182,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19259,7 +19261,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -19275,7 +19277,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19291,7 +19293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dataBound")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DataBound
+        public BooleanValue? DataBound
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -19307,7 +19309,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rowNumbers")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RowNumbers
+        public BooleanValue? RowNumbers
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -19323,7 +19325,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fillFormulas")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FillFormulas
+        public BooleanValue? FillFormulas
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -19339,7 +19341,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "clipped")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Clipped
+        public BooleanValue? Clipped
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -19355,7 +19357,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tableColumnId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value TableColumnId
+        public UInt32Value? TableColumnId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -19396,7 +19398,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -19670,7 +19672,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Text Text
+        public Text? Text
         {
             get => GetElement<Text>();
             set => SetElement(value);
@@ -19890,7 +19892,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Val
+        public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -19931,7 +19933,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.UnderlineValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.UnderlineValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.UnderlineValues>>();
             set => SetAttribute(value);
@@ -19976,7 +19978,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentRunValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentRunValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentRunValues>>();
             set => SetAttribute(value);
@@ -20024,7 +20026,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Val
+        public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -20185,7 +20187,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "auto")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Auto
+        public BooleanValue? Auto
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -20201,7 +20203,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "indexed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Indexed
+        public UInt32Value? Indexed
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -20217,7 +20219,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rgb")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue Rgb
+        public HexBinaryValue? Rgb
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -20233,7 +20235,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "theme")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Theme
+        public UInt32Value? Theme
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -20249,7 +20251,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tint")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Tint
+        public DoubleValue? Tint
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -20297,7 +20299,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20399,7 +20401,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Val
+        public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -20443,7 +20445,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FontSchemeValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FontSchemeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FontSchemeValues>>();
             set => SetAttribute(value);
@@ -20636,7 +20638,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public RunProperties RunProperties
+        public RunProperties? RunProperties
         {
             get => GetElement<RunProperties>();
             set => SetElement(value);
@@ -20649,7 +20651,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Text Text
+        public Text? Text
         {
             get => GetElement<Text>();
             set => SetElement(value);
@@ -20716,7 +20718,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sb")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value BaseTextStartIndex
+        public UInt32Value? BaseTextStartIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -20732,7 +20734,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "eb")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value EndingBaseIndex
+        public UInt32Value? EndingBaseIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -20766,7 +20768,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Text Text
+        public Text? Text
         {
             get => GetElement<Text>();
             set => SetElement(value);
@@ -20803,7 +20805,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fontId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FontId
+        public UInt32Value? FontId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -20819,7 +20821,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticValues>>();
             set => SetAttribute(value);
@@ -20835,7 +20837,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "alignment")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticAlignmentValues> Alignment
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticAlignmentValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PhoneticAlignmentValues>>();
             set => SetAttribute(value);
@@ -20918,7 +20920,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "guid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Guid
+        public StringValue? Guid
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20934,7 +20936,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dateTime")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue DateTime
+        public DateTimeValue? DateTime
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -20950,7 +20952,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "maxSheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MaxSheetId
+        public UInt32Value? MaxSheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -20966,7 +20968,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "userName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UserName
+        public StringValue? UserName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20985,7 +20987,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21001,7 +21003,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "minRId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MinRevisionId
+        public UInt32Value? MinRevisionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21017,7 +21019,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "maxRId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MaxRevisionId
+        public UInt32Value? MaxRevisionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21072,7 +21074,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SheetIdMap SheetIdMap
+        public SheetIdMap? SheetIdMap
         {
             get => GetElement<SheetIdMap>();
             set => SetElement(value);
@@ -21085,7 +21087,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ReviewedList ReviewedList
+        public ReviewedList? ReviewedList
         {
             get => GetElement<ReviewedList>();
             set => SetElement(value);
@@ -21098,7 +21100,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -21167,7 +21169,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RevisionId
+        public UInt32Value? RevisionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21183,7 +21185,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ua")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ua
+        public BooleanValue? Ua
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21199,7 +21201,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ra")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ra
+        public BooleanValue? Ra
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21215,7 +21217,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21231,7 +21233,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "eol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue EndOfList
+        public BooleanValue? EndOfList
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21247,7 +21249,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21263,7 +21265,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "action")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RowColumnActionValues> Action
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RowColumnActionValues>? Action
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RowColumnActionValues>>();
             set => SetAttribute(value);
@@ -21279,7 +21281,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "edge")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Edge
+        public BooleanValue? Edge
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21385,7 +21387,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RevisionId
+        public UInt32Value? RevisionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21401,7 +21403,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ua")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ua
+        public BooleanValue? Ua
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21417,7 +21419,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ra")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ra
+        public BooleanValue? Ra
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21433,7 +21435,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21449,7 +21451,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "source")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Source
+        public StringValue? Source
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21465,7 +21467,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "destination")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Destination
+        public StringValue? Destination
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21481,7 +21483,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sourceSheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SourceSheetId
+        public UInt32Value? SourceSheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21555,7 +21557,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "guid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Guid
+        public StringValue? Guid
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21571,7 +21573,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "action")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues> Action
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues>? Action
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues>>();
             set => SetAttribute(value);
@@ -21654,7 +21656,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RevisionId
+        public UInt32Value? RevisionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21670,7 +21672,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ua")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ua
+        public BooleanValue? Ua
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21686,7 +21688,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ra")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ra
+        public BooleanValue? Ra
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21702,7 +21704,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21718,7 +21720,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OldName
+        public StringValue? OldName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21734,7 +21736,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "newName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue NewName
+        public StringValue? NewName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21778,7 +21780,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -21815,7 +21817,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RevisionId
+        public UInt32Value? RevisionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21831,7 +21833,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ua")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ua
+        public BooleanValue? Ua
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21847,7 +21849,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ra")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ra
+        public BooleanValue? Ra
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -21863,7 +21865,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21879,7 +21881,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -21895,7 +21897,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheetPosition")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetPosition
+        public UInt32Value? SheetPosition
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21993,7 +21995,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RevisionId
+        public UInt32Value? RevisionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -22009,7 +22011,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ua")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ua
+        public BooleanValue? Ua
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22025,7 +22027,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ra")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ra
+        public BooleanValue? Ra
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22041,7 +22043,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -22057,7 +22059,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "odxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue OldFormatting
+        public BooleanValue? OldFormatting
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22073,7 +22075,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "xfDxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RowColumnFormattingAffected
+        public BooleanValue? RowColumnFormattingAffected
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22089,7 +22091,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "s")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue StyleRevision
+        public BooleanValue? StyleRevision
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22105,7 +22107,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Format
+        public BooleanValue? Format
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22121,7 +22123,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "numFmtId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NumberFormatId
+        public UInt32Value? NumberFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -22137,7 +22139,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "quotePrefix")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue QuotePrefix
+        public BooleanValue? QuotePrefix
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22153,7 +22155,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldQuotePrefix")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue OldQuotePrefix
+        public BooleanValue? OldQuotePrefix
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22169,7 +22171,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ph")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HasPhoneticText
+        public BooleanValue? HasPhoneticText
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22185,7 +22187,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldPh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue OldPhoneticText
+        public BooleanValue? OldPhoneticText
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22201,7 +22203,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "endOfListFormulaUpdate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue EndOfListFormulaUpdate
+        public BooleanValue? EndOfListFormulaUpdate
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22255,7 +22257,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public OldCell OldCell
+        public OldCell? OldCell
         {
             get => GetElement<OldCell>();
             set => SetElement(value);
@@ -22268,7 +22270,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public NewCell NewCell
+        public NewCell? NewCell
         {
             get => GetElement<NewCell>();
             set => SetElement(value);
@@ -22281,7 +22283,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public OldDifferentialFormat OldDifferentialFormat
+        public OldDifferentialFormat? OldDifferentialFormat
         {
             get => GetElement<OldDifferentialFormat>();
             set => SetElement(value);
@@ -22294,7 +22296,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public NewDifferentialFormat NewDifferentialFormat
+        public NewDifferentialFormat? NewDifferentialFormat
         {
             get => GetElement<NewDifferentialFormat>();
             set => SetElement(value);
@@ -22307,7 +22309,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -22375,7 +22377,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -22391,7 +22393,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "xfDxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RowOrColumnAffected
+        public BooleanValue? RowOrColumnAffected
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22407,7 +22409,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "s")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue StyleAffected
+        public BooleanValue? StyleAffected
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22423,7 +22425,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sqref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ListValue<StringValue> SequenceOfReferences
+        public ListValue<StringValue>? SequenceOfReferences
         {
             get => GetAttribute<ListValue<StringValue>>();
             set => SetAttribute(value);
@@ -22439,7 +22441,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "start")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Start
+        public UInt32Value? Start
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -22455,7 +22457,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "length")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Length
+        public UInt32Value? Length
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -22495,7 +22497,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DifferentialFormat DifferentialFormat
+        public DifferentialFormat? DifferentialFormat
         {
             get => GetElement<DifferentialFormat>();
             set => SetElement(value);
@@ -22508,7 +22510,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -22545,7 +22547,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -22561,7 +22563,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoFormatId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value AutoFormatId
+        public UInt32Value? AutoFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -22577,7 +22579,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyNumberFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyNumberFormats
+        public BooleanValue? ApplyNumberFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22593,7 +22595,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyBorderFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyBorderFormats
+        public BooleanValue? ApplyBorderFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22609,7 +22611,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyFontFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyFontFormats
+        public BooleanValue? ApplyFontFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22625,7 +22627,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyPatternFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyPatternFormats
+        public BooleanValue? ApplyPatternFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22641,7 +22643,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyAlignmentFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyAlignmentFormats
+        public BooleanValue? ApplyAlignmentFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22657,7 +22659,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyWidthHeightFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyWidthHeightFormats
+        public BooleanValue? ApplyWidthHeightFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22673,7 +22675,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22766,7 +22768,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RevisionId
+        public UInt32Value? RevisionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -22782,7 +22784,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ua")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ua
+        public BooleanValue? Ua
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22798,7 +22800,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ra")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ra
+        public BooleanValue? Ra
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22814,7 +22816,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "localSheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value LocalSheetId
+        public UInt32Value? LocalSheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -22830,7 +22832,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "customView")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CustomView
+        public BooleanValue? CustomView
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22846,7 +22848,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22862,7 +22864,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "function")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Function
+        public BooleanValue? Function
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22878,7 +22880,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldFunction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue OldFunction
+        public BooleanValue? OldFunction
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22894,7 +22896,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "functionGroupId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue FunctionGroupId
+        public ByteValue? FunctionGroupId
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -22910,7 +22912,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldFunctionGroupId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue OldFunctionGroupId
+        public ByteValue? OldFunctionGroupId
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -22926,7 +22928,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "shortcutKey")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue ShortcutKey
+        public ByteValue? ShortcutKey
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -22942,7 +22944,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldShortcutKey")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue OldShortcutKey
+        public ByteValue? OldShortcutKey
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -22958,7 +22960,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22974,7 +22976,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldHidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue OldHidden
+        public BooleanValue? OldHidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -22990,7 +22992,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "customMenu")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CustomMenu
+        public StringValue? CustomMenu
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23006,7 +23008,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldCustomMenu")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OldCustomMenu
+        public StringValue? OldCustomMenu
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23022,7 +23024,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23038,7 +23040,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldDescription")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OldDescription
+        public StringValue? OldDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23054,7 +23056,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "help")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Help
+        public StringValue? Help
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23070,7 +23072,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldHelp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OldHelp
+        public StringValue? OldHelp
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23086,7 +23088,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "statusBar")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StatusBar
+        public StringValue? StatusBar
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23102,7 +23104,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldStatusBar")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OldStatusBar
+        public StringValue? OldStatusBar
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23118,7 +23120,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "comment")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Comment
+        public StringValue? Comment
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23134,7 +23136,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldComment")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OldComment
+        public StringValue? OldComment
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23208,7 +23210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Formula Formula
+        public Formula? Formula
         {
             get => GetElement<Formula>();
             set => SetElement(value);
@@ -23221,7 +23223,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public OldFormula OldFormula
+        public OldFormula? OldFormula
         {
             get => GetElement<OldFormula>();
             set => SetElement(value);
@@ -23234,7 +23236,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -23271,7 +23273,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -23287,7 +23289,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Cell
+        public StringValue? Cell
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23303,7 +23305,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "guid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Guid
+        public StringValue? Guid
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23319,7 +23321,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "action")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues> Action
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues>? Action
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RevisionActionValues>>();
             set => SetAttribute(value);
@@ -23335,7 +23337,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "alwaysShow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AlwaysShow
+        public BooleanValue? AlwaysShow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23351,7 +23353,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "old")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Old
+        public BooleanValue? Old
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23367,7 +23369,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hiddenRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HiddenRow
+        public BooleanValue? HiddenRow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23383,7 +23385,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hiddenColumn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HiddenColumn
+        public BooleanValue? HiddenColumn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23399,7 +23401,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "author")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Author
+        public StringValue? Author
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23415,7 +23417,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "oldLength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value OldLength
+        public UInt32Value? OldLength
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -23431,7 +23433,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "newLength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NewLength
+        public UInt32Value? NewLength
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -23500,7 +23502,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -23516,7 +23518,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23532,7 +23534,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fieldId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FieldId
+        public UInt32Value? FieldId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -23588,7 +23590,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RevisionId
+        public UInt32Value? RevisionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -23604,7 +23606,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ua")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ua
+        public BooleanValue? Ua
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23620,7 +23622,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ra")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Ra
+        public BooleanValue? Ra
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23636,7 +23638,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -23718,7 +23720,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -23798,7 +23800,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -23848,7 +23850,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RevisionId
+        public UInt32Value? RevisionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -23897,7 +23899,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "index")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Index
+        public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -23913,7 +23915,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "exp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormulaExpressionValues> Expression
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormulaExpressionValues>? Expression
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FormulaExpressionValues>>();
             set => SetAttribute(value);
@@ -23929,7 +23931,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ref3D")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Reference3D
+        public BooleanValue? Reference3D
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23945,7 +23947,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "array")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Array
+        public BooleanValue? Array
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23961,7 +23963,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "v")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Val
+        public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23977,7 +23979,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "nf")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DefinedNameFormula
+        public BooleanValue? DefinedNameFormula
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -23993,7 +23995,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cs")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CrossSheetMove
+        public BooleanValue? CrossSheetMove
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -24009,7 +24011,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DeletedRange
+        public StringValue? DeletedRange
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24025,7 +24027,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DefinedName
+        public StringValue? DefinedName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24041,7 +24043,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CellReference
+        public StringValue? CellReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24057,7 +24059,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -24298,7 +24300,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CellReference
+        public StringValue? CellReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24314,7 +24316,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "s")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value StyleIndex
+        public UInt32Value? StyleIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -24330,7 +24332,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> DataType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>? DataType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>>();
             set => SetAttribute(value);
@@ -24346,7 +24348,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cm")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value CellMetaIndex
+        public UInt32Value? CellMetaIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -24362,7 +24364,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "vm")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ValueMetaIndex
+        public UInt32Value? ValueMetaIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -24378,7 +24380,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ph")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowPhonetic
+        public BooleanValue? ShowPhonetic
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -24407,7 +24409,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CellFormula CellFormula
+        public CellFormula? CellFormula
         {
             get => GetElement<CellFormula>();
             set => SetElement(value);
@@ -24420,7 +24422,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CellValue CellValue
+        public CellValue? CellValue
         {
             get => GetElement<CellValue>();
             set => SetElement(value);
@@ -24433,7 +24435,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public InlineString InlineString
+        public InlineString? InlineString
         {
             get => GetElement<InlineString>();
             set => SetElement(value);
@@ -24446,7 +24448,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -24513,7 +24515,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CellReference
+        public StringValue? CellReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -24529,7 +24531,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "s")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value StyleIndex
+        public UInt32Value? StyleIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -24545,7 +24547,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> DataType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>? DataType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>>();
             set => SetAttribute(value);
@@ -24561,7 +24563,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cm")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value CellMetaIndex
+        public UInt32Value? CellMetaIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -24577,7 +24579,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "vm")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ValueMetaIndex
+        public UInt32Value? ValueMetaIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -24593,7 +24595,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ph")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowPhonetic
+        public BooleanValue? ShowPhonetic
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -24636,7 +24638,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CellFormula CellFormula
+        public CellFormula? CellFormula
         {
             get => GetElement<CellFormula>();
             set => SetElement(value);
@@ -24649,7 +24651,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CellValue CellValue
+        public CellValue? CellValue
         {
             get => GetElement<CellValue>();
             set => SetElement(value);
@@ -24662,7 +24664,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public InlineString InlineString
+        public InlineString? InlineString
         {
             get => GetElement<InlineString>();
             set => SetElement(value);
@@ -24675,7 +24677,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -24973,7 +24975,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Font Font
+        public Font? Font
         {
             get => GetElement<Font>();
             set => SetElement(value);
@@ -24986,7 +24988,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public NumberingFormat NumberingFormat
+        public NumberingFormat? NumberingFormat
         {
             get => GetElement<NumberingFormat>();
             set => SetElement(value);
@@ -24999,7 +25001,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Fill Fill
+        public Fill? Fill
         {
             get => GetElement<Fill>();
             set => SetElement(value);
@@ -25012,7 +25014,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Alignment Alignment
+        public Alignment? Alignment
         {
             get => GetElement<Alignment>();
             set => SetElement(value);
@@ -25025,7 +25027,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Border Border
+        public Border? Border
         {
             get => GetElement<Border>();
             set => SetElement(value);
@@ -25038,7 +25040,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Protection Protection
+        public Protection? Protection
         {
             get => GetElement<Protection>();
             set => SetElement(value);
@@ -25051,7 +25053,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -25085,7 +25087,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Val
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -25147,7 +25149,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellFormulaValues> FormulaType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellFormulaValues>? FormulaType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellFormulaValues>>();
             set => SetAttribute(value);
@@ -25163,7 +25165,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "aca")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AlwaysCalculateArray
+        public BooleanValue? AlwaysCalculateArray
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25179,7 +25181,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25195,7 +25197,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dt2D")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DataTable2D
+        public BooleanValue? DataTable2D
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25211,7 +25213,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dtr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DataTableRow
+        public BooleanValue? DataTableRow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25227,7 +25229,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "del1")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Input1Deleted
+        public BooleanValue? Input1Deleted
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25243,7 +25245,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "del2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Input2Deleted
+        public BooleanValue? Input2Deleted
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25259,7 +25261,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r1")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue R1
+        public StringValue? R1
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25275,7 +25277,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue R2
+        public StringValue? R2
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25291,7 +25293,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ca")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CalculateCell
+        public BooleanValue? CalculateCell
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25307,7 +25309,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "si")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SharedIndex
+        public UInt32Value? SharedIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -25323,7 +25325,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Bx
+        public BooleanValue? Bx
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25342,7 +25344,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(1, "space")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
             set => SetAttribute(value);
@@ -25431,7 +25433,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "guid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Guid
+        public StringValue? Guid
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25447,7 +25449,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -25463,7 +25465,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Id
+        public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -25479,7 +25481,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dateTime")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue DateTime
+        public DateTimeValue? DateTime
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -25521,7 +25523,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -25589,7 +25591,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RowIndex
+        public UInt32Value? RowIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -25605,7 +25607,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "spans")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ListValue<StringValue> Spans
+        public ListValue<StringValue>? Spans
         {
             get => GetAttribute<ListValue<StringValue>>();
             set => SetAttribute(value);
@@ -25621,7 +25623,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "s")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value StyleIndex
+        public UInt32Value? StyleIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -25637,7 +25639,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "customFormat")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CustomFormat
+        public BooleanValue? CustomFormat
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25653,7 +25655,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ht")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Height
+        public DoubleValue? Height
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -25669,7 +25671,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25685,7 +25687,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "customHeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CustomHeight
+        public BooleanValue? CustomHeight
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25701,7 +25703,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "outlineLevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue OutlineLevel
+        public ByteValue? OutlineLevel
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -25717,7 +25719,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "collapsed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Collapsed
+        public BooleanValue? Collapsed
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25733,7 +25735,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "thickTop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ThickTop
+        public BooleanValue? ThickTop
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25749,7 +25751,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "thickBot")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ThickBot
+        public BooleanValue? ThickBot
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25765,7 +25767,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ph")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowPhonetic
+        public BooleanValue? ShowPhonetic
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25784,7 +25786,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(55, "dyDescent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue DyDescent
+        public DoubleValue? DyDescent
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -25854,7 +25856,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "min")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Min
+        public UInt32Value? Min
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -25870,7 +25872,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "max")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Max
+        public UInt32Value? Max
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -25886,7 +25888,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "width")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Width
+        public DoubleValue? Width
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -25902,7 +25904,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Style
+        public UInt32Value? Style
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -25918,7 +25920,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25934,7 +25936,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "bestFit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue BestFit
+        public BooleanValue? BestFit
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25950,7 +25952,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "customWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CustomWidth
+        public BooleanValue? CustomWidth
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25966,7 +25968,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "phonetic")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Phonetic
+        public BooleanValue? Phonetic
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -25982,7 +25984,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "outlineLevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue OutlineLevel
+        public ByteValue? OutlineLevel
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -25998,7 +26000,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "collapsed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Collapsed
+        public BooleanValue? Collapsed
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26065,7 +26067,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "applyStyles")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyStyles
+        public BooleanValue? ApplyStyles
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26081,7 +26083,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "summaryBelow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SummaryBelow
+        public BooleanValue? SummaryBelow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26097,7 +26099,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "summaryRight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SummaryRight
+        public BooleanValue? SummaryRight
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26113,7 +26115,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "showOutlineSymbols")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowOutlineSymbols
+        public BooleanValue? ShowOutlineSymbols
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26161,7 +26163,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "autoPageBreaks")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoPageBreaks
+        public BooleanValue? AutoPageBreaks
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26177,7 +26179,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "fitToPage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FitToPage
+        public BooleanValue? FitToPage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26223,7 +26225,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "xSplit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue HorizontalSplit
+        public DoubleValue? HorizontalSplit
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -26239,7 +26241,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "ySplit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue VerticalSplit
+        public DoubleValue? VerticalSplit
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -26255,7 +26257,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "topLeftCell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TopLeftCell
+        public StringValue? TopLeftCell
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26271,7 +26273,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "activePane")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues> ActivePane
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues>? ActivePane
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues>>();
             set => SetAttribute(value);
@@ -26287,7 +26289,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "state")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneStateValues> State
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneStateValues>? State
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneStateValues>>();
             set => SetAttribute(value);
@@ -26336,7 +26338,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "pane")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues> Pane
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues>? Pane
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues>>();
             set => SetAttribute(value);
@@ -26352,7 +26354,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "activeCell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ActiveCell
+        public StringValue? ActiveCell
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26368,7 +26370,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "activeCellId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ActiveCellId
+        public UInt32Value? ActiveCellId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26384,7 +26386,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "sqref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ListValue<StringValue> SequenceOfReferences
+        public ListValue<StringValue>? SequenceOfReferences
         {
             get => GetAttribute<ListValue<StringValue>>();
             set => SetAttribute(value);
@@ -26463,7 +26465,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "pane")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues> Pane
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues>? Pane
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PaneValues>>();
             set => SetAttribute(value);
@@ -26479,7 +26481,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "showHeader")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowHeader
+        public BooleanValue? ShowHeader
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26495,7 +26497,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Label
+        public BooleanValue? Label
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26511,7 +26513,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "data")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Data
+        public BooleanValue? Data
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26527,7 +26529,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "extendable")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Extendable
+        public BooleanValue? Extendable
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26543,7 +26545,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26559,7 +26561,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "axis")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues> Axis
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>? Axis
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>();
             set => SetAttribute(value);
@@ -26575,7 +26577,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "dimension")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Dimension
+        public UInt32Value? Dimension
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26591,7 +26593,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "start")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Start
+        public UInt32Value? Start
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26607,7 +26609,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "min")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Min
+        public UInt32Value? Min
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26623,7 +26625,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "max")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Max
+        public UInt32Value? Max
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26639,7 +26641,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "activeRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ActiveRow
+        public UInt32Value? ActiveRow
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26655,7 +26657,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "activeCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ActiveColumn
+        public UInt32Value? ActiveColumn
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26671,7 +26673,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "previousRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PreviousRow
+        public UInt32Value? PreviousRow
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26687,7 +26689,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "previousCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PreviousColumn
+        public UInt32Value? PreviousColumn
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26703,7 +26705,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "click")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Click
+        public UInt32Value? Click
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26722,7 +26724,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26770,7 +26772,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotArea PivotArea
+        public PivotArea? PivotArea
         {
             get => GetElement<PivotArea>();
             set => SetElement(value);
@@ -26807,7 +26809,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26823,7 +26825,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "min")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Min
+        public UInt32Value? Min
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26839,7 +26841,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "max")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Max
+        public UInt32Value? Max
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -26855,7 +26857,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "man")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ManualPageBreak
+        public BooleanValue? ManualPageBreak
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26871,7 +26873,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PivotTablePageBreak
+        public BooleanValue? PivotTablePageBreak
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -26923,7 +26925,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26939,7 +26941,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26955,7 +26957,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Sheet
+        public StringValue? Sheet
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -26974,7 +26976,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27175,7 +27177,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -27191,7 +27193,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "manualBreakCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ManualBreakCount
+        public UInt32Value? ManualBreakCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -27234,7 +27236,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "left")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Left
+        public DoubleValue? Left
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -27250,7 +27252,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "right")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Right
+        public DoubleValue? Right
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -27266,7 +27268,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "top")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Top
+        public DoubleValue? Top
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -27282,7 +27284,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bottom")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Bottom
+        public DoubleValue? Bottom
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -27298,7 +27300,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "header")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Header
+        public DoubleValue? Header
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -27314,7 +27316,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "footer")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Footer
+        public DoubleValue? Footer
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -27388,7 +27390,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "horizontalCentered")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HorizontalCentered
+        public BooleanValue? HorizontalCentered
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27404,7 +27406,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "verticalCentered")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue VerticalCentered
+        public BooleanValue? VerticalCentered
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27420,7 +27422,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "headings")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Headings
+        public BooleanValue? Headings
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27436,7 +27438,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "gridLines")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue GridLines
+        public BooleanValue? GridLines
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27452,7 +27454,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "gridLinesSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue GridLinesSet
+        public BooleanValue? GridLinesSet
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27501,7 +27503,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "paperSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PaperSize
+        public UInt32Value? PaperSize
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -27517,7 +27519,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "scale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Scale
+        public UInt32Value? Scale
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -27533,7 +27535,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "firstPageNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FirstPageNumber
+        public UInt32Value? FirstPageNumber
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -27549,7 +27551,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fitToWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FitToWidth
+        public UInt32Value? FitToWidth
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -27565,7 +27567,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fitToHeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FitToHeight
+        public UInt32Value? FitToHeight
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -27581,7 +27583,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pageOrder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PageOrderValues> PageOrder
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PageOrderValues>? PageOrder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PageOrderValues>>();
             set => SetAttribute(value);
@@ -27597,7 +27599,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "orientation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues> Orientation
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues>? Orientation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues>>();
             set => SetAttribute(value);
@@ -27613,7 +27615,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "usePrinterDefaults")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UsePrinterDefaults
+        public BooleanValue? UsePrinterDefaults
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27629,7 +27631,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "blackAndWhite")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue BlackAndWhite
+        public BooleanValue? BlackAndWhite
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27645,7 +27647,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "draft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Draft
+        public BooleanValue? Draft
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27661,7 +27663,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cellComments")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellCommentsValues> CellComments
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellCommentsValues>? CellComments
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellCommentsValues>>();
             set => SetAttribute(value);
@@ -27677,7 +27679,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "useFirstPageNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UseFirstPageNumber
+        public BooleanValue? UseFirstPageNumber
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27693,7 +27695,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "errors")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PrintErrorValues> Errors
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PrintErrorValues>? Errors
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PrintErrorValues>>();
             set => SetAttribute(value);
@@ -27709,7 +27711,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "horizontalDpi")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value HorizontalDpi
+        public UInt32Value? HorizontalDpi
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -27725,7 +27727,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "verticalDpi")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value VerticalDpi
+        public UInt32Value? VerticalDpi
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -27741,7 +27743,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "copies")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Copies
+        public UInt32Value? Copies
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -27760,7 +27762,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -27861,7 +27863,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "differentOddEven")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DifferentOddEven
+        public BooleanValue? DifferentOddEven
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27877,7 +27879,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "differentFirst")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DifferentFirst
+        public BooleanValue? DifferentFirst
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27893,7 +27895,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "scaleWithDoc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ScaleWithDoc
+        public BooleanValue? ScaleWithDoc
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27909,7 +27911,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "alignWithMargins")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AlignWithMargins
+        public BooleanValue? AlignWithMargins
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -27948,7 +27950,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public OddHeader OddHeader
+        public OddHeader? OddHeader
         {
             get => GetElement<OddHeader>();
             set => SetElement(value);
@@ -27961,7 +27963,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public OddFooter OddFooter
+        public OddFooter? OddFooter
         {
             get => GetElement<OddFooter>();
             set => SetElement(value);
@@ -27974,7 +27976,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public EvenHeader EvenHeader
+        public EvenHeader? EvenHeader
         {
             get => GetElement<EvenHeader>();
             set => SetElement(value);
@@ -27987,7 +27989,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public EvenFooter EvenFooter
+        public EvenFooter? EvenFooter
         {
             get => GetElement<EvenFooter>();
             set => SetElement(value);
@@ -28000,7 +28002,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FirstHeader FirstHeader
+        public FirstHeader? FirstHeader
         {
             get => GetElement<FirstHeader>();
             set => SetElement(value);
@@ -28013,7 +28015,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FirstFooter FirstFooter
+        public FirstFooter? FirstFooter
         {
             get => GetElement<FirstFooter>();
             set => SetElement(value);
@@ -28082,7 +28084,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28170,7 +28172,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues>>();
             set => SetAttribute(value);
@@ -28186,7 +28188,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatId
+        public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -28202,7 +28204,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "priority")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Priority
+        public Int32Value? Priority
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -28218,7 +28220,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "stopIfTrue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue StopIfTrue
+        public BooleanValue? StopIfTrue
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28234,7 +28236,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "aboveAverage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AboveAverage
+        public BooleanValue? AboveAverage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28250,7 +28252,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "percent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Percent
+        public BooleanValue? Percent
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28266,7 +28268,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bottom")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Bottom
+        public BooleanValue? Bottom
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28282,7 +28284,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "operator")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues> Operator
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues>? Operator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues>>();
             set => SetAttribute(value);
@@ -28298,7 +28300,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "text")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Text
+        public StringValue? Text
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28314,7 +28316,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "timePeriod")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues> TimePeriod
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues>? TimePeriod
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues>>();
             set => SetAttribute(value);
@@ -28330,7 +28332,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rank")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Rank
+        public UInt32Value? Rank
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -28346,7 +28348,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "stdDev")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value StdDev
+        public Int32Value? StdDev
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -28362,7 +28364,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "equalAverage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue EqualAverage
+        public BooleanValue? EqualAverage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28441,7 +28443,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28460,7 +28462,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28476,7 +28478,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "location")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Location
+        public StringValue? Location
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28492,7 +28494,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tooltip")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Tooltip
+        public StringValue? Tooltip
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28508,7 +28510,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "display")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Display
+        public StringValue? Display
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28594,7 +28596,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObjectValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObjectValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObjectValues>>();
             set => SetAttribute(value);
@@ -28610,7 +28612,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28626,7 +28628,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "gte")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue GreaterThanOrEqual
+        public BooleanValue? GreaterThanOrEqual
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28657,7 +28659,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -28724,7 +28726,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28740,7 +28742,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "locked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Locked
+        public BooleanValue? Locked
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28756,7 +28758,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -28772,7 +28774,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -28788,7 +28790,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "user")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue User
+        public StringValue? User
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28804,7 +28806,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "comment")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Comment
+        public StringValue? Comment
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28867,7 +28869,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "password")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue Password
+        public HexBinaryValue? Password
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -28883,7 +28885,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "algorithmName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AlgorithmName
+        public StringValue? AlgorithmName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28899,7 +28901,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hashValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue HashValue
+        public Base64BinaryValue? HashValue
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -28915,7 +28917,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "saltValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue SaltValue
+        public Base64BinaryValue? SaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -28931,7 +28933,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "spinCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SpinCount
+        public UInt32Value? SpinCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -28947,7 +28949,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sqref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ListValue<StringValue> SequenceOfReferences
+        public ListValue<StringValue>? SequenceOfReferences
         {
             get => GetAttribute<ListValue<StringValue>>();
             set => SetAttribute(value);
@@ -28963,7 +28965,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -28979,7 +28981,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "securityDescriptor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SecurityDescriptor
+        public StringValue? SecurityDescriptor
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29043,7 +29045,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CellReference
+        public StringValue? CellReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29092,7 +29094,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "paperSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PaperSize
+        public UInt32Value? PaperSize
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -29108,7 +29110,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "firstPageNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FirstPageNumber
+        public UInt32Value? FirstPageNumber
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -29124,7 +29126,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "orientation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues> Orientation
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues>? Orientation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.OrientationValues>>();
             set => SetAttribute(value);
@@ -29140,7 +29142,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "usePrinterDefaults")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UsePrinterDefaults
+        public BooleanValue? UsePrinterDefaults
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29156,7 +29158,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "blackAndWhite")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue BlackAndWhite
+        public BooleanValue? BlackAndWhite
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29172,7 +29174,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "draft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Draft
+        public BooleanValue? Draft
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29188,7 +29190,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "useFirstPageNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UseFirstPageNumber
+        public BooleanValue? UseFirstPageNumber
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29204,7 +29206,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "horizontalDpi")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value HorizontalDpi
+        public UInt32Value? HorizontalDpi
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -29220,7 +29222,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "verticalDpi")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value VerticalDpi
+        public UInt32Value? VerticalDpi
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -29236,7 +29238,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "copies")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Copies
+        public UInt32Value? Copies
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -29255,7 +29257,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29313,7 +29315,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29332,7 +29334,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29385,7 +29387,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -29401,7 +29403,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "divId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DivId
+        public StringValue? DivId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29417,7 +29419,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sourceType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.WebSourceValues> SourceType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.WebSourceValues>? SourceType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.WebSourceValues>>();
             set => SetAttribute(value);
@@ -29433,7 +29435,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sourceRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SourceRef
+        public StringValue? SourceRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29449,7 +29451,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sourceObject")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SourceObject
+        public StringValue? SourceObject
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29465,7 +29467,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "destinationFile")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DestinationFile
+        public StringValue? DestinationFile
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29481,7 +29483,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29497,7 +29499,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoRepublish")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoRepublish
+        public BooleanValue? AutoRepublish
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29571,7 +29573,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29649,7 +29651,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tabSelected")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue TabSelected
+        public BooleanValue? TabSelected
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29665,7 +29667,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "zoomScale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ZoomScale
+        public UInt32Value? ZoomScale
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -29681,7 +29683,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "workbookViewId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value WorkbookViewId
+        public UInt32Value? WorkbookViewId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -29697,7 +29699,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "zoomToFit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ZoomToFit
+        public BooleanValue? ZoomToFit
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29731,7 +29733,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -29800,7 +29802,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "guid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Guid
+        public StringValue? Guid
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29816,7 +29818,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "scale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Scale
+        public UInt32Value? Scale
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -29832,7 +29834,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "state")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues> State
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues>? State
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues>>();
             set => SetAttribute(value);
@@ -29848,7 +29850,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "zoomToFit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ZoomToFit
+        public BooleanValue? ZoomToFit
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29886,7 +29888,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PageMargins PageMargins
+        public PageMargins? PageMargins
         {
             get => GetElement<PageMargins>();
             set => SetElement(value);
@@ -29899,7 +29901,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ChartSheetPageSetup ChartSheetPageSetup
+        public ChartSheetPageSetup? ChartSheetPageSetup
         {
             get => GetElement<ChartSheetPageSetup>();
             set => SetElement(value);
@@ -29912,7 +29914,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public HeaderFooter HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
             get => GetElement<HeaderFooter>();
             set => SetElement(value);
@@ -29949,7 +29951,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CellReference
+        public StringValue? CellReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -29965,7 +29967,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "deleted")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Deleted
+        public BooleanValue? Deleted
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29981,7 +29983,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "undone")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Undone
+        public BooleanValue? Undone
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -29997,7 +29999,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -30013,7 +30015,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "numFmtId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NumberFormatId
+        public UInt32Value? NumberFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -30099,7 +30101,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "shapeId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ShapeId
+        public UInt32Value? ShapeId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -30118,7 +30120,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -30134,7 +30136,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -30171,7 +30173,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -30208,7 +30210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sqref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ListValue<StringValue> SequenceOfReferences
+        public ListValue<StringValue>? SequenceOfReferences
         {
             get => GetAttribute<ListValue<StringValue>>();
             set => SetAttribute(value);
@@ -30224,7 +30226,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "evalError")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue EvalError
+        public BooleanValue? EvalError
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30240,7 +30242,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "twoDigitTextYear")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue TwoDigitTextYear
+        public BooleanValue? TwoDigitTextYear
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30256,7 +30258,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "numberStoredAsText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue NumberStoredAsText
+        public BooleanValue? NumberStoredAsText
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30272,7 +30274,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "formula")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Formula
+        public BooleanValue? Formula
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30288,7 +30290,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "formulaRange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FormulaRange
+        public BooleanValue? FormulaRange
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30304,7 +30306,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "unlockedFormula")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UnlockedFormula
+        public BooleanValue? UnlockedFormula
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30320,7 +30322,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "emptyCellReference")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue EmptyCellReference
+        public BooleanValue? EmptyCellReference
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30336,7 +30338,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "listDataValidation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ListDataValidation
+        public BooleanValue? ListDataValidation
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30352,7 +30354,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "calculatedColumn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CalculatedColumn
+        public BooleanValue? CalculatedColumn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30410,7 +30412,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -30490,7 +30492,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>>();
             set => SetAttribute(value);
@@ -30506,7 +30508,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "errorStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues> ErrorStyle
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>? ErrorStyle
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>>();
             set => SetAttribute(value);
@@ -30522,7 +30524,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "imeMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues> ImeMode
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>? ImeMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>>();
             set => SetAttribute(value);
@@ -30538,7 +30540,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "operator")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues> Operator
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>? Operator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>>();
             set => SetAttribute(value);
@@ -30554,7 +30556,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "allowBlank")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AllowBlank
+        public BooleanValue? AllowBlank
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30570,7 +30572,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showDropDown")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowDropDown
+        public BooleanValue? ShowDropDown
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30586,7 +30588,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showInputMessage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowInputMessage
+        public BooleanValue? ShowInputMessage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30602,7 +30604,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showErrorMessage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowErrorMessage
+        public BooleanValue? ShowErrorMessage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30618,7 +30620,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "errorTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ErrorTitle
+        public StringValue? ErrorTitle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -30634,7 +30636,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "error")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Error
+        public StringValue? Error
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -30650,7 +30652,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "promptTitle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue PromptTitle
+        public StringValue? PromptTitle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -30666,7 +30668,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "prompt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Prompt
+        public StringValue? Prompt
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -30682,7 +30684,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sqref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ListValue<StringValue> SequenceOfReferences
+        public ListValue<StringValue>? SequenceOfReferences
         {
             get => GetAttribute<ListValue<StringValue>>();
             set => SetAttribute(value);
@@ -30730,7 +30732,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x12ac = http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.ExcelAc.List List
+        public DocumentFormat.OpenXml.Office2010.ExcelAc.List? List
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
             set => SetElement(value);
@@ -30743,7 +30745,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Formula1 Formula1
+        public Formula1? Formula1
         {
             get => GetElement<Formula1>();
             set => SetElement(value);
@@ -30756,7 +30758,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Formula2 Formula2
+        public Formula2? Formula2
         {
             get => GetElement<Formula2>();
             set => SetElement(value);
@@ -30826,7 +30828,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "windowProtection")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue WindowProtection
+        public BooleanValue? WindowProtection
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30842,7 +30844,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showFormulas")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowFormulas
+        public BooleanValue? ShowFormulas
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30858,7 +30860,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showGridLines")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowGridLines
+        public BooleanValue? ShowGridLines
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30874,7 +30876,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showRowColHeaders")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowRowColHeaders
+        public BooleanValue? ShowRowColHeaders
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30890,7 +30892,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showZeros")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowZeros
+        public BooleanValue? ShowZeros
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30906,7 +30908,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rightToLeft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RightToLeft
+        public BooleanValue? RightToLeft
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30922,7 +30924,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tabSelected")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue TabSelected
+        public BooleanValue? TabSelected
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30938,7 +30940,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showRuler")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowRuler
+        public BooleanValue? ShowRuler
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30954,7 +30956,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showOutlineSymbols")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowOutlineSymbols
+        public BooleanValue? ShowOutlineSymbols
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30970,7 +30972,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "defaultGridColor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DefaultGridColor
+        public BooleanValue? DefaultGridColor
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -30986,7 +30988,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showWhiteSpace")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowWhiteSpace
+        public BooleanValue? ShowWhiteSpace
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31002,7 +31004,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "view")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues> View
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues>? View
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues>>();
             set => SetAttribute(value);
@@ -31018,7 +31020,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "topLeftCell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TopLeftCell
+        public StringValue? TopLeftCell
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -31034,7 +31036,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "colorId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ColorId
+        public UInt32Value? ColorId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -31050,7 +31052,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "zoomScale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ZoomScale
+        public UInt32Value? ZoomScale
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -31066,7 +31068,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "zoomScaleNormal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ZoomScaleNormal
+        public UInt32Value? ZoomScaleNormal
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -31082,7 +31084,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "zoomScaleSheetLayoutView")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ZoomScaleSheetLayoutView
+        public UInt32Value? ZoomScaleSheetLayoutView
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -31098,7 +31100,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "zoomScalePageLayoutView")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ZoomScalePageLayoutView
+        public UInt32Value? ZoomScalePageLayoutView
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -31114,7 +31116,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "workbookViewId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value WorkbookViewId
+        public UInt32Value? WorkbookViewId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -31172,7 +31174,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Pane Pane
+        public Pane? Pane
         {
             get => GetElement<Pane>();
             set => SetElement(value);
@@ -31248,7 +31250,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "guid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Guid
+        public StringValue? Guid
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -31264,7 +31266,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "scale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Scale
+        public UInt32Value? Scale
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -31280,7 +31282,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "colorId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ColorId
+        public UInt32Value? ColorId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -31296,7 +31298,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showPageBreaks")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowPageBreaks
+        public BooleanValue? ShowPageBreaks
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31312,7 +31314,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showFormulas")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowFormulas
+        public BooleanValue? ShowFormulas
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31328,7 +31330,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showGridLines")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowGridLines
+        public BooleanValue? ShowGridLines
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31344,7 +31346,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showRowCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowRowColumn
+        public BooleanValue? ShowRowColumn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31360,7 +31362,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "outlineSymbols")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue OutlineSymbols
+        public BooleanValue? OutlineSymbols
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31376,7 +31378,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "zeroValues")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ZeroValues
+        public BooleanValue? ZeroValues
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31392,7 +31394,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fitToPage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FitToPage
+        public BooleanValue? FitToPage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31408,7 +31410,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "printArea")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PrintArea
+        public BooleanValue? PrintArea
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31424,7 +31426,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "filter")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Filter
+        public BooleanValue? Filter
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31440,7 +31442,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showAutoFilter")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowAutoFilter
+        public BooleanValue? ShowAutoFilter
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31456,7 +31458,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hiddenRows")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HiddenRows
+        public BooleanValue? HiddenRows
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31472,7 +31474,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hiddenColumns")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HiddenColumns
+        public BooleanValue? HiddenColumns
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31488,7 +31490,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "state")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues> State
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues>? State
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues>>();
             set => SetAttribute(value);
@@ -31504,7 +31506,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "filterUnique")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FilterUnique
+        public BooleanValue? FilterUnique
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31520,7 +31522,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "view")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues> View
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues>? View
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetViewValues>>();
             set => SetAttribute(value);
@@ -31536,7 +31538,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showRuler")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowRuler
+        public BooleanValue? ShowRuler
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31552,7 +31554,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "topLeftCell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TopLeftCell
+        public StringValue? TopLeftCell
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -31621,7 +31623,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Pane Pane
+        public Pane? Pane
         {
             get => GetElement<Pane>();
             set => SetElement(value);
@@ -31634,7 +31636,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Selection Selection
+        public Selection? Selection
         {
             get => GetElement<Selection>();
             set => SetElement(value);
@@ -31647,7 +31649,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public RowBreaks RowBreaks
+        public RowBreaks? RowBreaks
         {
             get => GetElement<RowBreaks>();
             set => SetElement(value);
@@ -31660,7 +31662,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ColumnBreaks ColumnBreaks
+        public ColumnBreaks? ColumnBreaks
         {
             get => GetElement<ColumnBreaks>();
             set => SetElement(value);
@@ -31673,7 +31675,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PageMargins PageMargins
+        public PageMargins? PageMargins
         {
             get => GetElement<PageMargins>();
             set => SetElement(value);
@@ -31686,7 +31688,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PrintOptions PrintOptions
+        public PrintOptions? PrintOptions
         {
             get => GetElement<PrintOptions>();
             set => SetElement(value);
@@ -31699,7 +31701,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PageSetup PageSetup
+        public PageSetup? PageSetup
         {
             get => GetElement<PageSetup>();
             set => SetElement(value);
@@ -31712,7 +31714,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public HeaderFooter HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
             get => GetElement<HeaderFooter>();
             set => SetElement(value);
@@ -31725,7 +31727,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public AutoFilter AutoFilter
+        public AutoFilter? AutoFilter
         {
             get => GetElement<AutoFilter>();
             set => SetElement(value);
@@ -31738,7 +31740,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -31805,7 +31807,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "progId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ProgId
+        public StringValue? ProgId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -31821,7 +31823,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "dvAspect")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataViewAspectValues> DataOrViewAspect
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataViewAspectValues>? DataOrViewAspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataViewAspectValues>>();
             set => SetAttribute(value);
@@ -31837,7 +31839,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "link")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Link
+        public StringValue? Link
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -31853,7 +31855,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "oleUpdate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.OleUpdateValues> OleUpdate
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.OleUpdateValues>? OleUpdate
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.OleUpdateValues>>();
             set => SetAttribute(value);
@@ -31869,7 +31871,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "autoLoad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoLoad
+        public BooleanValue? AutoLoad
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -31885,7 +31887,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "shapeId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ShapeId
+        public UInt32Value? ShapeId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -31904,7 +31906,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -31942,7 +31944,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public EmbeddedObjectProperties EmbeddedObjectProperties
+        public EmbeddedObjectProperties? EmbeddedObjectProperties
         {
             get => GetElement<EmbeddedObjectProperties>();
             set => SetElement(value);
@@ -32009,7 +32011,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -32090,7 +32092,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -32171,7 +32173,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -32253,7 +32255,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -32269,7 +32271,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -32480,7 +32482,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -32522,7 +32524,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -32538,7 +32540,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "minSupportedVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MinSupportedVersion
+        public UInt32Value? MinSupportedVersion
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -32554,7 +32556,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ghostRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue GhostRow
+        public BooleanValue? GhostRow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32570,7 +32572,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ghostCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue GhostColumn
+        public BooleanValue? GhostColumn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32586,7 +32588,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "edit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Edit
+        public BooleanValue? Edit
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32602,7 +32604,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "delete")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Delete
+        public BooleanValue? Delete
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32618,7 +32620,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "copy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Copy
+        public BooleanValue? Copy
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32634,7 +32636,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pasteAll")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PasteAll
+        public BooleanValue? PasteAll
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32650,7 +32652,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pasteFormulas")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PasteFormulas
+        public BooleanValue? PasteFormulas
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32666,7 +32668,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pasteValues")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PasteValues
+        public BooleanValue? PasteValues
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32682,7 +32684,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pasteFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PasteFormats
+        public BooleanValue? PasteFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32698,7 +32700,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pasteComments")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PasteComments
+        public BooleanValue? PasteComments
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32714,7 +32716,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pasteDataValidation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PasteDataValidation
+        public BooleanValue? PasteDataValidation
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32730,7 +32732,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pasteBorders")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PasteBorders
+        public BooleanValue? PasteBorders
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32746,7 +32748,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pasteColWidths")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PasteColWidths
+        public BooleanValue? PasteColWidths
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32762,7 +32764,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pasteNumberFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PasteNumberFormats
+        public BooleanValue? PasteNumberFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32778,7 +32780,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "merge")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Merge
+        public BooleanValue? Merge
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32794,7 +32796,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "splitFirst")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SplitFirst
+        public BooleanValue? SplitFirst
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32810,7 +32812,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "splitAll")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SplitAll
+        public BooleanValue? SplitAll
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32826,7 +32828,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rowColShift")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RowColumnShift
+        public BooleanValue? RowColumnShift
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32842,7 +32844,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "clearAll")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ClearAll
+        public BooleanValue? ClearAll
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32858,7 +32860,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "clearFormats")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ClearFormats
+        public BooleanValue? ClearFormats
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32874,7 +32876,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "clearContents")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ClearContents
+        public BooleanValue? ClearContents
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32890,7 +32892,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "clearComments")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ClearComments
+        public BooleanValue? ClearComments
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32906,7 +32908,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "assign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Assign
+        public BooleanValue? Assign
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32922,7 +32924,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "coerce")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Coerce
+        public BooleanValue? Coerce
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32938,7 +32940,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "adjust")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Adjust
+        public BooleanValue? Adjust
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -32954,7 +32956,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cellMeta")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CellMeta
+        public BooleanValue? CellMeta
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -33096,7 +33098,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value TypeIndex
+        public UInt32Value? TypeIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33112,7 +33114,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "v")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Val
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33204,7 +33206,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -33274,7 +33276,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NameIndex
+        public UInt32Value? NameIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33290,7 +33292,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "f")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxFunctionValues> CubeFunction
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxFunctionValues>? CubeFunction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxFunctionValues>>();
             set => SetAttribute(value);
@@ -33331,7 +33333,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public MdxTuple MdxTuple
+        public MdxTuple? MdxTuple
         {
             get => GetElement<MdxTuple>();
             set => SetElement(value);
@@ -33344,7 +33346,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public MdxSet MdxSet
+        public MdxSet? MdxSet
         {
             get => GetElement<MdxSet>();
             set => SetElement(value);
@@ -33357,7 +33359,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public MdxMemberProp MdxMemberProp
+        public MdxMemberProp? MdxMemberProp
         {
             get => GetElement<MdxMemberProp>();
             set => SetElement(value);
@@ -33370,7 +33372,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public MdxKpi MdxKpi
+        public MdxKpi? MdxKpi
         {
             get => GetElement<MdxKpi>();
             set => SetElement(value);
@@ -33437,7 +33439,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "c")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MemberIndexCount
+        public UInt32Value? MemberIndexCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33453,7 +33455,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ct")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CultureCurrency
+        public StringValue? CultureCurrency
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -33469,7 +33471,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "si")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormattingStringIndex
+        public UInt32Value? FormattingStringIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33485,7 +33487,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fi")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatIndex
+        public UInt32Value? FormatIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33501,7 +33503,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue BackgroundColor
+        public HexBinaryValue? BackgroundColor
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -33517,7 +33519,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue ForegroundColor
+        public HexBinaryValue? ForegroundColor
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -33533,7 +33535,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "i")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Italic
+        public BooleanValue? Italic
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -33549,7 +33551,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "u")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Underline
+        public BooleanValue? Underline
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -33565,7 +33567,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "st")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Strikethrough
+        public BooleanValue? Strikethrough
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -33581,7 +33583,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "b")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Bold
+        public BooleanValue? Bold
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -33680,7 +33682,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "ns")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SetDefinitionIndex
+        public UInt32Value? SetDefinitionIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33696,7 +33698,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "c")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MemberIndexCount
+        public UInt32Value? MemberIndexCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33712,7 +33714,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "o")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxSetOrderValues> SortingOrder
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxSetOrderValues>? SortingOrder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxSetOrderValues>>();
             set => SetAttribute(value);
@@ -33770,7 +33772,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NameIndex
+        public UInt32Value? NameIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33786,7 +33788,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "np")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PropertyNameIndex
+        public UInt32Value? PropertyNameIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33842,7 +33844,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "n")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NameIndex
+        public UInt32Value? NameIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33858,7 +33860,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "np")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value KpiIndex
+        public UInt32Value? KpiIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33874,7 +33876,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "p")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxKPIPropertyValues> KpiProperty
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxKPIPropertyValues>? KpiProperty
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.MdxKPIPropertyValues>>();
             set => SetAttribute(value);
@@ -33934,7 +33936,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "x")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Index
+        public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -33950,7 +33952,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "s")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsASet
+        public BooleanValue? IsASet
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -34032,7 +34034,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -34048,7 +34050,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CellReference
+        public StringValue? CellReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -34064,7 +34066,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "connectionId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ConnectionId
+        public UInt32Value? ConnectionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -34106,7 +34108,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public XmlCellProperties XmlCellProperties
+        public XmlCellProperties? XmlCellProperties
         {
             get => GetElement<XmlCellProperties>();
             set => SetElement(value);
@@ -34119,7 +34121,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -34187,7 +34189,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -34203,7 +34205,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UniqueName
+        public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -34241,7 +34243,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public XmlProperties XmlProperties
+        public XmlProperties? XmlProperties
         {
             get => GetElement<XmlProperties>();
             set => SetElement(value);
@@ -34254,7 +34256,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -34321,7 +34323,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "mapId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MapId
+        public UInt32Value? MapId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -34337,7 +34339,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "xpath")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue XPath
+        public StringValue? XPath
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -34353,7 +34355,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "xmlDataType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues> XmlDataType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues>? XmlDataType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues>>();
             set => SetAttribute(value);
@@ -34392,7 +34394,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -34460,7 +34462,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "patternType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PatternValues> PatternType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PatternValues>? PatternType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PatternValues>>();
             set => SetAttribute(value);
@@ -34488,7 +34490,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ForegroundColor ForegroundColor
+        public ForegroundColor? ForegroundColor
         {
             get => GetElement<ForegroundColor>();
             set => SetElement(value);
@@ -34501,7 +34503,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public BackgroundColor BackgroundColor
+        public BackgroundColor? BackgroundColor
         {
             get => GetElement<BackgroundColor>();
             set => SetElement(value);
@@ -34568,7 +34570,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.GradientValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.GradientValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.GradientValues>>();
             set => SetAttribute(value);
@@ -34584,7 +34586,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "degree")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Degree
+        public DoubleValue? Degree
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -34600,7 +34602,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "left")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Left
+        public DoubleValue? Left
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -34616,7 +34618,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "right")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Right
+        public DoubleValue? Right
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -34632,7 +34634,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "top")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Top
+        public DoubleValue? Top
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -34648,7 +34650,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bottom")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Bottom
+        public DoubleValue? Bottom
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -34738,7 +34740,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "position")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Position
+        public DoubleValue? Position
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -34768,7 +34770,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Color Color
+        public Color? Color
         {
             get => GetElement<Color>();
             set => SetElement(value);
@@ -34805,7 +34807,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "numFmtId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NumberFormatId
+        public UInt32Value? NumberFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -34821,7 +34823,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "formatCode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FormatCode
+        public StringValue? FormatCode
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -34874,7 +34876,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "horizontal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.HorizontalAlignmentValues> Horizontal
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.HorizontalAlignmentValues>? Horizontal
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.HorizontalAlignmentValues>>();
             set => SetAttribute(value);
@@ -34890,7 +34892,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "vertical")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentValues> Vertical
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentValues>? Vertical
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentValues>>();
             set => SetAttribute(value);
@@ -34906,7 +34908,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "textRotation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value TextRotation
+        public UInt32Value? TextRotation
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -34922,7 +34924,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "wrapText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue WrapText
+        public BooleanValue? WrapText
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -34938,7 +34940,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "indent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Indent
+        public UInt32Value? Indent
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -34954,7 +34956,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "relativeIndent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value RelativeIndent
+        public Int32Value? RelativeIndent
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -34970,7 +34972,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "justifyLastLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue JustifyLastLine
+        public BooleanValue? JustifyLastLine
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -34986,7 +34988,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "shrinkToFit")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShrinkToFit
+        public BooleanValue? ShrinkToFit
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -35002,7 +35004,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "readingOrder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ReadingOrder
+        public UInt32Value? ReadingOrder
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -35018,7 +35020,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "mergeCell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue MergeCell
+        public StringValue? MergeCell
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -35075,7 +35077,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "locked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Locked
+        public BooleanValue? Locked
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -35091,7 +35093,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -35217,7 +35219,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Bold Bold
+        public Bold? Bold
         {
             get => GetElement<Bold>();
             set => SetElement(value);
@@ -35230,7 +35232,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Italic Italic
+        public Italic? Italic
         {
             get => GetElement<Italic>();
             set => SetElement(value);
@@ -35243,7 +35245,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Strike Strike
+        public Strike? Strike
         {
             get => GetElement<Strike>();
             set => SetElement(value);
@@ -35256,7 +35258,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Condense Condense
+        public Condense? Condense
         {
             get => GetElement<Condense>();
             set => SetElement(value);
@@ -35269,7 +35271,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Extend Extend
+        public Extend? Extend
         {
             get => GetElement<Extend>();
             set => SetElement(value);
@@ -35282,7 +35284,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Outline Outline
+        public Outline? Outline
         {
             get => GetElement<Outline>();
             set => SetElement(value);
@@ -35295,7 +35297,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Shadow Shadow
+        public Shadow? Shadow
         {
             get => GetElement<Shadow>();
             set => SetElement(value);
@@ -35308,7 +35310,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Underline Underline
+        public Underline? Underline
         {
             get => GetElement<Underline>();
             set => SetElement(value);
@@ -35321,7 +35323,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public VerticalTextAlignment VerticalTextAlignment
+        public VerticalTextAlignment? VerticalTextAlignment
         {
             get => GetElement<VerticalTextAlignment>();
             set => SetElement(value);
@@ -35334,7 +35336,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FontSize FontSize
+        public FontSize? FontSize
         {
             get => GetElement<FontSize>();
             set => SetElement(value);
@@ -35347,7 +35349,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Color Color
+        public Color? Color
         {
             get => GetElement<Color>();
             set => SetElement(value);
@@ -35360,7 +35362,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FontName FontName
+        public FontName? FontName
         {
             get => GetElement<FontName>();
             set => SetElement(value);
@@ -35373,7 +35375,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FontFamilyNumbering FontFamilyNumbering
+        public FontFamilyNumbering? FontFamilyNumbering
         {
             get => GetElement<FontFamilyNumbering>();
             set => SetElement(value);
@@ -35386,7 +35388,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FontCharSet FontCharSet
+        public FontCharSet? FontCharSet
         {
             get => GetElement<FontCharSet>();
             set => SetElement(value);
@@ -35399,7 +35401,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FontScheme FontScheme
+        public FontScheme? FontScheme
         {
             get => GetElement<FontScheme>();
             set => SetElement(value);
@@ -35477,7 +35479,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PatternFill PatternFill
+        public PatternFill? PatternFill
         {
             get => GetElement<PatternFill>();
             set => SetElement(value);
@@ -35490,7 +35492,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public GradientFill GradientFill
+        public GradientFill? GradientFill
         {
             get => GetElement<GradientFill>();
             set => SetElement(value);
@@ -35565,7 +35567,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "diagonalUp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DiagonalUp
+        public BooleanValue? DiagonalUp
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -35581,7 +35583,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "diagonalDown")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DiagonalDown
+        public BooleanValue? DiagonalDown
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -35597,7 +35599,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "outline")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Outline
+        public BooleanValue? Outline
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -35641,7 +35643,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public StartBorder StartBorder
+        public StartBorder? StartBorder
         {
             get => GetElement<StartBorder>();
             set => SetElement(value);
@@ -35654,7 +35656,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public EndBorder EndBorder
+        public EndBorder? EndBorder
         {
             get => GetElement<EndBorder>();
             set => SetElement(value);
@@ -35667,7 +35669,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public LeftBorder LeftBorder
+        public LeftBorder? LeftBorder
         {
             get => GetElement<LeftBorder>();
             set => SetElement(value);
@@ -35680,7 +35682,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public RightBorder RightBorder
+        public RightBorder? RightBorder
         {
             get => GetElement<RightBorder>();
             set => SetElement(value);
@@ -35693,7 +35695,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public TopBorder TopBorder
+        public TopBorder? TopBorder
         {
             get => GetElement<TopBorder>();
             set => SetElement(value);
@@ -35706,7 +35708,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public BottomBorder BottomBorder
+        public BottomBorder? BottomBorder
         {
             get => GetElement<BottomBorder>();
             set => SetElement(value);
@@ -35719,7 +35721,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DiagonalBorder DiagonalBorder
+        public DiagonalBorder? DiagonalBorder
         {
             get => GetElement<DiagonalBorder>();
             set => SetElement(value);
@@ -35732,7 +35734,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public VerticalBorder VerticalBorder
+        public VerticalBorder? VerticalBorder
         {
             get => GetElement<VerticalBorder>();
             set => SetElement(value);
@@ -35745,7 +35747,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public HorizontalBorder HorizontalBorder
+        public HorizontalBorder? HorizontalBorder
         {
             get => GetElement<HorizontalBorder>();
             set => SetElement(value);
@@ -35936,7 +35938,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -35952,7 +35954,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pivot")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Pivot
+        public BooleanValue? Pivot
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -35968,7 +35970,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "table")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Table
+        public BooleanValue? Table
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -35984,7 +35986,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -36041,7 +36043,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rgb")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue Rgb
+        public HexBinaryValue? Rgb
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -36119,7 +36121,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -36135,7 +36137,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "xfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatId
+        public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -36151,7 +36153,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "builtinId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value BuiltinId
+        public UInt32Value? BuiltinId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -36167,7 +36169,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "iLevel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value OutlineLevel
+        public UInt32Value? OutlineLevel
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -36183,7 +36185,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -36199,7 +36201,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         [SchemaAttr(0, "customBuiltin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CustomBuiltin
+        public BooleanValue? CustomBuiltin
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -36238,7 +36240,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -36307,7 +36309,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "numFmtId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NumberFormatId
+        public UInt32Value? NumberFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -36323,7 +36325,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fontId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FontId
+        public UInt32Value? FontId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -36339,7 +36341,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "fillId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FillId
+        public UInt32Value? FillId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -36355,7 +36357,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "borderId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value BorderId
+        public UInt32Value? BorderId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -36371,7 +36373,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "xfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatId
+        public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -36387,7 +36389,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "quotePrefix")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue QuotePrefix
+        public BooleanValue? QuotePrefix
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -36403,7 +36405,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "pivotButton")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PivotButton
+        public BooleanValue? PivotButton
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -36419,7 +36421,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyNumberFormat")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyNumberFormat
+        public BooleanValue? ApplyNumberFormat
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -36435,7 +36437,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyFont")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyFont
+        public BooleanValue? ApplyFont
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -36451,7 +36453,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyFill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyFill
+        public BooleanValue? ApplyFill
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -36467,7 +36469,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyBorder")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyBorder
+        public BooleanValue? ApplyBorder
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -36483,7 +36485,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyAlignment")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyAlignment
+        public BooleanValue? ApplyAlignment
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -36499,7 +36501,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "applyProtection")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ApplyProtection
+        public BooleanValue? ApplyProtection
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -36546,7 +36548,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Alignment Alignment
+        public Alignment? Alignment
         {
             get => GetElement<Alignment>();
             set => SetElement(value);
@@ -36559,7 +36561,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Protection Protection
+        public Protection? Protection
         {
             get => GetElement<Protection>();
             set => SetElement(value);
@@ -36572,7 +36574,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -36609,7 +36611,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -36659,7 +36661,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Val
+        public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -36708,7 +36710,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Val
+        public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -36757,7 +36759,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableStyleValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableStyleValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TableStyleValues>>();
             set => SetAttribute(value);
@@ -36773,7 +36775,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "size")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Size
+        public UInt32Value? Size
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -36789,7 +36791,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "dxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatId
+        public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -37027,7 +37029,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -37043,7 +37045,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "refersTo")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RefersTo
+        public StringValue? RefersTo
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -37059,7 +37061,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -37140,7 +37142,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -37156,7 +37158,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "refreshError")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RefreshError
+        public BooleanValue? RefreshError
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -37241,7 +37243,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RowIndex
+        public UInt32Value? RowIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -37325,7 +37327,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CellReference
+        public StringValue? CellReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -37341,7 +37343,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> DataType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>? DataType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>>();
             set => SetAttribute(value);
@@ -37357,7 +37359,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "vm")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ValueMetaIndex
+        public UInt32Value? ValueMetaIndex
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -37390,7 +37392,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Xstring Xstring
+        public Xstring? Xstring
         {
             get => GetElement<Xstring>();
             set => SetElement(value);
@@ -37519,7 +37521,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -37535,7 +37537,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ole")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UseOle
+        public BooleanValue? UseOle
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -37551,7 +37553,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "advise")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Advise
+        public BooleanValue? Advise
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -37567,7 +37569,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "preferPic")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PreferPicture
+        public BooleanValue? PreferPicture
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -37598,7 +37600,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Values Values
+        public Values? Values
         {
             get => GetElement<Values>();
             set => SetElement(value);
@@ -37665,7 +37667,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rows")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Rows
+        public UInt32Value? Rows
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -37681,7 +37683,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cols")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Columns
+        public UInt32Value? Columns
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -37764,7 +37766,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DdeValues> ValueType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DdeValues>? ValueType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DdeValues>>();
             set => SetAttribute(value);
@@ -37790,7 +37792,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DdeLinkValue DdeLinkValue
+        public DdeLinkValue? DdeLinkValue
         {
             get => GetElement<DdeLinkValue>();
             set => SetElement(value);
@@ -37927,7 +37929,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -37960,7 +37962,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SheetNames SheetNames
+        public SheetNames? SheetNames
         {
             get => GetElement<SheetNames>();
             set => SetElement(value);
@@ -37973,7 +37975,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExternalDefinedNames ExternalDefinedNames
+        public ExternalDefinedNames? ExternalDefinedNames
         {
             get => GetElement<ExternalDefinedNames>();
             set => SetElement(value);
@@ -37986,7 +37988,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SheetDataSet SheetDataSet
+        public SheetDataSet? SheetDataSet
         {
             get => GetElement<SheetDataSet>();
             set => SetElement(value);
@@ -38053,7 +38055,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ddeService")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DdeService
+        public StringValue? DdeService
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -38069,7 +38071,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "ddeTopic")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DdeTopic
+        public StringValue? DdeTopic
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -38104,7 +38106,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DdeItems DdeItems
+        public DdeItems? DdeItems
         {
             get => GetElement<DdeItems>();
             set => SetElement(value);
@@ -38174,7 +38176,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -38190,7 +38192,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "progId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ProgId
+        public StringValue? ProgId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -38224,7 +38226,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public OleItems OleItems
+        public OleItems? OleItems
         {
             get => GetElement<OleItems>();
             set => SetElement(value);
@@ -38261,7 +38263,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -38380,7 +38382,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -38396,7 +38398,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uniqueName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UniqueName
+        public StringValue? UniqueName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -38412,7 +38414,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -38428,7 +38430,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "totalsRowFunction")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFunctionValues> TotalsRowFunction
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFunctionValues>? TotalsRowFunction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFunctionValues>>();
             set => SetAttribute(value);
@@ -38444,7 +38446,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "totalsRowLabel")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TotalsRowLabel
+        public StringValue? TotalsRowLabel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -38460,7 +38462,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "queryTableFieldId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value QueryTableFieldId
+        public UInt32Value? QueryTableFieldId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -38476,7 +38478,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "headerRowDxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value HeaderRowDifferentialFormattingId
+        public UInt32Value? HeaderRowDifferentialFormattingId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -38492,7 +38494,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dataDxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value DataFormatId
+        public UInt32Value? DataFormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -38508,7 +38510,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "totalsRowDxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value TotalsRowDifferentialFormattingId
+        public UInt32Value? TotalsRowDifferentialFormattingId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -38524,7 +38526,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "headerRowCellStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue HeaderRowCellStyle
+        public StringValue? HeaderRowCellStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -38540,7 +38542,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dataCellStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DataCellStyle
+        public StringValue? DataCellStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -38556,7 +38558,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "totalsRowCellStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TotalsRowCellStyle
+        public StringValue? TotalsRowCellStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -38619,7 +38621,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CalculatedColumnFormula CalculatedColumnFormula
+        public CalculatedColumnFormula? CalculatedColumnFormula
         {
             get => GetElement<CalculatedColumnFormula>();
             set => SetElement(value);
@@ -38632,7 +38634,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public TotalsRowFormula TotalsRowFormula
+        public TotalsRowFormula? TotalsRowFormula
         {
             get => GetElement<TotalsRowFormula>();
             set => SetElement(value);
@@ -38645,7 +38647,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public XmlColumnProperties XmlColumnProperties
+        public XmlColumnProperties? XmlColumnProperties
         {
             get => GetElement<XmlColumnProperties>();
             set => SetElement(value);
@@ -38658,7 +38660,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -38785,7 +38787,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "array")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Array
+        public BooleanValue? Array
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -38804,7 +38806,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(1, "space")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
             set => SetAttribute(value);
@@ -38876,7 +38878,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "mapId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MapId
+        public UInt32Value? MapId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -38892,7 +38894,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "xpath")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue XPath
+        public StringValue? XPath
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -38908,7 +38910,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "denormalized")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Denormalized
+        public BooleanValue? Denormalized
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -38924,7 +38926,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "xmlDataType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues> XmlDataType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues>? XmlDataType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues>>();
             set => SetAttribute(value);
@@ -38965,7 +38967,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -39032,7 +39034,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileDependencyValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileDependencyValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileDependencyValues>>();
             set => SetAttribute(value);
@@ -39115,7 +39117,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "first")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue First
+        public StringValue? First
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -39201,7 +39203,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileValues> ValueType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileValues>? ValueType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VolatileValues>>();
             set => SetAttribute(value);
@@ -39231,7 +39233,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Xstring Xstring
+        public Xstring? Xstring
         {
             get => GetElement<Xstring>();
             set => SetElement(value);
@@ -39268,7 +39270,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CellReference
+        public StringValue? CellReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -39284,7 +39286,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "s")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -39337,7 +39339,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cacheId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value CacheId
+        public UInt32Value? CacheId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -39356,7 +39358,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -39410,7 +39412,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -39426,7 +39428,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "divId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DivId
+        public StringValue? DivId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -39442,7 +39444,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sourceObject")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SourceObject
+        public StringValue? SourceObject
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -39458,7 +39460,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "destinationFile")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DestinationFile
+        public StringValue? DestinationFile
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -39474,7 +39476,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -39490,7 +39492,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoRepublish")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoRepublish
+        public BooleanValue? AutoRepublish
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39557,7 +39559,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -39635,7 +39637,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -39651,7 +39653,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "guid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Guid
+        public StringValue? Guid
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -39667,7 +39669,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoUpdate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoUpdate
+        public BooleanValue? AutoUpdate
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39683,7 +39685,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "mergeInterval")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MergeInterval
+        public UInt32Value? MergeInterval
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -39699,7 +39701,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "changesSavedWin")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ChangesSavedWin
+        public BooleanValue? ChangesSavedWin
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39715,7 +39717,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "onlySync")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue OnlySync
+        public BooleanValue? OnlySync
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39731,7 +39733,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "personalView")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PersonalView
+        public BooleanValue? PersonalView
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39747,7 +39749,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "includePrintSettings")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IncludePrintSettings
+        public BooleanValue? IncludePrintSettings
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39763,7 +39765,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "includeHiddenRowCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IncludeHiddenRowColumn
+        public BooleanValue? IncludeHiddenRowColumn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39779,7 +39781,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "maximized")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Maximized
+        public BooleanValue? Maximized
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39795,7 +39797,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "minimized")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Minimized
+        public BooleanValue? Minimized
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39811,7 +39813,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showHorizontalScroll")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowHorizontalScroll
+        public BooleanValue? ShowHorizontalScroll
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39827,7 +39829,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showVerticalScroll")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowVerticalScroll
+        public BooleanValue? ShowVerticalScroll
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39843,7 +39845,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showSheetTabs")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowSheetTabs
+        public BooleanValue? ShowSheetTabs
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39859,7 +39861,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "xWindow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value XWindow
+        public Int32Value? XWindow
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -39875,7 +39877,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "yWindow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value YWindow
+        public Int32Value? YWindow
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -39891,7 +39893,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "windowWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value WindowWidth
+        public UInt32Value? WindowWidth
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -39907,7 +39909,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "windowHeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value WindowHeight
+        public UInt32Value? WindowHeight
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -39923,7 +39925,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tabRatio")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value TabRatio
+        public UInt32Value? TabRatio
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -39939,7 +39941,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "activeSheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ActiveSheetId
+        public UInt32Value? ActiveSheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -39955,7 +39957,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showFormulaBar")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowFormulaBar
+        public BooleanValue? ShowFormulaBar
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39971,7 +39973,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showStatusbar")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowStatusbar
+        public BooleanValue? ShowStatusbar
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -39987,7 +39989,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showComments")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CommentsValues> ShowComments
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CommentsValues>? ShowComments
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CommentsValues>>();
             set => SetAttribute(value);
@@ -40003,7 +40005,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showObjects")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues> ShowObjects
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues>? ShowObjects
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues>>();
             set => SetAttribute(value);
@@ -40067,7 +40069,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -40104,7 +40106,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -40120,7 +40122,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "sheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SheetId
+        public UInt32Value? SheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -40136,7 +40138,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "state")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues> State
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues>? State
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SheetStateValues>>();
             set => SetAttribute(value);
@@ -40155,7 +40157,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -40249,7 +40251,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "visibility")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VisibilityValues> Visibility
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.VisibilityValues>? Visibility
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.VisibilityValues>>();
             set => SetAttribute(value);
@@ -40265,7 +40267,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "minimized")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Minimized
+        public BooleanValue? Minimized
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -40281,7 +40283,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showHorizontalScroll")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowHorizontalScroll
+        public BooleanValue? ShowHorizontalScroll
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -40297,7 +40299,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showVerticalScroll")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowVerticalScroll
+        public BooleanValue? ShowVerticalScroll
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -40313,7 +40315,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showSheetTabs")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowSheetTabs
+        public BooleanValue? ShowSheetTabs
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -40329,7 +40331,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "xWindow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value XWindow
+        public Int32Value? XWindow
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -40345,7 +40347,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "yWindow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value YWindow
+        public Int32Value? YWindow
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -40361,7 +40363,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "windowWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value WindowWidth
+        public UInt32Value? WindowWidth
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -40377,7 +40379,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "windowHeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value WindowHeight
+        public UInt32Value? WindowHeight
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -40393,7 +40395,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tabRatio")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value TabRatio
+        public UInt32Value? TabRatio
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -40409,7 +40411,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "firstSheet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FirstSheet
+        public UInt32Value? FirstSheet
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -40425,7 +40427,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "activeTab")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ActiveTab
+        public UInt32Value? ActiveTab
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -40441,7 +40443,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoFilterDateGrouping")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoFilterDateGrouping
+        public BooleanValue? AutoFilterDateGrouping
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -40483,7 +40485,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -40533,7 +40535,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -40549,7 +40551,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "comment")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Comment
+        public StringValue? Comment
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -40565,7 +40567,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "customMenu")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CustomMenu
+        public StringValue? CustomMenu
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -40581,7 +40583,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "description")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -40597,7 +40599,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "help")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Help
+        public StringValue? Help
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -40613,7 +40615,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "statusBar")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue StatusBar
+        public StringValue? StatusBar
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -40629,7 +40631,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "localSheetId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value LocalSheetId
+        public UInt32Value? LocalSheetId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -40645,7 +40647,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -40661,7 +40663,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "function")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Function
+        public BooleanValue? Function
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -40677,7 +40679,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "vbProcedure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue VbProcedure
+        public BooleanValue? VbProcedure
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -40693,7 +40695,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "xlm")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Xlm
+        public BooleanValue? Xlm
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -40709,7 +40711,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "functionGroupId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FunctionGroupId
+        public UInt32Value? FunctionGroupId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -40725,7 +40727,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "shortcutKey")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ShortcutKey
+        public StringValue? ShortcutKey
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -40741,7 +40743,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "publishToServer")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PublishToServer
+        public BooleanValue? PublishToServer
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -40757,7 +40759,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "workbookParameter")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue WorkbookParameter
+        public BooleanValue? WorkbookParameter
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -40822,7 +40824,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -40901,7 +40903,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -40987,7 +40989,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "moveWithCells")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue MoveWithCells
+        public BooleanValue? MoveWithCells
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -41003,7 +41005,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "sizeWithCells")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SizeWithCells
+        public BooleanValue? SizeWithCells
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -41019,7 +41021,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "z-order")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ZOrder
+        public UInt32Value? ZOrder
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -41050,7 +41052,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public FromMarker FromMarker
+        public FromMarker? FromMarker
         {
             get => GetElement<FromMarker>();
             set => SetElement(value);
@@ -41063,7 +41065,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ToMarker ToMarker
+        public ToMarker? ToMarker
         {
             get => GetElement<ToMarker>();
             set => SetElement(value);
@@ -41272,7 +41274,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId ColumnId
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId? ColumnId
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>();
             set => SetElement(value);
@@ -41285,7 +41287,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset ColumnOffset
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset? ColumnOffset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>();
             set => SetElement(value);
@@ -41298,7 +41300,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId RowId
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId? RowId
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>();
             set => SetElement(value);
@@ -41311,7 +41313,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset RowOffset
+        public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset? RowOffset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>();
             set => SetElement(value);
@@ -41375,7 +41377,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -41460,7 +41462,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -41545,7 +41547,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -41630,7 +41632,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -41715,7 +41717,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -41765,7 +41767,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -41781,7 +41783,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "showFirstColumn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowFirstColumn
+        public BooleanValue? ShowFirstColumn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -41797,7 +41799,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "showLastColumn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLastColumn
+        public BooleanValue? ShowLastColumn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -41813,7 +41815,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "showRowStripes")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowRowStripes
+        public BooleanValue? ShowRowStripes
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -41829,7 +41831,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "showColumnStripes")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowColumnStripes
+        public BooleanValue? ShowColumnStripes
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -41941,7 +41943,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -41957,7 +41959,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "icon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Icon
+        public BooleanValue? Icon
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -41973,7 +41975,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "advise")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Advise
+        public BooleanValue? Advise
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -41989,7 +41991,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "preferPic")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PreferPicture
+        public BooleanValue? PreferPicture
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -42620,7 +42622,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "style")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues> Style
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues>? Style
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues>>();
             set => SetAttribute(value);
@@ -42641,7 +42643,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Color Color
+        public Color? Color
         {
             get => GetElement<Color>();
             set => SetElement(value);
@@ -42705,7 +42707,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "locked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Locked
+        public BooleanValue? Locked
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -42721,7 +42723,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "defaultSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DefaultSize
+        public BooleanValue? DefaultSize
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -42737,7 +42739,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Print
+        public BooleanValue? Print
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -42753,7 +42755,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "disabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Disabled
+        public BooleanValue? Disabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -42769,7 +42771,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "recalcAlways")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RecalcAlways
+        public BooleanValue? RecalcAlways
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -42785,7 +42787,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uiObject")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UiObject
+        public BooleanValue? UiObject
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -42801,7 +42803,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoFill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoFill
+        public BooleanValue? AutoFill
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -42817,7 +42819,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoLine
+        public BooleanValue? AutoLine
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -42833,7 +42835,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoPict")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoPict
+        public BooleanValue? AutoPict
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -42849,7 +42851,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "macro")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Macro
+        public StringValue? Macro
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -42865,7 +42867,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "altText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AltText
+        public StringValue? AltText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -42881,7 +42883,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "linkedCell")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue LinkedCell
+        public StringValue? LinkedCell
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -42897,7 +42899,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "listFillRange")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ListFillRange
+        public StringValue? ListFillRange
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -42913,7 +42915,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cf")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Cf
+        public StringValue? Cf
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -42932,7 +42934,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -42973,7 +42975,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ObjectAnchor ObjectAnchor
+        public ObjectAnchor? ObjectAnchor
         {
             get => GetElement<ObjectAnchor>();
             set => SetElement(value);
@@ -43040,7 +43042,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "locked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Locked
+        public BooleanValue? Locked
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -43056,7 +43058,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "defaultSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DefaultSize
+        public BooleanValue? DefaultSize
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -43072,7 +43074,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Print
+        public BooleanValue? Print
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -43088,7 +43090,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "disabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Disabled
+        public BooleanValue? Disabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -43104,7 +43106,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uiObject")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UiObject
+        public BooleanValue? UiObject
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -43120,7 +43122,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoFill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoFill
+        public BooleanValue? AutoFill
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -43136,7 +43138,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoLine
+        public BooleanValue? AutoLine
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -43152,7 +43154,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoPict")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoPict
+        public BooleanValue? AutoPict
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -43168,7 +43170,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "macro")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Macro
+        public StringValue? Macro
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -43184,7 +43186,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "altText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AltText
+        public StringValue? AltText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -43200,7 +43202,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dde")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Dde
+        public BooleanValue? Dde
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -43219,7 +43221,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -43257,7 +43259,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ObjectAnchor ObjectAnchor
+        public ObjectAnchor? ObjectAnchor
         {
             get => GetElement<ObjectAnchor>();
             set => SetElement(value);
@@ -43324,7 +43326,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "published")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Published
+        public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -43340,7 +43342,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "codeName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CodeName
+        public StringValue? CodeName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -43369,7 +43371,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public TabColor TabColor
+        public TabColor? TabColor
         {
             get => GetElement<TabColor>();
             set => SetElement(value);
@@ -43471,7 +43473,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "password")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue Password
+        public HexBinaryValue? Password
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -43487,7 +43489,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "algorithmName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AlgorithmName
+        public StringValue? AlgorithmName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -43503,7 +43505,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hashValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue HashValue
+        public Base64BinaryValue? HashValue
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -43519,7 +43521,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "saltValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue SaltValue
+        public Base64BinaryValue? SaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -43535,7 +43537,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "spinCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SpinCount
+        public UInt32Value? SpinCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -43551,7 +43553,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "content")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Content
+        public BooleanValue? Content
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -43567,7 +43569,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "objects")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Objects
+        public BooleanValue? Objects
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -43686,7 +43688,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -43790,7 +43792,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -43837,7 +43839,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -43853,7 +43855,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "lho")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Lho
+        public UInt32Value? Lho
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -43869,7 +43871,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "lhe")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Lhe
+        public UInt32Value? Lhe
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -43885,7 +43887,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "lhf")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Lhf
+        public UInt32Value? Lhf
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -43901,7 +43903,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cho")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Cho
+        public UInt32Value? Cho
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -43917,7 +43919,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "che")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Che
+        public UInt32Value? Che
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -43933,7 +43935,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "chf")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Chf
+        public UInt32Value? Chf
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -43949,7 +43951,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rho")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Rho
+        public UInt32Value? Rho
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -43965,7 +43967,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rhe")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Rhe
+        public UInt32Value? Rhe
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -43981,7 +43983,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rhf")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Rhf
+        public UInt32Value? Rhf
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -43997,7 +43999,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "lfo")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Lfo
+        public UInt32Value? Lfo
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44013,7 +44015,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "lfe")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Lfe
+        public UInt32Value? Lfe
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44029,7 +44031,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "lff")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Lff
+        public UInt32Value? Lff
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44045,7 +44047,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cfo")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Cfo
+        public UInt32Value? Cfo
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44061,7 +44063,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cfe")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Cfe
+        public UInt32Value? Cfe
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44077,7 +44079,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "cff")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Cff
+        public UInt32Value? Cff
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44093,7 +44095,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rfo")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Rfo
+        public UInt32Value? Rfo
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44109,7 +44111,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rfe")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Rfe
+        public UInt32Value? Rfe
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44125,7 +44127,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "rff")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Rff
+        public UInt32Value? Rff
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44194,7 +44196,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -44272,7 +44274,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44418,7 +44420,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "minLength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MinLength
+        public UInt32Value? MinLength
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44434,7 +44436,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "maxLength")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value MaxLength
+        public UInt32Value? MaxLength
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44450,7 +44452,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowValue
+        public BooleanValue? ShowValue
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -44536,7 +44538,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "iconSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues> IconSetValue
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues>? IconSetValue
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues>>();
             set => SetAttribute(value);
@@ -44552,7 +44554,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowValue
+        public BooleanValue? ShowValue
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -44568,7 +44570,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "percent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Percent
+        public BooleanValue? Percent
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -44584,7 +44586,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "reverse")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Reverse
+        public BooleanValue? Reverse
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -44729,7 +44731,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -44811,7 +44813,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "syncHorizontal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SyncHorizontal
+        public BooleanValue? SyncHorizontal
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -44827,7 +44829,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "syncVertical")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SyncVertical
+        public BooleanValue? SyncVertical
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -44843,7 +44845,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "syncRef")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SyncReference
+        public StringValue? SyncReference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -44859,7 +44861,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "transitionEvaluation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue TransitionEvaluation
+        public BooleanValue? TransitionEvaluation
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -44875,7 +44877,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "transitionEntry")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue TransitionEntry
+        public BooleanValue? TransitionEntry
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -44891,7 +44893,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "published")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Published
+        public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -44907,7 +44909,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "codeName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CodeName
+        public StringValue? CodeName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -44923,7 +44925,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "filterMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FilterMode
+        public BooleanValue? FilterMode
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -44939,7 +44941,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "enableFormatConditionsCalculation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue EnableFormatConditionsCalculation
+        public BooleanValue? EnableFormatConditionsCalculation
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -44978,7 +44980,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public TabColor TabColor
+        public TabColor? TabColor
         {
             get => GetElement<TabColor>();
             set => SetElement(value);
@@ -44991,7 +44993,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public OutlineProperties OutlineProperties
+        public OutlineProperties? OutlineProperties
         {
             get => GetElement<OutlineProperties>();
             set => SetElement(value);
@@ -45004,7 +45006,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PageSetupProperties PageSetupProperties
+        public PageSetupProperties? PageSetupProperties
         {
             get => GetElement<PageSetupProperties>();
             set => SetElement(value);
@@ -45106,7 +45108,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "baseColWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value BaseColumnWidth
+        public UInt32Value? BaseColumnWidth
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -45122,7 +45124,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "defaultColWidth")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue DefaultColumnWidth
+        public DoubleValue? DefaultColumnWidth
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -45138,7 +45140,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "defaultRowHeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue DefaultRowHeight
+        public DoubleValue? DefaultRowHeight
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -45154,7 +45156,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "customHeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CustomHeight
+        public BooleanValue? CustomHeight
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45170,7 +45172,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "zeroHeight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ZeroHeight
+        public BooleanValue? ZeroHeight
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45186,7 +45188,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "thickTop")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ThickTop
+        public BooleanValue? ThickTop
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45202,7 +45204,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "thickBottom")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ThickBottom
+        public BooleanValue? ThickBottom
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45218,7 +45220,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "outlineLevelRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue OutlineLevelRow
+        public ByteValue? OutlineLevelRow
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -45234,7 +45236,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "outlineLevelCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue OutlineLevelColumn
+        public ByteValue? OutlineLevelColumn
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -45253,7 +45255,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(55, "dyDescent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue DyDescent
+        public DoubleValue? DyDescent
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -45317,7 +45319,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "password")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue Password
+        public HexBinaryValue? Password
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -45333,7 +45335,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "algorithmName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AlgorithmName
+        public StringValue? AlgorithmName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -45349,7 +45351,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "hashValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue HashValue
+        public Base64BinaryValue? HashValue
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -45365,7 +45367,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "saltValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue SaltValue
+        public Base64BinaryValue? SaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -45381,7 +45383,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "spinCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SpinCount
+        public UInt32Value? SpinCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -45397,7 +45399,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "sheet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Sheet
+        public BooleanValue? Sheet
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45413,7 +45415,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "objects")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Objects
+        public BooleanValue? Objects
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45429,7 +45431,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "scenarios")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Scenarios
+        public BooleanValue? Scenarios
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45445,7 +45447,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "formatCells")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FormatCells
+        public BooleanValue? FormatCells
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45461,7 +45463,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "formatColumns")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FormatColumns
+        public BooleanValue? FormatColumns
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45477,7 +45479,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "formatRows")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FormatRows
+        public BooleanValue? FormatRows
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45493,7 +45495,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "insertColumns")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InsertColumns
+        public BooleanValue? InsertColumns
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45509,7 +45511,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "insertRows")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InsertRows
+        public BooleanValue? InsertRows
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45525,7 +45527,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "insertHyperlinks")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InsertHyperlinks
+        public BooleanValue? InsertHyperlinks
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45541,7 +45543,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "deleteColumns")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DeleteColumns
+        public BooleanValue? DeleteColumns
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45557,7 +45559,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "deleteRows")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DeleteRows
+        public BooleanValue? DeleteRows
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45573,7 +45575,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "selectLockedCells")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SelectLockedCells
+        public BooleanValue? SelectLockedCells
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45589,7 +45591,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "sort")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Sort
+        public BooleanValue? Sort
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45605,7 +45607,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "autoFilter")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoFilter
+        public BooleanValue? AutoFilter
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45621,7 +45623,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "pivotTables")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PivotTables
+        public BooleanValue? PivotTables
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45637,7 +45639,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "selectUnlockedCells")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SelectUnlockedCells
+        public BooleanValue? SelectUnlockedCells
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -45891,7 +45893,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -46093,7 +46095,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "function")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues> Function
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues>? Function
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues>>();
             set => SetAttribute(value);
@@ -46109,7 +46111,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "leftLabels")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue LeftLabels
+        public BooleanValue? LeftLabels
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -46125,7 +46127,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "startLabels")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue StartLabels
+        public BooleanValue? StartLabels
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -46141,7 +46143,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "topLabels")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue TopLabels
+        public BooleanValue? TopLabels
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -46157,7 +46159,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "link")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Link
+        public BooleanValue? Link
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -46190,7 +46192,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DataReferences DataReferences
+        public DataReferences? DataReferences
         {
             get => GetElement<DataReferences>();
             set => SetElement(value);
@@ -46258,7 +46260,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "pivot")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Pivot
+        public BooleanValue? Pivot
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -46274,7 +46276,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "sqref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ListValue<StringValue> SequenceOfReferences
+        public ListValue<StringValue>? SequenceOfReferences
         {
             get => GetAttribute<ListValue<StringValue>>();
             set => SetAttribute(value);
@@ -46420,7 +46422,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -46500,7 +46502,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -46516,7 +46518,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "level")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Level
+        public UInt32Value? Level
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -46659,7 +46661,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -46747,7 +46749,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public PivotArea PivotArea
+        public PivotArea? PivotArea
         {
             get => GetElement<PivotArea>();
             set => SetElement(value);
@@ -46846,7 +46848,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -46862,7 +46864,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -46878,7 +46880,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "sheet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Sheet
+        public StringValue? Sheet
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -46897,7 +46899,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -46979,7 +46981,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "autoPage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoPage
+        public BooleanValue? AutoPage
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47007,7 +47009,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Pages Pages
+        public Pages? Pages
         {
             get => GetElement<Pages>();
             set => SetElement(value);
@@ -47020,7 +47022,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public RangeSets RangeSets
+        public RangeSets? RangeSets
         {
             get => GetElement<RangeSets>();
             set => SetElement(value);
@@ -47149,7 +47151,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "locked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Locked
+        public BooleanValue? Locked
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47165,7 +47167,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "defaultSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DefaultSize
+        public BooleanValue? DefaultSize
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47181,7 +47183,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "print")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Print
+        public BooleanValue? Print
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47197,7 +47199,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "disabled")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Disabled
+        public BooleanValue? Disabled
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47213,7 +47215,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "uiObject")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UiObject
+        public BooleanValue? UiObject
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47229,7 +47231,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "autoFill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoFill
+        public BooleanValue? AutoFill
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47245,7 +47247,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "autoLine")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoLine
+        public BooleanValue? AutoLine
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47261,7 +47263,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "altText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AltText
+        public StringValue? AltText
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -47277,7 +47279,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "textHAlign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextHorizontalAlignmentValues> TextHAlign
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextHorizontalAlignmentValues>? TextHAlign
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextHorizontalAlignmentValues>>();
             set => SetAttribute(value);
@@ -47293,7 +47295,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "textVAlign")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextVerticalAlignmentValues> TextVAlign
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextVerticalAlignmentValues>? TextVAlign
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TextVerticalAlignmentValues>>();
             set => SetAttribute(value);
@@ -47309,7 +47311,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "lockText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue LockText
+        public BooleanValue? LockText
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47325,7 +47327,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "justLastX")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue JustLastX
+        public BooleanValue? JustLastX
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47341,7 +47343,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "autoScale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoScale
+        public BooleanValue? AutoScale
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47357,7 +47359,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "rowHidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RowHidden
+        public BooleanValue? RowHidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47373,7 +47375,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "colHidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ColHidden
+        public BooleanValue? ColHidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47414,7 +47416,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ObjectAnchor ObjectAnchor
+        public ObjectAnchor? ObjectAnchor
         {
             get => GetElement<ObjectAnchor>();
             set => SetElement(value);
@@ -47451,7 +47453,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "descending")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Descending
+        public BooleanValue? Descending
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47467,7 +47469,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "sortBy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues> SortBy
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
             set => SetAttribute(value);
@@ -47483,7 +47485,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -47499,7 +47501,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "customList")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CustomList
+        public StringValue? CustomList
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -47515,7 +47517,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "dxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatId
+        public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -47531,7 +47533,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "iconSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues> IconSet
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues>? IconSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues>>();
             set => SetAttribute(value);
@@ -47547,7 +47549,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "iconId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value IconId
+        public UInt32Value? IconId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -47601,7 +47603,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -47649,7 +47651,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "year")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Year
+        public UInt16Value? Year
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -47665,7 +47667,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "month")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Month
+        public UInt16Value? Month
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -47681,7 +47683,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "day")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Day
+        public UInt16Value? Day
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -47697,7 +47699,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hour")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Hour
+        public UInt16Value? Hour
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -47713,7 +47715,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "minute")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Minute
+        public UInt16Value? Minute
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -47729,7 +47731,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "second")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Second
+        public UInt16Value? Second
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -47745,7 +47747,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dateTimeGrouping")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues> DateTimeGrouping
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues>? DateTimeGrouping
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues>>();
             set => SetAttribute(value);
@@ -47840,7 +47842,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "blank")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Blank
+        public BooleanValue? Blank
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47856,7 +47858,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "calendarType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalendarValues> CalendarType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalendarValues>? CalendarType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalendarValues>>();
             set => SetAttribute(value);
@@ -47911,7 +47913,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "top")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Top
+        public BooleanValue? Top
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47927,7 +47929,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "percent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Percent
+        public BooleanValue? Percent
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -47943,7 +47945,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Val
+        public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -47959,7 +47961,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "filterVal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue FilterValue
+        public DoubleValue? FilterValue
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -48040,7 +48042,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "and")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue And
+        public BooleanValue? And
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48090,7 +48092,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues>>();
             set => SetAttribute(value);
@@ -48106,7 +48108,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Val
+        public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -48122,7 +48124,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "maxVal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue MaxVal
+        public DoubleValue? MaxVal
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -48138,7 +48140,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "valIso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue ValIso
+        public DateTimeValue? ValIso
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -48154,7 +48156,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "maxValIso")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue MaxValIso
+        public DateTimeValue? MaxValIso
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -48212,7 +48214,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "dxfId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FormatId
+        public UInt32Value? FormatId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -48228,7 +48230,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "cellColor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CellColor
+        public BooleanValue? CellColor
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48278,7 +48280,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "iconSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues> IconSet
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues>? IconSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.IconSetValues>>();
             set => SetAttribute(value);
@@ -48294,7 +48296,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "iconId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value IconId
+        public UInt32Value? IconId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -48375,7 +48377,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -48465,7 +48467,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -48552,7 +48554,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -48607,7 +48609,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "connection")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Connection
+        public StringValue? Connection
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -48623,7 +48625,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "command")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Command
+        public StringValue? Command
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -48639,7 +48641,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "serverCommand")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ServerCommand
+        public StringValue? ServerCommand
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -48655,7 +48657,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "commandType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value CommandType
+        public UInt32Value? CommandType
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -48708,7 +48710,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "local")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Local
+        public BooleanValue? Local
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48724,7 +48726,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "localConnection")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue LocalConnection
+        public StringValue? LocalConnection
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -48740,7 +48742,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "localRefresh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue LocalRefresh
+        public BooleanValue? LocalRefresh
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48756,7 +48758,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "sendLocale")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SendLocale
+        public BooleanValue? SendLocale
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48772,7 +48774,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "rowDrillCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RowDrillCount
+        public UInt32Value? RowDrillCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -48788,7 +48790,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "serverFill")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ServerFill
+        public BooleanValue? ServerFill
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48804,7 +48806,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "serverNumberFormat")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ServerNumberFormat
+        public BooleanValue? ServerNumberFormat
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48820,7 +48822,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "serverFont")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ServerFont
+        public BooleanValue? ServerFont
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48836,7 +48838,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "serverFontColor")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ServerFontColor
+        public BooleanValue? ServerFontColor
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48920,7 +48922,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "xml")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue XmlSource
+        public BooleanValue? XmlSource
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48936,7 +48938,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "sourceData")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SourceData
+        public BooleanValue? SourceData
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48952,7 +48954,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "parsePre")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ParsePreTag
+        public BooleanValue? ParsePreTag
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48968,7 +48970,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "consecutive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Consecutive
+        public BooleanValue? Consecutive
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -48984,7 +48986,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "firstRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FirstRow
+        public BooleanValue? FirstRow
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -49000,7 +49002,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "xl97")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CreatedInExcel97
+        public BooleanValue? CreatedInExcel97
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -49016,7 +49018,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "textDates")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue TextDates
+        public BooleanValue? TextDates
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -49032,7 +49034,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "xl2000")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RefreshedInExcel2000
+        public BooleanValue? RefreshedInExcel2000
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -49048,7 +49050,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "url")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Url
+        public StringValue? Url
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -49064,7 +49066,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "post")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Post
+        public StringValue? Post
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -49080,7 +49082,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "htmlTables")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HtmlTables
+        public BooleanValue? HtmlTables
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -49096,7 +49098,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "htmlFormat")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.HtmlFormattingValues> HtmlFormat
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.HtmlFormattingValues>? HtmlFormat
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.HtmlFormattingValues>>();
             set => SetAttribute(value);
@@ -49112,7 +49114,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "editPage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue EditPage
+        public StringValue? EditPage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -49151,7 +49153,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Tables Tables
+        public Tables? Tables
         {
             get => GetElement<Tables>();
             set => SetElement(value);
@@ -49218,7 +49220,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "prompt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Prompt
+        public BooleanValue? Prompt
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -49234,7 +49236,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "fileType")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FileTypeValues> FileType
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FileTypeValues>? FileType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FileTypeValues>>();
             set => SetAttribute(value);
@@ -49250,7 +49252,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "codePage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value CodePage
+        public UInt32Value? CodePage
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -49266,7 +49268,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "characterSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue TextCharacterSet
+        public StringValue? TextCharacterSet
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -49282,7 +49284,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "firstRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FirstRow
+        public UInt32Value? FirstRow
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -49298,7 +49300,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "sourceFile")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue SourceFile
+        public StringValue? SourceFile
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -49314,7 +49316,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "delimited")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Delimited
+        public BooleanValue? Delimited
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -49330,7 +49332,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "decimal")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Decimal
+        public StringValue? Decimal
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -49346,7 +49348,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "thousands")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Thousands
+        public StringValue? Thousands
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -49362,7 +49364,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "tab")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue TabAsDelimiter
+        public BooleanValue? TabAsDelimiter
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -49378,7 +49380,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "space")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Space
+        public BooleanValue? Space
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -49394,7 +49396,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "comma")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Comma
+        public BooleanValue? Comma
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -49410,7 +49412,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "semicolon")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Semicolon
+        public BooleanValue? Semicolon
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -49426,7 +49428,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "consecutive")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Consecutive
+        public BooleanValue? Consecutive
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -49442,7 +49444,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "qualifier")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.QualifierValues> Qualifier
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.QualifierValues>? Qualifier
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.QualifierValues>>();
             set => SetAttribute(value);
@@ -49458,7 +49460,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "delimiter")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Delimiter
+        public StringValue? Delimiter
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -49504,7 +49506,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public TextFields TextFields
+        public TextFields? TextFields
         {
             get => GetElement<TextFields>();
             set => SetElement(value);
@@ -49571,7 +49573,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -49714,7 +49716,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -49801,7 +49803,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -49883,7 +49885,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SourceValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SourceValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SourceValues>>();
             set => SetAttribute(value);
@@ -49899,7 +49901,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "connectionId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ConnectionId
+        public UInt32Value? ConnectionId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -49935,7 +49937,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public WorksheetSource WorksheetSource
+        public WorksheetSource? WorksheetSource
         {
             get => GetElement<WorksheetSource>();
             set => SetElement(value);
@@ -49948,7 +49950,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Consolidation Consolidation
+        public Consolidation? Consolidation
         {
             get => GetElement<Consolidation>();
             set => SetElement(value);
@@ -49961,7 +49963,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public CacheSourceExtensionList CacheSourceExtensionList
+        public CacheSourceExtensionList? CacheSourceExtensionList
         {
             get => GetElement<CacheSourceExtensionList>();
             set => SetElement(value);
@@ -50028,7 +50030,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -50108,7 +50110,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -50188,7 +50190,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -50288,7 +50290,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Entries Entries
+        public Entries? Entries
         {
             get => GetElement<Entries>();
             set => SetElement(value);
@@ -50301,7 +50303,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public Sets Sets
+        public Sets? Sets
         {
             get => GetElement<Sets>();
             set => SetElement(value);
@@ -50314,7 +50316,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public QueryCache QueryCache
+        public QueryCache? QueryCache
         {
             get => GetElement<QueryCache>();
             set => SetElement(value);
@@ -50327,7 +50329,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ServerFormats ServerFormats
+        public ServerFormats? ServerFormats
         {
             get => GetElement<ServerFormats>();
             set => SetElement(value);
@@ -50340,7 +50342,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -50407,7 +50409,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -50487,7 +50489,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -50567,7 +50569,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -50647,7 +50649,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -50727,7 +50729,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -50872,7 +50874,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -50968,7 +50970,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "containsSemiMixedTypes")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ContainsSemiMixedTypes
+        public BooleanValue? ContainsSemiMixedTypes
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -50984,7 +50986,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "containsNonDate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ContainsNonDate
+        public BooleanValue? ContainsNonDate
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -51000,7 +51002,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "containsDate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ContainsDate
+        public BooleanValue? ContainsDate
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -51016,7 +51018,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "containsString")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ContainsString
+        public BooleanValue? ContainsString
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -51032,7 +51034,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "containsBlank")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ContainsBlank
+        public BooleanValue? ContainsBlank
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -51048,7 +51050,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "containsMixedTypes")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ContainsMixedTypes
+        public BooleanValue? ContainsMixedTypes
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -51064,7 +51066,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "containsNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ContainsNumber
+        public BooleanValue? ContainsNumber
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -51080,7 +51082,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "containsInteger")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ContainsInteger
+        public BooleanValue? ContainsInteger
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -51096,7 +51098,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "minValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue MinValue
+        public DoubleValue? MinValue
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -51112,7 +51114,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "maxValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue MaxValue
+        public DoubleValue? MaxValue
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -51128,7 +51130,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "minDate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue MinDate
+        public DateTimeValue? MinDate
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -51144,7 +51146,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "maxDate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DateTimeValue MaxDate
+        public DateTimeValue? MaxDate
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -51160,7 +51162,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -51176,7 +51178,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "longText")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue LongText
+        public BooleanValue? LongText
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -51284,7 +51286,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "par")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ParentId
+        public UInt32Value? ParentId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -51300,7 +51302,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "base")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Base
+        public UInt32Value? Base
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -51451,7 +51453,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -51538,7 +51540,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -51618,7 +51620,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -51761,7 +51763,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -51911,7 +51913,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -51968,7 +51970,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -51984,7 +51986,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "firstHeaderRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FirstHeaderRow
+        public UInt32Value? FirstHeaderRow
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52000,7 +52002,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "firstDataRow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FirstDataRow
+        public UInt32Value? FirstDataRow
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52016,7 +52018,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "firstDataCol")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value FirstDataColumn
+        public UInt32Value? FirstDataColumn
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52032,7 +52034,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "rowPageCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RowPageCount
+        public UInt32Value? RowPageCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52048,7 +52050,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "colPageCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ColumnsPerPage
+        public UInt32Value? ColumnsPerPage
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52140,7 +52142,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52220,7 +52222,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52300,7 +52302,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52380,7 +52382,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52460,7 +52462,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52540,7 +52542,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52620,7 +52622,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52700,7 +52702,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52780,7 +52782,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52860,7 +52862,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52940,7 +52942,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -52990,7 +52992,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -53006,7 +53008,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showRowHeaders")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowRowHeaders
+        public BooleanValue? ShowRowHeaders
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -53022,7 +53024,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showColHeaders")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowColumnHeaders
+        public BooleanValue? ShowColumnHeaders
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -53038,7 +53040,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showRowStripes")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowRowStripes
+        public BooleanValue? ShowRowStripes
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -53054,7 +53056,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showColStripes")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowColumnStripes
+        public BooleanValue? ShowColumnStripes
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -53070,7 +53072,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showLastColumn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowLastColumn
+        public BooleanValue? ShowLastColumn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -53151,7 +53153,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -53231,7 +53233,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -53311,7 +53313,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -53455,7 +53457,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -53607,7 +53609,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -53759,7 +53761,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "preserveSortFilterLayout")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PreserveSortFilterLayout
+        public BooleanValue? PreserveSortFilterLayout
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -53775,7 +53777,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "fieldIdWrapped")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FieldIdWrapped
+        public BooleanValue? FieldIdWrapped
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -53791,7 +53793,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "headersInLastRefresh")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HeadersInLastRefresh
+        public BooleanValue? HeadersInLastRefresh
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -53807,7 +53809,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "minimumVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue MinimumVersion
+        public ByteValue? MinimumVersion
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -53823,7 +53825,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "nextId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value NextId
+        public UInt32Value? NextId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -53839,7 +53841,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "unboundColumnsLeft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value UnboundColumnsLeft
+        public UInt32Value? UnboundColumnsLeft
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -53855,7 +53857,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "unboundColumnsRight")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value UnboundColumnsRight
+        public UInt32Value? UnboundColumnsRight
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -53897,7 +53899,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public QueryTableFields QueryTableFields
+        public QueryTableFields? QueryTableFields
         {
             get => GetElement<QueryTableFields>();
             set => SetElement(value);
@@ -53910,7 +53912,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public QueryTableDeletedFields QueryTableDeletedFields
+        public QueryTableDeletedFields? QueryTableDeletedFields
         {
             get => GetElement<QueryTableDeletedFields>();
             set => SetElement(value);
@@ -53923,7 +53925,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public SortState SortState
+        public SortState? SortState
         {
             get => GetElement<SortState>();
             set => SetElement(value);
@@ -53936,7 +53938,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -54035,7 +54037,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "fullCalcOnLoad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FullCalculationOnLoad
+        public BooleanValue? FullCalculationOnLoad
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -54172,7 +54174,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "current")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Current
+        public UInt32Value? Current
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -54188,7 +54190,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "show")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Show
+        public UInt32Value? Show
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -54204,7 +54206,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "sqref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ListValue<StringValue> SequenceOfReferences
+        public ListValue<StringValue>? SequenceOfReferences
         {
             get => GetAttribute<ListValue<StringValue>>();
             set => SetAttribute(value);
@@ -54286,7 +54288,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -54366,7 +54368,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "disablePrompts")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DisablePrompts
+        public BooleanValue? DisablePrompts
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -54382,7 +54384,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "xWindow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value XWindow
+        public UInt32Value? XWindow
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -54398,7 +54400,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "yWindow")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value YWindow
+        public UInt32Value? YWindow
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -54414,7 +54416,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -54689,7 +54691,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -54838,7 +54840,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -54937,7 +54939,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -55017,7 +55019,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -55036,7 +55038,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(55, "knownFonts")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue KnownFonts
+        public BooleanValue? KnownFonts
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -55120,7 +55122,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -55200,7 +55202,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -55280,7 +55282,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -55360,7 +55362,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -55440,7 +55442,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -55520,7 +55522,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -55600,7 +55602,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -55616,7 +55618,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "defaultTableStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DefaultTableStyle
+        public StringValue? DefaultTableStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -55632,7 +55634,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "defaultPivotStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue DefaultPivotStyle
+        public StringValue? DefaultPivotStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -55726,7 +55728,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public IndexedColors IndexedColors
+        public IndexedColors? IndexedColors
         {
             get => GetElement<IndexedColors>();
             set => SetElement(value);
@@ -55739,7 +55741,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public MruColors MruColors
+        public MruColors? MruColors
         {
             get => GetElement<MruColors>();
             set => SetElement(value);
@@ -55871,7 +55873,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -55932,7 +55934,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "appName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ApplicationName
+        public StringValue? ApplicationName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -55948,7 +55950,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "lastEdited")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue LastEdited
+        public StringValue? LastEdited
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -55964,7 +55966,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "lowestEdited")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue LowestEdited
+        public StringValue? LowestEdited
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -55980,7 +55982,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "rupBuild")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BuildVersion
+        public StringValue? BuildVersion
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -55996,7 +55998,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "codeName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CodeName
+        public StringValue? CodeName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -56052,7 +56054,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "readOnlyRecommended")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ReadOnlyRecommended
+        public BooleanValue? ReadOnlyRecommended
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56068,7 +56070,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "userName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue UserName
+        public StringValue? UserName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -56084,7 +56086,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "reservationPassword")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue ReservationPassword
+        public HexBinaryValue? ReservationPassword
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -56100,7 +56102,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "algorithmName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AlgorithmName
+        public StringValue? AlgorithmName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -56116,7 +56118,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "hashValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue HashValue
+        public Base64BinaryValue? HashValue
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -56132,7 +56134,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "saltValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue SaltValue
+        public Base64BinaryValue? SaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -56148,7 +56150,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "spinCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value SpinCount
+        public UInt32Value? SpinCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -56203,7 +56205,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "date1904")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Date1904
+        public BooleanValue? Date1904
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56219,7 +56221,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "dateCompatibility")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DateCompatibility
+        public BooleanValue? DateCompatibility
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56235,7 +56237,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "showObjects")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues> ShowObjects
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues>? ShowObjects
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues>>();
             set => SetAttribute(value);
@@ -56251,7 +56253,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "showBorderUnselectedTables")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowBorderUnselectedTables
+        public BooleanValue? ShowBorderUnselectedTables
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56267,7 +56269,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "filterPrivacy")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FilterPrivacy
+        public BooleanValue? FilterPrivacy
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56283,7 +56285,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "promptedSolutions")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PromptedSolutions
+        public BooleanValue? PromptedSolutions
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56299,7 +56301,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "showInkAnnotation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowInkAnnotation
+        public BooleanValue? ShowInkAnnotation
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56315,7 +56317,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "backupFile")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue BackupFile
+        public BooleanValue? BackupFile
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56331,7 +56333,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "saveExternalLinkValues")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SaveExternalLinkValues
+        public BooleanValue? SaveExternalLinkValues
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56347,7 +56349,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "updateLinks")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.UpdateLinksBehaviorValues> UpdateLinks
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.UpdateLinksBehaviorValues>? UpdateLinks
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.UpdateLinksBehaviorValues>>();
             set => SetAttribute(value);
@@ -56363,7 +56365,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "codeName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CodeName
+        public StringValue? CodeName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -56379,7 +56381,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "hidePivotFieldList")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HidePivotFieldList
+        public BooleanValue? HidePivotFieldList
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56395,7 +56397,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "showPivotChartFilter")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowPivotChartFilter
+        public BooleanValue? ShowPivotChartFilter
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56411,7 +56413,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "allowRefreshQuery")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AllowRefreshQuery
+        public BooleanValue? AllowRefreshQuery
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56427,7 +56429,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "publishItems")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue PublishItems
+        public BooleanValue? PublishItems
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56443,7 +56445,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "checkCompatibility")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CheckCompatibility
+        public BooleanValue? CheckCompatibility
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56459,7 +56461,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "autoCompressPictures")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoCompressPictures
+        public BooleanValue? AutoCompressPictures
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56475,7 +56477,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "refreshAllConnections")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RefreshAllConnections
+        public BooleanValue? RefreshAllConnections
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56491,7 +56493,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "defaultThemeVersion")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value DefaultThemeVersion
+        public UInt32Value? DefaultThemeVersion
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -56557,7 +56559,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "workbookPassword")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue WorkbookPassword
+        public HexBinaryValue? WorkbookPassword
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -56573,7 +56575,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "revisionsPassword")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue RevisionsPassword
+        public HexBinaryValue? RevisionsPassword
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -56589,7 +56591,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "lockStructure")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue LockStructure
+        public BooleanValue? LockStructure
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56605,7 +56607,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "lockWindows")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue LockWindows
+        public BooleanValue? LockWindows
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56621,7 +56623,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "lockRevision")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue LockRevision
+        public BooleanValue? LockRevision
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56637,7 +56639,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "revisionsAlgorithmName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue RevisionsAlgorithmName
+        public StringValue? RevisionsAlgorithmName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -56653,7 +56655,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "revisionsHashValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue RevisionsHashValue
+        public Base64BinaryValue? RevisionsHashValue
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -56669,7 +56671,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "revisionsSaltValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue RevisionsSaltValue
+        public Base64BinaryValue? RevisionsSaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -56685,7 +56687,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "revisionsSpinCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value RevisionsSpinCount
+        public UInt32Value? RevisionsSpinCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -56701,7 +56703,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "workbookAlgorithmName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue WorkbookAlgorithmName
+        public StringValue? WorkbookAlgorithmName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -56717,7 +56719,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "workbookHashValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue WorkbookHashValue
+        public Base64BinaryValue? WorkbookHashValue
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -56733,7 +56735,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "workbookSaltValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Base64BinaryValue WorkbookSaltValue
+        public Base64BinaryValue? WorkbookSaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
             set => SetAttribute(value);
@@ -56749,7 +56751,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         [SchemaAttr(0, "workbookSpinCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value WorkbookSpinCount
+        public UInt32Value? WorkbookSpinCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -56966,7 +56968,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "builtInGroupCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value BuiltInGroupCount
+        public UInt32Value? BuiltInGroupCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -57141,7 +57143,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "calcId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value CalculationId
+        public UInt32Value? CalculationId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -57157,7 +57159,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "calcMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalculateModeValues> CalculationMode
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalculateModeValues>? CalculationMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalculateModeValues>>();
             set => SetAttribute(value);
@@ -57173,7 +57175,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "fullCalcOnLoad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FullCalculationOnLoad
+        public BooleanValue? FullCalculationOnLoad
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57189,7 +57191,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "refMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ReferenceModeValues> ReferenceMode
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ReferenceModeValues>? ReferenceMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ReferenceModeValues>>();
             set => SetAttribute(value);
@@ -57205,7 +57207,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "iterate")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Iterate
+        public BooleanValue? Iterate
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57221,7 +57223,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "iterateCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value IterateCount
+        public UInt32Value? IterateCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -57237,7 +57239,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "iterateDelta")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue IterateDelta
+        public DoubleValue? IterateDelta
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -57253,7 +57255,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "fullPrecision")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue FullPrecision
+        public BooleanValue? FullPrecision
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57269,7 +57271,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "calcCompleted")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CalculationCompleted
+        public BooleanValue? CalculationCompleted
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57285,7 +57287,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "calcOnSave")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CalculationOnSave
+        public BooleanValue? CalculationOnSave
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57301,7 +57303,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "concurrentCalc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ConcurrentCalculation
+        public BooleanValue? ConcurrentCalculation
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57317,7 +57319,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "concurrentManualCount")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ConcurrentManualCount
+        public UInt32Value? ConcurrentManualCount
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -57333,7 +57335,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "forceFullCalc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ForceFullCalculation
+        public BooleanValue? ForceFullCalculation
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57390,7 +57392,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(0, "ref")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Reference
+        public StringValue? Reference
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -57562,7 +57564,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "css")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UseCss
+        public BooleanValue? UseCss
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57578,7 +57580,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "thicket")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Thicket
+        public BooleanValue? Thicket
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57594,7 +57596,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "longFileNames")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue LongFileNames
+        public BooleanValue? LongFileNames
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57610,7 +57612,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "vml")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UseVml
+        public BooleanValue? UseVml
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57626,7 +57628,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "allowPng")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AllowPng
+        public BooleanValue? AllowPng
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57642,7 +57644,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "targetScreenSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TargetScreenSizeValues> TargetScreenSize
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TargetScreenSizeValues>? TargetScreenSize
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TargetScreenSizeValues>>();
             set => SetAttribute(value);
@@ -57658,7 +57660,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dpi")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Dpi
+        public UInt32Value? Dpi
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -57674,7 +57676,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "codePage")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value CodePage
+        public UInt32Value? CodePage
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -57690,7 +57692,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "characterSet")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CharacterSet
+        public StringValue? CharacterSet
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -57743,7 +57745,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "autoRecover")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AutoRecover
+        public BooleanValue? AutoRecover
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57759,7 +57761,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "crashSave")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue CrashSave
+        public BooleanValue? CrashSave
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57775,7 +57777,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "dataExtractLoad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DataExtractLoad
+        public BooleanValue? DataExtractLoad
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57791,7 +57793,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "repairLoad")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue RepairLoad
+        public BooleanValue? RepairLoad
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -57869,7 +57871,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "count")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Count
+        public UInt32Value? Count
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -58021,7 +58023,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

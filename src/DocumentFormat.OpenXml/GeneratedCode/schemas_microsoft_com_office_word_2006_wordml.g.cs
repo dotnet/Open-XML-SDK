@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -108,7 +110,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <summary>
         /// Gets the CustomizationPart associated with this element.
         /// </summary>
-        public CustomizationPart CustomizationPart
+        public CustomizationPart? CustomizationPart
         {
             get => OpenXmlPart as CustomizationPart;
             internal set => OpenXmlPart = value;
@@ -245,7 +247,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocEvents DocEvents
+        public DocEvents? DocEvents
         {
             get => GetElement<DocEvents>();
             set => SetElement(value);
@@ -258,7 +260,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public Mcds Mcds
+        public Mcds? Mcds
         {
             get => GetElement<Mcds>();
             set => SetElement(value);
@@ -292,7 +294,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <summary>
         /// Gets the VbaDataPart associated with this element.
         /// </summary>
-        public VbaDataPart VbaDataPart
+        public VbaDataPart? VbaDataPart
         {
             get => OpenXmlPart as VbaDataPart;
             internal set => OpenXmlPart = value;
@@ -391,7 +393,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         [SchemaAttr(33, "fciName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CommandName
+        public StringValue? CommandName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -410,7 +412,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         [SchemaAttr(33, "fciIndex")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue CommandIndex
+        public HexBinaryValue? CommandIndex
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -429,7 +431,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         [SchemaAttr(33, "swArg")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue Argument
+        public HexBinaryValue? Argument
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -536,7 +538,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         [SchemaAttr(33, "macroName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue MacroName
+        public StringValue? MacroName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -631,7 +633,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         [SchemaAttr(33, "acdName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AcceleratorName
+        public StringValue? AcceleratorName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -675,7 +677,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         [SchemaAttr(33, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue Val
+        public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -761,7 +763,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         [SchemaAttr(33, "chmPrimary")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue CharacterMapPrimary
+        public HexBinaryValue? CharacterMapPrimary
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -780,7 +782,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         [SchemaAttr(33, "chmSecondary")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue CharacterMapSecondary
+        public HexBinaryValue? CharacterMapSecondary
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -799,7 +801,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         [SchemaAttr(33, "kcmPrimary")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue KeyCodePrimary
+        public HexBinaryValue? KeyCodePrimary
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -818,7 +820,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         [SchemaAttr(33, "kcmSecondary")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue KeyCodeSecondary
+        public HexBinaryValue? KeyCodeSecondary
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -837,7 +839,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         [SchemaAttr(33, "mask")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public OnOffValue Mask
+        public OnOffValue? Mask
         {
             get => GetAttribute<OnOffValue>();
             set => SetAttribute(value);
@@ -887,7 +889,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public FixedCommandKeyboardCustomization FixedCommandKeyboardCustomization
+        public FixedCommandKeyboardCustomization? FixedCommandKeyboardCustomization
         {
             get => GetElement<FixedCommandKeyboardCustomization>();
             set => SetElement(value);
@@ -900,7 +902,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public MacroKeyboardCustomization MacroKeyboardCustomization
+        public MacroKeyboardCustomization? MacroKeyboardCustomization
         {
             get => GetElement<MacroKeyboardCustomization>();
             set => SetElement(value);
@@ -913,7 +915,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public AllocatedCommandKeyboardCustomization AllocatedCommandKeyboardCustomization
+        public AllocatedCommandKeyboardCustomization? AllocatedCommandKeyboardCustomization
         {
             get => GetElement<AllocatedCommandKeyboardCustomization>();
             set => SetElement(value);
@@ -926,7 +928,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public WllMacroKeyboardCustomization WllMacroKeyboardCustomization
+        public WllMacroKeyboardCustomization? WllMacroKeyboardCustomization
         {
             get => GetElement<WllMacroKeyboardCustomization>();
             set => SetElement(value);
@@ -939,7 +941,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public CharacterInsertion CharacterInsertion
+        public CharacterInsertion? CharacterInsertion
         {
             get => GetElement<CharacterInsertion>();
             set => SetElement(value);
@@ -979,7 +981,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(33, "argValue")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue ArgumentValue
+        public StringValue? ArgumentValue
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -998,7 +1000,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(33, "fciBasedOn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue CommandBasedOn
+        public StringValue? CommandBasedOn
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1017,7 +1019,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(33, "fciIndexBasedOn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue CommandIndexBasedOn
+        public HexBinaryValue? CommandIndexBasedOn
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -1036,7 +1038,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(33, "acdName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue AcceleratorName
+        public StringValue? AcceleratorName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1090,7 +1092,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(33, "macroName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue MacroName
+        public StringValue? MacroName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1109,7 +1111,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(33, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1128,7 +1130,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(33, "menuHelp")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue MenuHelp
+        public StringValue? MenuHelp
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1147,7 +1149,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(33, "bEncrypt")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue BEncrypt
+        public HexBinaryValue? BEncrypt
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -1166,7 +1168,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(33, "cmg")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public HexBinaryValue Cmg
+        public HexBinaryValue? Cmg
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -1818,7 +1820,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocNewXsdString EventDocNewXsdString
+        public EventDocNewXsdString? EventDocNewXsdString
         {
             get => GetElement<EventDocNewXsdString>();
             set => SetElement(value);
@@ -1831,7 +1833,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocOpenXsdString EventDocOpenXsdString
+        public EventDocOpenXsdString? EventDocOpenXsdString
         {
             get => GetElement<EventDocOpenXsdString>();
             set => SetElement(value);
@@ -1844,7 +1846,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocCloseXsdString EventDocCloseXsdString
+        public EventDocCloseXsdString? EventDocCloseXsdString
         {
             get => GetElement<EventDocCloseXsdString>();
             set => SetElement(value);
@@ -1857,7 +1859,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocSyncXsdString EventDocSyncXsdString
+        public EventDocSyncXsdString? EventDocSyncXsdString
         {
             get => GetElement<EventDocSyncXsdString>();
             set => SetElement(value);
@@ -1870,7 +1872,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocXmlAfterInsertXsdString EventDocXmlAfterInsertXsdString
+        public EventDocXmlAfterInsertXsdString? EventDocXmlAfterInsertXsdString
         {
             get => GetElement<EventDocXmlAfterInsertXsdString>();
             set => SetElement(value);
@@ -1883,7 +1885,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocXmlBeforeDeleteXsdString EventDocXmlBeforeDeleteXsdString
+        public EventDocXmlBeforeDeleteXsdString? EventDocXmlBeforeDeleteXsdString
         {
             get => GetElement<EventDocXmlBeforeDeleteXsdString>();
             set => SetElement(value);
@@ -1896,7 +1898,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocContentControlAfterInsertXsdString EventDocContentControlAfterInsertXsdString
+        public EventDocContentControlAfterInsertXsdString? EventDocContentControlAfterInsertXsdString
         {
             get => GetElement<EventDocContentControlAfterInsertXsdString>();
             set => SetElement(value);
@@ -1909,7 +1911,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocContentControlBeforeDeleteXsdString EventDocContentControlBeforeDeleteXsdString
+        public EventDocContentControlBeforeDeleteXsdString? EventDocContentControlBeforeDeleteXsdString
         {
             get => GetElement<EventDocContentControlBeforeDeleteXsdString>();
             set => SetElement(value);
@@ -1922,7 +1924,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocContentControlOnExistXsdString EventDocContentControlOnExistXsdString
+        public EventDocContentControlOnExistXsdString? EventDocContentControlOnExistXsdString
         {
             get => GetElement<EventDocContentControlOnExistXsdString>();
             set => SetElement(value);
@@ -1935,7 +1937,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocContentControlOnEnterXsdString EventDocContentControlOnEnterXsdString
+        public EventDocContentControlOnEnterXsdString? EventDocContentControlOnEnterXsdString
         {
             get => GetElement<EventDocContentControlOnEnterXsdString>();
             set => SetElement(value);
@@ -1948,7 +1950,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocStoreUpdateXsdString EventDocStoreUpdateXsdString
+        public EventDocStoreUpdateXsdString? EventDocStoreUpdateXsdString
         {
             get => GetElement<EventDocStoreUpdateXsdString>();
             set => SetElement(value);
@@ -1961,7 +1963,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocContentControlUpdateXsdString EventDocContentControlUpdateXsdString
+        public EventDocContentControlUpdateXsdString? EventDocContentControlUpdateXsdString
         {
             get => GetElement<EventDocContentControlUpdateXsdString>();
             set => SetElement(value);
@@ -1974,7 +1976,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public EventDocBuildingBlockAfterInsertXsdString EventDocBuildingBlockAfterInsertXsdString
+        public EventDocBuildingBlockAfterInsertXsdString? EventDocBuildingBlockAfterInsertXsdString
         {
             get => GetElement<EventDocBuildingBlockAfterInsertXsdString>();
             set => SetElement(value);
@@ -2076,7 +2078,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2427,7 +2429,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(33, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public OnOffValue Val
+        public OnOffValue? Val
         {
             get => GetAttribute<OnOffValue>();
             set => SetAttribute(value);
@@ -2475,7 +2477,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(33, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public IntegerValue Val
+        public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -2564,7 +2566,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public RecordIncluded RecordIncluded
+        public RecordIncluded? RecordIncluded
         {
             get => GetElement<RecordIncluded>();
             set => SetElement(value);
@@ -2577,7 +2579,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public RecordHashCode RecordHashCode
+        public RecordHashCode? RecordHashCode
         {
             get => GetElement<RecordHashCode>();
             set => SetElement(value);

@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -92,7 +94,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public PublishDate PublishDate
+        public PublishDate? PublishDate
         {
             get => GetElement<PublishDate>();
             set => SetElement(value);
@@ -105,7 +107,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public DocumentAbstract DocumentAbstract
+        public DocumentAbstract? DocumentAbstract
         {
             get => GetElement<DocumentAbstract>();
             set => SetElement(value);
@@ -118,7 +120,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public CompanyAddress CompanyAddress
+        public CompanyAddress? CompanyAddress
         {
             get => GetElement<CompanyAddress>();
             set => SetElement(value);
@@ -131,7 +133,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public CompanyPhoneNumber CompanyPhoneNumber
+        public CompanyPhoneNumber? CompanyPhoneNumber
         {
             get => GetElement<CompanyPhoneNumber>();
             set => SetElement(value);
@@ -144,7 +146,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public CompanyFaxNumber CompanyFaxNumber
+        public CompanyFaxNumber? CompanyFaxNumber
         {
             get => GetElement<CompanyFaxNumber>();
             set => SetElement(value);
@@ -157,7 +159,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public CompanyEmailAddress CompanyEmailAddress
+        public CompanyEmailAddress? CompanyEmailAddress
         {
             get => GetElement<CompanyEmailAddress>();
             set => SetElement(value);

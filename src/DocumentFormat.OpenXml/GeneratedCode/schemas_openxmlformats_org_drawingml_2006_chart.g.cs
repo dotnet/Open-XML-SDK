@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.ChartDrawing;
@@ -44,7 +46,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         [SchemaAttr(0, "formatCode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FormatCode
+        public StringValue? FormatCode
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -60,7 +62,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         [SchemaAttr(0, "sourceLinked")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SourceLinked
+        public BooleanValue? SourceLinked
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -152,7 +154,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
             set => SetAttribute(value);
@@ -222,7 +224,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
+        public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
             set => SetElement(value);
@@ -423,7 +425,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.BodyProperties BodyProperties
+        public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             set => SetElement(value);
@@ -436,7 +438,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ListStyle ListStyle
+        public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
             set => SetElement(value);
@@ -470,7 +472,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues>>();
             set => SetAttribute(value);
@@ -1595,7 +1597,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Val
+        public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1797,7 +1799,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ManualLayout ManualLayout
+        public ManualLayout? ManualLayout
         {
             get => GetElement<ManualLayout>();
             set => SetElement(value);
@@ -1810,7 +1812,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -1894,7 +1896,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StringReference StringReference
+        public StringReference? StringReference
         {
             get => GetElement<StringReference>();
             set => SetElement(value);
@@ -1907,7 +1909,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public RichText RichText
+        public RichText? RichText
         {
             get => GetElement<RichText>();
             set => SetElement(value);
@@ -1920,7 +1922,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StringLiteral StringLiteral
+        public StringLiteral? StringLiteral
         {
             get => GetElement<StringLiteral>();
             set => SetElement(value);
@@ -2353,7 +2355,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -2608,7 +2610,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Val
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2696,7 +2698,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StringReference StringReference
+        public StringReference? StringReference
         {
             get => GetElement<StringReference>();
             set => SetElement(value);
@@ -2709,7 +2711,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumericValue NumericValue
+        public NumericValue? NumericValue
         {
             get => GetElement<NumericValue>();
             set => SetElement(value);
@@ -2746,7 +2748,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues>>();
             set => SetAttribute(value);
@@ -2874,7 +2876,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -2887,7 +2889,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order Order
+        public Order? Order
         {
             get => GetElement<Order>();
             set => SetElement(value);
@@ -2900,7 +2902,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText SeriesText
+        public SeriesText? SeriesText
         {
             get => GetElement<SeriesText>();
             set => SetElement(value);
@@ -2913,7 +2915,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -2926,7 +2928,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Marker Marker
+        public Marker? Marker
         {
             get => GetElement<Marker>();
             set => SetElement(value);
@@ -2939,7 +2941,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions PictureOptions
+        public PictureOptions? PictureOptions
         {
             get => GetElement<PictureOptions>();
             set => SetElement(value);
@@ -3098,7 +3100,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues>>();
             set => SetAttribute(value);
@@ -3146,7 +3148,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues>>();
             set => SetAttribute(value);
@@ -3274,7 +3276,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -3287,7 +3289,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order Order
+        public Order? Order
         {
             get => GetElement<Order>();
             set => SetElement(value);
@@ -3300,7 +3302,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText SeriesText
+        public SeriesText? SeriesText
         {
             get => GetElement<SeriesText>();
             set => SetElement(value);
@@ -3313,7 +3315,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -3326,7 +3328,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public InvertIfNegative InvertIfNegative
+        public InvertIfNegative? InvertIfNegative
         {
             get => GetElement<InvertIfNegative>();
             set => SetElement(value);
@@ -3339,7 +3341,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions PictureOptions
+        public PictureOptions? PictureOptions
         {
             get => GetElement<PictureOptions>();
             set => SetElement(value);
@@ -3453,7 +3455,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -3466,7 +3468,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order Order
+        public Order? Order
         {
             get => GetElement<Order>();
             set => SetElement(value);
@@ -3479,7 +3481,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText SeriesText
+        public SeriesText? SeriesText
         {
             get => GetElement<SeriesText>();
             set => SetElement(value);
@@ -3492,7 +3494,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -3505,7 +3507,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions PictureOptions
+        public PictureOptions? PictureOptions
         {
             get => GetElement<PictureOptions>();
             set => SetElement(value);
@@ -3616,7 +3618,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -3629,7 +3631,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order Order
+        public Order? Order
         {
             get => GetElement<Order>();
             set => SetElement(value);
@@ -3642,7 +3644,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText SeriesText
+        public SeriesText? SeriesText
         {
             get => GetElement<SeriesText>();
             set => SetElement(value);
@@ -3655,7 +3657,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -3668,7 +3670,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions PictureOptions
+        public PictureOptions? PictureOptions
         {
             get => GetElement<PictureOptions>();
             set => SetElement(value);
@@ -3681,7 +3683,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Explosion Explosion
+        public Explosion? Explosion
         {
             get => GetElement<Explosion>();
             set => SetElement(value);
@@ -3786,7 +3788,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -3799,7 +3801,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order Order
+        public Order? Order
         {
             get => GetElement<Order>();
             set => SetElement(value);
@@ -3812,7 +3814,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText SeriesText
+        public SeriesText? SeriesText
         {
             get => GetElement<SeriesText>();
             set => SetElement(value);
@@ -3825,7 +3827,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -3838,7 +3840,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions PictureOptions
+        public PictureOptions? PictureOptions
         {
             get => GetElement<PictureOptions>();
             set => SetElement(value);
@@ -3851,7 +3853,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public CategoryAxisData CategoryAxisData
+        public CategoryAxisData? CategoryAxisData
         {
             get => GetElement<CategoryAxisData>();
             set => SetElement(value);
@@ -3864,7 +3866,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Values Values
+        public Values? Values
         {
             get => GetElement<Values>();
             set => SetElement(value);
@@ -3877,7 +3879,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Bubble3D Bubble3D
+        public Bubble3D? Bubble3D
         {
             get => GetElement<Bubble3D>();
             set => SetElement(value);
@@ -3890,7 +3892,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SurfaceSerExtensionList SurfaceSerExtensionList
+        public SurfaceSerExtensionList? SurfaceSerExtensionList
         {
             get => GetElement<SurfaceSerExtensionList>();
             set => SetElement(value);
@@ -4039,7 +4041,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public LogBase LogBase
+        public LogBase? LogBase
         {
             get => GetElement<LogBase>();
             set => SetElement(value);
@@ -4052,7 +4054,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Orientation Orientation
+        public Orientation? Orientation
         {
             get => GetElement<Orientation>();
             set => SetElement(value);
@@ -4065,7 +4067,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MaxAxisValue MaxAxisValue
+        public MaxAxisValue? MaxAxisValue
         {
             get => GetElement<MaxAxisValue>();
             set => SetElement(value);
@@ -4078,7 +4080,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinAxisValue MinAxisValue
+        public MinAxisValue? MinAxisValue
         {
             get => GetElement<MinAxisValue>();
             set => SetElement(value);
@@ -4091,7 +4093,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -4128,7 +4130,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues>>();
             set => SetAttribute(value);
@@ -4229,7 +4231,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartText ChartText
+        public ChartText? ChartText
         {
             get => GetElement<ChartText>();
             set => SetElement(value);
@@ -4242,7 +4244,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Layout Layout
+        public Layout? Layout
         {
             get => GetElement<Layout>();
             set => SetElement(value);
@@ -4255,7 +4257,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Overlay Overlay
+        public Overlay? Overlay
         {
             get => GetElement<Overlay>();
             set => SetElement(value);
@@ -4268,7 +4270,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -4281,7 +4283,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties TextProperties
+        public TextProperties? TextProperties
         {
             get => GetElement<TextProperties>();
             set => SetElement(value);
@@ -4294,7 +4296,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -4382,7 +4384,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues>>();
             set => SetAttribute(value);
@@ -4423,7 +4425,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues>>();
             set => SetAttribute(value);
@@ -4468,7 +4470,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues>>();
             set => SetAttribute(value);
@@ -4870,7 +4872,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Val
+        public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -4997,7 +4999,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Date1904 Date1904
+        public Date1904? Date1904
         {
             get => GetElement<Date1904>();
             set => SetElement(value);
@@ -5010,7 +5012,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public EditingLanguage EditingLanguage
+        public EditingLanguage? EditingLanguage
         {
             get => GetElement<EditingLanguage>();
             set => SetElement(value);
@@ -5023,7 +5025,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public RoundedCorners RoundedCorners
+        public RoundedCorners? RoundedCorners
         {
             get => GetElement<RoundedCorners>();
             set => SetElement(value);
@@ -5057,7 +5059,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <summary>
         /// Gets the ChartPart associated with this element.
         /// </summary>
-        public ChartPart ChartPart
+        public ChartPart? ChartPart
         {
             get => OpenXmlPart as ChartPart;
             internal set => OpenXmlPart = value;
@@ -5159,7 +5161,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <summary>
         /// Gets the ChartDrawingPart associated with this element.
         /// </summary>
-        public ChartDrawingPart ChartDrawingPart
+        public ChartDrawingPart? ChartDrawingPart
         {
             get => OpenXmlPart as ChartDrawingPart;
             internal set => OpenXmlPart = value;
@@ -5275,7 +5277,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5343,7 +5345,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5785,7 +5787,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "idx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Index
+        public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -5801,7 +5803,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "formatCode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue FormatCode
+        public StringValue? FormatCode
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -5832,7 +5834,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumericValue NumericValue
+        public NumericValue? NumericValue
         {
             get => GetElement<NumericValue>();
             set => SetElement(value);
@@ -5975,7 +5977,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Formula Formula
+        public Formula? Formula
         {
             get => GetElement<Formula>();
             set => SetElement(value);
@@ -5988,7 +5990,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberingCache NumberingCache
+        public NumberingCache? NumberingCache
         {
             get => GetElement<NumberingCache>();
             set => SetElement(value);
@@ -6001,7 +6003,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumRefExtensionList NumRefExtensionList
+        public NumRefExtensionList? NumRefExtensionList
         {
             get => GetElement<NumRefExtensionList>();
             set => SetElement(value);
@@ -6208,7 +6210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public FormatCode FormatCode
+        public FormatCode? FormatCode
         {
             get => GetElement<FormatCode>();
             set => SetElement(value);
@@ -6221,7 +6223,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PointCount PointCount
+        public PointCount? PointCount
         {
             get => GetElement<PointCount>();
             set => SetElement(value);
@@ -6361,7 +6363,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Formula Formula
+        public Formula? Formula
         {
             get => GetElement<Formula>();
             set => SetElement(value);
@@ -6374,7 +6376,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MultiLevelStringCache MultiLevelStringCache
+        public MultiLevelStringCache? MultiLevelStringCache
         {
             get => GetElement<MultiLevelStringCache>();
             set => SetElement(value);
@@ -6387,7 +6389,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MultiLvlStrRefExtensionList MultiLvlStrRefExtensionList
+        public MultiLvlStrRefExtensionList? MultiLvlStrRefExtensionList
         {
             get => GetElement<MultiLvlStrRefExtensionList>();
             set => SetElement(value);
@@ -6468,7 +6470,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Formula Formula
+        public Formula? Formula
         {
             get => GetElement<Formula>();
             set => SetElement(value);
@@ -6481,7 +6483,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StringCache StringCache
+        public StringCache? StringCache
         {
             get => GetElement<StringCache>();
             set => SetElement(value);
@@ -6494,7 +6496,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StrRefExtensionList StrRefExtensionList
+        public StrRefExtensionList? StrRefExtensionList
         {
             get => GetElement<StrRefExtensionList>();
             set => SetElement(value);
@@ -6695,7 +6697,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PointCount PointCount
+        public PointCount? PointCount
         {
             get => GetElement<PointCount>();
             set => SetElement(value);
@@ -6729,7 +6731,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues>>();
             set => SetAttribute(value);
@@ -6879,7 +6881,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues>>();
             set => SetAttribute(value);
@@ -6985,7 +6987,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public LayoutTarget LayoutTarget
+        public LayoutTarget? LayoutTarget
         {
             get => GetElement<LayoutTarget>();
             set => SetElement(value);
@@ -6998,7 +7000,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public LeftMode LeftMode
+        public LeftMode? LeftMode
         {
             get => GetElement<LeftMode>();
             set => SetElement(value);
@@ -7011,7 +7013,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TopMode TopMode
+        public TopMode? TopMode
         {
             get => GetElement<TopMode>();
             set => SetElement(value);
@@ -7024,7 +7026,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public WidthMode WidthMode
+        public WidthMode? WidthMode
         {
             get => GetElement<WidthMode>();
             set => SetElement(value);
@@ -7037,7 +7039,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public HeightMode HeightMode
+        public HeightMode? HeightMode
         {
             get => GetElement<HeightMode>();
             set => SetElement(value);
@@ -7050,7 +7052,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Left Left
+        public Left? Left
         {
             get => GetElement<Left>();
             set => SetElement(value);
@@ -7063,7 +7065,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Top Top
+        public Top? Top
         {
             get => GetElement<Top>();
             set => SetElement(value);
@@ -7076,7 +7078,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Width Width
+        public Width? Width
         {
             get => GetElement<Width>();
             set => SetElement(value);
@@ -7089,7 +7091,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Height Height
+        public Height? Height
         {
             get => GetElement<Height>();
             set => SetElement(value);
@@ -7102,7 +7104,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -7139,7 +7141,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SByteValue Val
+        public SByteValue? Val
         {
             get => GetAttribute<SByteValue>();
             set => SetAttribute(value);
@@ -7187,7 +7189,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Val
+        public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -7235,7 +7237,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (5L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Val
+        public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -7283,7 +7285,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (5L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Val
+        public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -7331,7 +7333,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue Val
+        public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -7379,7 +7381,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues>>();
             set => SetAttribute(value);
@@ -7427,7 +7429,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue Val
+        public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -7522,7 +7524,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Symbol Symbol
+        public Symbol? Symbol
         {
             get => GetElement<Symbol>();
             set => SetElement(value);
@@ -7535,7 +7537,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Size Size
+        public Size? Size
         {
             get => GetElement<Size>();
             set => SetElement(value);
@@ -7548,7 +7550,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -7561,7 +7563,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -7648,7 +7650,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ApplyToFront ApplyToFront
+        public ApplyToFront? ApplyToFront
         {
             get => GetElement<ApplyToFront>();
             set => SetElement(value);
@@ -7661,7 +7663,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ApplyToSides ApplyToSides
+        public ApplyToSides? ApplyToSides
         {
             get => GetElement<ApplyToSides>();
             set => SetElement(value);
@@ -7674,7 +7676,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ApplyToEnd ApplyToEnd
+        public ApplyToEnd? ApplyToEnd
         {
             get => GetElement<ApplyToEnd>();
             set => SetElement(value);
@@ -7687,7 +7689,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureFormat PictureFormat
+        public PictureFormat? PictureFormat
         {
             get => GetElement<PictureFormat>();
             set => SetElement(value);
@@ -7700,7 +7702,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureStackUnit PictureStackUnit
+        public PictureStackUnit? PictureStackUnit
         {
             get => GetElement<PictureStackUnit>();
             set => SetElement(value);
@@ -7737,7 +7739,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues>>();
             set => SetAttribute(value);
@@ -7782,7 +7784,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue Val
+        public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -7831,7 +7833,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Val
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -7933,7 +7935,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Layout Layout
+        public Layout? Layout
         {
             get => GetElement<Layout>();
             set => SetElement(value);
@@ -7946,7 +7948,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartText ChartText
+        public ChartText? ChartText
         {
             get => GetElement<ChartText>();
             set => SetElement(value);
@@ -7959,7 +7961,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberingFormat NumberingFormat
+        public NumberingFormat? NumberingFormat
         {
             get => GetElement<NumberingFormat>();
             set => SetElement(value);
@@ -7972,7 +7974,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -7985,7 +7987,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties TextProperties
+        public TextProperties? TextProperties
         {
             get => GetElement<TextProperties>();
             set => SetElement(value);
@@ -7998,7 +8000,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -8035,7 +8037,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L) });
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues>>();
             set => SetAttribute(value);
@@ -8083,7 +8085,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues>>();
             set => SetAttribute(value);
@@ -8131,7 +8133,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues>>();
             set => SetAttribute(value);
@@ -8541,7 +8543,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberReference NumberReference
+        public NumberReference? NumberReference
         {
             get => GetElement<NumberReference>();
             set => SetElement(value);
@@ -8554,7 +8556,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberLiteral NumberLiteral
+        public NumberLiteral? NumberLiteral
         {
             get => GetElement<NumberLiteral>();
             set => SetElement(value);
@@ -8639,7 +8641,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Val
+        public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -8835,7 +8837,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -8869,7 +8871,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues>>();
             set => SetAttribute(value);
@@ -8917,7 +8919,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues>>();
             set => SetAttribute(value);
@@ -9027,7 +9029,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Val
+        public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -9116,7 +9118,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (5L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -9129,7 +9131,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (5L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -9166,7 +9168,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (5L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues>>();
             set => SetAttribute(value);
@@ -9214,7 +9216,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Val
+        public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -9263,7 +9265,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues>>();
             set => SetAttribute(value);
@@ -9355,7 +9357,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Layout Layout
+        public Layout? Layout
         {
             get => GetElement<Layout>();
             set => SetElement(value);
@@ -9368,7 +9370,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartText ChartText
+        public ChartText? ChartText
         {
             get => GetElement<ChartText>();
             set => SetElement(value);
@@ -9381,7 +9383,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -9394,7 +9396,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties TextProperties
+        public TextProperties? TextProperties
         {
             get => GetElement<TextProperties>();
             set => SetElement(value);
@@ -9431,7 +9433,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Val
+        public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -9480,7 +9482,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues>>();
             set => SetAttribute(value);
@@ -9575,7 +9577,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -9588,7 +9590,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -9601,7 +9603,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Marker Marker
+        public Marker? Marker
         {
             get => GetElement<Marker>();
             set => SetElement(value);
@@ -9614,7 +9616,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DataLabel DataLabel
+        public DataLabel? DataLabel
         {
             get => GetElement<DataLabel>();
             set => SetElement(value);
@@ -9627,7 +9629,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -9664,7 +9666,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues>>();
             set => SetAttribute(value);
@@ -9765,7 +9767,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -9920,7 +9922,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public RotateX RotateX
+        public RotateX? RotateX
         {
             get => GetElement<RotateX>();
             set => SetElement(value);
@@ -9933,7 +9935,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public HeightPercent HeightPercent
+        public HeightPercent? HeightPercent
         {
             get => GetElement<HeightPercent>();
             set => SetElement(value);
@@ -9946,7 +9948,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public RotateY RotateY
+        public RotateY? RotateY
         {
             get => GetElement<RotateY>();
             set => SetElement(value);
@@ -9959,7 +9961,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DepthPercent DepthPercent
+        public DepthPercent? DepthPercent
         {
             get => GetElement<DepthPercent>();
             set => SetElement(value);
@@ -9972,7 +9974,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public RightAngleAxes RightAngleAxes
+        public RightAngleAxes? RightAngleAxes
         {
             get => GetElement<RightAngleAxes>();
             set => SetElement(value);
@@ -9985,7 +9987,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Perspective Perspective
+        public Perspective? Perspective
         {
             get => GetElement<Perspective>();
             set => SetElement(value);
@@ -9998,7 +10000,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -10272,7 +10274,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Thickness Thickness
+        public Thickness? Thickness
         {
             get => GetElement<Thickness>();
             set => SetElement(value);
@@ -10285,7 +10287,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -10298,7 +10300,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions PictureOptions
+        public PictureOptions? PictureOptions
         {
             get => GetElement<PictureOptions>();
             set => SetElement(value);
@@ -10311,7 +10313,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -10458,7 +10460,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Layout Layout
+        public Layout? Layout
         {
             get => GetElement<Layout>();
             set => SetElement(value);
@@ -10551,7 +10553,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public LegendPosition LegendPosition
+        public LegendPosition? LegendPosition
         {
             get => GetElement<LegendPosition>();
             set => SetElement(value);
@@ -10588,7 +10590,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues>>();
             set => SetAttribute(value);
@@ -10668,7 +10670,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         [SchemaAttr(0, "alignWithMargins")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue AlignWithMargins
+        public BooleanValue? AlignWithMargins
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10684,7 +10686,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         [SchemaAttr(0, "differentOddEven")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DifferentOddEven
+        public BooleanValue? DifferentOddEven
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10700,7 +10702,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         [SchemaAttr(0, "differentFirst")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue DifferentFirst
+        public BooleanValue? DifferentFirst
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -10738,7 +10740,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public OddHeader OddHeader
+        public OddHeader? OddHeader
         {
             get => GetElement<OddHeader>();
             set => SetElement(value);
@@ -10751,7 +10753,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public OddFooter OddFooter
+        public OddFooter? OddFooter
         {
             get => GetElement<OddFooter>();
             set => SetElement(value);
@@ -10764,7 +10766,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public EvenHeader EvenHeader
+        public EvenHeader? EvenHeader
         {
             get => GetElement<EvenHeader>();
             set => SetElement(value);
@@ -10777,7 +10779,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public EvenFooter EvenFooter
+        public EvenFooter? EvenFooter
         {
             get => GetElement<EvenFooter>();
             set => SetElement(value);
@@ -10790,7 +10792,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public FirstHeader FirstHeader
+        public FirstHeader? FirstHeader
         {
             get => GetElement<FirstHeader>();
             set => SetElement(value);
@@ -10803,7 +10805,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public FirstFooter FirstFooter
+        public FirstFooter? FirstFooter
         {
             get => GetElement<FirstFooter>();
             set => SetElement(value);
@@ -10840,7 +10842,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         [SchemaAttr(0, "l")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Left
+        public DoubleValue? Left
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -10856,7 +10858,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         [SchemaAttr(0, "r")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Right
+        public DoubleValue? Right
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -10872,7 +10874,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Top
+        public DoubleValue? Top
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -10888,7 +10890,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         [SchemaAttr(0, "b")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Bottom
+        public DoubleValue? Bottom
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -10904,7 +10906,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         [SchemaAttr(0, "header")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Header
+        public DoubleValue? Header
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -10920,7 +10922,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
         [SchemaAttr(0, "footer")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Footer
+        public DoubleValue? Footer
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -10994,7 +10996,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "paperSize")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value PaperSize
+        public UInt32Value? PaperSize
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -11010,7 +11012,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "firstPageNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value FirstPageNumber
+        public Int32Value? FirstPageNumber
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -11026,7 +11028,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "orientation")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues> Orientation
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues>? Orientation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues>>();
             set => SetAttribute(value);
@@ -11042,7 +11044,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "blackAndWhite")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue BlackAndWhite
+        public BooleanValue? BlackAndWhite
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11058,7 +11060,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "draft")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Draft
+        public BooleanValue? Draft
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11074,7 +11076,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "useFirstPageNumber")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UseFirstPageNumber
+        public BooleanValue? UseFirstPageNumber
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -11090,7 +11092,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "horizontalDpi")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value HorizontalDpi
+        public Int32Value? HorizontalDpi
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -11106,7 +11108,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "verticalDpi")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value VerticalDpi
+        public Int32Value? VerticalDpi
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -11122,7 +11124,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "copies")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Copies
+        public UInt32Value? Copies
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -11221,7 +11223,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bwMode")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
             set => SetAttribute(value);
@@ -11296,7 +11298,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
+        public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
             set => SetElement(value);
@@ -11431,7 +11433,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -11530,7 +11532,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Grouping Grouping
+        public Grouping? Grouping
         {
             get => GetElement<Grouping>();
             set => SetElement(value);
@@ -11543,7 +11545,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -11645,7 +11647,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Grouping Grouping
+        public Grouping? Grouping
         {
             get => GetElement<Grouping>();
             set => SetElement(value);
@@ -11658,7 +11660,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -11769,7 +11771,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Grouping Grouping
+        public Grouping? Grouping
         {
             get => GetElement<Grouping>();
             set => SetElement(value);
@@ -11782,7 +11784,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -11884,7 +11886,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Grouping Grouping
+        public Grouping? Grouping
         {
             get => GetElement<Grouping>();
             set => SetElement(value);
@@ -11897,7 +11899,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -12067,7 +12069,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public RadarStyle RadarStyle
+        public RadarStyle? RadarStyle
         {
             get => GetElement<RadarStyle>();
             set => SetElement(value);
@@ -12080,7 +12082,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -12170,7 +12172,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ScatterStyle ScatterStyle
+        public ScatterStyle? ScatterStyle
         {
             get => GetElement<ScatterStyle>();
             set => SetElement(value);
@@ -12183,7 +12185,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -12276,7 +12278,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -12366,7 +12368,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -12462,7 +12464,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -12570,7 +12572,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public BarDirection BarDirection
+        public BarDirection? BarDirection
         {
             get => GetElement<BarDirection>();
             set => SetElement(value);
@@ -12583,7 +12585,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public BarGrouping BarGrouping
+        public BarGrouping? BarGrouping
         {
             get => GetElement<BarGrouping>();
             set => SetElement(value);
@@ -12596,7 +12598,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -12704,7 +12706,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public BarDirection BarDirection
+        public BarDirection? BarDirection
         {
             get => GetElement<BarDirection>();
             set => SetElement(value);
@@ -12717,7 +12719,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public BarGrouping BarGrouping
+        public BarGrouping? BarGrouping
         {
             get => GetElement<BarGrouping>();
             set => SetElement(value);
@@ -12730,7 +12732,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -12841,7 +12843,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public OfPieType OfPieType
+        public OfPieType? OfPieType
         {
             get => GetElement<OfPieType>();
             set => SetElement(value);
@@ -12854,7 +12856,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -12947,7 +12949,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Wireframe Wireframe
+        public Wireframe? Wireframe
         {
             get => GetElement<Wireframe>();
             set => SetElement(value);
@@ -13037,7 +13039,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Wireframe Wireframe
+        public Wireframe? Wireframe
         {
             get => GetElement<Wireframe>();
             set => SetElement(value);
@@ -13050,7 +13052,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -13149,7 +13151,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public VaryColors VaryColors
+        public VaryColors? VaryColors
         {
             get => GetElement<VaryColors>();
             set => SetElement(value);
@@ -13293,7 +13295,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisId AxisId
+        public AxisId? AxisId
         {
             get => GetElement<AxisId>();
             set => SetElement(value);
@@ -13306,7 +13308,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Scaling Scaling
+        public Scaling? Scaling
         {
             get => GetElement<Scaling>();
             set => SetElement(value);
@@ -13319,7 +13321,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Delete Delete
+        public Delete? Delete
         {
             get => GetElement<Delete>();
             set => SetElement(value);
@@ -13332,7 +13334,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisPosition AxisPosition
+        public AxisPosition? AxisPosition
         {
             get => GetElement<AxisPosition>();
             set => SetElement(value);
@@ -13345,7 +13347,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorGridlines MajorGridlines
+        public MajorGridlines? MajorGridlines
         {
             get => GetElement<MajorGridlines>();
             set => SetElement(value);
@@ -13358,7 +13360,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorGridlines MinorGridlines
+        public MinorGridlines? MinorGridlines
         {
             get => GetElement<MinorGridlines>();
             set => SetElement(value);
@@ -13371,7 +13373,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Title Title
+        public Title? Title
         {
             get => GetElement<Title>();
             set => SetElement(value);
@@ -13384,7 +13386,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberingFormat NumberingFormat
+        public NumberingFormat? NumberingFormat
         {
             get => GetElement<NumberingFormat>();
             set => SetElement(value);
@@ -13397,7 +13399,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorTickMark MajorTickMark
+        public MajorTickMark? MajorTickMark
         {
             get => GetElement<MajorTickMark>();
             set => SetElement(value);
@@ -13410,7 +13412,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorTickMark MinorTickMark
+        public MinorTickMark? MinorTickMark
         {
             get => GetElement<MinorTickMark>();
             set => SetElement(value);
@@ -13423,7 +13425,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TickLabelPosition TickLabelPosition
+        public TickLabelPosition? TickLabelPosition
         {
             get => GetElement<TickLabelPosition>();
             set => SetElement(value);
@@ -13436,7 +13438,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -13449,7 +13451,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties TextProperties
+        public TextProperties? TextProperties
         {
             get => GetElement<TextProperties>();
             set => SetElement(value);
@@ -13462,7 +13464,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public CrossingAxis CrossingAxis
+        public CrossingAxis? CrossingAxis
         {
             get => GetElement<CrossingAxis>();
             set => SetElement(value);
@@ -13612,7 +13614,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisId AxisId
+        public AxisId? AxisId
         {
             get => GetElement<AxisId>();
             set => SetElement(value);
@@ -13625,7 +13627,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Scaling Scaling
+        public Scaling? Scaling
         {
             get => GetElement<Scaling>();
             set => SetElement(value);
@@ -13638,7 +13640,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Delete Delete
+        public Delete? Delete
         {
             get => GetElement<Delete>();
             set => SetElement(value);
@@ -13651,7 +13653,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisPosition AxisPosition
+        public AxisPosition? AxisPosition
         {
             get => GetElement<AxisPosition>();
             set => SetElement(value);
@@ -13664,7 +13666,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorGridlines MajorGridlines
+        public MajorGridlines? MajorGridlines
         {
             get => GetElement<MajorGridlines>();
             set => SetElement(value);
@@ -13677,7 +13679,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorGridlines MinorGridlines
+        public MinorGridlines? MinorGridlines
         {
             get => GetElement<MinorGridlines>();
             set => SetElement(value);
@@ -13690,7 +13692,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Title Title
+        public Title? Title
         {
             get => GetElement<Title>();
             set => SetElement(value);
@@ -13703,7 +13705,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberingFormat NumberingFormat
+        public NumberingFormat? NumberingFormat
         {
             get => GetElement<NumberingFormat>();
             set => SetElement(value);
@@ -13716,7 +13718,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorTickMark MajorTickMark
+        public MajorTickMark? MajorTickMark
         {
             get => GetElement<MajorTickMark>();
             set => SetElement(value);
@@ -13729,7 +13731,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorTickMark MinorTickMark
+        public MinorTickMark? MinorTickMark
         {
             get => GetElement<MinorTickMark>();
             set => SetElement(value);
@@ -13742,7 +13744,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TickLabelPosition TickLabelPosition
+        public TickLabelPosition? TickLabelPosition
         {
             get => GetElement<TickLabelPosition>();
             set => SetElement(value);
@@ -13755,7 +13757,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -13768,7 +13770,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties TextProperties
+        public TextProperties? TextProperties
         {
             get => GetElement<TextProperties>();
             set => SetElement(value);
@@ -13781,7 +13783,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public CrossingAxis CrossingAxis
+        public CrossingAxis? CrossingAxis
         {
             get => GetElement<CrossingAxis>();
             set => SetElement(value);
@@ -13934,7 +13936,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisId AxisId
+        public AxisId? AxisId
         {
             get => GetElement<AxisId>();
             set => SetElement(value);
@@ -13947,7 +13949,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Scaling Scaling
+        public Scaling? Scaling
         {
             get => GetElement<Scaling>();
             set => SetElement(value);
@@ -13960,7 +13962,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Delete Delete
+        public Delete? Delete
         {
             get => GetElement<Delete>();
             set => SetElement(value);
@@ -13973,7 +13975,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisPosition AxisPosition
+        public AxisPosition? AxisPosition
         {
             get => GetElement<AxisPosition>();
             set => SetElement(value);
@@ -13986,7 +13988,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorGridlines MajorGridlines
+        public MajorGridlines? MajorGridlines
         {
             get => GetElement<MajorGridlines>();
             set => SetElement(value);
@@ -13999,7 +14001,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorGridlines MinorGridlines
+        public MinorGridlines? MinorGridlines
         {
             get => GetElement<MinorGridlines>();
             set => SetElement(value);
@@ -14012,7 +14014,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Title Title
+        public Title? Title
         {
             get => GetElement<Title>();
             set => SetElement(value);
@@ -14025,7 +14027,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberingFormat NumberingFormat
+        public NumberingFormat? NumberingFormat
         {
             get => GetElement<NumberingFormat>();
             set => SetElement(value);
@@ -14038,7 +14040,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorTickMark MajorTickMark
+        public MajorTickMark? MajorTickMark
         {
             get => GetElement<MajorTickMark>();
             set => SetElement(value);
@@ -14051,7 +14053,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorTickMark MinorTickMark
+        public MinorTickMark? MinorTickMark
         {
             get => GetElement<MinorTickMark>();
             set => SetElement(value);
@@ -14064,7 +14066,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TickLabelPosition TickLabelPosition
+        public TickLabelPosition? TickLabelPosition
         {
             get => GetElement<TickLabelPosition>();
             set => SetElement(value);
@@ -14077,7 +14079,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -14090,7 +14092,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties TextProperties
+        public TextProperties? TextProperties
         {
             get => GetElement<TextProperties>();
             set => SetElement(value);
@@ -14103,7 +14105,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public CrossingAxis CrossingAxis
+        public CrossingAxis? CrossingAxis
         {
             get => GetElement<CrossingAxis>();
             set => SetElement(value);
@@ -14241,7 +14243,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisId AxisId
+        public AxisId? AxisId
         {
             get => GetElement<AxisId>();
             set => SetElement(value);
@@ -14254,7 +14256,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Scaling Scaling
+        public Scaling? Scaling
         {
             get => GetElement<Scaling>();
             set => SetElement(value);
@@ -14267,7 +14269,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Delete Delete
+        public Delete? Delete
         {
             get => GetElement<Delete>();
             set => SetElement(value);
@@ -14280,7 +14282,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AxisPosition AxisPosition
+        public AxisPosition? AxisPosition
         {
             get => GetElement<AxisPosition>();
             set => SetElement(value);
@@ -14293,7 +14295,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorGridlines MajorGridlines
+        public MajorGridlines? MajorGridlines
         {
             get => GetElement<MajorGridlines>();
             set => SetElement(value);
@@ -14306,7 +14308,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorGridlines MinorGridlines
+        public MinorGridlines? MinorGridlines
         {
             get => GetElement<MinorGridlines>();
             set => SetElement(value);
@@ -14319,7 +14321,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Title Title
+        public Title? Title
         {
             get => GetElement<Title>();
             set => SetElement(value);
@@ -14332,7 +14334,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberingFormat NumberingFormat
+        public NumberingFormat? NumberingFormat
         {
             get => GetElement<NumberingFormat>();
             set => SetElement(value);
@@ -14345,7 +14347,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MajorTickMark MajorTickMark
+        public MajorTickMark? MajorTickMark
         {
             get => GetElement<MajorTickMark>();
             set => SetElement(value);
@@ -14358,7 +14360,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MinorTickMark MinorTickMark
+        public MinorTickMark? MinorTickMark
         {
             get => GetElement<MinorTickMark>();
             set => SetElement(value);
@@ -14371,7 +14373,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TickLabelPosition TickLabelPosition
+        public TickLabelPosition? TickLabelPosition
         {
             get => GetElement<TickLabelPosition>();
             set => SetElement(value);
@@ -14384,7 +14386,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -14397,7 +14399,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties TextProperties
+        public TextProperties? TextProperties
         {
             get => GetElement<TextProperties>();
             set => SetElement(value);
@@ -14410,7 +14412,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public CrossingAxis CrossingAxis
+        public CrossingAxis? CrossingAxis
         {
             get => GetElement<CrossingAxis>();
             set => SetElement(value);
@@ -14503,7 +14505,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShowHorizontalBorder ShowHorizontalBorder
+        public ShowHorizontalBorder? ShowHorizontalBorder
         {
             get => GetElement<ShowHorizontalBorder>();
             set => SetElement(value);
@@ -14516,7 +14518,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShowVerticalBorder ShowVerticalBorder
+        public ShowVerticalBorder? ShowVerticalBorder
         {
             get => GetElement<ShowVerticalBorder>();
             set => SetElement(value);
@@ -14529,7 +14531,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShowOutlineBorder ShowOutlineBorder
+        public ShowOutlineBorder? ShowOutlineBorder
         {
             get => GetElement<ShowOutlineBorder>();
             set => SetElement(value);
@@ -14542,7 +14544,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShowKeys ShowKeys
+        public ShowKeys? ShowKeys
         {
             get => GetElement<ShowKeys>();
             set => SetElement(value);
@@ -14555,7 +14557,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -14568,7 +14570,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TextProperties TextProperties
+        public TextProperties? TextProperties
         {
             get => GetElement<TextProperties>();
             set => SetElement(value);
@@ -14581,7 +14583,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -14618,7 +14620,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Val
+        public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -14666,7 +14668,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue Val
+        public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -14745,7 +14747,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive 
         [SchemaAttr(0, "idx")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Index
+        public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -14775,7 +14777,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumericValue NumericValue
+        public NumericValue? NumericValue
         {
             get => GetElement<NumericValue>();
             set => SetElement(value);
@@ -14812,7 +14814,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue Val
+        public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -14890,7 +14892,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -14975,7 +14977,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15060,7 +15062,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15147,7 +15149,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15236,7 +15238,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15323,7 +15325,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15414,7 +15416,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15507,7 +15509,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15606,7 +15608,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15706,7 +15708,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15800,7 +15802,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15894,7 +15896,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -15988,7 +15990,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16082,7 +16084,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16175,7 +16177,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16264,7 +16266,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16349,7 +16351,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16434,7 +16436,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16519,7 +16521,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16604,7 +16606,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16689,7 +16691,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16774,7 +16776,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16859,7 +16861,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -16944,7 +16946,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17029,7 +17031,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17114,7 +17116,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17199,7 +17201,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17284,7 +17286,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17369,7 +17371,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17454,7 +17456,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -17556,7 +17558,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public GapWidth GapWidth
+        public GapWidth? GapWidth
         {
             get => GetElement<GapWidth>();
             set => SetElement(value);
@@ -17569,7 +17571,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public UpBars UpBars
+        public UpBars? UpBars
         {
             get => GetElement<UpBars>();
             set => SetElement(value);
@@ -17582,7 +17584,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DownBars DownBars
+        public DownBars? DownBars
         {
             get => GetElement<DownBars>();
             set => SetElement(value);
@@ -17595,7 +17597,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -18048,7 +18050,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PointCount PointCount
+        public PointCount? PointCount
         {
             get => GetElement<PointCount>();
             set => SetElement(value);
@@ -18330,7 +18332,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -18343,7 +18345,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public InvertIfNegative InvertIfNegative
+        public InvertIfNegative? InvertIfNegative
         {
             get => GetElement<InvertIfNegative>();
             set => SetElement(value);
@@ -18356,7 +18358,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Marker Marker
+        public Marker? Marker
         {
             get => GetElement<Marker>();
             set => SetElement(value);
@@ -18369,7 +18371,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Bubble3D Bubble3D
+        public Bubble3D? Bubble3D
         {
             get => GetElement<Bubble3D>();
             set => SetElement(value);
@@ -18382,7 +18384,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Explosion Explosion
+        public Explosion? Explosion
         {
             get => GetElement<Explosion>();
             set => SetElement(value);
@@ -18395,7 +18397,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -18408,7 +18410,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions PictureOptions
+        public PictureOptions? PictureOptions
         {
             get => GetElement<PictureOptions>();
             set => SetElement(value);
@@ -18421,7 +18423,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -18529,7 +18531,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TrendlineName TrendlineName
+        public TrendlineName? TrendlineName
         {
             get => GetElement<TrendlineName>();
             set => SetElement(value);
@@ -18542,7 +18544,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -18555,7 +18557,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TrendlineType TrendlineType
+        public TrendlineType? TrendlineType
         {
             get => GetElement<TrendlineType>();
             set => SetElement(value);
@@ -18568,7 +18570,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PolynomialOrder PolynomialOrder
+        public PolynomialOrder? PolynomialOrder
         {
             get => GetElement<PolynomialOrder>();
             set => SetElement(value);
@@ -18581,7 +18583,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Period Period
+        public Period? Period
         {
             get => GetElement<Period>();
             set => SetElement(value);
@@ -18594,7 +18596,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Forward Forward
+        public Forward? Forward
         {
             get => GetElement<Forward>();
             set => SetElement(value);
@@ -18607,7 +18609,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Backward Backward
+        public Backward? Backward
         {
             get => GetElement<Backward>();
             set => SetElement(value);
@@ -18620,7 +18622,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Intercept Intercept
+        public Intercept? Intercept
         {
             get => GetElement<Intercept>();
             set => SetElement(value);
@@ -18633,7 +18635,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DisplayRSquaredValue DisplayRSquaredValue
+        public DisplayRSquaredValue? DisplayRSquaredValue
         {
             get => GetElement<DisplayRSquaredValue>();
             set => SetElement(value);
@@ -18646,7 +18648,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DisplayEquation DisplayEquation
+        public DisplayEquation? DisplayEquation
         {
             get => GetElement<DisplayEquation>();
             set => SetElement(value);
@@ -18659,7 +18661,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public TrendlineLabel TrendlineLabel
+        public TrendlineLabel? TrendlineLabel
         {
             get => GetElement<TrendlineLabel>();
             set => SetElement(value);
@@ -18672,7 +18674,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -18771,7 +18773,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ErrorDirection ErrorDirection
+        public ErrorDirection? ErrorDirection
         {
             get => GetElement<ErrorDirection>();
             set => SetElement(value);
@@ -18784,7 +18786,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ErrorBarType ErrorBarType
+        public ErrorBarType? ErrorBarType
         {
             get => GetElement<ErrorBarType>();
             set => SetElement(value);
@@ -18797,7 +18799,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ErrorBarValueType ErrorBarValueType
+        public ErrorBarValueType? ErrorBarValueType
         {
             get => GetElement<ErrorBarValueType>();
             set => SetElement(value);
@@ -18810,7 +18812,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NoEndCap NoEndCap
+        public NoEndCap? NoEndCap
         {
             get => GetElement<NoEndCap>();
             set => SetElement(value);
@@ -18823,7 +18825,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Plus Plus
+        public Plus? Plus
         {
             get => GetElement<Plus>();
             set => SetElement(value);
@@ -18836,7 +18838,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Minus Minus
+        public Minus? Minus
         {
             get => GetElement<Minus>();
             set => SetElement(value);
@@ -18849,7 +18851,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ErrorBarValue ErrorBarValue
+        public ErrorBarValue? ErrorBarValue
         {
             get => GetElement<ErrorBarValue>();
             set => SetElement(value);
@@ -18862,7 +18864,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -18875,7 +18877,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -19094,7 +19096,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public MultiLevelStringReference MultiLevelStringReference
+        public MultiLevelStringReference? MultiLevelStringReference
         {
             get => GetElement<MultiLevelStringReference>();
             set => SetElement(value);
@@ -19107,7 +19109,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberReference NumberReference
+        public NumberReference? NumberReference
         {
             get => GetElement<NumberReference>();
             set => SetElement(value);
@@ -19120,7 +19122,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public NumberLiteral NumberLiteral
+        public NumberLiteral? NumberLiteral
         {
             get => GetElement<NumberLiteral>();
             set => SetElement(value);
@@ -19133,7 +19135,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StringReference StringReference
+        public StringReference? StringReference
         {
             get => GetElement<StringReference>();
             set => SetElement(value);
@@ -19146,7 +19148,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public StringLiteral StringLiteral
+        public StringLiteral? StringLiteral
         {
             get => GetElement<StringLiteral>();
             set => SetElement(value);
@@ -19366,7 +19368,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>>();
             set => SetAttribute(value);
@@ -19507,7 +19509,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -19789,7 +19791,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -20036,7 +20038,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues>>();
             set => SetAttribute(value);
@@ -20161,7 +20163,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -20174,7 +20176,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order Order
+        public Order? Order
         {
             get => GetElement<Order>();
             set => SetElement(value);
@@ -20187,7 +20189,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText SeriesText
+        public SeriesText? SeriesText
         {
             get => GetElement<SeriesText>();
             set => SetElement(value);
@@ -20200,7 +20202,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -20213,7 +20215,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Marker Marker
+        public Marker? Marker
         {
             get => GetElement<Marker>();
             set => SetElement(value);
@@ -20312,7 +20314,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues>>();
             set => SetAttribute(value);
@@ -20434,7 +20436,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -20447,7 +20449,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order Order
+        public Order? Order
         {
             get => GetElement<Order>();
             set => SetElement(value);
@@ -20460,7 +20462,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText SeriesText
+        public SeriesText? SeriesText
         {
             get => GetElement<SeriesText>();
             set => SetElement(value);
@@ -20473,7 +20475,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -20486,7 +20488,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions PictureOptions
+        public PictureOptions? PictureOptions
         {
             get => GetElement<PictureOptions>();
             set => SetElement(value);
@@ -20499,7 +20501,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Marker Marker
+        public Marker? Marker
         {
             get => GetElement<Marker>();
             set => SetElement(value);
@@ -20598,7 +20600,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public SByteValue Val
+        public SByteValue? Val
         {
             get => GetAttribute<SByteValue>();
             set => SetAttribute(value);
@@ -20980,7 +20982,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Index Index
+        public Index? Index
         {
             get => GetElement<Index>();
             set => SetElement(value);
@@ -20993,7 +20995,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Order Order
+        public Order? Order
         {
             get => GetElement<Order>();
             set => SetElement(value);
@@ -21006,7 +21008,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SeriesText SeriesText
+        public SeriesText? SeriesText
         {
             get => GetElement<SeriesText>();
             set => SetElement(value);
@@ -21019,7 +21021,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartShapeProperties ChartShapeProperties
+        public ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<ChartShapeProperties>();
             set => SetElement(value);
@@ -21032,7 +21034,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PictureOptions PictureOptions
+        public PictureOptions? PictureOptions
         {
             get => GetElement<PictureOptions>();
             set => SetElement(value);
@@ -21045,7 +21047,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public InvertIfNegative InvertIfNegative
+        public InvertIfNegative? InvertIfNegative
         {
             get => GetElement<InvertIfNegative>();
             set => SetElement(value);
@@ -21082,7 +21084,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-100L), MaxInclusi
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Val
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -21130,7 +21132,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues>>();
             set => SetAttribute(value);
@@ -21361,7 +21363,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues>>();
             set => SetAttribute(value);
@@ -21409,7 +21411,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt16Value Val
+        public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -21508,7 +21510,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Val
+        public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -21693,7 +21695,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues>>();
             set => SetAttribute(value);
@@ -21785,7 +21787,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public DoubleValue Val
+        public DoubleValue? Val
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
@@ -21954,7 +21956,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues> Val
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues>>();
             set => SetAttribute(value);
@@ -22138,7 +22140,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Val
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -22186,7 +22188,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ByteValue Val
+        public ByteValue? Val
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
@@ -22264,7 +22266,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bg1")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background1
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -22280,7 +22282,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tx1")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text1
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -22296,7 +22298,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "bg2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Background2
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -22312,7 +22314,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "tx2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Text2
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -22328,7 +22330,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "accent1")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent1
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -22344,7 +22346,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "accent2")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent2
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -22360,7 +22362,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "accent3")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent3
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent3
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -22376,7 +22378,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "accent4")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent4
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent4
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -22392,7 +22394,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "accent5")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent5
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent5
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -22408,7 +22410,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "accent6")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Accent6
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent6
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -22424,7 +22426,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hlink")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> Hyperlink
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Hyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -22440,7 +22442,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "folHlink")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues> FollowedHyperlink
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? FollowedHyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
@@ -22525,7 +22527,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
@@ -22606,7 +22608,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PivotTableName PivotTableName
+        public PivotTableName? PivotTableName
         {
             get => GetElement<PivotTableName>();
             set => SetElement(value);
@@ -22619,7 +22621,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public FormatId FormatId
+        public FormatId? FormatId
         {
             get => GetElement<FormatId>();
             set => SetElement(value);
@@ -22632,7 +22634,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -22719,7 +22721,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ChartObject ChartObject
+        public ChartObject? ChartObject
         {
             get => GetElement<ChartObject>();
             set => SetElement(value);
@@ -22732,7 +22734,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Data Data
+        public Data? Data
         {
             get => GetElement<Data>();
             set => SetElement(value);
@@ -22745,7 +22747,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Formatting Formatting
+        public Formatting? Formatting
         {
             get => GetElement<Formatting>();
             set => SetElement(value);
@@ -22758,7 +22760,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Selection Selection
+        public Selection? Selection
         {
             get => GetElement<Selection>();
             set => SetElement(value);
@@ -22771,7 +22773,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public UserInterface UserInterface
+        public UserInterface? UserInterface
         {
             get => GetElement<UserInterface>();
             set => SetElement(value);
@@ -22882,7 +22884,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Title Title
+        public Title? Title
         {
             get => GetElement<Title>();
             set => SetElement(value);
@@ -22895,7 +22897,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AutoTitleDeleted AutoTitleDeleted
+        public AutoTitleDeleted? AutoTitleDeleted
         {
             get => GetElement<AutoTitleDeleted>();
             set => SetElement(value);
@@ -22908,7 +22910,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PivotFormats PivotFormats
+        public PivotFormats? PivotFormats
         {
             get => GetElement<PivotFormats>();
             set => SetElement(value);
@@ -22921,7 +22923,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public View3D View3D
+        public View3D? View3D
         {
             get => GetElement<View3D>();
             set => SetElement(value);
@@ -22934,7 +22936,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Floor Floor
+        public Floor? Floor
         {
             get => GetElement<Floor>();
             set => SetElement(value);
@@ -22947,7 +22949,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public SideWall SideWall
+        public SideWall? SideWall
         {
             get => GetElement<SideWall>();
             set => SetElement(value);
@@ -22960,7 +22962,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public BackWall BackWall
+        public BackWall? BackWall
         {
             get => GetElement<BackWall>();
             set => SetElement(value);
@@ -22973,7 +22975,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PlotArea PlotArea
+        public PlotArea? PlotArea
         {
             get => GetElement<PlotArea>();
             set => SetElement(value);
@@ -22986,7 +22988,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public Legend Legend
+        public Legend? Legend
         {
             get => GetElement<Legend>();
             set => SetElement(value);
@@ -22999,7 +23001,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PlotVisibleOnly PlotVisibleOnly
+        public PlotVisibleOnly? PlotVisibleOnly
         {
             get => GetElement<PlotVisibleOnly>();
             set => SetElement(value);
@@ -23012,7 +23014,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DisplayBlanksAs DisplayBlanksAs
+        public DisplayBlanksAs? DisplayBlanksAs
         {
             get => GetElement<DisplayBlanksAs>();
             set => SetElement(value);
@@ -23025,7 +23027,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ShowDataLabelsOverMaximum ShowDataLabelsOverMaximum
+        public ShowDataLabelsOverMaximum? ShowDataLabelsOverMaximum
         {
             get => GetElement<ShowDataLabelsOverMaximum>();
             set => SetElement(value);
@@ -23038,7 +23040,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -23108,7 +23110,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(19, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -23138,7 +23140,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public AutoUpdate AutoUpdate
+        public AutoUpdate? AutoUpdate
         {
             get => GetElement<AutoUpdate>();
             set => SetElement(value);
@@ -23222,7 +23224,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public HeaderFooter HeaderFooter
+        public HeaderFooter? HeaderFooter
         {
             get => GetElement<HeaderFooter>();
             set => SetElement(value);
@@ -23235,7 +23237,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PageMargins PageMargins
+        public PageMargins? PageMargins
         {
             get => GetElement<PageMargins>();
             set => SetElement(value);
@@ -23248,7 +23250,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public PageSetup PageSetup
+        public PageSetup? PageSetup
         {
             get => GetElement<PageSetup>();
             set => SetElement(value);
@@ -23261,7 +23263,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public LegacyDrawingHeaderFooter LegacyDrawingHeaderFooter
+        public LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
             get => GetElement<LegacyDrawingHeaderFooter>();
             set => SetElement(value);
@@ -23392,7 +23394,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Uri
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

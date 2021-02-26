@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -88,7 +90,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public NonVisualDrawingProperties NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
@@ -101,7 +103,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public NonVisualInkContentPartProperties NonVisualInkContentPartProperties
+        public NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
             get => GetElement<NonVisualInkContentPartProperties>();
             set => SetElement(value);
@@ -114,7 +116,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties
+        public ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
             get => GetElement<ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
@@ -182,7 +184,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         [SchemaAttr(0, "rot")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value Rotation
+        public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -198,7 +200,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         [SchemaAttr(0, "flipH")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HorizontalFlip
+        public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -214,7 +216,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         [SchemaAttr(0, "flipV")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue VerticalFlip
+        public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -245,7 +247,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Offset Offset
+        public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
             set => SetElement(value);
@@ -258,7 +260,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Extents Extents
+        public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
             set => SetElement(value);
@@ -325,7 +327,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         [SchemaAttr(0, "mod")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Modify
+        public BooleanValue? Modify
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -418,7 +420,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         [SchemaAttr(19, "embed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Embed
+        public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -437,7 +439,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         [SchemaAttr(19, "link")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Link
+        public StringValue? Link
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -473,7 +475,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public MediaTrim MediaTrim
+        public MediaTrim? MediaTrim
         {
             get => GetElement<MediaTrim>();
             set => SetElement(value);
@@ -486,7 +488,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public MediaFade MediaFade
+        public MediaFade? MediaFade
         {
             get => GetElement<MediaFade>();
             set => SetElement(value);
@@ -499,7 +501,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public MediaBookmarkList MediaBookmarkList
+        public MediaBookmarkList? MediaBookmarkList
         {
             get => GetElement<MediaBookmarkList>();
             set => SetElement(value);
@@ -512,7 +514,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -602,7 +604,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         [SchemaAttr(0, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>();
             set => SetAttribute(value);
@@ -783,7 +785,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         [SchemaAttr(0, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction
+        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>>();
             set => SetAttribute(value);
@@ -827,7 +829,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         [SchemaAttr(0, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Direction
+        public StringValue? Direction
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -956,7 +958,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.Transi
         [SchemaAttr(0, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>();
             set => SetAttribute(value);
@@ -972,7 +974,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.Transi
         [SchemaAttr(0, "isContent")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsContent
+        public BooleanValue? IsContent
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -988,7 +990,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.Transi
         [SchemaAttr(0, "isInverted")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsInverted
+        public BooleanValue? IsInverted
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1092,7 +1094,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Direction
+        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>();
             set => SetAttribute(value);
@@ -1136,7 +1138,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>();
             set => SetAttribute(value);
@@ -1152,7 +1154,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "pattern")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues> Pattern
+        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues>? Pattern
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues>>();
             set => SetAttribute(value);
@@ -1205,7 +1207,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>();
             set => SetAttribute(value);
@@ -1254,7 +1256,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>();
             set => SetAttribute(value);
@@ -1270,7 +1272,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "hasBounce")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue HasBounce
+        public BooleanValue? HasBounce
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1320,7 +1322,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "pattern")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues> Pattern
+        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues>? Pattern
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues>>();
             set => SetAttribute(value);
@@ -1336,7 +1338,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>();
             set => SetAttribute(value);
@@ -1389,7 +1391,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "thruBlk")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ThroughBlack
+        public BooleanValue? ThroughBlack
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1405,7 +1407,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "dir")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction
+        public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>? Direction
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>>();
             set => SetAttribute(value);
@@ -1455,7 +1457,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "spokes")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Spokes
+        public UInt32Value? Spokes
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -1501,7 +1503,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "spid")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ShapeId
+        public UInt32Value? ShapeId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -1517,7 +1519,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         [SchemaAttr(0, "bmkName")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue BookmarkName
+        public StringValue? BookmarkName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1696,7 +1698,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "showStatus")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue ShowStatus
+        public BooleanValue? ShowStatus
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1802,7 +1804,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage RgbColorModelPercentage
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             set => SetElement(value);
@@ -1815,7 +1817,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex RgbColorModelHex
+        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
             set => SetElement(value);
@@ -1828,7 +1830,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HslColor HslColor
+        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
             set => SetElement(value);
@@ -1841,7 +1843,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.SystemColor SystemColor
+        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
             set => SetElement(value);
@@ -1854,7 +1856,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.SchemeColor SchemeColor
+        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             set => SetElement(value);
@@ -1867,7 +1869,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.PresetColor PresetColor
+        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
             set => SetElement(value);
@@ -1904,7 +1906,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Val
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -1953,7 +1955,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Val
+        public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2002,7 +2004,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Val
+        public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2167,7 +2169,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Val
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2271,7 +2273,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public TriggerEventRecord TriggerEventRecord
+        public TriggerEventRecord? TriggerEventRecord
         {
             get => GetElement<TriggerEventRecord>();
             set => SetElement(value);
@@ -2284,7 +2286,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public PlayEventRecord PlayEventRecord
+        public PlayEventRecord? PlayEventRecord
         {
             get => GetElement<PlayEventRecord>();
             set => SetElement(value);
@@ -2297,7 +2299,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public StopEventRecord StopEventRecord
+        public StopEventRecord? StopEventRecord
         {
             get => GetElement<StopEventRecord>();
             set => SetElement(value);
@@ -2310,7 +2312,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public PauseEventRecord PauseEventRecord
+        public PauseEventRecord? PauseEventRecord
         {
             get => GetElement<PauseEventRecord>();
             set => SetElement(value);
@@ -2323,7 +2325,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public ResumeEventRecord ResumeEventRecord
+        public ResumeEventRecord? ResumeEventRecord
         {
             get => GetElement<ResumeEventRecord>();
             set => SetElement(value);
@@ -2336,7 +2338,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public SeekEventRecord SeekEventRecord
+        public SeekEventRecord? SeekEventRecord
         {
             get => GetElement<SeekEventRecord>();
             set => SetElement(value);
@@ -2349,7 +2351,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public NullEventRecord NullEventRecord
+        public NullEventRecord? NullEventRecord
         {
             get => GetElement<NullEventRecord>();
             set => SetElement(value);
@@ -2418,7 +2420,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2434,7 +2436,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2450,7 +2452,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "descr")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Description
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2466,7 +2468,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "hidden")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue Hidden
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2482,7 +2484,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "title")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Title
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2523,7 +2525,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
+        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             set => SetElement(value);
@@ -2536,7 +2538,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
+        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             set => SetElement(value);
@@ -2549,7 +2551,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
+        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             set => SetElement(value);
@@ -2617,7 +2619,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "isComment")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsComment
+        public BooleanValue? IsComment
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2646,7 +2648,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks ContentPartLocks
+        public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks? ContentPartLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
             set => SetElement(value);
@@ -2659,7 +2661,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             set => SetElement(value);
@@ -2733,7 +2735,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "isPhoto")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue IsPhoto
+        public BooleanValue? IsPhoto
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2749,7 +2751,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "userDrawn")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue UserDrawn
+        public BooleanValue? UserDrawn
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2797,7 +2799,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.PlaceholderShape PlaceholderShape
+        public DocumentFormat.OpenXml.Presentation.PlaceholderShape? PlaceholderShape
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
             set => SetElement(value);
@@ -2834,7 +2836,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2850,7 +2852,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "time")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Time
+        public StringValue? Time
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2899,7 +2901,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "st")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Start
+        public StringValue? Start
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2915,7 +2917,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "end")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue End
+        public StringValue? End
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2962,7 +2964,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "in")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue InDuration
+        public StringValue? InDuration
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2978,7 +2980,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "out")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue OutDuration
+        public StringValue? OutDuration
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3187,7 +3189,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3203,7 +3205,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "slideIdLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public ListValue<UInt32Value> SlideIdList
+        public ListValue<UInt32Value>? SlideIdList
         {
             get => GetAttribute<ListValue<UInt32Value>>();
             set => SetAttribute(value);
@@ -3219,7 +3221,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3254,7 +3256,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -3291,7 +3293,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value Id
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3435,7 +3437,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         [SchemaAttr(0, "name")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Name
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3451,7 +3453,7 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3484,7 +3486,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public SectionSlideIdList SectionSlideIdList
+        public SectionSlideIdList? SectionSlideIdList
         {
             get => GetElement<SectionSlideIdList>();
             set => SetElement(value);
@@ -3497,7 +3499,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
         /// </remark>
-        public ExtensionList ExtensionList
+        public ExtensionList? ExtensionList
         {
             get => GetElement<ExtensionList>();
             set => SetElement(value);
@@ -3534,7 +3536,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "t")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Time
+        public StringValue? Time
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3550,7 +3552,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "x")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int64Value XCoordinate
+        public Int64Value? XCoordinate
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -3566,7 +3568,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         [SchemaAttr(0, "y")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int64Value YCoordinate
+        public Int64Value? YCoordinate
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -3688,7 +3690,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         [SchemaAttr(0, "type")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues> Type
+        public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues>>();
             set => SetAttribute(value);
@@ -3704,7 +3706,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         [SchemaAttr(0, "time")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Time
+        public StringValue? Time
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3720,7 +3722,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         [SchemaAttr(0, "objId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ObjectId
+        public UInt32Value? ObjectId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3887,7 +3889,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "time")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Time
+        public StringValue? Time
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3903,7 +3905,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "objId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ObjectId
+        public UInt32Value? ObjectId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3951,7 +3953,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "time")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Time
+        public StringValue? Time
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -3967,7 +3969,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "objId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ObjectId
+        public UInt32Value? ObjectId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -3983,7 +3985,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "seek")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Seek
+        public StringValue? Seek
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4040,7 +4042,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "time")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Time
+        public StringValue? Time
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4056,7 +4058,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "objId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value ObjectId
+        public UInt32Value? ObjectId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);

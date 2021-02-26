@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -40,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
         [SchemaAttr(0, "EnabledSubtotalsDefault")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue EnabledSubtotalsDefault
+        public BooleanValue? EnabledSubtotalsDefault
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -56,7 +58,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
         [SchemaAttr(0, "SubtotalsOnTopDefault")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue SubtotalsOnTopDefault
+        public BooleanValue? SubtotalsOnTopDefault
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -72,7 +74,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
         [SchemaAttr(0, "InsertBlankRowDefault")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public BooleanValue InsertBlankRowDefault
+        public BooleanValue? InsertBlankRowDefault
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);

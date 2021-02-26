@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -22,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.chartex+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2014/relationships/chartEx";
-        private DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace _rootElement;
+        private DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace? _rootElement;
 
         /// <summary>
         /// Creates an instance of the ExtendedChartPart OpenXmlType
@@ -39,7 +41,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ChartDrawingPart of the ExtendedChartPart
         /// </summary>
-        public ChartDrawingPart ChartDrawingPart => GetSubPartOfType<ChartDrawingPart>();
+        public ChartDrawingPart? ChartDrawingPart => GetSubPartOfType<ChartDrawingPart>();
 
         /// <summary>
         /// Gets or sets the root element of this part.
@@ -53,7 +55,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -78,14 +80,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the EmbeddedPackagePart of the ExtendedChartPart
         /// </summary>
-        public EmbeddedPackagePart EmbeddedPackagePart => GetSubPartOfType<EmbeddedPackagePart>();
+        public EmbeddedPackagePart? EmbeddedPackagePart => GetSubPartOfType<EmbeddedPackagePart>();
 
         /// <summary>
         /// Gets the ImageParts of the ExtendedChartPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -98,7 +100,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => ChartSpace;
+        internal override OpenXmlPartRootElement? PartRootElement => ChartSpace;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -112,7 +114,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ThemeOverridePart of the ExtendedChartPart
         /// </summary>
-        public ThemeOverridePart ThemeOverridePart => GetSubPartOfType<ThemeOverridePart>();
+        public ThemeOverridePart? ThemeOverridePart => GetSubPartOfType<ThemeOverridePart>();
 
         /// <summary>
         /// Adds a EmbeddedPackagePart to the ExtendedChartPart

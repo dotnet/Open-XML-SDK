@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -71,7 +73,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         [SchemaAttr(0, "displayLoc")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.DisplayLocation> DisplayLoc
+        public EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.DisplayLocation>? DisplayLoc
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.DisplayLocation>>();
             set => SetAttribute(value);
@@ -101,7 +103,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:p173 = http://schemas.microsoft.com/office/powerpoint/2017/3/main
         /// </remark>
-        public TrackList TrackList
+        public TrackList? TrackList
         {
             get => GetElement<TrackList>();
             set => SetElement(value);
@@ -138,7 +140,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "id")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Id
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -154,7 +156,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "label")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Label
+        public StringValue? Label
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -170,7 +172,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(0, "lang")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Lang
+        public StringValue? Lang
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -189,7 +191,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "embed")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Embed
+        public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -208,7 +210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         [SchemaAttr(19, "link")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public StringValue Link
+        public StringValue? Link
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
