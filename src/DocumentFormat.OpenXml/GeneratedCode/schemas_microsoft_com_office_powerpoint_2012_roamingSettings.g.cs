@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
 {
     /// <summary>
     /// <para>Defines the Key Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pRoam:key.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
 
     /// <summary>
     /// <para>Defines the Value Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pRoam:value.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
 
     /// <summary>
     /// <para>Defines the RoamingProperty Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pRoam:props.</para>
     /// </summary>
     /// <remark>

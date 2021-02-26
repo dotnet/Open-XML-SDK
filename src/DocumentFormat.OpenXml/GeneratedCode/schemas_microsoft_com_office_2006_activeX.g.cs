@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 {
     /// <summary>
     /// <para>Defines the ActiveXControlData Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ax:ocx.</para>
     /// </summary>
     /// <remark>
@@ -163,7 +163,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ActiveXObjectProperty Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ax:ocxPr.</para>
     /// </summary>
     /// <remark>
@@ -301,7 +301,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SharedComFont Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ax:font.</para>
     /// </summary>
     /// <remark>
@@ -404,7 +404,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SharedComPicture Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ax:picture.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

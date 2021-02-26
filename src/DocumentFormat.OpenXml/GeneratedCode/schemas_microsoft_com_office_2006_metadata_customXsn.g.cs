@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 {
     /// <summary>
     /// <para>Defines the CustomXsn Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:customXsn.</para>
     /// </summary>
     /// <remark>
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 
     /// <summary>
     /// <para>Defines the XsnLocation Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnLocation.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -177,7 +177,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 
     /// <summary>
     /// <para>Defines the CachedView Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:cached.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 
     /// <summary>
     /// <para>Defines the OpenByDefault Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:openByDefault.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -257,7 +257,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 
     /// <summary>
     /// <para>Defines the Scope Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnScope.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

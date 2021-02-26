@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
 {
     /// <summary>
     /// <para>Set of Additional Characteristics.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ac:additionalCharacteristics.</para>
     /// </summary>
     /// <remark>
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
 
     /// <summary>
     /// <para>Single Characteristic.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ac:characteristic.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

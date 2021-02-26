@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Vml
 {
     /// <summary>
     /// <para>Defines the Path Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:path.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -316,7 +316,7 @@ namespace DocumentFormat.OpenXml.Vml
 
     /// <summary>
     /// <para>Defines the Formulas Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:formulas.</para>
     /// </summary>
     /// <remark>
@@ -378,7 +378,7 @@ namespace DocumentFormat.OpenXml.Vml
 
     /// <summary>
     /// <para>Defines the ShapeHandles Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:handles.</para>
     /// </summary>
     /// <remark>
@@ -440,7 +440,7 @@ namespace DocumentFormat.OpenXml.Vml
 
     /// <summary>
     /// <para>Defines the Fill Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:fill.</para>
     /// </summary>
     /// <remark>
@@ -983,7 +983,7 @@ namespace DocumentFormat.OpenXml.Vml
 
     /// <summary>
     /// <para>Defines the Stroke Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:stroke.</para>
     /// </summary>
     /// <remark>
@@ -1619,7 +1619,7 @@ namespace DocumentFormat.OpenXml.Vml
 
     /// <summary>
     /// <para>Defines the Shadow Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:shadow.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1835,7 +1835,7 @@ namespace DocumentFormat.OpenXml.Vml
 
     /// <summary>
     /// <para>Defines the TextBox Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:textbox.</para>
     /// </summary>
     /// <remark>
@@ -1971,7 +1971,7 @@ namespace DocumentFormat.OpenXml.Vml
 
     /// <summary>
     /// <para>Defines the TextPath Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:textpath.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2136,7 +2136,7 @@ namespace DocumentFormat.OpenXml.Vml
 
     /// <summary>
     /// <para>Defines the ImageData Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:imagedata.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2513,7 +2513,7 @@ namespace DocumentFormat.OpenXml.Vml
 
     /// <summary>
     /// <para>Shape Definition.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:shape.</para>
     /// </summary>
     /// <remark>
@@ -3717,7 +3717,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Shape Template.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:shapetype.</para>
     /// </summary>
     /// <remark>
@@ -4884,7 +4884,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Shape Group.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:group.</para>
     /// </summary>
     /// <remark>
@@ -5643,7 +5643,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Document Background.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:background.</para>
     /// </summary>
     /// <remark>
@@ -5854,7 +5854,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
     /// <summary>
     /// <para>Arc Segment.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:arc.</para>
     /// </summary>
     /// <remark>
@@ -7007,7 +7007,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
 
     /// <summary>
     /// <para>Bezier Curve.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:curve.</para>
     /// </summary>
     /// <remark>
@@ -8206,7 +8206,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Image File.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:image.</para>
     /// </summary>
     /// <remark>
@@ -9490,7 +9490,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Line.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:line.</para>
     /// </summary>
     /// <remark>
@@ -10653,7 +10653,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Oval.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:oval.</para>
     /// </summary>
     /// <remark>
@@ -11784,7 +11784,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Multiple Path Line.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:polyline.</para>
     /// </summary>
     /// <remark>
@@ -12934,7 +12934,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Rectangle.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:rect.</para>
     /// </summary>
     /// <remark>
@@ -14065,7 +14065,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Rounded Rectangle.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:roundrect.</para>
     /// </summary>
     /// <remark>
@@ -15196,7 +15196,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Shape Handle.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:h.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15377,7 +15377,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Single Formula.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:f.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
 {
     /// <summary>
     /// <para>Defines the Taskpanes Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:taskpanes.</para>
     /// </summary>
     /// <remark>
@@ -111,7 +111,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
 
     /// <summary>
     /// <para>Defines the WebExtensionPartReference Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:webextensionref.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -164,7 +164,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OfficeArtExtensionList Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:extLst.</para>
     /// </summary>
     /// <remark>
@@ -233,7 +233,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the WebExtensionTaskpane Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:taskpane.</para>
     /// </summary>
     /// <remark>

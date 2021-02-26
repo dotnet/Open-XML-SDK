@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
 {
     /// <summary>
     /// <para>Defines the PercentagePositionHeightOffset Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctPosHOffset.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
 
     /// <summary>
     /// <para>Defines the PercentagePositionVerticalOffset Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctPosVOffset.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
 
     /// <summary>
     /// <para>Defines the RelativeWidth Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:sizeRelH.</para>
     /// </summary>
     /// <remark>
@@ -197,7 +197,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the RelativeHeight Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:sizeRelV.</para>
     /// </summary>
     /// <remark>
@@ -295,7 +295,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the PercentageWidth Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctWidth.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -337,7 +337,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the PercentageHeight Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctHeight.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

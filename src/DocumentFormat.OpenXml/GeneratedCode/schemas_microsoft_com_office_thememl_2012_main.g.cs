@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
 {
     /// <summary>
     /// <para>Defines the ThemeFamily Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is thm15:themeFamily.</para>
     /// </summary>
     /// <remark>
@@ -156,7 +156,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the OfficeArtExtensionList Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is thm15:extLst.</para>
     /// </summary>
     /// <remark>
@@ -225,7 +225,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the ThemeVariant Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is thm15:themeVariant.</para>
     /// </summary>
     /// <remark>
@@ -408,7 +408,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ThemeVariantList Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is thm15:themeVariantLst.</para>
     /// </summary>
     /// <remark>

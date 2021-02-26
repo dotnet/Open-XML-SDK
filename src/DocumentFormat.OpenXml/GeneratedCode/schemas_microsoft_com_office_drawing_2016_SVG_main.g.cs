@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.SVG
 {
     /// <summary>
     /// <para>Defines the SVGBlip Class.</para>
-    /// <para>This class is available in Office 2019 or above.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is asvg:svgBlip.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

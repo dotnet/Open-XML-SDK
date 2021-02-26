@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
 {
     /// <summary>
     /// <para>Custom XML Data Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:datastoreItem.</para>
     /// </summary>
     /// <remark>
@@ -145,7 +145,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Associated XML Schema.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:schemaRef.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -196,7 +196,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Set of Associated XML Schemas.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:schemaRefs.</para>
     /// </summary>
     /// <remark>

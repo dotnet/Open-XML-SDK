@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 {
     /// <summary>
     /// <para>Defines the TemplateCommandGroup Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:tcg.</para>
     /// </summary>
     /// <remark>
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
     /// <summary>
     /// <para>Defines the Mcds Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:mcds.</para>
     /// </summary>
     /// <remark>
@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
     /// <summary>
     /// <para>Defines the VbaSuppData Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:vbaSuppData.</para>
     /// </summary>
     /// <remark>
@@ -301,7 +301,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
     /// <summary>
     /// <para>Defines the MailMergeRecipients Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:recipients.</para>
     /// </summary>
     /// <remark>
@@ -363,7 +363,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
     /// <summary>
     /// <para>Defines the FixedCommandKeyboardCustomization Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:fci.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -457,7 +457,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
     /// <summary>
     /// <para>Defines the MacroKeyboardCustomization Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:macro.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -484,7 +484,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
     /// <summary>
     /// <para>Defines the WllMacroKeyboardCustomization Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:wll.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -511,7 +511,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
     /// <summary>
     /// <para>Defines the MacroWllType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class MacroWllType : OpenXmlLeafElement
@@ -552,7 +552,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
     /// <summary>
     /// <para>Defines the AllocatedCommandKeyboardCustomization Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acd.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -579,7 +579,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
     /// <summary>
     /// <para>Defines the AllocatedCommandManifestEntry Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acdEntry.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -606,7 +606,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
     /// <summary>
     /// <para>Defines the AcceleratorKeymapType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
@@ -647,7 +647,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
     /// <summary>
     /// <para>Defines the CharacterInsertion Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:wch.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -699,7 +699,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 
     /// <summary>
     /// <para>Defines the KeyMapEntry Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:keymap.</para>
     /// </summary>
     /// <remark>
@@ -951,7 +951,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the AllocatedCommand Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acd.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1062,7 +1062,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the Mcd Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:mcd.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1199,7 +1199,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocNewXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocNew.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1239,7 +1239,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocOpenXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocOpen.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1279,7 +1279,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocCloseXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocClose.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1319,7 +1319,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocSyncXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocSync.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1359,7 +1359,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocXmlAfterInsertXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocXmlAfterInsert.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1399,7 +1399,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocXmlBeforeDeleteXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocXmlBeforeDelete.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1439,7 +1439,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocContentControlAfterInsertXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlAfterInsert.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1479,7 +1479,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocContentControlBeforeDeleteXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlBeforeDelete.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1519,7 +1519,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocContentControlOnExistXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlOnExit.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1559,7 +1559,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocContentControlOnEnterXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlOnEnter.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1599,7 +1599,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocStoreUpdateXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocStoreUpdate.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1639,7 +1639,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocContentControlUpdateXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlContentUpdate.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1679,7 +1679,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the EventDocBuildingBlockAfterInsertXsdString Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocBuildingBlockAfterInsert.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1719,7 +1719,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the DocEvents Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:docEvents.</para>
     /// </summary>
     /// <remark>
@@ -1986,7 +1986,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the AllocatedCommandManifest Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acdManifest.</para>
     /// </summary>
     /// <remark>
@@ -2048,7 +2048,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (2L) });
 
     /// <summary>
     /// <para>Defines the ToolbarData Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:toolbarData.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2099,7 +2099,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the KeyMapCustomizations Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:keymaps.</para>
     /// </summary>
     /// <remark>
@@ -2160,7 +2160,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the MismatchedKeyMapCustomization Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:keymapsBad.</para>
     /// </summary>
     /// <remark>
@@ -2221,7 +2221,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the KeymapsType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -2272,7 +2272,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Toolbars Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:toolbars.</para>
     /// </summary>
     /// <remark>
@@ -2337,7 +2337,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the AllocatedCommands Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acds.</para>
     /// </summary>
     /// <remark>
@@ -2399,7 +2399,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RecordIncluded Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:active.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2447,7 +2447,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the RecordHashCode Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:hash.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2498,7 +2498,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SingleDataSourceRecord Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:recipientData.</para>
     /// </summary>
     /// <remark>

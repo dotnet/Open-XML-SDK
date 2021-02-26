@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
 {
     /// <summary>
     /// <para>Defines the DesignElement Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p16:designElem.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete

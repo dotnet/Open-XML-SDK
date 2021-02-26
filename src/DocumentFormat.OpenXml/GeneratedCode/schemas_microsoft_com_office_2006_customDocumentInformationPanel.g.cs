@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 {
     /// <summary>
     /// <para>Defines the CustomPropertyEditors Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:customPropertyEditors.</para>
     /// </summary>
     /// <remark>
@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 
     /// <summary>
     /// <para>Defines the PropertyEditorNamespace Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:XMLNamespace.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 
     /// <summary>
     /// <para>Defines the DefaultPropertyEditorNamespace Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:defaultPropertyEditorNamespace.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -190,7 +190,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 
     /// <summary>
     /// <para>Defines the XsnFileLocation Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:XSNLocation.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 
     /// <summary>
     /// <para>Defines the ShowOnOpen Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:showOnOpen.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -271,7 +271,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 
     /// <summary>
     /// <para>Defines the CustomPropertyEditor Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:customPropertyEditor.</para>
     /// </summary>
     /// <remark>

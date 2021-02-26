@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
 {
     /// <summary>
     /// <para>Defines the UnsizedControlClone Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:control.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -550,7 +550,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the UnsizedButton Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:button.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1166,7 +1166,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the CheckBox Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:checkBox.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1668,7 +1668,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the UnsizedGallery Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:gallery.</para>
     /// </summary>
     /// <remark>
@@ -2679,7 +2679,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the UnsizedToggleButton Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:toggleButton.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3315,7 +3315,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the MenuSeparator Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:menuSeparator.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3503,7 +3503,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the UnsizedSplitButton Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:splitButton.</para>
     /// </summary>
     /// <remark>
@@ -3889,7 +3889,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the UnsizedMenu Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:menu.</para>
     /// </summary>
     /// <remark>
@@ -4579,7 +4579,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the UnsizedDynamicMenu Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:dynamicMenu.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5213,7 +5213,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the SplitButtonWithTitle Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:splitButton.</para>
     /// </summary>
     /// <remark>
@@ -5599,7 +5599,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the MenuWithTitle Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:menu.</para>
     /// </summary>
     /// <remark>
@@ -6289,7 +6289,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the ControlClone Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:control.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6902,7 +6902,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the TextLabel Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:labelControl.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7321,7 +7321,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the Button Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:button.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7974,7 +7974,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the ToggleButton Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:toggleButton.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8647,7 +8647,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the EditBox Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:editBox.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9283,7 +9283,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the ComboBox Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:comboBox.</para>
     /// </summary>
     /// <remark>
@@ -10111,7 +10111,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the DropDown Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:dropDown.</para>
     /// </summary>
     /// <remark>
@@ -10942,7 +10942,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the Gallery Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:gallery.</para>
     /// </summary>
     /// <remark>
@@ -11993,7 +11993,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the Menu Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:menu.</para>
     /// </summary>
     /// <remark>
@@ -12723,7 +12723,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the DynamicMenu Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:dynamicMenu.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13394,7 +13394,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the SplitButton Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:splitButton.</para>
     /// </summary>
     /// <remark>
@@ -13820,7 +13820,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the Box Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:box.</para>
     /// </summary>
     /// <remark>
@@ -14099,7 +14099,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
 
     /// <summary>
     /// <para>Defines the ButtonGroup Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:buttonGroup.</para>
     /// </summary>
     /// <remark>
@@ -14340,7 +14340,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
 
     /// <summary>
     /// <para>Defines the MenuRoot Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:menu.</para>
     /// </summary>
     /// <remark>
@@ -14499,7 +14499,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the CustomUI Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:customUI.</para>
     /// </summary>
     /// <remark>
@@ -14631,7 +14631,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the Item Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:item.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -14779,7 +14779,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the VisibleButton Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:button.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15358,7 +15358,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the VisibleToggleButton Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:toggleButton.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15957,7 +15957,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the VerticalSeparator Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:separator.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -16142,7 +16142,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
 
     /// <summary>
     /// <para>Defines the DialogBoxLauncher Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:dialogBoxLauncher.</para>
     /// </summary>
     /// <remark>
@@ -16217,7 +16217,7 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
 
     /// <summary>
     /// <para>Defines the Group Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:group.</para>
     /// </summary>
     /// <remark>
@@ -16754,7 +16754,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the QuickAccessToolbarControlClone Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:control.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -17367,7 +17367,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the SharedQatControls Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:sharedControls.</para>
     /// </summary>
     /// <remark>
@@ -17435,7 +17435,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the DocumentSpecificQuickAccessToolbarControls Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:documentControls.</para>
     /// </summary>
     /// <remark>
@@ -17503,7 +17503,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the QatItemsType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -17558,7 +17558,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the Tab Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:tab.</para>
     /// </summary>
     /// <remark>
@@ -17901,7 +17901,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the ContextualTabSet Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:tabSet.</para>
     /// </summary>
     /// <remark>
@@ -18022,7 +18022,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
 
     /// <summary>
     /// <para>Defines the RepurposedCommand Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:command.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -18127,7 +18127,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 
     /// <summary>
     /// <para>Defines the OfficeMenu Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:officeMenu.</para>
     /// </summary>
     /// <remark>
@@ -18228,7 +18228,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 
     /// <summary>
     /// <para>Defines the QuickAccessToolbar Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:qat.</para>
     /// </summary>
     /// <remark>
@@ -18319,7 +18319,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 
     /// <summary>
     /// <para>Defines the Tabs Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:tabs.</para>
     /// </summary>
     /// <remark>
@@ -18381,7 +18381,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 
     /// <summary>
     /// <para>Defines the ContextualTabSets Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:contextualTabs.</para>
     /// </summary>
     /// <remark>
@@ -18443,7 +18443,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 
     /// <summary>
     /// <para>Defines the RepurposedCommands Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:commands.</para>
     /// </summary>
     /// <remark>
@@ -18505,7 +18505,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
 
     /// <summary>
     /// <para>Defines the Ribbon Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:ribbon.</para>
     /// </summary>
     /// <remark>

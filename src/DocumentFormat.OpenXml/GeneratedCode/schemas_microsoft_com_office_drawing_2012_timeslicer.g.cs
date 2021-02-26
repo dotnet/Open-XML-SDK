@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
 {
     /// <summary>
     /// <para>Defines the TimeSlicer Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is tsle:timeslicer.</para>
     /// </summary>
     /// <remark>
@@ -112,7 +112,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OfficeArtExtensionList Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is tsle:extLst.</para>
     /// </summary>
     /// <remark>

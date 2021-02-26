@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
 {
     /// <summary>
     /// <para>Defines the Slicer Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is sle:slicer.</para>
     /// </summary>
     /// <remark>
@@ -113,7 +113,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OfficeArtExtensionList Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is sle:extLst.</para>
     /// </summary>
     /// <remark>

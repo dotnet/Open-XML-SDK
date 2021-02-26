@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
 {
     /// <summary>
     /// <para>Embedded Custom XML Schema Supplementary Data.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is sl:schemaLibrary.</para>
     /// </summary>
     /// <remark>
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
 
     /// <summary>
     /// <para>Custom XML Schema Reference.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is sl:schema.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
