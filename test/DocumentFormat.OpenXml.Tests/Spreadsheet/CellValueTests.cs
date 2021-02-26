@@ -74,6 +74,20 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(num, result);
         }
 
+        [InlineData("987.6E+30", 9.876E+32)]
+        [InlineData("-12.34E-20", -1.234E-19)]
+        [Theory]
+        public void CellDoubleTestExponential(string num, double expected)
+        {
+            var value = new CellValue(num);
+
+            Assert.Equal(num, value.Text);
+            Assert.Equal(num, value.InnerText);
+            Assert.Equal(@$"<x:v xmlns:x=""http://schemas.openxmlformats.org/spreadsheetml/2006/main"">{num}</x:v>", value.OuterXml);
+            Assert.True(value.TryGetDouble(out var result));
+            Assert.Equal(expected, result);
+        }
+
         [InlineData(null)]
         [InlineData("")]
         [InlineData("other")]
@@ -104,6 +118,19 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(num, result);
         }
 
+        [InlineData("987E+5", 98700000)]
+        [Theory]
+        public void CellIntTestExponential(string num, int expected)
+        {
+            var value = new CellValue(num);
+
+            Assert.Equal(num, value.Text);
+            Assert.Equal(num, value.InnerText);
+            Assert.Equal(@$"<x:v xmlns:x=""http://schemas.openxmlformats.org/spreadsheetml/2006/main"">{num}</x:v>", value.OuterXml);
+            Assert.True(value.TryGetInt(out var result));
+            Assert.Equal(expected, result);
+        }
+
         [InlineData(null)]
         [InlineData("")]
         [InlineData("other")]
@@ -126,6 +153,20 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(@$"<x:v xmlns:x=""http://schemas.openxmlformats.org/spreadsheetml/2006/main"">{num}</x:v>", value.OuterXml);
             Assert.True(value.TryGetDecimal(out var result));
             Assert.Equal(num, result);
+        }
+
+        [InlineData("987.6E+8", 9.876E+10)]
+        [InlineData("-12.34E-7", -1.234E-6)]
+        [Theory]
+        public void CellDecimalTestExponential(string num, decimal expected)
+        {
+            var value = new CellValue(num);
+
+            Assert.Equal(num, value.Text);
+            Assert.Equal(num, value.InnerText);
+            Assert.Equal(@$"<x:v xmlns:x=""http://schemas.openxmlformats.org/spreadsheetml/2006/main"">{num}</x:v>", value.OuterXml);
+            Assert.True(value.TryGetDecimal(out var result));
+            Assert.Equal(expected, result);
         }
 
         [InlineData(null)]
