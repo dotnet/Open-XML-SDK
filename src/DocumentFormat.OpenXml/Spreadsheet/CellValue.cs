@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         /// <param name="value">Number.</param>
         public CellValue(int value)
-            : this(value.ToString(CultureInfo.InvariantCulture))
+            : this(value.ToString())
         {
         }
 
