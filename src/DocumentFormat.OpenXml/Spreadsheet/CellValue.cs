@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         /// <param name="value">Number.</param>
         public CellValue(double value)
-            : this(value.ToString())
+            : this(value.ToString(CultureInfo.InvariantCulture))
         {
         }
 
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         /// <param name="value">Number.</param>
         public CellValue(int value)
-            : this(value.ToString())
+            : this(value.ToString(CultureInfo.InvariantCulture))
         {
         }
 
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </summary>
         /// <param name="value">Number.</param>
         public CellValue(decimal value)
-            : this(value.ToString())
+            : this(value.ToString(CultureInfo.InvariantCulture))
         {
         }
 
