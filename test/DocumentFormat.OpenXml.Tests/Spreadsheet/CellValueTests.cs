@@ -4,6 +4,8 @@
 using DocumentFormat.OpenXml.Spreadsheet;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -74,6 +76,26 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(num, result);
         }
 
+        [Fact]
+        public void CellDoubleCultureTest()
+        {
+            // Change current culture
+            CultureInfo culture, oldculture;
+            oldculture = Thread.CurrentThread.CurrentCulture;
+            culture = CultureInfo.CreateSpecificCulture("fr-FR");
+            Thread.CurrentThread.CurrentCulture = culture;
+
+            // Set to a double value
+            double num = 103.2;
+            var value = new CellValue(num);
+
+            // Ensure that thread culture is not used.
+            Assert.Equal("103.2", value.Text);
+            Assert.Equal("103.2", value.InnerText);
+
+            Thread.CurrentThread.CurrentCulture = oldculture;
+        }
+
         [InlineData(null)]
         [InlineData("")]
         [InlineData("other")]
@@ -137,6 +159,26 @@ namespace DocumentFormat.OpenXml.Tests
             var value = new CellValue { Text = input };
 
             Assert.False(value.TryGetDecimal(out _));
+        }
+
+        [Fact]
+        public void CellDecimalCultureTest()
+        {
+            // Change current culture
+            CultureInfo culture, oldculture;
+            oldculture = Thread.CurrentThread.CurrentCulture;
+            culture = CultureInfo.CreateSpecificCulture("fr-FR");
+            Thread.CurrentThread.CurrentCulture = culture;
+
+            // Set to a decimal value
+            decimal num = 6049.9M;
+            var value = new CellValue(num);
+
+            // Ensure that thread culture is not used.
+            Assert.Equal("6049.9", value.Text);
+            Assert.Equal("6049.9", value.InnerText);
+
+            Thread.CurrentThread.CurrentCulture = oldculture;
         }
 
         [InlineData("0", false)]
