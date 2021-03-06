@@ -48,7 +48,7 @@ If you want to report a problem (bug, behavior, build, distribution, feature req
 
 If you have "how-to" questions please post to one of the following resources:
 
-- [Open XML SDK forum](https://social.msdn.microsoft.com/Forums/office/en-US/home?forum=oxmlsdk)
+- [Microsoft Q&A Forums](https://docs.microsoft.com/en-us/answers/topics/office-addins-dev.html) (tag: **office-addins-dev**)
 - [Stack Overflow](http://stackoverflow.com) (tags: **openxml** or **openxml-sdk**)
 
 Known Issues
