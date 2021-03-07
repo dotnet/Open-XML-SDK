@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Implemented `IEquatable<IdPartPair>` on `IdPartPair` to fix equality implementation there and obsoleted setters (#871)
 - Added generated classes for Office 2019 types and constraints (#882)
 
+### Fixed
+- Fixed serialization of `CellValue` constructors to use invariant cultures (#903)
+- Fixed parsing to allow exponents for numeric cell values (#901)
+
 ## Version 2.12.3 - 2021-02-24
 
 ### Fixed
