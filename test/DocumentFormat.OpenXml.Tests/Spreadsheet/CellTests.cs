@@ -14,6 +14,8 @@ namespace DocumentFormat.OpenXml.Tests
         [InlineData("1", CellValues.Number, true)]
         [InlineData("1.0", CellValues.Number, true)]
         [InlineData("-1.0", CellValues.Number, true)]
+        [InlineData("9.999E+307", CellValues.Number, true)]
+        [InlineData("-2.4E-6", CellValues.Number, true)]
 
         // Boolean
         [InlineData("false", CellValues.Boolean, true)]
