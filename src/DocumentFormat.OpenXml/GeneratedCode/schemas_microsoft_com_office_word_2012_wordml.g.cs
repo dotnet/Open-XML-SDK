@@ -1082,7 +1082,6 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 })
 .AddAttribute(69, "contact", a => a.Contact, aBuilder =>
 {
-aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
