@@ -14,6 +14,6 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </summary>
         [Obsolete("This property will not persist to the document and will be removed in a future version")]
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public StringValue? Contact;
+        public StringValue? Contact {get; set;}
     }
 }
