@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased 
 
-### Fixed
+### Deprecated
 - Deprecated Office2013.Word.Person.Contact property. It no longer persists and will be removed in a future version (#912)
 
 ## Version 2.13.0-beta1 - 2021-03-09
