@@ -12,12 +12,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// Gets or sets the <see cref="Contact"/> value. It is only available for backwards compatibility
         /// until the next major version change. Please discontinue using this property.
         /// </summary>
-        [Obsolete("This property will be removed in a future version")]
+        [Obsolete("This property will not persist to the document and will be removed in a future version")]
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public StringValue? Contact
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
+        public StringValue? Contact;
     }
 }
