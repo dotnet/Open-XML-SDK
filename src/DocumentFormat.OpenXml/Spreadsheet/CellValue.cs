@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="dbl">The result if successful.</param>
         /// <returns>Success or failure</returns>
         public bool TryGetDouble(out double dbl)
-            => double.TryParse(InnerText, NumberStyles.Number, CultureInfo.InvariantCulture, out dbl);
+            => double.TryParse(InnerText, NumberStyles.Number | NumberStyles.AllowExponent, CultureInfo.InvariantCulture, out dbl);
 
         /// <summary>
         /// Attempts to parse cell value to retrieve a <see cref="int"/>.
@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="value">The result if successful.</param>
         /// <returns>Success or failure</returns>
         public bool TryGetInt(out int value)
-            => int.TryParse(InnerText, NumberStyles.Number, CultureInfo.InvariantCulture, out value);
+            => int.TryParse(InnerText, NumberStyles.Number | NumberStyles.AllowExponent, CultureInfo.InvariantCulture, out value);
 
         /// <summary>
         /// Attempts to parse cell value to retrieve a <see cref="decimal"/>.
@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <param name="value">The result if successful.</param>
         /// <returns>Success or failure</returns>
         public bool TryGetDecimal(out decimal value)
-            => decimal.TryParse(InnerText, NumberStyles.Number, CultureInfo.InvariantCulture, out value);
+            => decimal.TryParse(InnerText, NumberStyles.Number | NumberStyles.AllowExponent, CultureInfo.InvariantCulture, out value);
 
         /// <summary>
         /// Attempts to parse cell value to retrieve a <see cref="bool"/>.

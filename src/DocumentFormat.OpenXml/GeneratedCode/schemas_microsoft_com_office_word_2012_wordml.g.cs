@@ -1049,25 +1049,6 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             set => SetAttribute(value);
         }
 
-        /// <summary>
-        /// <para>contact, this property is only available in Office 2013 and later.</para>
-        /// <para>Represents the following attribute in the schema: w15:contact</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(69, "contact")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? Contact
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1076,11 +1057,6 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             builder.AddChild<PresenceInfo>();
             builder.AddElement<Person>()
 .AddAttribute(69, "author", a => a.Author, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
-})
-.AddAttribute(69, "contact", a => a.Contact, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));

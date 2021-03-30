@@ -4,7 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Version 2.13.0
+## Unreleased 
+
+### Deprecated
+- Deprecated Office2013.Word.Person.Contact property. It no longer persists and will be removed in a future version (#912)
+
+## Version 2.13.0-beta1 - 2021-03-09
 
 ### Added
 - Added nullability attributes (#840, #849)
@@ -12,6 +17,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added `HexBinaryValue.TryGetBytes(...)` and `HexBinaryValue.Create(byte[])` to manage the encoding and decoding of bytes (#867)
 - Implemented `IEquatable<IdPartPair>` on `IdPartPair` to fix equality implementation there and obsoleted setters (#871)
 - Added generated classes for Office 2019 types and constraints (#882)
+
+### Fixed
+- Fixed serialization of `CellValue` constructors to use invariant cultures (#903)
+- Fixed parsing to allow exponents for numeric cell values (#901)
 
 ## Version 2.12.3 - 2021-02-24
 
