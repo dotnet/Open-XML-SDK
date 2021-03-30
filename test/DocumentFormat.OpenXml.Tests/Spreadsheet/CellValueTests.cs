@@ -77,11 +77,18 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(num, result);
         }
 
-        [Fact]
-        public void CellDoubleCultureTest()
+        [InlineData("fr-FR")]
+        [InlineData("de-DE")]
+        [InlineData("zh-CH")]
+        [InlineData("ru-RU")]
+        [InlineData("en-US")]
+        [InlineData("tr-TR")]
+        [InlineData("ar-EG")]
+        [Theory]
+        public void CellDoubleCultureTest(string culture)
         {
             // Change current culture
-            _ = new CultureInfoTester(new CultureInfo("fr-FR"));
+            _ = new CultureInfoTester(new CultureInfo(culture));
 
             // Set to a double value
             double num = 103.2;
