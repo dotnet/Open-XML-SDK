@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Tests.Common;
 using DocumentFormat.OpenXml.Spreadsheet;
 using System;
 using System.Collections.Generic;
@@ -80,10 +81,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void CellDoubleCultureTest()
         {
             // Change current culture
-            CultureInfo culture, oldculture;
-            oldculture = Thread.CurrentThread.CurrentCulture;
-            culture = CultureInfo.CreateSpecificCulture("fr-FR");
-            Thread.CurrentThread.CurrentCulture = culture;
+            _ = new CultureInfoTester(new CultureInfo("fr-FR"));
 
             // Set to a double value
             double num = 103.2;
@@ -92,9 +90,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Ensure that thread culture is not used.
             Assert.Equal("103.2", value.Text);
             Assert.Equal("103.2", value.InnerText);
-
-            Thread.CurrentThread.CurrentCulture = oldculture;
-	}
+        }
 
         [InlineData("987.6E+30", 9.876E+32)]
         [InlineData("-12.34E-20", -1.234E-19)]
