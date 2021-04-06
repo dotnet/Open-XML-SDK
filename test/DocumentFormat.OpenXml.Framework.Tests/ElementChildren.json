@@ -33153,6 +33153,58 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.CoreAnimationProperties",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/animation"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation",
+    "Children": [
+      {
+        "Name": "animId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/animation/model3d"
+      },
+      {
+        "Name": "core",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/animation/model3d"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/animation/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimationID",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse",
     "Children": []
   },
@@ -33164,6 +33216,10 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2017/03/chart"
       }
     ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Decorative",
+    "Children": []
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet",
@@ -33320,6 +33376,519 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.AmbientLight",
+    "Children": [
+      {
+        "Name": "clr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "illuminance",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip",
+    "Children": [
+      {
+        "Name": "alphaBiLevel",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "alphaCeiling",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "alphaFloor",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "alphaInv",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "alphaMod",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "alphaModFix",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "alphaRepl",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "biLevel",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "blur",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "clrChange",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "clrRepl",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "duotone",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "fillOverlay",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "grayscl",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "hsl",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "lum",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "tint",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType",
+    "Children": [
+      {
+        "Name": "hslClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "prstClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "schemeClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "scrgbClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "srgbClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "sysClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.DirectionalLight",
+    "Children": [
+      {
+        "Name": "clr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "illuminance",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "lookAt",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "pos",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3D",
+    "Children": [
+      {
+        "Name": "ambientLight",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "attrSrcUrl",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "camera",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "dirLight",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "objViewport",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "ptLight",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "raster",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "spPr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "spotLight",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "trans",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "unkLight",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "winViewport",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "lookAt",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "orthographic",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "perspective",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "pos",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "up",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster",
+    "Children": [
+      {
+        "Name": "blip",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "meterPerModelUnit",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "postTrans",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "preTrans",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "rot",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "scale",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ObjectViewport",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OrthographicProjection",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "sz",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PerspectiveProjection",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PointLight",
+    "Children": [
+      {
+        "Name": "clr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "intensity",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "pos",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D",
+    "Children": [
+      {
+        "Name": "sx",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "sy",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "sz",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties",
+    "Children": [
+      {
+        "Name": "blipFill",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "custGeom",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "effectDag",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "effectLst",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "gradFill",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "grpFill",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "ln",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "noFill",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "pattFill",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "prstGeom",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "scene3d",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "solidFill",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "sp3d",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      },
+      {
+        "Name": "xfrm",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SpotLight",
+    "Children": [
+      {
+        "Name": "clr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "intensity",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "lookAt",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      },
+      {
+        "Name": "pos",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UnknownLight",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.WindowViewport",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL",
     "Children": []
   },
   {
@@ -34083,6 +34652,92 @@
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2"
       }
     ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.PersonList",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      },
+      {
+        "Name": "person",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      },
+      {
+        "Name": "mentions",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      },
+      {
+        "Name": "text",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions",
+    "Children": [
+      {
+        "Name": "mention",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComments",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      },
+      {
+        "Name": "threadedComment",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Xstring",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Presentation.ClassificationOutcome",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Presentation.ReadonlyRecommended",
+    "Children": []
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2019.Presentation.Track",
@@ -59781,4 +60436,4 @@
     "Element": "DocumentFormat.OpenXml.Wordprocessing.Zoom",
     "Children": []
   }
-]
+] 

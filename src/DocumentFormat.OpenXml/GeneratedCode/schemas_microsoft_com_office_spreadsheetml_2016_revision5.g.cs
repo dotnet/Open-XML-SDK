@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(92, "headerRowDxf")]
+    [SchemaAttr(94, "headerRowDxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HeaderRowDxfDxf : DifferentialFormatType
     {
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(92, "headerRowDxf");
+            builder.SetSchema(94, "headerRowDxf");
             builder.Availability = FileFormatVersions.Office2019;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -107,7 +107,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(92, "dataDxf")]
+    [SchemaAttr(94, "dataDxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataDxfDxf : DifferentialFormatType
     {
@@ -145,7 +145,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(92, "dataDxf");
+            builder.SetSchema(94, "dataDxf");
             builder.Availability = FileFormatVersions.Office2019;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -181,7 +181,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(92, "totalsRowDxf")]
+    [SchemaAttr(94, "totalsRowDxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TotalsRowDxfDxf : DifferentialFormatType
     {
@@ -219,7 +219,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(92, "totalsRowDxf");
+            builder.SetSchema(94, "totalsRowDxf");
             builder.Availability = FileFormatVersions.Office2019;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -255,7 +255,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(92, "headerRowBorderDxf")]
+    [SchemaAttr(94, "headerRowBorderDxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HeaderRowBorderDxfDxf : DifferentialFormatType
     {
@@ -293,7 +293,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(92, "headerRowBorderDxf");
+            builder.SetSchema(94, "headerRowBorderDxf");
             builder.Availability = FileFormatVersions.Office2019;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -329,7 +329,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(92, "tableBorderDxf")]
+    [SchemaAttr(94, "tableBorderDxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TableBorderDxfDxf : DifferentialFormatType
     {
@@ -367,7 +367,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(92, "tableBorderDxf");
+            builder.SetSchema(94, "tableBorderDxf");
             builder.Availability = FileFormatVersions.Office2019;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -403,7 +403,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(92, "totalsRowBorderDxf")]
+    [SchemaAttr(94, "totalsRowBorderDxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TotalsRowBorderDxfDxf : DifferentialFormatType
     {
@@ -441,7 +441,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(92, "totalsRowBorderDxf");
+            builder.SetSchema(94, "totalsRowBorderDxf");
             builder.Availability = FileFormatVersions.Office2019;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -477,7 +477,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(92, "columnHeaderDxf")]
+    [SchemaAttr(94, "columnHeaderDxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnHeaderDxfDxf : DifferentialFormatType
     {
@@ -515,7 +515,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(92, "columnHeaderDxf");
+            builder.SetSchema(94, "columnHeaderDxf");
             builder.Availability = FileFormatVersions.Office2019;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -551,7 +551,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(92, "columnBodyDxf")]
+    [SchemaAttr(94, "columnBodyDxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnBodyDxfDxf : DifferentialFormatType
     {
@@ -589,7 +589,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(92, "columnBodyDxf");
+            builder.SetSchema(94, "columnBodyDxf");
             builder.Availability = FileFormatVersions.Office2019;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -625,7 +625,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(92, "columnTotalsDxf")]
+    [SchemaAttr(94, "columnTotalsDxf")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnTotalsDxfDxf : DifferentialFormatType
     {
@@ -663,7 +663,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.Revision5
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(92, "columnTotalsDxf");
+            builder.SetSchema(94, "columnTotalsDxf");
             builder.Availability = FileFormatVersions.Office2019;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
