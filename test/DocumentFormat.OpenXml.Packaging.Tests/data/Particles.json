@@ -47674,7 +47674,24 @@
   ]
  },
  {
-  "Key": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.CoreAnimationProperties",
+  "Key": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.AnimationProperties",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties",
   "Value": [
    {
     "Key": "Office2019",
@@ -47698,10 +47715,7 @@
     "Value": {
      "ChildrenParticles": [
       {
-       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.CoreAnimationProperties"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimationID"
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties"
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList",

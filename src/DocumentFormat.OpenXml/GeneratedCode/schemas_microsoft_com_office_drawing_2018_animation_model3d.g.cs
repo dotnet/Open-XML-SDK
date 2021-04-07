@@ -19,18 +19,17 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     /// <summary>
     /// <para>Defines the EmbeddedAnimation Class.</para>
     /// <para>This class is available in Office 2019 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a3danim:embeddedAnimation.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a3danim:embedAnim.</para>
     /// </summary>
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>CoreAnimationProperties &lt;a3danim:core></description></item>
-    ///   <item><description>EmbeddedAnimationID &lt;a3danim:animId></description></item>
+    ///   <item><description>AnimationProperties &lt;a3danim:animPr></description></item>
     ///   <item><description>OfficeArtExtensionList &lt;a3danim:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(112, "embeddedAnimation")]
+    [SchemaAttr(112, "embedAnim")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EmbeddedAnimation : OpenXmlCompositeElement
     {
@@ -65,45 +64,51 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         {
         }
 
+        /// <summary>
+        /// <para>animId, this property is only available in Office 2019 and later.</para>
+        /// <para>Represents the following attribute in the schema: animId</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "animId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? AnimId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(112, "embeddedAnimation");
+            builder.SetSchema(112, "embedAnim");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<CoreAnimationProperties>();
-            builder.AddChild<EmbeddedAnimationID>();
+            builder.AddChild<AnimationProperties>();
             builder.AddChild<OfficeArtExtensionList>();
+            builder.AddElement<EmbeddedAnimation>()
+.AddAttribute(0, "animId", a => a.AnimId, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+});
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.CoreAnimationProperties), 1, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimationID), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties), 1, 1, version: FileFormatVersions.Office2019),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
         /// <summary>
-        /// <para>CoreAnimationProperties.</para>
-        /// <para>Represents the following element tag in the schema: a3danim:core.</para>
+        /// <para>AnimationProperties.</para>
+        /// <para>Represents the following element tag in the schema: a3danim:animPr.</para>
         /// </summary>
         /// <remark>
         /// xmlns:a3danim = http://schemas.microsoft.com/office/drawing/2018/animation/model3d
         /// </remark>
-        public CoreAnimationProperties? CoreAnimationProperties
+        public AnimationProperties? AnimationProperties
         {
-            get => GetElement<CoreAnimationProperties>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>EmbeddedAnimationID.</para>
-        /// <para>Represents the following element tag in the schema: a3danim:animId.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:a3danim = http://schemas.microsoft.com/office/drawing/2018/animation/model3d
-        /// </remark>
-        public EmbeddedAnimationID? EmbeddedAnimationID
-        {
-            get => GetElement<EmbeddedAnimationID>();
+            get => GetElement<AnimationProperties>();
             set => SetElement(value);
         }
 
@@ -179,7 +184,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
             builder.SetSchema(112, "posterFrame");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<PosterFrame>()
-.AddAttribute(0, "animId", a => a.AnimId)
+.AddAttribute(0, "animId", a => a.AnimId, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+})
 .AddAttribute(0, "frame", a => a.Frame, aBuilder =>
 {
 aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
@@ -191,9 +199,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     }
 
     /// <summary>
-    /// <para>Defines the CoreAnimationProperties Class.</para>
+    /// <para>Defines the AnimationProperties Class.</para>
     /// <para>This class is available in Office 2019 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a3danim:core.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a3danim:animPr.</para>
     /// </summary>
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
@@ -202,38 +210,38 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(112, "core")]
+    [SchemaAttr(112, "animPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class CoreAnimationProperties : OpenXmlCompositeElement
+    public partial class AnimationProperties : OpenXmlCompositeElement
     {
         /// <summary>
-        /// Initializes a new instance of the CoreAnimationProperties class.
+        /// Initializes a new instance of the AnimationProperties class.
         /// </summary>
-        public CoreAnimationProperties() : base()
+        public AnimationProperties() : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the CoreAnimationProperties class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public CoreAnimationProperties(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the CoreAnimationProperties class with the specified child elements.
+        /// Initializes a new instance of the AnimationProperties class with the specified child elements.
         /// </summary>
         /// <param name="childElements">Specifies the child elements.</param>
-        public CoreAnimationProperties(params OpenXmlElement[] childElements) : base(childElements)
+        public AnimationProperties(IEnumerable<OpenXmlElement> childElements) : base(childElements)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the CoreAnimationProperties class from outer XML.
+        /// Initializes a new instance of the AnimationProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public AnimationProperties(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the AnimationProperties class from outer XML.
         /// </summary>
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public CoreAnimationProperties(string outerXml) : base(outerXml)
+        public AnimationProperties(string outerXml) : base(outerXml)
         {
         }
 
@@ -263,9 +271,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "length")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value? Length
+        public StringValue? Length
         {
-            get => GetAttribute<UInt32Value>();
+            get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
@@ -311,25 +319,25 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "offset")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public UInt32Value? Offset
+        public StringValue? Offset
         {
-            get => GetAttribute<UInt32Value>();
+            get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>start, this property is only available in Office 2019 and later.</para>
-        /// <para>Represents the following attribute in the schema: start</para>
+        /// <para>st, this property is only available in Office 2019 and later.</para>
+        /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "start")]
+        [SchemaAttr(0, "st")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value? Start
+        public StringValue? St
         {
-            get => GetAttribute<Int32Value>();
+            get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
@@ -343,39 +351,36 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         [SchemaAttr(0, "end")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public Int32Value? End
+        public StringValue? End
         {
-            get => GetAttribute<Int32Value>();
+            get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(112, "core");
+            builder.SetSchema(112, "animPr");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
-            builder.AddElement<CoreAnimationProperties>()
+            builder.AddElement<AnimationProperties>()
 .AddAttribute(0, "name", a => a.Name)
-.AddAttribute(0, "length", a => a.Length)
+.AddAttribute(0, "length", a => a.Length, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+})
 .AddAttribute(0, "count", a => a.Count, aBuilder =>
 {
 aBuilder.AddUnion(union =>
 {
 union.AddValidator<UInt32Value>(NumberValidator.Instance);
-union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Infinite>>(EnumValidator.Instance);
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Indefinite>>(EnumValidator.Instance);
 });
 })
 .AddAttribute(0, "auto", a => a.Auto)
 .AddAttribute(0, "offset", a => a.Offset)
-.AddAttribute(0, "start", a => a.Start, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-})
-.AddAttribute(0, "end", a => a.End, aBuilder =>
-{
-aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive = (100000L) });
-});
+.AddAttribute(0, "st", a => a.St)
+.AddAttribute(0, "end", a => a.End);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
@@ -396,49 +401,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<CoreAnimationProperties>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the EmbeddedAnimationID Class.</para>
-    /// <para>This class is available in Office 2019 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a3danim:animId.</para>
-    /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(112, "animId")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class EmbeddedAnimationID : OpenXmlLeafTextElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the EmbeddedAnimationID class.
-        /// </summary>
-        public EmbeddedAnimationID() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the EmbeddedAnimationID class with the specified text content.
-        /// </summary>
-        /// <param name="text">Specifies the text content of the element.</param>
-        public EmbeddedAnimationID(string text) : base(text)
-        {
-        }
-
-        internal override OpenXmlSimpleType InnerTextToValue(string text)
-        {
-            return new UInt32Value { InnerText = text };
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.AddValidator<UInt32Value>(NumberValidator.Instance);
-            builder.SetSchema(112, "animId");
-            builder.Availability = FileFormatVersions.Office2019;
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbeddedAnimationID>(deep);
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<AnimationProperties>(deep);
     }
 
     /// <summary>

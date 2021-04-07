@@ -33153,7 +33153,16 @@
     "Children": []
   },
   {
-    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.CoreAnimationProperties",
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.AnimationProperties",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/animation"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties",
     "Children": [
       {
         "Name": "extLst",
@@ -33165,11 +33174,7 @@
     "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation",
     "Children": [
       {
-        "Name": "animId",
-        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/animation/model3d"
-      },
-      {
-        "Name": "core",
+        "Name": "animPr",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2018/animation/model3d"
       },
       {
@@ -33177,10 +33182,6 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2018/animation/model3d"
       }
     ]
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimationID",
-    "Children": []
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList",
@@ -60436,4 +60437,4 @@
     "Element": "DocumentFormat.OpenXml.Wordprocessing.Zoom",
     "Children": []
   }
-] 
+]
