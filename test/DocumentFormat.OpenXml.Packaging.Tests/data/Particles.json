@@ -49757,7 +49757,7 @@
     "Value": {
      "ChildrenParticles": [
       {
-       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Xstring",
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText",
        "MinOccurs": 0
       },
       {

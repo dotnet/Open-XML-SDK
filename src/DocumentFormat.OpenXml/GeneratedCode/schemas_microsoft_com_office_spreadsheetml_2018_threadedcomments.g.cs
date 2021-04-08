@@ -376,7 +376,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description>Xstring &lt;xltc:text></description></item>
+    ///   <item><description>ThreadedCommentText &lt;xltc:text></description></item>
     ///   <item><description>ThreadedCommentMentions &lt;xltc:mentions></description></item>
     ///   <item><description>ExtensionList &lt;xltc:extLst></description></item>
     /// </list>
@@ -534,7 +534,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
             base.ConfigureMetadata(builder);
             builder.SetSchema(102, "threadedComment");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<Xstring>();
+            builder.AddChild<ThreadedCommentText>();
             builder.AddChild<ThreadedCommentMentions>();
             builder.AddChild<ExtensionList>();
             builder.AddElement<ThreadedComment>()
@@ -558,22 +558,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 .AddAttribute(0, "done", a => a.Done);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Xstring), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText), 0, 1, version: FileFormatVersions.Office2019),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions), 0, 1, version: FileFormatVersions.Office2019),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
         /// <summary>
-        /// <para>Xstring.</para>
+        /// <para>ThreadedCommentText.</para>
         /// <para>Represents the following element tag in the schema: xltc:text.</para>
         /// </summary>
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public Xstring? Xstring
+        public ThreadedCommentText? ThreadedCommentText
         {
-            get => GetElement<Xstring>();
+            get => GetElement<ThreadedCommentText>();
             set => SetElement(value);
         }
 
@@ -608,27 +608,27 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     }
 
     /// <summary>
-    /// <para>Defines the Xstring Class.</para>
+    /// <para>Defines the ThreadedCommentText Class.</para>
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:text.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr(102, "text")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class Xstring : OpenXmlLeafTextElement
+    public partial class ThreadedCommentText : OpenXmlLeafTextElement
     {
         /// <summary>
-        /// Initializes a new instance of the Xstring class.
+        /// Initializes a new instance of the ThreadedCommentText class.
         /// </summary>
-        public Xstring() : base()
+        public ThreadedCommentText() : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the Xstring class with the specified text content.
+        /// Initializes a new instance of the ThreadedCommentText class with the specified text content.
         /// </summary>
         /// <param name="text">Specifies the text content of the element.</param>
-        public Xstring(string text) : base(text)
+        public ThreadedCommentText(string text) : base(text)
         {
         }
 
@@ -645,7 +645,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Xstring>(deep);
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThreadedCommentText>(deep);
     }
 
     /// <summary>
