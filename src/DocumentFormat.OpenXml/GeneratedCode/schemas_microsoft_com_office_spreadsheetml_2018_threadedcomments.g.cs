@@ -466,22 +466,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>personDescriptor, this property is only available in Office 2019 and later.</para>
-        /// <para>Represents the following attribute in the schema: personDescriptor</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "personDescriptor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? PersonDescriptor
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
         /// <para>id, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
@@ -545,7 +529,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "personDescriptor", a => a.PersonDescriptor)
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
@@ -745,22 +728,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>personDescriptor, this property is only available in Office 2019 and later.</para>
-        /// <para>Represents the following attribute in the schema: personDescriptor</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "personDescriptor")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? PersonDescriptor
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
         /// <para>mentionId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: mentionId</para>
         /// </summary>
@@ -819,7 +786,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 })
-.AddAttribute(0, "personDescriptor", a => a.PersonDescriptor)
 .AddAttribute(0, "mentionId", a => a.MentionId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
