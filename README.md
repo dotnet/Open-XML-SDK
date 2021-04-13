@@ -34,12 +34,20 @@ The NuGet package for the latest builds of the Open XML SDK is available as a cu
 
 For latests changes, please see the [changelog](CHANGELOG.md)
 
-Package currently supports the following targets:
-- .NET 3.5
-- .NET 4.0
-- .NET 4.6
-- .NET Standard 1.3
-- .NET Standard 2.0.
+The package currently supports the following frameworks:
+
+- .NET Framework 3.5+
+- .NET Standard 1.3+
+- .NET Core 1.0+
+- .NET 5+
+- Mono 4.6+
+- Xamarin.iOS 10.0+
+- Xamarin.Mac 3.0+
+- Xamarin.Android 7.0+
+- UWP 10.0+
+- Unity 2018.1+
+
+For details on platform support, please see the docs at https://docs.microsoft.com/en-us/dotnet/standard/net-standard.
 
 If You Have Problems
 --------------------
