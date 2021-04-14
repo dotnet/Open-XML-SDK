@@ -12,6 +12,7 @@ using DocumentFormat.OpenXml.Office2010.Drawing.Diagram;
 using DocumentFormat.OpenXml.Office2013.Drawing;
 using DocumentFormat.OpenXml.Office2013.Theme;
 using DocumentFormat.OpenXml.Office2013.Word.Drawing;
+using DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -156,7 +157,7 @@ namespace DocumentFormat.OpenXml.Drawing
     }
 
     /// <summary>
-    /// <para>Hyperlink Sound.</para>
+    /// <para>Sound to play..</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a:snd.</para>
     /// </summary>
@@ -16917,6 +16918,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ThemeManager &lt;a:themeManager></description></item>
     ///   <item><description>Table &lt;a:tbl></description></item>
     ///   <item><description>TableStyleList &lt;a:tblStyleLst></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor &lt;ahyp:hlinkClr></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty &lt;wp15:webVideoPr></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Theme.ThemeFamily &lt;thm15:themeFamily></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties &lt;a15:backgroundPr></description></item>
@@ -17219,6 +17221,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ThemeManager>();
             builder.AddChild<Table>();
             builder.AddChild<TableStyleList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.ThemeFamily>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties>();
@@ -32816,7 +32819,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description>HyperlinkSound &lt;a:snd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>HyperlinkExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -32862,7 +32865,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList), 0, 1)
             };
             builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*r:id*/));
             builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
@@ -32881,7 +32884,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description>HyperlinkSound &lt;a:snd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>HyperlinkExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -32927,7 +32930,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList), 0, 1)
             };
             builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*r:id*/));
         }
@@ -32945,7 +32948,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description>HyperlinkSound &lt;a:snd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>HyperlinkExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -32991,7 +32994,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList), 0, 1)
             };
             builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*r:id*/));
             builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
@@ -33010,7 +33013,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description>HyperlinkSound &lt;a:snd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>HyperlinkExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
     public abstract partial class HyperlinkType : OpenXmlCompositeElement
@@ -33047,7 +33050,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>Drawing Object Hyperlink Target</para>
+        /// <para>relationship identifier to find target URI</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>
@@ -33066,7 +33069,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>Invalid URL</para>
+        /// <para>In case the url is invalid so we can't create a relationship, we'll save it here, r:id will point to a NULL one</para>
         /// <para>Represents the following attribute in the schema: invalidUrl</para>
         /// </summary>
 
@@ -33082,7 +33085,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>Action Setting</para>
+        /// <para>Action to take, it may still need r:id to specify an action target</para>
         /// <para>Represents the following attribute in the schema: action</para>
         /// </summary>
 
@@ -33098,7 +33101,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>Target Frame</para>
+        /// <para>target frame for navigating to the URI</para>
         /// <para>Represents the following attribute in the schema: tgtFrame</para>
         /// </summary>
 
@@ -33114,7 +33117,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>Hyperlink Tooltip</para>
+        /// <para>tooltip for display</para>
         /// <para>Represents the following attribute in the schema: tooltip</para>
         /// </summary>
 
@@ -33130,7 +33133,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>Add Hyperlink to Page History</para>
+        /// <para>whether to add this URI to the history when navigating to it</para>
         /// <para>Represents the following attribute in the schema: history</para>
         /// </summary>
 
@@ -33146,7 +33149,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>Highlight Click</para>
+        /// <para>Whether to highlight it when click on a shape</para>
         /// <para>Represents the following attribute in the schema: highlightClick</para>
         /// </summary>
 
@@ -33162,7 +33165,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>End Sounds</para>
+        /// <para>Whether to stop previous sound when click on it</para>
         /// <para>Represents the following attribute in the schema: endSnd</para>
         /// </summary>
 
@@ -33181,7 +33184,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.AddChild<HyperlinkSound>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<HyperlinkExtensionList>();
             builder.AddElement<HyperlinkType>()
 .AddAttribute(19, "id", a => a.Id)
 .AddAttribute(0, "invalidUrl", a => a.InvalidUrl)
@@ -33194,7 +33197,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>Hyperlink Sound.</para>
+        /// <para>Sound to play..</para>
         /// <para>Represents the following element tag in the schema: a:snd.</para>
         /// </summary>
         /// <remark>
@@ -33207,15 +33210,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>ExtensionList.</para>
-        /// <para>Represents the following element tag in the schema: a:extLst.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
-        public ExtensionList? ExtensionList
+        /// <para>
+        public HyperlinkExtensionList? HyperlinkExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<HyperlinkExtensionList>();
             set => SetElement(value);
         }
     }
@@ -34783,6 +34781,143 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PtExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the HyperlinkExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor &lt;ahyp:hlinkClr></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "ext")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class HyperlinkExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtension class.
+        /// </summary>
+        public HyperlinkExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public HyperlinkExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>val, this property is only available in Office 2019 and later.</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>? Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor>();
+            builder.AddElement<HyperlinkExtension>()
+.AddAttribute(0, "val", a => a.Val, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+});
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor), 1, 1, version: FileFormatVersions.Office2019),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>
+    [SchemaAttr(10, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class HyperlinkExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtensionList class.
+        /// </summary>
+        public HyperlinkExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public HyperlinkExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "extLst");
+            builder.AddChild<HyperlinkExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkExtensionList>(deep);
     }
 
     /// <summary>

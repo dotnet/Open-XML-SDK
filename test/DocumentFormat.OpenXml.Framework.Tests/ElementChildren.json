@@ -9782,6 +9782,10 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/timeslicer"
       },
       {
+        "Name": "hlinkClr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor"
+      },
+      {
         "Name": "contentPart",
         "Namespace": "http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing"
       },
@@ -10849,6 +10853,24 @@
       },
       {
         "Name": "sysClr",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Drawing.HyperlinkExtension",
+    "Children": [
+      {
+        "Name": "hlinkClr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
       }
     ]

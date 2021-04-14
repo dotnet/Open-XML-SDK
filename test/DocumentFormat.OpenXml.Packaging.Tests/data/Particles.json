@@ -13189,6 +13189,56 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Drawing.HyperlinkExtension",
+  "Value": [
+   {
+    "Key": "Office2007, Office2010, Office2013, Office2016",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList",
+  "Value": [
+   {
+    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.HyperlinkExtension",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Drawing.HyperlinkOnClick",
   "Value": [
    {
@@ -13200,7 +13250,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -13221,7 +13271,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -13242,7 +13292,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList",
        "MinOccurs": 0
       }
      ],
