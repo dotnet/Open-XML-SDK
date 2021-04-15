@@ -33210,7 +33210,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>
+        /// <para>Future extensions..</para>
+        /// <para>Represents the following element tag in the schema: a:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
         public HyperlinkExtensionList? HyperlinkExtensionList
         {
             get => GetElement<HyperlinkExtensionList>();
@@ -34831,18 +34836,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office 2019 and later.</para>
-        /// <para>Represents the following attribute in the schema: val</para>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(0, "val")]
+        [SchemaAttr(0, "uri")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>? Val
+        public StringValue? Uri
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>>();
+            get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
@@ -34852,7 +34857,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(10, "ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor>();
             builder.AddElement<HyperlinkExtension>()
-.AddAttribute(0, "val", a => a.Val, aBuilder =>
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
@@ -34869,7 +34874,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     }
 
     /// <summary>
-    /// <para>
+    /// <para>Future extensions..</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>HyperlinkExtension &lt;a:ext></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr(10, "extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class HyperlinkExtensionList : OpenXmlCompositeElement
