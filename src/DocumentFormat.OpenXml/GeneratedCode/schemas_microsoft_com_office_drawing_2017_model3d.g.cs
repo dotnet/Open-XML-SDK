@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description>Model3DTransform &lt;am3d:trans></description></item>
     ///   <item><description>PictureAttributionSourceURL &lt;am3d:attrSrcUrl></description></item>
     ///   <item><description>Model3DRaster &lt;am3d:raster></description></item>
-    ///   <item><description>OfficeArtExtensionList &lt;am3d:extLst></description></item>
+    ///   <item><description>Model3DExtensionList &lt;am3d:extLst></description></item>
     ///   <item><description>ObjectViewport &lt;am3d:objViewport></description></item>
     ///   <item><description>WindowViewport &lt;am3d:winViewport></description></item>
     ///   <item><description>AmbientLight &lt;am3d:ambientLight></description></item>
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             builder.AddChild<Model3DTransform>();
             builder.AddChild<PictureAttributionSourceURL>();
             builder.AddChild<Model3DRaster>();
-            builder.AddChild<OfficeArtExtensionList>();
+            builder.AddChild<Model3DExtensionList>();
             builder.AddChild<ObjectViewport>();
             builder.AddChild<WindowViewport>();
             builder.AddChild<AmbientLight>();
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform), 1, 1, version: FileFormatVersions.Office2019),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL), 0, 1, version: FileFormatVersions.Office2019),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList), 0, 1, version: FileFormatVersions.Office2019),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ObjectViewport), 1, 1, version: FileFormatVersions.Office2019),
@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         }
 
         /// <summary>
-        /// <para>PictureAttributionSourceURL.</para>
+        /// <para>Optional source attribution URL describes from whence the 3D model came..</para>
         /// <para>Represents the following element tag in the schema: am3d:attrSrcUrl.</para>
         /// </summary>
         /// <remark>
@@ -225,15 +225,15 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         }
 
         /// <summary>
-        /// <para>OfficeArtExtensionList.</para>
+        /// <para>Future Model3D extensions.</para>
         /// <para>Represents the following element tag in the schema: am3d:extLst.</para>
         /// </summary>
         /// <remark>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public Model3DExtensionList? Model3DExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<Model3DExtensionList>();
             set => SetElement(value);
         }
 
@@ -1417,7 +1417,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>cstate</para>
+        /// <para>Compression state for blips.</para>
         /// <para>Represents the following attribute in the schema: cstate</para>
         /// </summary>
 
@@ -1652,6 +1652,95 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorType>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the Model3DExtension Class.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is am3d:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation &lt;a3danim:embedAnim></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame &lt;a3danim:posterFrame></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(109, "ext")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class Model3DExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the Model3DExtension class.
+        /// </summary>
+        public Model3DExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Model3DExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Model3DExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Model3DExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Model3DExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Model3DExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Model3DExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI, this property is only available in Office 2019 and later.</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(109, "ext");
+            builder.Availability = FileFormatVersions.Office2019;
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame>();
+            builder.AddElement<Model3DExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+});
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame), 1, 1, version: FileFormatVersions.Office2019),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Model3DExtension>(deep);
     }
 
     /// <summary>
@@ -2088,7 +2177,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     }
 
     /// <summary>
-    /// <para>Defines the PictureAttributionSourceURL Class.</para>
+    /// <para>Optional source attribution URL describes from whence the 3D model came..</para>
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:attrSrcUrl.</para>
     /// </summary>
@@ -2254,6 +2343,69 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Model3DRaster>(deep);
+    }
+
+    /// <summary>
+    /// <para>Future Model3D extensions.</para>
+    /// <para>This class is available in Office 2019 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is am3d:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>Model3DExtension &lt;am3d:ext></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(109, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class Model3DExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the Model3DExtensionList class.
+        /// </summary>
+        public Model3DExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Model3DExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Model3DExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Model3DExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Model3DExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Model3DExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Model3DExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(109, "extLst");
+            builder.Availability = FileFormatVersions.Office2019;
+            builder.AddChild<Model3DExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension), 0, 0, version: FileFormatVersions.Office2019)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Model3DExtensionList>(deep);
     }
 
     /// <summary>
@@ -2431,7 +2583,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     }
 
     /// <summary>
-    /// <para>Defines the AmbientLight Class.</para>
+    /// <para>Ambient light in a scene.</para>
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:ambientLight.</para>
     /// </summary>

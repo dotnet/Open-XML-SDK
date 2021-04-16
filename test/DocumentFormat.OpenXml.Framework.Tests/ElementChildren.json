@@ -1454,6 +1454,14 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2010/main"
       },
       {
+        "Name": "picAttrSrcUrl",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2016/11/main"
+      },
+      {
+        "Name": "svgBlip",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2016/SVG/main"
+      },
+      {
         "Name": "webVideoPr",
         "Namespace": "http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing"
       }
@@ -3209,6 +3217,15 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Drawing.Charts.ChartObject",
     "Children": []
   },
@@ -3502,6 +3519,15 @@
   {
     "Element": "DocumentFormat.OpenXml.Drawing.Charts.Data",
     "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16",
+    "Children": [
+      {
+        "Name": "dispNaAsBlank",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/03/chart"
+      }
+    ]
   },
   {
     "Element": "DocumentFormat.OpenXml.Drawing.Charts.DataLabel",
@@ -7687,6 +7713,28 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtension",
+    "Children": [
+      {
+        "Name": "autoBuNodeInfoLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2016/11/diagram"
+      },
+      {
+        "Name": "lstStyle",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2016/12/diagram"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/diagram"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Drawing.Diagrams.Direction",
     "Children": []
   },
@@ -9780,6 +9828,54 @@
       {
         "Name": "timeslicer",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/timeslicer"
+      },
+      {
+        "Name": "colId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/main"
+      },
+      {
+        "Name": "creationId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/main"
+      },
+      {
+        "Name": "cxnDERefs",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/main"
+      },
+      {
+        "Name": "predDERef",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/main"
+      },
+      {
+        "Name": "rowId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/main"
+      },
+      {
+        "Name": "autoBuNodeInfoLst",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2016/11/diagram"
+      },
+      {
+        "Name": "picAttrSrcUrl",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2016/11/main"
+      },
+      {
+        "Name": "lstStyle",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2016/12/diagram"
+      },
+      {
+        "Name": "spPr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2016/12/diagram"
+      },
+      {
+        "Name": "svgBlip",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2016/SVG/main"
+      },
+      {
+        "Name": "dataDisplayOptions16",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/03/chart"
+      },
+      {
+        "Name": "decorative",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/decorative"
       },
       {
         "Name": "hlinkClr",
@@ -12140,6 +12236,18 @@
       {
         "Name": "backgroundPr",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/main"
+      },
+      {
+        "Name": "creationId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/main"
+      },
+      {
+        "Name": "predDERef",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/main"
+      },
+      {
+        "Name": "decorative",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/decorative"
       }
     ]
   },
@@ -33647,6 +33755,28 @@
       },
       {
         "Name": "up",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension",
+    "Children": [
+      {
+        "Name": "embedAnim",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/animation/model3d"
+      },
+      {
+        "Name": "posterFrame",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/animation/model3d"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2017/model3d"
       }
     ]

@@ -1410,7 +1410,7 @@
   "Key": "DocumentFormat.OpenXml.Drawing.BlipExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019",
+    "Key": "Office2010, Office2013",
     "Value": {
      "ChildrenParticles": [
       {
@@ -1443,7 +1443,7 @@
     }
    },
    {
-    "Key": "Office2010",
+    "Key": "Office2016",
     "Value": {
      "ChildrenParticles": [
       {
@@ -1451,6 +1451,39 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL"
       },
       {
        "MinOccurs": 0,
@@ -4113,7 +4146,31 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList",
+  "Value": [
+   {
+    "Key": "Office2007, Office2010, Office2013, Office2016",
+    "Value": {
+     "ParticleType": "Sequence"
+    }
+   },
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16",
+       "MaxOccurs": 0,
        "MinOccurs": 0
       }
      ],
@@ -4612,6 +4669,23 @@
       {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension",
        "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse",
        "MinOccurs": 0
       }
      ],
@@ -10283,6 +10357,59 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtension",
+  "Value": [
+   {
+    "Key": "Office2007, Office2010, Office2013, Office2016",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtensionList",
+  "Value": [
+   {
+    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtension",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Drawing.Diagrams.EffectColorList",
   "Value": [
    {
@@ -10481,7 +10608,7 @@
        "ElementType": "DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode"
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -15056,7 +15183,34 @@
   "Key": "DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtension",
   "Value": [
    {
-    "Key": "Office2010, Office2013, Office2016, Office2019",
+    "Key": "Office2007",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2010",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2013",
     "Value": {
      "ChildrenParticles": [
       {
@@ -15074,9 +15228,48 @@
     }
    },
    {
-    "Key": "Office2007",
+    "Key": "Office2016",
     "Value": {
      "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.CreationId"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.CreationId"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Decorative"
+      },
       {
        "MinOccurs": 0,
        "ParticleType": "Any"
@@ -48260,7 +48453,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList",
        "MinOccurs": 0
       },
       {
@@ -48332,6 +48525,47 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList",
+  "Value": [
+   {
+    "Key": "Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension",
+       "MaxOccurs": 0,
        "MinOccurs": 0
       }
      ],
