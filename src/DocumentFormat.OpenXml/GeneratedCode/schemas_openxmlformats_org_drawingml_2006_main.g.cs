@@ -12,6 +12,10 @@ using DocumentFormat.OpenXml.Office2010.Drawing.Diagram;
 using DocumentFormat.OpenXml.Office2013.Drawing;
 using DocumentFormat.OpenXml.Office2013.Theme;
 using DocumentFormat.OpenXml.Office2013.Word.Drawing;
+using DocumentFormat.OpenXml.Office2016.Drawing;
+using DocumentFormat.OpenXml.Office2019.Drawing;
+using DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor;
+using DocumentFormat.OpenXml.Office2019.Drawing.SVG;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -156,7 +160,7 @@ namespace DocumentFormat.OpenXml.Drawing
     }
 
     /// <summary>
-    /// <para>Hyperlink Sound.</para>
+    /// <para>Sound to play..</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a:snd.</para>
     /// </summary>
@@ -12616,7 +12620,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>cstate</para>
+        /// <para>Compression state for blips.</para>
         /// <para>Represents the following attribute in the schema: cstate</para>
         /// </summary>
 
@@ -16917,6 +16921,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ThemeManager &lt;a:themeManager></description></item>
     ///   <item><description>Table &lt;a:tbl></description></item>
     ///   <item><description>TableStyleList &lt;a:tblStyleLst></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL &lt;a1611:picAttrSrcUrl></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip &lt;asvg:svgBlip></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Decorative &lt;adec:decorative></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2016.Drawing.CreationId &lt;a16:creationId></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference &lt;a16:predDERef></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2016.Drawing.ConnectableReferences &lt;a16:cxnDERefs></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2016.Drawing.RowIdIdentifier &lt;a16:rowId></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2016.Drawing.ColIdIdentifier &lt;a16:colId></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor &lt;ahyp:hlinkClr></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty &lt;wp15:webVideoPr></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Theme.ThemeFamily &lt;thm15:themeFamily></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties &lt;a15:backgroundPr></description></item>
@@ -16951,9 +16964,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinition &lt;dgm:styleDef></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader &lt;dgm:styleDefHdr></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeaderList &lt;dgm:styleDefHdrLst></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.ShapeProperties &lt;dgm1612:spPr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType &lt;dgm1612:lstStyle></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList &lt;dgm1611:autoBuNodeInfoLst></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.ChartSpace &lt;c:chartSpace></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.UserShapes &lt;c:userShapes></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Charts.ChartReference &lt;c:chart></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Chart.DataDisplayOptions16 &lt;c16r3:dataDisplayOptions16></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource &lt;c15:pivotSource></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat &lt;c15:numFmt></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties &lt;c15:spPr></description></item>
@@ -17219,6 +17236,15 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ThemeManager>();
             builder.AddChild<Table>();
             builder.AddChild<TableStyleList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Decorative>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.CreationId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ConnectableReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.RowIdIdentifier>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ColIdIdentifier>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.ThemeFamily>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties>();
@@ -17253,9 +17279,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinition>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeaderList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartSpace>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UserShapes>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Chart.DataDisplayOptions16>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
@@ -18075,7 +18105,7 @@ aBuilder.AddUnion(union =>
         }
 
         /// <summary>
-        /// <para>id</para>
+        /// <para>Application defined unique identifier.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
 
@@ -18091,7 +18121,7 @@ aBuilder.AddUnion(union =>
         }
 
         /// <summary>
-        /// <para>name</para>
+        /// <para>Name compatible with Object Model (non-unique).</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
 
@@ -18107,7 +18137,7 @@ aBuilder.AddUnion(union =>
         }
 
         /// <summary>
-        /// <para>descr</para>
+        /// <para>Description of the drawing element.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
 
@@ -18123,7 +18153,7 @@ aBuilder.AddUnion(union =>
         }
 
         /// <summary>
-        /// <para>hidden</para>
+        /// <para>Flag determining to show or hide this element.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
 
@@ -18139,7 +18169,7 @@ aBuilder.AddUnion(union =>
         }
 
         /// <summary>
-        /// <para>title</para>
+        /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
 
@@ -18182,7 +18212,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>HyperlinkOnClick.</para>
+        /// <para>Hyperlink associated with clicking or selecting the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkClick.</para>
         /// </summary>
         /// <remark>
@@ -18195,7 +18225,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>HyperlinkOnHover.</para>
+        /// <para>Hyperlink associated with hovering over the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkHover.</para>
         /// </summary>
         /// <remark>
@@ -18208,7 +18238,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>NonVisualDrawingPropertiesExtensionList.</para>
+        /// <para>Future extension.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
         /// <remark>
@@ -32808,569 +32838,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     }
 
     /// <summary>
-    /// <para>Defines the HyperlinkOnClick Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:hlinkClick.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>HyperlinkSound &lt;a:snd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(10, "hlinkClick")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class HyperlinkOnClick : HyperlinkType
-    {
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkOnClick class.
-        /// </summary>
-        public HyperlinkOnClick() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkOnClick class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public HyperlinkOnClick(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkOnClick class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public HyperlinkOnClick(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkOnClick class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public HyperlinkOnClick(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(10, "hlinkClick");
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-            };
-            builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*r:id*/));
-            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkOnClick>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the HyperlinkOnHover Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:hlinkHover.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>HyperlinkSound &lt;a:snd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(10, "hlinkHover")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class HyperlinkOnHover : HyperlinkType
-    {
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkOnHover class.
-        /// </summary>
-        public HyperlinkOnHover() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkOnHover class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public HyperlinkOnHover(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkOnHover class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public HyperlinkOnHover(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkOnHover class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public HyperlinkOnHover(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(10, "hlinkHover");
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-            };
-            builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*r:id*/));
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkOnHover>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the HyperlinkOnMouseOver Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:hlinkMouseOver.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>HyperlinkSound &lt;a:snd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(10, "hlinkMouseOver")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class HyperlinkOnMouseOver : HyperlinkType
-    {
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkOnMouseOver class.
-        /// </summary>
-        public HyperlinkOnMouseOver() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkOnMouseOver class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public HyperlinkOnMouseOver(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkOnMouseOver class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public HyperlinkOnMouseOver(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkOnMouseOver class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public HyperlinkOnMouseOver(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(10, "hlinkMouseOver");
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-            };
-            builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*r:id*/));
-            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkOnMouseOver>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the HyperlinkType Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>HyperlinkSound &lt;a:snd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
-    /// </list>
-    /// </remark>
-    public abstract partial class HyperlinkType : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkType class.
-        /// </summary>
-        protected HyperlinkType() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkType class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        protected HyperlinkType(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkType class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        protected HyperlinkType(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the HyperlinkType class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        protected HyperlinkType(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>Drawing Object Hyperlink Target</para>
-        /// <para>Represents the following attribute in the schema: r:id</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(19, "id")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? Id
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Invalid URL</para>
-        /// <para>Represents the following attribute in the schema: invalidUrl</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "invalidUrl")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? InvalidUrl
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Action Setting</para>
-        /// <para>Represents the following attribute in the schema: action</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "action")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? Action
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Target Frame</para>
-        /// <para>Represents the following attribute in the schema: tgtFrame</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "tgtFrame")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? TargetFrame
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Hyperlink Tooltip</para>
-        /// <para>Represents the following attribute in the schema: tooltip</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "tooltip")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? Tooltip
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Add Hyperlink to Page History</para>
-        /// <para>Represents the following attribute in the schema: history</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "history")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? History
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Highlight Click</para>
-        /// <para>Represents the following attribute in the schema: highlightClick</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "highlightClick")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? HighlightClick
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>End Sounds</para>
-        /// <para>Represents the following attribute in the schema: endSnd</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "endSnd")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? EndSound
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.AddChild<HyperlinkSound>();
-            builder.AddChild<ExtensionList>();
-            builder.AddElement<HyperlinkType>()
-.AddAttribute(19, "id", a => a.Id)
-.AddAttribute(0, "invalidUrl", a => a.InvalidUrl)
-.AddAttribute(0, "action", a => a.Action)
-.AddAttribute(0, "tgtFrame", a => a.TargetFrame)
-.AddAttribute(0, "tooltip", a => a.Tooltip)
-.AddAttribute(0, "history", a => a.History)
-.AddAttribute(0, "highlightClick", a => a.HighlightClick)
-.AddAttribute(0, "endSnd", a => a.EndSound);
-        }
-
-        /// <summary>
-        /// <para>Hyperlink Sound.</para>
-        /// <para>Represents the following element tag in the schema: a:snd.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
-        public HyperlinkSound? HyperlinkSound
-        {
-            get => GetElement<HyperlinkSound>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>ExtensionList.</para>
-        /// <para>Represents the following element tag in the schema: a:extLst.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
-        public ExtensionList? ExtensionList
-        {
-            get => GetElement<ExtensionList>();
-            set => SetElement(value);
-        }
-    }
-
-    /// <summary>
-    /// <para>Defines the NonVisualDrawingPropertiesExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>NonVisualDrawingPropertiesExtension &lt;a:ext></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(10, "extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class NonVisualDrawingPropertiesExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the NonVisualDrawingPropertiesExtensionList class.
-        /// </summary>
-        public NonVisualDrawingPropertiesExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualDrawingPropertiesExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public NonVisualDrawingPropertiesExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualDrawingPropertiesExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public NonVisualDrawingPropertiesExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualDrawingPropertiesExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public NonVisualDrawingPropertiesExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(10, "extLst");
-            builder.AddChild<NonVisualDrawingPropertiesExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualDrawingPropertiesExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the NonVisualDrawingPropertiesExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension &lt;a14:compatExt></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties &lt;a15:backgroundPr></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(10, "ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class NonVisualDrawingPropertiesExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class.
-        /// </summary>
-        public NonVisualDrawingPropertiesExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public NonVisualDrawingPropertiesExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public NonVisualDrawingPropertiesExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public NonVisualDrawingPropertiesExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "uri")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(10, "ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties>();
-            builder.AddElement<NonVisualDrawingPropertiesExtension>()
-.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualDrawingPropertiesExtension>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the PictureLocks Class.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a:picLocks.</para>
@@ -34044,159 +33511,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     }
 
     /// <summary>
-    /// <para>Defines the BlipExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>BlipExtension &lt;a:ext></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(10, "extLst")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class BlipExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the BlipExtensionList class.
-        /// </summary>
-        public BlipExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BlipExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BlipExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public BlipExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(10, "extLst");
-            builder.AddChild<BlipExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the BlipExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties &lt;a14:imgProps></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi &lt;a14:useLocalDpi></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty &lt;wp15:webVideoPr></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(10, "ext")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class BlipExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the BlipExtension class.
-        /// </summary>
-        public BlipExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BlipExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BlipExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BlipExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public BlipExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "uri")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(10, "ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty>();
-            builder.AddElement<BlipExtension>()
-.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-});
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty), 1, 1, version: FileFormatVersions.Office2013),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipExtension>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the ObjectDefaults Class.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a:objectDefaults.</para>
@@ -34506,6 +33820,419 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     }
 
     /// <summary>
+    /// <para>Defines the HyperlinkOnClick Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:hlinkClick.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>HyperlinkSound &lt;a:snd></description></item>
+    ///   <item><description>HyperlinkExtensionList &lt;a:extLst></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "hlinkClick")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class HyperlinkOnClick : HyperlinkType
+    {
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkOnClick class.
+        /// </summary>
+        public HyperlinkOnClick() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkOnClick class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkOnClick(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkOnClick class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkOnClick(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkOnClick class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public HyperlinkOnClick(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "hlinkClick");
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList), 0, 1)
+            };
+            builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*r:id*/));
+            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkOnClick>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the HyperlinkOnMouseOver Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:hlinkMouseOver.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>HyperlinkSound &lt;a:snd></description></item>
+    ///   <item><description>HyperlinkExtensionList &lt;a:extLst></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "hlinkMouseOver")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class HyperlinkOnMouseOver : HyperlinkType
+    {
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkOnMouseOver class.
+        /// </summary>
+        public HyperlinkOnMouseOver() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkOnMouseOver class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkOnMouseOver(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkOnMouseOver class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkOnMouseOver(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkOnMouseOver class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public HyperlinkOnMouseOver(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "hlinkMouseOver");
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList), 0, 1)
+            };
+            builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*r:id*/));
+            builder.AddConstraint(new RelationshipExistConstraint(0 /*r:id*/));
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkOnMouseOver>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the HyperlinkOnHover Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:hlinkHover.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>HyperlinkSound &lt;a:snd></description></item>
+    ///   <item><description>HyperlinkExtensionList &lt;a:extLst></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "hlinkHover")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class HyperlinkOnHover : HyperlinkType
+    {
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkOnHover class.
+        /// </summary>
+        public HyperlinkOnHover() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkOnHover class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkOnHover(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkOnHover class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkOnHover(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkOnHover class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public HyperlinkOnHover(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "hlinkHover");
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkSound), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkExtensionList), 0, 1)
+            };
+            builder.AddConstraint(new AttributeCannotOmitConstraint(0 /*r:id*/));
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkOnHover>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the HyperlinkType Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>HyperlinkSound &lt;a:snd></description></item>
+    ///   <item><description>HyperlinkExtensionList &lt;a:extLst></description></item>
+    /// </list>
+    /// </remark>
+    public abstract partial class HyperlinkType : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkType class.
+        /// </summary>
+        protected HyperlinkType() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected HyperlinkType(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected HyperlinkType(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkType class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        protected HyperlinkType(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>relationship identifier to find target URI</para>
+        /// <para>Represents the following attribute in the schema: r:id</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
+        /// </remark>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>In case the url is invalid so we can't create a relationship, we'll save it here, r:id will point to a NULL one</para>
+        /// <para>Represents the following attribute in the schema: invalidUrl</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "invalidUrl")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? InvalidUrl
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Action to take, it may still need r:id to specify an action target</para>
+        /// <para>Represents the following attribute in the schema: action</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "action")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Action
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>target frame for navigating to the URI</para>
+        /// <para>Represents the following attribute in the schema: tgtFrame</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tgtFrame")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? TargetFrame
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>tooltip for display</para>
+        /// <para>Represents the following attribute in the schema: tooltip</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tooltip")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Tooltip
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>whether to add this URI to the history when navigating to it</para>
+        /// <para>Represents the following attribute in the schema: history</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "history")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? History
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Whether to highlight it when click on a shape</para>
+        /// <para>Represents the following attribute in the schema: highlightClick</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "highlightClick")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? HighlightClick
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Whether to stop previous sound when click on it</para>
+        /// <para>Represents the following attribute in the schema: endSnd</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "endSnd")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? EndSound
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<HyperlinkSound>();
+            builder.AddChild<HyperlinkExtensionList>();
+            builder.AddElement<HyperlinkType>()
+.AddAttribute(19, "id", a => a.Id)
+.AddAttribute(0, "invalidUrl", a => a.InvalidUrl)
+.AddAttribute(0, "action", a => a.Action)
+.AddAttribute(0, "tgtFrame", a => a.TargetFrame)
+.AddAttribute(0, "tooltip", a => a.Tooltip)
+.AddAttribute(0, "history", a => a.History)
+.AddAttribute(0, "highlightClick", a => a.HighlightClick)
+.AddAttribute(0, "endSnd", a => a.EndSound);
+        }
+
+        /// <summary>
+        /// <para>Sound to play..</para>
+        /// <para>Represents the following element tag in the schema: a:snd.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public HyperlinkSound? HyperlinkSound
+        {
+            get => GetElement<HyperlinkSound>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Future extensions..</para>
+        /// <para>Represents the following element tag in the schema: a:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remark>
+        public HyperlinkExtensionList? HyperlinkExtensionList
+        {
+            get => GetElement<HyperlinkExtensionList>();
+            set => SetElement(value);
+        }
+    }
+
+    /// <summary>
     /// <para>Defines the RightToLeft Class.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a:rtl.</para>
@@ -34548,6 +34275,68 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RightToLeft>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the NonVisualDrawingPropertiesExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>NonVisualDrawingPropertiesExtension &lt;a:ext></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class NonVisualDrawingPropertiesExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingPropertiesExtensionList class.
+        /// </summary>
+        public NonVisualDrawingPropertiesExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingPropertiesExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualDrawingPropertiesExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingPropertiesExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualDrawingPropertiesExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingPropertiesExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public NonVisualDrawingPropertiesExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "extLst");
+            builder.AddChild<NonVisualDrawingPropertiesExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualDrawingPropertiesExtensionList>(deep);
     }
 
     /// <summary>
@@ -34783,6 +34572,409 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PtExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the HyperlinkExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor &lt;ahyp:hlinkClr></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "ext")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class HyperlinkExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtension class.
+        /// </summary>
+        public HyperlinkExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public HyperlinkExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor>();
+            builder.AddElement<HyperlinkExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+});
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor), 1, 1, version: FileFormatVersions.Office2019),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Future extensions..</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>HyperlinkExtension &lt;a:ext></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class HyperlinkExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtensionList class.
+        /// </summary>
+        public HyperlinkExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HyperlinkExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HyperlinkExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public HyperlinkExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "extLst");
+            builder.AddChild<HyperlinkExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the NonVisualDrawingPropertiesExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension &lt;a14:compatExt></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties &lt;a15:backgroundPr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2016.Drawing.CreationId &lt;a16:creationId></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference &lt;a16:predDERef></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Decorative &lt;adec:decorative></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "ext")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class NonVisualDrawingPropertiesExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class.
+        /// </summary>
+        public NonVisualDrawingPropertiesExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualDrawingPropertiesExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public NonVisualDrawingPropertiesExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the NonVisualDrawingPropertiesExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public NonVisualDrawingPropertiesExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.CreationId>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Decorative>();
+            builder.AddElement<NonVisualDrawingPropertiesExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+});
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.CompatExtension), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.BackgroundProperties), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.CreationId), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.PredecessorDrawingElementReference), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Decorative), 1, 1, version: FileFormatVersions.Office2019),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualDrawingPropertiesExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Future extensions..</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>BlipExtension &lt;a:ext></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class BlipExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the BlipExtensionList class.
+        /// </summary>
+        public BlipExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BlipExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BlipExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BlipExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BlipExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BlipExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public BlipExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "extLst");
+            builder.AddChild<BlipExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the BlipExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties &lt;a14:imgProps></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi &lt;a14:useLocalDpi></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty &lt;wp15:webVideoPr></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip &lt;asvg:svgBlip></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL &lt;a1611:picAttrSrcUrl></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "ext")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class BlipExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the BlipExtension class.
+        /// </summary>
+        public BlipExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BlipExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BlipExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BlipExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BlipExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BlipExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public BlipExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL>();
+            builder.AddElement<BlipExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+});
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ImageProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.UseLocalDpi), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Drawing.WebVideoProperty), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL), 1, 1, version: FileFormatVersions.Office2016),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipExtension>(deep);
     }
 
     /// <summary>

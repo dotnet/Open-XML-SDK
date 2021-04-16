@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(99, "calcFeatures")]
+    [SchemaAttr(101, "calcFeatures")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CalcFeatures : OpenXmlCompositeElement
     {
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(99, "calcFeatures");
+            builder.SetSchema(101, "calcFeatures");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<CalcFeature>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
     /// <para>When the object is serialized out as xml, it's qualified name is xcalcf:feature.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(99, "feature")]
+    [SchemaAttr(101, "feature")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CalcFeature : OpenXmlLeafElement
     {
@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(99, "feature");
+            builder.SetSchema(101, "feature");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<CalcFeature>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>

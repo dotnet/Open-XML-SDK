@@ -12,22 +12,22 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
+namespace DocumentFormat.OpenXml.Office2019.Presentation
 {
     /// <summary>
-    /// <para>Defines the HyperlinkColor Class.</para>
+    /// <para>Defines the ClassificationOutcome Class.</para>
     /// <para>This class is available in Office 2019 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is ahyp:hlinkClr.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p184:classification.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(113, "hlinkClr")]
+    [SchemaAttr(89, "classification")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class HyperlinkColor : OpenXmlLeafElement
+    public partial class ClassificationOutcome : OpenXmlLeafElement
     {
         /// <summary>
-        /// Initializes a new instance of the HyperlinkColor class.
+        /// Initializes a new instance of the ClassificationOutcome class.
         /// </summary>
-        public HyperlinkColor() : base()
+        public ClassificationOutcome() : base()
         {
         }
 
@@ -41,46 +41,57 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>? Val
+        public EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.ClassificationOutcomeType>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Presentation.ClassificationOutcomeType>>();
             set => SetAttribute(value);
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(113, "hlinkClr");
+            builder.SetSchema(89, "classification");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddElement<HyperlinkColor>()
+            builder.AddElement<ClassificationOutcome>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
-aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
         /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkColor>(deep);
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ClassificationOutcome>(deep);
     }
 
     /// <summary>
-    /// Defines the HyperlinkColorEnum enumeration.
+    /// Defines the ClassificationOutcomeType enumeration.
     /// </summary>
     [OfficeAvailability(FileFormatVersions.Office2019)]
-    public enum HyperlinkColorEnum
+    public enum ClassificationOutcomeType
     {
         ///<summary>
-        ///hlink.
-        ///<para>When the item is serialized out as xml, its value is "hlink".</para>
+        ///none.
+        ///<para>When the item is serialized out as xml, its value is "none".</para>
         ///</summary>
-        [EnumString("hlink")]
-        HLink,
+        [EnumString("none")]
+        None,
         ///<summary>
-        ///tx.
-        ///<para>When the item is serialized out as xml, its value is "tx".</para>
+        ///hdr.
+        ///<para>When the item is serialized out as xml, its value is "hdr".</para>
         ///</summary>
-        [EnumString("tx")]
-        Tx,
+        [EnumString("hdr")]
+        Hdr,
+        ///<summary>
+        ///ftr.
+        ///<para>When the item is serialized out as xml, its value is "ftr".</para>
+        ///</summary>
+        [EnumString("ftr")]
+        Ftr,
+        ///<summary>
+        ///watermark.
+        ///<para>When the item is serialized out as xml, its value is "watermark".</para>
+        ///</summary>
+        [EnumString("watermark")]
+        Watermark,
     }
 }

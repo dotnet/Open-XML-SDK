@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:rvb.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(98, "rvb")]
+    [SchemaAttr(100, "rvb")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValueBlock : OpenXmlLeafElement
     {
@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(98, "rvb");
+            builder.SetSchema(100, "rvb");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichValueBlock>()
 .AddAttribute(0, "i", a => a.I, aBuilder =>
@@ -77,7 +77,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(98, "rvData")]
+    [SchemaAttr(100, "rvData")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValueData : OpenXmlCompositeElement
     {
@@ -131,7 +131,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(98, "rvData");
+            builder.SetSchema(100, "rvData");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichValue>();
             builder.AddChild<ExtensionList>();
@@ -164,7 +164,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(98, "rvStructures")]
+    [SchemaAttr(100, "rvStructures")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValueStructures : OpenXmlCompositeElement
     {
@@ -218,7 +218,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(98, "rvStructures");
+            builder.SetSchema(100, "rvStructures");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichValueStructure>();
             builder.AddChild<ExtensionList>();
@@ -251,7 +251,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(98, "rv")]
+    [SchemaAttr(100, "rv")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValue : OpenXmlCompositeElement
     {
@@ -305,7 +305,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(98, "rv");
+            builder.SetSchema(100, "rv");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<RichValueFallback>();
             builder.AddChild<Value>();
@@ -350,7 +350,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(98, "extLst")]
+    [SchemaAttr(100, "extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
@@ -388,7 +388,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(98, "extLst");
+            builder.SetSchema(100, "extLst");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -413,7 +413,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:fb.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(98, "fb")]
+    [SchemaAttr(100, "fb")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValueFallback : OpenXmlLeafTextElement
     {
@@ -456,7 +456,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(98, "fb");
+            builder.SetSchema(100, "fb");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichValueFallback>()
 .AddAttribute(0, "t", a => a.T);
@@ -472,7 +472,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:v.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(98, "v")]
+    [SchemaAttr(100, "v")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Value : OpenXmlLeafTextElement
     {
@@ -499,7 +499,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(98, "v");
+            builder.SetSchema(100, "v");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -519,7 +519,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(98, "s")]
+    [SchemaAttr(100, "s")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class RichValueStructure : OpenXmlCompositeElement
     {
@@ -573,7 +573,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(98, "s");
+            builder.SetSchema(100, "s");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<Key>();
             builder.AddElement<RichValueStructure>()
@@ -597,7 +597,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:k.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(98, "k")]
+    [SchemaAttr(100, "k")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Key : OpenXmlLeafElement
     {
@@ -643,7 +643,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(98, "k");
+            builder.SetSchema(100, "k");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Key>()
 .AddAttribute(0, "n", a => a.N, aBuilder =>

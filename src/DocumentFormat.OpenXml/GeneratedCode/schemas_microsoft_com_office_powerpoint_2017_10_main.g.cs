@@ -12,22 +12,22 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
+namespace DocumentFormat.OpenXml.Office2019.Presentation
 {
     /// <summary>
-    /// <para>Defines the HyperlinkColor Class.</para>
+    /// <para>Defines the ReadonlyRecommended Class.</para>
     /// <para>This class is available in Office 2019 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is ahyp:hlinkClr.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p1710:readonlyRecommended.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(113, "hlinkClr")]
+    [SchemaAttr(88, "readonlyRecommended")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class HyperlinkColor : OpenXmlLeafElement
+    public partial class ReadonlyRecommended : OpenXmlLeafElement
     {
         /// <summary>
-        /// Initializes a new instance of the HyperlinkColor class.
+        /// Initializes a new instance of the ReadonlyRecommended class.
         /// </summary>
-        public HyperlinkColor() : base()
+        public ReadonlyRecommended() : base()
         {
         }
 
@@ -41,46 +41,25 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
         [SchemaAttr(0, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
-        public EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>? Val
+        public BooleanValue? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColorEnum>>();
+            get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(113, "hlinkClr");
+            builder.SetSchema(88, "readonlyRecommended");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddElement<HyperlinkColor>()
+            builder.AddElement<ReadonlyRecommended>()
 .AddAttribute(0, "val", a => a.Val, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
         }
 
         /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkColor>(deep);
-    }
-
-    /// <summary>
-    /// Defines the HyperlinkColorEnum enumeration.
-    /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2019)]
-    public enum HyperlinkColorEnum
-    {
-        ///<summary>
-        ///hlink.
-        ///<para>When the item is serialized out as xml, its value is "hlink".</para>
-        ///</summary>
-        [EnumString("hlink")]
-        HLink,
-        ///<summary>
-        ///tx.
-        ///<para>When the item is serialized out as xml, its value is "tx".</para>
-        ///</summary>
-        [EnumString("tx")]
-        Tx,
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReadonlyRecommended>(deep);
     }
 }

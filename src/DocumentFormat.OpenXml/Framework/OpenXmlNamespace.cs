@@ -242,6 +242,8 @@ namespace DocumentFormat.OpenXml.Framework
 
             // O19
             { "http://schemas.microsoft.com/office/powerpoint/2017/3/main", "p173", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/powerpoint/2017/10/main", "p1710", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/powerpoint/2018/4/main", "p184", FileFormatVersions.Office2019 },
             { "http://schemas.microsoft.com/office/spreadsheetml/2016/pivotdefaultlayout", "xpdl", FileFormatVersions.Office2019 },
             { "http://schemas.microsoft.com/office/spreadsheetml/2016/01/main", "xlPr", FileFormatVersions.Office2019 },
             { "http://schemas.microsoft.com/office/spreadsheetml/2015/revision2", "xr2", FileFormatVersions.Office2019 },
@@ -257,9 +259,14 @@ namespace DocumentFormat.OpenXml.Framework
             { "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "xltc", FileFormatVersions.Office2019 },
             { "http://schemas.microsoft.com/office/drawing/2017/03/chart", "c16r3", FileFormatVersions.Office2019 },
             { "http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray", "xda", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2016/11/main", "a1611", FileFormatVersions.Office2019 },
             { "http://schemas.microsoft.com/office/drawing/2016/11/diagram", "dgm1611", FileFormatVersions.Office2019 },
             { "http://schemas.microsoft.com/office/drawing/2016/12/diagram", "dgm1612", FileFormatVersions.Office2019 },
             { "http://schemas.microsoft.com/office/drawing/2016/ink", "aink", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2017/model3d", "am3d", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2017/decorative", "adec", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2018/animation", "aanim", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2018/animation/model3d", "a3danim", FileFormatVersions.Office2019 },
             { "http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor", "ahyp", FileFormatVersions.Office2019 },
             { "http://schemas.microsoft.com/office/word/2016/wordml/cid", "w16cid", FileFormatVersions.Office2019 },
             { "http://schemas.microsoft.com/office/drawing/2016/SVG/main", "asvg", FileFormatVersions.Office2019 },

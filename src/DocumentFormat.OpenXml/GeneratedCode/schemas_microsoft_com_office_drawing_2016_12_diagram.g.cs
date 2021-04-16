@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(104, "spPr")]
+    [SchemaAttr(107, "spPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(104, "spPr");
+            builder.SetSchema(107, "spPr");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
@@ -194,7 +194,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(104, "lstStyle")]
+    [SchemaAttr(107, "lstStyle")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextListStyleType : OpenXmlCompositeElement
     {
@@ -232,7 +232,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(104, "lstStyle");
+            builder.SetSchema(107, "lstStyle");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();

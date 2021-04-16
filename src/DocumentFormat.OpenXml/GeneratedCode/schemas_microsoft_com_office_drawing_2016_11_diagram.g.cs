@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(103, "autoBuNodeInfoLst")]
+    [SchemaAttr(106, "autoBuNodeInfoLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberDiagramInfoList : OpenXmlCompositeElement
     {
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(103, "autoBuNodeInfoLst");
+            builder.SetSchema(106, "autoBuNodeInfoLst");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<NumberDiagramInfo>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(103, "buPr")]
+    [SchemaAttr(106, "buPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DiagramAutoBullet : OpenXmlCompositeElement
     {
@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(103, "buPr");
+            builder.SetSchema(106, "buPr");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoBullet>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AutoNumberedBullet>();
@@ -253,7 +253,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(103, "autoBuNodeInfo")]
+    [SchemaAttr(106, "autoBuNodeInfo")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberDiagramInfo : OpenXmlCompositeElement
     {
@@ -323,7 +323,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(103, "autoBuNodeInfo");
+            builder.SetSchema(106, "autoBuNodeInfo");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DiagramAutoBullet>();
             builder.AddElement<NumberDiagramInfo>()
