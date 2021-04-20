@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
     /// <para>When the object is serialized out as xml, it's qualified name is xpdl:pivotTableDefinition16.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(88, "pivotTableDefinition16")]
+    [SchemaAttr(90, "pivotTableDefinition16")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PivotTableDefinition16 : OpenXmlLeafElement
     {
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(88, "pivotTableDefinition16");
+            builder.SetSchema(90, "pivotTableDefinition16");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<PivotTableDefinition16>()
 .AddAttribute(0, "EnabledSubtotalsDefault", a => a.EnabledSubtotalsDefault)

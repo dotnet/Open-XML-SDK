@@ -7,6 +7,8 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Office2019.Drawing.Diagram11;
+using DocumentFormat.OpenXml.Office2019.Drawing.Diagram12;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -530,7 +532,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>StyleData &lt;dgm:styleData></description></item>
     ///   <item><description>ColorData &lt;dgm:clrData></description></item>
     ///   <item><description>LayoutNode &lt;dgm:layoutNode></description></item>
-    ///   <item><description>ExtensionList &lt;dgm:extLst></description></item>
+    ///   <item><description>DiagramDefinitionExtensionList &lt;dgm:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -570,7 +572,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Unique Identifier</para>
+        /// <para>uniqueId</para>
         /// <para>Represents the following attribute in the schema: uniqueId</para>
         /// </summary>
 
@@ -586,7 +588,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Minimum Version</para>
+        /// <para>minVer</para>
         /// <para>Represents the following attribute in the schema: minVer</para>
         /// </summary>
 
@@ -602,7 +604,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Default Style</para>
+        /// <para>defStyle</para>
         /// <para>Represents the following attribute in the schema: defStyle</para>
         /// </summary>
 
@@ -628,7 +630,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<StyleData>();
             builder.AddChild<ColorData>();
             builder.AddChild<LayoutNode>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<DiagramDefinitionExtensionList>();
             builder.AddElement<LayoutDefinition>()
 .AddAttribute(0, "uniqueId", a => a.UniqueId)
 .AddAttribute(0, "minVer", a => a.MinVersion)
@@ -642,7 +644,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.StyleData), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ColorData), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.LayoutNode), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtensionList), 0, 1)
             };
         }
 
@@ -5871,271 +5873,6 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandl
     }
 
     /// <summary>
-    /// <para>Sample Data.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is dgm:sampData.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(14, "sampData")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class SampleData : SampleDataType
-    {
-        /// <summary>
-        /// Initializes a new instance of the SampleData class.
-        /// </summary>
-        public SampleData() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SampleData class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public SampleData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SampleData class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public SampleData(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SampleData class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public SampleData(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(14, "sampData");
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<SampleData>(deep);
-    }
-
-    /// <summary>
-    /// <para>Style Data.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleData.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(14, "styleData")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class StyleData : SampleDataType
-    {
-        /// <summary>
-        /// Initializes a new instance of the StyleData class.
-        /// </summary>
-        public StyleData() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the StyleData class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public StyleData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the StyleData class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public StyleData(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the StyleData class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public StyleData(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(14, "styleData");
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleData>(deep);
-    }
-
-    /// <summary>
-    /// <para>Color Transform Sample Data.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is dgm:clrData.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
-    /// </list>
-    /// </remark>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(14, "clrData")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class ColorData : SampleDataType
-    {
-        /// <summary>
-        /// Initializes a new instance of the ColorData class.
-        /// </summary>
-        public ColorData() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ColorData class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ColorData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ColorData class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ColorData(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ColorData class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public ColorData(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(14, "clrData");
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorData>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the SampleDataType Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
-    /// </list>
-    /// </remark>
-    public abstract partial class SampleDataType : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the SampleDataType class.
-        /// </summary>
-        protected SampleDataType() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SampleDataType class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        protected SampleDataType(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SampleDataType class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        protected SampleDataType(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SampleDataType class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        protected SampleDataType(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>Use Default</para>
-        /// <para>Represents the following attribute in the schema: useDef</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "useDef")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public BooleanValue? UseDefault
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.AddChild<DataModel>();
-            builder.AddElement<SampleDataType>()
-.AddAttribute(0, "useDef", a => a.UseDefault);
-        }
-
-        /// <summary>
-        /// <para>Data Model.</para>
-        /// <para>Represents the following element tag in the schema: dgm:dataModel.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
-        public DataModel? DataModel
-        {
-            get => GetElement<DataModel>();
-            set => SetElement(value);
-        }
-    }
-
-    /// <summary>
     /// <para>Shape Style.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:style.</para>
@@ -8798,6 +8535,421 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PtExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the DiagramDefinitionExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList &lt;dgm1611:autoBuNodeInfoLst></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType &lt;dgm1612:lstStyle></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(14, "ext")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class DiagramDefinitionExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the DiagramDefinitionExtension class.
+        /// </summary>
+        public DiagramDefinitionExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DiagramDefinitionExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DiagramDefinitionExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DiagramDefinitionExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DiagramDefinitionExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DiagramDefinitionExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DiagramDefinitionExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType>();
+            builder.AddElement<DiagramDefinitionExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+});
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType), 1, 1, version: FileFormatVersions.Office2019),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiagramDefinitionExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the SampleData Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:sampData.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(14, "sampData")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class SampleData : SampleDataType
+    {
+        /// <summary>
+        /// Initializes a new instance of the SampleData class.
+        /// </summary>
+        public SampleData() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SampleData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public SampleData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SampleData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public SampleData(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SampleData class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public SampleData(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "sampData");
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<SampleData>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the StyleData Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleData.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(14, "styleData")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class StyleData : SampleDataType
+    {
+        /// <summary>
+        /// Initializes a new instance of the StyleData class.
+        /// </summary>
+        public StyleData() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public StyleData(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the StyleData class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public StyleData(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "styleData");
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleData>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ColorData Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:clrData.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(14, "clrData")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class ColorData : SampleDataType
+    {
+        /// <summary>
+        /// Initializes a new instance of the ColorData class.
+        /// </summary>
+        public ColorData() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorData(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorData class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ColorData(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "clrData");
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DataModel), 0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorData>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the SampleDataType Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DataModel &lt;dgm:dataModel></description></item>
+    /// </list>
+    /// </remark>
+    public abstract partial class SampleDataType : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the SampleDataType class.
+        /// </summary>
+        protected SampleDataType() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SampleDataType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected SampleDataType(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SampleDataType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected SampleDataType(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SampleDataType class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        protected SampleDataType(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Use Default</para>
+        /// <para>Represents the following attribute in the schema: useDef</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "useDef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? UseDefault
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<DataModel>();
+            builder.AddElement<SampleDataType>()
+.AddAttribute(0, "useDef", a => a.UseDefault);
+        }
+
+        /// <summary>
+        /// <para>Data Model.</para>
+        /// <para>Represents the following element tag in the schema: dgm:dataModel.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
+        /// </remark>
+        public DataModel? DataModel
+        {
+            get => GetElement<DataModel>();
+            set => SetElement(value);
+        }
+    }
+
+    /// <summary>
+    /// <para>List of extensions to the CT_DiagramDefintions type..</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is dgm:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DiagramDefinitionExtension &lt;dgm:ext></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(14, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class DiagramDefinitionExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the DiagramDefinitionExtensionList class.
+        /// </summary>
+        public DiagramDefinitionExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DiagramDefinitionExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DiagramDefinitionExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DiagramDefinitionExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DiagramDefinitionExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DiagramDefinitionExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DiagramDefinitionExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(14, "extLst");
+            builder.AddChild<DiagramDefinitionExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiagramDefinitionExtensionList>(deep);
     }
 
     /// <summary>
