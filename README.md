@@ -5,6 +5,9 @@ Open XML SDK
 [![Downloads](https://img.shields.io/nuget/dt/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
 [![Build Status](https://office.visualstudio.com/OC/_apis/build/status/OpenXmlSdk/OfficeDev.Open-XML-SDK?branchName=master)](https://office.visualstudio.com/OC/_build/latest?definitionId=7420&branchName=master)
 
+> # Office 2019 Support Available!
+> There is a [prerelease version](https://www.nuget.org/packages/DocumentFormat.OpenXml/2.13.0-beta0002) available with support for Office 2019 types. Feel free to try this out and let us know how it works for you. Please file any issues you find and label them with `Office2019`.
+
 The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:
 
 - High-performance generation of word-processing documents, spreadsheets, and presentations.
