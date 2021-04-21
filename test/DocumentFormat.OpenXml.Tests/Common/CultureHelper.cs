@@ -12,10 +12,10 @@ namespace DocumentFormat.OpenXml.Tests.Common
     {
         private readonly CultureInfo _old;
 
-        public CultureInfoTester(CultureInfo desired)
+        public CultureInfoTester(string desired)
         {
             _old = Thread.CurrentThread.CurrentCulture;
-            Thread.CurrentThread.CurrentCulture = desired;
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(desired);
         }
 
         public void Dispose()
