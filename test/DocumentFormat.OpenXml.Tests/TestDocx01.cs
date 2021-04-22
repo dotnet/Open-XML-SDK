@@ -754,7 +754,8 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Collection(v.Validate(doc),
+                Assert.Collection(
+                    v.Validate(doc),
                     e =>
                     {
                         Assert.Equal("Sem_UniqueAttributeValue", e.Id);
