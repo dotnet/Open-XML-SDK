@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -46,6 +47,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
 
             var part = element.GetPart();
+
+            if (part is null)
+            {
+                return null;
+            }
+
             var root = GetRoot(element);
 
             if (root is null)
@@ -53,35 +60,31 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            if (part is null)
+            var textValues = context.State.Get(new { part.Uri, elementType, constraint = this }, () =>
             {
-                return null;
-            }
-
-            var attributeText = attribute.Value.InnerText;
-
-            var added = false;
-            var isDuplicate = context.State.Get(new { part.Uri, elementType, _parent, attributeText, _attribute, _comparer }, () =>
-            {
-                added = true;
+                var set = new DuplicateFinder(_comparer);
 
                 foreach (var e in root.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (e != element && e.GetType() == elementType)
+                    if (e.GetType() == elementType)
                     {
                         var eValue = e.ParsedState.Attributes[_attribute];
 
-                        if (eValue.Value is not null && _comparer.Equals(attributeText, eValue.Value.InnerText))
+                        if (eValue.Value is not null)
                         {
-                            return true;
+                            set.Add(eValue.Value.InnerText);
                         }
                     }
                 }
 
-                return false;
+                set.Complete();
+
+                return set;
             });
 
-            if (!isDuplicate || !added)
+            var isDuplicate = textValues.IsDuplicate(attribute.Value.InnerText);
+
+            if (!isDuplicate)
             {
                 return null;
             }
@@ -114,6 +117,61 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
 
             return null;
+        }
+
+        private class DuplicateFinder
+        {
+            private readonly StringComparer _comparer;
+
+            private HashSet<string?>? _set;
+            private HashSet<string?>? _duplicate;
+
+            public DuplicateFinder(StringComparer comparer)
+            {
+                _comparer = comparer;
+            }
+
+            /// <summary>
+            /// Add a text value and track whether it has been seen before or not.
+            /// </summary>
+            public void Add(string? text)
+            {
+                if (_set is null)
+                {
+                    _set = new HashSet<string?>(_comparer);
+                }
+
+                if (!_set.Add(text))
+                {
+                    if (_duplicate is null)
+                    {
+                        _duplicate = new HashSet<string?>(_comparer);
+                    }
+
+                    _duplicate.Add(text);
+                }
+            }
+
+            /// <summary>
+            /// Clear the tracking set to free up space
+            /// </summary>
+            public void Complete()
+            {
+                _set = null;
+            }
+
+            /// <summary>
+            /// Checks if a duplicate was detected. Once a duplicate is checked, subsequent calls will result in <c>false</c> so we only raise the error once.
+            /// </summary>
+            public bool IsDuplicate(string text)
+            {
+                if (_duplicate is null)
+                {
+                    return false;
+                }
+
+                return _duplicate.Remove(text);
+            }
         }
     }
 }

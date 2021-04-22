@@ -753,10 +753,12 @@ namespace DocumentFormat.OpenXml.Tests
                 firstPara.InsertBeforeSelf(newPara);
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
-                var cnt = errs.Count();
 
-                Assert.Single(v.Validate(doc));
+                Assert.Collection(v.Validate(doc),
+                    e =>
+                    {
+                        Assert.Equal("Sem_UniqueAttributeValue", e.Id);
+                    });
             }
         }
 

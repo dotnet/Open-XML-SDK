@@ -95,16 +95,16 @@ namespace DocumentFormat.OpenXml.Tests
             var errors = validator.Validate(p); // should no hang, no OOM
 
             Assert.Collection(
-                errors,
-                error =>
-                {
-                    Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", error.Id);
-                    Assert.Same(p.FirstChild.NextSibling().FirstChild.NextSibling(), error.RelatedNode);
-                },
+                errors.OrderBy(e => e.Id),
                 error =>
                 {
                     Assert.Equal("Sch_IncompleteContentExpectingComplex", error.Id);
                     Assert.Same(p.FirstChild, error.Node);  // acb should have a choice
+                },
+                error =>
+                {
+                    Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", error.Id);
+                    Assert.Same(p.FirstChild.NextSibling().FirstChild.NextSibling(), error.RelatedNode);
                 });
 
             // append an empty "Choice"
