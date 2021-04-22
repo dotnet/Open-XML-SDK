@@ -6,14 +6,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased 
 
-### Deprecated
-- Deprecated Office2013.Word.Person.Contact property. It no longer persists and will be removed in a future version (#912)
+### Fixed
+- Fixed massive performance bottleneck when `UniqueAttributeValueConstraint` is involved (#924)
 
 Release Notes:
 ## Version 2.13.0-beta2 - 2021-04-20
 
 ### Added
 - Additional O19 types to match Open Specifications (#916)
+
+### Deprecated
+- Deprecated Office2013.Word.Person.Contact property. It no longer persists and will be removed in a future version (#912)
 
 ## Version 2.13.0-beta1 - 2021-03-09
 

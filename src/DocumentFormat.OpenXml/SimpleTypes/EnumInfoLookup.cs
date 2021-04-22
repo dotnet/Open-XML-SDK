@@ -122,6 +122,12 @@ namespace DocumentFormat.OpenXml
                 {
                     var field = enumType.GetDeclaredField(enumVal.ToString()!);
                     var enumString = field!.GetCustomAttribute<EnumStringAttribute>();
+
+                    if (field is null)
+                    {
+                        return;
+                    }
+
                     var officeAvailability = field.GetCustomAttribute<OfficeAvailabilityAttribute>();
 
                     if (enumString is null)
