@@ -82,15 +82,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return new PartHolder<ICollection<string>>(Cached.Array<string>(), part);
             }
 
-            var result = context.State.Get(new { part.Uri, _partPath, _element, _attribute }, () =>
+            var result = context.State.GetOrCreate(new { part, constraint = this }, static (key, context) =>
             {
                 var referencedAttributes = new HashSet<string>(StringComparer.Ordinal);
 
-                foreach (var element in part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
+                foreach (var element in key.part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (element.GetType() == _element)
+                    if (element.GetType() == key.constraint._element)
                     {
-                        var attribute = element.ParsedState.Attributes[_attribute];
+                        var attribute = element.ParsedState.Attributes[key.constraint._attribute];
 
                         //Attributes whose value is empty string or null don't need to be cached.
                         if (attribute.Value is not null && !attribute.Value.InnerText.IsNullOrEmpty())

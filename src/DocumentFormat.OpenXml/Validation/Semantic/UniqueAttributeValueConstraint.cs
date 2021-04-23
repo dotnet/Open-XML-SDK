@@ -38,17 +38,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
 
             var attribute = element.ParsedState.Attributes[_attribute];
-            var elementType = element.GetType();
 
             //if the attribute is omitted, semantic validation will do nothing
             if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
-            {
-                return null;
-            }
-
-            var part = element.GetPart();
-
-            if (part is null)
             {
                 return null;
             }
@@ -60,15 +52,16 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var textValues = context.State.Get(new { part.Uri, elementType, constraint = this }, () =>
+            var elementType = element.GetType();
+            var textValues = context.State.GetOrCreate(new { elementType, root, constraint = this }, static (key, context) =>
             {
-                var set = new DuplicateFinder(_comparer);
+                var set = new DuplicateFinder(key.constraint._comparer);
 
-                foreach (var e in root.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
+                foreach (var e in key.root.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (e.GetType() == elementType)
+                    if (e.GetType() == key.elementType)
                     {
-                        var eValue = e.ParsedState.Attributes[_attribute];
+                        var eValue = e.ParsedState.Attributes[key.constraint._attribute];
 
                         if (eValue.Value is not null)
                         {

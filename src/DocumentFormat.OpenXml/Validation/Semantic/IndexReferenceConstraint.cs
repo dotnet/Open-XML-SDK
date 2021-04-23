@@ -82,13 +82,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return new PartHolder<int>(0, null);
             }
 
-            var result = context.State.Get(new { part.Uri, _refElement, _attribute, _refElementParent }, () =>
+            var result = context.State.GetOrCreate(new { part, constraint = this }, static (key, context) =>
             {
                 var count = 0;
 
-                foreach (var element in part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
+                foreach (var element in key.part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (_refElementParent is null || element.Parent?.GetType() == _refElementParent)
+                    if (key.constraint._refElementParent is null || element.Parent?.GetType() == key.constraint._refElementParent)
                     {
                         count++;
                     }
