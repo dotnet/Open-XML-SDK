@@ -33,6 +33,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(VbaProjectPart), false, false)]
     [PartConstraint(typeof(WordprocessingCommentsExPart), false, false)]
     [PartConstraint(typeof(WordprocessingPeoplePart), false, false)]
+    [PartConstraint(typeof(WordprocessingCommentsIdsPart), false, false)]
     [PartConstraint(typeof(AlternativeFormatImportPart), false, true)]
     [PartConstraint(typeof(ChartPart), false, true)]
     [PartConstraint(typeof(ExtendedChartPart), false, true)]
@@ -252,6 +253,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WordprocessingCommentsExPart of the MainDocumentPart
         /// </summary>
         public WordprocessingCommentsExPart? WordprocessingCommentsExPart => GetSubPartOfType<WordprocessingCommentsExPart>();
+
+        /// <summary>
+        /// Gets the WordprocessingCommentsIdsPart of the MainDocumentPart
+        /// </summary>
+        public WordprocessingCommentsIdsPart? WordprocessingCommentsIdsPart => GetSubPartOfType<WordprocessingCommentsIdsPart>();
 
         /// <summary>
         /// Gets the WordprocessingCommentsPart of the MainDocumentPart
@@ -622,6 +628,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new WordprocessingCommentsExPart();
                 case WordprocessingPeoplePart.RelationshipTypeConstant:
                     return new WordprocessingPeoplePart();
+                case WordprocessingCommentsIdsPart.RelationshipTypeConstant:
+                    return new WordprocessingCommentsIdsPart();
                 case AlternativeFormatImportPart.RelationshipTypeConstant:
                     return new AlternativeFormatImportPart();
                 case ChartPart.RelationshipTypeConstant:
