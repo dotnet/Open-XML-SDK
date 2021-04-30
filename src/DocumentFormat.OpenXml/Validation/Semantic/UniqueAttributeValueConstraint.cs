@@ -116,6 +116,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             private readonly StringComparer _comparer;
 
+            private bool _isCompleted;
             private HashSet<string?>? _set;
             private HashSet<string?>? _duplicate;
 
@@ -129,6 +130,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             /// </summary>
             public void Add(string? text)
             {
+                if (_isCompleted)
+                {
+                    throw new InvalidOperationException();
+                }
+
                 if (_set is null)
                 {
                     _set = new HashSet<string?>(_comparer);
@@ -150,13 +156,14 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             /// </summary>
             public void Complete()
             {
+                _isCompleted = true;
                 _set = null;
             }
 
             /// <summary>
             /// Checks if a duplicate was detected. Once a duplicate is checked, subsequent calls will result in <c>false</c> so we only raise the error once.
             /// </summary>
-            public bool IsDuplicate(string text)
+            public bool IsDuplicate(string? text)
             {
                 if (_duplicate is null)
                 {
