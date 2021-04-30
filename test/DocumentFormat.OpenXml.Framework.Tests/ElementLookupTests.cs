@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Tests.Common.OutputHelperExtensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
@@ -30,11 +31,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var elements = GetBuiltIn();
 #if DEBUG
-            var tmp = Path.GetTempFileName();
-
-            _output.WriteLine($"Wrote to temp path {tmp}");
-
-            File.WriteAllText(tmp, JsonConvert.SerializeObject(elements, Newtonsoft.Json.Formatting.Indented, new StringEnumConverter()));
+            _output.WriteObjectToTempFile(elements);
 #endif
             var expected = Deserialize<LookupData[]>("ElementChildren.json");
             var actual = GetBuiltIn().ToArray();

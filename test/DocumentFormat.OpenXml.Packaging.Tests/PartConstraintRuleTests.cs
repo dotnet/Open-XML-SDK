@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Tests.Common.OutputHelperExtensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
@@ -51,17 +52,8 @@ namespace DocumentFormat.OpenXml.Tests
                 .ToList();
 
 #if DEBUG
-            var tmp = Path.GetTempFileName();
-
-            _output.WriteLine($"Wrote to temp path {tmp}");
-
-            File.WriteAllText(tmp, JsonConvert.SerializeObject(expected, Newtonsoft.Json.Formatting.Indented, new StringEnumConverter()));
-
-            tmp = Path.GetTempFileName();
-
-            _output.WriteLine($"Wrote to temp path {tmp}");
-
-            File.WriteAllText(tmp, JsonConvert.SerializeObject(actual, Newtonsoft.Json.Formatting.Indented, new StringEnumConverter()));
+            _output.WriteObjectToTempFile(expected);
+            _output.WriteObjectToTempFile(actual);
 #endif
 
             Assert.Equal(expected, actual, StringComparer.Ordinal);
@@ -98,21 +90,13 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
 #if DEBUG
-            var tmp = Path.GetTempFileName();
-
-            _output.WriteLine($"Wrote to temp path {tmp}");
-
-            File.WriteAllText(tmp, JsonConvert.SerializeObject(part.Data.DataPartReferenceConstraints, Newtonsoft.Json.Formatting.Indented, new StringEnumConverter()));
+            _output.WriteObjectToTempFile(part.Data.DataPartReferenceConstraints);
 #endif
 
             AssertDictionary(data.DataParts, part.Data.DataPartReferenceConstraints);
 
 #if DEBUG
-            tmp = Path.GetTempFileName();
-
-            _output.WriteLine($"Wrote to temp path {tmp}");
-
-            File.WriteAllText(tmp, JsonConvert.SerializeObject(part.Data.PartConstraints, Newtonsoft.Json.Formatting.Indented, new StringEnumConverter()));
+            _output.WriteObjectToTempFile(part.Data.PartConstraints);
 #endif
 
             AssertDictionary(data.Parts, part.Data.PartConstraints);
