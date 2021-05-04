@@ -195,11 +195,11 @@ namespace DocumentFormat.OpenXml
         {
         }
 
-        private protected void SetAttribute<TSimpleType>(TSimpleType? value, [CallerMemberName] string propertyName = null)
+        private protected void SetAttribute<TSimpleType>(TSimpleType? value, [CallerMemberName] string propertyName = null!)
             where TSimpleType : OpenXmlSimpleType
             => ParsedState.Attributes.GetProperty(propertyName).Value = value;
 
-        private protected TSimpleType? GetAttribute<TSimpleType>([CallerMemberName] string propertyName = null)
+        private protected TSimpleType? GetAttribute<TSimpleType>([CallerMemberName] string propertyName = null!)
             where TSimpleType : OpenXmlSimpleType
             => ParsedState.Attributes.GetProperty(propertyName).Value as TSimpleType;
 

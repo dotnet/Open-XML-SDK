@@ -32,6 +32,7 @@ namespace DocumentFormat.OpenXml.Validation
             McContext = new MCContext(false);
 
             Stack = new ValidationStack();
+            State = new StateManager(this);
 
             Stack.Push(Errors.Add);
         }
@@ -63,7 +64,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         public void Clear() => Errors.Clear();
 
-        public StateManager State { get; } = new StateManager();
+        public StateManager State { get; }
 
         /// <summary>
         /// Gets used to track MC context.
