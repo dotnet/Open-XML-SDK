@@ -4,13 +4,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Unreleased 
+## [2.13.0] - 2021-05-13
+
+### Added
+- Additional O19 types to match Open Specifications (#916)
+- Added generated classes for Office 2019 types and constraints (#882)
+- Added nullability attributes (#840, #849)
+- Added overload for `OpenXmlPartReader` and `OpenXmlReader.Create(...)` to ignore whitespace (#857)
+- Added `HexBinaryValue.TryGetBytes(...)` and `HexBinaryValue.Create(byte[])` to manage the encoding and decoding of bytes (#867)
+- Implemented `IEquatable<IdPartPair>` on `IdPartPair` to fix equality implementation there and obsoleted setters (#871)
 
 ### Fixed
+- Fixed serialization of `CellValue` constructors to use invariant cultures (#903)
+- Fixed parsing to allow exponents for numeric cell values (#901)
 - Fixed massive performance bottleneck when `UniqueAttributeValueConstraint` is involved (#924)
 
-Release Notes:
-## Version 2.13.0-beta2 - 2021-04-20
+### Deprecated
+- Deprecated Office2013.Word.Person.Contact property. It no longer persists and will be removed in a future version (#912)
+
+Thanks to the following for their contributions:
+
+@lklein53  
+@igitur
+
+## [2.13.0-beta2] - 2021-04-20
 
 ### Added
 - Additional O19 types to match Open Specifications (#916)
@@ -18,7 +35,7 @@ Release Notes:
 ### Deprecated
 - Deprecated Office2013.Word.Person.Contact property. It no longer persists and will be removed in a future version (#912)
 
-## Version 2.13.0-beta1 - 2021-03-09
+## [2.13.0-beta1] - 2021-03-09
 
 ### Added
 - Added nullability attributes (#840, #849)
@@ -31,24 +48,24 @@ Release Notes:
 - Fixed serialization of `CellValue` constructors to use invariant cultures (#903)
 - Fixed parsing to allow exponents for numeric cell values (#901)
 
-## Version 2.12.3 - 2021-02-24
+## [2.12.3] - 2021-02-24
 
 ### Fixed
 - Fixed issue where `CellValue` may validate incorrectly for boolean values (#890)
 
-## Version 2.12.2 - 2021-02-16
+## [2.12.2] - 2021-02-16
 
 ### Fixed
 - Fixed issue where `OpenSettings.RelationshipErrorHandlerFactory` creates invalid XML if the resulting URI is smaller than the input (#883)
 
-## Version 2.12.1 - 2021-01-11
+## [2.12.1] - 2021-01-11
 
 ### Fixed
 - Fixed bug where properties on `OpenXmlCompositeElement` instances could not be set to null to remove element (#850)
 - Fixed `OpenXmlElement.RawOuterXml` to properly set null values without throwing (#818)
 - Allow rewriting of all malformed URIs regardless of target value (#835)
 
-## Version 2.12.0 - 2020-12-09
+## [2.12.0] - 2020-12-09
 
 ### Added
 - Added `OpenSettings.RelationshipErrorHandlerFactory` to provide a way to handle URIs that break parsing documents with malformed links (#793)
