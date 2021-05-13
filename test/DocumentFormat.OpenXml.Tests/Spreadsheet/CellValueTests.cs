@@ -2,8 +2,11 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Tests.Common;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -72,6 +75,30 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(@$"<x:v xmlns:x=""http://schemas.openxmlformats.org/spreadsheetml/2006/main"">{num}</x:v>", value.OuterXml);
             Assert.True(value.TryGetDouble(out var result));
             Assert.Equal(num, result);
+        }
+
+        [InlineData("fr-FR")]
+        [InlineData("de-DE")]
+        [InlineData("zh-CH")]
+        [InlineData("ru-RU")]
+        [InlineData("en-US")]
+        [InlineData("tr-TR")]
+        [InlineData("ar-EG")]
+        [InlineData("fa-IR")]
+        [Theory]
+        public void CellDoubleCultureTest(string culture)
+        {
+            // Change current culture
+            using (new CultureInfoTester(culture))
+            {
+                // Set to a double value
+                double num = 103.2;
+                var value = new CellValue(num);
+
+                // Ensure that thread culture is not used.
+                Assert.Equal("103.2", value.Text);
+                Assert.Equal("103.2", value.InnerText);
+            }
         }
 
         [InlineData("987.6E+30", 9.876E+32)]
@@ -178,6 +205,30 @@ namespace DocumentFormat.OpenXml.Tests
             var value = new CellValue { Text = input };
 
             Assert.False(value.TryGetDecimal(out _));
+        }
+
+        [InlineData("fr-FR")]
+        [InlineData("de-DE")]
+        [InlineData("zh-CH")]
+        [InlineData("ru-RU")]
+        [InlineData("en-US")]
+        [InlineData("tr-TR")]
+        [InlineData("ar-EG")]
+        [InlineData("fa-IR")]
+        [Theory]
+        public void CellDecimalCultureTest(string culture)
+        {
+            // Change current culture
+            using (new CultureInfoTester(culture))
+            {
+                // Set to a decimal value
+                decimal num = 6049.9M;
+                var value = new CellValue(num);
+
+                // Ensure that thread culture is not used.
+                Assert.Equal("6049.9", value.Text);
+                Assert.Equal("6049.9", value.InnerText);
+            }
         }
 
         [InlineData("0", false)]
