@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed massive performance bottleneck when `UniqueAttributeValueConstraint` is involved (#924)
 
 ### Deprecated
-- Deprecated Office2013.Word.Person.Contact property. It no longer persists and will be removed in] a future [(#912)
+- Deprecated Office2013.Word.Person.Contact property. It no longer persists and will be removed in a future version (#912)
 
 Thanks to the following for their contributions:
 
