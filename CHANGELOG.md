@@ -4,19 +4,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Unreleased 
+## [2.13.0] - 2021-05-13
+
+### Added
+- Additional O19 types to match Open Specifications (#916)
+- Added generated classes for Office 2019 types and constraints (#882)
+- Added nullability attributes (#840, #849)
+- Added overload for `OpenXmlPartReader` and `OpenXmlReader.Create(...)` to ignore whitespace (#857)
+- Added `HexBinaryValue.TryGetBytes(...)` and `HexBinaryValue.Create(byte[])` to manage the encoding and decoding of bytes (#867)
+- Implemented `IEquatable<IdPartPair>` on `IdPartPair` to fix equality implementation there and obsoleted setters (#871)
 
 ### Fixed
+- Fixed serialization of `CellValue` constructors to use invariant cultures (#903)
+- Fixed parsing to allow exponents for numeric cell values (#901)
 - Fixed massive performance bottleneck when `UniqueAttributeValueConstraint` is involved (#924)
 
-Release Notes:
+### Deprecated
+- Deprecated Office2013.Word.Person.Contact property. It no longer persists and will be removed in] a future [(#912)
+
+Thanks to the following for their contributions:
+
+@lklein53  
+@igitur
+
 ## [2.13.0-beta2] - 2021-04-20
 
 ### Added
 - Additional O19 types to match Open Specifications (#916)
 
 ### Deprecated
-- Deprecated Office2013.Word.Person.Contact property. It no longer persists and will be removed in] a future [(#912)
+- Deprecated Office2013.Word.Person.Contact property. It no longer persists and will be removed in a future version (#912)
 
 ## [2.13.0-beta1] - 2021-03-09
 
@@ -170,14 +187,14 @@ Release Notes:
 - Fixed issue on Mono platforms using System.IO.Packaging NuGet package (Xamarin, etc) when creating a document.
 - Fixed manual saving of a package when autosave is false.
 - Fixed schema constraint data and standardized serialization across platforms.
-- Upgraded to `System.IO.Packaging` [4.4.0 which fixes some consistency with .NET] Framework in opening packages.
+- Upgraded to `System.IO.Packaging` version 4.4.0 which fixes some consistency with .NET Framework in opening packages.
 
 ## [2.7.2] - 2017-06-06
 ### Added
 - Package now supports .NET 3.5 and .NET 4.0 in addition to .NET Standard 1.3 and .NET Framework 4.6
 
 ### Changed
-- Fixed issue where assembly [wasn]'t set in assembly. 
+- Fixed issue where assembly version wasn't set in assembly. 
 
 ## [2.7.1] - 2017-01-31
 ### Changed
