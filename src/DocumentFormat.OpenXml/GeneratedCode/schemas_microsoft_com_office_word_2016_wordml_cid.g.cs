@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
 #pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr(114, "commentsIds")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class CommentsIds : OpenXmlCompositeElement
+    public partial class CommentsIds : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentsIds class.
@@ -76,6 +76,37 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentsIds>(deep);
+
+        internal CommentsIds(WordprocessingCommentsIdsPart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the WordprocessingCommentsIdsPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(WordprocessingCommentsIdsPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the WordprocessingCommentsIdsPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(WordprocessingCommentsIdsPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the WordprocessingCommentsIdsPart associated with this element.
+        /// </summary>
+        public WordprocessingCommentsIdsPart? WordprocessingCommentsIdsPart
+        {
+            get => OpenXmlPart as WordprocessingCommentsIdsPart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
     /// <summary>

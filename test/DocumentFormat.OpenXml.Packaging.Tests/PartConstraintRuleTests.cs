@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Tests.Common.OutputHelperExtensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
@@ -50,6 +51,11 @@ namespace DocumentFormat.OpenXml.Tests
                 .OrderBy(v => v, StringComparer.Ordinal)
                 .ToList();
 
+#if DEBUG
+            _output.WriteObjectToTempFile(expected);
+            _output.WriteObjectToTempFile(actual);
+#endif
+
             Assert.Equal(expected, actual, StringComparer.Ordinal);
         }
 
@@ -83,7 +89,16 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(data.ContentType, part.ContentType);
             }
 
+#if DEBUG
+            _output.WriteObjectToTempFile(part.Data.DataPartReferenceConstraints);
+#endif
+
             AssertDictionary(data.DataParts, part.Data.DataPartReferenceConstraints);
+
+#if DEBUG
+            _output.WriteObjectToTempFile(part.Data.PartConstraints);
+#endif
+
             AssertDictionary(data.Parts, part.Data.PartConstraints);
         }
 

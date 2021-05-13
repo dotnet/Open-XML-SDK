@@ -10,27 +10,11 @@ using System.Collections.Generic;
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
-    /// Defines the GlossaryDocumentPart
+    /// Defines the WordprocessingCommentsIdsPart
     /// </summary>
+    [OfficeAvailability(FileFormatVersions.Office2019)]
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
-    [PartConstraint(typeof(WordprocessingCommentsPart), false, false)]
-    [PartConstraint(typeof(DocumentSettingsPart), false, false)]
-    [PartConstraint(typeof(EndnotesPart), false, false)]
-    [PartConstraint(typeof(FontTablePart), false, false)]
-    [PartConstraint(typeof(FootnotesPart), false, false)]
-    [PartConstraint(typeof(NumberingDefinitionsPart), false, false)]
-    [PartConstraint(typeof(StyleDefinitionsPart), false, false)]
-    [PartConstraint(typeof(StylesWithEffectsPart), false, false)]
-    [PartConstraint(typeof(WebSettingsPart), false, false)]
-    [PartConstraint(typeof(FooterPart), false, true)]
-    [PartConstraint(typeof(HeaderPart), false, true)]
-    [PartConstraint(typeof(WordprocessingPrinterSettingsPart), false, true)]
-    [PartConstraint(typeof(CustomizationPart), false, false)]
-    [PartConstraint(typeof(VbaProjectPart), false, false)]
-    [PartConstraint(typeof(WordprocessingCommentsExPart), false, false)]
-    [PartConstraint(typeof(WordprocessingPeoplePart), false, false)]
-    [PartConstraint(typeof(WordprocessingCommentsIdsPart), false, false)]
     [PartConstraint(typeof(AlternativeFormatImportPart), false, true)]
     [PartConstraint(typeof(ChartPart), false, true)]
     [PartConstraint(typeof(ExtendedChartPart), false, true)]
@@ -44,117 +28,39 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
     [PartConstraint(typeof(ImagePart), false, true)]
     [DataPartConstraint(typeof(VideoReferenceRelationship), false, true)]
-    public partial class GlossaryDocumentPart : OpenXmlPart, IFixedContentTypePart
+    public partial class WordprocessingCommentsIdsPart : OpenXmlPart, IFixedContentTypePart
     {
-        internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.document.glossary+xml";
-        internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument";
-        private DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument? _rootElement;
+        internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds+xml";
+        internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds";
+        private DocumentFormat.OpenXml.Office2019.Word.Cid.CommentsIds? _rootElement;
 
         /// <summary>
-        /// Creates an instance of the GlossaryDocumentPart OpenXmlType
+        /// Creates an instance of the WordprocessingCommentsIdsPart OpenXmlType
         /// </summary>
-        internal protected GlossaryDocumentPart()
+        internal protected WordprocessingCommentsIdsPart()
         {
         }
 
         /// <summary>
-        /// Gets the AlternativeFormatImportParts of the GlossaryDocumentPart
+        /// Gets the AlternativeFormatImportParts of the WordprocessingCommentsIdsPart
         /// </summary>
         public IEnumerable<AlternativeFormatImportPart> AlternativeFormatImportParts => GetPartsOfType<AlternativeFormatImportPart>();
 
         /// <summary>
-        /// Gets the ChartParts of the GlossaryDocumentPart
+        /// Gets the ChartParts of the WordprocessingCommentsIdsPart
         /// </summary>
         public IEnumerable<ChartPart> ChartParts => GetPartsOfType<ChartPart>();
-
-        /// <inheritdoc/>
-        public sealed override string ContentType => ContentTypeConstant;
-
-        /// <summary>
-        /// Gets the CustomizationPart of the GlossaryDocumentPart
-        /// </summary>
-        public CustomizationPart? CustomizationPart => GetSubPartOfType<CustomizationPart>();
-
-        /// <summary>
-        /// Gets the DiagramColorsParts of the GlossaryDocumentPart
-        /// </summary>
-        public IEnumerable<DiagramColorsPart> DiagramColorsParts => GetPartsOfType<DiagramColorsPart>();
-
-        /// <summary>
-        /// Gets the DiagramDataParts of the GlossaryDocumentPart
-        /// </summary>
-        public IEnumerable<DiagramDataPart> DiagramDataParts => GetPartsOfType<DiagramDataPart>();
-
-        /// <summary>
-        /// Gets the DiagramLayoutDefinitionParts of the GlossaryDocumentPart
-        /// </summary>
-        public IEnumerable<DiagramLayoutDefinitionPart> DiagramLayoutDefinitionParts => GetPartsOfType<DiagramLayoutDefinitionPart>();
-
-        /// <summary>
-        /// Gets the DiagramPersistLayoutParts of the GlossaryDocumentPart
-        /// </summary>
-        public IEnumerable<DiagramPersistLayoutPart> DiagramPersistLayoutParts => GetPartsOfType<DiagramPersistLayoutPart>();
-
-        /// <summary>
-        /// Gets the DiagramStyleParts of the GlossaryDocumentPart
-        /// </summary>
-        public IEnumerable<DiagramStylePart> DiagramStyleParts => GetPartsOfType<DiagramStylePart>();
-
-        /// <summary>
-        /// Gets the DocumentSettingsPart of the GlossaryDocumentPart
-        /// </summary>
-        public DocumentSettingsPart? DocumentSettingsPart => GetSubPartOfType<DocumentSettingsPart>();
-
-        /// <summary>
-        /// Gets the EmbeddedControlPersistenceParts of the GlossaryDocumentPart
-        /// </summary>
-        public IEnumerable<EmbeddedControlPersistencePart> EmbeddedControlPersistenceParts => GetPartsOfType<EmbeddedControlPersistencePart>();
-
-        /// <summary>
-        /// Gets the EmbeddedObjectParts of the GlossaryDocumentPart
-        /// </summary>
-        public IEnumerable<EmbeddedObjectPart> EmbeddedObjectParts => GetPartsOfType<EmbeddedObjectPart>();
-
-        /// <summary>
-        /// Gets the EmbeddedPackageParts of the GlossaryDocumentPart
-        /// </summary>
-        public IEnumerable<EmbeddedPackagePart> EmbeddedPackageParts => GetPartsOfType<EmbeddedPackagePart>();
-
-        /// <summary>
-        /// Gets the EndnotesPart of the GlossaryDocumentPart
-        /// </summary>
-        public EndnotesPart? EndnotesPart => GetSubPartOfType<EndnotesPart>();
-
-        /// <summary>
-        /// Gets the ExtendedChartParts of the GlossaryDocumentPart
-        /// </summary>
-        public IEnumerable<ExtendedChartPart> ExtendedChartParts => GetPartsOfType<ExtendedChartPart>();
-
-        /// <summary>
-        /// Gets the FontTablePart of the GlossaryDocumentPart
-        /// </summary>
-        public FontTablePart? FontTablePart => GetSubPartOfType<FontTablePart>();
-
-        /// <summary>
-        /// Gets the FooterParts of the GlossaryDocumentPart
-        /// </summary>
-        public IEnumerable<FooterPart> FooterParts => GetPartsOfType<FooterPart>();
-
-        /// <summary>
-        /// Gets the FootnotesPart of the GlossaryDocumentPart
-        /// </summary>
-        public FootnotesPart? FootnotesPart => GetSubPartOfType<FootnotesPart>();
 
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument GlossaryDocument
+        public DocumentFormat.OpenXml.Office2019.Word.Cid.CommentsIds CommentsIds
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office2019.Word.Cid.CommentsIds>();
                 }
 
                 return _rootElement!;
@@ -171,13 +77,56 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <summary>
-        /// Gets the HeaderParts of the GlossaryDocumentPart
-        /// </summary>
-        public IEnumerable<HeaderPart> HeaderParts => GetPartsOfType<HeaderPart>();
+        /// <inheritdoc/>
+        public sealed override string ContentType => ContentTypeConstant;
 
         /// <summary>
-        /// Gets the ImageParts of the GlossaryDocumentPart
+        /// Gets the DiagramColorsParts of the WordprocessingCommentsIdsPart
+        /// </summary>
+        public IEnumerable<DiagramColorsPart> DiagramColorsParts => GetPartsOfType<DiagramColorsPart>();
+
+        /// <summary>
+        /// Gets the DiagramDataParts of the WordprocessingCommentsIdsPart
+        /// </summary>
+        public IEnumerable<DiagramDataPart> DiagramDataParts => GetPartsOfType<DiagramDataPart>();
+
+        /// <summary>
+        /// Gets the DiagramLayoutDefinitionParts of the WordprocessingCommentsIdsPart
+        /// </summary>
+        public IEnumerable<DiagramLayoutDefinitionPart> DiagramLayoutDefinitionParts => GetPartsOfType<DiagramLayoutDefinitionPart>();
+
+        /// <summary>
+        /// Gets the DiagramPersistLayoutParts of the WordprocessingCommentsIdsPart
+        /// </summary>
+        public IEnumerable<DiagramPersistLayoutPart> DiagramPersistLayoutParts => GetPartsOfType<DiagramPersistLayoutPart>();
+
+        /// <summary>
+        /// Gets the DiagramStyleParts of the WordprocessingCommentsIdsPart
+        /// </summary>
+        public IEnumerable<DiagramStylePart> DiagramStyleParts => GetPartsOfType<DiagramStylePart>();
+
+        /// <summary>
+        /// Gets the EmbeddedControlPersistenceParts of the WordprocessingCommentsIdsPart
+        /// </summary>
+        public IEnumerable<EmbeddedControlPersistencePart> EmbeddedControlPersistenceParts => GetPartsOfType<EmbeddedControlPersistencePart>();
+
+        /// <summary>
+        /// Gets the EmbeddedObjectParts of the WordprocessingCommentsIdsPart
+        /// </summary>
+        public IEnumerable<EmbeddedObjectPart> EmbeddedObjectParts => GetPartsOfType<EmbeddedObjectPart>();
+
+        /// <summary>
+        /// Gets the EmbeddedPackageParts of the WordprocessingCommentsIdsPart
+        /// </summary>
+        public IEnumerable<EmbeddedPackagePart> EmbeddedPackageParts => GetPartsOfType<EmbeddedPackagePart>();
+
+        /// <summary>
+        /// Gets the ExtendedChartParts of the WordprocessingCommentsIdsPart
+        /// </summary>
+        public IEnumerable<ExtendedChartPart> ExtendedChartParts => GetPartsOfType<ExtendedChartPart>();
+
+        /// <summary>
+        /// Gets the ImageParts of the WordprocessingCommentsIdsPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
@@ -190,73 +139,23 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument;
+                _rootElement = value as DocumentFormat.OpenXml.Office2019.Word.Cid.CommentsIds;
             }
         }
 
-        /// <summary>
-        /// Gets the NumberingDefinitionsPart of the GlossaryDocumentPart
-        /// </summary>
-        public NumberingDefinitionsPart? NumberingDefinitionsPart => GetSubPartOfType<NumberingDefinitionsPart>();
-
-        internal override OpenXmlPartRootElement? PartRootElement => GlossaryDocument;
+        internal override OpenXmlPartRootElement? PartRootElement => CommentsIds;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
 
-        /// <summary>
-        /// Gets the StyleDefinitionsPart of the GlossaryDocumentPart
-        /// </summary>
-        public StyleDefinitionsPart? StyleDefinitionsPart => GetSubPartOfType<StyleDefinitionsPart>();
-
-        /// <summary>
-        /// Gets the StylesWithEffectsPart of the GlossaryDocumentPart
-        /// </summary>
-        public StylesWithEffectsPart? StylesWithEffectsPart => GetSubPartOfType<StylesWithEffectsPart>();
+        /// <inheritdoc/>
+        internal sealed override string TargetName => "commentsIds";
 
         /// <inheritdoc/>
-        internal sealed override string TargetName => "document";
-
-        /// <inheritdoc/>
-        internal sealed override string TargetPath => "glossary";
+        internal sealed override string TargetPath => ".";
 
         /// <summary>
-        /// Gets the VbaProjectPart of the GlossaryDocumentPart
-        /// </summary>
-        public VbaProjectPart? VbaProjectPart => GetSubPartOfType<VbaProjectPart>();
-
-        /// <summary>
-        /// Gets the WebSettingsPart of the GlossaryDocumentPart
-        /// </summary>
-        public WebSettingsPart? WebSettingsPart => GetSubPartOfType<WebSettingsPart>();
-
-        /// <summary>
-        /// Gets the WordprocessingCommentsExPart of the GlossaryDocumentPart
-        /// </summary>
-        public WordprocessingCommentsExPart? WordprocessingCommentsExPart => GetSubPartOfType<WordprocessingCommentsExPart>();
-
-        /// <summary>
-        /// Gets the WordprocessingCommentsIdsPart of the GlossaryDocumentPart
-        /// </summary>
-        public WordprocessingCommentsIdsPart? WordprocessingCommentsIdsPart => GetSubPartOfType<WordprocessingCommentsIdsPart>();
-
-        /// <summary>
-        /// Gets the WordprocessingCommentsPart of the GlossaryDocumentPart
-        /// </summary>
-        public WordprocessingCommentsPart? WordprocessingCommentsPart => GetSubPartOfType<WordprocessingCommentsPart>();
-
-        /// <summary>
-        /// Gets the WordprocessingPeoplePart of the GlossaryDocumentPart
-        /// </summary>
-        public WordprocessingPeoplePart? WordprocessingPeoplePart => GetSubPartOfType<WordprocessingPeoplePart>();
-
-        /// <summary>
-        /// Gets the WordprocessingPrinterSettingsParts of the GlossaryDocumentPart
-        /// </summary>
-        public IEnumerable<WordprocessingPrinterSettingsPart> WordprocessingPrinterSettingsParts => GetPartsOfType<WordprocessingPrinterSettingsPart>();
-
-        /// <summary>
-        /// Adds a AlternativeFormatImportPart to the GlossaryDocumentPart
+        /// Adds a AlternativeFormatImportPart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="contentType">The content type of the AlternativeFormatImportPart</param>
         /// <return>The newly added part</return>
@@ -268,7 +167,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a AlternativeFormatImportPart to the GlossaryDocumentPart
+        /// Adds a AlternativeFormatImportPart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="contentType">The content type of the AlternativeFormatImportPart</param>
         /// <param name="id">The relationship id</param>
@@ -281,7 +180,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a AlternativeFormatImportPart to the GlossaryDocumentPart
+        /// Adds a AlternativeFormatImportPart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="partType">The part type of the AlternativeFormatImportPart</param>
         /// <param name="id">The relationship id</param>
@@ -295,7 +194,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a AlternativeFormatImportPart to the GlossaryDocumentPart
+        /// Adds a AlternativeFormatImportPart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="partType">The part type of the AlternativeFormatImportPart</param>
         /// <return>The newly added part</return>
@@ -308,7 +207,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a EmbeddedControlPersistencePart to the GlossaryDocumentPart
+        /// Adds a EmbeddedControlPersistencePart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="contentType">The content type of the EmbeddedControlPersistencePart</param>
         /// <return>The newly added part</return>
@@ -320,7 +219,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a EmbeddedControlPersistencePart to the GlossaryDocumentPart
+        /// Adds a EmbeddedControlPersistencePart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="contentType">The content type of the EmbeddedControlPersistencePart</param>
         /// <param name="id">The relationship id</param>
@@ -333,7 +232,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a EmbeddedControlPersistencePart to the GlossaryDocumentPart
+        /// Adds a EmbeddedControlPersistencePart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="partType">The part type of the EmbeddedControlPersistencePart</param>
         /// <param name="id">The relationship id</param>
@@ -347,7 +246,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a EmbeddedControlPersistencePart to the GlossaryDocumentPart
+        /// Adds a EmbeddedControlPersistencePart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="partType">The part type of the EmbeddedControlPersistencePart</param>
         /// <return>The newly added part</return>
@@ -360,7 +259,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a EmbeddedObjectPart to the GlossaryDocumentPart
+        /// Adds a EmbeddedObjectPart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="contentType">The content type of the EmbeddedObjectPart</param>
         /// <return>The newly added part</return>
@@ -372,7 +271,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a EmbeddedPackagePart to the GlossaryDocumentPart
+        /// Adds a EmbeddedPackagePart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="contentType">The content type of the EmbeddedPackagePart</param>
         /// <return>The newly added part</return>
@@ -384,7 +283,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a ImagePart to the GlossaryDocumentPart
+        /// Adds a ImagePart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="contentType">The content type of the ImagePart</param>
         /// <return>The newly added part</return>
@@ -396,7 +295,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a ImagePart to the GlossaryDocumentPart
+        /// Adds a ImagePart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="contentType">The content type of the ImagePart</param>
         /// <param name="id">The relationship id</param>
@@ -409,7 +308,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a ImagePart to the GlossaryDocumentPart
+        /// Adds a ImagePart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="partType">The part type of the ImagePart</param>
         /// <param name="id">The relationship id</param>
@@ -423,7 +322,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a ImagePart to the GlossaryDocumentPart
+        /// Adds a ImagePart to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="partType">The part type of the ImagePart</param>
         /// <return>The newly added part</return>
@@ -436,7 +335,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a VideoReferenceRelationship to the GlossaryDocumentPart
+        /// Adds a VideoReferenceRelationship to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="mediaDataPart">The part type of the VideoReferenceRelationship</param>
         /// <return>The newly added part</return>
@@ -445,7 +344,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a VideoReferenceRelationship to the GlossaryDocumentPart
+        /// Adds a VideoReferenceRelationship to the WordprocessingCommentsIdsPart
         /// </summary>
         /// <param name="mediaDataPart">The part type of the VideoReferenceRelationship</param>
         /// <param name="id">The relationship id</param>
@@ -465,40 +364,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
             switch (relationshipType)
             {
-                case WordprocessingCommentsPart.RelationshipTypeConstant:
-                    return new WordprocessingCommentsPart();
-                case DocumentSettingsPart.RelationshipTypeConstant:
-                    return new DocumentSettingsPart();
-                case EndnotesPart.RelationshipTypeConstant:
-                    return new EndnotesPart();
-                case FontTablePart.RelationshipTypeConstant:
-                    return new FontTablePart();
-                case FootnotesPart.RelationshipTypeConstant:
-                    return new FootnotesPart();
-                case NumberingDefinitionsPart.RelationshipTypeConstant:
-                    return new NumberingDefinitionsPart();
-                case StyleDefinitionsPart.RelationshipTypeConstant:
-                    return new StyleDefinitionsPart();
-                case StylesWithEffectsPart.RelationshipTypeConstant:
-                    return new StylesWithEffectsPart();
-                case WebSettingsPart.RelationshipTypeConstant:
-                    return new WebSettingsPart();
-                case FooterPart.RelationshipTypeConstant:
-                    return new FooterPart();
-                case HeaderPart.RelationshipTypeConstant:
-                    return new HeaderPart();
-                case WordprocessingPrinterSettingsPart.RelationshipTypeConstant:
-                    return new WordprocessingPrinterSettingsPart();
-                case CustomizationPart.RelationshipTypeConstant:
-                    return new CustomizationPart();
-                case VbaProjectPart.RelationshipTypeConstant:
-                    return new VbaProjectPart();
-                case WordprocessingCommentsExPart.RelationshipTypeConstant:
-                    return new WordprocessingCommentsExPart();
-                case WordprocessingPeoplePart.RelationshipTypeConstant:
-                    return new WordprocessingPeoplePart();
-                case WordprocessingCommentsIdsPart.RelationshipTypeConstant:
-                    return new WordprocessingCommentsIdsPart();
                 case AlternativeFormatImportPart.RelationshipTypeConstant:
                     return new AlternativeFormatImportPart();
                 case ChartPart.RelationshipTypeConstant:
@@ -526,6 +391,11 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
+        }
+
+        internal override bool IsInVersion(FileFormatVersions version)
+        {
+            return version.AtLeast(FileFormatVersions.Office2019);
         }
     }
 }

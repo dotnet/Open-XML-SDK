@@ -1208,6 +1208,14 @@
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2013"
       },
+      "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds": {
+        "RelationshipType": "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds",
+        "PartClassName": "WordprocessingCommentsIdsPart",
+        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": false,
+        "FileFormat": "Office2019"
+      },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk": {
         "PartClassName": "AlternativeFormatImportPart",
         "PartContentType": null,
@@ -1874,6 +1882,14 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2013"
+      },
+      "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds": {
+        "RelationshipType": "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds",
+        "PartClassName": "WordprocessingCommentsIdsPart",
+        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": false,
+        "FileFormat": "Office2019"
       },
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk": {
         "PartClassName": "AlternativeFormatImportPart",
@@ -3367,6 +3383,110 @@
     "RelationshipType": "http://schemas.microsoft.com/office/2011/relationships/commentsExtended",
     "TargetFileExtension": ".xml",
     "TargetName": "commentsExtended",
+    "TargetPath": ".",
+    "DataParts": {
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video": {
+        "PartClassName": "VideoReferenceRelationship",
+        "PartContentType": null,
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      }
+    },
+    "Parts": {
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk": {
+        "PartClassName": "AlternativeFormatImportPart",
+        "PartContentType": null,
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart": {
+        "PartClassName": "ChartPart",
+        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2014/relationships/chartEx": {
+        "PartClassName": "ExtendedChartPart",
+        "PartContentType": "application/vnd.ms-office.chartex+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors": {
+        "PartClassName": "DiagramColorsPart",
+        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData": {
+        "PartClassName": "DiagramDataPart",
+        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing": {
+        "PartClassName": "DiagramPersistLayoutPart",
+        "PartContentType": "application/vnd.ms-office.drawingml.diagramDrawing+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout": {
+        "PartClassName": "DiagramLayoutDefinitionPart",
+        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle": {
+        "PartClassName": "DiagramStylePart",
+        "PartContentType": "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control": {
+        "PartClassName": "EmbeddedControlPersistencePart",
+        "PartContentType": null,
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject": {
+        "PartClassName": "EmbeddedObjectPart",
+        "PartContentType": null,
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package": {
+        "PartClassName": "EmbeddedPackagePart",
+        "PartContentType": null,
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      },
+      "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image": {
+        "PartClassName": "ImagePart",
+        "PartContentType": null,
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2007"
+      }
+    }
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.WordprocessingCommentsIdsPart",
+    "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsIds+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2016/09/relationships/commentsIds",
+    "TargetFileExtension": ".xml",
+    "TargetName": "commentsIds",
     "TargetPath": ".",
     "DataParts": {
       "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video": {
