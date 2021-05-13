@@ -119,7 +119,7 @@ Thanks to the following for their contributions:
 ### Fixed
 - Custom derived parts did not inherit known parts from its parent, causing failure when adding parts (#722)
 
-### Changes
+### Changed
 - Marked the property setters in `OpenXmlAttribute` as obsolete as structs should not have mutable state (#698)
 
 ## [2.10.1] - 2020-02-28
@@ -138,7 +138,7 @@ Thanks to the following for their contributions:
 - Implemented `IComparable<T>` and `IEquatable<T>` on `OpenXmlComparableSimpleValue` to allow comparisons without boxing (#550)
 - Added `OpenXmlPackage.RootPart` to easily access the root part on any package (#661)
 
-### Changes
+### Changed
 - Updated to v4.7.0 of System.IO.Packaging which brings in a number of perf fixes (#660)
 - Consolidated data for element children/properties to reduce duplication (#540, #547, #548)
 - Replaced opaque binary data for element children constraints with declarative model (#603)
