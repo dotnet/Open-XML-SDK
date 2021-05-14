@@ -1723,8 +1723,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     if (dataPartsDictionary[dataPartReferenceRelationship.DataPart] is MediaDataPart newDataPart)
                     {
-                        var newDataPartReference = DataPartReferenceRelationship.Create(this, newDataPart, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
-                        ReferenceRelationshipList.AddLast(newDataPartReference);
+                        var newDataPartReference = DataPartReferenceRelationship.Create(child, newDataPart, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
+                        child.AddDataPartReferenceRelationship(newDataPartReference);
                     }
                 }
 
