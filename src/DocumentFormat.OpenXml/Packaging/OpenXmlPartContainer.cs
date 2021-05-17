@@ -1698,6 +1698,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
 
+                var updatedParts = new Dictionary<DataPart, DataPart>();
                 foreach (var item in dataPartsDictionary)
                 {
                     if (item.Value is null)
@@ -1714,8 +1715,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
                         InternalOpenXmlPackage.AddDataPartToList(newDataPart);
 
-                        dataPartsDictionary[dataPart] = newDataPart;
+                        updatedParts.Add(dataPart, newDataPart);
                     }
+                }
+
+                foreach (var item in updatedParts) {
+                    dataPartsDictionary[item.Key] = item.Value;
                 }
 
                 // then create data part reference relationship
