@@ -14,7 +14,15 @@ Open XML SDK
 >- SVG
 >- 3D models and animated 3D models  
 >
-> Please file any issues you find and label them with `Office2019`.
+> Please file any issues you find and label them with `Office2019`.  
+
+&nbsp;
+> # Microsoft DevDays Redmond 2021 Online
+> Join us at the Virtual Microsoft DevDays for a session on File Formats and the OpenXML SDK.  
+> Register for this and other sessions (no cost) at www.interopevents.com/redmond2021  
+
+
+&nbsp;
 
 The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:
 
