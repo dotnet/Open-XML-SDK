@@ -1765,21 +1765,20 @@ namespace DocumentFormat.OpenXml
 
         private protected XmlReader CreateXmlReader(string outerXml)
         {
-            using (TextReader stringReader = new StringReader(outerXml))
+            var stringReader = new StringReader(outerXml);
+            
+            if (OpenXmlElementContext is not null)
             {
-                if (OpenXmlElementContext is not null)
-                {
 #if FEATURE_XML_PROHIBIT_DTD
-                    OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
+                OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
 #else
-                    OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
+                OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
 #endif
-                    return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.XmlReaderSettings);
-                }
-                else
-                {
-                    return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings());
-                }
+                return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.XmlReaderSettings);
+            }
+            else
+            {
+                return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings());
             }
         }
 
