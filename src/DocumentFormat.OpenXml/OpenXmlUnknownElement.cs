@@ -195,7 +195,7 @@ namespace DocumentFormat.OpenXml
 
             if (deep)
             {
-                element.CopyChilden(this, deep);
+                element.CopyChildren(this, deep);
             }
 
             return element;

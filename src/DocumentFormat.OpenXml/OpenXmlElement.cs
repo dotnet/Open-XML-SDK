@@ -1825,7 +1825,7 @@ namespace DocumentFormat.OpenXml
 
             if (deep)
             {
-                element.CopyChilden(this, deep);
+                element.CopyChildren(this, deep);
             }
 
             return element;
@@ -1902,7 +1902,7 @@ namespace DocumentFormat.OpenXml
         }
 
         // Copy child elements from the container.
-        internal void CopyChilden(OpenXmlElement container, bool deep)
+        internal void CopyChildren(OpenXmlElement container, bool deep)
         {
             foreach (var element in container.ChildElements)
             {
