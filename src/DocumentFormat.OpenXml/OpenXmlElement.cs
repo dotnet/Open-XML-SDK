@@ -1751,6 +1751,9 @@ namespace DocumentFormat.OpenXml
 
         private protected XmlReader CreateXmlReader(string outerXml)
         {
+            //This StringReader should not be in a using statement, because it is passed to XmlConvertingReaderFactory
+            //and we delegate the responsibility of disposing to XmlConvertingReader.
+            //We do not want the using statement here, as we risk this exception being thrown: System.ObjectDisposedException Cannot read from a closed TextReader.
             var stringReader = new StringReader(outerXml);
 
             if (OpenXmlElementContext is not null)
