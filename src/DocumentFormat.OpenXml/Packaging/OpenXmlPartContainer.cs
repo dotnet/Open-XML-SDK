@@ -1698,6 +1698,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
 
+                var updatedParts = new Dictionary<DataPart, DataPart>();
                 foreach (var item in dataPartsDictionary)
                 {
                     if (item.Value is null)
@@ -1714,8 +1715,12 @@ namespace DocumentFormat.OpenXml.Packaging
 
                         InternalOpenXmlPackage.AddDataPartToList(newDataPart);
 
-                        dataPartsDictionary[dataPart] = newDataPart;
+                        updatedParts.Add(dataPart, newDataPart);
                     }
+                }
+
+                foreach (var item in updatedParts) {
+                    dataPartsDictionary[item.Key] = item.Value;
                 }
 
                 // then create data part reference relationship
@@ -1723,8 +1728,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     if (dataPartsDictionary[dataPartReferenceRelationship.DataPart] is MediaDataPart newDataPart)
                     {
-                        var newDataPartReference = DataPartReferenceRelationship.Create(this, newDataPart, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
-                        ReferenceRelationshipList.AddLast(newDataPartReference);
+                        var newDataPartReference = DataPartReferenceRelationship.Create(child, newDataPart, dataPartReferenceRelationship.RelationshipType, dataPartReferenceRelationship.Id);
+                        child.AddDataPartReferenceRelationship(newDataPartReference);
                     }
                 }
 
