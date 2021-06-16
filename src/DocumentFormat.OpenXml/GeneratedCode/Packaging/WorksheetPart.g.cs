@@ -32,6 +32,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(EmbeddedControlPersistenceBinaryDataPart), false, true)]
     [PartConstraint(typeof(SlicersPart), false, true)]
     [PartConstraint(typeof(TimeLinePart), false, true)]
+    [PartConstraint(typeof(WorksheetThreadedCommentsPart), false, true)]
     public partial class WorksheetPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml";
@@ -187,6 +188,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WorksheetSortMapPart of the WorksheetPart
         /// </summary>
         public WorksheetSortMapPart? WorksheetSortMapPart => GetSubPartOfType<WorksheetSortMapPart>();
+
+        /// <summary>
+        /// Gets the WorksheetThreadedCommentsParts of the WorksheetPart
+        /// </summary>
+        public IEnumerable<WorksheetThreadedCommentsPart> WorksheetThreadedCommentsParts => GetPartsOfType<WorksheetThreadedCommentsPart>();
 
         /// <summary>
         /// Adds a CustomPropertyPart to the WorksheetPart
@@ -467,6 +473,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new SlicersPart();
                 case TimeLinePart.RelationshipTypeConstant:
                     return new TimeLinePart();
+                case WorksheetThreadedCommentsPart.RelationshipTypeConstant:
+                    return new WorksheetThreadedCommentsPart();
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));

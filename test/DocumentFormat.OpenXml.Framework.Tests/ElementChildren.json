@@ -34685,6 +34685,14 @@
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main"
       },
       {
+        "Name": "ThreadedComments",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      },
+      {
+        "Name": "personList",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      },
+      {
         "Name": "taskpanes",
         "Namespace": "http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11"
       },
