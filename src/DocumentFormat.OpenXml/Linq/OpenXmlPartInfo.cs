@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Provides information about a concrete OpenXmlPart.
     /// </summary>
-    public class OpenXmlPartInfo
+    internal class OpenXmlPartInfo
     {
         /// <summary>
         /// Initializes a new instance.

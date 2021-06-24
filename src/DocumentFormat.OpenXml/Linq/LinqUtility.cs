@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Utility class.
     /// </summary>
-    public static class LinqUtility
+    internal static class LinqUtility
     {
         #region OpenXmlPart Information
 
