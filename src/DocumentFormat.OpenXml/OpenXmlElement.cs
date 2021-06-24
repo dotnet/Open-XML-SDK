@@ -1105,7 +1105,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The <see cref="OpenXmlElement"/> element that was appended. </returns>
         [return: NotNullIfNotNull("newChild")]
         public virtual T? AppendChild<T>(T? newChild)
-            where T : OpenXmlElement?
+            where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
         /// <summary>
