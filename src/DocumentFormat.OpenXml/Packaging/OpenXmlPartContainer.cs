@@ -474,13 +474,18 @@ namespace DocumentFormat.OpenXml.Packaging
         private T AddDataPartReferenceRelationshipInternal<T>(MediaDataPart mediaDataPart, string? id = null)
             where T : DataPartReferenceRelationship
         {
+            var relationshipType = DataPartReferenceRelationship.GetRelationshipType<T>();
+            PackageRelationship relationship;
+
             if (id is null)
             {
-                throw new ArgumentNullException(nameof(id));
+                relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType);
+            }
+            else
+            {
+                relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType, id);
             }
 
-            var relationshipType = DataPartReferenceRelationship.GetRelationshipType<T>();
-            var relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType, id);
             var dataPartReferenceRelationship = (T)DataPartReferenceRelationship.Create(this, mediaDataPart, relationshipType, relationship.Id);
 
             ReferenceRelationshipList.AddLast(dataPartReferenceRelationship);
@@ -1724,7 +1729,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
 
-                foreach (var item in updatedParts) {
+                foreach (var item in updatedParts)
+                {
                     dataPartsDictionary[item.Key] = item.Value;
                 }
 
