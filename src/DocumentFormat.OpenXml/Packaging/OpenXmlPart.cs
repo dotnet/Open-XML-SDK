@@ -8,7 +8,8 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
-
+using System.Text;
+using System.Xml.Linq;
 #if FEATURE_XML_SCHEMA
 using System.Xml;
 using System.Xml.Schema;
@@ -25,11 +26,12 @@ namespace DocumentFormat.OpenXml.Packaging
         private PackagePart? _packagePart;
         private Uri? _uri;
 
+        private XElement? _rootXElement;
+
         /// <summary>
         /// Create an instance of <see cref="OpenXmlPart"/>
         /// </summary>
         protected internal OpenXmlPart()
-            : base()
         {
         }
 
@@ -51,22 +53,19 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
             }
-            else if (parent is not null && openXmlPackage is not null &&
-                 parent.OpenXmlPackage != openXmlPackage)
+
+            if (parent is not null && openXmlPackage is not null &&
+                parent.OpenXmlPackage != openXmlPackage)
             {
                 throw new ArgumentOutOfRangeException(nameof(parent));
             }
-            else if (parent is not null && openXmlPackage is null)
+
+            if (parent is not null && openXmlPackage is null)
             {
                 openXmlPackage = parent.OpenXmlPackage;
             }
 
-            if (openXmlPackage is null)
-            {
-                throw new ArgumentNullException(nameof(openXmlPackage));
-            }
-
-            _openXmlPackage = openXmlPackage;
+            _openXmlPackage = openXmlPackage ?? throw new ArgumentNullException(nameof(openXmlPackage));
 
             Debug.Assert(loadedParts.ContainsKey(uriTarget));
 
@@ -141,11 +140,13 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 return TargetPathOfWord;
             }
-            else if (TargetPathOfExcel is not null && package.ApplicationType == ApplicationType.Excel)
+
+            if (TargetPathOfExcel is not null && package.ApplicationType == ApplicationType.Excel)
             {
                 return TargetPathOfExcel;
             }
-            else if (TargetPathOfPPT is not null && package.ApplicationType == ApplicationType.PowerPoint)
+
+            if (TargetPathOfPPT is not null && package.ApplicationType == ApplicationType.PowerPoint)
             {
                 return TargetPathOfPPT;
             }
@@ -161,12 +162,13 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
             }
-            else if (parent is not null && openXmlPackage is not null &&
-                 parent.OpenXmlPackage != openXmlPackage)
+
+            if (parent is not null && openXmlPackage is not null && parent.OpenXmlPackage != openXmlPackage)
             {
                 throw new ArgumentOutOfRangeException(nameof(parent));
             }
-            else if (parent is not null && openXmlPackage is null)
+
+            if (parent is not null && openXmlPackage is null)
             {
                 openXmlPackage = parent.OpenXmlPackage;
             }
@@ -177,34 +179,15 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException();
             }
 
-            if (openXmlPackage is null)
-            {
-                throw new InvalidOperationException();
-            }
-
             // set the _openXmlPackage so ThrowIfObjectDisposed( ) do not throw.
-            _openXmlPackage = openXmlPackage;
+            _openXmlPackage = openXmlPackage ?? throw new InvalidOperationException();
 
-            Uri parentUri;
-
-            if (parent is not null)
-            {
-                parentUri = parent.Uri;
-            }
-            else
-            {
-                parentUri = new Uri("/", UriKind.Relative);
-            }
+            Uri parentUri = parent is not null ? parent.Uri : new Uri("/", UriKind.Relative);
 
             //OpenXmlPart parentPart = this._ownerPart;
 
             //Uri is auto generated to make sure it's unique
-            var targetPath = GetTargetPath(openXmlPackage, TargetPath);
-
-            if (targetPath is null)
-            {
-                targetPath = ".";
-            }
+            var targetPath = GetTargetPath(openXmlPackage, TargetPath) ?? ".";
 
             string? targetFileExt = targetExt;
 
@@ -216,10 +199,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            if (targetFileExt is null)
-            {
-                targetFileExt = TargetFileExtension;
-            }
+            targetFileExt ??= TargetFileExtension;
 
             _uri = _openXmlPackage.GetUniquePartUri(contentType, parentUri, targetPath, TargetName, targetFileExt);
 
@@ -250,24 +230,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException();
             }
 
-            if (openXmlPackage is null)
-            {
-                throw new InvalidOperationException();
-            }
-
             // set the _openXmlPackage so ThrowIfObjectDisposed( ) do not throw.
-            _openXmlPackage = openXmlPackage;
+            _openXmlPackage = openXmlPackage ?? throw new InvalidOperationException();
 
-            Uri parentUri;
-
-            if (parent is not null)
-            {
-                parentUri = parent.Uri;
-            }
-            else
-            {
-                parentUri = new Uri("/", UriKind.Relative);
-            }
+            Uri parentUri = parent is not null ? parent.Uri : new Uri("/", UriKind.Relative);
 
             _uri = openXmlPackage.GetUniquePartUri(contentType, parentUri, partUri);
 
@@ -316,7 +282,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            Dictionary<OpenXmlPart, bool> liveParts = new Dictionary<OpenXmlPart, bool>();
+            Dictionary<OpenXmlPart, bool> liveParts = new();
 
             OpenXmlPackage.FindAllReachableParts(liveParts);
 
@@ -380,10 +346,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(sourceStream));
             }
 
-            using (Stream targetStream = GetStream(FileMode.Create))
-            {
-                sourceStream.CopyTo(targetStream);
-            }
+            using Stream targetStream = GetStream(FileMode.Create);
+            sourceStream.CopyTo(targetStream);
         }
 
         #endregion
@@ -438,10 +402,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             using (var partStream = GetStream())
             {
-                if (validationEventHandler is not null)
-                {
-                    xmlReaderSettings.ValidationEventHandler += validationEventHandler;
-                }
+                xmlReaderSettings.ValidationEventHandler += validationEventHandler;
 
                 using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, xmlReaderSettings))
                 {
@@ -469,7 +430,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(schemaFile));
             }
 
-            XmlSchemaSet schemas = new XmlSchemaSet();
+            XmlSchemaSet schemas = new();
             schemas.Add(null, schemaFile);
 
             ValidateXml(schemas, validationEventHandler);
@@ -480,12 +441,149 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the root element of the current part.
         /// Returns null when the current part is empty or is not an XML content type.
         /// </summary>
-        public OpenXmlPartRootElement? RootElement
+        public OpenXmlPartRootElement? RootElement => PartRootElement;
+
+        #endregion
+
+        #region Linq to XML
+
+        /// <summary>
+        /// Gets or sets
+        /// </summary>
+        public XElement? RootXElement
         {
             get
             {
-                return PartRootElement;
+                if (_rootXElement is null)
+                {
+                    LoadRootXElement();
+                }
+
+                return _rootXElement;
             }
+
+            set
+            {
+                _rootXElement = value ?? throw new ArgumentNullException(nameof(value));
+
+                // Synchronize RootXElement and RootElement as necessary.
+                InternalRootElement?.LoadFromPart(this, CreateStreamFromRootXElement());
+
+                // Manage annotations for compatibility with the Open XML PowerTools.
+                // TODO: Discuss whether we want to do this.
+                ResetPowerToolsAnnotations();
+            }
+        }
+
+        private void LoadRootXElement()
+        {
+            if (IsRootElementLoaded)
+            {
+                LoadRootXElementFromRootElement();
+            }
+            else
+            {
+                LoadRootXElementFromPart();
+            }
+        }
+
+        private void LoadRootXElementFromRootElement()
+        {
+            Debug.Assert(InternalRootElement is not null);
+
+            _rootXElement = XElement.Parse(InternalRootElement.OuterXml);
+
+            // Manage annotations for compatibility with the Open XML PowerTools.
+            // TODO: Discuss whether we want to do this.
+            ResetPowerToolsAnnotations();
+        }
+
+        private void LoadRootXElementFromPart()
+        {
+            using Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read);
+
+            if (stream.Length > 0)
+            {
+                using XmlReader xmlReader = XmlReader.Create(stream);
+                XDocument rootXDocument = XDocument.Load(xmlReader);
+                _rootXElement = rootXDocument.Root;
+
+                // TODO: Consider replacing only attributes and child nodes.
+                // If the user holds on to a reference to _rootXElement, that
+                // reference will be invalidated.
+            }
+            else
+            {
+                _rootXElement = null;
+            }
+
+            // Manage annotations for compatibility with the Open XML PowerTools.
+            // TODO: Discuss whether we want to do this.
+            ResetPowerToolsAnnotations();
+        }
+
+        private Stream CreateStreamFromRootXElement()
+        {
+            if (_rootXElement is null)
+            {
+                return Stream.Null;
+            }
+
+            string xmlString = _rootXElement.ToString(SaveOptions.DisableFormatting);
+            byte[] xmlBytes = Encoding.UTF8.GetBytes(xmlString);
+            return new MemoryStream(xmlBytes);
+        }
+
+        internal void ReloadRootXElementFromPart()
+        {
+            if (_rootXElement is not null)
+            {
+                LoadRootXElementFromPart();
+            }
+        }
+
+        private void ReloadRootXElementFromRootElement()
+        {
+            if (_rootXElement is not null)
+            {
+                LoadRootXElementFromRootElement();
+            }
+        }
+
+        /// <summary>
+        /// Saves <see cref="RootXElement" /> to the underlying <see cref="OpenXmlPart" />
+        /// and synchronizes <see cref="RootElement" /> with <see cref="RootXElement" />.
+        /// </summary>
+        public void SaveRootXElement()
+        {
+            if (_rootXElement == null)
+            {
+                return;
+            }
+
+            using Stream stream = GetStream(FileMode.Create, FileAccess.Write);
+            using XmlWriter xmlWriter = XmlWriter.Create(stream);
+
+            XDocument document = CreateRootXDocument();
+            document.Save(xmlWriter);
+
+            // Synchronize RootXElement and RootElement as necessary.
+            InternalRootElement?.LoadFromPart(this, CreateStreamFromRootXElement());
+        }
+
+        private void ResetPowerToolsAnnotations()
+        {
+           RemoveAnnotations<XDocument>();
+           RemoveAnnotations<XmlNamespaceManager>();
+
+           AddAnnotation(CreateRootXDocument());
+        }
+
+        private XDocument CreateRootXDocument()
+        {
+            return _rootXElement is not null
+                ? new XDocument(new XDeclaration("1.0", "UTF-8", "yes"), _rootXElement)
+                : new XDocument(new XDeclaration("1.0", "UTF-8", "yes"));
         }
 
         #endregion
@@ -664,6 +762,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             Debug.Assert(InternalRootElement is null);
 
+            // Synchronize RootXElement with RootElement as necessary.
+            // TODO: Discuss whether the RootElement can also be loaded from the RootXElement.
+            // The current implementation likely assumes that the RootElement loaded by this
+            // method is in synch with the part contents.
+            SaveRootXElement();
+
             using (Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read))
             {
                 if (stream.Length == 0)
@@ -716,7 +820,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
             InternalRootElement = partRootElement;
 
-            return;
+            // Synchronize RootXElement with RootElement as necessary.
+            ReloadRootXElementFromRootElement();
         }
 
         // destroy itself (aka. dispose)

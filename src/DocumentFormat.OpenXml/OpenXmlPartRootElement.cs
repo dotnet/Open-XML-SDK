@@ -92,6 +92,9 @@ namespace DocumentFormat.OpenXml
             {
                 LoadFromPart(openXmlPart, partStream);
             }
+
+            // Synchronize RootXElement with RootElement as necessary.
+            openXmlPart.ReloadRootXElementFromPart();
         }
 
         /// <summary>
@@ -187,6 +190,9 @@ namespace DocumentFormat.OpenXml
             {
                 Save(partStream);
             }
+
+            // Synchronize RootXElement with RootElement as necessary.
+            openXmlPart.ReloadRootXElementFromPart();
         }
 
         /// <summary>
