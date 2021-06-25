@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 
             Assert.NotNull(LargeValue?.Value);
 
-            Assert.True(SmallValue1?.Value?.CompareTo(LargeValue?.Value) < 0);
+            Assert.True(SmallValue1!.Value!.CompareTo(LargeValue!.Value!) < 0);
         }
 
         [Fact]
@@ -117,7 +117,6 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
         [Fact]
         public void Operators_ValidValues_CorrectComparisons()
         {
-
             Assert.True(SmallValue1 == SmallValue2);
             Assert.True(NullValue1 == NullValue2);
             Assert.True(NullReference1 == NullReference2);
