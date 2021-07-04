@@ -1739,7 +1739,15 @@ namespace DocumentFormat.OpenXml
 
         private protected XmlReader CreateXmlReader()
         {
-            var stringReader = new StringReader(RawOuterXml);
+            return CreateXmlReader(RawOuterXml);
+        }
+
+        private protected XmlReader CreateXmlReader(string outerXml)
+        {
+            //This StringReader should not be in a using statement, because it is passed to XmlConvertingReaderFactory
+            //and we delegate the responsibility of disposing to XmlConvertingReader.
+            //We do not want the using statement here, as we risk this exception being thrown: System.ObjectDisposedException Cannot read from a closed TextReader.
+            var stringReader = new StringReader(outerXml);
 
             if (OpenXmlElementContext is not null)
             {
@@ -1753,26 +1761,6 @@ namespace DocumentFormat.OpenXml
             else
             {
                 return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings());
-            }
-        }
-
-        private protected XmlReader CreateXmlReader(string outerXml)
-        {
-            using (TextReader stringReader = new StringReader(outerXml))
-            {
-                if (OpenXmlElementContext is not null)
-                {
-#if FEATURE_XML_PROHIBIT_DTD
-                    OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
-#else
-                    OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
-#endif
-                    return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.XmlReaderSettings);
-                }
-                else
-                {
-                    return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings());
-                }
             }
         }
 
