@@ -845,7 +845,7 @@ namespace DocumentFormat.OpenXml.Linq
             hdr,
             ftr,
             endnote,
-            footnote
+            footnote,
         };
 
         public static readonly XName[] SubRunLevelContent =
@@ -868,7 +868,7 @@ namespace DocumentFormat.OpenXml.Linq
             tab,
             yearLong,
             yearShort,
-            MC.AlternateContent
+            MC.AlternateContent,
         };
     }
 }
