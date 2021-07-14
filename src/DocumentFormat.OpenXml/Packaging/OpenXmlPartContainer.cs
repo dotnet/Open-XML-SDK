@@ -475,15 +475,10 @@ namespace DocumentFormat.OpenXml.Packaging
             where T : DataPartReferenceRelationship
         {
             var relationshipType = DataPartReferenceRelationship.GetRelationshipType<T>();
-            PackageRelationship relationship;
-
-            if (id is null)
+            var relationship = id switch
             {
-                relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType);
-            }
-            else
-            {
-                relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType, id);
+              null => CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType),
+              _ => CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType, id),
             }
 
             var dataPartReferenceRelationship = (T)DataPartReferenceRelationship.Create(this, mediaDataPart, relationshipType, relationship.Id);
