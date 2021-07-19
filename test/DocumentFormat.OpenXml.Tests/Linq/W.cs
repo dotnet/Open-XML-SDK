@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-namespace DocumentFormat.OpenXml.Linq
+namespace DocumentFormat.OpenXml.Tests.Linq
 {
     /// <summary>
     /// Provides the qualified names of the elements and attributes of the namespace
@@ -836,40 +836,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName oddHBand = w + "oddHBand";
         public static readonly XName oddVBand = w + "oddVBand";
         public static readonly XName headers = w + "headers";
-
-        public static readonly XName[] BlockLevelContentContainers =
-        {
-            body,
-            tc,
-            txbxContent,
-            hdr,
-            ftr,
-            endnote,
-            footnote,
-        };
-
-        public static readonly XName[] SubRunLevelContent =
-        {
-            br,
-            cr,
-            dayLong,
-            dayShort,
-            drawing,
-            drawing,
-            monthLong,
-            monthShort,
-            noBreakHyphen,
-            ptab,
-            pgNum,
-            pict,
-            softHyphen,
-            sym,
-            t,
-            tab,
-            yearLong,
-            yearShort,
-            MC.AlternateContent,
-        };
     }
 }
 
