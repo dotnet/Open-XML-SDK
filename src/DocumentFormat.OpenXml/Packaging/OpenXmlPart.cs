@@ -3,9 +3,6 @@
 
 using System;
 using System.Collections.Generic;
-#if FEATURE_XML_SCHEMA
-using System.ComponentModel;
-#endif
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
@@ -13,7 +10,9 @@ using System.IO.Packaging;
 using System.Text;
 using System.Xml;
 using System.Xml.Linq;
+
 #if FEATURE_XML_SCHEMA
+using System.ComponentModel;
 using System.Xml.Schema;
 #endif
 
@@ -37,7 +36,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-#region methods for LoadPart(), NewPart( ), AddPartFrom( )
+        #region methods for LoadPart(), NewPart( ), AddPartFrom( )
 
         internal void Load(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, Uri uriTarget, string id, Dictionary<Uri, OpenXmlPart> loadedParts)
         {
@@ -142,18 +141,18 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 return TargetPathOfWord;
             }
-
-            if (TargetPathOfExcel is not null && package.ApplicationType == ApplicationType.Excel)
+            else if (TargetPathOfExcel is not null && package.ApplicationType == ApplicationType.Excel)
             {
                 return TargetPathOfExcel;
             }
-
-            if (TargetPathOfPPT is not null && package.ApplicationType == ApplicationType.PowerPoint)
+            else if (TargetPathOfPPT is not null && package.ApplicationType == ApplicationType.PowerPoint)
             {
                 return TargetPathOfPPT;
             }
-
-            return defaultPath;
+            else
+            {
+                return defaultPath;
+            }
         }
 
         // create a new part in this package
@@ -242,9 +241,9 @@ namespace DocumentFormat.OpenXml.Packaging
             _packagePart = openXmlPackage.CreateMetroPart(_uri, contentType);
         }
 
-#endregion
+        #endregion
 
-#region public properties
+        #region public properties
 
         /// <summary>
         /// Gets the OpenXmlPackage which contains the current part.
@@ -273,9 +272,9 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-#endregion
+        #endregion
 
-#region public methods
+        #region public methods
 
         /// <summary>
         /// Enumerates all parents that reference this part anywhere in the document.
@@ -352,9 +351,9 @@ namespace DocumentFormat.OpenXml.Packaging
             sourceStream.CopyTo(targetStream);
         }
 
-#endregion
+        #endregion
 
-#region public virtual methods / properties
+        #region public virtual methods / properties
 
         /// <summary>
         /// Gets the content type (MIME type) of the content data in the part.
@@ -445,9 +444,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public OpenXmlPartRootElement? RootElement => PartRootElement;
 
-#endregion
+        #endregion
 
-#region Linq to XML
+        #region Linq to XML
 
         /// <summary>
         /// Gets or sets
@@ -588,9 +587,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 : new XDocument(new XDeclaration("1.0", "UTF-8", "yes"));
         }
 
-#endregion
+        #endregion
 
-#region internal properties
+        #region internal properties
 
         /// <summary>
         /// Gets the internal metro PackagePart element.
@@ -631,9 +630,9 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-#endregion
+        #endregion
 
-#region internal virtual methods / properties
+        #region internal virtual methods / properties
 
         /// <summary>
         /// Gets a value indicating whether the ContentType for the current part is fixed.
@@ -724,9 +723,9 @@ namespace DocumentFormat.OpenXml.Packaging
             return true;
         }
 
-#endregion
+        #endregion
 
-#region internal methods
+        #region internal methods
 
         /// <summary>
         /// Gets a value indicating whether the root element is loaded from the part or it has been set.
@@ -845,9 +844,9 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-#endregion
+        #endregion
 
-#region protected methods
+        #region protected methods
 
         /// <summary>
         /// Indicates whether the object is already disposed.
@@ -898,11 +897,12 @@ namespace DocumentFormat.OpenXml.Packaging
             return _packagePart.CreateRelationship(targetUri, targetMode, relationshipType, id);
         }
 
-#endregion
+        #endregion
 
-#region MC Staffs
+        #region MC Staffs
+
         internal MarkupCompatibilityProcessSettings? MCSettings;
-#endregion
 
+        #endregion
     }
 }
