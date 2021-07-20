@@ -475,7 +475,12 @@ namespace DocumentFormat.OpenXml.Packaging
             where T : DataPartReferenceRelationship
         {
             var relationshipType = DataPartReferenceRelationship.GetRelationshipType<T>();
-            var relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType);
+            var relationship = id switch
+            {
+                null => CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType),
+                _ => CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, relationshipType, id),
+            };
+
             var dataPartReferenceRelationship = (T)DataPartReferenceRelationship.Create(this, mediaDataPart, relationshipType, relationship.Id);
 
             ReferenceRelationshipList.AddLast(dataPartReferenceRelationship);
@@ -1719,7 +1724,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
 
-                foreach (var item in updatedParts) {
+                foreach (var item in updatedParts)
+                {
                     dataPartsDictionary[item.Key] = item.Value;
                 }
 
