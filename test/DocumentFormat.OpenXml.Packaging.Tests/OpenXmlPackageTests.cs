@@ -198,13 +198,13 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     .ToList();
 
                 // We want our MainDocumentPart to contain XML data.
-                Assert.Equal(WordprocessingMLContentType, (string) mainDocumentPart.Attribute(Pkg + "contentType"));
+                Assert.Equal(WordprocessingMLContentType, (string)mainDocumentPart.Attribute(Pkg + "contentType"));
                 Assert.NotEmpty(mainDocumentPart.Elements(Pkg + "xmlData"));
 
                 // We want to see each one of our AlternativeFormatImportParts.
-                Assert.Contains(altChunkParts, p => (string) p.Attribute(Pkg + "contentType") == XhtmlContentType);
-                Assert.Contains(altChunkParts, p => (string) p.Attribute(Pkg + "contentType") == XmlContentType);
-                Assert.Contains(altChunkParts, p => (string) p.Attribute(Pkg + "contentType") == WordprocessingMLContentType);
+                Assert.Contains(altChunkParts, p => (string)p.Attribute(Pkg + "contentType") == XhtmlContentType);
+                Assert.Contains(altChunkParts, p => (string)p.Attribute(Pkg + "contentType") == XmlContentType);
+                Assert.Contains(altChunkParts, p => (string)p.Attribute(Pkg + "contentType") == WordprocessingMLContentType);
 
                 // We want all of our AlternativeFormatImportParts to contain binary data,
                 // even though two of them have a content type ending with "+xml".
@@ -240,7 +240,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         public void TestDataReferenceRelationshipsAreClonedCorrectly()
         {
             using var stream = CreatePresentationDocumentWithDataReference();
-            using var ppt = PresentationDocument.Open(stream, false);
+            using var ppt = PresentationDocument.Open(stream, true);
             Assert.NotNull(ppt.PresentationPart);
             Assert.NotNull(ppt.PresentationPart.Presentation);
             Assert.Single(ppt.PresentationPart.SlideParts);
@@ -254,6 +254,12 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.Single(clonedPpt.PresentationPart.SlideParts);
             var clonedSlidePart = clonedPpt.PresentationPart.SlideParts.First();
             Assert.NotEmpty(clonedSlidePart.DataPartReferenceRelationships);
+
+            // Additional test for related 1issue #949
+            // Verify that the id requested in AddDataPartReferenceRelationship was used.
+            var mediaDataPart = new MediaDataPart(ppt.InternalOpenXmlPackage, MediaDataPartType.Mp3);
+            MediaReferenceRelationship mrr = slidePart.AddMediaReferenceRelationship(mediaDataPart, "rId4");
+            Assert.Equal("rId4", mrr.Id);
         }
     }
 }
