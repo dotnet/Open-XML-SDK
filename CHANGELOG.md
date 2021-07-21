@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed a documentation type (#937)
 - Fixed an issue with adding additional children to data parts (#934)
 - Replaced some documentation entries that were generic values with helpful comments (#992)
+- Fixed a regression in AddDataPartRelationship (#954)
 
 Thanks to the following for their contributions:
 
