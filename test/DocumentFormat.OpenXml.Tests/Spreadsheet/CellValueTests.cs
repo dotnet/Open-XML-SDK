@@ -6,7 +6,6 @@ using DocumentFormat.OpenXml.Tests.Common;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Threading;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -69,11 +68,12 @@ namespace DocumentFormat.OpenXml.Tests
         public void CellDoubleTest(double num)
         {
             var value = new CellValue(num);
+            var valueString = num.ToString(CultureInfo.InvariantCulture);
 
-            Assert.Equal(num.ToString(), value.Text);
-            Assert.Equal(num.ToString(), value.InnerText);
-            Assert.Equal(@$"<x:v xmlns:x=""http://schemas.openxmlformats.org/spreadsheetml/2006/main"">{num}</x:v>", value.OuterXml);
-            Assert.True(value.TryGetDouble(out var result));
+            Assert.Equal(valueString, value.Text);
+            Assert.Equal(valueString, value.InnerText);
+            Assert.Equal(@$"<x:v xmlns:x=""http://schemas.openxmlformats.org/spreadsheetml/2006/main"">{valueString}</x:v>", value.OuterXml);
+            Assert.True(value.TryGetDouble(out double result));
             Assert.Equal(num, result);
         }
 

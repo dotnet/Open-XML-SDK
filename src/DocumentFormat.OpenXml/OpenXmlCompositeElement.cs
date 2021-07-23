@@ -228,9 +228,9 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public override T AppendChild<T>([AllowNull] T newChild)
+        public override T? AppendChild<T>(T? newChild)
+            where T : class
         {
             if (newChild is null)
             {
@@ -267,9 +267,9 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public override T InsertAfter<T>([AllowNull] T newChild, OpenXmlElement? referenceChild)
+        public override T? InsertAfter<T>(T? newChild, OpenXmlElement? referenceChild)
+            where T : class
         {
             if (newChild is null)
             {
@@ -317,9 +317,9 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public override T InsertBefore<T>([AllowNull] T newChild, OpenXmlElement? referenceChild)
+        public override T? InsertBefore<T>(T? newChild, OpenXmlElement? referenceChild)
+            where T : class
         {
             if (newChild is null)
             {
@@ -377,9 +377,9 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public override T InsertAt<T>([AllowNull] T newChild, int index)
+        public override T? InsertAt<T>(T? newChild, int index)
+            where T : class
         {
             if (newChild is null)
             {
@@ -411,9 +411,9 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public override T PrependChild<T>([AllowNull] T newChild)
+        public override T? PrependChild<T>(T? newChild)
+            where T : class
         {
             if (newChild is null)
             {
@@ -429,9 +429,9 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public override T RemoveChild<T>([AllowNull] T child)
+        public override T? RemoveChild<T>(T? child)
+            where T : class
         {
             if (child is null)
             {
@@ -519,9 +519,9 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("oldChild")]
-        public override T ReplaceChild<T>(OpenXmlElement newChild, [AllowNull] T oldChild)
+        public override T? ReplaceChild<T>(OpenXmlElement newChild, T? oldChild)
+            where T : class
         {
             if (oldChild is null)
             {

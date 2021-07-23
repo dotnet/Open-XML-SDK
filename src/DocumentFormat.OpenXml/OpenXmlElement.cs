@@ -1103,10 +1103,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="newChild">The <see cref="OpenXmlElement"/> element to append.</param>
         /// <returns>The <see cref="OpenXmlElement"/> element that was appended. </returns>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T AppendChild<T>(T? newChild)
-            where T : OpenXmlElement?
+        public virtual T? AppendChild<T>(T? newChild)
+            where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
         /// <summary>
@@ -1115,9 +1114,8 @@ namespace DocumentFormat.OpenXml
         /// <param name="newChild">The <see cref="OpenXmlElement"/> element to insert.</param>
         /// <param name="referenceChild">The reference <see cref="OpenXmlElement"/> element. <paramref name="newChild"/> is placed after <paramref name="referenceChild"/>. </param>
         /// <returns>The <see cref="OpenXmlElement"/> element that was inserted.</returns>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T InsertAfter<T>(T? newChild, OpenXmlElement? referenceChild)
+        public virtual T? InsertAfter<T>(T? newChild, OpenXmlElement? referenceChild)
             where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
@@ -1127,9 +1125,8 @@ namespace DocumentFormat.OpenXml
         /// <param name="newChild">The <see cref="OpenXmlElement"/> element to insert.</param>
         /// <param name="referenceChild">The reference <see cref="OpenXmlElement"/> element. <paramref name="newChild"/> is placed before <paramref name="referenceChild"/>.</param>
         /// <returns>The <see cref="OpenXmlElement"/> element that was inserted.</returns>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T InsertBefore<T>(T? newChild, OpenXmlElement? referenceChild)
+        public virtual T? InsertBefore<T>(T? newChild, OpenXmlElement? referenceChild)
             where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
@@ -1153,7 +1150,7 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ParentIsNull);
             }
 
-            return Parent.InsertAfter(newElement, this)!;
+            return Parent.InsertAfter(newElement, this);
         }
 
         /// <summary>
@@ -1176,7 +1173,7 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ParentIsNull);
             }
 
-            return Parent.InsertBefore(newElement, this)!;
+            return Parent.InsertBefore(newElement, this);
         }
 
         /// <summary>
@@ -1186,9 +1183,8 @@ namespace DocumentFormat.OpenXml
         /// <param name="index">The zero-based index where the element is to be inserted.</param>
         /// <returns>The <see cref="OpenXmlElement"/> element that was inserted.</returns>
         /// <remarks>Returns <c>null</c>if <paramref name="newChild"/> equals <c>null</c>.</remarks>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T InsertAt<T>(T? newChild, int index)
+        public virtual T? InsertAt<T>(T? newChild, int index)
             where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
@@ -1197,9 +1193,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="newChild">The <see cref="OpenXmlElement"/> element to add.</param>
         /// <returns>The <see cref="OpenXmlElement"/> element that was added.</returns>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T PrependChild<T>(T? newChild)
+        public virtual T? PrependChild<T>(T? newChild)
             where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
@@ -1208,9 +1203,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="oldChild">The child element to remove. </param>
         /// <returns>The element that was removed. </returns>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T RemoveChild<T>(T? oldChild)
+        public virtual T? RemoveChild<T>(T? oldChild)
             where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
@@ -1220,9 +1214,8 @@ namespace DocumentFormat.OpenXml
         /// <param name="newChild">The new child element to put in the list.</param>
         /// <param name="oldChild">The child element to replace in the list.</param>
         /// <returns>The <see cref="OpenXmlElement"/> element that was replaced.</returns>
-        [return: MaybeNull]
         [return: NotNullIfNotNull("newChild")]
-        public virtual T ReplaceChild<T>(OpenXmlElement newChild, T? oldChild)
+        public virtual T? ReplaceChild<T>(OpenXmlElement newChild, T? oldChild)
             where T : OpenXmlElement
             => throw new InvalidOperationException(ExceptionMessages.NonCompositeNoChild);
 
@@ -1746,7 +1739,15 @@ namespace DocumentFormat.OpenXml
 
         private protected XmlReader CreateXmlReader()
         {
-            var stringReader = new StringReader(RawOuterXml);
+            return CreateXmlReader(RawOuterXml);
+        }
+
+        private protected XmlReader CreateXmlReader(string outerXml)
+        {
+            //This StringReader should not be in a using statement, because it is passed to XmlConvertingReaderFactory
+            //and we delegate the responsibility of disposing to XmlConvertingReader.
+            //We do not want the using statement here, as we risk this exception being thrown: System.ObjectDisposedException Cannot read from a closed TextReader.
+            var stringReader = new StringReader(outerXml);
 
             if (OpenXmlElementContext is not null)
             {
@@ -1760,26 +1761,6 @@ namespace DocumentFormat.OpenXml
             else
             {
                 return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings());
-            }
-        }
-
-        private protected XmlReader CreateXmlReader(string outerXml)
-        {
-            using (TextReader stringReader = new StringReader(outerXml))
-            {
-                if (OpenXmlElementContext is not null)
-                {
-#if FEATURE_XML_PROHIBIT_DTD
-                    OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
-#else
-                    OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
-#endif
-                    return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.XmlReaderSettings);
-                }
-                else
-                {
-                    return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings());
-                }
             }
         }
 

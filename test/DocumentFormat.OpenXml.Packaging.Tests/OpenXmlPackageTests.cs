@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,8 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Xunit;
+
+using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
 
 namespace DocumentFormat.OpenXml.Packaging.Tests
 {
@@ -195,18 +198,68 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     .ToList();
 
                 // We want our MainDocumentPart to contain XML data.
-                Assert.Equal(WordprocessingMLContentType, (string) mainDocumentPart.Attribute(Pkg + "contentType"));
+                Assert.Equal(WordprocessingMLContentType, (string)mainDocumentPart.Attribute(Pkg + "contentType"));
                 Assert.NotEmpty(mainDocumentPart.Elements(Pkg + "xmlData"));
 
                 // We want to see each one of our AlternativeFormatImportParts.
-                Assert.Contains(altChunkParts, p => (string) p.Attribute(Pkg + "contentType") == XhtmlContentType);
-                Assert.Contains(altChunkParts, p => (string) p.Attribute(Pkg + "contentType") == XmlContentType);
-                Assert.Contains(altChunkParts, p => (string) p.Attribute(Pkg + "contentType") == WordprocessingMLContentType);
+                Assert.Contains(altChunkParts, p => (string)p.Attribute(Pkg + "contentType") == XhtmlContentType);
+                Assert.Contains(altChunkParts, p => (string)p.Attribute(Pkg + "contentType") == XmlContentType);
+                Assert.Contains(altChunkParts, p => (string)p.Attribute(Pkg + "contentType") == WordprocessingMLContentType);
 
                 // We want all of our AlternativeFormatImportParts to contain binary data,
                 // even though two of them have a content type ending with "+xml".
                 Assert.All(altChunkParts, p => Assert.NotEmpty(p.Elements(Pkg + "binaryData")));
             }
+        }
+
+        private static MemoryStream CreatePresentationDocumentWithDataReference()
+        {
+            var stream = new MemoryStream();
+
+            using (var ppt = PresentationDocument.Create(stream, PresentationDocumentType.Presentation))
+            {
+                var mainPart = ppt.AddPresentationPart();
+                var slide = new Slide();
+                var slidePart = mainPart.AddNewPart<SlidePart>();
+                var dataPart = new MediaDataPart(ppt.InternalOpenXmlPackage, MediaDataPartType.Mp3);
+                var dataPartReferenceRelationship = DataPartReferenceRelationship.Create(slidePart, dataPart, MediaReferenceRelationship.RelationshipTypeConst, "rId2");
+                slidePart.AddDataPartReferenceRelationship(dataPartReferenceRelationship);
+                slide.Save(slidePart);
+                mainPart.Presentation = new Presentation.Presentation(slide);
+                mainPart.Presentation.Save();
+            }
+
+            stream.Seek(0, SeekOrigin.Begin);
+            return stream;
+        }
+
+        // This is a regression test case for issue #931
+        // Saving a office documents opened using the OpenXML SDK removed data references from the saved document.
+        // This lead to invalid documents that couldn't be opened by office.
+        [Fact]
+        public void TestDataReferenceRelationshipsAreClonedCorrectly()
+        {
+            using var stream = CreatePresentationDocumentWithDataReference();
+            using var ppt = PresentationDocument.Open(stream, true);
+            Assert.NotNull(ppt.PresentationPart);
+            Assert.NotNull(ppt.PresentationPart.Presentation);
+            Assert.Single(ppt.PresentationPart.SlideParts);
+            var slidePart = ppt.PresentationPart.SlideParts.First();
+            Assert.NotEmpty(slidePart.DataPartReferenceRelationships);
+            var clonedStream = new MemoryStream();
+            ppt.Clone(clonedStream);
+            using var clonedPpt = PresentationDocument.Open(clonedStream, false);
+            Assert.NotNull(clonedPpt.PresentationPart);
+            Assert.NotNull(clonedPpt.PresentationPart.Presentation);
+            Assert.Single(clonedPpt.PresentationPart.SlideParts);
+            var clonedSlidePart = clonedPpt.PresentationPart.SlideParts.First();
+            Assert.NotEmpty(clonedSlidePart.DataPartReferenceRelationships);
+
+            // Additional test for related 1issue #949
+            // Verify that the id requested in AddDataPartReferenceRelationship was used.
+            var mediaDataPart = new MediaDataPart(ppt.InternalOpenXmlPackage, MediaDataPartType.Mp3);
+            MediaReferenceRelationship mrr = slidePart.AddMediaReferenceRelationship(mediaDataPart, "rId4");
+            Assert.Equal("rId4", mrr.Id);
         }
     }
 }
