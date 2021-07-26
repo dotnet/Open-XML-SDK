@@ -13,18 +13,15 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal class ElementMetadata
     {
-        public static readonly ElementMetadata None = new(typeof(OpenXmlElement));
-
         private static readonly ConcurrentDictionary<Type, ElementMetadata> _lookup = new ConcurrentDictionary<Type, ElementMetadata>(new[]
         {
-            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlUnknownElement), new ElementMetadata(typeof(OpenXmlUnknownElement))),
-            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlMiscNode), new ElementMetadata(typeof(OpenXmlMiscNode))),
+            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlUnknownElement), new ElementMetadata()),
+            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlMiscNode), new ElementMetadata()),
         });
 
         private readonly Lazy<ElementLookup>? _children;
 
         internal ElementMetadata(
-            Type type,
             ReadOnlyArray<AttributeMetadata> attributes,
             ReadOnlyArray<IValidator> validators,
             ReadOnlyArray<IValidator> constraints,
@@ -33,7 +30,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             CompiledParticle? particle,
             Lazy<ElementLookup> lookup)
         {
-            Type = type;
             Attributes = attributes;
             Validators = validators;
             Constraints = constraints;
@@ -43,12 +39,9 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             _children = lookup;
         }
 
-        private ElementMetadata(Type type)
+        private ElementMetadata()
         {
-            Type = type;
         }
-
-        public Type Type { get; }
 
         public ReadOnlyArray<AttributeMetadata> Attributes { get; }
 
@@ -87,7 +80,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         private static ElementMetadata CreateInternal(OpenXmlElement element)
         {
-            var builder = new Builder(element.GetType());
+            var builder = new Builder();
 
             element.ConfigureMetadata(builder);
 
@@ -98,17 +91,10 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         {
             private static readonly Lazy<ElementLookup> _lazy = new Lazy<ElementLookup>(() => ElementLookup.Empty, true);
 
-            private readonly Type _type;
-
             private List<IMetadataBuilder<AttributeMetadata>>? _attributes;
             private HashSet<IMetadataBuilder<ElementLookup.ElementChild>>? _children;
             private List<IValidator>? _constraints;
             private OpenXmlQualifiedName _qname;
-
-            public Builder(Type type)
-            {
-                _type = type;
-            }
 
             public Builder<TElement> AddElement<TElement>()
                 where TElement : OpenXmlElement
@@ -164,7 +150,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
                 var lookup = _children is null ? _lazy : new Lazy<ElementLookup>(() => new ElementLookup(_children.Select(c => c.Build())), true);
 
-                return new ElementMetadata(_type, BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, _qname, Particle.Compile(), lookup);
+                return new ElementMetadata(BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, _qname, Particle.Compile(), lookup);
             }
 
             private AttributeMetadata[]? BuildAttributes()
