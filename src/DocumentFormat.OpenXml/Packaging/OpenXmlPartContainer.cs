@@ -1621,8 +1621,8 @@ namespace DocumentFormat.OpenXml.Packaging
         // All child parts will also be added
         // partDictionary used to map new part from the source part and to detect cycle reference in source part
         private OpenXmlPart AddSubPartFromOtherPackage(OpenXmlPart part, IDictionary<OpenXmlPart, OpenXmlPart> partDictionary,
-                                                        IDictionary<DataPart, DataPart?> dataPartsDictionary,
-                                                        bool keepIdAndUri, string? rId)
+                                                       Dictionary<DataPart, DataPart?> dataPartsDictionary,
+                                                       bool keepIdAndUri, string? rId)
         {
             if (keepIdAndUri)
             {
@@ -1703,31 +1703,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
 
-                var updatedParts = new Dictionary<DataPart, DataPart>();
-                foreach (var item in dataPartsDictionary)
-                {
-                    if (item.Value is null)
-                    {
-                        var dataPart = item.Key;
-
-                        var newDataPart = new MediaDataPart(InternalOpenXmlPackage, dataPart.ContentType, dataPart.Uri);
-
-                        // copy the stream
-                        using (var stream = dataPart.GetStream())
-                        {
-                            newDataPart.FeedData(stream);
-                        }
-
-                        InternalOpenXmlPackage.AddDataPartToList(newDataPart);
-
-                        updatedParts.Add(dataPart, newDataPart);
-                    }
-                }
-
-                foreach (var item in updatedParts)
-                {
-                    dataPartsDictionary[item.Key] = item.Value;
-                }
+                UpdateDataParts(dataPartsDictionary);
 
                 // then create data part reference relationship
                 foreach (var dataPartReferenceRelationship in part.DataPartReferenceRelationships)
@@ -1742,6 +1718,56 @@ namespace DocumentFormat.OpenXml.Packaging
                 return child;
             }
         }
+
+        // Updates of existing dictionary keys during enumeration are only allowed after net 5.0.
+        // Before that we need a temporary dictionary to store the updated values for the keys.
+#if NET50_OR_LATER
+        private void UpdateDataParts(Dictionary<DataPart, DataPart?> dataPartsDictionary) {
+            foreach (var (key, value) in dataPartsDictionary)
+            {
+                if (value is null)
+                {
+                    var newDataPart = new MediaDataPart(InternalOpenXmlPackage, key.ContentType, key.Uri);
+
+                    // copy the stream
+                    using (var stream = key.GetStream())
+                    {
+                        newDataPart.FeedData(stream);
+                    }
+
+                    InternalOpenXmlPackage.AddDataPartToList(newDataPart);
+                    dataPartsDictionary[key] = newDataPart;
+                }
+            }
+        }
+#else
+        private void UpdateDataParts(Dictionary<DataPart, DataPart?> dataPartsDictionary) {
+            var updatedParts = new Dictionary<DataPart, DataPart>();
+            foreach (var item in dataPartsDictionary)
+            {
+                var key = item.Key;
+                var value = item.Value;
+                if (value is null)
+                {
+                    var newDataPart = new MediaDataPart(InternalOpenXmlPackage, key.ContentType, key.Uri);
+
+                    // copy the stream
+                    using (var stream = key.GetStream())
+                    {
+                        newDataPart.FeedData(stream);
+                    }
+
+                    InternalOpenXmlPackage.AddDataPartToList(newDataPart);
+                    updatedParts.Add(key, newDataPart);
+                }
+            }
+
+            foreach (var updatedItem in updatedParts)
+            {
+                dataPartsDictionary[updatedItem.Key] = updatedItem.Value;
+            }
+        }
+    #endif
 
         /// <summary>
         /// Attaches the child to the package (create the relationship)
