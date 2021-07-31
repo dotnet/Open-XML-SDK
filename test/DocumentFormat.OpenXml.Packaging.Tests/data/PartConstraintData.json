@@ -3209,6 +3209,17 @@
     "Parts": {}
   },
   {
+    "Name": "DocumentFormat.OpenXml.Packaging.WorkbookPersonPart",
+    "ContentType": "application/vnd.ms-excel.person+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2017/10/relationships/person",
+    "TargetFileExtension": ".xml",
+    "TargetName": "person",
+    "TargetPath": "persons",
+    "DataParts": {},
+    "Parts": {}
+  },
+  {
     "Name": "DocumentFormat.OpenXml.Packaging.TimeLinePart",
     "ContentType": "application/vnd.ms-excel.timeline+xml",
     "IsContentTypeFixed": true,
@@ -3216,6 +3227,94 @@
     "TargetFileExtension": ".xml",
     "TargetName": "timeline",
     "TargetPath": "../timelines",
+    "DataParts": {},
+    "Parts": {}
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.WorksheetThreadedCommentsPart",
+    "ContentType": "application/vnd.ms-excel.threadedcomments+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment",
+    "TargetFileExtension": ".xml",
+    "TargetName": "threadedcomment",
+    "TargetPath": "../threadedcomments",
+    "DataParts": {},
+    "Parts": {}
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.RdRichValuePart",
+    "ContentType": "application/vnd.ms-excel.rdrichvalue+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValue",
+    "TargetFileExtension": ".xml",
+    "TargetName": "rdrichvalue",
+    "TargetPath": "richData",
+    "DataParts": {},
+    "Parts": {}
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.RdRichValueStructurePart",
+    "ContentType": "application/vnd.ms-excel.rdrichvaluestructure+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueStructure",
+    "TargetFileExtension": ".xml",
+    "TargetName": "rdrichvaluestructure",
+    "TargetPath": "richData",
+    "DataParts": {},
+    "Parts": {}
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.RdArrayPart",
+    "ContentType": "application/vnd.ms-excel.rdarray+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdArray",
+    "TargetFileExtension": ".xml",
+    "TargetName": "rdarray",
+    "TargetPath": "richData",
+    "DataParts": {},
+    "Parts": {}
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.RichStylesPart",
+    "ContentType": "application/vnd.ms-excel.richstyles+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/richStyles",
+    "TargetFileExtension": ".xml",
+    "TargetName": "richStyles",
+    "TargetPath": "richData",
+    "DataParts": {},
+    "Parts": {}
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.RdSupportingPropertyBagPart",
+    "ContentType": "application/vnd.ms-excel.rdsupportingpropertybag+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBag",
+    "TargetFileExtension": ".xml",
+    "TargetName": "rdsupportingpropertybag",
+    "TargetPath": "richData",
+    "DataParts": {},
+    "Parts": {}
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.RdSupportingPropertyBagStructurePart",
+    "ContentType": "application/vnd.ms-excel.rdsupportingpropertybagstructure+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBagStructure",
+    "TargetFileExtension": ".xml",
+    "TargetName": "rdsupportingpropertybagstructure",
+    "TargetPath": "richData",
+    "DataParts": {},
+    "Parts": {}
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.RdRichValueTypesPart",
+    "ContentType": "application/vnd.ms-excel.rdrichvaluetypes+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueTypes",
+    "TargetFileExtension": ".xml",
+    "TargetName": "rdRichValueTypes",
+    "TargetPath": "richData",
     "DataParts": {},
     "Parts": {}
   },
@@ -3887,6 +3986,62 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
+      },
+      "http://schemas.microsoft.com/office/2017/10/relationships/person": {
+        "PartClassName": "WorkbookPersonPart",
+        "PartContentType": "application/vnd.ms-excel.person+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValue": {
+        "PartClassName": "RdRichValuePart",
+        "PartContentType": "application/vnd.ms-excel.rdrichvalue+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueStructure": {
+        "PartClassName": "RdRichValueStructurePart",
+        "PartContentType": "application/vnd.ms-excel.rdrichvaluestructure+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/rdArray": {
+        "PartClassName": "RdArrayPart",
+        "PartContentType": "application/vnd.ms-excel.rdarray+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/richStyles": {
+        "PartClassName": "RichStylesPart",
+        "PartContentType": "application/vnd.ms-excel.richstyles+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBag": {
+        "PartClassName": "RdSupportingPropertyBagPart",
+        "PartContentType": "application/vnd.ms-excel.rdsupportingpropertybag+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBagStructure": {
+        "PartClassName": "RdSupportingPropertyBagStructurePart",
+        "PartContentType": "application/vnd.ms-excel.rdsupportingpropertybagstructure+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueTypes": {
+        "PartClassName": "RdRichValueTypesPart",
+        "PartContentType": "application/vnd.ms-excel.rdrichvaluetypes+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -4088,6 +4243,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
+      },
+      "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment": {
+        "PartClassName": "WorksheetThreadedCommentsPart",
+        "PartContentType": "application/vnd.ms-excel.threadedcomments+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },

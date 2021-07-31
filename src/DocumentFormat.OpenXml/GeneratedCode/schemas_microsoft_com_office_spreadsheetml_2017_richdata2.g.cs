@@ -339,7 +339,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 #pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr(99, "supportingPropertyBags")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class SupportingPropertyBags : OpenXmlCompositeElement
+    public partial class SupportingPropertyBags : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the SupportingPropertyBags class.
@@ -414,6 +414,37 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SupportingPropertyBags>(deep);
+
+        internal SupportingPropertyBags(RdSupportingPropertyBagPart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the RdSupportingPropertyBagPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(RdSupportingPropertyBagPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the RdSupportingPropertyBagPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(RdSupportingPropertyBagPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the RdSupportingPropertyBagPart associated with this element.
+        /// </summary>
+        public RdSupportingPropertyBagPart? RdSupportingPropertyBagPart
+        {
+            get => OpenXmlPart as RdSupportingPropertyBagPart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
     /// <summary>
@@ -431,7 +462,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 #pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr(99, "spbStructures")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class SupportingPropertyBagStructures : OpenXmlCompositeElement
+    public partial class SupportingPropertyBagStructures : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the SupportingPropertyBagStructures class.
@@ -501,6 +532,37 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SupportingPropertyBagStructures>(deep);
+
+        internal SupportingPropertyBagStructures(RdSupportingPropertyBagStructurePart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the RdSupportingPropertyBagStructurePart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(RdSupportingPropertyBagStructurePart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the RdSupportingPropertyBagStructurePart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(RdSupportingPropertyBagStructurePart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the RdSupportingPropertyBagStructurePart associated with this element.
+        /// </summary>
+        public RdSupportingPropertyBagStructurePart? RdSupportingPropertyBagStructurePart
+        {
+            get => OpenXmlPart as RdSupportingPropertyBagStructurePart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
     /// <summary>
@@ -518,7 +580,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 #pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr(99, "arrayData")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class ArrayData : OpenXmlCompositeElement
+    public partial class ArrayData : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the ArrayData class.
@@ -588,6 +650,37 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArrayData>(deep);
+
+        internal ArrayData(RdArrayPart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the RdArrayPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(RdArrayPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the RdArrayPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(RdArrayPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the RdArrayPart associated with this element.
+        /// </summary>
+        public RdArrayPart? RdArrayPart
+        {
+            get => OpenXmlPart as RdArrayPart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
     /// <summary>
@@ -607,7 +700,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 #pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr(99, "richStyleSheet")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class RichStylesheet : OpenXmlCompositeElement
+    public partial class RichStylesheet : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the RichStylesheet class.
@@ -712,6 +805,37 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RichStylesheet>(deep);
+
+        internal RichStylesheet(RichStylesPart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the RichStylesPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(RichStylesPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the RichStylesPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(RichStylesPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the RichStylesPart associated with this element.
+        /// </summary>
+        public RichStylesPart? RichStylesPart
+        {
+            get => OpenXmlPart as RichStylesPart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
     /// <summary>
@@ -730,7 +854,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 #pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr(99, "rvTypesInfo")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class RichValueTypesInfo : OpenXmlCompositeElement
+    public partial class RichValueTypesInfo : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueTypesInfo class.
@@ -820,6 +944,37 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RichValueTypesInfo>(deep);
+
+        internal RichValueTypesInfo(RdRichValueTypesPart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the RdRichValueTypesPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(RdRichValueTypesPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the RdRichValueTypesPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(RdRichValueTypesPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the RdRichValueTypesPart associated with this element.
+        /// </summary>
+        public RdRichValueTypesPart? RdRichValueTypesPart
+        {
+            get => OpenXmlPart as RdRichValueTypesPart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
     /// <summary>

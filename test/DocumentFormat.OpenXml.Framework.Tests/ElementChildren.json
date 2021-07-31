@@ -34685,6 +34685,42 @@
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main"
       },
       {
+        "Name": "rvData",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata"
+      },
+      {
+        "Name": "rvStructures",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata"
+      },
+      {
+        "Name": "arrayData",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2"
+      },
+      {
+        "Name": "richStyleSheet",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2"
+      },
+      {
+        "Name": "rvTypesInfo",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2"
+      },
+      {
+        "Name": "spbStructures",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2"
+      },
+      {
+        "Name": "supportingPropertyBags",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2"
+      },
+      {
+        "Name": "ThreadedComments",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      },
+      {
+        "Name": "personList",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments"
+      },
+      {
         "Name": "taskpanes",
         "Namespace": "http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11"
       },
