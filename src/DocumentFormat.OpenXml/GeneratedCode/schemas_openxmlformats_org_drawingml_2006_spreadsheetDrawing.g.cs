@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -17,7 +19,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
 {
     /// <summary>
     /// <para>Two Cell Anchor Shape Size.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:twoCellAnchor.</para>
     /// </summary>
     /// <remark>
@@ -34,6 +36,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description>ClientData &lt;xdr:clientData></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "twoCellAnchor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TwoCellAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -71,7 +76,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Positioning and Resizing Behaviors</para>
         /// <para>Represents the following attribute in the schema: editAs</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues> EditAs
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "editAs")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues>? EditAs
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues>>();
             set => SetAttribute(value);
@@ -95,15 +106,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker), 1, 1),
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1, 1),
@@ -125,7 +136,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public FromMarker FromMarker
+        public FromMarker? FromMarker
         {
             get => GetElement<FromMarker>();
             set => SetElement(value);
@@ -138,7 +149,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ToMarker ToMarker
+        public ToMarker? ToMarker
         {
             get => GetElement<ToMarker>();
             set => SetElement(value);
@@ -150,7 +161,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>One Cell Anchor Shape Size.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:oneCellAnchor.</para>
     /// </summary>
     /// <remark>
@@ -167,6 +178,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>ClientData &lt;xdr:clientData></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "oneCellAnchor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OneCellAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -213,15 +227,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<Picture>();
             builder.AddChild<ContentPart>();
             builder.AddChild<ClientData>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent), 1, 1),
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1, 1),
@@ -243,7 +257,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public FromMarker FromMarker
+        public FromMarker? FromMarker
         {
             get => GetElement<FromMarker>();
             set => SetElement(value);
@@ -256,7 +270,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public Extent Extent
+        public Extent? Extent
         {
             get => GetElement<Extent>();
             set => SetElement(value);
@@ -268,7 +282,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Absolute Anchor Shape Size.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:absoluteAnchor.</para>
     /// </summary>
     /// <remark>
@@ -285,6 +299,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>ClientData &lt;xdr:clientData></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "absoluteAnchor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AbsoluteAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -331,15 +348,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<Picture>();
             builder.AddChild<ContentPart>();
             builder.AddChild<ClientData>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Position), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent), 1, 1),
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1, 1),
@@ -361,7 +378,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public Position Position
+        public Position? Position
         {
             get => GetElement<Position>();
             set => SetElement(value);
@@ -374,7 +391,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public Extent Extent
+        public Extent? Extent
         {
             get => GetElement<Extent>();
             set => SetElement(value);
@@ -386,7 +403,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Shape.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:sp.</para>
     /// </summary>
     /// <remark>
@@ -398,6 +415,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>TextBody &lt;xdr:txBody></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "sp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -435,7 +455,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Reference to Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        public StringValue Macro
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "macro")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Macro
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -445,7 +471,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Text Link</para>
         /// <para>Represents the following attribute in the schema: textlink</para>
         /// </summary>
-        public StringValue TextLink
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "textlink")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? TextLink
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -455,7 +487,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Lock Text Flag</para>
         /// <para>Represents the following attribute in the schema: fLocksText</para>
         /// </summary>
-        public BooleanValue LockText
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fLocksText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? LockText
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -465,7 +503,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Publish to Server Flag</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        public BooleanValue Published
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fPublished")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -484,7 +528,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "textlink", a => a.TextLink)
 .AddAttribute(0, "fLocksText", a => a.LockText)
 .AddAttribute(0, "fPublished", a => a.Published);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1, 1),
@@ -501,7 +545,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualShapeProperties NonVisualShapeProperties
+        public NonVisualShapeProperties? NonVisualShapeProperties
         {
             get => GetElement<NonVisualShapeProperties>();
             set => SetElement(value);
@@ -514,7 +558,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -527,7 +571,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ShapeStyle ShapeStyle
+        public ShapeStyle? ShapeStyle
         {
             get => GetElement<ShapeStyle>();
             set => SetElement(value);
@@ -540,7 +584,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public TextBody TextBody
+        public TextBody? TextBody
         {
             get => GetElement<TextBody>();
             set => SetElement(value);
@@ -552,7 +596,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Group Shape.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:grpSp.</para>
     /// </summary>
     /// <remark>
@@ -568,6 +612,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart &lt;xdr14:contentPart></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "grpSp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -613,11 +660,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<ConnectionShape>();
             builder.AddChild<Picture>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties), 1, 1),
-                new CompositeParticle(ParticleType.Choice, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1, 1),
@@ -636,7 +683,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualGroupShapeProperties NonVisualGroupShapeProperties
+        public NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
             get => GetElement<NonVisualGroupShapeProperties>();
             set => SetElement(value);
@@ -649,7 +696,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public GroupShapeProperties GroupShapeProperties
+        public GroupShapeProperties? GroupShapeProperties
         {
             get => GetElement<GroupShapeProperties>();
             set => SetElement(value);
@@ -661,7 +708,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Graphic Frame.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:graphicFrame.</para>
     /// </summary>
     /// <remark>
@@ -672,6 +719,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Graphic &lt;a:graphic></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "graphicFrame")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
         /// <summary>
@@ -709,7 +759,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Reference To Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        public StringValue Macro
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "macro")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Macro
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -719,7 +775,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Publish to Server Flag</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        public BooleanValue Published
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fPublished")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -735,7 +797,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<GraphicFrame>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "fPublished", a => a.Published);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform), 1, 1),
@@ -751,7 +813,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualGraphicFrameProperties NonVisualGraphicFrameProperties
+        public NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
             get => GetElement<NonVisualGraphicFrameProperties>();
             set => SetElement(value);
@@ -764,7 +826,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public Transform Transform
+        public Transform? Transform
         {
             get => GetElement<Transform>();
             set => SetElement(value);
@@ -777,7 +839,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Graphic Graphic
+        public DocumentFormat.OpenXml.Drawing.Graphic? Graphic
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
             set => SetElement(value);
@@ -789,7 +851,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Connection Shape.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cxnSp.</para>
     /// </summary>
     /// <remark>
@@ -800,6 +862,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>ShapeStyle &lt;xdr:style></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "cxnSp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConnectionShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -837,7 +902,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Reference to Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        public StringValue Macro
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "macro")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Macro
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -847,7 +918,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Publish to Server Flag</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        public BooleanValue Published
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fPublished")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -863,7 +940,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<ConnectionShape>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "fPublished", a => a.Published);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1, 1),
@@ -879,7 +956,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualConnectionShapeProperties NonVisualConnectionShapeProperties
+        public NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
         {
             get => GetElement<NonVisualConnectionShapeProperties>();
             set => SetElement(value);
@@ -892,7 +969,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -905,7 +982,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ShapeStyle ShapeStyle
+        public ShapeStyle? ShapeStyle
         {
             get => GetElement<ShapeStyle>();
             set => SetElement(value);
@@ -917,7 +994,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the Picture Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:pic.</para>
     /// </summary>
     /// <remark>
@@ -929,6 +1006,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>ShapeStyle &lt;xdr:style></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "pic")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -966,7 +1046,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Reference To Custom Function</para>
         /// <para>Represents the following attribute in the schema: macro</para>
         /// </summary>
-        public StringValue Macro
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "macro")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Macro
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -976,7 +1062,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Publish to Server Flag</para>
         /// <para>Represents the following attribute in the schema: fPublished</para>
         /// </summary>
-        public BooleanValue Published
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fPublished")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Published
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -993,7 +1085,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<Picture>()
 .AddAttribute(0, "macro", a => a.Macro)
 .AddAttribute(0, "fPublished", a => a.Published);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill), 1, 1),
@@ -1009,7 +1101,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualPictureProperties NonVisualPictureProperties
+        public NonVisualPictureProperties? NonVisualPictureProperties
         {
             get => GetElement<NonVisualPictureProperties>();
             set => SetElement(value);
@@ -1022,7 +1114,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public BlipFill BlipFill
+        public BlipFill? BlipFill
         {
             get => GetElement<BlipFill>();
             set => SetElement(value);
@@ -1035,7 +1127,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -1048,7 +1140,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ShapeStyle ShapeStyle
+        public ShapeStyle? ShapeStyle
         {
             get => GetElement<ShapeStyle>();
             set => SetElement(value);
@@ -1060,7 +1152,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the ContentPart Class.</para>
-    /// <para>This class is available in Office 2010 or above.</para>
+    /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:contentPart.</para>
     /// </summary>
     /// <remark>
@@ -1072,6 +1164,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList &lt;xdr14:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "contentPart")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContentPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1106,23 +1201,35 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue RelationshipId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>bwMode, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>bwMode, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bwMode")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
             set => SetAttribute(value);
@@ -1146,7 +1253,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
@@ -1162,7 +1269,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties ExcelNonVisualContentPartShapeProperties
+        public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties? ExcelNonVisualContentPartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
             set => SetElement(value);
@@ -1175,7 +1282,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties ApplicationNonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
             set => SetElement(value);
@@ -1188,7 +1295,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D Transform2D
+        public DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
             set => SetElement(value);
@@ -1201,7 +1308,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
             set => SetElement(value);
@@ -1213,7 +1320,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Worksheet Drawing.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:wsDr.</para>
     /// </summary>
     /// <remark>
@@ -1224,6 +1331,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>AbsoluteAnchor &lt;xdr:absoluteAnchor></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "wsDr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WorksheetDrawing : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1264,11 +1374,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<TwoCellAnchor>();
             builder.AddChild<OneCellAnchor>();
             builder.AddChild<AbsoluteAnchor>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor), 1, 1),
@@ -1306,7 +1416,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <summary>
         /// Gets the DrawingsPart associated with this element.
         /// </summary>
-        public DrawingsPart DrawingsPart
+        public DrawingsPart? DrawingsPart
         {
             get => OpenXmlPart as DrawingsPart;
             internal set => OpenXmlPart = value;
@@ -1315,7 +1425,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Non-Visual Properties for a Shape.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:nvSpPr.</para>
     /// </summary>
     /// <remark>
@@ -1325,6 +1435,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>NonVisualShapeDrawingProperties &lt;xdr:cNvSpPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "nvSpPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1364,7 +1477,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(18, "nvSpPr");
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualShapeDrawingProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties), 1, 1)
@@ -1378,7 +1491,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualDrawingProperties NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
@@ -1391,7 +1504,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualShapeDrawingProperties NonVisualShapeDrawingProperties
+        public NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
         {
             get => GetElement<NonVisualShapeDrawingProperties>();
             set => SetElement(value);
@@ -1403,7 +1516,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Shape Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:spPr.</para>
     /// </summary>
     /// <remark>
@@ -1426,6 +1539,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "spPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1463,7 +1579,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bwMode")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
             set => SetAttribute(value);
@@ -1493,20 +1615,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -1517,9 +1639,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
@@ -1538,7 +1660,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
+        public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
             set => SetElement(value);
@@ -1550,7 +1672,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the ShapeStyle Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:style.</para>
     /// </summary>
     /// <remark>
@@ -1562,6 +1684,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.FontReference &lt;a:fontRef></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "style")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1603,7 +1728,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1, 1),
@@ -1619,7 +1744,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.LineReference LineReference
+        public DocumentFormat.OpenXml.Drawing.LineReference? LineReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
             set => SetElement(value);
@@ -1632,7 +1757,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.FillReference FillReference
+        public DocumentFormat.OpenXml.Drawing.FillReference? FillReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
             set => SetElement(value);
@@ -1645,7 +1770,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.EffectReference EffectReference
+        public DocumentFormat.OpenXml.Drawing.EffectReference? EffectReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
             set => SetElement(value);
@@ -1658,7 +1783,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.FontReference FontReference
+        public DocumentFormat.OpenXml.Drawing.FontReference? FontReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
             set => SetElement(value);
@@ -1670,7 +1795,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Shape Text Body.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:txBody.</para>
     /// </summary>
     /// <remark>
@@ -1681,6 +1806,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Paragraph &lt;a:p></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "txBody")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1721,7 +1849,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
@@ -1736,7 +1864,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.BodyProperties BodyProperties
+        public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             set => SetElement(value);
@@ -1749,7 +1877,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ListStyle ListStyle
+        public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
             set => SetElement(value);
@@ -1761,7 +1889,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Non-Visual Properties for a Connection Shape.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:nvCxnSpPr.</para>
     /// </summary>
     /// <remark>
@@ -1771,6 +1899,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>NonVisualConnectorShapeDrawingProperties &lt;xdr:cNvCxnSpPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "nvCxnSpPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1810,7 +1941,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(18, "nvCxnSpPr");
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualConnectorShapeDrawingProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties), 1, 1)
@@ -1824,7 +1955,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualDrawingProperties NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
@@ -1837,7 +1968,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualConnectorShapeDrawingProperties NonVisualConnectorShapeDrawingProperties
+        public NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
         {
             get => GetElement<NonVisualConnectorShapeDrawingProperties>();
             set => SetElement(value);
@@ -1849,7 +1980,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Non-Visual Properties for a Picture.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:nvPicPr.</para>
     /// </summary>
     /// <remark>
@@ -1859,6 +1990,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>NonVisualPictureDrawingProperties &lt;xdr:cNvPicPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "nvPicPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1898,7 +2032,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(18, "nvPicPr");
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualPictureDrawingProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties), 1, 1)
@@ -1912,7 +2046,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualDrawingProperties NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
@@ -1925,7 +2059,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualPictureDrawingProperties NonVisualPictureDrawingProperties
+        public NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
             get => GetElement<NonVisualPictureDrawingProperties>();
             set => SetElement(value);
@@ -1937,7 +2071,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Picture Fill.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:blipFill.</para>
     /// </summary>
     /// <remark>
@@ -1949,6 +2083,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Stretch &lt;a:stretch></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "blipFill")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1986,7 +2123,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Rotate With Shape</para>
         /// <para>Represents the following attribute in the schema: rotWithShape</para>
         /// </summary>
-        public BooleanValue RotateWithShape
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rotWithShape")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? RotateWithShape
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2002,13 +2145,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
             builder.AddElement<BlipFill>()
 .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tile), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Stretch), 1, 1)
@@ -2024,7 +2167,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Blip Blip
+        public DocumentFormat.OpenXml.Drawing.Blip? Blip
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>();
             set => SetElement(value);
@@ -2037,7 +2180,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.SourceRectangle SourceRectangle
+        public DocumentFormat.OpenXml.Drawing.SourceRectangle? SourceRectangle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
             set => SetElement(value);
@@ -2049,7 +2192,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Non-Visual Properties for a Graphic Frame.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:nvGraphicFramePr.</para>
     /// </summary>
     /// <remark>
@@ -2059,6 +2202,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>NonVisualGraphicFrameDrawingProperties &lt;xdr:cNvGraphicFramePr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "nvGraphicFramePr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2098,7 +2244,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(18, "nvGraphicFramePr");
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualGraphicFrameDrawingProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties), 1, 1)
@@ -2112,7 +2258,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualDrawingProperties NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
@@ -2125,7 +2271,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties
+        public NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
             get => GetElement<NonVisualGraphicFrameDrawingProperties>();
             set => SetElement(value);
@@ -2137,7 +2283,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>2D Transform for Graphic Frames.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:xfrm.</para>
     /// </summary>
     /// <remark>
@@ -2147,6 +2293,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extents &lt;a:ext></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "xfrm")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Transform : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2184,7 +2333,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        public Int32Value Rotation
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rot")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2194,7 +2349,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Horizontal Flip</para>
         /// <para>Represents the following attribute in the schema: flipH</para>
         /// </summary>
-        public BooleanValue HorizontalFlip
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "flipH")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? HorizontalFlip
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2204,7 +2365,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Vertical Flip</para>
         /// <para>Represents the following attribute in the schema: flipV</para>
         /// </summary>
-        public BooleanValue VerticalFlip
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "flipV")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? VerticalFlip
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2220,7 +2387,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "rot", a => a.Rotation)
 .AddAttribute(0, "flipH", a => a.HorizontalFlip)
 .AddAttribute(0, "flipV", a => a.VerticalFlip);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
@@ -2234,7 +2401,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Offset Offset
+        public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
             set => SetElement(value);
@@ -2247,7 +2414,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Extents Extents
+        public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
             set => SetElement(value);
@@ -2259,9 +2426,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Column).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:col.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "col")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnId : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2297,9 +2467,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Column Offset.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:colOff.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "colOff")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnOffset : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2335,9 +2508,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Row Offset.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:rowOff.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "rowOff")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowOffset : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2373,9 +2549,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Row.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:row.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "row")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowId : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2411,7 +2590,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Starting Anchor Point.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:from.</para>
     /// </summary>
     /// <remark>
@@ -2423,6 +2602,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>RowOffset &lt;xdr:rowOff></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "from")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FromMarker : MarkerType
     {
         /// <summary>
@@ -2460,7 +2642,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "from");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
@@ -2475,7 +2657,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Ending Anchor Point.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:to.</para>
     /// </summary>
     /// <remark>
@@ -2487,6 +2669,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>RowOffset &lt;xdr:rowOff></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "to")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ToMarker : MarkerType
     {
         /// <summary>
@@ -2524,7 +2709,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(18, "to");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
@@ -2539,7 +2724,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the MarkerType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -2600,7 +2785,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ColumnId ColumnId
+        public ColumnId? ColumnId
         {
             get => GetElement<ColumnId>();
             set => SetElement(value);
@@ -2613,7 +2798,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public ColumnOffset ColumnOffset
+        public ColumnOffset? ColumnOffset
         {
             get => GetElement<ColumnOffset>();
             set => SetElement(value);
@@ -2626,7 +2811,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public RowId RowId
+        public RowId? RowId
         {
             get => GetElement<RowId>();
             set => SetElement(value);
@@ -2639,7 +2824,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public RowOffset RowOffset
+        public RowOffset? RowOffset
         {
             get => GetElement<RowOffset>();
             set => SetElement(value);
@@ -2648,9 +2833,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Client Data.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:clientData.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "clientData")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ClientData : OpenXmlLeafElement
     {
         /// <summary>
@@ -2664,7 +2852,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Locks With Sheet Flag</para>
         /// <para>Represents the following attribute in the schema: fLocksWithSheet</para>
         /// </summary>
-        public BooleanValue LockWithSheet
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fLocksWithSheet")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? LockWithSheet
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2674,7 +2868,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Prints With Sheet Flag</para>
         /// <para>Represents the following attribute in the schema: fPrintsWithSheet</para>
         /// </summary>
-        public BooleanValue PrintWithSheet
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fPrintsWithSheet")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? PrintWithSheet
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2695,9 +2895,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the Extent Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:ext.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "ext")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Extent : OpenXmlLeafElement
     {
         /// <summary>
@@ -2711,7 +2914,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Extent Length</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        public Int64Value Cx
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "cx")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int64Value? Cx
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -2721,7 +2930,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Extent Width</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        public Int64Value Cy
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "cy")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int64Value? Cy
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -2750,9 +2965,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Position.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:pos.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "pos")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Position : OpenXmlLeafElement
     {
         /// <summary>
@@ -2766,7 +2984,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>X-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        public Int64Value X
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "x")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int64Value? X
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -2776,7 +3000,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Y-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        public Int64Value Y
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "y")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int64Value? Y
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -2805,7 +3035,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Non-Visual Drawing Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cNvPr.</para>
     /// </summary>
     /// <remark>
@@ -2816,6 +3046,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "cNvPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2853,7 +3086,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2863,7 +3102,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2873,7 +3118,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>descr</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        public StringValue Description
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "descr")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2883,7 +3134,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "hidden")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2893,7 +3150,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2918,7 +3181,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)
 .AddAttribute(0, "title", a => a.Title);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
@@ -2934,7 +3197,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
+        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             set => SetElement(value);
@@ -2947,7 +3210,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
+        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             set => SetElement(value);
@@ -2960,7 +3223,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
+        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             set => SetElement(value);
@@ -2972,7 +3235,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Connection Non-Visual Shape Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cNvSpPr.</para>
     /// </summary>
     /// <remark>
@@ -2982,6 +3245,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "cNvSpPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3019,7 +3285,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Text Box</para>
         /// <para>Represents the following attribute in the schema: txBox</para>
         /// </summary>
-        public BooleanValue TextBox
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "txBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? TextBox
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3033,7 +3305,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<NonVisualShapeDrawingProperties>()
 .AddAttribute(0, "txBox", a => a.TextBox);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
@@ -3047,7 +3319,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ShapeLocks ShapeLocks
+        public DocumentFormat.OpenXml.Drawing.ShapeLocks? ShapeLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
             set => SetElement(value);
@@ -3060,7 +3332,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
@@ -3072,7 +3344,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Non-Visual Connector Shape Drawing Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cNvCxnSpPr.</para>
     /// </summary>
     /// <remark>
@@ -3084,6 +3356,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "cNvCxnSpPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3125,7 +3400,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.StartConnection), 0, 1),
@@ -3141,7 +3416,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks ConnectionShapeLocks
+        public DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks? ConnectionShapeLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
             set => SetElement(value);
@@ -3154,7 +3429,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.StartConnection StartConnection
+        public DocumentFormat.OpenXml.Drawing.StartConnection? StartConnection
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>();
             set => SetElement(value);
@@ -3167,7 +3442,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.EndConnection EndConnection
+        public DocumentFormat.OpenXml.Drawing.EndConnection? EndConnection
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>();
             set => SetElement(value);
@@ -3180,7 +3455,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
@@ -3192,7 +3467,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Non-Visual Picture Drawing Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cNvPicPr.</para>
     /// </summary>
     /// <remark>
@@ -3202,6 +3477,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "cNvPicPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3239,7 +3517,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>preferRelativeResize</para>
         /// <para>Represents the following attribute in the schema: preferRelativeResize</para>
         /// </summary>
-        public BooleanValue PreferRelativeResize
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "preferRelativeResize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? PreferRelativeResize
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -3253,7 +3537,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
             builder.AddElement<NonVisualPictureDrawingProperties>()
 .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList), 0, 1)
@@ -3267,7 +3551,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.PictureLocks PictureLocks
+        public DocumentFormat.OpenXml.Drawing.PictureLocks? PictureLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>();
             set => SetElement(value);
@@ -3280,7 +3564,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList NonVisualPicturePropertiesExtensionList
+        public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList? NonVisualPicturePropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
             set => SetElement(value);
@@ -3292,7 +3576,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Non-Visual Graphic Frame Drawing Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cNvGraphicFramePr.</para>
     /// </summary>
     /// <remark>
@@ -3302,6 +3586,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "cNvGraphicFramePr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3341,7 +3628,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(18, "cNvGraphicFramePr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
@@ -3355,7 +3642,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks GraphicFrameLocks
+        public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks? GraphicFrameLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             set => SetElement(value);
@@ -3368,7 +3655,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
@@ -3380,7 +3667,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Non-Visual Group Shape Drawing Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cNvGrpSpPr.</para>
     /// </summary>
     /// <remark>
@@ -3390,6 +3677,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "cNvGrpSpPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3429,7 +3719,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(18, "cNvGrpSpPr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList), 0, 1)
@@ -3443,7 +3733,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.GroupShapeLocks GroupShapeLocks
+        public DocumentFormat.OpenXml.Drawing.GroupShapeLocks? GroupShapeLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             set => SetElement(value);
@@ -3456,7 +3746,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList NonVisualGroupDrawingShapePropsExtensionList
+        public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
             set => SetElement(value);
@@ -3468,7 +3758,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Non-Visual Properties for a Group Shape.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:nvGrpSpPr.</para>
     /// </summary>
     /// <remark>
@@ -3478,6 +3768,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>NonVisualGroupShapeDrawingProperties &lt;xdr:cNvGrpSpPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "nvGrpSpPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3517,7 +3810,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(18, "nvGrpSpPr");
             builder.AddChild<NonVisualDrawingProperties>();
             builder.AddChild<NonVisualGroupShapeDrawingProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties), 1, 1)
@@ -3531,7 +3824,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualDrawingProperties NonVisualDrawingProperties
+        public NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<NonVisualDrawingProperties>();
             set => SetElement(value);
@@ -3544,7 +3837,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
         /// </remark>
-        public NonVisualGroupShapeDrawingProperties NonVisualGroupShapeDrawingProperties
+        public NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
         {
             get => GetElement<NonVisualGroupShapeDrawingProperties>();
             set => SetElement(value);
@@ -3556,7 +3849,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Group Shape Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:grpSpPr.</para>
     /// </summary>
     /// <remark>
@@ -3575,6 +3868,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(18, "grpSpPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3612,7 +3908,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bwMode")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
             set => SetAttribute(value);
@@ -3638,12 +3940,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -3653,9 +3955,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
@@ -3673,7 +3975,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.TransformGroup TransformGroup
+        public DocumentFormat.OpenXml.Drawing.TransformGroup? TransformGroup
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();
             set => SetElement(value);

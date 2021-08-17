@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>current element with event handlers hooked</returns>
         public static OpenXmlElement SetEventHandler(this OpenXmlElement e, Func<OpenXmlElement, OpenXmlElement> attachHandlerTo)
         {
-            if (e == null)
+            if (e is null)
             {
                 return e;
             }
@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>Part root element of current element, null if root element is not of OpenXmlPartRootElement.</returns>
         public static OpenXmlPartRootElement PartRootElement(this OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -53,13 +53,13 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>index of pass-in element, 0 for root/orphan element</returns>
         public static int Index(this OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
 
             // root/orphan element itself
-            if (element.Parent == null)
+            if (element.Parent is null)
             {
                 return 0;
             }
@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>path to specified element</returns>
         public static string Path(this OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>name of element in <w:p> format</returns>
         public static string GetFullName(this OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             foreach (var attribute in e.ParsedState.Attributes)
             {
-                yield return new OpenXmlAttribute(attribute);
+                yield return new OpenXmlAttribute(attribute.Property.QName, attribute.Value?.InnerText);
             }
         }
 
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>XName of pass-in OpenXmlElement</returns>
         public static XName GetXName(this OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -145,7 +145,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>XElement for specified OpenXmlElement</returns>
         public static XElement ToXElement(this OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -155,18 +155,18 @@ namespace DocumentFormat.OpenXml.Tests
 
         public static OpenXmlElement SetIgnorable(this OpenXmlElement element, string prefix)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
 
             var mc = element.MCAttributes;
-            if (mc == null)
+            if (mc is null)
             {
                 mc = new MarkupCompatibilityAttributes();
             }
 
-            if (mc.Ignorable == null)
+            if (mc.Ignorable is null)
             {
                 mc.Ignorable = prefix;
             }
@@ -181,18 +181,18 @@ namespace DocumentFormat.OpenXml.Tests
 
         public static OpenXmlElement SetMustUnderstand(this OpenXmlElement element, string prefix)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
 
             var mc = element.MCAttributes;
-            if (mc == null)
+            if (mc is null)
             {
                 mc = new MarkupCompatibilityAttributes();
             }
 
-            if (mc.MustUnderstand == null)
+            if (mc.MustUnderstand is null)
             {
                 mc.MustUnderstand = prefix;
             }
@@ -207,18 +207,18 @@ namespace DocumentFormat.OpenXml.Tests
 
         public static OpenXmlElement SetPreserveAttributes(this OpenXmlElement element, string qualified)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
 
             var mc = element.MCAttributes;
-            if (mc == null)
+            if (mc is null)
             {
                 mc = new MarkupCompatibilityAttributes();
             }
 
-            if (mc.PreserveAttributes == null)
+            if (mc.PreserveAttributes is null)
             {
                 mc.PreserveAttributes = qualified;
             }
@@ -233,18 +233,18 @@ namespace DocumentFormat.OpenXml.Tests
 
         public static OpenXmlElement SetPreserveElements(this OpenXmlElement element, string qualified)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
 
             var mc = element.MCAttributes;
-            if (mc == null)
+            if (mc is null)
             {
                 mc = new MarkupCompatibilityAttributes();
             }
 
-            if (mc.PreserveElements == null)
+            if (mc.PreserveElements is null)
             {
                 mc.PreserveElements = qualified;
             }
@@ -259,18 +259,18 @@ namespace DocumentFormat.OpenXml.Tests
 
         public static OpenXmlElement SetProcessContent(this OpenXmlElement element, string qualified)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
 
             var mc = element.MCAttributes;
-            if (mc == null)
+            if (mc is null)
             {
                 mc = new MarkupCompatibilityAttributes();
             }
 
-            if (mc.ProcessContent == null)
+            if (mc.ProcessContent is null)
             {
                 mc.ProcessContent = qualified;
             }
@@ -285,12 +285,12 @@ namespace DocumentFormat.OpenXml.Tests
 
         public static AlternateContentChoice SetRequires(this AlternateContentChoice choice, string prefix)
         {
-            if (choice == null)
+            if (choice is null)
             {
                 throw new ArgumentNullException(nameof(choice));
             }
 
-            if (choice.Requires == null)
+            if (choice.Requires is null)
             {
                 choice.Requires = prefix;
             }

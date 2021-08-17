@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Xml;
@@ -24,17 +25,16 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal XmlPath(OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
 
             PartUri = element.GetPartUri();
-
             XPath = TryBuildXPath(GetElements(element), out var namespaces);
 
 #pragma warning disable CS0618 // Type or member is obsolete
-            if (namespaces == null)
+            if (namespaces is null)
             {
                 Namespaces = ReadOnlyWrapper.Instance;
                 NamespacesDefinitions = Cached.Array<string>();
@@ -56,12 +56,18 @@ namespace DocumentFormat.OpenXml
         /// <param name="part">The OpenXmlPart.</param>
         internal XmlPath(OpenXmlPart part)
         {
-            if (part == null)
+            if (part is null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
 
             PartUri = part.Uri;
+            XPath = string.Empty;
+
+#pragma warning disable CS0618 // Type or member is obsolete
+            Namespaces = ReadOnlyWrapper.Instance;
+            NamespacesDefinitions = Cached.Array<string>();
+#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         /// <summary>
@@ -84,16 +90,16 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the internal URI of the part relative to the package root.
         /// </summary>
-        public Uri PartUri { get; }
+        public Uri? PartUri { get; }
 
         /// <summary>
         /// Gets XmlPath information of the specified OpenXmlElement.
         /// </summary>
         /// <param name="element">The OpenXmlElement.</param>
         /// <returns>XmlPath to this element from root element.</returns>
-        internal static XmlPath GetXPath(OpenXmlElement element)
+        internal static XmlPath? GetXPath(OpenXmlElement? element)
         {
-            if (element == null)
+            if (element is null)
             {
                 return null;
             }
@@ -101,9 +107,9 @@ namespace DocumentFormat.OpenXml
             return new XmlPath(element);
         }
 
-        internal static XmlPath GetXPath(OpenXmlPart part)
+        internal static XmlPath? GetXPath(OpenXmlPart? part)
         {
-            if (part == null)
+            if (part is null)
             {
                 return null;
             }
@@ -111,7 +117,7 @@ namespace DocumentFormat.OpenXml
             return new XmlPath(part);
         }
 
-        private static string TryBuildXPath(Stack<OpenXmlElement> elements, out XmlNamespaceManager namespaces)
+        private static string TryBuildXPath(Stack<OpenXmlElement> elements, [MaybeNullWhen(false)] out XmlNamespaceManager namespaces)
         {
             if (elements.Count == 0)
             {
@@ -124,7 +130,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (var element in elements)
             {
-                xpath.Append("/");
+                xpath.Append('/');
 
                 if (element is OpenXmlMiscNode)
                 {
@@ -142,30 +148,30 @@ namespace DocumentFormat.OpenXml
                         }
 
                         xpath.Append(element.Prefix);
-                        xpath.Append(":");
+                        xpath.Append(':');
                     }
                     else if (!string.IsNullOrEmpty(element.NamespaceUri))
                     {
                         xpath.Append(element.NamespaceUri);
-                        xpath.Append(":");
+                        xpath.Append(':');
                     }
 
                     xpath.Append(element.LocalName);
 
-                    xpath.Append("[");
+                    xpath.Append('[');
                     xpath.Append(element.GetXPathIndex());
-                    xpath.Append("]");
+                    xpath.Append(']');
                 }
             }
 
             return xpath.ToString();
         }
 
-        private static Stack<OpenXmlElement> GetElements(OpenXmlElement element)
+        private static Stack<OpenXmlElement> GetElements(OpenXmlElement? element)
         {
             var elements = new Stack<OpenXmlElement>();
 
-            while (element != null)
+            while (element is not null)
             {
                 elements.Push(element);
                 element = element.Parent;
@@ -187,9 +193,9 @@ namespace DocumentFormat.OpenXml
 
             public IDictionary<string, string> GetNamespacesInScope(XmlNamespaceScope scope) => _other.GetNamespacesInScope(scope);
 
-            public string LookupNamespace(string prefix) => _other.LookupNamespace(prefix);
+            public string? LookupNamespace(string prefix) => _other.LookupNamespace(prefix);
 
-            public string LookupPrefix(string namespaceName) => _other.LookupPrefix(namespaceName);
+            public string? LookupPrefix(string namespaceName) => _other.LookupPrefix(namespaceName);
         }
     }
 }

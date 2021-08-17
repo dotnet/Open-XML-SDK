@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -12,16 +11,6 @@ namespace DocumentFormat.OpenXml.Packaging
     public class DataPartReferenceRelationship : ReferenceRelationship
     {
         /// <summary>
-        /// Initializes a new instance of the DataPartReferenceRelationship class.
-        /// </summary>
-        /// <remarks>
-        /// A call to Initialize() must be made after calling this constructor.
-        /// </remarks>
-        internal DataPartReferenceRelationship()
-        {
-        }
-
-        /// <summary>
         /// Initializes a new instance of the DataPartReferenceRelationship class using the supplied
         /// DataPart, relationship type, and relationship ID.
         /// </summary>
@@ -29,7 +18,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="relationshipType">The relationship type of the reference relationship.</param>
         /// <param name="id">The relationship ID.</param>
         internal protected DataPartReferenceRelationship(DataPart dataPart, string relationshipType, string id)
-            : base(dataPart?.Uri, false, relationshipType, id)
+            : base(dataPart.Uri, false, relationshipType, id)
         {
             DataPart = dataPart ?? throw new ArgumentNullException(nameof(dataPart));
         }
@@ -50,64 +39,59 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="dataPart">The target DataPart of the reference relationship.</param>
         /// <param name="relationshipType">The relationship type of the reference relationship.</param>
         /// <param name="id">The relationship ID.</param>
-        internal void Initialize(OpenXmlPartContainer containter, DataPart dataPart, string relationshipType, string id)
+        internal DataPartReferenceRelationship(OpenXmlPartContainer containter, DataPart dataPart, string relationshipType, string id)
+            : base(dataPart.Uri, false, relationshipType, id)
         {
-            Debug.Assert(containter != null);
-            Debug.Assert(dataPart != null);
-
-            Initialize(dataPart.Uri, false, relationshipType, id);
             Container = containter;
             DataPart = dataPart;
         }
 
         internal static bool IsDataPartReferenceRelationship(string relationshipType)
-        {
-            switch (relationshipType)
+            => relationshipType switch
             {
-                case MediaReferenceRelationship.RelationshipTypeConst:
-                case AudioReferenceRelationship.RelationshipTypeConst:
-                case VideoReferenceRelationship.RelationshipTypeConst:
-                    return true;
-
-                default:
-                    return false;
-            }
-        }
+                MediaReferenceRelationship.RelationshipTypeConst or AudioReferenceRelationship.RelationshipTypeConst or VideoReferenceRelationship.RelationshipTypeConst => true,
+                _ => false,
+            };
 
         /// <summary>
         /// Creates a new instance of the DataPartRelationship class based on the relationship type.
         /// </summary>
-        /// <param name="containter">The owner <see cref="OpenXmlPartContainer"/> that holds the <see cref="ReferenceRelationship"/>.</param>
+        /// <param name="container">The owner <see cref="OpenXmlPartContainer"/> that holds the <see cref="ReferenceRelationship"/>.</param>
         /// <param name="dataPart">The target DataPart of the reference relationship.</param>
         /// <param name="relationshipType">The relationship type of the reference relationship.</param>
         /// <param name="id">The relationship ID.</param>
-        internal static DataPartReferenceRelationship CreateDataPartReferenceRelationship(OpenXmlPartContainer containter, DataPart dataPart, string relationshipType, string id)
+        internal static DataPartReferenceRelationship Create(OpenXmlPartContainer container, DataPart dataPart, string relationshipType, string id)
         {
-            Debug.Assert(containter != null);
-            Debug.Assert(dataPart != null);
-
-            DataPartReferenceRelationship dataPartReferenceRelationship;
-
-            switch (relationshipType)
+            DataPartReferenceRelationship dataPartReferenceRelationship = relationshipType switch
             {
-                case MediaReferenceRelationship.RelationshipTypeConst:
-                    dataPartReferenceRelationship = new MediaReferenceRelationship((MediaDataPart)dataPart, id);
-                    break;
-
-                case AudioReferenceRelationship.RelationshipTypeConst:
-                    dataPartReferenceRelationship = new AudioReferenceRelationship((MediaDataPart)dataPart, id);
-                    break;
-
-                case VideoReferenceRelationship.RelationshipTypeConst:
-                    dataPartReferenceRelationship = new VideoReferenceRelationship((MediaDataPart)dataPart, id);
-                    break;
-
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(relationshipType));
-            }
-
-            dataPartReferenceRelationship.Container = containter;
+                MediaReferenceRelationship.RelationshipTypeConst => new MediaReferenceRelationship((MediaDataPart)dataPart, id),
+                AudioReferenceRelationship.RelationshipTypeConst => new AudioReferenceRelationship((MediaDataPart)dataPart, id),
+                VideoReferenceRelationship.RelationshipTypeConst => new VideoReferenceRelationship((MediaDataPart)dataPart, id),
+                _ => throw new ArgumentOutOfRangeException(nameof(relationshipType)),
+            };
+            dataPartReferenceRelationship.Container = container;
             return dataPartReferenceRelationship;
+        }
+
+        internal static string GetRelationshipType<T>()
+            where T : DataPartReferenceRelationship
+        {
+            if (typeof(T) == typeof(VideoReferenceRelationship))
+            {
+                return VideoReferenceRelationship.RelationshipTypeConst;
+            }
+            else if (typeof(T) == typeof(AudioReferenceRelationship))
+            {
+                return AudioReferenceRelationship.RelationshipTypeConst;
+            }
+            else if (typeof(T) == typeof(MediaReferenceRelationship))
+            {
+                return MediaReferenceRelationship.RelationshipTypeConst;
+            }
+            else
+            {
+                throw new InvalidOperationException(ExceptionMessages.DataPartReferenceIsNotAllowed);
+            }
         }
     }
 }

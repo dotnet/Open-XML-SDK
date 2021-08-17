@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -14,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 {
     /// <summary>
     /// <para>Defines the CustomXsn Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:customXsn.</para>
     /// </summary>
     /// <remark>
@@ -26,6 +28,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     ///   <item><description>Scope &lt;ntns:xsnScope></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(39, "customXsn")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomXsn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -67,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             builder.AddChild<CachedView>();
             builder.AddChild<OpenByDefault>();
             builder.AddChild<Scope>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.CachedView), 1, 1),
@@ -83,7 +88,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public XsnLocation XsnLocation
+        public XsnLocation? XsnLocation
         {
             get => GetElement<XsnLocation>();
             set => SetElement(value);
@@ -96,7 +101,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public CachedView CachedView
+        public CachedView? CachedView
         {
             get => GetElement<CachedView>();
             set => SetElement(value);
@@ -109,7 +114,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public OpenByDefault OpenByDefault
+        public OpenByDefault? OpenByDefault
         {
             get => GetElement<OpenByDefault>();
             set => SetElement(value);
@@ -122,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public Scope Scope
+        public Scope? Scope
         {
             get => GetElement<Scope>();
             set => SetElement(value);
@@ -134,9 +139,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 
     /// <summary>
     /// <para>Defines the XsnLocation Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnLocation.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(39, "xsnLocation")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class XsnLocation : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -171,9 +179,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 
     /// <summary>
     /// <para>Defines the CachedView Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:cached.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(39, "cached")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CachedView : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -208,9 +219,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 
     /// <summary>
     /// <para>Defines the OpenByDefault Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:openByDefault.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(39, "openByDefault")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OpenByDefault : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -245,9 +259,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 
     /// <summary>
     /// <para>Defines the Scope Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnScope.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(39, "xsnScope")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Scope : OpenXmlLeafTextElement
     {
         /// <summary>

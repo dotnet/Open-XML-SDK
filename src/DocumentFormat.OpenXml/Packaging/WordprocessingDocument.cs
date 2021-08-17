@@ -30,13 +30,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         internal sealed override string MainPartRelationshipType => MainDocumentPart.RelationshipTypeConstant;
 
-        private static Dictionary<WordprocessingDocumentType, string> _validMainPartContentType;
+        private static Dictionary<WordprocessingDocumentType, string>? _validMainPartContentType;
 
         private static Dictionary<WordprocessingDocumentType, string> MainPartContentTypes
         {
             get
             {
-                if (_validMainPartContentType == null)
+                if (_validMainPartContentType is null)
                 {
                     _validMainPartContentType = new Dictionary<WordprocessingDocumentType, string>
                     {
@@ -59,8 +59,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates a WordprocessingDocument.
         /// </summary>
+        [Obsolete(ObsoleteMessage)]
         protected WordprocessingDocument()
             : base()
+        {
+        }
+
+        private WordprocessingDocument(in PackageLoader loader, OpenSettings settings)
+            : base(loader, settings)
         {
         }
 
@@ -88,7 +94,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private void UpdateDocumentTypeFromContentType()
         {
-            if (MainPartContentType == null)
+            if (MainPartContentType is null)
             {
                 throw new InvalidOperationException();
             }
@@ -149,20 +155,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of WordprocessingDocument.</returns>
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static WordprocessingDocument Create(string path, WordprocessingDocumentType type, bool autoSave)
-        {
-            if (string.IsNullOrEmpty(path))
+            => new WordprocessingDocument(PackageLoader.CreateCore(path), new OpenSettings { AutoSave = autoSave })
             {
-                throw new ArgumentNullException(nameof(path));
-            }
-
-            WordprocessingDocument doc = new WordprocessingDocument();
-            doc.DocumentType = type;
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = autoSave;
-            doc.MainPartContentType = MainPartContentTypes[type];
-            doc.CreateCore(path);
-            return doc;
-        }
+                DocumentType = type,
+                MainPartContentType = MainPartContentTypes[type],
+            };
 
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the IO stream.
@@ -174,15 +171,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static WordprocessingDocument Create(Stream stream, WordprocessingDocumentType type, bool autoSave)
-        {
-            WordprocessingDocument doc = new WordprocessingDocument();
-            doc.DocumentType = type;
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = autoSave;
-            doc.MainPartContentType = MainPartContentTypes[type];
-            doc.CreateCore(stream);
-            return doc;
-        }
+            => new WordprocessingDocument(PackageLoader.CreateCore(stream), new OpenSettings { AutoSave = autoSave })
+            {
+                DocumentType = type,
+                MainPartContentType = MainPartContentTypes[type],
+            };
 
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the specified package.
@@ -194,15 +187,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static WordprocessingDocument Create(Package package, WordprocessingDocumentType type, bool autoSave)
-        {
-            WordprocessingDocument doc = new WordprocessingDocument();
-            doc.DocumentType = type;
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = autoSave;
-            doc.MainPartContentType = MainPartContentTypes[type];
-            doc.CreateCore(package);
-            return doc;
-        }
+            => new WordprocessingDocument(PackageLoader.CreateCore(package), new OpenSettings { AutoSave = autoSave })
+            {
+                DocumentType = type,
+                MainPartContentType = MainPartContentTypes[type],
+            };
 
         /// <summary>
         /// Creates an editable WordprocessingDocument from a template, opened on
@@ -237,7 +226,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The new WordprocessingDocument based on and linked to the template.</returns>
         public static WordprocessingDocument CreateFromTemplate(string path, bool isTemplateAttached)
         {
-            if (path == null)
+            if (path is null)
             {
                 throw new ArgumentNullException(nameof(path));
             }
@@ -271,13 +260,16 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     // Create a relative or absolute external relationship to the template.
                     // TODO: Check whether relative URIs are universally supported. They work in Office 2010.
-                    MainDocumentPart mainDocumentPart = document.MainDocumentPart;
-                    DocumentSettingsPart documentSettingsPart = mainDocumentPart.DocumentSettingsPart;
-                    ExternalRelationship relationship = documentSettingsPart.AddExternalRelationship(
-                        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate",
-                        new Uri(path, UriHelper.RelativeOrAbsolute));
-                    documentSettingsPart.Settings.Append(
-                        new DocumentFormat.OpenXml.Wordprocessing.AttachedTemplate() { Id = relationship.Id });
+                    var documentSettingsPart = document.MainDocumentPart?.DocumentSettingsPart;
+
+                    if (documentSettingsPart is not null)
+                    {
+                        var relationship = documentSettingsPart.AddExternalRelationship(
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate",
+                            new Uri(path, UriHelper.RelativeOrAbsolute));
+                        documentSettingsPart.Settings.Append(
+                            new Wordprocessing.AttachedTemplate() { Id = relationship.Id });
+                    }
                 }
 
                 // We are done, so save and return.
@@ -337,15 +329,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            WordprocessingDocument doc = new WordprocessingDocument();
+            var doc = new WordprocessingDocument(PackageLoader.OpenCore(path, isEditable), openSettings);
 
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = openSettings.AutoSave;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-            doc.MaxCharactersInPart = openSettings.MaxCharactersInPart;
-
-            doc.OpenCore(path, isEditable);
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
                 doc.UpdateDocumentTypeFromContentType();
@@ -378,13 +363,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            WordprocessingDocument doc = new WordprocessingDocument();
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = openSettings.AutoSave;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-            doc.MaxCharactersInPart = openSettings.MaxCharactersInPart;
-            doc.OpenCore(stream, isEditable);
+            var doc = new WordprocessingDocument(PackageLoader.OpenCore(stream, isEditable), openSettings);
+
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
                 doc.UpdateDocumentTypeFromContentType();
@@ -416,13 +396,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            WordprocessingDocument doc = new WordprocessingDocument();
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = openSettings.AutoSave;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-            doc.MaxCharactersInPart = openSettings.MaxCharactersInPart;
-            doc.OpenCore(package);
+            var doc = new WordprocessingDocument(PackageLoader.OpenCore(package), openSettings);
+
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
                 doc.UpdateDocumentTypeFromContentType();
@@ -469,7 +444,7 @@ namespace DocumentFormat.OpenXml.Packaging
             DocumentType = newType;
             MainPartContentType = MainPartContentTypes[newType];
 
-            if (MainDocumentPart == null)
+            if (MainDocumentPart is null)
             {
                 return;
             }
@@ -499,46 +474,25 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (relationshipType == null)
+            if (relationshipType is null)
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
 
-            switch (relationshipType)
+            return relationshipType switch
             {
-                case MainDocumentPart.RelationshipTypeConstant:
-                    return new MainDocumentPart();
-
-                case CoreFilePropertiesPart.RelationshipTypeConstant:
-                    return new CoreFilePropertiesPart();
-
-                case ExtendedFilePropertiesPart.RelationshipTypeConstant:
-                    return new ExtendedFilePropertiesPart();
-
-                case CustomFilePropertiesPart.RelationshipTypeConstant:
-                    return new CustomFilePropertiesPart();
-
-                case ThumbnailPart.RelationshipTypeConstant:
-                    return new ThumbnailPart();
-
-                case DigitalSignatureOriginPart.RelationshipTypeConstant:
-                    return new DigitalSignatureOriginPart();
-
-                case QuickAccessToolbarCustomizationsPart.RelationshipTypeConstant:
-                    return new QuickAccessToolbarCustomizationsPart();
-
-                case RibbonExtensibilityPart.RelationshipTypeConstant:
-                    return new RibbonExtensibilityPart();
-
-                // Fix for O15:#258840
-                case RibbonAndBackstageCustomizationsPart.RelationshipTypeConstant:
-                    return new RibbonAndBackstageCustomizationsPart();
-
-                case WebExTaskpanesPart.RelationshipTypeConstant:
-                    return new WebExTaskpanesPart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
+                MainDocumentPart.RelationshipTypeConstant => new MainDocumentPart(),
+                CoreFilePropertiesPart.RelationshipTypeConstant => new CoreFilePropertiesPart(),
+                ExtendedFilePropertiesPart.RelationshipTypeConstant => new ExtendedFilePropertiesPart(),
+                CustomFilePropertiesPart.RelationshipTypeConstant => new CustomFilePropertiesPart(),
+                ThumbnailPart.RelationshipTypeConstant => new ThumbnailPart(),
+                DigitalSignatureOriginPart.RelationshipTypeConstant => new DigitalSignatureOriginPart(),
+                QuickAccessToolbarCustomizationsPart.RelationshipTypeConstant => new QuickAccessToolbarCustomizationsPart(),
+                RibbonExtensibilityPart.RelationshipTypeConstant => new RibbonExtensibilityPart(),
+                RibbonAndBackstageCustomizationsPart.RelationshipTypeConstant => new RibbonAndBackstageCustomizationsPart(),
+                WebExTaskpanesPart.RelationshipTypeConstant => new WebExTaskpanesPart(),
+                _ => throw new ArgumentOutOfRangeException(nameof(relationshipType)),
+            };
         }
 
         /// <summary>
@@ -554,7 +508,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <remarks>Mainly used for adding not-fixed content type part - ImagePart, etc</remarks>
         public override T AddNewPart<T>(string contentType, string id)
         {
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
@@ -693,12 +647,12 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <inheritdoc />
-        public override OpenXmlPart RootPart => MainDocumentPart;
+        public override OpenXmlPart? RootPart => MainDocumentPart;
 
         /// <summary>
         /// Gets the MainDocumentPart of the WordprocessingDocument.
         /// </summary>
-        public MainDocumentPart MainDocumentPart
+        public MainDocumentPart? MainDocumentPart
         {
             get { return GetSubPartOfType<MainDocumentPart>(); }
         }
@@ -706,7 +660,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the WordprocessingDocument.
         /// </summary>
-        public CoreFilePropertiesPart CoreFilePropertiesPart
+        public CoreFilePropertiesPart? CoreFilePropertiesPart
         {
             get { return GetSubPartOfType<CoreFilePropertiesPart>(); }
         }
@@ -714,7 +668,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ExtendedFilePropertiesPart of the WordprocessingDocument.
         /// </summary>
-        public ExtendedFilePropertiesPart ExtendedFilePropertiesPart
+        public ExtendedFilePropertiesPart? ExtendedFilePropertiesPart
         {
             get { return GetSubPartOfType<ExtendedFilePropertiesPart>(); }
         }
@@ -722,7 +676,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CustomFilePropertiesPart of the WordprocessingDocument.
         /// </summary>
-        public CustomFilePropertiesPart CustomFilePropertiesPart
+        public CustomFilePropertiesPart? CustomFilePropertiesPart
         {
             get { return GetSubPartOfType<CustomFilePropertiesPart>(); }
         }
@@ -730,18 +684,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ThumbnailPart of the WordprocessingDocument.
         /// </summary>
-        public ThumbnailPart ThumbnailPart
+        public ThumbnailPart? ThumbnailPart
         {
-            get
-            {
-                return GetSubPartOfType<ThumbnailPart>();
-            }
+            get { return GetSubPartOfType<ThumbnailPart>(); }
         }
 
         /// <summary>
         /// Gets the DigitalSignatureOriginPart of the WordprocessingDocument.
         /// </summary>
-        public DigitalSignatureOriginPart DigitalSignatureOriginPart
+        public DigitalSignatureOriginPart? DigitalSignatureOriginPart
         {
             get { return GetSubPartOfType<DigitalSignatureOriginPart>(); }
         }
@@ -749,7 +700,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the RibbonExtensibilityPart of the WordprocessingDocument.
         /// </summary>
-        public RibbonExtensibilityPart RibbonExtensibilityPart
+        public RibbonExtensibilityPart? RibbonExtensibilityPart
         {
             get { return GetSubPartOfType<RibbonExtensibilityPart>(); }
         }
@@ -757,7 +708,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the QuickAccessToolbarCustomizationsPart of the WordprocessingDocument.
         /// </summary>
-        public QuickAccessToolbarCustomizationsPart QuickAccessToolbarCustomizationsPart
+        public QuickAccessToolbarCustomizationsPart? QuickAccessToolbarCustomizationsPart
         {
             get { return GetSubPartOfType<QuickAccessToolbarCustomizationsPart>(); }
         }
@@ -766,7 +717,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the RibbonAndBackstageCustomizationsPart of the WordprocessingDocument, only available in Office2010.
         /// </summary>
         [OfficeAvailability(FileFormatVersions.Office2010)]
-        public RibbonAndBackstageCustomizationsPart RibbonAndBackstageCustomizationsPart
+        public RibbonAndBackstageCustomizationsPart? RibbonAndBackstageCustomizationsPart
         {
             get { return GetSubPartOfType<RibbonAndBackstageCustomizationsPart>(); }
         }
@@ -775,7 +726,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WebExTaskpanesPart of the WordprocessingDocument, only available in Office2013.
         /// </summary>
         [OfficeAvailability(FileFormatVersions.Office2013)]
-        public WebExTaskpanesPart WebExTaskpanesPart
+        public WebExTaskpanesPart? WebExTaskpanesPart
         {
             get { return GetSubPartOfType<WebExTaskpanesPart>(); }
         }

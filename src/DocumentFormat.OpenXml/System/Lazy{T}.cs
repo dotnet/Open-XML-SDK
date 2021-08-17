@@ -13,16 +13,16 @@ namespace DocumentFormat.OpenXml
     {
         private readonly object _sync = new object();
 
-        private T _value;
-        private Func<T> _factory;
+        private T? _value;
+        private Func<T?>? _factory;
         private bool _isValueCreated;
 
-        public Lazy(Func<T> factory, bool threadSafe)
+        public Lazy(Func<T?> factory, bool threadSafe)
         {
             _factory = factory;
         }
 
-        public Lazy(Func<T> factory)
+        public Lazy(Func<T?> factory)
         {
             _factory = factory;
         }
@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml
                 {
                     lock(_sync)
                     {
-                        if(!_isValueCreated)
+                        if(!_isValueCreated && _factory is not null)
                         {
                             _value = _factory();
                             _isValueCreated = true;
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                return _value;
+                return _value!;
             }
         }
     }

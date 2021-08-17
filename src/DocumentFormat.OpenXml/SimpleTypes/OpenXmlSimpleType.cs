@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="source">The source OpenXmlSimpleType.</param>
         protected OpenXmlSimpleType(OpenXmlSimpleType source)
         {
-            if (source == null)
+            if (source is null)
             {
                 throw new ArgumentNullException(nameof(source));
             }
@@ -35,19 +35,19 @@ namespace DocumentFormat.OpenXml
         /// Gets or sets the internal raw text value.
         /// DO NOT use this property. Only for OpenXmlSimpleType.cs internal use.
         /// </summary>
-        protected string TextValue { get; set; }
+        protected string? TextValue { get; set; }
 
         /// <summary>
         /// Gets a value indicating whether the underneath text value is a valid value.
         /// </summary>
-        public virtual bool HasValue => TextValue != null;
+        public virtual bool HasValue => TextValue is not null;
 
         internal abstract bool IsValid { get; }
 
         /// <summary>
         /// Gets or sets the inner XML text.
         /// </summary>
-        public virtual string InnerText
+        public virtual string? InnerText
         {
             get => TextValue;
 
@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml
         /// Returns a String that represents the current value.
         /// </summary>
         /// <returns>A String that represents the current value. </returns>
-        public override string ToString()
+        public override string? ToString()
         {
             return InnerText;
         }
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="xmlAttribute">The OpenXmlSimpleType instance.</param>
         /// <returns>The converted string value.</returns>
-        public static implicit operator string(OpenXmlSimpleType xmlAttribute)
+        public static implicit operator string?(OpenXmlSimpleType? xmlAttribute)
         {
             return xmlAttribute?.InnerText;
         }

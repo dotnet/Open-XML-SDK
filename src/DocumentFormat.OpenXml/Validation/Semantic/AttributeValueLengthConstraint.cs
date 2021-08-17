@@ -26,19 +26,25 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _minLength = minLength;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
-            var element = context.Stack.Current.Element;
-            var attribute = element.ParsedState.Attributes[_attribute];
+            var element = context.Stack.Current?.Element;
 
-            //if the attribute is omitted, semantic validation will do nothing
-            if (!attribute.HasValue)
+            if (element is null)
             {
                 return null;
             }
 
-            string attributeValue = attribute.Value.InnerText ?? string.Empty;
-            string subMsg = null;
+            var attribute = element.ParsedState.Attributes[_attribute];
+
+            //if the attribute is omitted, semantic validation will do nothing
+            if (attribute.Value is null)
+            {
+                return null;
+            }
+
+            var attributeValue = attribute.Value.InnerText ?? string.Empty;
+            var subMsg = default(string);
 
             if (attributeValue.Length < _minLength)
             {
@@ -49,7 +55,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 subMsg = SR.Format(ValidationResources.Sem_MaxLengthConstraintFailed, _maxLength);
             }
 
-            if (subMsg == null)
+            if (subMsg is null)
             {
                 return null;
             }

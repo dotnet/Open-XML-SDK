@@ -7,10 +7,10 @@ namespace DocumentFormat.OpenXml
 {
     internal class MiscAttrContainer
     {
-        internal List<OpenXmlAttribute> ExtendedAttributesField { get; set; }
+        internal List<OpenXmlAttribute>? ExtendedAttributesField { get; set; }
 
-        internal MarkupCompatibilityAttributes _mcAttributes { get; set; }
+        internal MarkupCompatibilityAttributes? _mcAttributes { get; set; }
 
-        internal List<KeyValuePair<string, string>> _nsMappings { get; set; }
+        internal List<KeyValuePair<string, string>>? _nsMappings { get; set; }
     }
 }

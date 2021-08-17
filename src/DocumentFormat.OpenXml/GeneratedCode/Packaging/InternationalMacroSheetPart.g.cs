@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -43,7 +45,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the DrawingsPart of the InternationalMacroSheetPart
         /// </summary>
-        public DrawingsPart DrawingsPart => GetSubPartOfType<DrawingsPart>();
+        public DrawingsPart? DrawingsPart => GetSubPartOfType<DrawingsPart>();
 
         /// <summary>
         /// Gets the EmbeddedObjectParts of the InternationalMacroSheetPart
@@ -82,7 +84,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the WorksheetCommentsPart of the InternationalMacroSheetPart
         /// </summary>
-        public WorksheetCommentsPart WorksheetCommentsPart => GetSubPartOfType<WorksheetCommentsPart>();
+        public WorksheetCommentsPart? WorksheetCommentsPart => GetSubPartOfType<WorksheetCommentsPart>();
 
         /// <summary>
         /// Adds a CustomPropertyPart to the InternationalMacroSheetPart
@@ -118,7 +120,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomPropertyPart AddCustomPropertyPart(CustomPropertyPartType partType, string id)
         {
             var contentType = CustomPropertyPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomPropertyPart(contentType, id);
         }
@@ -131,7 +133,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomPropertyPart AddCustomPropertyPart(CustomPropertyPartType partType)
         {
             var contentType = CustomPropertyPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomPropertyPart(contentType);
         }

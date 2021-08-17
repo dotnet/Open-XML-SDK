@@ -19,10 +19,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The validation context.</param>
         public static void Validate(ValidationContext validationContext)
         {
-            Debug.Assert(validationContext != null);
-            Debug.Assert(validationContext.Stack.Current.Element != null);
+            var theElement = validationContext.Stack.Current?.Element;
 
-            OpenXmlElement theElement = validationContext.Stack.Current.Element;
+            if (theElement is null)
+            {
+                return;
+            }
 
             Debug.Assert(!(theElement is OpenXmlUnknownElement));
             Debug.Assert(!(theElement is OpenXmlMiscNode));
@@ -68,7 +70,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(!(theElement is AlternateContentChoice));
                 Debug.Assert(!(theElement is AlternateContentFallback));
 
-                if (theElement.Metadata.Particle != null)
+                if (theElement.Metadata.Particle is not null)
                 {
                     // composite element
                     ValidateCompositeComplexType(validationContext);
@@ -89,7 +91,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The validation context.</param>
         private static void ValidateAttributes(ValidationContext validationContext)
         {
-            var element = validationContext.Stack.Current.Element;
+            var element = validationContext.Stack.Current?.Element;
+
+            if (element is null)
+            {
+                return;
+            }
 
             ValidationErrorInfo errorInfo;
 
@@ -122,7 +129,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
         }
 
-        private static void ValidateValue(ValidationContext validationContext, ReadOnlyArray<IValidator> validators, OpenXmlSimpleType value, AttributeMetadata state, bool isAttribute)
+        private static void ValidateValue(ValidationContext validationContext, ReadOnlyArray<IValidator> validators, OpenXmlSimpleType? value, AttributeMetadata state, bool isAttribute)
         {
             var errors = validationContext.Errors.Count;
 
@@ -146,10 +153,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         private static void ValidateEmptyComplexType(ValidationContext validationContext)
         {
-            OpenXmlLeafElement leafElement = (OpenXmlLeafElement)validationContext.Stack.Current.Element;
+            if (validationContext.Stack.Current?.Element is not OpenXmlLeafElement leafElement)
+            {
+                return;
+            }
+
             ValidationErrorInfo errorInfo;
 
-            if (leafElement.ShadowElement != null)
+            if (leafElement.ShadowElement is not null)
             {
                 foreach (var child in leafElement.ShadowElement.ChildElements)
                 {
@@ -168,7 +179,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         private static void ValidateEmptyRootComplexType(ValidationContext validationContext)
         {
-            var element = (OpenXmlCompositeElement)validationContext.Stack.Current.Element;
+            if (validationContext.Stack.Current?.Element is not OpenXmlCompositeElement element)
+            {
+                return;
+            }
+
             ValidationErrorInfo errorInfo;
 
             foreach (var child in element.ChildElements)
@@ -190,10 +205,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // first check whether there are invalid children under this OpenXmlLeafTextElement.
             ValidateEmptyComplexType(validationContext);
 
-            var element = (OpenXmlLeafTextElement)validationContext.Stack.Current.Element;
+            if (validationContext.Stack.Current?.Element is not OpenXmlLeafTextElement element)
+            {
+                return;
+            }
+
             var state = new LeafAccessor(element);
 
-            SchemaTypeValidator.ValidateValue(validationContext, element.ParsedState.Metadata.Validators, state.Value, state, false);
+            ValidateValue(validationContext, element.ParsedState.Metadata.Validators, state.Value, state, false);
         }
 
         /// <summary>
@@ -214,8 +233,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 case ParticleType.Choice:
                 case ParticleType.Sequence:
                 case ParticleType.Group:
-                    ParticleValidator particleValidator = (ParticleValidator)particleConstraint.ParticleValidator;
-                    particleValidator.Validate(validationContext);
+                    var particleValidator = (ParticleValidator?)particleConstraint.ParticleValidator;
+                    particleValidator?.Validate(validationContext);
                     break;
 
                 case ParticleType.Invalid:
@@ -242,9 +261,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             public override string PropertyName => "Value";
 
-            public override string Name => _element.LocalName;
-
-            public override byte NamespaceId => _element.NamespaceId;
+            public override OpenXmlQualifiedName QName => _element.QName;
 
             public override ReadOnlyArray<IValidator> Validators => _element.ParsedState.Metadata.Validators;
 

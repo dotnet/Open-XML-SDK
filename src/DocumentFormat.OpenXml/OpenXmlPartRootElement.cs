@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public abstract class OpenXmlPartRootElement : OpenXmlCompositeElement
     {
-        private bool? _standaloneDeclaration = null;
+        private bool? _standaloneDeclaration;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartRootElement class.
@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlPart">The OpenXmlPart class.</param>
         protected OpenXmlPartRootElement(OpenXmlPart openXmlPart)
         {
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
@@ -112,25 +112,27 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
+            var context = RootElementContext;
+
             // set MaxCharactersInDocument to limit the part size on loading DOM.
-            OpenXmlElementContext.XmlReaderSettings.MaxCharactersInDocument = openXmlPart.MaxCharactersInPart;
+            context.XmlReaderSettings.MaxCharactersInDocument = openXmlPart.MaxCharactersInPart;
 
 #if FEATURE_XML_PROHIBIT_DTD
-            OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
+            context.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
 #else
-            OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
+            context.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
 #endif
 
-            using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(partStream, OpenXmlElementContext.XmlReaderSettings, openXmlPart.OpenXmlPackage.StrictRelationshipFound))
+            using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, context.XmlReaderSettings, openXmlPart.OpenXmlPackage.StrictRelationshipFound))
             {
-                OpenXmlElementContext.MCSettings = openXmlPart.MCSettings;
+                context.MCSettings = openXmlPart.MCSettings;
 
                 xmlReader.Read();
 
                 if (xmlReader.NodeType == XmlNodeType.XmlDeclaration)
                 {
-                    string standaloneAttribute = xmlReader.GetAttribute("standalone");
-                    if (standaloneAttribute != null)
+                    var standaloneAttribute = xmlReader.GetAttribute("standalone");
+                    if (standaloneAttribute is not null)
                     {
                         _standaloneDeclaration = standaloneAttribute.Equals("yes", StringComparison.OrdinalIgnoreCase);
                     }
@@ -149,9 +151,8 @@ namespace DocumentFormat.OpenXml
                     return false;
                 }
 
-                if (!NamespaceIdMap.TryGetNamespaceId(xmlReader.NamespaceURI, out byte nsId) ||
-                    nsId != NamespaceId ||
-                    xmlReader.LocalName != LocalName)
+                var qname = new OpenXmlQualifiedName(xmlReader.NamespaceURI, xmlReader.LocalName);
+                if (!qname.Namespace.IsKnown || !QName.Equals(qname))
                 {
                     var elementQName = new XmlQualifiedName(xmlReader.LocalName, xmlReader.NamespaceURI).ToString();
                     var msg = SR.Format(ExceptionMessages.Fmt_PartRootIsInvalid, elementQName, XmlQualifiedName.ToString());
@@ -162,7 +163,7 @@ namespace DocumentFormat.OpenXml
                 // remove all children and clear all attributes
                 OuterXml = string.Empty;
                 var mcContextPushed = PushMcContext(xmlReader);
-                Load(xmlReader, OpenXmlElementContext.LoadMode);
+                Load(xmlReader, context.LoadMode);
                 if (mcContextPushed)
                 {
                     PopMcContext();
@@ -172,18 +173,12 @@ namespace DocumentFormat.OpenXml
             return true;
         }
 
-        internal void LoadFromPart(OpenXmlPart openXmlPart, OpenXmlLoadMode loadMode)
-        {
-            OpenXmlElementContext.LoadMode = loadMode;
-            LoadFromPart(openXmlPart);
-        }
-
         /// <summary>
         /// Save the DOM into the OpenXML part.
         /// </summary>
         internal void SaveToPart(OpenXmlPart openXmlPart)
         {
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
@@ -202,7 +197,7 @@ namespace DocumentFormat.OpenXml
         /// </param>
         public void Save(Stream stream)
         {
-            XmlWriterSettings settings = new XmlWriterSettings
+            var settings = new XmlWriterSettings
             {
                 CloseOutput = true,
 
@@ -210,9 +205,9 @@ namespace DocumentFormat.OpenXml
                 Encoding = new UTF8Encoding(false),
             };
 
-            using (XmlWriter xmlWriter = XmlWriter.Create(stream, settings))
+            using (var xmlWriter = XmlWriter.Create(stream, settings))
             {
-                if (_standaloneDeclaration != null)
+                if (_standaloneDeclaration is not null)
                 {
                     xmlWriter.WriteStartDocument(_standaloneDeclaration.Value);
                 }
@@ -234,7 +229,7 @@ namespace DocumentFormat.OpenXml
         /// Gets or sets the part that is associated with the DOM tree.
         /// It returns null when the DOM tree is not associated with a part.
         /// </summary>
-        internal OpenXmlPart OpenXmlPart { get; set; }
+        internal OpenXmlPart? OpenXmlPart { get; set; }
 
         /// <summary>
         /// Saves the data in the DOM tree back to the part. This method can
@@ -247,7 +242,7 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidOperationException">Thrown when the tree is not associated with a part.</exception>
         public void Save()
         {
-            if (OpenXmlPart == null)
+            if (OpenXmlPart is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.CannotSaveDomTreeWithoutAssociatedPart);
             }
@@ -263,7 +258,7 @@ namespace DocumentFormat.OpenXml
         /// <exception cref="InvalidOperationException">Thrown when the tree is not associated with a part.</exception>
         public void Reload()
         {
-            if (OpenXmlPart == null)
+            if (OpenXmlPart is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.CannotReloadDomTreeWithoutAssociatedPart);
             }
@@ -279,7 +274,7 @@ namespace DocumentFormat.OpenXml
         /// </param>
         public override void WriteTo(XmlWriter xmlWriter)
         {
-            if (xmlWriter == null)
+            if (xmlWriter is null)
             {
                 throw new ArgumentNullException(nameof(xmlWriter));
             }
@@ -287,19 +282,19 @@ namespace DocumentFormat.OpenXml
             if (XmlParsed)
             {
                 //check the namespace mapping defined in this node first. because till now xmlWriter don't know the mapping defined in the current node.
-                string prefix = LookupNamespaceLocal(NamespaceUri);
+                var prefix = LookupNamespaceLocal(NamespaceUri);
 
                 //if not defined in the current node, try the xmlWriter
-                if (Parent != null && string.IsNullOrEmpty(prefix))
+                if (Parent is not null && prefix.IsNullOrEmpty())
                 {
                     prefix = xmlWriter.LookupPrefix(NamespaceUri);
                 }
 
                 //if xmlWriter didn't find it, it means the node is constructed by user and is not in the tree yet
                 //in this case, we use the predefined prefix
-                if (string.IsNullOrEmpty(prefix))
+                if (prefix.IsNullOrEmpty())
                 {
-                    prefix = NamespaceIdMap.GetNamespacePrefix(NamespaceId);
+                    prefix = QName.Namespace.Prefix;
                 }
 
                 xmlWriter.WriteStartElement(prefix, LocalName, NamespaceUri);
@@ -328,11 +323,11 @@ namespace DocumentFormat.OpenXml
         {
             if (WriteAllNamespaceOnRoot)
             {
-                Dictionary<string, string> namespaces = new Dictionary<string, string>();
+                var namespaces = new Dictionary<string, string>();
 
                 foreach (OpenXmlElement element in Descendants())
                 {
-                    if (element.NamespaceDeclField != null)
+                    if (element.NamespaceDeclField is not null)
                     {
                         foreach (var item in element.NamespaceDeclField)
                         {
@@ -346,9 +341,9 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var namespacePair in namespaces)
                 {
-                    if (!string.IsNullOrEmpty(namespacePair.Key))
+                    if (!namespacePair.Key.IsNullOrEmpty())
                     {
-                        if (NamespaceDeclField != null &&
+                        if (NamespaceDeclField is not null &&
                             string.IsNullOrEmpty(LookupPrefixLocal(namespacePair.Value)) &&
                             string.IsNullOrEmpty(LookupNamespaceLocal(namespacePair.Key)))
                         {

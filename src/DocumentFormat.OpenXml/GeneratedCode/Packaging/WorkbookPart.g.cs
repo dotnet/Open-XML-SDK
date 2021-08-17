@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -38,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public partial class WorkbookPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
-        private DocumentFormat.OpenXml.Spreadsheet.Workbook _rootElement;
+        private DocumentFormat.OpenXml.Spreadsheet.Workbook? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorkbookPart OpenXmlType
@@ -50,12 +52,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CalculationChainPart of the WorkbookPart
         /// </summary>
-        public CalculationChainPart CalculationChainPart => GetSubPartOfType<CalculationChainPart>();
+        public CalculationChainPart? CalculationChainPart => GetSubPartOfType<CalculationChainPart>();
 
         /// <summary>
         /// Gets the CellMetadataPart of the WorkbookPart
         /// </summary>
-        public CellMetadataPart CellMetadataPart => GetSubPartOfType<CellMetadataPart>();
+        public CellMetadataPart? CellMetadataPart => GetSubPartOfType<CellMetadataPart>();
 
         /// <summary>
         /// Gets the ChartsheetParts of the WorkbookPart
@@ -65,7 +67,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ConnectionsPart of the WorkbookPart
         /// </summary>
-        public ConnectionsPart ConnectionsPart => GetSubPartOfType<ConnectionsPart>();
+        public ConnectionsPart? ConnectionsPart => GetSubPartOfType<ConnectionsPart>();
 
         /// <summary>
         /// Gets the CustomDataPropertiesParts of the WorkbookPart
@@ -75,7 +77,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CustomXmlMappingsPart of the WorkbookPart
         /// </summary>
-        public CustomXmlMappingsPart CustomXmlMappingsPart => GetSubPartOfType<CustomXmlMappingsPart>();
+        public CustomXmlMappingsPart? CustomXmlMappingsPart => GetSubPartOfType<CustomXmlMappingsPart>();
 
         /// <summary>
         /// Gets the CustomXmlParts of the WorkbookPart
@@ -90,14 +92,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ExcelAttachedToolbarsPart of the WorkbookPart
         /// </summary>
-        public ExcelAttachedToolbarsPart ExcelAttachedToolbarsPart => GetSubPartOfType<ExcelAttachedToolbarsPart>();
+        public ExcelAttachedToolbarsPart? ExcelAttachedToolbarsPart => GetSubPartOfType<ExcelAttachedToolbarsPart>();
 
         /// <summary>
         /// Gets the ExternalWorkbookParts of the WorkbookPart
         /// </summary>
         public IEnumerable<ExternalWorkbookPart> ExternalWorkbookParts => GetPartsOfType<ExternalWorkbookPart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -120,7 +122,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<MacroSheetPart> MacroSheetParts => GetPartsOfType<MacroSheetPart>();
 
-        internal override OpenXmlPartRootElement PartRootElement => Workbook;
+        internal override OpenXmlPartRootElement? PartRootElement => Workbook;
 
         /// <summary>
         /// Gets the PivotTableCacheDefinitionParts of the WorkbookPart
@@ -133,7 +135,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the SharedStringTablePart of the WorkbookPart
         /// </summary>
-        public SharedStringTablePart SharedStringTablePart => GetSubPartOfType<SharedStringTablePart>();
+        public SharedStringTablePart? SharedStringTablePart => GetSubPartOfType<SharedStringTablePart>();
 
         /// <summary>
         /// Gets the SlicerCacheParts of the WorkbookPart
@@ -149,12 +151,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ThemePart of the WorkbookPart
         /// </summary>
-        public ThemePart ThemePart => GetSubPartOfType<ThemePart>();
+        public ThemePart? ThemePart => GetSubPartOfType<ThemePart>();
 
         /// <summary>
         /// Gets the ThumbnailPart of the WorkbookPart
         /// </summary>
-        public ThumbnailPart ThumbnailPart => GetSubPartOfType<ThumbnailPart>();
+        public ThumbnailPart? ThumbnailPart => GetSubPartOfType<ThumbnailPart>();
 
         /// <summary>
         /// Gets the TimeLineCacheParts of the WorkbookPart
@@ -164,12 +166,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the VbaProjectPart of the WorkbookPart
         /// </summary>
-        public VbaProjectPart VbaProjectPart => GetSubPartOfType<VbaProjectPart>();
+        public VbaProjectPart? VbaProjectPart => GetSubPartOfType<VbaProjectPart>();
 
         /// <summary>
         /// Gets the VolatileDependenciesPart of the WorkbookPart
         /// </summary>
-        public VolatileDependenciesPart VolatileDependenciesPart => GetSubPartOfType<VolatileDependenciesPart>();
+        public VolatileDependenciesPart? VolatileDependenciesPart => GetSubPartOfType<VolatileDependenciesPart>();
 
         /// <summary>
         /// Gets or sets the root element of this part.
@@ -183,7 +185,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Workbook>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -200,17 +202,17 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the WorkbookRevisionHeaderPart of the WorkbookPart
         /// </summary>
-        public WorkbookRevisionHeaderPart WorkbookRevisionHeaderPart => GetSubPartOfType<WorkbookRevisionHeaderPart>();
+        public WorkbookRevisionHeaderPart? WorkbookRevisionHeaderPart => GetSubPartOfType<WorkbookRevisionHeaderPart>();
 
         /// <summary>
         /// Gets the WorkbookStylesPart of the WorkbookPart
         /// </summary>
-        public WorkbookStylesPart WorkbookStylesPart => GetSubPartOfType<WorkbookStylesPart>();
+        public WorkbookStylesPart? WorkbookStylesPart => GetSubPartOfType<WorkbookStylesPart>();
 
         /// <summary>
         /// Gets the WorkbookUserDataPart of the WorkbookPart
         /// </summary>
-        public WorkbookUserDataPart WorkbookUserDataPart => GetSubPartOfType<WorkbookUserDataPart>();
+        public WorkbookUserDataPart? WorkbookUserDataPart => GetSubPartOfType<WorkbookUserDataPart>();
 
         /// <summary>
         /// Gets the WorksheetParts of the WorkbookPart
@@ -251,7 +253,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType, string id)
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomXmlPart(contentType, id);
         }
@@ -264,7 +266,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType)
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomXmlPart(contentType);
         }

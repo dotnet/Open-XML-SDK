@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -14,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 {
     /// <summary>
     /// <para>Defines the ActiveXControlData Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ax:ocx.</para>
     /// </summary>
     /// <remark>
@@ -23,6 +25,9 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     ///   <item><description>ActiveXObjectProperty &lt;ax:ocxPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(35, "ocx")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ActiveXControlData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -63,7 +68,13 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public StringValue ActiveXControlClassId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(35, "classid")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ActiveXControlClassId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -76,7 +87,13 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public StringValue License
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(35, "license")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? License
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -89,7 +106,13 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -102,7 +125,13 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(35, "persistence")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>? Persistence
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
             set => SetAttribute(value);
@@ -124,7 +153,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty), 0, 0)
             };
@@ -136,7 +165,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ActiveXObjectProperty Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ax:ocxPr.</para>
     /// </summary>
     /// <remark>
@@ -146,6 +175,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>SharedComPicture &lt;ax:picture></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(35, "ocxPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -186,7 +218,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public StringValue Name
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(35, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -199,7 +237,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public StringValue Value
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(35, "value")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Value
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -217,9 +261,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(35, "value", a => a.Value);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.SharedComFont), 0, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture), 0, 1)
@@ -234,7 +278,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public SharedComFont SharedComFont
+        public SharedComFont? SharedComFont
         {
             get => GetElement<SharedComFont>();
             set => SetElement(value);
@@ -247,7 +291,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public SharedComPicture SharedComPicture
+        public SharedComPicture? SharedComPicture
         {
             get => GetElement<SharedComPicture>();
             set => SetElement(value);
@@ -259,7 +303,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SharedComFont Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ax:font.</para>
     /// </summary>
     /// <remark>
@@ -268,6 +312,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ActiveXObjectProperty &lt;ax:ocxPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(35, "font")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SharedComFont : OpenXmlCompositeElement
     {
         /// <summary>
@@ -308,7 +355,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(35, "persistence")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>? Persistence
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
             set => SetAttribute(value);
@@ -321,7 +374,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -335,7 +394,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddElement<SharedComFont>()
 .AddAttribute(35, "persistence", a => a.Persistence)
 .AddAttribute(19, "id", a => a.Id);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty), 0, 0)
             };
@@ -347,9 +406,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SharedComPicture Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ax:picture.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(35, "picture")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SharedComPicture : OpenXmlLeafElement
     {
         /// <summary>
@@ -366,7 +428,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

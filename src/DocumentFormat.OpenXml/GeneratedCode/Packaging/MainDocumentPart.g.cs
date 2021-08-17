@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -31,6 +33,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(VbaProjectPart), false, false)]
     [PartConstraint(typeof(WordprocessingCommentsExPart), false, false)]
     [PartConstraint(typeof(WordprocessingPeoplePart), false, false)]
+    [PartConstraint(typeof(WordprocessingCommentsIdsPart), false, false)]
     [PartConstraint(typeof(AlternativeFormatImportPart), false, true)]
     [PartConstraint(typeof(ChartPart), false, true)]
     [PartConstraint(typeof(ExtendedChartPart), false, true)]
@@ -47,7 +50,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public partial class MainDocumentPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
-        private DocumentFormat.OpenXml.Wordprocessing.Document _rootElement;
+        private DocumentFormat.OpenXml.Wordprocessing.Document? _rootElement;
 
         /// <summary>
         /// Creates an instance of the MainDocumentPart OpenXmlType
@@ -74,7 +77,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CustomizationPart of the MainDocumentPart
         /// </summary>
-        public CustomizationPart CustomizationPart => GetSubPartOfType<CustomizationPart>();
+        public CustomizationPart? CustomizationPart => GetSubPartOfType<CustomizationPart>();
 
         /// <summary>
         /// Gets the DiagramColorsParts of the MainDocumentPart
@@ -113,7 +116,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Document>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -130,7 +133,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the DocumentSettingsPart of the MainDocumentPart
         /// </summary>
-        public DocumentSettingsPart DocumentSettingsPart => GetSubPartOfType<DocumentSettingsPart>();
+        public DocumentSettingsPart? DocumentSettingsPart => GetSubPartOfType<DocumentSettingsPart>();
 
         /// <summary>
         /// Gets the EmbeddedControlPersistenceParts of the MainDocumentPart
@@ -150,7 +153,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the EndnotesPart of the MainDocumentPart
         /// </summary>
-        public EndnotesPart EndnotesPart => GetSubPartOfType<EndnotesPart>();
+        public EndnotesPart? EndnotesPart => GetSubPartOfType<EndnotesPart>();
 
         /// <summary>
         /// Gets the ExtendedChartParts of the MainDocumentPart
@@ -160,7 +163,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the FontTablePart of the MainDocumentPart
         /// </summary>
-        public FontTablePart FontTablePart => GetSubPartOfType<FontTablePart>();
+        public FontTablePart? FontTablePart => GetSubPartOfType<FontTablePart>();
 
         /// <summary>
         /// Gets the FooterParts of the MainDocumentPart
@@ -170,12 +173,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the FootnotesPart of the MainDocumentPart
         /// </summary>
-        public FootnotesPart FootnotesPart => GetSubPartOfType<FootnotesPart>();
+        public FootnotesPart? FootnotesPart => GetSubPartOfType<FootnotesPart>();
 
         /// <summary>
         /// Gets the GlossaryDocumentPart of the MainDocumentPart
         /// </summary>
-        public GlossaryDocumentPart GlossaryDocumentPart => GetSubPartOfType<GlossaryDocumentPart>();
+        public GlossaryDocumentPart? GlossaryDocumentPart => GetSubPartOfType<GlossaryDocumentPart>();
 
         /// <summary>
         /// Gets the HeaderParts of the MainDocumentPart
@@ -187,7 +190,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -203,9 +206,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the NumberingDefinitionsPart of the MainDocumentPart
         /// </summary>
-        public NumberingDefinitionsPart NumberingDefinitionsPart => GetSubPartOfType<NumberingDefinitionsPart>();
+        public NumberingDefinitionsPart? NumberingDefinitionsPart => GetSubPartOfType<NumberingDefinitionsPart>();
 
-        internal override OpenXmlPartRootElement PartRootElement => Document;
+        internal override OpenXmlPartRootElement? PartRootElement => Document;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -213,12 +216,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the StyleDefinitionsPart of the MainDocumentPart
         /// </summary>
-        public StyleDefinitionsPart StyleDefinitionsPart => GetSubPartOfType<StyleDefinitionsPart>();
+        public StyleDefinitionsPart? StyleDefinitionsPart => GetSubPartOfType<StyleDefinitionsPart>();
 
         /// <summary>
         /// Gets the StylesWithEffectsPart of the MainDocumentPart
         /// </summary>
-        public StylesWithEffectsPart StylesWithEffectsPart => GetSubPartOfType<StylesWithEffectsPart>();
+        public StylesWithEffectsPart? StylesWithEffectsPart => GetSubPartOfType<StylesWithEffectsPart>();
 
         /// <inheritdoc/>
         internal sealed override string TargetName => "document";
@@ -229,37 +232,42 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ThemePart of the MainDocumentPart
         /// </summary>
-        public ThemePart ThemePart => GetSubPartOfType<ThemePart>();
+        public ThemePart? ThemePart => GetSubPartOfType<ThemePart>();
 
         /// <summary>
         /// Gets the ThumbnailPart of the MainDocumentPart
         /// </summary>
-        public ThumbnailPart ThumbnailPart => GetSubPartOfType<ThumbnailPart>();
+        public ThumbnailPart? ThumbnailPart => GetSubPartOfType<ThumbnailPart>();
 
         /// <summary>
         /// Gets the VbaProjectPart of the MainDocumentPart
         /// </summary>
-        public VbaProjectPart VbaProjectPart => GetSubPartOfType<VbaProjectPart>();
+        public VbaProjectPart? VbaProjectPart => GetSubPartOfType<VbaProjectPart>();
 
         /// <summary>
         /// Gets the WebSettingsPart of the MainDocumentPart
         /// </summary>
-        public WebSettingsPart WebSettingsPart => GetSubPartOfType<WebSettingsPart>();
+        public WebSettingsPart? WebSettingsPart => GetSubPartOfType<WebSettingsPart>();
 
         /// <summary>
         /// Gets the WordprocessingCommentsExPart of the MainDocumentPart
         /// </summary>
-        public WordprocessingCommentsExPart WordprocessingCommentsExPart => GetSubPartOfType<WordprocessingCommentsExPart>();
+        public WordprocessingCommentsExPart? WordprocessingCommentsExPart => GetSubPartOfType<WordprocessingCommentsExPart>();
+
+        /// <summary>
+        /// Gets the WordprocessingCommentsIdsPart of the MainDocumentPart
+        /// </summary>
+        public WordprocessingCommentsIdsPart? WordprocessingCommentsIdsPart => GetSubPartOfType<WordprocessingCommentsIdsPart>();
 
         /// <summary>
         /// Gets the WordprocessingCommentsPart of the MainDocumentPart
         /// </summary>
-        public WordprocessingCommentsPart WordprocessingCommentsPart => GetSubPartOfType<WordprocessingCommentsPart>();
+        public WordprocessingCommentsPart? WordprocessingCommentsPart => GetSubPartOfType<WordprocessingCommentsPart>();
 
         /// <summary>
         /// Gets the WordprocessingPeoplePart of the MainDocumentPart
         /// </summary>
-        public WordprocessingPeoplePart WordprocessingPeoplePart => GetSubPartOfType<WordprocessingPeoplePart>();
+        public WordprocessingPeoplePart? WordprocessingPeoplePart => GetSubPartOfType<WordprocessingPeoplePart>();
 
         /// <summary>
         /// Gets the WordprocessingPrinterSettingsParts of the MainDocumentPart
@@ -352,7 +360,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType, string id)
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomXmlPart(contentType, id);
         }
@@ -365,7 +373,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType)
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomXmlPart(contentType);
         }
@@ -620,6 +628,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new WordprocessingCommentsExPart();
                 case WordprocessingPeoplePart.RelationshipTypeConstant:
                     return new WordprocessingPeoplePart();
+                case WordprocessingCommentsIdsPart.RelationshipTypeConstant:
+                    return new WordprocessingCommentsIdsPart();
                 case AlternativeFormatImportPart.RelationshipTypeConstant:
                     return new AlternativeFormatImportPart();
                 case ChartPart.RelationshipTypeConstant:

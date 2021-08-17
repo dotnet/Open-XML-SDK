@@ -3,11 +3,11 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -19,6 +19,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPackage : OpenXmlPartContainer, IDisposable
     {
+        private protected const string ObsoleteMessage = "The parameterless constructor never initialized anything. This will be removed in future updates.";
+
         private readonly PartExtensionProvider _partExtensionProvider = new PartExtensionProvider();
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
 
@@ -30,160 +32,55 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class.
         /// </summary>
+        [Obsolete(ObsoleteMessage)]
         protected OpenXmlPackage()
             : base()
         {
+            _package = null!;
+            _mainPartContentType = null!;
+            OpenSettings = null!;
+        }
+
+        private protected OpenXmlPackage(in PackageLoader loader, OpenSettings settings)
+            : base()
+        {
+            OpenSettings = new OpenSettings(settings);
+
+            _package = loader.Package;
+
+            if (loader.IsOpen)
+            {
+                Load(_package);
+            }
+            else
+            {
+                _mainPartContentType = null!;
+            }
         }
 
         /// <summary>
         /// Gets the root part for the package.
         /// </summary>
-        public virtual OpenXmlPart RootPart => throw new InvalidDataException(ExceptionMessages.UnknownPackage);
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class using the supplied Open XML package.
-        /// </summary>
-        /// <param name="package">The target package for the OpenXmlPackage class.</param>
-        /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
-        /// <exception cref="OpenXmlPackageException">Thrown when package is not opened with read access.</exception>
-        /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
-        internal void OpenCore(Package package)
-        {
-            if (package == null)
-            {
-                throw new ArgumentNullException(nameof(package));
-            }
-
-            if (package.FileOpenAccess == FileAccess.Write)
-            {
-                throw new OpenXmlPackageException(ExceptionMessages.PackageMustCanBeRead);
-            }
-
-            _package = package;
-
-            Load();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class with access to a specified Open XML package.
-        /// </summary>
-        /// <param name="package">The target package for the OpenXmlPackage class.</param>
-        /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
-        internal void CreateCore(Package package)
-        {
-            _package = package ?? throw new ArgumentNullException(nameof(package));
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class using the supplied I/O stream class.
-        /// </summary>
-        /// <param name="stream">The I/O stream on which to open the package.</param>
-        /// <param name="readWriteMode">Indicates whether or not the package is in read/write mode. False indicates read-only mode.</param>
-        /// <exception cref="ArgumentNullException">Thrown when stream is a null reference.</exception>
-        /// <exception cref="OpenXmlPackageException">Thrown when the specified stream is read-only and <paramref name="readWriteMode"/> is true. The package to open requires write or read/write permission.</exception>
-        internal void OpenCore(Stream stream, bool readWriteMode)
-        {
-            if (stream == null)
-            {
-                throw new ArgumentNullException(nameof(stream));
-            }
-
-            if (!stream.CanRead)
-            {
-                throw new OpenXmlPackageException(ExceptionMessages.StreamAccessModeShouldRead);
-            }
-
-            if (readWriteMode && !stream.CanWrite)
-            {
-                throw new OpenXmlPackageException(ExceptionMessages.StreamAccessModeShouldBeWrite);
-            }
-
-            var packageAccess = readWriteMode ? FileAccess.ReadWrite : FileAccess.Read;
-            var packageMode = readWriteMode ? FileMode.OpenOrCreate : FileMode.Open;
-
-            _package = Package.Open(stream, packageMode, packageAccess);
-
-            Load();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class using the supplied I/O stream class.
-        /// </summary>
-        /// <param name="stream">The I/O stream on which to open the package.</param>
-        /// <exception cref="ArgumentNullException">Thrown when stream is a null reference.</exception>
-        /// <exception cref="OpenXmlPackageException">Thrown when the specified stream is read-only. The package to open requires write or read/write permission.</exception>
-        internal void CreateCore(Stream stream)
-        {
-            if (stream == null)
-            {
-                throw new ArgumentNullException(nameof(stream));
-            }
-
-            if (!stream.CanWrite)
-            {
-                throw new OpenXmlPackageException(ExceptionMessages.StreamAccessModeShouldBeWrite);
-            }
-
-            _package = Package.Open(stream, FileMode.Create, FileAccess.ReadWrite);
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class using the specified file.
-        /// </summary>
-        /// <param name="path">The path and file name of the target package for the OpenXmlPackage.</param>
-        /// <param name="readWriteMode">Indicates whether or not the package is in read/write mode. False for read only mode.</param>
-        /// <exception cref="ArgumentNullException">Thrown when path is a null reference.</exception>
-        /// <exception cref="FileNotFoundException">Thrown when the supplied path cannot be found</exception>
-        internal void OpenCore(string path, bool readWriteMode)
-        {
-            if (path == null)
-            {
-                throw new ArgumentNullException(nameof(path));
-            }
-
-            if (!File.Exists(path))
-            {
-                throw new FileNotFoundException(ExceptionMessages.FileNotFound, path);
-            }
-
-            var packageMode = readWriteMode ? FileAccess.ReadWrite : FileAccess.Read;
-            var packageAccess = readWriteMode ? FileMode.OpenOrCreate : FileMode.Open;
-            var packageShare = readWriteMode ? FileShare.None : FileShare.Read;
-
-            _package = Package.Open(path, packageAccess, packageMode, packageShare);
-
-            Load();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPackage class using the supplied file.
-        /// </summary>
-        /// <param name="path">The path and file name of the target package for the OpenXmlPackage.</param>
-        /// <exception cref="ArgumentNullException">Thrown when path is a null reference.</exception>
-        internal void CreateCore(string path)
-        {
-            if (path == null)
-            {
-                throw new ArgumentNullException(nameof(path));
-            }
-
-            _package = Package.Open(path, FileMode.Create, FileAccess.ReadWrite, FileShare.None);
-        }
+        public virtual OpenXmlPart? RootPart => throw new InvalidDataException(ExceptionMessages.UnknownPackage);
 
         /// <summary>
         /// Loads the package. This method must be called in the constructor of a derived class.
         /// </summary>
-        private void Load()
+        [MemberNotNull(nameof(_mainPartContentType))]
+        private void Load(Package _package)
         {
             try
             {
-                Dictionary<Uri, OpenXmlPart> loadedParts = new Dictionary<Uri, OpenXmlPart>();
-
-                bool hasMainPart = false;
-                RelationshipCollection relationshipCollection = new PackageRelationshipPropertyCollection(_package);
+                var loadedParts = new Dictionary<Uri, OpenXmlPart>();
+                var hasMainPart = false;
+                var relationshipCollection = new PackageRelationshipPropertyCollection(_package);
 
                 // relationCollection.StrictRelationshipFound is true when this collection contains Transitional relationships converted from Strict.
                 StrictRelationshipFound = relationshipCollection.StrictRelationshipFound;
+
+                var handler = OpenSettings.RelationshipErrorHandlerFactory?.Invoke(this);
+
+                handler?.Handle(Package);
 
                 // AutoSave must be false when opening ISO Strict doc as editable.
                 // (Attention: #2545529. Now we disable this code until we finally decide to go with this. Instead, we take an alternative approach that is added in the SavePartContents() method
@@ -195,14 +92,14 @@ namespace DocumentFormat.OpenXml.Packaging
                 //}
 
                 // auto detect document type (main part type for Transitional)
-                foreach (RelationshipProperty relationship in relationshipCollection)
+                foreach (var relationship in relationshipCollection)
                 {
                     if (relationship.RelationshipType == MainPartRelationshipType)
                     {
                         hasMainPart = true;
 
-                        Uri uriTarget = PackUriHelper.ResolvePartUri(new Uri("/", UriKind.Relative), relationship.TargetUri);
-                        PackagePart metroPart = Package.GetPart(uriTarget);
+                        var uriTarget = PackUriHelper.ResolvePartUri(new Uri("/", UriKind.Relative), relationship.TargetUri);
+                        var metroPart = Package.GetPart(uriTarget);
 
                         if (!IsValidMainPartContentType(metroPart.ContentType))
                         {
@@ -214,12 +111,14 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
 
-                if (!hasMainPart)
+                if (!hasMainPart || _mainPartContentType is null)
                 {
                     throw new OpenXmlPackageException(ExceptionMessages.NoMainPart);
                 }
 
                 LoadReferencedPartsAndRelationships(this, null, relationshipCollection, loadedParts);
+
+                handler?.OnPackageLoaded();
             }
             catch (UriFormatException exception)
             {
@@ -241,7 +140,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets a value indicating whether this package contains Transitional relationships converted from Strict.
         /// </summary>
-        public bool StrictRelationshipFound { get; private set; } = false;
+        public bool StrictRelationshipFound { get; private set; }
 
         /// <summary>
         /// Gets the package of the document.
@@ -291,24 +190,23 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets or sets a value that indicates the maximum allowable number of characters in an Open XML part. A zero (0) value indicates that there are no limits on the size
+        /// Gets a value that indicates the maximum allowable number of characters in an Open XML part. A zero (0) value indicates that there are no limits on the size
         /// of the part. A non-zero value specifies the maximum size, in characters.
         /// </summary>
         /// <remarks>
         /// This property allows you to mitigate denial of service attacks where the attacker submits a package with an extremely large Open XML part. By limiting the size of a
         /// part, you can detect the attack and recover reliably.
         /// </remarks>
-        public long MaxCharactersInPart { get; internal set; }
+        public long MaxCharactersInPart => OpenSettings.MaxCharactersInPart;
 
         /// <summary>
         /// Gets a value indicating whether saving the package is supported by calling <see cref="Save"/>. Some platforms (such as .NET Core), have limited support for saving.
         /// If <c>false</c>, in order to save, the document and/or package needs to be fully closed and disposed and then reopened.
         /// </summary>
-        public static bool CanSave { get; } =
 #if FEATURE_PACKAGE_FLUSH
-            true;
+        public static bool CanSave { get; } = true;
 #else
-            false;
+        public static bool CanSave { get; }
 #endif
 
         /// <summary>
@@ -331,7 +229,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (part == null)
+            if (part is null)
             {
                 throw new ArgumentNullException(nameof(part));
             }
@@ -376,14 +274,12 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            MediaDataPart mediaDataPart = new MediaDataPart();
-
-            mediaDataPart.CreateInternal(InternalOpenXmlPackage, contentType, null);
+            var mediaDataPart = new MediaDataPart(InternalOpenXmlPackage, contentType, extension: null);
 
             _dataPartList.AddLast(mediaDataPart);
 
@@ -402,19 +298,17 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (extension == null)
+            if (extension is null)
             {
                 throw new ArgumentNullException(nameof(extension));
             }
 
-            MediaDataPart mediaDataPart = new MediaDataPart();
-
-            mediaDataPart.CreateInternal(InternalOpenXmlPackage, contentType, extension);
+            var mediaDataPart = new MediaDataPart(InternalOpenXmlPackage, contentType, extension);
 
             _dataPartList.AddLast(mediaDataPart);
 
@@ -430,9 +324,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            MediaDataPart mediaDataPart = new MediaDataPart();
-
-            mediaDataPart.CreateInternal(InternalOpenXmlPackage, mediaDataPartType);
+            var mediaDataPart = new MediaDataPart(InternalOpenXmlPackage, mediaDataPartType);
 
             _dataPartList.AddLast(mediaDataPart);
 
@@ -449,7 +341,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (dataPart == null)
+            if (dataPart is null)
             {
                 throw new ArgumentNullException(nameof(dataPart));
             }
@@ -488,7 +380,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            void DefaultValidationEventHandler(object sender, OpenXmlPackageValidationEventArgs e)
+            void DefaultValidationEventHandler(object? sender, OpenXmlPackageValidationEventArgs e)
             {
                 var exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
 
@@ -499,7 +391,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             OpenXmlPackageValidationSettings ValidateSettings(OpenXmlPackageValidationSettings settings)
             {
-                if (settings.GetEventHandler() == null)
+                if (settings.GetEventHandler() is null)
                 {
                     // use default DefaultValidationEventHandler( ) which throw an exception
                     settings.EventHandler += DefaultValidationEventHandler;
@@ -520,7 +412,6 @@ namespace DocumentFormat.OpenXml.Packaging
         [EditorBrowsable(EditorBrowsableState.Never)]
         internal void Validate(OpenXmlPackageValidationSettings validationSettings, FileFormatVersions fileFormatVersions)
         {
-            Debug.Assert(validationSettings != null);
             Debug.Assert(fileFormatVersions.Any());
 
             validationSettings.FileFormat = fileFormatVersions;
@@ -626,10 +517,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 // TODO: Close resources
                 _package.Close();
-                _package = null;
+                _package = null!;
                 ChildrenRelationshipParts.Clear();
                 ReferenceRelationshipList.Clear();
-                _partUriHelper = null;
+                _partUriHelper = null!;
             }
 
             _disposed = true;
@@ -655,7 +546,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (OpenSettings.MarkupCompatibilityProcessSettings == null)
+                if (OpenSettings.MarkupCompatibilityProcessSettings is null)
                 {
                     return new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007);
                 }
@@ -748,9 +639,6 @@ namespace DocumentFormat.OpenXml.Packaging
         // Check if the part content changed and save it if yes.
         private static void TrySavePartContent(OpenXmlPart part)
         {
-            Debug.Assert(part != null);
-            Debug.Assert(part.OpenXmlPackage != null);
-
             // If StrictRelationshipFound is true, we need to update the part anyway.
             if (part.OpenXmlPackage.StrictRelationshipFound)
             {
@@ -763,17 +651,17 @@ namespace DocumentFormat.OpenXml.Packaging
                 relationshipCollection.UpdateRelationshipTypesInPackage();
 
                 // For ISO Strict documents, we read and save the part anyway to translate the contents. The contents are translated when PartRootElement is being loaded.
-                if (part.PartRootElement != null)
+                if (part.PartRootElement is not null)
                 {
-                    SavePartContent(part);
+                    part.PartRootElement.Save();
                 }
             }
             else
             {
                 // For Transitional documents, we only save the 'changed' part.
-                if (IsPartContentChanged(part))
+                if (IsPartContentChanged(part) && part.PartRootElement is not null)
                 {
-                    SavePartContent(part);
+                    part.PartRootElement.Save();
                 }
             }
         }
@@ -781,15 +669,12 @@ namespace DocumentFormat.OpenXml.Packaging
         // Check if the content of a part is changed.
         private static bool IsPartContentChanged(OpenXmlPart part)
         {
-            Debug.Assert(part != null);
-
             // If the root element of the part is loaded,
             // consider the part changed and should be saved.
-            Debug.Assert(part.OpenXmlPackage != null);
             if (!part.IsRootElementLoaded &&
                 part.OpenXmlPackage.MarkupCompatibilityProcessSettings.ProcessMode == MarkupCompatibilityProcessMode.ProcessAllParts)
             {
-                if (part.PartRootElement != null)
+                if (part.PartRootElement is not null)
                 {
                     return true;
                 }
@@ -798,15 +683,6 @@ namespace DocumentFormat.OpenXml.Packaging
             return part.IsRootElementLoaded;
         }
 
-        // Save the content of a part to its stream.
-        private static void SavePartContent(OpenXmlPart part)
-        {
-            Debug.Assert(part != null);
-            Debug.Assert(part.IsRootElementLoaded);
-
-            // Save PartRootElement to the part stream.
-            part.PartRootElement.Save();
-        }
         #endregion
 
         #region internal methods related main part
@@ -864,8 +740,13 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            T mainPart = GetSubPartOfType<T>();
-            Dictionary<string, OpenXmlPart> childParts = new Dictionary<string, OpenXmlPart>(StringComparer.Ordinal);
+            var mainPart = GetSubPartOfType<T>();
+            var childParts = new Dictionary<string, OpenXmlPart>(StringComparer.Ordinal);
+
+            if (mainPart is null)
+            {
+                throw new OpenXmlPackageException(ExceptionMessages.CannotChangeDocumentType);
+            }
 
             try
             {
@@ -959,7 +840,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
@@ -968,7 +849,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
-                    if (GetSubPart(relationshipType) != null)
+                    if (GetSubPart(relationshipType) is not null)
                     {
                         // already have one, cannot add new one.
                         throw new InvalidOperationException();
@@ -990,22 +871,16 @@ namespace DocumentFormat.OpenXml.Packaging
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
-        internal sealed override OpenXmlPackage InternalOpenXmlPackage
-        {
-            get { return this; }
-        }
+        internal sealed override OpenXmlPackage InternalOpenXmlPackage => this;
 
-        internal sealed override OpenXmlPart ThisOpenXmlPart
-        {
-            get { return null; }
-        }
+        internal sealed override OpenXmlPart? ThisOpenXmlPart => null;
 
         // find all reachable parts from the package root, the dictionary also used for cycle reference defense
         internal sealed override void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts)
         {
             ThrowIfObjectDisposed();
 
-            if (reachableParts == null)
+            if (reachableParts is null)
             {
                 throw new ArgumentNullException(nameof(reachableParts));
             }
@@ -1107,7 +982,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="partUri">The part URI.</param>
         /// <returns>Returns null if there is no DataPart with the specified URI.</returns>
-        internal DataPart FindDataPart(Uri partUri)
+        internal DataPart? FindDataPart(Uri partUri)
         {
             foreach (var dataPart in DataParts)
             {
@@ -1223,7 +1098,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The cloned OpenXml package.</returns>
         public OpenXmlPackage Clone(Stream stream, bool isEditable, OpenSettings openSettings)
         {
-            if (stream == null)
+            if (stream is null)
             {
                 throw new ArgumentNullException(nameof(stream));
             }
@@ -1233,7 +1108,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // OpenSettings, i.e., unless the caller explicitly specifies
             // something, we'll later open the clone with this OpenXml
             // package's OpenSettings.
-            if (openSettings == null)
+            if (openSettings is null)
             {
                 openSettings = OpenSettings;
             }
@@ -1325,7 +1200,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The cloned document.</returns>
         public OpenXmlPackage Clone(string path, bool isEditable, OpenSettings openSettings)
         {
-            if (path == null)
+            if (path is null)
             {
                 throw new ArgumentNullException(nameof(path));
             }
@@ -1335,7 +1210,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // OpenSettings, i.e., unless the caller explicitly specifies
             // something, we'll later open the clone with this OpenXml
             // package's OpenSettings.
-            if (openSettings == null)
+            if (openSettings is null)
             {
                 openSettings = OpenSettings;
             }
@@ -1403,7 +1278,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The cloned OpenXml package.</returns>
         public OpenXmlPackage Clone(Package package, OpenSettings openSettings)
         {
-            if (package == null)
+            if (package is null)
             {
                 throw new ArgumentNullException(nameof(package));
             }
@@ -1413,7 +1288,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // OpenSettings, i.e., unless the caller explicitly specifies
             // something, we'll later open the clone with this OpenXml
             // package's OpenSettings.
-            if (openSettings == null)
+            if (openSettings is null)
             {
                 openSettings = OpenSettings;
             }
@@ -1442,10 +1317,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 // package.Flush();
 
                 // Configure OpenSettings.
-                clone.OpenSettings.AutoSave = openSettings.AutoSave;
-                clone.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-                clone.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-                clone.MaxCharactersInPart = openSettings.MaxCharactersInPart;
+                clone.OpenSettings = new OpenSettings(openSettings);
 
                 return clone;
             }

@@ -8,20 +8,20 @@ namespace DocumentFormat.OpenXml.Validation
 {
     internal class ValidationCache
     {
-        private readonly ConcurrentDictionary<ParticleConstraint, ParticleConstraint> _constraints;
+        private readonly ConcurrentDictionary<ParticleConstraint, ParticleConstraint?> _constraints;
 
         public ValidationCache(FileFormatVersions version)
         {
             Version = version;
 
-            _constraints = new ConcurrentDictionary<ParticleConstraint, ParticleConstraint>();
+            _constraints = new ConcurrentDictionary<ParticleConstraint, ParticleConstraint?>();
         }
 
         public FileFormatVersions Version { get; }
 
-        public ParticleConstraint GetConstraint(OpenXmlElement element)
+        public ParticleConstraint? GetConstraint(OpenXmlElement element)
         {
-            var constraint = element.Metadata.Particle.Particle;
+            var constraint = element.Metadata.Particle?.Particle;
 
             if (constraint is null)
             {

@@ -19,10 +19,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private static readonly char[] _whitespaceChars = new char[] { ' ', '\t', '\n', '\r' };
 
-        public static bool Validate(string uriString)
+        public static bool Validate(string? uriString)
         {
             // code copied from XmlConvert.TryToUri()
-            if ((uriString != null) && (uriString.Length > 0))
+            if ((uriString is not null) && (uriString.Length > 0))
             {
                 uriString = uriString.Trim(_whitespaceChars);
 

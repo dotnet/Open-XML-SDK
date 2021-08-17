@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -15,7 +17,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
 {
     /// <summary>
     /// <para>Embedded Custom XML Schema Supplementary Data.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is sl:schemaLibrary.</para>
     /// </summary>
     /// <remark>
@@ -24,6 +26,9 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     ///   <item><description>Schema &lt;sl:schema></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(25, "schemaLibrary")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SchemaLibrary : OpenXmlCompositeElement
     {
         /// <summary>
@@ -62,7 +67,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
             base.ConfigureMetadata(builder);
             builder.SetSchema(25, "schemaLibrary");
             builder.AddChild<Schema>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema), 0, 0)
             };
@@ -74,9 +79,12 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
 
     /// <summary>
     /// <para>Custom XML Schema Reference.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is sl:schema.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(25, "schema")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Schema : OpenXmlLeafElement
     {
         /// <summary>
@@ -93,7 +101,13 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
-        public StringValue Uri
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(25, "uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -106,7 +120,13 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
-        public StringValue ManifestLocation
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(25, "manifestLocation")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ManifestLocation
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -119,7 +139,13 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <remark>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
         /// </remark>
-        public StringValue SchemaLocation
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(25, "schemaLocation")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? SchemaLocation
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

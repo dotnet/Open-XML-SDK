@@ -15,8 +15,6 @@ namespace DocumentFormat.OpenXml
     [DebuggerDisplay("{Text}")]
     public abstract class OpenXmlLeafTextElement : OpenXmlLeafElement
     {
-        private string _rawInnerText;
-
         /// <summary>
         /// Initializes a new instance of the OpenXmlLeafTextElement class.
         /// </summary>
@@ -31,14 +29,10 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlLeafTextElement(string text)
             : base()
         {
-            _rawInnerText = text;
+            RawInnerText = text;
         }
 
-        internal string RawInnerText
-        {
-            get { return _rawInnerText; }
-            set { _rawInnerText = value; }
-        }
+        internal string? RawInnerText { get; set; }
 
         /// <summary>
         /// Convert the text into value (depends on the type defined in the schema).
@@ -46,10 +40,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="text">The text to convert.</param>
         /// <returns>An OpenXmlSimpleType value.</returns>
         /// <remarks>All generated classes that are derived from this class will generate this method.</remarks>
-        internal virtual OpenXmlSimpleType InnerTextToValue(string text)
-        {
-            return null;
-        }
+        internal virtual OpenXmlSimpleType InnerTextToValue(string text) => null!;
 
         /// <inheritdoc/>
         public override bool HasChildren
@@ -63,9 +54,9 @@ namespace DocumentFormat.OpenXml
             get
             {
                 MakeSureParsed();
-                if (RawInnerText != null)
+                if (RawInnerText is not null)
                 {
-                    return _rawInnerText;
+                    return RawInnerText;
                 }
                 else
                 {
@@ -86,7 +77,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (ShadowElement != null)
+                if (ShadowElement is not null)
                 {
                     return ShadowElement.InnerXml;
                 }
@@ -131,7 +122,7 @@ namespace DocumentFormat.OpenXml
         internal override void WriteContentTo(XmlWriter w)
         {
             // Write the loaded inner xml if there are any
-            if (ShadowElement != null)
+            if (ShadowElement is not null)
             {
                 ShadowElement.WriteContentTo(w);
             }
@@ -202,7 +193,7 @@ namespace DocumentFormat.OpenXml
                             child.Load(xmlReader, OpenXmlLoadMode.Full);
                             unwanted++;
 
-                            if (ShadowElement == null)
+                            if (ShadowElement is null)
                             {
                                 ShadowElement = new OpenXmlUnknownElement(Prefix, LocalName, NamespaceUri);
                             }
@@ -215,12 +206,12 @@ namespace DocumentFormat.OpenXml
                 if (unwanted == 0)
                 {
                     // only text node, no unwanted children
-                    Debug.Assert(ShadowElement == null);
+                    Debug.Assert(ShadowElement is null);
                 }
                 else if (textNodePosition > -1)
                 {
                     // place an OpenXmlMiscNode for the loaded text in the ShadowElement so that we can write out correct content in serialization.
-                    OpenXmlMiscNode textNode = null;
+                    var textNode = default(OpenXmlMiscNode);
                     switch (textNodeType)
                     {
                         case XmlNodeType.Text:
@@ -237,7 +228,7 @@ namespace DocumentFormat.OpenXml
                             break;
                     }
 
-                    ShadowElement.InsertAt(textNode, textNodePosition);
+                    ShadowElement?.InsertAt(textNode, textNodePosition);
                 }
                 else
                 {
@@ -254,8 +245,14 @@ namespace DocumentFormat.OpenXml
         internal override T CloneImp<T>(bool deep)
         {
             T element = base.CloneImp<T>(deep);
-            Debug.Assert(element is OpenXmlLeafTextElement);
-            (element as OpenXmlLeafTextElement).Text = Text;
+
+            if (element is not OpenXmlLeafTextElement leaf)
+            {
+                throw new InvalidOperationException();
+            }
+
+            leaf.Text = Text;
+
             return element;
         }
     }

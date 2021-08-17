@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -15,7 +17,7 @@ namespace DocumentFormat.OpenXml.InkML
 {
     /// <summary>
     /// <para>Defines the Ink Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:ink.</para>
     /// </summary>
     /// <remark>
@@ -30,6 +32,9 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description>TraceView &lt;inkml:traceView></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "ink")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Ink : OpenXmlPartRootElement
     {
         /// <summary>
@@ -67,7 +72,13 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>documentID</para>
         /// <para>Represents the following attribute in the schema: documentID</para>
         /// </summary>
-        public StringValue DocumentId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "documentID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? DocumentId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -89,7 +100,7 @@ namespace DocumentFormat.OpenXml.InkML
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -107,9 +118,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Bind Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:bind.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "bind")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Bind : OpenXmlLeafElement
     {
         /// <summary>
@@ -123,7 +137,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>source</para>
         /// <para>Represents the following attribute in the schema: source</para>
         /// </summary>
-        public StringValue Source
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "source")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Source
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -133,7 +153,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>target</para>
         /// <para>Represents the following attribute in the schema: target</para>
         /// </summary>
-        public StringValue Target
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "target")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Target
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -143,7 +169,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>column</para>
         /// <para>Represents the following attribute in the schema: column</para>
         /// </summary>
-        public StringValue Column
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "column")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Column
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -153,7 +185,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>variable</para>
         /// <para>Represents the following attribute in the schema: variable</para>
         /// </summary>
-        public StringValue Variable
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "variable")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Variable
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -176,9 +214,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Table Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:table.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "table")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Table : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -208,7 +249,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -218,7 +265,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>apply</para>
         /// <para>Represents the following attribute in the schema: apply</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues> Apply
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "apply")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>? Apply
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>>();
             set => SetAttribute(value);
@@ -228,7 +281,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>interpolation</para>
         /// <para>Represents the following attribute in the schema: interpolation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues> Interpolation
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "interpolation")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>? Interpolation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>>();
             set => SetAttribute(value);
@@ -250,9 +309,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Matrix Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:matrix.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "matrix")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Matrix : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -282,7 +344,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -302,7 +370,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Mapping Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:mapping.</para>
     /// </summary>
     /// <remark>
@@ -314,6 +382,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>Mapping &lt;inkml:mapping></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "mapping")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Mapping : OpenXmlCompositeElement
     {
         /// <summary>
@@ -354,7 +425,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -364,7 +441,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues> Type
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "type")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>>();
             set => SetAttribute(value);
@@ -374,7 +457,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>mappingRef</para>
         /// <para>Represents the following attribute in the schema: mappingRef</para>
         /// </summary>
-        public StringValue MappingRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "mappingRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? MappingRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -395,18 +484,18 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Bind), 0, 0),
-                    new CompositeParticle(ParticleType.Choice, 0, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Table), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Matrix), 1, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Sequence, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
                 }
@@ -419,7 +508,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Channel Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:channel.</para>
     /// </summary>
     /// <remark>
@@ -428,6 +517,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>Mapping &lt;inkml:mapping></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "channel")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Channel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -468,7 +560,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -478,7 +576,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -488,7 +592,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues> Type
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "type")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>>();
             set => SetAttribute(value);
@@ -498,7 +608,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>default</para>
         /// <para>Represents the following attribute in the schema: default</para>
         /// </summary>
-        public StringValue Default
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "default")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Default
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -508,7 +624,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>min</para>
         /// <para>Represents the following attribute in the schema: min</para>
         /// </summary>
-        public DecimalValue Min
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "min")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DecimalValue? Min
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -518,7 +640,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>max</para>
         /// <para>Represents the following attribute in the schema: max</para>
         /// </summary>
-        public DecimalValue Max
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "max")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DecimalValue? Max
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -528,7 +656,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues> Orientation
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "orientation")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>? Orientation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>>();
             set => SetAttribute(value);
@@ -538,7 +672,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>respectTo</para>
         /// <para>Represents the following attribute in the schema: respectTo</para>
         /// </summary>
-        public StringValue RespectTo
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "respectTo")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? RespectTo
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -548,7 +688,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        public StringValue Units
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "units")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Units
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -603,7 +749,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsV
 union.AddValidator(StringValidator.Instance);
 });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
             };
@@ -616,7 +762,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the IntermittentChannels Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:intermittentChannels.</para>
     /// </summary>
     /// <remark>
@@ -625,6 +771,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>Channel &lt;inkml:channel></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "intermittentChannels")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class IntermittentChannels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -663,7 +812,7 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "intermittentChannels");
             builder.AddChild<Channel>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0)
             };
@@ -675,9 +824,12 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ChannelProperty Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:channelProperty.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "channelProperty")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChannelProperty : OpenXmlLeafElement
     {
         /// <summary>
@@ -691,7 +843,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>channel</para>
         /// <para>Represents the following attribute in the schema: channel</para>
         /// </summary>
-        public StringValue Channel
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "channel")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Channel
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -701,7 +859,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -711,7 +875,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public DecimalValue Value
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "value")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DecimalValue? Value
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -721,7 +891,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        public StringValue Units
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "units")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Units
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -780,7 +956,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TraceFormat Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:traceFormat.</para>
     /// </summary>
     /// <remark>
@@ -790,6 +966,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>IntermittentChannels &lt;inkml:intermittentChannels></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "traceFormat")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TraceFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -830,7 +1009,13 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -844,7 +1029,7 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<IntermittentChannels>();
             builder.AddElement<TraceFormat>()
 .AddAttribute(1, "id", a => a.Id);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.IntermittentChannels), 0, 1)
@@ -857,9 +1042,12 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SampleRate Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:sampleRate.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "sampleRate")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SampleRate : OpenXmlLeafElement
     {
         /// <summary>
@@ -873,7 +1061,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>uniform</para>
         /// <para>Represents the following attribute in the schema: uniform</para>
         /// </summary>
-        public BooleanValue Uniform
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "uniform")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Uniform
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -883,7 +1077,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public DecimalValue Value
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "value")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DecimalValue? Value
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -907,9 +1107,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Latency Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:latency.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "latency")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Latency : OpenXmlLeafElement
     {
         /// <summary>
@@ -923,7 +1126,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public DecimalValue Value
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "value")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DecimalValue? Value
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -946,9 +1155,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ActiveArea Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:activeArea.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "activeArea")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ActiveArea : OpenXmlLeafElement
     {
         /// <summary>
@@ -962,7 +1174,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public StringValue Size
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Size
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -972,7 +1190,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>height</para>
         /// <para>Represents the following attribute in the schema: height</para>
         /// </summary>
-        public DecimalValue Height
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "height")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DecimalValue? Height
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -982,7 +1206,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>width</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-        public DecimalValue Width
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "width")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DecimalValue? Width
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -992,7 +1222,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        public StringValue Units
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "units")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Units
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1032,9 +1268,12 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SourceProperty Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:srcProperty.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "srcProperty")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SourceProperty : OpenXmlLeafElement
     {
         /// <summary>
@@ -1048,7 +1287,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1058,7 +1303,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public DecimalValue Value
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "value")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DecimalValue? Value
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -1068,7 +1319,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        public StringValue Units
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "units")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Units
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1113,7 +1370,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ChannelProperties Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:channelProperties.</para>
     /// </summary>
     /// <remark>
@@ -1122,6 +1379,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>ChannelProperty &lt;inkml:channelProperty></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "channelProperties")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChannelProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1160,7 +1420,7 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(43, "channelProperties");
             builder.AddChild<ChannelProperty>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, 0)
             };
@@ -1172,9 +1432,12 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Annotation Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:annotation.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "annotation")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Annotation : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1201,7 +1464,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public StringValue Type
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "type")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Type
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1211,7 +1480,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>encoding</para>
         /// <para>Represents the following attribute in the schema: encoding</para>
         /// </summary>
-        public StringValue Encoding
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "encoding")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Encoding
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1232,7 +1507,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the AnnotationXml Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:annotationXML.</para>
     /// </summary>
     /// <remark>
@@ -1241,6 +1516,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.EMMA.Emma &lt;emma:emma></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "annotationXML")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AnnotationXml : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1278,7 +1556,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public StringValue Type
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "type")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Type
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1288,7 +1572,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>encoding</para>
         /// <para>Represents the following attribute in the schema: encoding</para>
         /// </summary>
-        public StringValue Encoding
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "encoding")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Encoding
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1298,7 +1588,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>href</para>
         /// <para>Represents the following attribute in the schema: href</para>
         /// </summary>
-        public StringValue Href
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "href")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Href
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1316,7 +1612,7 @@ union.AddValidator(StringValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Emma), 0, 1)
             };
@@ -1329,7 +1625,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:emma = http://www.w3.org/2003/04/emma
         /// </remark>
-        public DocumentFormat.OpenXml.EMMA.Emma Emma
+        public DocumentFormat.OpenXml.EMMA.Emma? Emma
         {
             get => GetElement<DocumentFormat.OpenXml.EMMA.Emma>();
             set => SetElement(value);
@@ -1341,7 +1637,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the BrushProperty Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:brushProperty.</para>
     /// </summary>
     /// <remark>
@@ -1351,6 +1647,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>AnnotationXml &lt;inkml:annotationXML></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "brushProperty")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BrushProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1388,7 +1687,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1398,7 +1703,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public StringValue Value
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "value")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Value
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1408,7 +1719,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>units</para>
         /// <para>Represents the following attribute in the schema: units</para>
         /// </summary>
-        public StringValue Units
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "units")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Units
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1459,7 +1776,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.InkML.StandardPerOtherUnitsV
 union.AddValidator(StringValidator.Instance);
 });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0)
@@ -1473,7 +1790,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Canvas Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:canvas.</para>
     /// </summary>
     /// <remark>
@@ -1482,6 +1799,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>TraceFormat &lt;inkml:traceFormat></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "canvas")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Canvas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1522,7 +1842,13 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1532,7 +1858,13 @@ union.AddValidator(StringValidator.Instance);
         /// <para>traceFormatRef</para>
         /// <para>Represents the following attribute in the schema: traceFormatRef</para>
         /// </summary>
-        public StringValue TraceFormatRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "traceFormatRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? TraceFormatRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1549,7 +1881,7 @@ union.AddValidator(StringValidator.Instance);
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1)
             };
@@ -1562,7 +1894,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public TraceFormat TraceFormat
+        public TraceFormat? TraceFormat
         {
             get => GetElement<TraceFormat>();
             set => SetElement(value);
@@ -1574,7 +1906,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the CanvasTransform Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:canvasTransform.</para>
     /// </summary>
     /// <remark>
@@ -1583,6 +1915,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>Mapping &lt;inkml:mapping></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "canvasTransform")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CanvasTransform : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1623,7 +1958,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1633,7 +1974,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>invertible</para>
         /// <para>Represents the following attribute in the schema: invertible</para>
         /// </summary>
-        public BooleanValue Invertible
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "invertible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Invertible
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1647,7 +1994,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddElement<CanvasTransform>()
 .AddAttribute(1, "id", a => a.Id)
 .AddAttribute(0, "invertible", a => a.Invertible);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 1, 2)
             };
@@ -1659,7 +2006,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the InkSource Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:inkSource.</para>
     /// </summary>
     /// <remark>
@@ -1673,6 +2020,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>ChannelProperties &lt;inkml:channelProperties></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "inkSource")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InkSource : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1713,7 +2063,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1723,7 +2079,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>manufacturer</para>
         /// <para>Represents the following attribute in the schema: manufacturer</para>
         /// </summary>
-        public StringValue Manufacturer
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "manufacturer")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Manufacturer
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1733,7 +2095,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>model</para>
         /// <para>Represents the following attribute in the schema: model</para>
         /// </summary>
-        public StringValue Model
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "model")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Model
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1743,7 +2111,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>serialNo</para>
         /// <para>Represents the following attribute in the schema: serialNo</para>
         /// </summary>
-        public StringValue SerialNo
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "serialNo")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? SerialNo
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1753,7 +2127,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>specificationRef</para>
         /// <para>Represents the following attribute in the schema: specificationRef</para>
         /// </summary>
-        public StringValue SpecificationRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "specificationRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? SpecificationRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1763,7 +2143,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>description</para>
         /// <para>Represents the following attribute in the schema: description</para>
         /// </summary>
-        public StringValue Description
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "description")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1792,7 +2178,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "description", a => a.Description);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SampleRate), 0, 1),
@@ -1810,7 +2196,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public TraceFormat TraceFormat
+        public TraceFormat? TraceFormat
         {
             get => GetElement<TraceFormat>();
             set => SetElement(value);
@@ -1823,7 +2209,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public SampleRate SampleRate
+        public SampleRate? SampleRate
         {
             get => GetElement<SampleRate>();
             set => SetElement(value);
@@ -1836,7 +2222,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public Latency Latency
+        public Latency? Latency
         {
             get => GetElement<Latency>();
             set => SetElement(value);
@@ -1849,7 +2235,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public ActiveArea ActiveArea
+        public ActiveArea? ActiveArea
         {
             get => GetElement<ActiveArea>();
             set => SetElement(value);
@@ -1861,7 +2247,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Brush Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:brush.</para>
     /// </summary>
     /// <remark>
@@ -1872,6 +2258,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>BrushProperty &lt;inkml:brushProperty></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "brush")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Brush : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1912,7 +2301,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1922,7 +2317,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        public StringValue BrushRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "brushRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? BrushRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1941,7 +2342,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0),
@@ -1955,9 +2356,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Timestamp Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:timestamp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "timestamp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Timestamp : OpenXmlLeafElement
     {
         /// <summary>
@@ -1974,7 +2378,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1984,7 +2394,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>time</para>
         /// <para>Represents the following attribute in the schema: time</para>
         /// </summary>
-        public DecimalValue Time
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "time")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DecimalValue? Time
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -1994,7 +2410,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>timestampRef</para>
         /// <para>Represents the following attribute in the schema: timestampRef</para>
         /// </summary>
-        public StringValue TimestampRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "timestampRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? TimestampRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2004,7 +2426,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>timeString</para>
         /// <para>Represents the following attribute in the schema: timeString</para>
         /// </summary>
-        public DateTimeValue TimeString
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "timeString")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DateTimeValue? TimeString
         {
             get => GetAttribute<DateTimeValue>();
             set => SetAttribute(value);
@@ -2014,7 +2442,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>timeOffset</para>
         /// <para>Represents the following attribute in the schema: timeOffset</para>
         /// </summary>
-        public DecimalValue TimeOffset
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "timeOffset")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DecimalValue? TimeOffset
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -2044,9 +2478,12 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Trace Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:trace.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "trace")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Trace : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2076,7 +2513,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2086,7 +2529,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues> Type
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "type")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>>();
             set => SetAttribute(value);
@@ -2096,7 +2545,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>continuation</para>
         /// <para>Represents the following attribute in the schema: continuation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues> Continuation
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "continuation")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>? Continuation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>>();
             set => SetAttribute(value);
@@ -2106,7 +2561,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>priorRef</para>
         /// <para>Represents the following attribute in the schema: priorRef</para>
         /// </summary>
-        public StringValue PriorRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "priorRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? PriorRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2116,7 +2577,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        public StringValue ContextRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "contextRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ContextRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2126,7 +2593,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        public StringValue BrushRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "brushRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? BrushRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2136,7 +2609,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>duration</para>
         /// <para>Represents the following attribute in the schema: duration</para>
         /// </summary>
-        public DecimalValue Duration
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "duration")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DecimalValue? Duration
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -2146,7 +2625,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>timeOffset</para>
         /// <para>Represents the following attribute in the schema: timeOffset</para>
         /// </summary>
-        public DecimalValue TimeOffset
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "timeOffset")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DecimalValue? TimeOffset
         {
             get => GetAttribute<DecimalValue>();
             set => SetAttribute(value);
@@ -2182,7 +2667,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the TraceGroup Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:traceGroup.</para>
     /// </summary>
     /// <remark>
@@ -2194,6 +2679,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>TraceGroup &lt;inkml:traceGroup></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "traceGroup")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TraceGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2234,7 +2722,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2244,7 +2738,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        public StringValue ContextRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "contextRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ContextRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2254,7 +2754,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        public StringValue BrushRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "brushRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? BrushRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2278,7 +2784,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -2293,7 +2799,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the TraceView Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:traceView.</para>
     /// </summary>
     /// <remark>
@@ -2304,6 +2810,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>TraceView &lt;inkml:traceView></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "traceView")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TraceView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2344,7 +2853,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2354,7 +2869,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        public StringValue ContextRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "contextRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ContextRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2364,7 +2885,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>traceDataRef</para>
         /// <para>Represents the following attribute in the schema: traceDataRef</para>
         /// </summary>
-        public StringValue TraceDataRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "traceDataRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? TraceDataRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2374,7 +2901,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>from</para>
         /// <para>Represents the following attribute in the schema: from</para>
         /// </summary>
-        public StringValue From
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "from")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? From
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2384,7 +2917,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>to</para>
         /// <para>Represents the following attribute in the schema: to</para>
         /// </summary>
-        public StringValue To
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "to")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? To
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2409,7 +2948,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 })
 .AddAttribute(0, "from", a => a.From)
 .AddAttribute(0, "to", a => a.To);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
@@ -2423,7 +2962,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Context Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:context.</para>
     /// </summary>
     /// <remark>
@@ -2437,6 +2976,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>Timestamp &lt;inkml:timestamp></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "context")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Context : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2477,7 +3019,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2487,7 +3035,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>contextRef</para>
         /// <para>Represents the following attribute in the schema: contextRef</para>
         /// </summary>
-        public StringValue ContextRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "contextRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ContextRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2497,7 +3051,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>canvasRef</para>
         /// <para>Represents the following attribute in the schema: canvasRef</para>
         /// </summary>
-        public StringValue CanvasRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "canvasRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? CanvasRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2507,7 +3067,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>canvasTransformRef</para>
         /// <para>Represents the following attribute in the schema: canvasTransformRef</para>
         /// </summary>
-        public StringValue CanvasTransformRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "canvasTransformRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? CanvasTransformRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2517,7 +3083,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>traceFormatRef</para>
         /// <para>Represents the following attribute in the schema: traceFormatRef</para>
         /// </summary>
-        public StringValue TraceFromatRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "traceFormatRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? TraceFromatRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2527,7 +3099,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>inkSourceRef</para>
         /// <para>Represents the following attribute in the schema: inkSourceRef</para>
         /// </summary>
-        public StringValue InkSourceRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "inkSourceRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? InkSourceRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2537,7 +3115,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>brushRef</para>
         /// <para>Represents the following attribute in the schema: brushRef</para>
         /// </summary>
-        public StringValue BrushRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "brushRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? BrushRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2547,7 +3131,13 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <para>timestampRef</para>
         /// <para>Represents the following attribute in the schema: timestampRef</para>
         /// </summary>
-        public StringValue TimestampRef
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "timestampRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? TimestampRef
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2593,7 +3183,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
@@ -2611,7 +3201,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public Canvas Canvas
+        public Canvas? Canvas
         {
             get => GetElement<Canvas>();
             set => SetElement(value);
@@ -2624,7 +3214,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public CanvasTransform CanvasTransform
+        public CanvasTransform? CanvasTransform
         {
             get => GetElement<CanvasTransform>();
             set => SetElement(value);
@@ -2637,7 +3227,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public TraceFormat TraceFormat
+        public TraceFormat? TraceFormat
         {
             get => GetElement<TraceFormat>();
             set => SetElement(value);
@@ -2650,7 +3240,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public InkSource InkSource
+        public InkSource? InkSource
         {
             get => GetElement<InkSource>();
             set => SetElement(value);
@@ -2663,7 +3253,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public Brush Brush
+        public Brush? Brush
         {
             get => GetElement<Brush>();
             set => SetElement(value);
@@ -2676,7 +3266,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         /// <remark>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
         /// </remark>
-        public Timestamp Timestamp
+        public Timestamp? Timestamp
         {
             get => GetElement<Timestamp>();
             set => SetElement(value);
@@ -2688,7 +3278,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
 
     /// <summary>
     /// <para>Defines the Definitions Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:definitions.</para>
     /// </summary>
     /// <remark>
@@ -2707,6 +3297,9 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     ///   <item><description>TraceView &lt;inkml:traceView></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(43, "definitions")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Definitions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2755,7 +3348,7 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
             builder.AddChild<TraceFormat>();
             builder.AddChild<TraceGroup>();
             builder.AddChild<TraceView>();
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 0, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),

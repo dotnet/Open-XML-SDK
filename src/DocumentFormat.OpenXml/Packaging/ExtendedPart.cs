@@ -13,9 +13,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Default constructor.
         /// </summary>
+        [Obsolete("Does not set a RelationshipType")]
         protected ExtendedPart()
             : base()
         {
+            RelationshipType = null!;
         }
 
         /// <summary>
@@ -56,11 +58,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "subPart" is null reference.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the part is no allowed to be added.</exception>
         /// <exception cref="OpenXmlPackageException">Thrown when one instance of same type part already exists and multiple instance of that type is not allowed.</exception>
-        internal override OpenXmlPart AddPartFrom(OpenXmlPart subPart, string rId)
+        internal override OpenXmlPart AddPartFrom(OpenXmlPart subPart, string? rId)
         {
             ThrowIfObjectDisposed();
 
-            if (subPart == null)
+            if (subPart is null)
             {
                 throw new ArgumentNullException(nameof(subPart));
             }
@@ -69,7 +71,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (IsChildPart(subPart))
                 {
-                    if (rId != null && rId != GetIdOfPart(subPart))
+                    if (rId is not null && rId != GetIdOfPart(subPart))
                     {
                         // Do NOT allow one sub part is referenced more than once.
                         throw new InvalidOperationException(ExceptionMessages.PartExistsWithDifferentRelationshipId);
@@ -93,11 +95,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="newPart">The part to be initialized.</param>
         /// <param name="contentType">The content type of the part.</param>
         /// <param name="id">The relationship id.</param>
-        internal override void InitPart<T>(T newPart, string contentType, string id)
+        internal override void InitPart<T>(T newPart, string contentType, string? id)
         {
             ThrowIfObjectDisposed();
 
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }

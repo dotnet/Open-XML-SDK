@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -14,7 +16,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
 {
     /// <summary>
     /// <para>Custom XML Data Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:datastoreItem.</para>
     /// </summary>
     /// <remark>
@@ -23,6 +25,9 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     ///   <item><description>SchemaReferences &lt;ds:schemaRefs></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(20, "datastoreItem")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataStoreItem : OpenXmlPartRootElement
     {
         /// <summary>
@@ -63,7 +68,13 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        public StringValue ItemId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(20, "itemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ItemId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -80,7 +91,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences), 0, 1)
             };
@@ -93,7 +104,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ds = http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        public SchemaReferences SchemaReferences
+        public SchemaReferences? SchemaReferences
         {
             get => GetElement<SchemaReferences>();
             set => SetElement(value);
@@ -127,7 +138,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <summary>
         /// Gets the CustomXmlPropertiesPart associated with this element.
         /// </summary>
-        public CustomXmlPropertiesPart CustomXmlPropertiesPart
+        public CustomXmlPropertiesPart? CustomXmlPropertiesPart
         {
             get => OpenXmlPart as CustomXmlPropertiesPart;
             internal set => OpenXmlPart = value;
@@ -136,9 +147,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Associated XML Schema.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:schemaRef.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(20, "schemaRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SchemaReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -155,7 +169,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        public StringValue Uri
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(20, "uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -178,7 +198,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Set of Associated XML Schemas.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:schemaRefs.</para>
     /// </summary>
     /// <remark>
@@ -187,6 +207,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>SchemaReference &lt;ds:schemaRef></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(20, "schemaRefs")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SchemaReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -225,7 +248,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(20, "schemaRefs");
             builder.AddChild<SchemaReference>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference), 0, 0)
             };

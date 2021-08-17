@@ -14,16 +14,16 @@ namespace DocumentFormat.OpenXml.Packaging
     [EditorBrowsable(EditorBrowsableState.Never)]
     public sealed class OpenXmlPackageValidationEventArgs : EventArgs
     {
-        private string _message;
+        private string? _message;
 
         [NonSerialized]
         private readonly object _sender;
 
         [NonSerialized]
-        private OpenXmlPart _subPart;
+        private OpenXmlPart? _subPart;
 
         [NonSerialized]
-        private OpenXmlPart _part;
+        private OpenXmlPart? _part;
 
         internal OpenXmlPackageValidationEventArgs(object sender)
         {
@@ -39,13 +39,13 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get
             {
-                if (_message == null && MessageId != null)
+                if (_message is null && MessageId is not null)
                 {
-                    return ExceptionMessages.ResourceManager.GetString(MessageId);
+                    return ExceptionMessages.ResourceManager.GetString(MessageId) ?? string.Empty;
                 }
                 else
                 {
-                    return _message;
+                    return _message ?? string.Empty;
                 }
             }
 
@@ -58,12 +58,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the class name of the part.
         /// </summary>
-        public string PartClassName { get; internal set; }
+        public string? PartClassName { get; internal set; }
 
         /// <summary>
         /// Gets the part that caused the event.
         /// </summary>
-        public OpenXmlPart SubPart
+        public OpenXmlPart? SubPart
         {
             get { return _subPart; }
             internal set { _subPart = value; }
@@ -72,17 +72,17 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the part in which to process the validation.
         /// </summary>
-        public OpenXmlPart Part
+        public OpenXmlPart? Part
         {
             get { return _part; }
             internal set { _part = value; }
         }
 
-        internal string MessageId { get; set; }
+        internal string? MessageId { get; set; }
 
         /// <summary>
         /// Gets or sets the DataPartReferenceRelationship that caused the event.
         /// </summary>
-        internal DataPartReferenceRelationship DataPartReferenceRelationship { get; set; }
+        internal DataPartReferenceRelationship? DataPartReferenceRelationship { get; set; }
     }
 }

@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -17,7 +19,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
 {
     /// <summary>
     /// <para>Defines the Taskpanes Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:taskpanes.</para>
     /// </summary>
     /// <remark>
@@ -26,6 +28,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     ///   <item><description>WebExtensionTaskpane &lt;wetp:taskpane></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(70, "taskpanes")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Taskpanes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -65,7 +70,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
             builder.SetSchema(70, "taskpanes");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<WebExtensionTaskpane>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane), 0, 0, version: FileFormatVersions.Office2013)
             };
@@ -99,7 +104,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// <summary>
         /// Gets the WebExTaskpanesPart associated with this element.
         /// </summary>
-        public WebExTaskpanesPart WebExTaskpanesPart
+        public WebExTaskpanesPart? WebExTaskpanesPart
         {
             get => OpenXmlPart as WebExTaskpanesPart;
             internal set => OpenXmlPart = value;
@@ -108,9 +113,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
 
     /// <summary>
     /// <para>Defines the WebExtensionPartReference Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:webextensionref.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(70, "webextensionref")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionPartReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -121,13 +129,19 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
         /// <remark>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
         /// </remark>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(19, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -152,7 +166,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OfficeArtExtensionList Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:extLst.</para>
     /// </summary>
     /// <remark>
@@ -161,6 +175,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(70, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -200,11 +217,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(70, "extLst");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
                     }
@@ -218,7 +235,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the WebExtensionTaskpane Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:taskpane.</para>
     /// </summary>
     /// <remark>
@@ -228,6 +245,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>OfficeArtExtensionList &lt;wetp:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(70, "taskpane")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     {
         /// <summary>
@@ -262,50 +282,80 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>dockstate, this property is only available in Office2013, Office2016</para>
+        /// <para>dockstate, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: dockstate</para>
         /// </summary>
-        public StringValue DockState
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "dockstate")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? DockState
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>visibility, this property is only available in Office2013, Office2016</para>
+        /// <para>visibility, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: visibility</para>
         /// </summary>
-        public BooleanValue Visibility
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visibility")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Visibility
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>width, this property is only available in Office2013, Office2016</para>
+        /// <para>width, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: width</para>
         /// </summary>
-        public DoubleValue Width
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "width")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public DoubleValue? Width
         {
             get => GetAttribute<DoubleValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>row, this property is only available in Office2013, Office2016</para>
+        /// <para>row, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: row</para>
         /// </summary>
-        public UInt32Value Row
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "row")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? Row
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>locked, this property is only available in Office2013, Office2016</para>
+        /// <para>locked, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
-        public BooleanValue Locked
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "locked")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Locked
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -336,7 +386,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "locked", a => a.Locked);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
@@ -350,7 +400,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
         /// </remark>
-        public WebExtensionPartReference WebExtensionPartReference
+        public WebExtensionPartReference? WebExtensionPartReference
         {
             get => GetElement<WebExtensionPartReference>();
             set => SetElement(value);
@@ -363,7 +413,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wetp = http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11
         /// </remark>
-        public OfficeArtExtensionList OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);

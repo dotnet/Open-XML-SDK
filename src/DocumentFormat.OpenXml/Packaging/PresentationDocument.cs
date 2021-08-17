@@ -30,13 +30,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         internal sealed override string MainPartRelationshipType => PresentationPart.RelationshipTypeConstant;
 
-        private static Dictionary<PresentationDocumentType, string> _validMainPartContentType;
+        private static Dictionary<PresentationDocumentType, string>? _validMainPartContentType;
 
         private static Dictionary<PresentationDocumentType, string> MainPartContentTypes
         {
             get
             {
-                if (_validMainPartContentType == null)
+                if (_validMainPartContentType is null)
                 {
                     _validMainPartContentType = new Dictionary<PresentationDocumentType, string>
                     {
@@ -62,8 +62,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates a PresentationDocument.
         /// </summary>
+        [Obsolete(ObsoleteMessage)]
         protected PresentationDocument()
             : base()
+        {
+        }
+
+        private PresentationDocument(in PackageLoader loader, OpenSettings settings)
+            : base(loader, settings)
         {
         }
 
@@ -91,7 +97,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private void UpdateDocumentTypeFromContentType()
         {
-            if (MainPartContentType == null)
+            if (MainPartContentType is null)
             {
                 throw new InvalidOperationException();
             }
@@ -152,20 +158,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of PresentationDocument.</returns>
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static PresentationDocument Create(string path, PresentationDocumentType type, bool autoSave)
-        {
-            if (string.IsNullOrEmpty(path))
+            => new PresentationDocument(PackageLoader.CreateCore(path), new OpenSettings { AutoSave = autoSave })
             {
-                throw new ArgumentNullException(path);
-            }
-
-            PresentationDocument doc = new PresentationDocument();
-            doc.DocumentType = type;
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = autoSave;
-            doc.MainPartContentType = MainPartContentTypes[type];
-            doc.CreateCore(path);
-            return doc;
-        }
+                DocumentType = type,
+                MainPartContentType = MainPartContentTypes[type],
+            };
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the IO stream.
@@ -177,15 +174,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static PresentationDocument Create(Stream stream, PresentationDocumentType type, bool autoSave)
-        {
-            PresentationDocument doc = new PresentationDocument();
-            doc.DocumentType = type;
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = autoSave;
-            doc.MainPartContentType = MainPartContentTypes[type];
-            doc.CreateCore(stream);
-            return doc;
-        }
+            => new PresentationDocument(PackageLoader.CreateCore(stream), new OpenSettings { AutoSave = autoSave })
+            {
+                DocumentType = type,
+                MainPartContentType = MainPartContentTypes[type],
+            };
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the specified package.
@@ -197,15 +190,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static PresentationDocument Create(Package package, PresentationDocumentType type, bool autoSave)
-        {
-            PresentationDocument doc = new PresentationDocument();
-            doc.DocumentType = type;
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = autoSave;
-            doc.MainPartContentType = MainPartContentTypes[type];
-            doc.CreateCore(package);
-            return doc;
-        }
+            => new PresentationDocument(PackageLoader.CreateCore(package), new OpenSettings { AutoSave = autoSave })
+            {
+                DocumentType = type,
+                MainPartContentType = MainPartContentTypes[type],
+            };
 
         /// <summary>
         /// Creates an editable PresentationDocument from a template, opened on
@@ -215,7 +204,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The new PresentationDocument based on the template.</returns>
         public static PresentationDocument CreateFromTemplate(string path)
         {
-            if (path == null)
+            if (path is null)
             {
                 throw new ArgumentNullException(nameof(path));
             }
@@ -312,13 +301,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            PresentationDocument doc = new PresentationDocument();
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = openSettings.AutoSave;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-            doc.MaxCharactersInPart = openSettings.MaxCharactersInPart;
-            doc.OpenCore(path, isEditable);
+            var doc = new PresentationDocument(PackageLoader.OpenCore(path, isEditable), openSettings);
+
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
                 doc.UpdateDocumentTypeFromContentType();
@@ -351,13 +335,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            PresentationDocument doc = new PresentationDocument();
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = openSettings.AutoSave;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-            doc.MaxCharactersInPart = openSettings.MaxCharactersInPart;
-            doc.OpenCore(stream, isEditable);
+            var doc = new PresentationDocument(PackageLoader.OpenCore(stream, isEditable), openSettings);
+
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
                 doc.UpdateDocumentTypeFromContentType();
@@ -389,13 +368,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
 
-            PresentationDocument doc = new PresentationDocument();
-            doc.OpenSettings = new OpenSettings();
-            doc.OpenSettings.AutoSave = openSettings.AutoSave;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode = openSettings.MarkupCompatibilityProcessSettings.ProcessMode;
-            doc.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions = openSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-            doc.MaxCharactersInPart = openSettings.MaxCharactersInPart;
-            doc.OpenCore(package);
+            var doc = new PresentationDocument(PackageLoader.OpenCore(package), openSettings);
+
             if (MainPartContentTypes[doc.DocumentType] != doc.MainPartContentType)
             {
                 doc.UpdateDocumentTypeFromContentType();
@@ -429,7 +403,7 @@ namespace DocumentFormat.OpenXml.Packaging
             DocumentType = newType;
             MainPartContentType = MainPartContentTypes[newType];
 
-            if (PresentationPart == null)
+            if (PresentationPart is null)
             {
                 return;
             }
@@ -459,45 +433,25 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (relationshipType == null)
+            if (relationshipType is null)
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
 
-            switch (relationshipType)
+            return relationshipType switch
             {
-                case PresentationPart.RelationshipTypeConstant:
-                    return new PresentationPart();
-
-                case CoreFilePropertiesPart.RelationshipTypeConstant:
-                    return new CoreFilePropertiesPart();
-
-                case ExtendedFilePropertiesPart.RelationshipTypeConstant:
-                    return new ExtendedFilePropertiesPart();
-
-                case CustomFilePropertiesPart.RelationshipTypeConstant:
-                    return new CustomFilePropertiesPart();
-
-                case ThumbnailPart.RelationshipTypeConstant:
-                    return new ThumbnailPart();
-
-                case DigitalSignatureOriginPart.RelationshipTypeConstant:
-                    return new DigitalSignatureOriginPart();
-
-                case QuickAccessToolbarCustomizationsPart.RelationshipTypeConstant:
-                    return new QuickAccessToolbarCustomizationsPart();
-
-                case RibbonExtensibilityPart.RelationshipTypeConstant:
-                    return new RibbonExtensibilityPart();
-
-                case RibbonAndBackstageCustomizationsPart.RelationshipTypeConstant:
-                    return new RibbonAndBackstageCustomizationsPart();
-
-                case WebExTaskpanesPart.RelationshipTypeConstant:
-                    return new WebExTaskpanesPart();
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(relationshipType));
+                PresentationPart.RelationshipTypeConstant => new PresentationPart(),
+                CoreFilePropertiesPart.RelationshipTypeConstant => new CoreFilePropertiesPart(),
+                ExtendedFilePropertiesPart.RelationshipTypeConstant => new ExtendedFilePropertiesPart(),
+                CustomFilePropertiesPart.RelationshipTypeConstant => new CustomFilePropertiesPart(),
+                ThumbnailPart.RelationshipTypeConstant => new ThumbnailPart(),
+                DigitalSignatureOriginPart.RelationshipTypeConstant => new DigitalSignatureOriginPart(),
+                QuickAccessToolbarCustomizationsPart.RelationshipTypeConstant => new QuickAccessToolbarCustomizationsPart(),
+                RibbonExtensibilityPart.RelationshipTypeConstant => new RibbonExtensibilityPart(),
+                RibbonAndBackstageCustomizationsPart.RelationshipTypeConstant => new RibbonAndBackstageCustomizationsPart(),
+                WebExTaskpanesPart.RelationshipTypeConstant => new WebExTaskpanesPart(),
+                _ => throw new ArgumentOutOfRangeException(nameof(relationshipType)),
+            };
         }
 
         /// <summary>
@@ -594,7 +548,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <remarks>Mainly used for adding not-fixed content type part - ImagePart, etc.</remarks>
         public override T AddNewPart<T>(string contentType, string id)
         {
-            if (contentType == null)
+            if (contentType is null)
             {
                 throw new ArgumentNullException(nameof(contentType));
             }
@@ -652,12 +606,12 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <inheritdoc />
-        public override OpenXmlPart RootPart => PresentationPart;
+        public override OpenXmlPart? RootPart => PresentationPart;
 
         /// <summary>
         /// Gets the PresentationPart of the PresentationDocument.
         /// </summary>
-        public PresentationPart PresentationPart
+        public PresentationPart? PresentationPart
         {
             get { return GetSubPartOfType<PresentationPart>(); }
         }
@@ -665,7 +619,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the PresentationDocument.
         /// </summary>
-        public CoreFilePropertiesPart CoreFilePropertiesPart
+        public CoreFilePropertiesPart? CoreFilePropertiesPart
         {
             get { return GetSubPartOfType<CoreFilePropertiesPart>(); }
         }
@@ -673,7 +627,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ExtendedFilePropertiesPart of the PresentationDocument.
         /// </summary>
-        public ExtendedFilePropertiesPart ExtendedFilePropertiesPart
+        public ExtendedFilePropertiesPart? ExtendedFilePropertiesPart
         {
             get { return GetSubPartOfType<ExtendedFilePropertiesPart>(); }
         }
@@ -681,7 +635,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CustomFilePropertiesPart of the PresentationDocument.
         /// </summary>
-        public CustomFilePropertiesPart CustomFilePropertiesPart
+        public CustomFilePropertiesPart? CustomFilePropertiesPart
         {
             get { return GetSubPartOfType<CustomFilePropertiesPart>(); }
         }
@@ -689,18 +643,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ThumbnailPart of the PresentationDocument.
         /// </summary>
-        public ThumbnailPart ThumbnailPart
+        public ThumbnailPart? ThumbnailPart
         {
-            get
-            {
-                return GetSubPartOfType<ThumbnailPart>();
-            }
+            get { return GetSubPartOfType<ThumbnailPart>(); }
         }
 
         /// <summary>
         /// Gets the DigitalSignatureOriginPart of the PresentationDocument.
         /// </summary>
-        public DigitalSignatureOriginPart DigitalSignatureOriginPart
+        public DigitalSignatureOriginPart? DigitalSignatureOriginPart
         {
             get { return GetSubPartOfType<DigitalSignatureOriginPart>(); }
         }
@@ -708,7 +659,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the RibbonExtensibilityPart of the PresentationDocument.
         /// </summary>
-        public RibbonExtensibilityPart RibbonExtensibilityPart
+        public RibbonExtensibilityPart? RibbonExtensibilityPart
         {
             get { return GetSubPartOfType<RibbonExtensibilityPart>(); }
         }
@@ -716,7 +667,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the QuickAccessToolbarCustomizationsPart of the PresentationDocument.
         /// </summary>
-        public QuickAccessToolbarCustomizationsPart QuickAccessToolbarCustomizationsPart
+        public QuickAccessToolbarCustomizationsPart? QuickAccessToolbarCustomizationsPart
         {
             get { return GetSubPartOfType<QuickAccessToolbarCustomizationsPart>(); }
         }
@@ -725,7 +676,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the RibbonAndBackstageCustomizationsPart of the PresentationDocument, only available in Office2010.
         /// </summary>
         [OfficeAvailability(FileFormatVersions.Office2010)]
-        public RibbonAndBackstageCustomizationsPart RibbonAndBackstageCustomizationsPart
+        public RibbonAndBackstageCustomizationsPart? RibbonAndBackstageCustomizationsPart
         {
             get { return GetSubPartOfType<RibbonAndBackstageCustomizationsPart>(); }
         }
@@ -734,7 +685,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WebExTaskpanesPart of the PresentationDocument, only available in Office2013.
         /// </summary>
         [OfficeAvailability(FileFormatVersions.Office2013)]
-        public WebExTaskpanesPart WebExTaskpanesPart
+        public WebExTaskpanesPart? WebExTaskpanesPart
         {
             get { return GetSubPartOfType<WebExTaskpanesPart>(); }
         }

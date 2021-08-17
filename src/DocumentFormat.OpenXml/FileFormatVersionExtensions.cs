@@ -54,33 +54,25 @@ namespace DocumentFormat.OpenXml
         /// <param name="version">Version to which all other versions are added</param>
         /// <returns>A version instance with <paramref name="version"/> and all later versions</returns>
         public static FileFormatVersions AndLater(this FileFormatVersions version)
-        {
-            switch (version)
+            => version switch
             {
-                case FileFormatVersions.Office2007:
-                    return FileFormatVersions.Office2007
-                         | FileFormatVersions.Office2010
-                         | FileFormatVersions.Office2013
-                         | FileFormatVersions.Office2016
-                         | FileFormatVersions.Office2019;
-                case FileFormatVersions.Office2010:
-                    return FileFormatVersions.Office2010
-                         | FileFormatVersions.Office2013
-                         | FileFormatVersions.Office2016
-                         | FileFormatVersions.Office2019;
-                case FileFormatVersions.Office2013:
-                    return FileFormatVersions.Office2013
-                         | FileFormatVersions.Office2016
-                         | FileFormatVersions.Office2019;
-                case FileFormatVersions.Office2016:
-                    return FileFormatVersions.Office2016
-                         | FileFormatVersions.Office2019;
-                case FileFormatVersions.Office2019:
-                    return FileFormatVersions.Office2019;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(version));
-            }
-        }
+                FileFormatVersions.Office2007 => FileFormatVersions.Office2007
+                                                | FileFormatVersions.Office2010
+                                                | FileFormatVersions.Office2013
+                                                | FileFormatVersions.Office2016
+                                                | FileFormatVersions.Office2019,
+                FileFormatVersions.Office2010 => FileFormatVersions.Office2010
+                                                | FileFormatVersions.Office2013
+                                                | FileFormatVersions.Office2016
+                                                | FileFormatVersions.Office2019,
+                FileFormatVersions.Office2013 => FileFormatVersions.Office2013
+                                                | FileFormatVersions.Office2016
+                                                | FileFormatVersions.Office2019,
+                FileFormatVersions.Office2016 => FileFormatVersions.Office2016
+                                                | FileFormatVersions.Office2019,
+                FileFormatVersions.Office2019 => FileFormatVersions.Office2019,
+                _ => throw new ArgumentOutOfRangeException(nameof(version)),
+            };
 
         /// <summary>
         /// Throws if the <see cref="OpenXmlPart"/> is not supported in the given version
@@ -120,13 +112,8 @@ namespace DocumentFormat.OpenXml
         /// <returns>True if supplied version is at least of the specified version, otherwise false</returns>
         public static bool AtLeast(this FileFormatVersions version, FileFormatVersions minimum)
         {
-            int MapToInteger(FileFormatVersions v, string name)
+            static int MapToInteger(FileFormatVersions v, string name)
             {
-                if (v == FileFormatVersions.None)
-                {
-                    throw new ArgumentOutOfRangeException(name);
-                }
-
                 if ((FileFormatVersions.Office2007 & v) == FileFormatVersions.Office2007)
                 {
                     return 1;
@@ -153,6 +140,11 @@ namespace DocumentFormat.OpenXml
                 }
 
                 throw new ArgumentOutOfRangeException(name);
+            }
+
+            if (version == FileFormatVersions.None || minimum == FileFormatVersions.None)
+            {
+                return false;
             }
 
             return MapToInteger(version, nameof(version)) >= MapToInteger(minimum, nameof(minimum));

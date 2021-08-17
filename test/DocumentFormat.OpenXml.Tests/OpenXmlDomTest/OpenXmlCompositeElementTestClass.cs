@@ -584,13 +584,11 @@ namespace DocumentFormat.OpenXml.Tests
             var oxaX = default(OpenXmlAttribute);
             var oxaY = oxaX;
             Log.VerifyTrue(oxaX == oxaY, "The assigned OpenXmlAttribute variable is NOT equal to original one.");
-            Log.VerifyFalse(object.ReferenceEquals(oxaX, oxaY), "The assigned OpenXmlAttribute variable IS reference equal to original one.");
 
             Log.Comment("Constructing OpenXmlAttribute w:rsidR and assigning it to another variable...");
             var wrsidR = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
             var wrsidP = wrsidR;
             Log.VerifyTrue(wrsidP == wrsidR, "The assigned OpenXmlAttribute variable is NOT equal to original one.");
-            Log.VerifyFalse(object.ReferenceEquals(wrsidP, wrsidR), "The assigned OpenXmlAttribute variable IS reference equal to original one.");
 
 #pragma warning disable CS0618 // Type or member is obsolete
             wrsidP.LocalName = "rsidP";
@@ -598,7 +596,6 @@ namespace DocumentFormat.OpenXml.Tests
 #pragma warning restore CS0618 // Type or member is obsolete
             Log.Comment("Assigned new LocalName: {0} with ByValue: {1} and comparing it with original w:rsidR", wrsidP.LocalName, wrsidP.Value);
             Log.VerifyFalse(wrsidP == wrsidR, "The assigned OpenXmlAttribute variable IS equal to original one.");
-            Log.VerifyFalse(object.ReferenceEquals(wrsidP, wrsidR), "The assigned OpenXmlAttribute variable IS reference equal to original one.");
         }
 
         [Fact]
@@ -2149,7 +2146,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 // DocumentFormat.OpenXml.Drawing.LockedCanvas
                 var element = doc.Descendants().Where(e => e.LocalName == "lockedCanvas").FirstOrDefault();
-                if (element == null)
+                if (element is null)
                 {
                     Log.Warning("No lockedCanvas element found in specified document.");
                     return;

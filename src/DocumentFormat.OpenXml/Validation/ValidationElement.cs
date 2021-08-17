@@ -9,19 +9,19 @@ namespace DocumentFormat.OpenXml.Validation
 {
     internal class ValidationElement
     {
-        public OpenXmlPackage Package { get; internal set; }
+        public OpenXmlPackage? Package { get; internal set; }
 
-        public OpenXmlPart Part { get; internal set; }
+        public OpenXmlPart? Part { get; internal set; }
 
-        public OpenXmlElement Element { get; internal set; }
+        public OpenXmlElement? Element { get; internal set; }
 
-        public OpenXmlSimpleType Value { get; internal set; }
+        public OpenXmlSimpleType? Value { get; internal set; }
 
-        public AttributeMetadata Property { get; internal set; }
+        public AttributeMetadata? Property { get; internal set; }
 
         public bool IsAttribute { get; internal set; }
 
-        public Action<ValidationErrorInfo> AddError { get; internal set; }
+        public Action<ValidationErrorInfo>? AddError { get; internal set; }
 
         internal void Clear()
         {
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Validation
             AddError = null;
         }
 
-        internal void CopyFrom(ValidationElement current)
+        internal void CopyFrom(ValidationElement? current)
         {
             if (current is null)
             {

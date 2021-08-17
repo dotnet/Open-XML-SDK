@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -16,9 +18,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
 {
     /// <summary>
     /// <para>Defines the Color Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:color.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "color")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Color : OpenXmlLeafElement
     {
         /// <summary>
@@ -35,7 +40,13 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -48,7 +59,13 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "themeColor")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
             set => SetAttribute(value);
@@ -61,7 +78,13 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeTint
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "themeTint")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -74,7 +97,13 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue ThemeShade
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "themeShade")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -112,9 +141,12 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
 
     /// <summary>
     /// <para>Defines the DataBinding Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:dataBinding.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "dataBinding")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataBinding : OpenXmlLeafElement
     {
         /// <summary>
@@ -131,7 +163,13 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue PrefixMappings
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "prefixMappings")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? PrefixMappings
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -144,7 +182,13 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue XPath
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "xpath")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? XPath
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -157,7 +201,13 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]*"), MinLen
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue StoreItemId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "storeItemID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? StoreItemId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -186,9 +236,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the Appearance Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:appearance.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "appearance")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Appearance : OpenXmlLeafElement
     {
         /// <summary>
@@ -199,13 +252,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2013, Office2016</para>
+        /// <para>val, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:val</para>
         /// </summary>
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>>();
             set => SetAttribute(value);
@@ -229,7 +288,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the CommentsEx Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:commentsEx.</para>
     /// </summary>
     /// <remark>
@@ -238,6 +297,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
     ///   <item><description>CommentEx &lt;w15:commentEx></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "commentsEx")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentsEx : OpenXmlPartRootElement
     {
         /// <summary>
@@ -277,7 +339,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             builder.SetSchema(69, "commentsEx");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<CommentEx>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.CommentEx), 0, 0, version: FileFormatVersions.Office2013)
             };
@@ -311,7 +373,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <summary>
         /// Gets the WordprocessingCommentsExPart associated with this element.
         /// </summary>
-        public WordprocessingCommentsExPart WordprocessingCommentsExPart
+        public WordprocessingCommentsExPart? WordprocessingCommentsExPart
         {
             get => OpenXmlPart as WordprocessingCommentsExPart;
             internal set => OpenXmlPart = value;
@@ -320,7 +382,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the People Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:people.</para>
     /// </summary>
     /// <remark>
@@ -329,6 +391,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
     ///   <item><description>Person &lt;w15:person></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "people")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class People : OpenXmlPartRootElement
     {
         /// <summary>
@@ -368,7 +433,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             builder.SetSchema(69, "people");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<Person>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Person), 0, 0, version: FileFormatVersions.Office2013)
             };
@@ -402,7 +467,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <summary>
         /// Gets the WordprocessingPeoplePart associated with this element.
         /// </summary>
-        public WordprocessingPeoplePart WordprocessingPeoplePart
+        public WordprocessingPeoplePart? WordprocessingPeoplePart
         {
             get => OpenXmlPart as WordprocessingPeoplePart;
             internal set => OpenXmlPart = value;
@@ -411,7 +476,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the SdtRepeatedSection Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:repeatingSection.</para>
     /// </summary>
     /// <remark>
@@ -421,6 +486,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
     ///   <item><description>DoNotAllowInsertDeleteSection &lt;w15:doNotAllowInsertDeleteSection></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "repeatingSection")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtRepeatedSection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -461,7 +529,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<SectionTitle>();
             builder.AddChild<DoNotAllowInsertDeleteSection>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SectionTitle), 0, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection), 0, 1, version: FileFormatVersions.Office2013)
@@ -475,7 +543,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public SectionTitle SectionTitle
+        public SectionTitle? SectionTitle
         {
             get => GetElement<SectionTitle>();
             set => SetElement(value);
@@ -488,7 +556,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public DoNotAllowInsertDeleteSection DoNotAllowInsertDeleteSection
+        public DoNotAllowInsertDeleteSection? DoNotAllowInsertDeleteSection
         {
             get => GetElement<DoNotAllowInsertDeleteSection>();
             set => SetElement(value);
@@ -500,9 +568,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the SdtRepeatedSectionItem Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:repeatingSectionItem.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "repeatingSectionItem")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
     {
         /// <summary>
@@ -525,9 +596,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the ChartTrackingRefBased Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:chartTrackingRefBased.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "chartTrackingRefBased")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChartTrackingRefBased : OnOffType
     {
         /// <summary>
@@ -550,9 +624,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the DefaultCollapsed Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:collapsed.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "collapsed")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultCollapsed : OnOffType
     {
         /// <summary>
@@ -575,9 +652,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the WebExtensionLinked Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:webExtensionLinked.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "webExtensionLinked")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionLinked : OnOffType
     {
         /// <summary>
@@ -600,9 +680,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the WebExtensionCreated Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:webExtensionCreated.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "webExtensionCreated")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WebExtensionCreated : OnOffType
     {
         /// <summary>
@@ -625,9 +708,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the DoNotAllowInsertDeleteSection Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:doNotAllowInsertDeleteSection.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "doNotAllowInsertDeleteSection")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DoNotAllowInsertDeleteSection : OnOffType
     {
         /// <summary>
@@ -650,7 +736,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the OnOffType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class OnOffType : OpenXmlLeafElement
@@ -669,7 +755,13 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public OnOffValue Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public OnOffValue? Val
         {
             get => GetAttribute<OnOffValue>();
             set => SetAttribute(value);
@@ -685,9 +777,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the PersistentDocumentId Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:docId.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "docId")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PersistentDocumentId : OpenXmlLeafElement
     {
         /// <summary>
@@ -698,13 +793,19 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2013, Office2016</para>
+        /// <para>val, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:val</para>
         /// </summary>
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public StringValue Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -729,9 +830,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the FootnoteColumns Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:footnoteColumns.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "footnoteColumns")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FootnoteColumns : OpenXmlLeafElement
     {
         /// <summary>
@@ -748,7 +852,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public Int32Value Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -772,9 +882,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the CommentEx Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:commentEx.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "commentEx")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentEx : OpenXmlLeafElement
     {
         /// <summary>
@@ -785,39 +898,57 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>paraId, this property is only available in Office2013, Office2016</para>
+        /// <para>paraId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:paraId</para>
         /// </summary>
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public HexBinaryValue ParaId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "paraId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public HexBinaryValue? ParaId
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>paraIdParent, this property is only available in Office2013, Office2016</para>
+        /// <para>paraIdParent, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:paraIdParent</para>
         /// </summary>
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public HexBinaryValue ParaIdParent
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "paraIdParent")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public HexBinaryValue? ParaIdParent
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>done, this property is only available in Office2013, Office2016</para>
+        /// <para>done, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:done</para>
         /// </summary>
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public OnOffValue Done
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "done")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public OnOffValue? Done
         {
             get => GetAttribute<OnOffValue>();
             set => SetAttribute(value);
@@ -854,7 +985,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the Person Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:person.</para>
     /// </summary>
     /// <remark>
@@ -863,6 +994,9 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
     ///   <item><description>PresenceInfo &lt;w15:presenceInfo></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "person")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
@@ -897,26 +1031,19 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         }
 
         /// <summary>
-        /// <para>author, this property is only available in Office2013, Office2016</para>
+        /// <para>author, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:author</para>
         /// </summary>
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public StringValue Author
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
 
-        /// <summary>
-        /// <para>contact, this property is only available in Office2013, Office2016</para>
-        /// <para>Represents the following attribute in the schema: w15:contact</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
-        public StringValue Contact
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "author")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Author
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -933,13 +1060,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
-})
-.AddAttribute(69, "contact", a => a.Contact, aBuilder =>
-{
-aBuilder.AddValidator(RequiredValidator.Instance);
-aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013));
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.PresenceInfo), 0, 1, version: FileFormatVersions.Office2013)
             };
@@ -952,7 +1074,7 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public PresenceInfo PresenceInfo
+        public PresenceInfo? PresenceInfo
         {
             get => GetElement<PresenceInfo>();
             set => SetElement(value);
@@ -964,9 +1086,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the PresenceInfo Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:presenceInfo.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "presenceInfo")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PresenceInfo : OpenXmlLeafElement
     {
         /// <summary>
@@ -977,26 +1102,38 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         }
 
         /// <summary>
-        /// <para>providerId, this property is only available in Office2013, Office2016</para>
+        /// <para>providerId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:providerId</para>
         /// </summary>
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public StringValue ProviderId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "providerId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ProviderId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>userId, this property is only available in Office2013, Office2016</para>
+        /// <para>userId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:userId</para>
         /// </summary>
         /// <remark>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
         /// </remark>
-        public StringValue UserId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(69, "userId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? UserId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1028,9 +1165,12 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
 
     /// <summary>
     /// <para>Defines the SectionTitle Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:sectionTitle.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(69, "sectionTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SectionTitle : OpenXmlLeafElement
     {
         /// <summary>
@@ -1047,7 +1187,13 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2013))
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public StringValue Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(23, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

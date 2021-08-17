@@ -21,10 +21,10 @@ namespace DocumentFormat.OpenXml
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private const string _listSeparator = " ";
 
-        private ObservableCollection<T> _list;
+        private ObservableCollection<T>? _list;
 
         /// <summary>
-        /// Initializes a new instance of the ListValue class.
+        /// Initializes a new instance of the <see cref="ListValue{T}"/> class.
         /// </summary>
         public ListValue()
             : base()
@@ -32,13 +32,13 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the ListValue class using the supplied list of values.
+        /// Initializes a new instance of the <see cref="ListValue{T}"/> class using the supplied list of values.
         /// </summary>
         /// <param name="list">The list of the values.</param>
         public ListValue(IEnumerable<T> list)
             : base()
         {
-            if (list == null)
+            if (list is null)
             {
                 throw new ArgumentNullException(nameof(list));
             }
@@ -48,16 +48,16 @@ namespace DocumentFormat.OpenXml
 
             foreach (var item in list)
             {
-                _list.Add(item.Clone() as T);
+                _list.Add((T)item.Clone());
             }
         }
 
         /// <summary>
-        /// Initializes a new instance of the ListValue class by deep copying the supplied ListValue class.
+        /// Initializes a new instance of the <see cref="ListValue{T}"/> class by deep copying the supplied <see cref="ListValue{T}"/> class.
         /// </summary>
-        /// <param name="list">The source ListValue class.</param>
+        /// <param name="list">The source <see cref="ListValue{T}"/> class.</param>
         public ListValue(ListValue<T> list)
-            : this(list?.Items)
+            : this(list?.Items!)
         {
         }
 
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml
                 {
                     foreach (var itemValue in this)
                     {
-                        if (itemValue != null && !itemValue.IsValid)
+                        if (itemValue is not null && !itemValue.IsValid)
                         {
                             return false;
                         }
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (_list == null)
+                if (_list is null)
                 {
                     if (!string.IsNullOrEmpty(TextValue))
                     {
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                if (_list == null)
+                if (_list is null)
                 {
                     return false;
                 }
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (_list == null)
+                if (_list is null)
                 {
                     if (!string.IsNullOrEmpty(TextValue))
                     {
@@ -126,8 +126,8 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                Debug.Assert(_list != null);
-                return _list;
+                Debug.Assert(_list is not null);
+                return _list!;
             }
         }
 
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml
             if (!string.IsNullOrEmpty(TextValue))
             {
                 // split the string by white-space characters as the delimiters.
-                string[] items = TextValue.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
+                string[] items = TextValue!.Split((char[])null!, StringSplitOptions.RemoveEmptyEntries);
 
                 foreach (var item in items)
                 {
@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml
             if (!string.IsNullOrEmpty(TextValue))
             {
                 // split the string by white-space characters as the delimiters.
-                string[] items = TextValue.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
+                string[] items = TextValue!.Split((char[])null!, StringSplitOptions.RemoveEmptyEntries);
 
                 var list = new ObservableCollection<T>();
 
@@ -188,18 +188,18 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets the inner XML text.
         /// </summary>
-        public override string InnerText
+        public override string? InnerText
         {
             get
             {
-                if (TextValue == null && _list != null)
+                if (TextValue is null && _list is not null)
                 {
-                    StringBuilder textString = new StringBuilder();
+                    var textString = new StringBuilder();
                     string separator = string.Empty;
 
-                    foreach (T value in _list)
+                    foreach (var value in _list)
                     {
-                        if (value != null)
+                        if (value is not null)
                         {
                             textString.Append(separator);
                             textString.Append(value.ToString());
@@ -222,7 +222,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override OpenXmlSimpleType CloneImpl() => new ListValue<T>(this);
 
-        private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        private void CollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
         {
             // clear the TextValue when the collection is changed.
             TextValue = null;

@@ -13,11 +13,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _attribute = attribute;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
-            var element = context.Stack.Current.Element;
+            var element = context.Stack.Current?.Element;
 
-            if (element.ParsedState.Attributes[_attribute].HasValue)
+            if (element is null || element.ParsedState.Attributes[_attribute].Value is not null)
             {
                 return null;
             }

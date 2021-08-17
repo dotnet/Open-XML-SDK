@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets represents a shadow element to hold child elements if there are any.
         /// </summary>
-        internal OpenXmlElement ShadowElement { get; set; }
+        internal OpenXmlElement? ShadowElement { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlLeafElement class.
@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (ShadowElement != null)
+                if (ShadowElement is not null)
                 {
                     return ShadowElement.InnerXml;
                 }
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml
         internal override void WriteContentTo(XmlWriter w)
         {
             // Write the loaded inner xml if there are any
-            if (ShadowElement != null)
+            if (ShadowElement is not null)
             {
                 ShadowElement.WriteContentTo(w);
             }

@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -15,7 +17,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
 {
     /// <summary>
     /// <para>Defines the ColorStyle Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:colorStyle.</para>
     /// </summary>
     /// <remark>
@@ -31,6 +33,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "colorStyle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColorStyle : OpenXmlPartRootElement
     {
         /// <summary>
@@ -65,20 +70,32 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         }
 
         /// <summary>
-        /// <para>meth, this property is only available in Office2013, Office2016</para>
+        /// <para>meth, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: meth</para>
         /// </summary>
-        public StringValue Method
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "meth")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Method
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -108,11 +125,11 @@ union.AddValidator(StringValidator.Instance);
 });
 })
 .AddAttribute(0, "id", a => a.Id);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -155,7 +172,7 @@ union.AddValidator(StringValidator.Instance);
         /// <summary>
         /// Gets the ChartColorStylePart associated with this element.
         /// </summary>
-        public ChartColorStylePart ChartColorStylePart
+        public ChartColorStylePart? ChartColorStylePart
         {
             get => OpenXmlPart as ChartColorStylePart;
             internal set => OpenXmlPart = value;
@@ -164,7 +181,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ChartStyle Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:chartStyle.</para>
     /// </summary>
     /// <remark>
@@ -204,6 +221,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "chartStyle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChartStyle : OpenXmlPartRootElement
     {
         /// <summary>
@@ -238,10 +258,16 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2013, Office2016</para>
+        /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -286,7 +312,7 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<OfficeArtExtensionList>();
             builder.AddElement<ChartStyle>()
 .AddAttribute(0, "id", a => a.Id);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis), 1, 1, version: FileFormatVersions.Office2013),
@@ -330,7 +356,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public AxisTitle AxisTitle
+        public AxisTitle? AxisTitle
         {
             get => GetElement<AxisTitle>();
             set => SetElement(value);
@@ -343,7 +369,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public CategoryAxis CategoryAxis
+        public CategoryAxis? CategoryAxis
         {
             get => GetElement<CategoryAxis>();
             set => SetElement(value);
@@ -356,7 +382,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public ChartArea ChartArea
+        public ChartArea? ChartArea
         {
             get => GetElement<ChartArea>();
             set => SetElement(value);
@@ -369,7 +395,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataLabel DataLabel
+        public DataLabel? DataLabel
         {
             get => GetElement<DataLabel>();
             set => SetElement(value);
@@ -382,7 +408,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataLabelCallout DataLabelCallout
+        public DataLabelCallout? DataLabelCallout
         {
             get => GetElement<DataLabelCallout>();
             set => SetElement(value);
@@ -395,7 +421,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataPoint DataPoint
+        public DataPoint? DataPoint
         {
             get => GetElement<DataPoint>();
             set => SetElement(value);
@@ -408,7 +434,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataPoint3D DataPoint3D
+        public DataPoint3D? DataPoint3D
         {
             get => GetElement<DataPoint3D>();
             set => SetElement(value);
@@ -421,7 +447,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataPointLine DataPointLine
+        public DataPointLine? DataPointLine
         {
             get => GetElement<DataPointLine>();
             set => SetElement(value);
@@ -434,7 +460,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataPointMarker DataPointMarker
+        public DataPointMarker? DataPointMarker
         {
             get => GetElement<DataPointMarker>();
             set => SetElement(value);
@@ -447,7 +473,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public MarkerLayoutProperties MarkerLayoutProperties
+        public MarkerLayoutProperties? MarkerLayoutProperties
         {
             get => GetElement<MarkerLayoutProperties>();
             set => SetElement(value);
@@ -460,7 +486,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataPointWireframe DataPointWireframe
+        public DataPointWireframe? DataPointWireframe
         {
             get => GetElement<DataPointWireframe>();
             set => SetElement(value);
@@ -473,7 +499,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DataTableStyle DataTableStyle
+        public DataTableStyle? DataTableStyle
         {
             get => GetElement<DataTableStyle>();
             set => SetElement(value);
@@ -486,7 +512,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DownBar DownBar
+        public DownBar? DownBar
         {
             get => GetElement<DownBar>();
             set => SetElement(value);
@@ -499,7 +525,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public DropLine DropLine
+        public DropLine? DropLine
         {
             get => GetElement<DropLine>();
             set => SetElement(value);
@@ -512,7 +538,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public ErrorBar ErrorBar
+        public ErrorBar? ErrorBar
         {
             get => GetElement<ErrorBar>();
             set => SetElement(value);
@@ -525,7 +551,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public Floor Floor
+        public Floor? Floor
         {
             get => GetElement<Floor>();
             set => SetElement(value);
@@ -538,7 +564,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public GridlineMajor GridlineMajor
+        public GridlineMajor? GridlineMajor
         {
             get => GetElement<GridlineMajor>();
             set => SetElement(value);
@@ -551,7 +577,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public GridlineMinor GridlineMinor
+        public GridlineMinor? GridlineMinor
         {
             get => GetElement<GridlineMinor>();
             set => SetElement(value);
@@ -564,7 +590,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public HiLoLine HiLoLine
+        public HiLoLine? HiLoLine
         {
             get => GetElement<HiLoLine>();
             set => SetElement(value);
@@ -577,7 +603,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public LeaderLine LeaderLine
+        public LeaderLine? LeaderLine
         {
             get => GetElement<LeaderLine>();
             set => SetElement(value);
@@ -590,7 +616,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public LegendStyle LegendStyle
+        public LegendStyle? LegendStyle
         {
             get => GetElement<LegendStyle>();
             set => SetElement(value);
@@ -603,7 +629,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public PlotArea PlotArea
+        public PlotArea? PlotArea
         {
             get => GetElement<PlotArea>();
             set => SetElement(value);
@@ -616,7 +642,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public PlotArea3D PlotArea3D
+        public PlotArea3D? PlotArea3D
         {
             get => GetElement<PlotArea3D>();
             set => SetElement(value);
@@ -629,7 +655,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public SeriesAxis SeriesAxis
+        public SeriesAxis? SeriesAxis
         {
             get => GetElement<SeriesAxis>();
             set => SetElement(value);
@@ -642,7 +668,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public SeriesLine SeriesLine
+        public SeriesLine? SeriesLine
         {
             get => GetElement<SeriesLine>();
             set => SetElement(value);
@@ -655,7 +681,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public TitleStyle TitleStyle
+        public TitleStyle? TitleStyle
         {
             get => GetElement<TitleStyle>();
             set => SetElement(value);
@@ -668,7 +694,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public TrendlineStyle TrendlineStyle
+        public TrendlineStyle? TrendlineStyle
         {
             get => GetElement<TrendlineStyle>();
             set => SetElement(value);
@@ -681,7 +707,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public TrendlineLabel TrendlineLabel
+        public TrendlineLabel? TrendlineLabel
         {
             get => GetElement<TrendlineLabel>();
             set => SetElement(value);
@@ -694,7 +720,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public UpBar UpBar
+        public UpBar? UpBar
         {
             get => GetElement<UpBar>();
             set => SetElement(value);
@@ -707,7 +733,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public ValueAxis ValueAxis
+        public ValueAxis? ValueAxis
         {
             get => GetElement<ValueAxis>();
             set => SetElement(value);
@@ -720,7 +746,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public Wall Wall
+        public Wall? Wall
         {
             get => GetElement<Wall>();
             set => SetElement(value);
@@ -733,7 +759,7 @@ union.AddValidator(StringValidator.Instance);
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public OfficeArtExtensionList OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
@@ -767,7 +793,7 @@ union.AddValidator(StringValidator.Instance);
         /// <summary>
         /// Gets the ChartStylePart associated with this element.
         /// </summary>
-        public ChartStylePart ChartStylePart
+        public ChartStylePart? ChartStylePart
         {
             get => OpenXmlPart as ChartStylePart;
             internal set => OpenXmlPart = value;
@@ -776,7 +802,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the ColorStyleVariation Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:variation.</para>
     /// </summary>
     /// <remark>
@@ -812,6 +838,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.InverseGamma &lt;a:invGamma></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "variation")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColorStyleVariation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -878,11 +907,11 @@ union.AddValidator(StringValidator.Instance);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlueModulation>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Gamma>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.InverseGamma>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tint), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shade), 1, 1),
@@ -923,7 +952,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OfficeArtExtensionList Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:extLst.</para>
     /// </summary>
     /// <remark>
@@ -932,6 +961,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Extension &lt;a:ext></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -971,11 +1003,11 @@ union.AddValidator(StringValidator.Instance);
             builder.SetSchema(65, "extLst");
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
                     }
@@ -989,7 +1021,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the StyleColor Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:styleClr.</para>
     /// </summary>
     /// <remark>
@@ -1025,6 +1057,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.InverseGamma &lt;a:invGamma></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "styleClr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StyleColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1059,10 +1094,16 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2013, Office2016</para>
+        /// <para>val, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1111,11 +1152,11 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyl
 union.AddValidator(StringValidator.Instance);
 });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tint), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shade), 1, 1),
@@ -1156,7 +1197,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the LineReference Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:lnRef.</para>
     /// </summary>
     /// <remark>
@@ -1171,6 +1212,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "lnRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineReference : StyleReference
     {
         /// <summary>
@@ -1209,11 +1253,11 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "lnRef");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1233,7 +1277,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the FillReference Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:fillRef.</para>
     /// </summary>
     /// <remark>
@@ -1248,6 +1292,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "fillRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FillReference : StyleReference
     {
         /// <summary>
@@ -1286,11 +1333,11 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "fillRef");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1310,7 +1357,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the EffectReference Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:effectRef.</para>
     /// </summary>
     /// <remark>
@@ -1325,6 +1372,9 @@ union.AddValidator(StringValidator.Instance);
     ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "effectRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EffectReference : StyleReference
     {
         /// <summary>
@@ -1363,11 +1413,11 @@ union.AddValidator(StringValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "effectRef");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1387,7 +1437,7 @@ union.AddValidator(StringValidator.Instance);
 
     /// <summary>
     /// <para>Defines the StyleReference Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -1436,20 +1486,32 @@ union.AddValidator(StringValidator.Instance);
         }
 
         /// <summary>
-        /// <para>idx, this property is only available in Office2013, Office2016</para>
+        /// <para>idx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public UInt32Value Index
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idx")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? Index
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>mods, this property is only available in Office2013, Office2016</para>
+        /// <para>mods, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: mods</para>
         /// </summary>
-        public ListValue<StringValue> Modifiers
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "mods")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public ListValue<StringValue>? Modifiers
         {
             get => GetAttribute<ListValue<StringValue>>();
             set => SetAttribute(value);
@@ -1476,9 +1538,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the LineWidthScale Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:lineWidthScale.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "lineWidthScale")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineWidthScale : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1515,7 +1580,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the FontReference Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:fontRef.</para>
     /// </summary>
     /// <remark>
@@ -1530,6 +1595,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>StyleColor &lt;cs:styleClr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "fontRef")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FontReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1564,20 +1632,32 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>idx, this property is only available in Office2013, Office2016</para>
+        /// <para>idx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues> Index
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "idx")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>? Index
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>mods, this property is only available in Office2013, Office2016</para>
+        /// <para>mods, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: mods</para>
         /// </summary>
-        public ListValue<StringValue> Modifiers
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "mods")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public ListValue<StringValue>? Modifiers
         {
             get => GetAttribute<ListValue<StringValue>>();
             set => SetAttribute(value);
@@ -1602,11 +1682,11 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "mods", a => a.Modifiers);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
@@ -1626,7 +1706,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the ShapeProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:spPr.</para>
     /// </summary>
     /// <remark>
@@ -1649,6 +1729,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "spPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1686,7 +1769,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bwMode")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
             set => SetAttribute(value);
@@ -1717,20 +1806,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 {
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -1741,9 +1830,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
@@ -1762,7 +1851,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Transform2D Transform2D
+        public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
             set => SetElement(value);
@@ -1774,7 +1863,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the TextCharacterPropertiesType Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:defRPr.</para>
     /// </summary>
     /// <remark>
@@ -1804,6 +1893,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "defRPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1841,7 +1933,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>kumimoji</para>
         /// <para>Represents the following attribute in the schema: kumimoji</para>
         /// </summary>
-        public BooleanValue Kumimoji
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "kumimoji")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Kumimoji
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1851,7 +1949,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>lang</para>
         /// <para>Represents the following attribute in the schema: lang</para>
         /// </summary>
-        public StringValue Language
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "lang")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Language
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1861,7 +1965,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>altLang</para>
         /// <para>Represents the following attribute in the schema: altLang</para>
         /// </summary>
-        public StringValue AlternativeLanguage
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "altLang")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? AlternativeLanguage
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1871,7 +1981,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>sz</para>
         /// <para>Represents the following attribute in the schema: sz</para>
         /// </summary>
-        public Int32Value FontSize
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "sz")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? FontSize
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -1881,7 +1997,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>b</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public BooleanValue Bold
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "b")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Bold
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1891,7 +2013,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>i</para>
         /// <para>Represents the following attribute in the schema: i</para>
         /// </summary>
-        public BooleanValue Italic
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "i")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Italic
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1901,7 +2029,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>u</para>
         /// <para>Represents the following attribute in the schema: u</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues> Underline
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "u")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>? Underline
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>>();
             set => SetAttribute(value);
@@ -1911,7 +2045,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>strike</para>
         /// <para>Represents the following attribute in the schema: strike</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues> Strike
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "strike")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>? Strike
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>>();
             set => SetAttribute(value);
@@ -1921,7 +2061,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>kern</para>
         /// <para>Represents the following attribute in the schema: kern</para>
         /// </summary>
-        public Int32Value Kerning
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "kern")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? Kerning
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -1931,7 +2077,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>cap</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues> Capital
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "cap")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>? Capital
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>>();
             set => SetAttribute(value);
@@ -1941,7 +2093,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>spc</para>
         /// <para>Represents the following attribute in the schema: spc</para>
         /// </summary>
-        public Int32Value Spacing
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "spc")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? Spacing
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -1951,7 +2109,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>normalizeH</para>
         /// <para>Represents the following attribute in the schema: normalizeH</para>
         /// </summary>
-        public BooleanValue NormalizeHeight
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "normalizeH")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NormalizeHeight
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1961,7 +2125,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>baseline</para>
         /// <para>Represents the following attribute in the schema: baseline</para>
         /// </summary>
-        public Int32Value Baseline
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "baseline")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? Baseline
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -1971,7 +2141,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>noProof</para>
         /// <para>Represents the following attribute in the schema: noProof</para>
         /// </summary>
-        public BooleanValue NoProof
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "noProof")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? NoProof
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1981,7 +2157,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>dirty</para>
         /// <para>Represents the following attribute in the schema: dirty</para>
         /// </summary>
-        public BooleanValue Dirty
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "dirty")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Dirty
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1991,7 +2173,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>err</para>
         /// <para>Represents the following attribute in the schema: err</para>
         /// </summary>
-        public BooleanValue SpellingError
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "err")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? SpellingError
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2001,7 +2189,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>smtClean</para>
         /// <para>Represents the following attribute in the schema: smtClean</para>
         /// </summary>
-        public BooleanValue SmartTagClean
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "smtClean")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? SmartTagClean
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2011,7 +2205,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>smtId</para>
         /// <para>Represents the following attribute in the schema: smtId</para>
         /// </summary>
-        public UInt32Value SmartTagId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "smtId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? SmartTagId
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -2021,7 +2221,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>bmk</para>
         /// <para>Represents the following attribute in the schema: bmk</para>
         /// </summary>
-        public StringValue Bookmark
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bmk")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Bookmark
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2092,12 +2298,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 .AddAttribute(0, "smtClean", a => a.SmartTagClean)
 .AddAttribute(0, "smtId", a => a.SmartTagId)
 .AddAttribute(0, "bmk", a => a.Bookmark);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
@@ -2107,26 +2313,26 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Highlight), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFollowsText), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Underline), 0, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFillText), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFill), 1, 1)
@@ -2150,7 +2356,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Outline Outline
+        public DocumentFormat.OpenXml.Drawing.Outline? Outline
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>();
             set => SetElement(value);
@@ -2162,7 +2368,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
 
     /// <summary>
     /// <para>Defines the TextBodyProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:bodyPr.</para>
     /// </summary>
     /// <remark>
@@ -2178,6 +2384,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "bodyPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TextBodyProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2215,7 +2424,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Rotation</para>
         /// <para>Represents the following attribute in the schema: rot</para>
         /// </summary>
-        public Int32Value Rotation
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rot")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? Rotation
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2225,7 +2440,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Paragraph Spacing</para>
         /// <para>Represents the following attribute in the schema: spcFirstLastPara</para>
         /// </summary>
-        public BooleanValue UseParagraphSpacing
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "spcFirstLastPara")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? UseParagraphSpacing
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2235,7 +2456,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Text Vertical Overflow</para>
         /// <para>Represents the following attribute in the schema: vertOverflow</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues> VerticalOverflow
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "vertOverflow")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>? VerticalOverflow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>>();
             set => SetAttribute(value);
@@ -2245,7 +2472,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Text Horizontal Overflow</para>
         /// <para>Represents the following attribute in the schema: horzOverflow</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "horzOverflow")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>? HorizontalOverflow
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>();
             set => SetAttribute(value);
@@ -2255,7 +2488,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Vertical Text</para>
         /// <para>Represents the following attribute in the schema: vert</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "vert")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>? Vertical
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>();
             set => SetAttribute(value);
@@ -2265,7 +2504,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Text Wrapping Type</para>
         /// <para>Represents the following attribute in the schema: wrap</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues> Wrap
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "wrap")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>? Wrap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>>();
             set => SetAttribute(value);
@@ -2275,7 +2520,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Left Inset</para>
         /// <para>Represents the following attribute in the schema: lIns</para>
         /// </summary>
-        public Int32Value LeftInset
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "lIns")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? LeftInset
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2285,7 +2536,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Top Inset</para>
         /// <para>Represents the following attribute in the schema: tIns</para>
         /// </summary>
-        public Int32Value TopInset
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "tIns")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? TopInset
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2295,7 +2552,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Right Inset</para>
         /// <para>Represents the following attribute in the schema: rIns</para>
         /// </summary>
-        public Int32Value RightInset
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rIns")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? RightInset
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2305,7 +2568,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Bottom Inset</para>
         /// <para>Represents the following attribute in the schema: bIns</para>
         /// </summary>
-        public Int32Value BottomInset
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "bIns")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? BottomInset
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2315,7 +2584,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Number of Columns</para>
         /// <para>Represents the following attribute in the schema: numCol</para>
         /// </summary>
-        public Int32Value ColumnCount
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "numCol")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? ColumnCount
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2325,7 +2600,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Space Between Columns</para>
         /// <para>Represents the following attribute in the schema: spcCol</para>
         /// </summary>
-        public Int32Value ColumnSpacing
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "spcCol")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? ColumnSpacing
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2335,7 +2616,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Columns Right-To-Left</para>
         /// <para>Represents the following attribute in the schema: rtlCol</para>
         /// </summary>
-        public BooleanValue RightToLeftColumns
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rtlCol")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? RightToLeftColumns
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2345,7 +2632,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>From WordArt</para>
         /// <para>Represents the following attribute in the schema: fromWordArt</para>
         /// </summary>
-        public BooleanValue FromWordArt
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fromWordArt")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? FromWordArt
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2355,7 +2648,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Anchor</para>
         /// <para>Represents the following attribute in the schema: anchor</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "anchor")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>? Anchor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>();
             set => SetAttribute(value);
@@ -2365,7 +2664,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Anchor Center</para>
         /// <para>Represents the following attribute in the schema: anchorCtr</para>
         /// </summary>
-        public BooleanValue AnchorCenter
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "anchorCtr")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? AnchorCenter
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2375,7 +2680,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Force Anti-Alias</para>
         /// <para>Represents the following attribute in the schema: forceAA</para>
         /// </summary>
-        public BooleanValue ForceAntiAlias
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "forceAA")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? ForceAntiAlias
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2385,7 +2696,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Text Upright</para>
         /// <para>Represents the following attribute in the schema: upright</para>
         /// </summary>
-        public BooleanValue UpRight
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "upright")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? UpRight
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2395,7 +2712,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-400000L), MaxIncl
         /// <para>Compatible Line Spacing</para>
         /// <para>Represents the following attribute in the schema: compatLnSpc</para>
         /// </summary>
-        public BooleanValue CompatibleLineSpacing
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "compatLnSpc")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? CompatibleLineSpacing
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -2455,12 +2778,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "forceAA", a => a.ForceAntiAlias)
 .AddAttribute(0, "upright", a => a.UpRight)
 .AddAttribute(0, "compatLnSpc", a => a.CompatibleLineSpacing);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWrap), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoAutoFit), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NormalAutoFit), 1, 1),
@@ -2468,9 +2791,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 1, 1),
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FlatText), 1, 1)
@@ -2487,7 +2810,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.PresetTextWrap PresetTextWrap
+        public DocumentFormat.OpenXml.Drawing.PresetTextWrap? PresetTextWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWrap>();
             set => SetElement(value);
@@ -2499,9 +2822,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the CategoryAxisProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:categoryAxis.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "categoryAxis")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CategoryAxisProperties : AxisProperties
     {
         /// <summary>
@@ -2524,9 +2850,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the SeriesAxisProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:seriesAxis.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "seriesAxis")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeriesAxisProperties : AxisProperties
     {
         /// <summary>
@@ -2549,9 +2878,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the ValueAxisProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:valueAxis.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "valueAxis")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ValueAxisProperties : AxisProperties
     {
         /// <summary>
@@ -2574,7 +2906,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the AxisProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class AxisProperties : OpenXmlLeafElement
@@ -2587,70 +2919,112 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2013, Office2016</para>
+        /// <para>visible, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Visible
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Visible
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>majorTick, this property is only available in Office2013, Office2016</para>
+        /// <para>majorTick, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: majorTick</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch> MajorTick
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "majorTick")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>? MajorTick
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>minorTick, this property is only available in Office2013, Office2016</para>
+        /// <para>minorTick, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: minorTick</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch> MinorTickProp
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "minorTick")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>? MinorTickProp
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>labelPosition, this property is only available in Office2013, Office2016</para>
+        /// <para>labelPosition, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: labelPosition</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch> LabelPosition
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "labelPosition")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch>? LabelPosition
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>majorGridlines, this property is only available in Office2013, Office2016</para>
+        /// <para>majorGridlines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: majorGridlines</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> MajorGridlines
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "majorGridlines")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? MajorGridlines
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>minorGridlines, this property is only available in Office2013, Office2016</para>
+        /// <para>minorGridlines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: minorGridlines</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> MinorGridlinesProp
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "minorGridlines")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? MinorGridlinesProp
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>title, this property is only available in Office2013, Office2016</para>
+        /// <para>title, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> TitleProp
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? TitleProp
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
@@ -2693,9 +3067,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the DataSeries Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataSeries.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataSeries")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataSeries : OpenXmlLeafElement
     {
         /// <summary>
@@ -2706,80 +3083,128 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>overlap, this property is only available in Office2013, Office2016</para>
+        /// <para>overlap, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: overlap</para>
         /// </summary>
-        public SByteValue Overlap
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "overlap")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public SByteValue? Overlap
         {
             get => GetAttribute<SByteValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>gapWidth, this property is only available in Office2013, Office2016</para>
+        /// <para>gapWidth, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: gapWidth</para>
         /// </summary>
-        public UInt16Value GapWidth
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "gapWidth")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt16Value? GapWidth
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>gapDepth, this property is only available in Office2013, Office2016</para>
+        /// <para>gapDepth, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: gapDepth</para>
         /// </summary>
-        public UInt16Value GapDepth
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "gapDepth")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt16Value? GapDepth
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>doughnutHoleSize, this property is only available in Office2013, Office2016</para>
+        /// <para>doughnutHoleSize, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: doughnutHoleSize</para>
         /// </summary>
-        public ByteValue DoughnutHoleSize
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "doughnutHoleSize")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public ByteValue? DoughnutHoleSize
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>markerVisible, this property is only available in Office2013, Office2016</para>
+        /// <para>markerVisible, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: markerVisible</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> MarkerVisible
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "markerVisible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? MarkerVisible
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>hiloLines, this property is only available in Office2013, Office2016</para>
+        /// <para>hiloLines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: hiloLines</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> HiloLines
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "hiloLines")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? HiloLines
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>dropLines, this property is only available in Office2013, Office2016</para>
+        /// <para>dropLines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: dropLines</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> DropLines
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "dropLines")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? DropLines
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>seriesLines, this property is only available in Office2013, Office2016</para>
+        /// <para>seriesLines, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: seriesLines</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> SeriesLines
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "seriesLines")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? SeriesLines
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
@@ -2831,9 +3256,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the DataLabels Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataLabels.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataLabels")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabels : OpenXmlLeafElement
     {
         /// <summary>
@@ -2844,60 +3272,96 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>position, this property is only available in Office2013, Office2016</para>
+        /// <para>position, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition> Position
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "position")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition>? Position
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>value, this property is only available in Office2013, Office2016</para>
+        /// <para>value, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: value</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Value
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "value")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Value
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>seriesName, this property is only available in Office2013, Office2016</para>
+        /// <para>seriesName, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: seriesName</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> SeriesName
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "seriesName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? SeriesName
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>categoryName, this property is only available in Office2013, Office2016</para>
+        /// <para>categoryName, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: categoryName</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> CategoryName
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "categoryName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? CategoryName
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>legendKey, this property is only available in Office2013, Office2016</para>
+        /// <para>legendKey, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: legendKey</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> LegendKey
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "legendKey")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? LegendKey
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>percentage, this property is only available in Office2013, Office2016</para>
+        /// <para>percentage, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: percentage</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Percentage
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "percentage")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Percentage
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
@@ -2941,9 +3405,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the DataTable Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataTable.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataTable")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataTable : OpenXmlLeafElement
     {
         /// <summary>
@@ -2954,40 +3421,64 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>legendKeys, this property is only available in Office2013, Office2016</para>
+        /// <para>legendKeys, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: legendKeys</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> LegendKeys
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "legendKeys")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? LegendKeys
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>horizontalBorder, this property is only available in Office2013, Office2016</para>
+        /// <para>horizontalBorder, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: horizontalBorder</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> HorizontalBorder
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "horizontalBorder")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? HorizontalBorder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>verticalBorder, this property is only available in Office2013, Office2016</para>
+        /// <para>verticalBorder, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: verticalBorder</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> VerticalBorder
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "verticalBorder")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? VerticalBorder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>outlineBorder, this property is only available in Office2013, Office2016</para>
+        /// <para>outlineBorder, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: outlineBorder</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> OutlineBorder
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "outlineBorder")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? OutlineBorder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
@@ -3023,9 +3514,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the Legend Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:legend.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "legend")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Legend : OpenXmlLeafElement
     {
         /// <summary>
@@ -3036,30 +3530,48 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>visible, this property is only available in Office2013, Office2016</para>
+        /// <para>visible, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: visible</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Visible
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "visible")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Visible
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>includeInLayout, this property is only available in Office2013, Office2016</para>
+        /// <para>includeInLayout, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: includeInLayout</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> IncludeInLayout
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "includeInLayout")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? IncludeInLayout
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>position, this property is only available in Office2013, Office2016</para>
+        /// <para>position, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition> Position
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "position")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition>? Position
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition>>();
             set => SetAttribute(value);
@@ -3091,9 +3603,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the Title Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:title.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Title : OpenXmlLeafElement
     {
         /// <summary>
@@ -3104,10 +3619,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>position, this property is only available in Office2013, Office2016</para>
+        /// <para>position, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: position</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition> Position
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "position")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition>? Position
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition>>();
             set => SetAttribute(value);
@@ -3131,9 +3652,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the Trendline Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:trendline.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "trendline")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Trendline : OpenXmlLeafElement
     {
         /// <summary>
@@ -3144,30 +3668,48 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>add, this property is only available in Office2013, Office2016</para>
+        /// <para>add, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: add</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Add
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "add")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Add
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>equation, this property is only available in Office2013, Office2016</para>
+        /// <para>equation, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: equation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Equation
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "equation")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? Equation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>rsquared, this property is only available in Office2013, Office2016</para>
+        /// <para>rsquared, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rsquared</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> RSquared
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rsquared")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? RSquared
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
@@ -3199,9 +3741,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Defines the View3DProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:view3D.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "view3D")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class View3DProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -3212,60 +3757,96 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         }
 
         /// <summary>
-        /// <para>rotX, this property is only available in Office2013, Office2016</para>
+        /// <para>rotX, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rotX</para>
         /// </summary>
-        public SByteValue RotX
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rotX")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public SByteValue? RotX
         {
             get => GetAttribute<SByteValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>rotY, this property is only available in Office2013, Office2016</para>
+        /// <para>rotY, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rotY</para>
         /// </summary>
-        public UInt16Value RotY
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rotY")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt16Value? RotY
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>rAngAx, this property is only available in Office2013, Office2016</para>
+        /// <para>rAngAx, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: rAngAx</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> RightAngleAxes
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "rAngAx")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>? RightAngleAxes
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>perspective, this property is only available in Office2013, Office2016</para>
+        /// <para>perspective, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: perspective</para>
         /// </summary>
-        public ByteValue Perspective
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "perspective")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public ByteValue? Perspective
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>heightPercent, this property is only available in Office2013, Office2016</para>
+        /// <para>heightPercent, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: heightPercent</para>
         /// </summary>
-        public UInt16Value HeightPercent
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "heightPercent")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt16Value? HeightPercent
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>depthPercent, this property is only available in Office2013, Office2016</para>
+        /// <para>depthPercent, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: depthPercent</para>
         /// </summary>
-        public UInt16Value DepthPercent
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "depthPercent")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt16Value? DepthPercent
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -3309,7 +3890,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the AxisTitle Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:axisTitle.</para>
     /// </summary>
     /// <remark>
@@ -3326,6 +3907,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "axisTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AxisTitle : StyleEntry
     {
         /// <summary>
@@ -3364,7 +3948,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "axisTitle");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -3384,7 +3968,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the CategoryAxis Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:categoryAxis.</para>
     /// </summary>
     /// <remark>
@@ -3401,6 +3985,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "categoryAxis")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CategoryAxis : StyleEntry
     {
         /// <summary>
@@ -3439,7 +4026,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "categoryAxis");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -3459,7 +4046,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the ChartArea Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:chartArea.</para>
     /// </summary>
     /// <remark>
@@ -3476,6 +4063,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "chartArea")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChartArea : StyleEntry
     {
         /// <summary>
@@ -3514,7 +4104,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "chartArea");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -3534,7 +4124,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the DataLabel Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataLabel.</para>
     /// </summary>
     /// <remark>
@@ -3551,6 +4141,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabel : StyleEntry
     {
         /// <summary>
@@ -3589,7 +4182,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataLabel");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -3609,7 +4202,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the DataLabelCallout Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataLabelCallout.</para>
     /// </summary>
     /// <remark>
@@ -3626,6 +4219,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataLabelCallout")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataLabelCallout : StyleEntry
     {
         /// <summary>
@@ -3664,7 +4260,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataLabelCallout");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -3684,7 +4280,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the DataPoint Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPoint.</para>
     /// </summary>
     /// <remark>
@@ -3701,6 +4297,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataPoint")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPoint : StyleEntry
     {
         /// <summary>
@@ -3739,7 +4338,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPoint");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -3759,7 +4358,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the DataPoint3D Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPoint3D.</para>
     /// </summary>
     /// <remark>
@@ -3776,6 +4375,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataPoint3D")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPoint3D : StyleEntry
     {
         /// <summary>
@@ -3814,7 +4416,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPoint3D");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -3834,7 +4436,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the DataPointLine Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPointLine.</para>
     /// </summary>
     /// <remark>
@@ -3851,6 +4453,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataPointLine")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPointLine : StyleEntry
     {
         /// <summary>
@@ -3889,7 +4494,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointLine");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -3909,7 +4514,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the DataPointMarker Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPointMarker.</para>
     /// </summary>
     /// <remark>
@@ -3926,6 +4531,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataPointMarker")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPointMarker : StyleEntry
     {
         /// <summary>
@@ -3964,7 +4572,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointMarker");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -3984,7 +4592,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the DataPointWireframe Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPointWireframe.</para>
     /// </summary>
     /// <remark>
@@ -4001,6 +4609,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataPointWireframe")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataPointWireframe : StyleEntry
     {
         /// <summary>
@@ -4039,7 +4650,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataPointWireframe");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4059,7 +4670,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the DataTableStyle Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataTable.</para>
     /// </summary>
     /// <remark>
@@ -4076,6 +4687,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataTable")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataTableStyle : StyleEntry
     {
         /// <summary>
@@ -4114,7 +4728,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dataTable");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4134,7 +4748,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the DownBar Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:downBar.</para>
     /// </summary>
     /// <remark>
@@ -4151,6 +4765,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "downBar")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DownBar : StyleEntry
     {
         /// <summary>
@@ -4189,7 +4806,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "downBar");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4209,7 +4826,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the DropLine Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dropLine.</para>
     /// </summary>
     /// <remark>
@@ -4226,6 +4843,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dropLine")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DropLine : StyleEntry
     {
         /// <summary>
@@ -4264,7 +4884,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "dropLine");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4284,7 +4904,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the ErrorBar Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:errorBar.</para>
     /// </summary>
     /// <remark>
@@ -4301,6 +4921,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "errorBar")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ErrorBar : StyleEntry
     {
         /// <summary>
@@ -4339,7 +4962,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "errorBar");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4359,7 +4982,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the Floor Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:floor.</para>
     /// </summary>
     /// <remark>
@@ -4376,6 +4999,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "floor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Floor : StyleEntry
     {
         /// <summary>
@@ -4414,7 +5040,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "floor");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4434,7 +5060,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the GridlineMajor Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:gridlineMajor.</para>
     /// </summary>
     /// <remark>
@@ -4451,6 +5077,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "gridlineMajor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GridlineMajor : StyleEntry
     {
         /// <summary>
@@ -4489,7 +5118,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "gridlineMajor");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4509,7 +5138,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the GridlineMinor Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:gridlineMinor.</para>
     /// </summary>
     /// <remark>
@@ -4526,6 +5155,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "gridlineMinor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GridlineMinor : StyleEntry
     {
         /// <summary>
@@ -4564,7 +5196,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "gridlineMinor");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4584,7 +5216,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the HiLoLine Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:hiLoLine.</para>
     /// </summary>
     /// <remark>
@@ -4601,6 +5233,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "hiLoLine")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HiLoLine : StyleEntry
     {
         /// <summary>
@@ -4639,7 +5274,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "hiLoLine");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4659,7 +5294,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the LeaderLine Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:leaderLine.</para>
     /// </summary>
     /// <remark>
@@ -4676,6 +5311,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "leaderLine")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LeaderLine : StyleEntry
     {
         /// <summary>
@@ -4714,7 +5352,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "leaderLine");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4734,7 +5372,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the LegendStyle Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:legend.</para>
     /// </summary>
     /// <remark>
@@ -4751,6 +5389,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "legend")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LegendStyle : StyleEntry
     {
         /// <summary>
@@ -4789,7 +5430,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "legend");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4809,7 +5450,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the PlotArea Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:plotArea.</para>
     /// </summary>
     /// <remark>
@@ -4826,6 +5467,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "plotArea")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PlotArea : StyleEntry
     {
         /// <summary>
@@ -4864,7 +5508,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "plotArea");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4884,7 +5528,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the PlotArea3D Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:plotArea3D.</para>
     /// </summary>
     /// <remark>
@@ -4901,6 +5545,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "plotArea3D")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PlotArea3D : StyleEntry
     {
         /// <summary>
@@ -4939,7 +5586,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "plotArea3D");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -4959,7 +5606,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the SeriesAxis Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:seriesAxis.</para>
     /// </summary>
     /// <remark>
@@ -4976,6 +5623,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "seriesAxis")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeriesAxis : StyleEntry
     {
         /// <summary>
@@ -5014,7 +5664,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "seriesAxis");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5034,7 +5684,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the SeriesLine Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:seriesLine.</para>
     /// </summary>
     /// <remark>
@@ -5051,6 +5701,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "seriesLine")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeriesLine : StyleEntry
     {
         /// <summary>
@@ -5089,7 +5742,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "seriesLine");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5109,7 +5762,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the TitleStyle Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:title.</para>
     /// </summary>
     /// <remark>
@@ -5126,6 +5779,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TitleStyle : StyleEntry
     {
         /// <summary>
@@ -5164,7 +5820,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "title");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5184,7 +5840,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the TrendlineStyle Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:trendline.</para>
     /// </summary>
     /// <remark>
@@ -5201,6 +5857,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "trendline")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TrendlineStyle : StyleEntry
     {
         /// <summary>
@@ -5239,7 +5898,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "trendline");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5259,7 +5918,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the TrendlineLabel Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:trendlineLabel.</para>
     /// </summary>
     /// <remark>
@@ -5276,6 +5935,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "trendlineLabel")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class TrendlineLabel : StyleEntry
     {
         /// <summary>
@@ -5314,7 +5976,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "trendlineLabel");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5334,7 +5996,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the UpBar Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:upBar.</para>
     /// </summary>
     /// <remark>
@@ -5351,6 +6013,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "upBar")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UpBar : StyleEntry
     {
         /// <summary>
@@ -5389,7 +6054,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "upBar");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5409,7 +6074,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the ValueAxis Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:valueAxis.</para>
     /// </summary>
     /// <remark>
@@ -5426,6 +6091,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "valueAxis")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ValueAxis : StyleEntry
     {
         /// <summary>
@@ -5464,7 +6132,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "valueAxis");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5484,7 +6152,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the Wall Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:wall.</para>
     /// </summary>
     /// <remark>
@@ -5501,6 +6169,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
     ///   <item><description>OfficeArtExtensionList &lt;cs:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "wall")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Wall : StyleEntry
     {
         /// <summary>
@@ -5539,7 +6210,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
             base.ConfigureMetadata(builder);
             builder.SetSchema(65, "wall");
             builder.Availability = FileFormatVersions.Office2013;
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
@@ -5559,7 +6230,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the StyleEntry Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -5610,10 +6281,16 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         }
 
         /// <summary>
-        /// <para>mods, this property is only available in Office2013, Office2016</para>
+        /// <para>mods, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: mods</para>
         /// </summary>
-        public ListValue<StringValue> Modifiers
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "mods")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public ListValue<StringValue>? Modifiers
         {
             get => GetAttribute<ListValue<StringValue>>();
             set => SetAttribute(value);
@@ -5642,7 +6319,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public LineReference LineReference
+        public LineReference? LineReference
         {
             get => GetElement<LineReference>();
             set => SetElement(value);
@@ -5655,7 +6332,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public LineWidthScale LineWidthScale
+        public LineWidthScale? LineWidthScale
         {
             get => GetElement<LineWidthScale>();
             set => SetElement(value);
@@ -5668,7 +6345,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public FillReference FillReference
+        public FillReference? FillReference
         {
             get => GetElement<FillReference>();
             set => SetElement(value);
@@ -5681,7 +6358,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public EffectReference EffectReference
+        public EffectReference? EffectReference
         {
             get => GetElement<EffectReference>();
             set => SetElement(value);
@@ -5694,7 +6371,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public FontReference FontReference
+        public FontReference? FontReference
         {
             get => GetElement<FontReference>();
             set => SetElement(value);
@@ -5707,7 +6384,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public ShapeProperties ShapeProperties
+        public ShapeProperties? ShapeProperties
         {
             get => GetElement<ShapeProperties>();
             set => SetElement(value);
@@ -5720,7 +6397,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public TextCharacterPropertiesType TextCharacterPropertiesType
+        public TextCharacterPropertiesType? TextCharacterPropertiesType
         {
             get => GetElement<TextCharacterPropertiesType>();
             set => SetElement(value);
@@ -5733,7 +6410,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public TextBodyProperties TextBodyProperties
+        public TextBodyProperties? TextBodyProperties
         {
             get => GetElement<TextBodyProperties>();
             set => SetElement(value);
@@ -5746,7 +6423,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         /// <remark>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
         /// </remark>
-        public OfficeArtExtensionList OfficeArtExtensionList
+        public OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<OfficeArtExtensionList>();
             set => SetElement(value);
@@ -5755,9 +6432,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
 
     /// <summary>
     /// <para>Defines the MarkerLayoutProperties Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPointMarkerLayout.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(65, "dataPointMarkerLayout")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MarkerLayoutProperties : OpenXmlLeafElement
     {
         /// <summary>
@@ -5768,20 +6448,32 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (20L), MaxInclusive
         }
 
         /// <summary>
-        /// <para>symbol, this property is only available in Office2013, Office2016</para>
+        /// <para>symbol, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: symbol</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle> Symbol
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "symbol")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle>? Symbol
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle>>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>size, this property is only available in Office2013, Office2016</para>
+        /// <para>size, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public ByteValue Size
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public ByteValue? Size
         {
             get => GetAttribute<ByteValue>();
             set => SetAttribute(value);

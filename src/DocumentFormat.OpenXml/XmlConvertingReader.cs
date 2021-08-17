@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines the XmlConvertingReader - This XmlReader tries to replace the Strict namespaces with equivalent Transitional namespaces.
     /// </summary>
-    internal class XmlConvertingReader : XmlReader
+    internal class XmlConvertingReader : XmlReader, IXmlLineInfo
     {
         /// <summary>
         /// Creates an instance of <see cref="XmlConvertingReader"/>
@@ -41,6 +41,8 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
+            base.Dispose(disposing);
+
 #if FEATURE_XML_DISPOSE_PROTECTED
             (BaseReader as IDisposable)?.Dispose();
 #else
@@ -55,13 +57,13 @@ namespace DocumentFormat.OpenXml
         public override string GetAttribute(int index) => BaseReader.GetAttribute(index);
 
         /// <inheritdoc/>
-        public override string GetAttribute(string name) => BaseReader.GetAttribute(name);
+        public override string? GetAttribute(string name) => BaseReader.GetAttribute(name);
 
         /// <inheritdoc/>
-        public override string GetAttribute(string localName, string namespaceURI) => BaseReader.GetAttribute(localName, namespaceURI);
+        public override string? GetAttribute(string localName, string? namespaceURI) => BaseReader.GetAttribute(localName, namespaceURI);
 
         /// <inheritdoc/>
-        public override string LookupNamespace(string prefix) => BaseReader.LookupNamespace(prefix);
+        public override string? LookupNamespace(string prefix) => BaseReader.LookupNamespace(prefix);
 
         /// <inheritdoc/>
         public override void MoveToAttribute(int index) => BaseReader.MoveToAttribute(index);
@@ -70,7 +72,7 @@ namespace DocumentFormat.OpenXml
         public override bool MoveToAttribute(string name) => BaseReader.MoveToAttribute(name);
 
         /// <inheritdoc/>
-        public override bool MoveToAttribute(string localName, string namespaceURI) => BaseReader.MoveToAttribute(localName, namespaceURI);
+        public override bool MoveToAttribute(string localName, string? namespaceURI) => BaseReader.MoveToAttribute(localName, namespaceURI);
 
         /// <inheritdoc/>
         public override bool MoveToElement() => BaseReader.MoveToElement();
@@ -94,7 +96,7 @@ namespace DocumentFormat.OpenXml
         public override int AttributeCount => BaseReader.AttributeCount;
 
         /// <inheritdoc/>
-        public override string BaseURI => BaseReader.BaseURI;
+        public override string? BaseURI => BaseReader.BaseURI;
 
         /// <inheritdoc/>
         public override bool CanReadBinaryContent => BaseReader.CanReadBinaryContent;
@@ -124,10 +126,10 @@ namespace DocumentFormat.OpenXml
         public override string this[int index] => BaseReader[index];
 
         /// <inheritdoc/>
-        public override string this[string name] => BaseReader[name];
+        public override string? this[string name] => BaseReader[name];
 
         /// <inheritdoc/>
-        public override string this[string name, string namespaceURI] => BaseReader[name, namespaceURI];
+        public override string? this[string name, string? namespaceURI] => BaseReader[name, namespaceURI];
 
         /// <inheritdoc/>
         public override string LocalName => BaseReader.LocalName;
@@ -164,21 +166,27 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override XmlSpace XmlSpace => BaseReader.XmlSpace;
 
-        private string ApplyStrictTranslation(string uri)
+        int IXmlLineInfo.LineNumber => XmlLineInfo.Get(BaseReader).LineNumber;
+
+        int IXmlLineInfo.LinePosition => XmlLineInfo.Get(BaseReader).LinePosition;
+
+        bool IXmlLineInfo.HasLineInfo() => XmlLineInfo.Get(BaseReader).HasLineInfo();
+
+        private string ApplyStrictTranslation(in OpenXmlNamespace ns)
         {
             if (StrictRelationshipFound)
             {
-                if (NamespaceIdMap.TryGetTransitionalNamespace(uri, out var transitionalNamespace))
+                if (ns.TryGetTransitionalNamespace( out var transitionalNamespace))
                 {
-                    return transitionalNamespace;
+                    return transitionalNamespace.Uri;
                 }
             }
-            else if (NamespaceIdMap.TryGetExtendedNamespace(uri, out var extendedNamespace))
+            else if (ns.TryGetExtendedNamespace( out var extendedNamespace))
             {
-                return extendedNamespace;
+                return extendedNamespace.Uri;
             }
 
-            return uri;
+            return ns.Uri;
         }
     }
 }

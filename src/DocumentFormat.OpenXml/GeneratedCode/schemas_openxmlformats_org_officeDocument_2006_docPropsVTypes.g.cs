@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -15,7 +17,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
 {
     /// <summary>
     /// <para>Variant.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:variant.</para>
     /// </summary>
     /// <remark>
@@ -58,6 +60,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description>VTClipboardData &lt;vt:cf></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "variant")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Variant : OpenXmlCompositeElement
     {
         /// <summary>
@@ -130,7 +135,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
             builder.AddChild<VTVStreamData>();
             builder.AddChild<VTClassId>();
             builder.AddChild<VTClipboardData>();
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1),
@@ -177,7 +182,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public Variant InnerVariant
+        public Variant? InnerVariant
         {
             get => GetElement<Variant>();
             set => SetElement(value);
@@ -190,7 +195,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTVector VTVector
+        public VTVector? VTVector
         {
             get => GetElement<VTVector>();
             set => SetElement(value);
@@ -203,7 +208,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTArray VTArray
+        public VTArray? VTArray
         {
             get => GetElement<VTArray>();
             set => SetElement(value);
@@ -216,7 +221,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTBlob VTBlob
+        public VTBlob? VTBlob
         {
             get => GetElement<VTBlob>();
             set => SetElement(value);
@@ -229,7 +234,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTOBlob VTOBlob
+        public VTOBlob? VTOBlob
         {
             get => GetElement<VTOBlob>();
             set => SetElement(value);
@@ -242,7 +247,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTEmpty VTEmpty
+        public VTEmpty? VTEmpty
         {
             get => GetElement<VTEmpty>();
             set => SetElement(value);
@@ -255,7 +260,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTNull VTNull
+        public VTNull? VTNull
         {
             get => GetElement<VTNull>();
             set => SetElement(value);
@@ -268,7 +273,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTByte VTByte
+        public VTByte? VTByte
         {
             get => GetElement<VTByte>();
             set => SetElement(value);
@@ -281,7 +286,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTShort VTShort
+        public VTShort? VTShort
         {
             get => GetElement<VTShort>();
             set => SetElement(value);
@@ -294,7 +299,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTInt32 VTInt32
+        public VTInt32? VTInt32
         {
             get => GetElement<VTInt32>();
             set => SetElement(value);
@@ -307,7 +312,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTInt64 VTInt64
+        public VTInt64? VTInt64
         {
             get => GetElement<VTInt64>();
             set => SetElement(value);
@@ -320,7 +325,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTInteger VTInteger
+        public VTInteger? VTInteger
         {
             get => GetElement<VTInteger>();
             set => SetElement(value);
@@ -333,7 +338,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedByte VTUnsignedByte
+        public VTUnsignedByte? VTUnsignedByte
         {
             get => GetElement<VTUnsignedByte>();
             set => SetElement(value);
@@ -346,7 +351,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedShort VTUnsignedShort
+        public VTUnsignedShort? VTUnsignedShort
         {
             get => GetElement<VTUnsignedShort>();
             set => SetElement(value);
@@ -359,7 +364,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedInt32 VTUnsignedInt32
+        public VTUnsignedInt32? VTUnsignedInt32
         {
             get => GetElement<VTUnsignedInt32>();
             set => SetElement(value);
@@ -372,7 +377,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedInt64 VTUnsignedInt64
+        public VTUnsignedInt64? VTUnsignedInt64
         {
             get => GetElement<VTUnsignedInt64>();
             set => SetElement(value);
@@ -385,7 +390,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTUnsignedInteger VTUnsignedInteger
+        public VTUnsignedInteger? VTUnsignedInteger
         {
             get => GetElement<VTUnsignedInteger>();
             set => SetElement(value);
@@ -398,7 +403,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTFloat VTFloat
+        public VTFloat? VTFloat
         {
             get => GetElement<VTFloat>();
             set => SetElement(value);
@@ -411,7 +416,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTDouble VTDouble
+        public VTDouble? VTDouble
         {
             get => GetElement<VTDouble>();
             set => SetElement(value);
@@ -424,7 +429,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTDecimal VTDecimal
+        public VTDecimal? VTDecimal
         {
             get => GetElement<VTDecimal>();
             set => SetElement(value);
@@ -437,7 +442,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTLPSTR VTLPSTR
+        public VTLPSTR? VTLPSTR
         {
             get => GetElement<VTLPSTR>();
             set => SetElement(value);
@@ -450,7 +455,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTLPWSTR VTLPWSTR
+        public VTLPWSTR? VTLPWSTR
         {
             get => GetElement<VTLPWSTR>();
             set => SetElement(value);
@@ -463,7 +468,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTBString VTBString
+        public VTBString? VTBString
         {
             get => GetElement<VTBString>();
             set => SetElement(value);
@@ -476,7 +481,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTDate VTDate
+        public VTDate? VTDate
         {
             get => GetElement<VTDate>();
             set => SetElement(value);
@@ -489,7 +494,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTFileTime VTFileTime
+        public VTFileTime? VTFileTime
         {
             get => GetElement<VTFileTime>();
             set => SetElement(value);
@@ -502,7 +507,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTBool VTBool
+        public VTBool? VTBool
         {
             get => GetElement<VTBool>();
             set => SetElement(value);
@@ -515,7 +520,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTCurrency VTCurrency
+        public VTCurrency? VTCurrency
         {
             get => GetElement<VTCurrency>();
             set => SetElement(value);
@@ -528,7 +533,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTError VTError
+        public VTError? VTError
         {
             get => GetElement<VTError>();
             set => SetElement(value);
@@ -541,7 +546,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTStreamData VTStreamData
+        public VTStreamData? VTStreamData
         {
             get => GetElement<VTStreamData>();
             set => SetElement(value);
@@ -554,7 +559,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTOStreamData VTOStreamData
+        public VTOStreamData? VTOStreamData
         {
             get => GetElement<VTOStreamData>();
             set => SetElement(value);
@@ -567,7 +572,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTStorage VTStorage
+        public VTStorage? VTStorage
         {
             get => GetElement<VTStorage>();
             set => SetElement(value);
@@ -580,7 +585,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTOStorage VTOStorage
+        public VTOStorage? VTOStorage
         {
             get => GetElement<VTOStorage>();
             set => SetElement(value);
@@ -593,7 +598,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTVStreamData VTVStreamData
+        public VTVStreamData? VTVStreamData
         {
             get => GetElement<VTVStreamData>();
             set => SetElement(value);
@@ -606,7 +611,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTClassId VTClassId
+        public VTClassId? VTClassId
         {
             get => GetElement<VTClassId>();
             set => SetElement(value);
@@ -619,7 +624,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public VTClipboardData VTClipboardData
+        public VTClipboardData? VTClipboardData
         {
             get => GetElement<VTClipboardData>();
             set => SetElement(value);
@@ -631,7 +636,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
 
     /// <summary>
     /// <para>Vector.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:vector.</para>
     /// </summary>
     /// <remark>
@@ -660,6 +665,9 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description>VTClipboardData &lt;vt:cf></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "vector")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTVector : OpenXmlCompositeElement
     {
         /// <summary>
@@ -697,7 +705,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Vector Base Type</para>
         /// <para>Represents the following attribute in the schema: baseType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "baseType")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>? BaseType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>>();
             set => SetAttribute(value);
@@ -707,7 +721,13 @@ namespace DocumentFormat.OpenXml.VariantTypes
         /// <para>Vector Size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public UInt32Value Size
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? Size
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -747,7 +767,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTByte), 1, 1),
@@ -779,7 +799,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Array.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:array.</para>
     /// </summary>
     /// <remark>
@@ -804,6 +824,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>VTCurrency &lt;vt:cy></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "array")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTArray : OpenXmlCompositeElement
     {
         /// <summary>
@@ -841,7 +864,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Array Lower Bounds Attribute</para>
         /// <para>Represents the following attribute in the schema: lBound</para>
         /// </summary>
-        public Int32Value LowerBounds
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "lBound")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? LowerBounds
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -851,7 +880,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Array Upper Bounds Attribute</para>
         /// <para>Represents the following attribute in the schema: uBound</para>
         /// </summary>
-        public Int32Value UpperBounds
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "uBound")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? UpperBounds
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -861,7 +896,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>Array Base Type</para>
         /// <para>Represents the following attribute in the schema: baseType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "baseType")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>? BaseType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>>();
             set => SetAttribute(value);
@@ -901,7 +942,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 });
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 0)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.Variant), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTByte), 1, 1),
@@ -929,9 +970,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Binary Blob.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:blob.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "blob")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTBlob : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -967,9 +1011,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Binary Blob Object.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:oblob.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "oblob")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTOBlob : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1005,9 +1052,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Binary Stream.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:stream.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "stream")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTStreamData : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1043,9 +1093,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Binary Stream Object.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ostream.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "ostream")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTOStreamData : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1081,9 +1134,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Binary Storage.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:storage.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "storage")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTStorage : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1119,9 +1175,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Binary Storage Object.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ostorage.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "ostorage")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTOStorage : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1157,9 +1216,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Empty.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:empty.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "empty")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTEmpty : OpenXmlLeafElement
     {
         /// <summary>
@@ -1181,9 +1243,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Null.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:null.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "null")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTNull : OpenXmlLeafElement
     {
         /// <summary>
@@ -1205,9 +1270,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>1-Byte Signed Integer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i1.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "i1")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTByte : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1243,9 +1311,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>2-Byte Signed Integer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i2.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "i2")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTShort : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1281,9 +1352,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>4-Byte Signed Integer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i4.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "i4")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTInt32 : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1319,9 +1393,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Integer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:int.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "int")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTInteger : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1357,9 +1434,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>8-Byte Signed Integer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i8.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "i8")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTInt64 : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1395,9 +1475,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>1-Byte Unsigned Integer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui1.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "ui1")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedByte : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1433,9 +1516,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>2-Byte Unsigned Integer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui2.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "ui2")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedShort : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1471,9 +1557,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>4-Byte Unsigned Integer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui4.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "ui4")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1509,9 +1598,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Unsigned Integer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:uint.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "uint")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedInteger : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1547,9 +1639,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>8-Byte Unsigned Integer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui8.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "ui8")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1585,9 +1680,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>4-Byte Real Number.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:r4.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "r4")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTFloat : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1623,9 +1721,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>8-Byte Real Number.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:r8.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "r8")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTDouble : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1661,9 +1762,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Decimal.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:decimal.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "decimal")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTDecimal : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1699,9 +1803,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>LPSTR.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:lpstr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "lpstr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTLPSTR : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1736,9 +1843,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>LPWSTR.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:lpwstr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "lpwstr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTLPWSTR : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1773,9 +1883,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Basic String.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:bstr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "bstr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTBString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1810,9 +1923,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Date and Time.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:date.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "date")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTDate : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1848,9 +1964,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>File Time.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:filetime.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "filetime")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTFileTime : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1886,9 +2005,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Boolean.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:bool.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "bool")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTBool : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1924,9 +2046,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Currency.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:cy.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "cy")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTCurrency : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1962,9 +2087,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Error Status Code.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:error.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "error")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTError : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2000,9 +2128,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Binary Versioned Stream.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:vstream.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "vstream")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTVStreamData : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2029,7 +2160,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <para>VSTREAM Version Attribute</para>
         /// <para>Represents the following attribute in the schema: version</para>
         /// </summary>
-        public StringValue Version
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "version")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Version
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -2054,9 +2191,12 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
 
     /// <summary>
     /// <para>Class ID.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:clsid.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "clsid")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTClassId : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2092,9 +2232,12 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
 
     /// <summary>
     /// <para>Clipboard Data.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:cf.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(5, "cf")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VTClipboardData : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2121,7 +2264,13 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
         /// <para>Format Attribute</para>
         /// <para>Represents the following attribute in the schema: format</para>
         /// </summary>
-        public Int32Value Format
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "format")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? Format
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -2131,7 +2280,13 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
         /// <para>size</para>
         /// <para>Represents the following attribute in the schema: size</para>
         /// </summary>
-        public UInt32Value Size
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "size")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? Size
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);

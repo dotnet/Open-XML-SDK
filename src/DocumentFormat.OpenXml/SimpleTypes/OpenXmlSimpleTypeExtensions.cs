@@ -35,19 +35,19 @@ namespace DocumentFormat.OpenXml.Framework
 
         public static XmlQualifiedName GetSimpleTypeQualifiedName(this Type type)
         {
-            if (type != null && _simpleTypeMapping.TryGetValue(type, out var value))
+            if (type is not null && _simpleTypeMapping.TryGetValue(type, out var value))
             {
                 return value;
             }
 
-            return null;
+            return XmlQualifiedName.Empty;
         }
 
-        public static XmlQualifiedName GetSimpleTypeQualifiedName(this ReadOnlyArray<IValidator> validators, Type type = null)
+        public static XmlQualifiedName GetSimpleTypeQualifiedName(this ReadOnlyArray<IValidator> validators, Type type)
         {
             foreach (var validator in validators)
             {
-                if (validator is INameProvider nameProvider && nameProvider?.QName is XmlQualifiedName qname)
+                if (validator is INameProvider nameProvider && nameProvider.QName is XmlQualifiedName qname)
                 {
                     return qname;
                 }

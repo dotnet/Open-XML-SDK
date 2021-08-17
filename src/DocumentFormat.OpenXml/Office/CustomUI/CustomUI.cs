@@ -40,17 +40,10 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// <summary>
         /// Gets the CustomUIPart associated with this element, it could either be a QuickAccessToolbarCustomizationsPart or a RibbonExtensibilityPart.
         /// </summary>
-        public CustomUIPart CustomUIPart
+        public CustomUIPart? CustomUIPart
         {
-            get
-            {
-                return OpenXmlPart as CustomUIPart;
-            }
-
-            internal set
-            {
-                OpenXmlPart = value;
-            }
+            get => OpenXmlPart as CustomUIPart;
+            internal set => OpenXmlPart = value;
         }
     }
 }

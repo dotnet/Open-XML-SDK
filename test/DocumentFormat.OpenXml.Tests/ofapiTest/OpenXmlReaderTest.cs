@@ -54,6 +54,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(targetReader.IsMiscNode);
             Assert.Equal(typeof(Run), targetReader.ElementType);
             Assert.True(string.IsNullOrEmpty(targetReader.GetText()));
+            Assert.False(targetReader.GetLineInfo().HasLineInfo());
 
             // loaded element is Run
             Assert.NotNull(element);
@@ -193,7 +194,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void DomReaderMiscNodeTest()
         {
             Body body = new Body(new Paragraph(new ParagraphProperties(), new Run(new Text("test"))));
-            body.PrependChild( new OpenXmlMiscNode(System.Xml.XmlNodeType.Comment, "<!-- start body -->"));
+            body.PrependChild(new OpenXmlMiscNode(System.Xml.XmlNodeType.Comment, "<!-- start body -->"));
 
             //======== new test with a new reader ========
             using (OpenXmlReader reader = OpenXmlReader.Create(body, true)) // read misc node
@@ -363,6 +364,9 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(reader.IsStartElement);
             Assert.False(reader.IsEndElement);
             Assert.False(reader.IsMiscNode);
+            Assert.True(reader.GetLineInfo().HasLineInfo());
+            Assert.Equal(1, reader.GetLineInfo().LineNumber);
+            Assert.Equal(2, reader.GetLineInfo().LinePosition);
 
             moved = reader.Read();
             Assert.True(moved);
@@ -371,10 +375,192 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(reader.IsStartElement);
             Assert.False(reader.IsEndElement);
             Assert.True(reader.IsMiscNode);
+            Assert.True(reader.GetLineInfo().HasLineInfo());
+            Assert.Equal(1, reader.GetLineInfo().LineNumber);
+            Assert.Equal(88, reader.GetLineInfo().LinePosition);
 
             Assert.Equal(string.Empty, reader.Prefix);
             Assert.Equal(string.Empty, reader.NamespaceUri);
 
+            reader.Close();
+        }
+
+        /// <summary>
+        ///A test for OpenXmlPartReader to test the ignoreWhitespace option
+        ///</summary>
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void PartReaderIgnoreWhitespaceTest(bool ignoreWhitespace)
+        {
+            const string PartText = "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">" +
+                "<w:body>" +
+                "<w:p w:rsidP=\"001\"><w:r><w:t>  </w:t></w:r></w:p>" +
+                "</w:body>" +
+                "</w:document>";
+
+            using var stream = new MemoryStream(Encoding.UTF8.GetBytes(PartText), false);
+
+            using var reader = OpenXmlReader.Create(stream, false, ignoreWhitespace);
+            Assert.False(reader.EOF);
+
+            reader.Read();
+            Assert.False(reader.EOF);
+
+            reader.ReadFirstChild();
+            Assert.True(reader.IsStartElement);
+            Assert.Equal(typeof(Body), reader.ElementType);
+            reader.Read();
+            Assert.True(reader.IsStartElement);
+            Assert.Equal(typeof(Paragraph), reader.ElementType);
+            reader.Read();
+            Assert.True(reader.IsStartElement);
+            Assert.Equal(typeof(Run), reader.ElementType);
+            reader.Read();
+            Assert.True(reader.IsStartElement);
+            Assert.Equal(typeof(Text), reader.ElementType);
+            Assert.Equal(ignoreWhitespace, reader.GetText() == string.Empty);
+
+            reader.Close();
+        }
+
+        /// <summary>
+        /// Test that the OpenXmlReader can handle formatted xml.
+        ///</summary>
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void TestIgnoreWhitespaceWithFormattedXml(bool ignoreWhitespace) {
+            const string PartText = @"
+    <w:document xmlns:v=""urn:schemas-microsoft-com:vml"" xmlns:w=""http://schemas.openxmlformats.org/wordprocessingml/2006/main"">
+      <w:body>
+        <w:p>
+          <w:r>
+            <w:t>First Text</w:t>
+          </w:r>
+        </w:p>
+      </w:body>
+    </w:document>";
+
+            using var stream = new MemoryStream(Encoding.UTF8.GetBytes(PartText), false);
+            using var reader = OpenXmlReader.Create(stream, false, ignoreWhitespace);
+            Assert.True(reader.Read());
+            Assert.False(reader.EOF);
+            Assert.Equal(typeof(Document), reader.ElementType);
+            Assert.True(reader.IsStartElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Body), reader.ElementType);
+            Assert.True(reader.IsStartElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Paragraph), reader.ElementType);
+            Assert.True(reader.IsStartElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Run), reader.ElementType);
+            Assert.True(reader.IsStartElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Text), reader.ElementType);
+            Assert.True(reader.IsStartElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Text), reader.ElementType);
+            Assert.True(reader.IsEndElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Run), reader.ElementType);
+            Assert.True(reader.IsEndElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Paragraph), reader.ElementType);
+            Assert.True(reader.IsEndElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Body), reader.ElementType);
+            Assert.True(reader.IsEndElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Document), reader.ElementType);
+            Assert.True(reader.IsEndElement);
+            Assert.False(reader.Read());
+            Assert.True(reader.EOF);
+
+            reader.Close();
+    }
+
+        /// <summary>
+        /// Test that the OpenXmlReader can handle a whitespace after the last element.
+        ///</summary>
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public void TestIgnoreWhitespaceWhitespaceAfterLastElement(bool ignoreWhitespace) {
+            const string PartText = @"
+    <w:document xmlns:v=""urn:schemas-microsoft-com:vml"" xmlns:w=""http://schemas.openxmlformats.org/wordprocessingml/2006/main"">
+      <w:body>
+        <w:p>
+        </w:p>
+      </w:body>
+    </w:document> ";
+
+            using var stream = new MemoryStream(Encoding.UTF8.GetBytes(PartText), false);
+            using var reader = OpenXmlReader.Create(stream, false, ignoreWhitespace);
+            Assert.True(reader.Read());
+            Assert.False(reader.EOF);
+            Assert.Equal(typeof(Document), reader.ElementType);
+            Assert.True(reader.IsStartElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Body), reader.ElementType);
+            Assert.True(reader.IsStartElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Paragraph), reader.ElementType);
+            Assert.True(reader.IsStartElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Paragraph), reader.ElementType);
+            Assert.True(reader.IsEndElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Body), reader.ElementType);
+            Assert.True(reader.IsEndElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Document), reader.ElementType);
+            Assert.True(reader.IsEndElement);
+            Assert.False(reader.Read());
+            Assert.True(reader.EOF);
+
+            reader.Close();
+        }
+
+        /// <summary>
+        /// Test that the OpenXmlReader can handle a misc node after the last element.
+        ///</summary>
+        [Fact]
+        public void TestMiscNodeAfterDocument() {
+            const string PartText = @"
+    <w:document xmlns:v=""urn:schemas-microsoft-com:vml"" xmlns:w=""http://schemas.openxmlformats.org/wordprocessingml/2006/main"">
+      <w:body>
+        <w:p>
+        </w:p>
+      </w:body>
+    </w:document> <!--Your comment-->";
+
+            using var stream = new MemoryStream(Encoding.UTF8.GetBytes(PartText), true);
+            using var reader = OpenXmlReader.Create(stream);
+            Assert.True(reader.Read());
+            Assert.False(reader.EOF);
+            Assert.Equal(typeof(Document), reader.ElementType);
+            Assert.True(reader.IsStartElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Body), reader.ElementType);
+            Assert.True(reader.IsStartElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Paragraph), reader.ElementType);
+            Assert.True(reader.IsStartElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Paragraph), reader.ElementType);
+            Assert.True(reader.IsEndElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Body), reader.ElementType);
+            Assert.True(reader.IsEndElement);
+            Assert.True(reader.Read());
+            Assert.Equal(typeof(Document), reader.ElementType);
+            Assert.True(reader.IsEndElement);
+
+            // not reading the misc node after the end of the document
+            Assert.False(reader.Read());
+            Assert.True(reader.EOF);
             reader.Close();
         }
 
@@ -384,7 +570,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void PartReaderBasicTest()
         {
-            string partText =  "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
+            string partText = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +
                                "<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\">" +
                                "<w:body>" +
                                "<w:p w:rsidP=\"001\"><w:r><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r></w:p>" +
@@ -393,7 +579,7 @@ namespace DocumentFormat.OpenXml.Tests
                                "</w:document>";
 
             UTF8Encoding utf8Encoding = new UTF8Encoding();
-            Stream stream = new MemoryStream( utf8Encoding.GetBytes(partText), false );
+            Stream stream = new MemoryStream(utf8Encoding.GetBytes(partText), false);
 
             OpenXmlReader targetReader = OpenXmlReader.Create(stream);
             targetReader.Read();
@@ -422,6 +608,9 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(targetReader.IsMiscNode);
             Assert.Equal(typeof(Paragraph), targetReader.ElementType);
             Assert.True(string.IsNullOrEmpty(targetReader.GetText()));
+            Assert.True(targetReader.GetLineInfo().HasLineInfo());
+            Assert.Equal(1, targetReader.GetLineInfo().LineNumber);
+            Assert.Equal(216, targetReader.GetLineInfo().LinePosition);
 
             targetReader.ReadNextSibling(); // next <w:p>
 
@@ -437,12 +626,14 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(targetReader.IsMiscNode);
             Assert.Equal(typeof(Paragraph), targetReader.ElementType);
             Assert.True(string.IsNullOrEmpty(targetReader.GetText()));
+            Assert.Equal(1, targetReader.GetLineInfo().LineNumber);
+            Assert.Equal(295, targetReader.GetLineInfo().LinePosition);
 
             // loaded element is Run
             Assert.NotNull(element);
             Assert.IsType<Paragraph>(element);
 
-            Run run = (Run) element.FirstChild;
+            Run run = (Run)element.FirstChild;
             Assert.Equal("Run Text.", (run.FirstChild as Text).Text);
             Assert.Equal("Run 2.", (run.LastChild as Text).Text);
 

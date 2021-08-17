@@ -28,10 +28,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="openXmlPart">The OpenXmlPart to be written.</param>
         /// <returns>The created OpenXmlWriter instance.</returns>
-        public static OpenXmlWriter Create(OpenXmlPart openXmlPart)
-        {
-            return new OpenXmlPartWriter(openXmlPart);
-        }
+        public static OpenXmlWriter Create(OpenXmlPart openXmlPart) => new OpenXmlPartWriter(openXmlPart);
 
         /// <summary>
         /// Create an OpenXmlWriter from the OpenXmlPart.
@@ -39,20 +36,14 @@ namespace DocumentFormat.OpenXml
         /// <param name="openXmlPart">The OpenXmlPart to be written.</param>
         /// <param name="encoding">The encoding for the XML stream.</param>
         /// <returns>The created OpenXmlWriter instance.</returns>
-        public static OpenXmlWriter Create(OpenXmlPart openXmlPart, Encoding encoding)
-        {
-            return new OpenXmlPartWriter(openXmlPart, encoding);
-        }
+        public static OpenXmlWriter Create(OpenXmlPart openXmlPart, Encoding encoding) => new OpenXmlPartWriter(openXmlPart, encoding);
 
         /// <summary>
         /// Create an OpenXmlWriter on a given stream.
         /// </summary>
         /// <param name="partStream">The target stream.</param>
         /// <returns>The created OpenXmlWriter instance.</returns>
-        public static OpenXmlWriter Create(Stream partStream)
-        {
-            return new OpenXmlPartWriter(partStream);
-        }
+        public static OpenXmlWriter Create(Stream partStream) => new OpenXmlPartWriter(partStream);
 
         /// <summary>
         /// Create an OpenXmlWriter on given stream
@@ -60,10 +51,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="partStream">The target stream.</param>
         /// <param name="encoding">The encoding for the XML stream.</param>
         /// <returns>The created OpenXmlWriter instance.</returns>
-        public static OpenXmlWriter Create(Stream partStream, Encoding encoding)
-        {
-            return new OpenXmlPartWriter(partStream, encoding);
-        }
+        public static OpenXmlWriter Create(Stream partStream, Encoding encoding) => new OpenXmlPartWriter(partStream, encoding);
 
         /// <summary>
         /// Writes the XML declaration with the version "1.0".
@@ -142,8 +130,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public abstract void Close();
 
-        #region dispose related methods
-
         /// <summary>
         /// Throw if object is disposed.
         /// </summary>
@@ -172,10 +158,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        #endregion
-
-        #region IDisposable Members
-
         /// <summary>
         /// Closes the writer, and releases all resources.
         /// </summary>
@@ -184,7 +166,5 @@ namespace DocumentFormat.OpenXml
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-
-        #endregion
     }
 }

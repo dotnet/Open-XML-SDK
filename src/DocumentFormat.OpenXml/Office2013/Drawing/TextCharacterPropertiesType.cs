@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Drawing
         /// </summary>
         [Obsolete("Please use the property 'SmartTagClean' as this property will be removed in a future version")]
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public BooleanValue SmtClean
+        public BooleanValue? SmtClean
         {
             get => SmartTagClean;
             set => SmartTagClean = value;
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Drawing
         /// </summary>
         [Obsolete("Please use the property 'SmartTagId' as this property will be removed in a future version")]
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public UInt32Value SmtId
+        public UInt32Value? SmtId
         {
             get => SmartTagId;
             set => SmartTagId = value;

@@ -3,7 +3,9 @@
 
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DocumentFormat.OpenXml
 {
@@ -13,9 +15,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class AlternateContent : OpenXmlCompositeElement
     {
-        internal const string Namespace = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
-        private const string Name = "AlternateContent";
-        private static byte _mcNamespaceId = byte.MaxValue;
+        internal static readonly OpenXmlQualifiedName InternalQName = new OpenXmlQualifiedName(@"http://schemas.openxmlformats.org/markup-compatibility/2006", "AlternateContent");
 
         /// <summary>
         /// Initializes a new instance of the AlternateContent
@@ -65,33 +65,24 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the markup compatibility
         /// namespace.
         /// </summary>
-        public static string MarkupCompatibilityNamespace => Namespace;
+        public static string MarkupCompatibilityNamespace => InternalQName.Namespace.Uri;
 
         /// <summary>
         /// Gets a value that represents the markup compatibility
         /// namespace ID.
         /// </summary>
-        public static byte MarkupCompatibilityNamespaceId
-        {
-            get
-            {
-                if (_mcNamespaceId == byte.MaxValue)
-                {
-                    _mcNamespaceId = NamespaceIdMap.GetNamespaceId(MarkupCompatibilityNamespace);
-                }
-
-                return _mcNamespaceId;
-            }
-        }
+        [Obsolete("NamespaceId will be removed in later releases.")]
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public static byte MarkupCompatibilityNamespaceId => 0;
 
         /// <summary>
         /// Gets a value that represents the tag name of the
         /// AlternateContent element.
         /// </summary>
-        public static string TagName => Name;
+        public static string TagName => InternalQName.Name;
 
         /// <inheritdoc/>
-        public override string LocalName => TagName;
+        public override string LocalName => InternalQName.Name;
 
         /// <summary>
         /// Appends a new child of type T:DocumentFormat.OpenXml.AlternateContentChoice
@@ -129,7 +120,7 @@ namespace DocumentFormat.OpenXml
         {
             base.ConfigureMetadata(builder);
 
-            builder.SetSchema(Namespace, Name);
+            builder.SetSchema(InternalQName);
 
             builder.AddChild<AlternateContentChoice>();
             builder.AddChild<AlternateContentFallback>();

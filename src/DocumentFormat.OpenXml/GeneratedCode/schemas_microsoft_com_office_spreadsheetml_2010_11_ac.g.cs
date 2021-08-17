@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -16,9 +18,12 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
 {
     /// <summary>
     /// <para>Defines the AbsolutePath Class.</para>
-    /// <para>This class is available in Office 2013 or above.</para>
+    /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15ac:absPath.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(74, "absPath")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AbsolutePath : OpenXmlLeafElement
     {
         /// <summary>
@@ -29,10 +34,16 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
         }
 
         /// <summary>
-        /// <para>url, this property is only available in Office2013, Office2016</para>
+        /// <para>url, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: url</para>
         /// </summary>
-        public StringValue Url
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "url")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Url
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

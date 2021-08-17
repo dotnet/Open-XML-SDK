@@ -33,12 +33,18 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override SemanticValidationLevel StateScope => SemanticValidationLevel.Part;
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
-            var element = context.Stack.Current.Element;
+            var element = context.Stack.Current?.Element;
+
+            if (element is null)
+            {
+                return null;
+            }
+
             var attribute = element.ParsedState.Attributes[_refAttribute];
 
-            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
+            if (attribute.Value is null || attribute.Value.InnerText.IsNullOrEmpty())
             {
                 return null;
             }
@@ -62,7 +68,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     _elementName,
                     element.LocalName,
                     GetAttributeQualifiedName(element, _refAttribute),
-                    result.Part == null ? _partPath : result.Part.PackagePart.Uri.ToString(),
+                    result.Part is null ? _partPath : result.Part.PackagePart.Uri.ToString(),
                     attribute.Value.InnerText),
             };
         }
@@ -76,18 +82,18 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return new PartHolder<ICollection<string>>(Cached.Array<string>(), part);
             }
 
-            var result = context.State.Get(new { part.Uri, _partPath, _element, _attribute }, () =>
+            var result = context.State.GetOrCreate(new { part, constraint = this }, static (key, context) =>
             {
                 var referencedAttributes = new HashSet<string>(StringComparer.Ordinal);
 
-                foreach (var element in part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
+                foreach (var element in key.part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (element.GetType() == _element)
+                    if (element.GetType() == key.constraint._element)
                     {
-                        var attribute = element.ParsedState.Attributes[_attribute];
+                        var attribute = element.ParsedState.Attributes[key.constraint._attribute];
 
                         //Attributes whose value is empty string or null don't need to be cached.
-                        if (attribute.HasValue && !string.IsNullOrEmpty(attribute.Value.InnerText))
+                        if (attribute.Value is not null && !attribute.Value.InnerText.IsNullOrEmpty())
                         {
                             referencedAttributes.Add(attribute.Value.InnerText);
                         }

@@ -197,20 +197,20 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                         }
                     }
 
-                    if (slicerCacheName != null)
+                    if (slicerCacheName is not null)
                     {
                         break;
                     }
                 }
 
-                if (slicerCacheName != null)
+                if (slicerCacheName is not null)
                 {
                     break;
                 }
             }
 
             //Getting name match SlicerCachePart.
-            if (slicerCacheName != null)
+            if (slicerCacheName is not null)
             {
                 foreach (SlicerCachePart slicerCachePart in workbookPart.SlicerCacheParts)
                 {

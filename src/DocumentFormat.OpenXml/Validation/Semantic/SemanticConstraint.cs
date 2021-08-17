@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
-using System.Xml;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -45,7 +44,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 {
                     var err = ValidateCore(context);
 
-                    if (err != null)
+                    if (err is not null)
                     {
                         context.AddError(err);
                     }
@@ -53,18 +52,23 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
         }
 
-        public abstract ValidationErrorInfo ValidateCore(ValidationContext context);
+        public abstract ValidationErrorInfo? ValidateCore(ValidationContext context);
 
-        private void Get(ValidationContext context, out SemanticValidationLevel level, out ApplicationType type)
+        private static void Get(ValidationContext context, out SemanticValidationLevel level, out ApplicationType type)
         {
             var current = context.Stack.Current;
 
-            if (current.Package != null)
+            if (current is null)
+            {
+                throw new InvalidOperationException();
+            }
+
+            if (current.Package is not null)
             {
                 level = SemanticValidationLevel.Package;
                 type = current.Package.ApplicationType;
             }
-            else if (current.Part != null)
+            else if (current.Part is not null)
             {
                 level = SemanticValidationLevel.Part;
                 type = current.Part.OpenXmlPackage.ApplicationType;
@@ -76,13 +80,23 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
         }
 
-        protected static OpenXmlPart GetReferencedPart(ValidationContext context, string path)
+        protected static OpenXmlPart? GetReferencedPart(ValidationContext context, string path)
         {
             var current = context.Stack.Current;
+
+            if (current is null || current.Part is null)
+            {
+                return null;
+            }
 
             if (path == ".")
             {
                 return current.Part;
+            }
+
+            if (current.Package is null)
+            {
+                return null;
             }
 
             string[] parts = path.Split('/');
@@ -107,7 +121,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
         }
 
-        protected static XmlQualifiedName GetAttributeQualifiedName(OpenXmlElement element, byte attributeID) => element.ParsedState.Attributes[attributeID].Property.GetQName();
+        protected static OpenXmlQualifiedName GetAttributeQualifiedName(OpenXmlElement element, byte attributeID) => element.ParsedState.Attributes[attributeID].Property.QName;
 
         private static bool CompareBooleanValue(bool value1, string value2)
         {
@@ -208,9 +222,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 CultureInfo.InvariantCulture, out value);
         }
 
-        private static OpenXmlPart GetPartThroughPartPath(IEnumerable<IdPartPair> pairs, string[] path)
+        private static OpenXmlPart? GetPartThroughPartPath(IEnumerable<IdPartPair> pairs, string[] path)
         {
-            OpenXmlPart temp = null;
+            var temp = default(OpenXmlPart);
             var parts = pairs;
 
             for (int i = 0; i < path.Length; i++)
@@ -237,7 +251,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         protected readonly struct PartHolder<T>
         {
-            public PartHolder(T item, OpenXmlPart part)
+            public PartHolder(T item, OpenXmlPart? part)
             {
                 Item = item;
                 Part = part;
@@ -245,7 +259,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             public T Item { get; }
 
-            public OpenXmlPart Part { get; }
+            public OpenXmlPart? Part { get; }
         }
     }
 }

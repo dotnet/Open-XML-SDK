@@ -31,12 +31,18 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _maxInclusive = maxInclusive;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
-            var element = context.Stack.Current.Element;
+            var element = context.Stack.Current?.Element;
+
+            if (element is null)
+            {
+                return null;
+            }
+
             var attribute = element.ParsedState.Attributes[_attribute];
 
-            if (!attribute.HasValue || !attribute.Value.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
+            if (attribute.Value is null || !attribute.Value.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -62,7 +68,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 maxValueString = _maxValue.ToString(System.Globalization.CultureInfo.CurrentUICulture);
             }
 
-            string subMsg = null;
+            var subMsg = default(string);
 
             if (_minInclusive)
             {
@@ -94,7 +100,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            if (subMsg == null)
+            if (subMsg is null)
             {
                 return null;
             }

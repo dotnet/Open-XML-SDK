@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -15,9 +17,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
 {
     /// <summary>
     /// <para>Defines the CreationId Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:creationId.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(79, "creationId")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CreationId : OpenXmlLeafElement
     {
         /// <summary>
@@ -28,10 +33,16 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         }
 
         /// <summary>
-        /// <para>id, this property is only available in Office2016</para>
+        /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public StringValue Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Id
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -55,9 +66,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the PredecessorDrawingElementReference Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:predDERef.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(79, "predDERef")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PredecessorDrawingElementReference : OpenXmlLeafElement
     {
         /// <summary>
@@ -68,10 +82,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>pred, this property is only available in Office2016</para>
+        /// <para>pred, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: pred</para>
         /// </summary>
-        public StringValue Pred
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "pred")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Pred
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -95,9 +115,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the ConnectableReferences Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:cxnDERefs.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(79, "cxnDERefs")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConnectableReferences : OpenXmlLeafElement
     {
         /// <summary>
@@ -108,20 +131,32 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>st, this property is only available in Office2016</para>
+        /// <para>st, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: st</para>
         /// </summary>
-        public StringValue St
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "st")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? St
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>end, this property is only available in Office2016</para>
+        /// <para>end, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: end</para>
         /// </summary>
-        public StringValue End
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "end")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? End
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -149,9 +184,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the RowIdIdentifier Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:rowId.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(79, "rowId")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowIdIdentifier : OpenXmlIdentifierElement
     {
         /// <summary>
@@ -174,9 +212,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the ColIdIdentifier Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:colId.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(79, "colId")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColIdIdentifier : OpenXmlIdentifierElement
     {
         /// <summary>
@@ -199,7 +240,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
 
     /// <summary>
     /// <para>Defines the OpenXmlIdentifierElement Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class OpenXmlIdentifierElement : OpenXmlLeafElement
@@ -212,10 +253,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         }
 
         /// <summary>
-        /// <para>val, this property is only available in Office2016</para>
+        /// <para>val, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public UInt32Value Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);

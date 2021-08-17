@@ -50,19 +50,19 @@ namespace DocumentFormat.OpenXml.Tests
 
         private ConstrReader DomConstrWithNoMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
-            OpenXmlElement firstChild = x.MainDocumentPart.Document.FirstChild;
+            var firstChild = x.MainDocumentPart.Document.FirstChild;
             y = OpenXmlDomReader.Create(firstChild);
 
-            XElement XfirstChild = ConvertToXElement(x.MainDocumentPart, firstChild);
+            var XfirstChild = ConvertToXElement(x.MainDocumentPart, firstChild);
             z = XmlReader.Create(new StringReader(firstChild.OuterXml));
         };
 
         private ConstrReader DomConstrWithMisc = (WordprocessingDocument x, out OpenXmlReader y, out XmlReader z) =>
         {
-            OpenXmlElement firstChild = x.MainDocumentPart.Document.FirstChild;
+            var firstChild = x.MainDocumentPart.Document.FirstChild;
             y = new OpenXmlDomReader(firstChild, true);
 
-            XElement XfirstChild = ConvertToXElement(x.MainDocumentPart, firstChild);
+            var XfirstChild = ConvertToXElement(x.MainDocumentPart, firstChild);
             z = XmlReader.Create(new StringReader(firstChild.OuterXml));
         };
 
@@ -109,80 +109,66 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WriteStartDocumentMultiple()
         {
-            using (var stream = new MemoryStream())
-            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
-            {
-                var part = newDoc.AddMainDocumentPart();
+            using var stream = new MemoryStream();
+            using var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+            var part = newDoc.AddMainDocumentPart();
 
-                using (var writer = PWCosntrWithPart(part))
-                {
-                    writer.WriteStartDocument();
-                    Assert.Throws<InvalidOperationException>(() => writer.WriteStartDocument());
-                }
-            }
+            using var writer = PWCosntrWithPart(part);
+            writer.WriteStartDocument();
+            Assert.Throws<InvalidOperationException>(() => writer.WriteStartDocument());
         }
 
         [Fact]
         public void WriteStartDocumentOtherPlace()
         {
-            using (var stream = new MemoryStream())
-            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
-            {
-                var part = newDoc.AddMainDocumentPart();
-                var p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
+            using var stream = new MemoryStream();
+            using var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+            var part = newDoc.AddMainDocumentPart();
+            var p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
 
-                using (var writer = PWCosntrWithPart(part))
-                {
-                    writer.WriteElement(p);
-                    Assert.Throws<InvalidOperationException>(() => writer.WriteStartDocument());
-                }
-            }
+            using var writer = PWCosntrWithPart(part);
+            writer.WriteElement(p);
+            Assert.Throws<InvalidOperationException>(() => writer.WriteStartDocument());
         }
 
         [Fact]
         public void WriteStartElementWithOpenXmlReaderAttr()
         {
-            Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
+            var p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
 
-            using (OpenXmlReader reader = OpenXmlReader.Create(p))
-            {
-                reader.Read();
+            using var reader = OpenXmlReader.Create(p);
+            reader.Read();
 
-                TestWriteStartElement(WConstrWithStream, WriteStartE, reader, GetTestAttributes(), null);
-            }
+            TestWriteStartElement(WConstrWithStream, WriteStartE, reader, GetTestAttributes(), null);
         }
 
         [Fact]
         public void WriteStartElementWithOpenXmlReader()
         {
-            Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
+            var p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
 
-            using (OpenXmlReader reader = OpenXmlReader.Create(p))
-            {
-                reader.Read();
+            using var reader = OpenXmlReader.Create(p);
+            reader.Read();
 
-                TestWriteStartElement(WConstrWithStream, WriteStartE, reader, null, null);
-            }
+            TestWriteStartElement(WConstrWithStream, WriteStartE, reader, null, null);
         }
 
         [Fact]
         public void WriteStartElementWithEndElementReader()
         {
-            Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
+            var p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
 
-            using (OpenXmlReader reader = OpenXmlReader.Create(p))
-            {
-                reader.Read();
-                reader.LoadCurrentElement();
+            using var reader = OpenXmlReader.Create(p);
+            reader.Read();
+            reader.LoadCurrentElement();
 
-                Assert.Throws<ArgumentOutOfRangeException>(() => TestWriteStartElement(WConstrWithStream, WriteStartE, reader, null, null));
-            }
+            Assert.Throws<ArgumentOutOfRangeException>(() => TestWriteStartElement(WConstrWithStream, WriteStartE, reader, null, null));
         }
 
         [Fact]
         public void WriteStartElementWithOpenXmlElementAttr()
         {
-            Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
+            var p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
 
             TestWriteStartElement(WConstrWithStream, WriteStartE, p, GetTestAttributes(), null);
         }
@@ -190,7 +176,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WriteStartElementWithOpenXmlElement()
         {
-            Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
+            var p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
 
             TestWriteStartElement(WConstrWithStream, WriteStartE, p, null, null);
         }
@@ -198,121 +184,103 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WriteStringAndEndElement()
         {
-            using (var stream = new MemoryStream())
-            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            using var stream = new MemoryStream();
+            using var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+            var t = new Text();
+            var part = newDoc.AddMainDocumentPart();
+
+            using (var writer = WConstrWithPart(part))
             {
-                var t = new Text();
-                var part = newDoc.AddMainDocumentPart();
-
-                using (var writer = WConstrWithPart(part))
-                {
-                    writer.WriteStartElement(t);
-                    writer.WriteString("test");
-                    writer.WriteEndElement();
-                }
-
-                using (var reader = XmlReader.Create(part.GetStream()))
-                {
-                    Assert.True(reader.Read());
-                    Assert.True(reader.Read());
-                    Assert.True(reader.Read());
-                    Assert.Equal("test", reader.Value);
-
-                    Assert.True(reader.Read());
-                    Assert.Equal(XmlNodeType.EndElement, reader.NodeType);
-                    Assert.Equal(t.LocalName, reader.LocalName);
-                }
+                writer.WriteStartElement(t);
+                writer.WriteString("test");
+                writer.WriteEndElement();
             }
+
+            using var reader = XmlReader.Create(part.GetStream());
+            Assert.True(reader.Read());
+            Assert.True(reader.Read());
+            Assert.True(reader.Read());
+            Assert.Equal("test", reader.Value);
+
+            Assert.True(reader.Read());
+            Assert.Equal(XmlNodeType.EndElement, reader.NodeType);
+            Assert.Equal(t.LocalName, reader.LocalName);
         }
 
         [Fact]
         public void WriteEndElementWithoutStart()
         {
-            using (var stream = new MemoryStream())
-            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
-            {
-                var t = new Text();
-                var part = newDoc.AddMainDocumentPart();
+            using var stream = new MemoryStream();
+            using var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+            var t = new Text();
+            var part = newDoc.AddMainDocumentPart();
 
-                using (var writer = WConstrWithPart(part))
-                {
-                    Assert.Throws<InvalidOperationException>(() => writer.WriteEndElement());
-                }
-            }
+            using var writer = WConstrWithPart(part);
+            Assert.Throws<InvalidOperationException>(() => writer.WriteEndElement());
         }
 
         // Comment out as the result of bug 2352836
         [Fact]
         public void WriteStringWithNonLeafText()
         {
-            using (var stream = new MemoryStream())
-            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
-            {
-                var p = new Paragraph() { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
-                var part = newDoc.AddMainDocumentPart();
+            using var stream = new MemoryStream();
+            using var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+            var p = new Paragraph() { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
+            var part = newDoc.AddMainDocumentPart();
 
-                using (OpenXmlWriter writer = WConstrWithPart(part))
-                {
-                    writer.WriteStartElement(p);
-                    Assert.Throws<InvalidOperationException>(() => writer.WriteString("test"));
-                }
-            }
+            using var writer = WConstrWithPart(part);
+            writer.WriteStartElement(p);
+            Assert.Throws<InvalidOperationException>(() => writer.WriteString("test"));
         }
 
         [Fact]
         public void WriteElement()
         {
-            using (var stream = new MemoryStream())
-            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            using var stream = new MemoryStream();
+            using var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+            var p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
+            var part = newDoc.AddMainDocumentPart();
+            var writer = WConstrWithPart(part);
+
+            writer.WriteElement(p);
+            writer.Close();
+
+            XElement XEle = null;
+            using (var partStream = part.GetStream())
+            using (var reader = XmlReader.Create(partStream))
             {
-                Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
-                MainDocumentPart part = newDoc.AddMainDocumentPart();
-                OpenXmlWriter writer = WConstrWithPart(part);
-
-                writer.WriteElement(p);
-                writer.Close();
-
-                XElement XEle = null;
-                using (Stream partStream = part.GetStream())
-                using (XmlReader reader = XmlReader.Create(partStream))
-                {
-                    XEle = XElement.Load(reader);
-                }
-
-                VerifyEqual(XEle, p, part);
+                XEle = XElement.Load(reader);
             }
+
+            VerifyEqual(XEle, p, part);
         }
 
         [Fact]
         public void WriteStartElementWithMisc()
         {
             var node = new OpenXmlMiscNode(XmlNodeType.Comment);
-            using (var miscReader = OpenXmlReader.Create(node, true))
-            {
-                Assert.True(miscReader.Read());
-                Assert.Throws<ArgumentOutOfRangeException>(() => TestWriteStartElement(WConstrWithStream, WriteStartE, miscReader, null, null));
-            }
+            using var miscReader = OpenXmlReader.Create(node, true);
+            Assert.True(miscReader.Read());
+            Assert.Throws<ArgumentOutOfRangeException>(() => TestWriteStartElement(WConstrWithStream, WriteStartE, miscReader, null, null));
         }
 
         private void TestWriteStartDocument(ConstrWriter writerConstr, WriteStartDoc write, bool? standalone)
         {
-            using (var stream = new MemoryStream())
-            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            using var stream = new MemoryStream();
+            using var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+            var part = newDoc.AddMainDocumentPart();
+
+            using (var writer = writerConstr(part))
             {
-                var part = newDoc.AddMainDocumentPart();
-
-                using (var writer = writerConstr(part))
-                {
-                    write(writer, standalone);
-                }
-
-                VerifyDocumentStart(part, standalone);
+                write(writer, standalone);
             }
+
+            VerifyDocumentStart(part, standalone);
         }
 
         private void VerifyDocumentStart(OpenXmlPart part, bool? standalone)
         {
-            XmlReader reader = XmlReader.Create(part.GetStream());
+            var reader = XmlReader.Create(part.GetStream());
             reader.Read();
 
             Log.Comment("verify the part contains XmlDeclaration");
@@ -320,7 +288,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("verify the version is 1.0");
             Log.VerifyTrue(reader.GetAttribute("version") == "1.0", "expected: 1.0 <> actual:{0}", reader.GetAttribute("version"));
 
-            string standaloneValue = reader.GetAttribute("standalone");
+            var standaloneValue = reader.GetAttribute("standalone");
 
             if (standalone.HasValue)
             {
@@ -332,7 +300,7 @@ namespace DocumentFormat.OpenXml.Tests
             else
             {
                 Log.Comment("verify the standalone is not presented");
-                Log.VerifyTrue(standaloneValue == null, "expected: null <> actual: {0}", standaloneValue);
+                Log.VerifyTrue(standaloneValue is null, "expected: null <> actual: {0}", standaloneValue);
             }
         }
 
@@ -350,27 +318,27 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void WriteStartE(OpenXmlWriter writer, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            if (writeSource is OpenXmlReader && attributes == null)
+            if (writeSource is OpenXmlReader && attributes is null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlReader);
             }
-            else if (writeSource is OpenXmlReader && attributes != null && namespaceDeclarations == null)
+            else if (writeSource is OpenXmlReader && attributes is not null && namespaceDeclarations is null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlReader, attributes);
             }
-            else if (writeSource is OpenXmlReader && attributes != null && namespaceDeclarations != null)
+            else if (writeSource is OpenXmlReader && attributes is not null && namespaceDeclarations is not null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlReader, attributes, namespaceDeclarations);
             }
-            else if (writeSource is OpenXmlElement && attributes == null)
+            else if (writeSource is OpenXmlElement && attributes is null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlElement);
             }
-            else if (writeSource is OpenXmlElement && attributes != null && namespaceDeclarations == null)
+            else if (writeSource is OpenXmlElement && attributes is not null && namespaceDeclarations is null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlElement, attributes);
             }
-            else if (writeSource is OpenXmlElement && attributes != null && namespaceDeclarations != null)
+            else if (writeSource is OpenXmlElement && attributes is not null && namespaceDeclarations is not null)
             {
                 writer.WriteStartElement(writeSource as OpenXmlElement, attributes);
             }
@@ -378,24 +346,22 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void TestWriteStartElement(ConstrWriter writerConstr, WriteStartEle write, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            using (var ms = new MemoryStream())
-            using (WordprocessingDocument newDoc = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document))
+            using var ms = new MemoryStream();
+            using var newDoc = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document);
+            var part = newDoc.AddMainDocumentPart();
+
+            using (var stream = part.GetStream())
+            using (var writer = OpenXmlWriter.Create(stream))
             {
-                MainDocumentPart part = newDoc.AddMainDocumentPart();
-
-                using (Stream stream = part.GetStream())
-                using (OpenXmlWriter writer = OpenXmlWriter.Create(stream))
-                {
-                    write(writer, writeSource, attributes, namespaceDeclarations);
-                }
-
-                VerifyStartElement(part, writeSource, attributes, namespaceDeclarations);
+                write(writer, writeSource, attributes, namespaceDeclarations);
             }
+
+            VerifyStartElement(part, writeSource, attributes, namespaceDeclarations);
         }
 
         private IEnumerable<OpenXmlAttribute> GetTestAttributes()
         {
-            for (int i = 0; i < 5; i++)
+            for (var i = 0; i < 5; i++)
             {
                 yield return new OpenXmlAttribute("c", "test" + i, string.Empty, i.ToString());
             }
@@ -403,84 +369,82 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void VerifyStartElement(OpenXmlPart part, object writeSource, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            using (Stream stream = part.GetStream())
-            using (XmlReader xmlReader = XmlReader.Create(stream))
+            using var stream = part.GetStream();
+            using var xmlReader = XmlReader.Create(stream);
+            xmlReader.Read();
+            xmlReader.Read();
+
+            Log.Comment("the element written out is a start element");
+            Log.VerifyTrue(xmlReader.IsStartElement(), "Expected: True <> Actual: False");
+
+            if (writeSource is OpenXmlReader)
             {
-                xmlReader.Read();
-                xmlReader.Read();
+                var oReader = writeSource as OpenXmlReader;
+                Log.VerifyTrue(xmlReader.LocalName == oReader.LocalName, "expected: {0} <> actual: {1}", oReader.LocalName, xmlReader.LocalName);
 
-                Log.Comment("the element written out is a start element");
-                Log.VerifyTrue(xmlReader.IsStartElement(), "Expected: True <> Actual: False");
-
-                if (writeSource is OpenXmlReader)
+                if (attributes is not null)
                 {
-                    OpenXmlReader oReader = writeSource as OpenXmlReader;
-                    Log.VerifyTrue(xmlReader.LocalName == oReader.LocalName, "expected: {0} <> actual: {1}", oReader.LocalName, xmlReader.LocalName);
-
-                    if (attributes != null)
+                    foreach (var attr in attributes)
                     {
-                        foreach (OpenXmlAttribute attr in attributes)
-                        {
-                            Log.VerifyTrue(attr.Value == xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri), "expected: {0} <> actual: {1}", attr.Value, xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri));
-                        }
-                    }
-                    else
-                    {
-                        foreach (OpenXmlAttribute attr in oReader.Attributes)
-                        {
-                            Log.VerifyTrue(attr.Value == xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri), "expected: {0} <> actual: {1}", attr.Value, xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri));
-                        }
-                    }
-
-                    if (namespaceDeclarations != null)
-                    {
-                        foreach (var ns in namespaceDeclarations)
-                        {
-                            Log.VerifyTrue(ns.Value == xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)), "expected: {0} <> actual: {1}", ns.Value, xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)));
-                        }
-                    }
-                    else
-                    {
-                        foreach (var ns in oReader.NamespaceDeclarations)
-                        {
-                            Log.VerifyTrue(ns.Value == xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)), "expected: {0} <> actual: {1}", ns.Value, xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)));
-                        }
+                        Log.VerifyTrue(attr.Value == xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri), "expected: {0} <> actual: {1}", attr.Value, xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri));
                     }
                 }
-                else if (writeSource is OpenXmlElement)
+                else
                 {
-                    OpenXmlElement element = writeSource as OpenXmlElement;
-
-                    Log.VerifyTrue(xmlReader.LocalName == element.LocalName, "expected: {0} <> actual: {1}", element.LocalName, xmlReader.LocalName);
-
-                    if (attributes != null)
+                    foreach (var attr in oReader.Attributes)
                     {
-                        foreach (OpenXmlAttribute attr in attributes)
-                        {
-                            Log.VerifyTrue(attr.Value == xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri), "expected: {0} <> actual: {1}", attr.Value, xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri));
-                        }
+                        Log.VerifyTrue(attr.Value == xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri), "expected: {0} <> actual: {1}", attr.Value, xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri));
                     }
-                    else
-                    {
-                        foreach (OpenXmlAttribute attr in element.GetAttributes())
-                        {
-                            Log.VerifyTrue(attr.Value == xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri), "expected: {0} <> actual: {1}", attr.Value, xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri));
-                        }
-                    }
+                }
 
-                    if (namespaceDeclarations != null)
+                if (namespaceDeclarations is not null)
+                {
+                    foreach (var ns in namespaceDeclarations)
                     {
-                        foreach (var ns in namespaceDeclarations)
-                        {
-                            Log.VerifyTrue(ns.Value == xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)), "expected: {0} <> actual: {1}", ns.Value, xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)));
-                        }
+                        Log.VerifyTrue(ns.Value == xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)), "expected: {0} <> actual: {1}", ns.Value, xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)));
                     }
-                    else
+                }
+                else
+                {
+                    foreach (var ns in oReader.NamespaceDeclarations)
                     {
-                        foreach (var ns in element.NamespaceDeclarations)
-                        {
-                            Log.VerifyTrue(ns.Value == xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)), "expected: {0} <> actual: {1}", ns.Value, xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)));
-                        }
+                        Log.VerifyTrue(ns.Value == xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)), "expected: {0} <> actual: {1}", ns.Value, xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)));
+                    }
+                }
+            }
+            else if (writeSource is OpenXmlElement)
+            {
+                var element = writeSource as OpenXmlElement;
+
+                Log.VerifyTrue(xmlReader.LocalName == element.LocalName, "expected: {0} <> actual: {1}", element.LocalName, xmlReader.LocalName);
+
+                if (attributes is not null)
+                {
+                    foreach (var attr in attributes)
+                    {
+                        Log.VerifyTrue(attr.Value == xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri), "expected: {0} <> actual: {1}", attr.Value, xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri));
+                    }
+                }
+                else
+                {
+                    foreach (var attr in element.GetAttributes())
+                    {
+                        Log.VerifyTrue(attr.Value == xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri), "expected: {0} <> actual: {1}", attr.Value, xmlReader.GetAttribute(attr.LocalName, attr.NamespaceUri));
+                    }
+                }
+
+                if (namespaceDeclarations is not null)
+                {
+                    foreach (var ns in namespaceDeclarations)
+                    {
+                        Log.VerifyTrue(ns.Value == xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)), "expected: {0} <> actual: {1}", ns.Value, xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)));
+                    }
+                }
+                else
+                {
+                    foreach (var ns in element.NamespaceDeclarations)
+                    {
+                        Log.VerifyTrue(ns.Value == xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)), "expected: {0} <> actual: {1}", ns.Value, xmlReader.GetAttribute(string.Format("{0}:{1}", "xmlns", ns.Key)));
                     }
                 }
             }
@@ -537,7 +501,7 @@ namespace DocumentFormat.OpenXml.Tests
                 try
                 {
                     Log.Comment("Load current element from an EndElement or EOF, expect InvalidOperationException");
-                    OpenXmlElement element = reader.LoadCurrentElement();
+                    var element = reader.LoadCurrentElement();
                     Log.VerifyShouldNotReachHere("Expect InvalidOperationException");
                 }
                 catch (InvalidOperationException)
@@ -548,9 +512,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else if (reader.IsStartElement)
             {
-                bool IsStart = reader.IsStartElement;
-                OpenXmlElement element = reader.LoadCurrentElement();
-                bool skip = (IsStart == true) && (reader.IsStartElement == false);
+                var IsStart = reader.IsStartElement;
+                var element = reader.LoadCurrentElement();
+                var skip = (IsStart == true) && (reader.IsStartElement == false);
 
                 Log.Comment("check if the load is successful");
                 Log.VerifyNotNull(element, "Fail to load OpenXmlElement from OpenXmlReader");
@@ -577,7 +541,7 @@ namespace DocumentFormat.OpenXml.Tests
                     {
                         if (!(Xreader.IsEmptyElement && reader.IsEndElement && skip))
                         {
-                            int oldDepth = Xreader.Depth;
+                            var oldDepth = Xreader.Depth;
                             while (Read(Xreader) && !(Xreader.NodeType == XmlNodeType.EndElement && Xreader.Depth <= oldDepth))
                             {
                             }
@@ -588,7 +552,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     if (!(Xreader.IsEmptyElement && reader.IsEndElement && skip))
                     {
-                        int oldDepth = Xreader.Depth;
+                        var oldDepth = Xreader.Depth;
                         while (Read(Xreader) && !(Xreader.NodeType == XmlNodeType.EndElement && Xreader.Depth <= oldDepth))
                         {
                         }
@@ -597,7 +561,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else if (reader.ReadMiscNodes && IsMisc(Xreader))
             {
-                OpenXmlElement loaded = reader.LoadCurrentElement();
+                var loaded = reader.LoadCurrentElement();
                 Log.Comment("check if the current element is a misc element");
                 Log.VerifyTrue(loaded is OpenXmlMiscNode, "expect OpenXmlMiscNode, Actual{0}", loaded.GetType().Name);
 
@@ -677,7 +641,7 @@ namespace DocumentFormat.OpenXml.Tests
         private void TestElementType(OpenXmlReader reader, XmlReader XTreader)
         {
             Log.Comment("Test ElementType");
-            Type type = reader.ElementType;
+            var type = reader.ElementType;
 
             if (IsMisc(XTreader) || type == typeof(OpenXmlUnknownElement) || type == typeof(OpenXmlMiscNode))
             {
@@ -777,7 +741,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="XTreader">the corresponding XmlReader</param>
         private void TestLocalName(OpenXmlReader reader, XmlReader XTreader)
         {
-            string localName = XTreader.LocalName;
+            var localName = XTreader.LocalName;
             if (IsMisc(XTreader))
             {
                 switch (XTreader.NodeType)
@@ -868,14 +832,14 @@ namespace DocumentFormat.OpenXml.Tests
                 reader.ElementType != typeof(OpenXmlUnknownElement) &&
                 Activator.CreateInstance(reader.ElementType) is OpenXmlLeafTextElement)
             {
-                string Text = reader.GetText();
+                var Text = reader.GetText();
                 Log.VerifyTrue(Xreader.ReadContentAsString() == Text, "expected: '{0}' <> actual: '{1}'", Xreader.Value, Text);
 
                 Read(reader);
             }
             else
             {
-                string Text = reader.GetText();
+                var Text = reader.GetText();
                 Assert.Equal(string.Empty, Text);
             }
         }
@@ -904,12 +868,12 @@ namespace DocumentFormat.OpenXml.Tests
         private bool Read(OpenXmlReader Oreader, XmlReader Treader)
         {
             // TODO:EndElement logic. Misc catch logic.
-            bool IscontinueRead = true;
+            var IscontinueRead = true;
             Log.Comment("Read(OpenXmlReader, XmlReader)");
 
-            bool beforeIsStartElement = Oreader.IsStartElement;
-            bool IsOreadSuccessful = Read(Oreader);
-            bool afterIsEndElement = false;
+            var beforeIsStartElement = Oreader.IsStartElement;
+            var IsOreadSuccessful = Read(Oreader);
+            var afterIsEndElement = false;
 
             if (!IsOreadSuccessful)
             {
@@ -991,9 +955,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
             else if (Treader.IsStartElement())
             {
-                bool IsStart = Oreader.IsStartElement;
-                bool IsOreadSuccessful = Oreader.ReadFirstChild();
-                bool skip = (IsStart == true) && (Oreader.IsStartElement == false);
+                var IsStart = Oreader.IsStartElement;
+                var IsOreadSuccessful = Oreader.ReadFirstChild();
+                var skip = (IsStart == true) && (Oreader.IsStartElement == false);
 
                 if (IsOreadSuccessful)
                 {
@@ -1036,10 +1000,10 @@ namespace DocumentFormat.OpenXml.Tests
         private bool ReadNextSibling(OpenXmlReader Oreader, XmlReader Treader)
         {
             Log.Comment("ReadNextSibling()");
-            bool OfoundNextSibling = Oreader.ReadNextSibling();
+            var OfoundNextSibling = Oreader.ReadNextSibling();
 
-            bool foundNextSibling = false;
-            int oldDepth = Treader.Depth;
+            var foundNextSibling = false;
+            var oldDepth = Treader.Depth;
 
             if (Treader.EOF)
             {
@@ -1148,9 +1112,9 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static bool Read(OpenXmlReader reader)
         {
-            bool result = false;
+            var result = false;
 
-            if (reader != null && reader.EOF == false)
+            if (reader is not null && reader.EOF == false)
             {
                 result = reader.Read();
 
@@ -1159,7 +1123,7 @@ namespace DocumentFormat.OpenXml.Tests
                     result = SkipWhitespace(reader);
                 }
 
-                if (reader != null && reader.EOF == false)
+                if (reader is not null && reader.EOF == false)
                 {
                     System.Diagnostics.Debug.WriteLine("O: [{0}] {1}", reader.ElementType, reader.LocalName);
                 }
@@ -1170,9 +1134,9 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static bool Read(XmlReader reader)
         {
-            bool result = false;
+            var result = false;
 
-            if (reader != null && reader.EOF == false)
+            if (reader is not null && reader.EOF == false)
             {
                 result = reader.Read();
 
@@ -1181,7 +1145,7 @@ namespace DocumentFormat.OpenXml.Tests
                     result = SkipWhitespace(reader);
                 }
 
-                if (reader != null && reader.EOF == false)
+                if (reader is not null && reader.EOF == false)
                 {
                     System.Diagnostics.Debug.WriteLine("X: [{0}] {1}", reader.NodeType, reader.LocalName);
                 }
@@ -1192,9 +1156,9 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static bool Skip(OpenXmlReader reader)
         {
-            bool result = true;
+            var result = true;
 
-            if (reader != null && reader.EOF == false)
+            if (reader is not null && reader.EOF == false)
             {
                 reader.Skip();
 
@@ -1209,9 +1173,9 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static bool Skip(XmlReader reader)
         {
-            bool result = true;
+            var result = true;
 
-            if (reader != null && reader.EOF == false)
+            if (reader is not null && reader.EOF == false)
             {
                 reader.Skip();
 
@@ -1226,10 +1190,10 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static bool SkipWhitespace(OpenXmlReader reader)
         {
-            bool result = true;
+            var result = true;
 
             while (result == true &&
-                reader != null && reader.EOF == false &&
+                reader is not null && reader.EOF == false &&
                 reader.LocalName == "#whitespace")
             {
                 result = reader.Read();
@@ -1240,10 +1204,10 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static bool SkipWhitespace(XmlReader reader)
         {
-            bool result = true;
+            var result = true;
 
             while (result == true &&
-                reader != null && reader.EOF == false &&
+                reader is not null && reader.EOF == false &&
                 reader.NodeType == XmlNodeType.Whitespace)
             {
                 result = reader.Read();
@@ -1256,29 +1220,25 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void bug247883()
         {
-            using (var stream0 = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd, true))
-            using (var stream1 = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AutoSpaceDE, true))
-            using (var word0 = WordprocessingDocument.Open(stream0, true))
-            using (var word1 = WordprocessingDocument.Open(stream1, true))
-            {
-                var doc = word0.MainDocumentPart.Document;
-                doc.Load(word1.MainDocumentPart);
-                doc.Save();
-            }
+            using var stream0 = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd, true);
+            using var stream1 = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AutoSpaceDE, true);
+            using var word0 = WordprocessingDocument.Open(stream0, true);
+            using var word1 = WordprocessingDocument.Open(stream1, true);
+            var doc = word0.MainDocumentPart.Document;
+            doc.Load(word1.MainDocumentPart);
+            doc.Save();
         }
 
         [Fact]
         public void ReadMiscNode()
         {
-            Body body = new Body(new Paragraph(new ParagraphProperties(), new Run(new Text("test"))));
+            var body = new Body(new Paragraph(new ParagraphProperties(), new Run(new Text("test"))));
             body.PrependChild(new OpenXmlMiscNode(XmlNodeType.Comment, "<!-- start body -->"));
 
-            using (var reader = OpenXmlReader.Create(body, true))
-            {
-                Assert.True(reader.Read());
-                Assert.True(reader.Read());
-                Assert.True(reader.IsMiscNode);
-            }
+            using var reader = OpenXmlReader.Create(body, true);
+            Assert.True(reader.Read());
+            Assert.True(reader.Read());
+            Assert.True(reader.IsMiscNode);
         }
 
         [Fact]
@@ -1292,21 +1252,20 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug253893_Write2Declaration()
         {
-            using (var stream = new MemoryStream())
-            using (WordprocessingDocument doc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
-            {
-                MainDocumentPart mainpart = doc.AddMainDocumentPart();
+            using var stream = new MemoryStream();
+            using var doc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
 
-                OpenXmlWriter writer = OpenXmlWriter.Create(mainpart);
+            var mainpart = doc.AddMainDocumentPart();
 
-                OpenXmlMiscNode miscnode = new OpenXmlMiscNode(XmlNodeType.XmlDeclaration, "<?xml version=\"1.0\" encoding=\"utf-8\"?>");
+            var writer = OpenXmlWriter.Create(mainpart);
 
-                writer.WriteStartDocument();
+            var miscnode = new OpenXmlMiscNode(XmlNodeType.XmlDeclaration, "<?xml version=\"1.0\" encoding=\"utf-8\"?>");
 
-                writer.WriteElement(miscnode);
+            writer.WriteStartDocument();
 
-                writer.Close();
-            }
+            writer.WriteElement(miscnode);
+
+            writer.Close();
         }
     }
 }

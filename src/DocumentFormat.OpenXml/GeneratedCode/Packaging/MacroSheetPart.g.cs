@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -24,7 +26,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.macrosheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet";
-        private DocumentFormat.OpenXml.Office.Excel.Macrosheet _rootElement;
+        private DocumentFormat.OpenXml.Office.Excel.Macrosheet? _rootElement;
 
         /// <summary>
         /// Creates an instance of the MacroSheetPart OpenXmlType
@@ -44,7 +46,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the DrawingsPart of the MacroSheetPart
         /// </summary>
-        public DrawingsPart DrawingsPart => GetSubPartOfType<DrawingsPart>();
+        public DrawingsPart? DrawingsPart => GetSubPartOfType<DrawingsPart>();
 
         /// <summary>
         /// Gets the EmbeddedObjectParts of the MacroSheetPart
@@ -61,7 +63,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -86,7 +88,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Office.Excel.Macrosheet>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -100,7 +102,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => Macrosheet;
+        internal override OpenXmlPartRootElement? PartRootElement => Macrosheet;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -124,7 +126,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the WorksheetCommentsPart of the MacroSheetPart
         /// </summary>
-        public WorksheetCommentsPart WorksheetCommentsPart => GetSubPartOfType<WorksheetCommentsPart>();
+        public WorksheetCommentsPart? WorksheetCommentsPart => GetSubPartOfType<WorksheetCommentsPart>();
 
         /// <summary>
         /// Adds a CustomPropertyPart to the MacroSheetPart
@@ -160,7 +162,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomPropertyPart AddCustomPropertyPart(CustomPropertyPartType partType, string id)
         {
             var contentType = CustomPropertyPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomPropertyPart(contentType, id);
         }
@@ -173,7 +175,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomPropertyPart AddCustomPropertyPart(CustomPropertyPartType partType)
         {
             var contentType = CustomPropertyPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomPropertyPart(contentType);
         }

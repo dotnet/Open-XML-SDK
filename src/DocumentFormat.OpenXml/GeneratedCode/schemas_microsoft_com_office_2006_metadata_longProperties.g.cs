@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -14,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
 {
     /// <summary>
     /// <para>Defines the LongProperties Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is lp:LongProperties.</para>
     /// </summary>
     /// <remark>
@@ -23,6 +25,9 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     ///   <item><description>LongProperty &lt;lp:LongProp></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(40, "LongProperties")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LongProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -61,7 +66,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
             base.ConfigureMetadata(builder);
             builder.SetSchema(40, "LongProperties");
             builder.AddChild<LongProperty>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.LongProperties.LongProperty), 0, 0)
             };
@@ -73,9 +78,12 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
 
     /// <summary>
     /// <para>Defines the LongProperty Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is lp:LongProp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(40, "LongProp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LongProperty : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -102,7 +110,13 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

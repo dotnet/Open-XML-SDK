@@ -4,11 +4,143 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal static class NamespaceIdMap
+    internal readonly struct OpenXmlNamespace : IComparable<OpenXmlNamespace>, IEquatable<OpenXmlNamespace>
     {
+        private readonly string? _prefix;
+        private readonly string? _uri;
+
+        internal OpenXmlNamespace(byte nsId)
+        {
+            _prefix = GetNamespacePrefix(nsId);
+            _uri = GetNamespaceUri(nsId);
+        }
+
+        public OpenXmlNamespace(string? nsUri, string? prefix = null)
+        {
+            _uri = nsUri;
+            _prefix = prefix;
+        }
+
+        public string Uri => _uri ?? string.Empty;
+
+        public string Prefix => _prefix ?? GetNamespacePrefix(Uri) ?? string.Empty;
+
+        public bool IsKnown => TryGetNamespaceId(Uri, out _);
+
+        public bool IsEmpty => string.IsNullOrEmpty(Uri);
+
+        internal byte NsId => TryGetNamespaceId(Uri, out var id) ? id : throw new InvalidOperationException();
+
+        public FileFormatVersions Version
+            => _namespaceResolver.TryGetByNamespace(Uri, out var info) ? info.Version : FileFormatVersions.None;
+
+        public bool IsInVersion(FileFormatVersions version)
+            => Version == version;
+
+        /// <summary>
+        /// Attempts to get the Transitional equivalent namespace.
+        /// </summary>
+        /// <param name="transitionalNamespace">An equivalent namespace in Transitional.</param>
+        /// <returns>Returns true when a Transitional equivalent namespace is found, returns false when it is not found.</returns>
+        public bool TryGetTransitionalNamespace(out OpenXmlNamespace transitionalNamespace)
+            => _strictTransitionalNamespaces.TryGetValue(Uri, out transitionalNamespace);
+
+        /// <summary>
+        /// Attempts to get the Transitional equivalent relationship.
+        /// </summary>
+        /// <param name="transitionalRelationship">An equivalent relationship in Transitional.</param>
+        /// <returns>Returns true when a Transitional equivalent relationship is found, returns false when it is not.</returns>
+        public bool TryGetTransitionalRelationship(out OpenXmlNamespace transitionalRelationship)
+            => _strictTransitionalRelationshipPairs.TryGetValue(Uri, out transitionalRelationship);
+
+        /// <summary>
+        /// Try to get the expected namespace if the passed namespace is an obsolete.
+        /// </summary>
+        /// <param name="extNamespaceUri">The expected namespace when the passed namespace is an obsolete.</param>
+        /// <returns>True when the passed namespace is an obsolete and the expected namespace found</returns>
+        public bool TryGetExtendedNamespace(out OpenXmlNamespace extNamespaceUri)
+            => _extendedNamespaces.TryGetValue(Uri, out extNamespaceUri);
+
+        public override bool Equals(object? obj) => obj is OpenXmlNamespace ns && Equals(ns);
+
+        public bool Equals(OpenXmlNamespace other)
+            => string.Equals(Uri, other.Uri, StringComparison.Ordinal);
+
+        public override int GetHashCode()
+        {
+            var hashcode = new HashCode();
+
+            hashcode.Add(Uri, StringComparer.Ordinal);
+
+            return hashcode.ToHashCode();
+        }
+
+        public override string ToString() => Uri;
+
+        public int CompareTo(OpenXmlNamespace other)
+            => string.CompareOrdinal(Uri, other.Uri);
+
+        public static implicit operator OpenXmlNamespace(string ns) => new OpenXmlNamespace(ns);
+
+        private static bool TryGetNamespaceId(string namespaceUri, out byte id)
+        {
+            if (namespaceUri is not null && _namespaceResolver.TryGetByNamespace(NormalizeNamespace(namespaceUri), out var info))
+            {
+                id = info.Id;
+                return true;
+            }
+            else
+            {
+                id = byte.MaxValue;
+                return false;
+            }
+        }
+
+        private static string GetNamespaceUri(byte namespaceId) => _namespaceResolver[namespaceId].Namespace;
+
+        /// <summary>
+        /// Gets the namespace URI for the specified namespace prefix.
+        /// </summary>
+        /// <param name="prefix">The namespace prefix.</param>
+        /// <returns></returns>
+        public static string? GetNamespaceUri(string prefix)
+        {
+            if (prefix is null)
+            {
+                throw new ArgumentNullException(nameof(prefix));
+            }
+
+            if (_namespaceResolver.TryGetByPrefix(prefix, out var info))
+            {
+                return info.Namespace;
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Gets the default namespace prefix for the specified namespace ID.
+        /// </summary>
+        /// <param name="namespaceId">The namespace ID.</param>
+        /// <returns></returns>
+        private static string GetNamespacePrefix(byte namespaceId) => _namespaceResolver[namespaceId].Prefix;
+
+        private static string? GetNamespacePrefix(string namespaceUri) => _namespaceResolver.TryGetByNamespace(namespaceUri, out var info) ? info.Prefix : null;
+
+        private static string NormalizeNamespace(in OpenXmlNamespace ns)
+        {
+            if (ns.TryGetExtendedNamespace(out var result))
+            {
+                return result.Uri;
+            }
+
+            return ns.Uri;
+        }
+
         /// <summary>
         /// A list of namespaces, associated prefixes and the version in which it was introduced.
         /// </summary>
@@ -107,10 +239,57 @@ namespace DocumentFormat.OpenXml.Framework
             { "http://schemas.microsoft.com/office/spreadsheetml/2014/11/main", "x16", FileFormatVersions.Office2016 },
             { "http://schemas.microsoft.com/office/spreadsheetml/2015/02/main", "x16r2", FileFormatVersions.Office2016 },
             { "http://schemas.microsoft.com/office/word/2015/wordml/symex", "w16se", FileFormatVersions.Office2016 },
+
+            // O19
+            { "http://schemas.microsoft.com/office/powerpoint/2017/3/main", "p173", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/powerpoint/2017/10/main", "p1710", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/powerpoint/2018/4/main", "p184", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/pivotdefaultlayout", "xpdl", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/01/main", "xlPr", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2015/revision2", "xr2", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/revision3", "xr3", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/revision5", "xr5", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/revision6", "xr6", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/revision9", "xr9", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2016/revision10", "xr10", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2017/revision16", "xr16", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "xlrd2", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "xlrd", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2018/calcfeatures", "xcalcf", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "xltc", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2017/03/chart", "c16r3", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray", "xda", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2016/11/main", "a1611", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2016/11/diagram", "dgm1611", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2016/12/diagram", "dgm1612", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2016/ink", "aink", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2017/model3d", "am3d", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2017/decorative", "adec", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2018/animation", "aanim", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2018/animation/model3d", "a3danim", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor", "ahyp", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/word/2016/wordml/cid", "w16cid", FileFormatVersions.Office2019 },
+            { "http://schemas.microsoft.com/office/drawing/2016/SVG/main", "asvg", FileFormatVersions.Office2019 },
+        };
+
+        internal static int Count => _namespaceResolver.Count;
+
+        // The namespaces listed here are somewhat obsolete ones that we need to support. Before we try to get the index of a namespace,
+        // we check if it's in this list to rename to the expected correct namespace.
+        private static readonly Dictionary<OpenXmlNamespace, OpenXmlNamespace> _extendedNamespaces = new Dictionary<OpenXmlNamespace, OpenXmlNamespace>
+        {
+            { "http://schemas.openxmlformats.org/wordprocessingml/2006/3/main", "http://schemas.openxmlformats.org/wordprocessingml/2006/main" },
+            { "http://schemas.openxmlformats.org/wordprocessingml/2006/5/main", "http://schemas.openxmlformats.org/wordprocessingml/2006/main" },
+            { "http://schemas.openxmlformats.org/wordprocessingml/2006/6/main", "http://schemas.openxmlformats.org/wordprocessingml/2006/main" },
+            { "http://schemas.openxmlformats.org/spreadsheetml/2006/5/main", "http://schemas.openxmlformats.org/spreadsheetml/2006/main" },
+            { "http://schemas.openxmlformats.org/spreadsheetml/2006/7/main", "http://schemas.openxmlformats.org/spreadsheetml/2006/main" },
+            { "http://schemas.openxmlformats.org/presentationml/2006/3/main", "http://schemas.openxmlformats.org/presentationml/2006/main" },
+            { "http://schemas.openxmlformats.org/drawingml/2006/3/main", "http://schemas.openxmlformats.org/drawingml/2006/main" },
+            { "http://schemas.microsoft.com/office/word/2010/11/wordml", "http://schemas.microsoft.com/office/word/2012/wordml" },
         };
 
         // This dictionary contains the Strict and Transitional namespaces pairs to be interpreted equivalent.
-        private static readonly Dictionary<string, string> _strictTransitionalNamespaces = new Dictionary<string, string>(StringComparer.Ordinal)
+        private static readonly Dictionary<OpenXmlNamespace, OpenXmlNamespace> _strictTransitionalNamespaces = new Dictionary<OpenXmlNamespace, OpenXmlNamespace>
         {
             // Namespaces
             { "http://purl.oclc.org/ooxml/descriptions/base", "http://descriptions.openxmlformats.org/description/base" },
@@ -148,7 +327,7 @@ namespace DocumentFormat.OpenXml.Framework
         };
 
         // This dictionary contains the Strict and Transitional relationship pairs to be interpreted equivalent.
-        private static readonly Dictionary<string, string> _strictTransitionalRelationshipPairs = new Dictionary<string, string>(StringComparer.Ordinal)
+        private static readonly Dictionary<OpenXmlNamespace, OpenXmlNamespace> _strictTransitionalRelationshipPairs = new Dictionary<OpenXmlNamespace, OpenXmlNamespace>
         {
             { "http://purl.oclc.org/ooxml/officeDocument/relationships/aFChunk", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk" },
             { "http://purl.oclc.org/ooxml/officeDocument/relationships/attachedTemplate", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate" },
@@ -231,145 +410,6 @@ namespace DocumentFormat.OpenXml.Framework
             { "http://purl.oclc.org/ooxml/officeDocument/relationships/xmlMaps", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps" },
         };
 
-        // The namespaces listed here are somewhat obsolete ones that we need to support. Before we try to get the index of a namespace,
-        // we check if it's in this list to rename to the expected correct namespace.
-        private static readonly Dictionary<string, string> _extendedNamespaces = new Dictionary<string, string>(StringComparer.Ordinal)
-        {
-            { "http://schemas.openxmlformats.org/wordprocessingml/2006/3/main", "http://schemas.openxmlformats.org/wordprocessingml/2006/main" },
-            { "http://schemas.openxmlformats.org/wordprocessingml/2006/5/main", "http://schemas.openxmlformats.org/wordprocessingml/2006/main" },
-            { "http://schemas.openxmlformats.org/wordprocessingml/2006/6/main", "http://schemas.openxmlformats.org/wordprocessingml/2006/main" },
-            { "http://schemas.openxmlformats.org/spreadsheetml/2006/5/main", "http://schemas.openxmlformats.org/spreadsheetml/2006/main" },
-            { "http://schemas.openxmlformats.org/spreadsheetml/2006/7/main", "http://schemas.openxmlformats.org/spreadsheetml/2006/main" },
-            { "http://schemas.openxmlformats.org/presentationml/2006/3/main", "http://schemas.openxmlformats.org/presentationml/2006/main" },
-            { "http://schemas.openxmlformats.org/drawingml/2006/3/main", "http://schemas.openxmlformats.org/drawingml/2006/main" },
-            { "http://schemas.microsoft.com/office/word/2010/11/wordml", "http://schemas.microsoft.com/office/word/2012/wordml" },
-        };
-
-        public static int Count => _namespaceResolver.Count;
-
-        /// <summary>
-        /// Attempts to get the Transitional equivalent namespace.
-        /// </summary>
-        /// <param name="strictNamespace">A namespace in Strict.</param>
-        /// <param name="transitionalNamespace">An equivalent namespace in Transitional.</param>
-        /// <returns>Returns true when a Transitional equivalent namespace is found, returns false when it is not found.</returns>
-        public static bool TryGetTransitionalNamespace(string strictNamespace, out string transitionalNamespace)
-        {
-            if (strictNamespace == null)
-            {
-                throw new ArgumentNullException(nameof(strictNamespace));
-            }
-
-            return _strictTransitionalNamespaces.TryGetValue(strictNamespace, out transitionalNamespace);
-        }
-
-        /// <summary>
-        /// Attempts to get the Transitional equivalent relationship.
-        /// </summary>
-        /// <param name="strictRelationship">A relationship in Strict.</param>
-        /// <param name="transitionalRelationship">An equivalent relationship in Transitional.</param>
-        /// <returns>Returns true when a Transitional equivalent relationship is found, returns false when it is not.</returns>
-        public static bool TryGetTransitionalRelationship(string strictRelationship, out string transitionalRelationship)
-        {
-            if (strictRelationship == null)
-            {
-                throw new ArgumentNullException(nameof(strictRelationship));
-            }
-
-            return _strictTransitionalRelationshipPairs.TryGetValue(strictRelationship, out transitionalRelationship);
-        }
-
-        public static bool IsInFileFormat(string ns, FileFormatVersions format)
-        {
-            if (_namespaceResolver.TryGetByNamespace(ns, out var info))
-            {
-                return info.Version == format;
-            }
-
-            return false;
-        }
-
-        public static byte GetNamespaceId(string namespaceUri)
-        {
-            if (TryGetNamespaceId(namespaceUri, out var id))
-            {
-                return id;
-            }
-
-            throw new KeyNotFoundException();
-        }
-
-        public static bool TryGetNamespaceId(string namespaceUri, out byte id)
-        {
-            if (namespaceUri != null && _namespaceResolver.TryGetByNamespace(NormalizeNamespace(namespaceUri), out var info))
-            {
-                id = info.Id;
-                return true;
-            }
-            else
-            {
-                id = byte.MaxValue;
-                return false;
-            }
-        }
-
-        /// <summary>
-        /// Gets the namespace URI for the specified namespace ID.
-        /// </summary>
-        /// <param name="namespaceId">The namespace ID.</param>
-        /// <returns></returns>
-        public static string GetNamespaceUri(byte namespaceId) => _namespaceResolver[namespaceId].Namespace;
-
-        /// <summary>
-        /// Gets the namespace URI for the specified namespace prefix.
-        /// </summary>
-        /// <param name="prefix">The namespace prefix.</param>
-        /// <returns></returns>
-        public static string GetNamespaceUri(string prefix)
-        {
-            if (prefix == null)
-            {
-                throw new ArgumentNullException(nameof(prefix));
-            }
-
-            if (_namespaceResolver.TryGetByPrefix(prefix, out var info))
-            {
-                return info.Namespace;
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// Gets the default namespace prefix for the specified namespace ID.
-        /// </summary>
-        /// <param name="namespaceId">The namespace ID.</param>
-        /// <returns></returns>
-        public static string GetNamespacePrefix(byte namespaceId) => _namespaceResolver[namespaceId].Prefix;
-
-        public static string GetNamespacePrefix(string namespaceUri) => _namespaceResolver.TryGetByNamespace(namespaceUri, out var info) ? info.Prefix : null;
-
-        /// <summary>
-        /// Try to get the expected namespace if the passed namespace is an obsolete.
-        /// </summary>
-        /// <param name="namespaceUri">The namespace to pass.</param>
-        /// <param name="extNamespaceUri">The expected namespace when the passed namespace is an obsolete.</param>
-        /// <returns>True when the passed namespace is an obsolete and the expected namespace found</returns>
-        public static bool TryGetExtendedNamespace(string namespaceUri, out string extNamespaceUri)
-        {
-            return _extendedNamespaces.TryGetValue(namespaceUri, out extNamespaceUri);
-        }
-
-        private static string NormalizeNamespace(string ns)
-        {
-            if (_extendedNamespaces.TryGetValue(ns, out var result))
-            {
-                return result;
-            }
-
-            return ns;
-        }
-
         private class NamespaceResolver : IEnumerable
         {
             private readonly Dictionary<string, NamespaceInfo> _byNamespace = new Dictionary<string, NamespaceInfo>(StringComparer.Ordinal);
@@ -389,9 +429,9 @@ namespace DocumentFormat.OpenXml.Framework
 
             public NamespaceInfo this[int id] => _info[id];
 
-            public bool TryGetByNamespace(string ns, out NamespaceInfo info) => _byNamespace.TryGetValue(ns, out info);
+            public bool TryGetByNamespace(string ns, [MaybeNullWhen(false)] out NamespaceInfo info) => _byNamespace.TryGetValue(ns, out info);
 
-            public bool TryGetByPrefix(string prefix, out NamespaceInfo info) => _byPrefix.TryGetValue(prefix, out info);
+            public bool TryGetByPrefix(string prefix, [MaybeNullWhen(false)] out NamespaceInfo info) => _byPrefix.TryGetValue(prefix, out info);
 
             IEnumerator IEnumerable.GetEnumerator() => _info.GetEnumerator();
 

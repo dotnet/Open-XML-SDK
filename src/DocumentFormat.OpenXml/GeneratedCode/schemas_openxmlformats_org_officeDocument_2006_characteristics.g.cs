@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -14,7 +16,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
 {
     /// <summary>
     /// <para>Set of Additional Characteristics.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ac:additionalCharacteristics.</para>
     /// </summary>
     /// <remark>
@@ -23,6 +25,9 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     ///   <item><description>Characteristic &lt;ac:characteristic></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(8, "additionalCharacteristics")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
     {
         /// <summary>
@@ -61,7 +66,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
             base.ConfigureMetadata(builder);
             builder.SetSchema(8, "additionalCharacteristics");
             builder.AddChild<Characteristic>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic), 0, 0)
             };
@@ -73,9 +78,12 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
 
     /// <summary>
     /// <para>Single Characteristic.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ac:characteristic.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(8, "characteristic")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Characteristic : OpenXmlLeafElement
     {
         /// <summary>
@@ -89,7 +97,13 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Name of Characteristic</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -99,7 +113,13 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Relationship of Value to Name</para>
         /// <para>Represents the following attribute in the schema: relation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "relation")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>? Relation
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>>();
             set => SetAttribute(value);
@@ -109,7 +129,13 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Characteristic Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public StringValue Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -119,7 +145,13 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Characteristic Grammar</para>
         /// <para>Represents the following attribute in the schema: vocabulary</para>
         /// </summary>
-        public StringValue Vocabulary
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "vocabulary")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Vocabulary
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

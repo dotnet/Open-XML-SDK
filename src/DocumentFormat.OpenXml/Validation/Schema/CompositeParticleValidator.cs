@@ -31,16 +31,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns></returns>
         internal override void Validate(ValidationContext validationContext)
         {
-            Debug.Assert(validationContext != null);
-
-            var element = validationContext.Stack.Current.Element as OpenXmlCompositeElement;
-            Debug.Assert(element != null);
+            if (validationContext.Stack.Current?.Element is not OpenXmlCompositeElement element)
+            {
+                return;
+            }
 
             var child = validationContext.GetFirstChildMc();
             ValidationErrorInfo errorInfo;
 
             // no children
-            if (child == null)
+            if (child is null)
             {
                 if (ParticleConstraint.MinOccurs == 0)
                 {
@@ -77,13 +77,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     return;
 
                 case ParticleMatch.Matched:
-                    Debug.Assert(particleMatchInfo.LastMatchedElement != null);
+                    Debug.Assert(particleMatchInfo.LastMatchedElement is not null);
                     child = validationContext.GetNextChildMc(particleMatchInfo.LastMatchedElement);
                     {
                         // Two cases now.
                         // 1. All children be matched.
                         // 2. Too many children ( > maxOccurs ).
-                        if (child != null)
+                        if (child is not null)
                         {
                             // invalid child
                             EmitInvalidElementError(validationContext, particleMatchInfo);
@@ -120,7 +120,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 var childMatchInfo = new ParticleMatchInfo();
 
-                while (next != null && ParticleConstraint.MaxOccursGreaterThan(matchCount))
+                while (next is not null && ParticleConstraint.MaxOccursGreaterThan(matchCount))
                 {
                     // Use Reset() instead of new() to avoid heavy memory allocation and GC.
                     childMatchInfo.Reset(next);
@@ -189,7 +189,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="result"></param>
         /// <returns>True if there are required elements in this particle.</returns>
-        public override bool GetRequiredElements(ExpectedChildren result)
+        public override bool GetRequiredElements(ExpectedChildren? result)
         {
             bool requiredElements = false;
 
@@ -197,7 +197,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 foreach (var constraint in ParticleConstraint.ChildrenParticles)
                 {
-                    if (constraint.ParticleValidator.GetRequiredElements(result))
+                    if (constraint.ParticleValidator is IParticleValidator validator && validator.GetRequiredElements(result))
                     {
                         requiredElements = true;
                     }
@@ -216,7 +216,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             foreach (var constraint in ParticleConstraint.ChildrenParticles)
             {
-                constraint.ParticleValidator.GetExpectedElements(result);
+                if (constraint.ParticleValidator is IParticleValidator validator)
+                {
+                    validator.GetExpectedElements(result);
+                }
             }
 
             return true;
@@ -226,7 +229,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             ValidationContext validationContext,
             ParticleMatchInfo particleMatchInfo)
         {
-            OpenXmlElement child;
+            OpenXmlElement? child;
 
             // re-validate the element, collect the expected children information
             if (particleMatchInfo.Match != ParticleMatch.Nomatch)
@@ -238,7 +241,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 child = validationContext.GetFirstChildMc();
                 validationContext.CollectExpectedChildren = true;
                 particleMatchInfo.Reset(child);
-                particleMatchInfo.InitExpectedChildren();
+                particleMatchInfo.ExpectedChildren.Clear();
                 TryMatch(particleMatchInfo, validationContext);
                 validationContext.CollectExpectedChildren = false;
 
@@ -248,8 +251,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 #endif
             }
 
-            var element = validationContext.Stack.Current.Element;
-            if (particleMatchInfo.LastMatchedElement == null)
+            var element = validationContext.Stack.Current?.Element;
+
+            if (element is null)
+            {
+                return;
+            }
+
+            if (particleMatchInfo.LastMatchedElement is null)
             {
                 child = validationContext.GetFirstChildMc();
             }
@@ -259,17 +268,17 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 
             ValidationErrorInfo errorInfo;
-            string expectedChildren = null;
+            string expectedChildren = string.Empty;
 
             switch (particleMatchInfo.Match)
             {
                 case ParticleMatch.Nomatch:
-                    expectedChildren = GetExpectedChildrenMessage(validationContext.Stack.Current.Element, GetExpectedElements());
+                    expectedChildren = GetExpectedChildrenMessage(element, GetExpectedElements());
                     break;
 
                 case ParticleMatch.Partial:
                     // error: the child can not be matched, it is invalid
-                    if (child == null)
+                    if (child is null)
                     {
                         // missing child
                         errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_IncompleteContentExpectingComplex", GetExpectedChildrenMessage(element, particleMatchInfo.ExpectedChildren));
@@ -279,7 +288,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                     else
                     {
-                        expectedChildren = GetExpectedChildrenMessage(validationContext.Stack.Current.Element, particleMatchInfo.ExpectedChildren);
+                        expectedChildren = GetExpectedChildrenMessage(element, particleMatchInfo.ExpectedChildren);
                     }
 
                     break;
@@ -287,17 +296,22 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 case ParticleMatch.Matched:
                     if (ParticleConstraint.CanOccursMoreThanOne)
                     {
-                        expectedChildren = GetExpectedChildrenMessage(validationContext.Stack.Current.Element, GetExpectedElements());
+                        expectedChildren = GetExpectedChildrenMessage(element, GetExpectedElements());
                     }
                     else
                     {
-                        expectedChildren = GetExpectedChildrenMessage(validationContext.Stack.Current.Element, particleMatchInfo.ExpectedChildren);
+                        expectedChildren = GetExpectedChildrenMessage(element, particleMatchInfo.ExpectedChildren);
                     }
 
                     break;
             }
 
-            if (validationContext.Stack.Current.Element.CanContainChild(child))
+            if (child is null)
+            {
+                return;
+            }
+
+            if (element.CanContainChild(child))
             {
                 // The child can be contained in the parent, but not follow the schema.
                 errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_UnexpectedElementContentExpectingComplex", child.XmlQualifiedName.ToString(), expectedChildren);
@@ -306,7 +320,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 // Same element name, but wrong type. Only occurs when validating memory DOM.
                 var validElement = element.TryCreateValidChild(validationContext.FileFormat, child.NamespaceUri, child.LocalName);
-                if (validElement == null)
+                if (validElement is null)
                 {
                     errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_InvalidElementContentExpectingComplex", child.XmlQualifiedName.ToString(), expectedChildren);
                 }

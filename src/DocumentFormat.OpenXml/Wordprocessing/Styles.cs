@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Gets the StylesPart associated with this element, it could either be a StyleDefinitionsPart or a StylesWithEffectsPart.
         /// </summary>
-        public StylesPart StylesPart
+        public StylesPart? StylesPart
         {
             get
             {

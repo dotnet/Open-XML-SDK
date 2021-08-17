@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -14,7 +16,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 {
     /// <summary>
     /// <para>Defines the CustomPropertyEditors Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:customPropertyEditors.</para>
     /// </summary>
     /// <remark>
@@ -25,6 +27,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     ///   <item><description>CustomPropertyEditor &lt;cdip:customPropertyEditor></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(37, "customPropertyEditors")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomPropertyEditors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -65,7 +70,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             builder.AddChild<ShowOnOpen>();
             builder.AddChild<DefaultPropertyEditorNamespace>();
             builder.AddChild<CustomPropertyEditor>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace), 1, 1),
@@ -80,7 +85,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public ShowOnOpen ShowOnOpen
+        public ShowOnOpen? ShowOnOpen
         {
             get => GetElement<ShowOnOpen>();
             set => SetElement(value);
@@ -93,7 +98,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public DefaultPropertyEditorNamespace DefaultPropertyEditorNamespace
+        public DefaultPropertyEditorNamespace? DefaultPropertyEditorNamespace
         {
             get => GetElement<DefaultPropertyEditorNamespace>();
             set => SetElement(value);
@@ -105,9 +110,12 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 
     /// <summary>
     /// <para>Defines the PropertyEditorNamespace Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:XMLNamespace.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(37, "XMLNamespace")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -143,9 +151,12 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 
     /// <summary>
     /// <para>Defines the DefaultPropertyEditorNamespace Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:defaultPropertyEditorNamespace.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(37, "defaultPropertyEditorNamespace")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -181,9 +192,12 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 
     /// <summary>
     /// <para>Defines the XsnFileLocation Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:XSNLocation.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(37, "XSNLocation")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class XsnFileLocation : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -218,9 +232,12 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 
     /// <summary>
     /// <para>Defines the ShowOnOpen Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:showOnOpen.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(37, "showOnOpen")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowOnOpen : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -256,7 +273,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
 
     /// <summary>
     /// <para>Defines the CustomPropertyEditor Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:customPropertyEditor.</para>
     /// </summary>
     /// <remark>
@@ -266,6 +283,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     ///   <item><description>XsnFileLocation &lt;cdip:XSNLocation></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(37, "customPropertyEditor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomPropertyEditor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -305,7 +325,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             builder.SetSchema(37, "customPropertyEditor");
             builder.AddChild<PropertyEditorNamespace>();
             builder.AddChild<XsnFileLocation>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation), 1, 1)
@@ -319,7 +339,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public PropertyEditorNamespace PropertyEditorNamespace
+        public PropertyEditorNamespace? PropertyEditorNamespace
         {
             get => GetElement<PropertyEditorNamespace>();
             set => SetElement(value);
@@ -332,7 +352,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public XsnFileLocation XsnFileLocation
+        public XsnFileLocation? XsnFileLocation
         {
             get => GetElement<XsnFileLocation>();
             set => SetElement(value);

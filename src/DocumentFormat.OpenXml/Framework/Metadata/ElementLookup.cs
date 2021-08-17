@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     /// <summary>
     /// A lookup that identifies properties on an <see cref="OpenXmlElement"/> and caches the schema information
-    /// from those elements (identified by the <see cref="SchemaAttrAttribute"/> on the property type.
+    /// from those elements.
     /// </summary>
     internal class ElementLookup
     {
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public IEnumerable<ElementChild> Elements => _data;
 
-        public OpenXmlElement Create(byte id, string name)
+        public OpenXmlElement? Create(in OpenXmlQualifiedName qname)
         {
             if (_data.Length == 0)
             {
@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             // This is on a hot-path and using a dictionary adds substantial time to the lookup. Most child lists are small, so using a sorted
             // list to store them with a binary search improves overall performance.
-            var idx = Array.BinarySearch(_data, new ElementChild(null, id, name), ElementChildNameComparer.Instance);
+            var idx = Array.BinarySearch(_data, new ElementChild(null, qname), ElementChildNameComparer.Instance);
 
             if (idx < 0)
             {
@@ -55,11 +55,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         private static ElementLookup CreatePartLookup(Type type, Func<Type, Func<OpenXmlElement>> activatorFactory)
         {
-            List<ElementChild> lookup = null;
+            List<ElementChild>? lookup = null;
 
             foreach (var child in GetAllRootElements(type))
             {
-                if (lookup == null)
+                if (lookup is null)
                 {
                     lookup = new List<ElementChild>();
                 }
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 lookup.Add(key);
             }
 
-            if (lookup == null)
+            if (lookup is null)
             {
                 return Empty;
             }
@@ -98,36 +98,39 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
             }
 
-            public int Compare(ElementChild x, ElementChild y)
+            public int Compare(ElementChild? x, ElementChild? y)
             {
-                var nsCompare = x.NamespaceId.CompareTo(y.NamespaceId);
-
-                if (nsCompare != 0)
+                if (x is null && y is null)
                 {
-                    return nsCompare;
+                    return 0;
                 }
 
-                return string.CompareOrdinal(x.Name, y.Name);
+                if (x is null)
+                {
+                    return -1;
+                }
+
+                if (y is null)
+                {
+                    return 1;
+                }
+
+                return x.QName.CompareTo(y.QName);
             }
         }
 
         [DebuggerDisplay("{Namespace}:{Name}")]
         public class ElementChild
         {
-            public ElementChild(Type type, byte nsId, string name)
+            public ElementChild(Type? type, in OpenXmlQualifiedName qname)
             {
                 Type = type;
-                NamespaceId = nsId;
-                Name = name;
+                QName = qname;
             }
 
-            public Type Type { get; }
+            public Type? Type { get; }
 
-            public byte NamespaceId { get; }
-
-            public string Namespace => NamespaceIdMap.GetNamespaceUri(NamespaceId);
-
-            public string Name { get; }
+            public OpenXmlQualifiedName QName { get; }
 
             public virtual OpenXmlElement Create() => throw new NotImplementedException();
         }
@@ -137,33 +140,18 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             private readonly Func<OpenXmlElement> _activator;
 
             public ActivatorElementChild(Type child, Func<OpenXmlElement> activator)
-                : this(child, GetSchema(child, activator))
+                : base(child, GetSchema(activator))
             {
                 _activator = activator;
             }
 
-            private ActivatorElementChild(Type child, SchemaAttrAttribute schema)
-                : base(child, schema.NamespaceId, schema.Tag)
-            {
-            }
-
             public override OpenXmlElement Create() => _activator();
 
-            private static SchemaAttrAttribute GetSchema(Type child, Func<OpenXmlElement> activator)
+            private static OpenXmlQualifiedName GetSchema(Func<OpenXmlElement> activator)
             {
-                var schema = child.GetTypeInfo().GetCustomAttribute<SchemaAttrAttribute>();
+                var instance = activator();
 
-                if (schema is null)
-                {
-                    var instance = activator();
-
-                    schema = instance.Metadata.Schema;
-
-                    if (schema is null)
-                    {
-                        throw new InvalidOperationException($"{child} does not contain schema information");
-                    }
-                }
+                var schema = instance.Metadata.QName;
 
                 return schema;
             }

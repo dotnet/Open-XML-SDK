@@ -11,6 +11,7 @@
     FEATURE_PACKAGE_FLUSH            : System.IO.Package.Flush will correctly flush all data
     FEATURE_CONCURRENT_COLLECTIONS   : Concurrent collections are not available
     FEATURE_SERIALIZATION            : Serialization using ISerializable is in the platform
+    FEAUTRE_SPAN                     : Span<> and friends are available
     FEATURE_SCHEMA_GENERATOR         : Provides access to helpers to generate schema information
     FEATURE_SYSTEMEXCEPTION          : SytemException is available in the platform
     FEATURE_XML_DISPOSE_PROTECTED    : XmlWriter.Dispose is protected
@@ -31,11 +32,11 @@
     <DefineConstants>$(DefineConstants);FEATURE_CONCURRENT_COLLECTIONS;FEATURE_CANCELLATION_TOKEN</DefineConstants>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' OR '$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net46' ">
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' OR '$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net5.0' ">
     <DefineConstants> $(DefineConstants);FEATURE_ARRAY_EMPTY;FEATURE_CONCURRENT_COLLECTIONS;FEATURE_CANCELLATION_TOKEN</DefineConstants>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'netcoreapp2.1' OR '$(TargetFramework)' == 'netcoreapp3.1' ">
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'netcoreapp2.1' OR '$(TargetFramework)' == 'netcoreapp3.1' OR '$(TargetFramework)' == 'net5.0' ">
     <DefineConstants>$(DefineConstants);FEATURE_ABSTRACT_XML_CLOSE;FEATURE_CLOSE;FEATURE_SCHEMA_GENERATOR;FEATURE_SERIALIZATION;FEATURE_SYSTEMEXCEPTION;FEATURE_XML_QUOTECHAR;FEATURE_XML_SCHEMA;FEATURE_CANCELLATION_TOKEN</DefineConstants>
   </PropertyGroup>
 
@@ -43,15 +44,15 @@
     <DefineConstants>$(DefineConstants);FEATURE_PACKAGE_FLUSH</DefineConstants>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
+    <DefineConstants>$(DefineConstants);FEATURE_SPAN</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
 
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)\stylecop.json" />
 
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.321">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
 
@@ -62,7 +63,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="jnm2.ReferenceAssemblies.net35" Version="1.0.1" PrivateAssets="All" />
+    <PackageReference Condition=" '$(TargetFramework)' == 'net35' " Include="jnm2.ReferenceAssemblies.net35" Version="1.0.1" PrivateAssets="All" />
 
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>

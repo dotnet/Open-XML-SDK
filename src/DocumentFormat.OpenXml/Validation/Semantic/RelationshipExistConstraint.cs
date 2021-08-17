@@ -13,24 +13,42 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _rIdAttribute = rIdAttribute;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
-            var element = context.Stack.Current.Element;
-            var attribute = element.ParsedState.Attributes[_rIdAttribute];
+            var current = context.Stack.Current;
 
-            //if the attribute is omitted, semantic validation will do nothing
-            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
+            if (current is null)
             {
                 return null;
             }
 
-            if (context.Stack.Current.Part.PackagePart.RelationshipExists(attribute.Value.InnerText))
+            var element = current.Element;
+
+            if (element is null)
+            {
+                return null;
+            }
+
+            var attribute = element.ParsedState.Attributes[_rIdAttribute];
+
+            //if the attribute is omitted, semantic validation will do nothing
+            if (attribute.Value is null || attribute.Value.InnerText.IsNullOrEmpty())
+            {
+                return null;
+            }
+
+            if (current.Part is null)
+            {
+                return null;
+            }
+
+            if (current.Part.PackagePart.RelationshipExists(attribute.Value.InnerText))
             {
                 return null;
             }
             else
             {
-                return new ValidationErrorInfo()
+                return new ValidationErrorInfo
                 {
                     Id = "Sem_InvalidRelationshipId",
                     ErrorType = ValidationErrorType.Semantic,

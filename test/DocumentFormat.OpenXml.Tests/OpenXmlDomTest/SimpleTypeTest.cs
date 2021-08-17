@@ -366,12 +366,12 @@ namespace DocumentFormat.OpenXml.Tests
         private bool isSequenceEqual<T1>(ICollection<T1> items, IEnumerable<T1> listB)
             where T1 : OpenXmlSimpleType, new()
         {
-            if (items == null)
+            if (items is null)
             {
                 throw new ArgumentNullException(nameof(items));
             }
 
-            if (listB == null)
+            if (listB is null)
             {
                 throw new ArgumentNullException(nameof(listB));
             }
@@ -447,7 +447,7 @@ namespace DocumentFormat.OpenXml.Tests
             objA = null;
             string val = string.Empty;
             val = objA;
-            if (val == null)
+            if (val is null)
             {
                 Log.Pass("implicit string operator on null reference returned null, as expected.");
             }
@@ -841,7 +841,7 @@ namespace DocumentFormat.OpenXml.Tests
             objA = null;
             OnOffValue val = validValue;
             val = objA;
-            if (val == null)
+            if (val is null)
             {
                 Log.Pass("implicit string operator on null reference returned null, as expected.");
             }
@@ -953,7 +953,7 @@ namespace DocumentFormat.OpenXml.Tests
             objA = null;
             TrueFalseBlankValue val = validValue;
             val = objA;
-            if (val == null)
+            if (val is null)
             {
                 Log.Pass("implicit string operator on null reference returned null, as expected.");
             }

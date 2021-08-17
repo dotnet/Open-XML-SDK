@@ -12,11 +12,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     {
         private readonly byte _attribute;
         private readonly string _refPartType;
-        private readonly Type _refElementParent;
+        private readonly Type? _refElementParent;
         private readonly Type _refElement;
         private readonly int _indexBase;
 
-        public IndexReferenceConstraint(byte attribute, string referencedPart, Type referencedElementParent, Type referencedElement, string referencedElementName, int indexBase)
+        public IndexReferenceConstraint(byte attribute, string referencedPart, Type? referencedElementParent, Type referencedElement, string referencedElementName, int indexBase)
             : base(SemanticValidationLevel.Package)
         {
             _attribute = attribute;
@@ -28,13 +28,19 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override SemanticValidationLevel StateScope => SemanticValidationLevel.Part;
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
-            var element = context.Stack.Current.Element;
+            var element = context.Stack.Current?.Element;
+
+            if (element is null)
+            {
+                return null;
+            }
+
             var attribute = element.ParsedState.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
-            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
+            if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -62,7 +68,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     ValidationResources.Sem_MissingIndexedElement,
                     _refElement.FullName, element.LocalName,
                     GetAttributeQualifiedName(element, _attribute),
-                    result.Part == null ? _refPartType : result.Part.PackagePart.Uri.ToString(),
+                    result.Part is null ? _refPartType : result.Part.PackagePart.Uri.ToString(),
                     index),
             };
         }
@@ -76,13 +82,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return new PartHolder<int>(0, null);
             }
 
-            var result = context.State.Get(new { part.Uri, _refElement, _attribute, _refElementParent }, () =>
+            var result = context.State.GetOrCreate(new { part, constraint = this }, static (key, context) =>
             {
                 var count = 0;
 
-                foreach (var element in part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
+                foreach (var element in key.part.RootElement.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (_refElementParent is null || element.Parent?.GetType() == _refElementParent)
+                    if (key.constraint._refElementParent is null || element.Parent?.GetType() == key.constraint._refElementParent)
                     {
                         count++;
                     }

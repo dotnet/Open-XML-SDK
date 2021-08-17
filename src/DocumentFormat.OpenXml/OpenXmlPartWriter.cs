@@ -5,7 +5,6 @@ using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using System.Text;
 using System.Xml;
 
@@ -16,22 +15,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlPartWriter : OpenXmlWriter
     {
-        private static Type _openXmlLeafTextElementClass;
-
-        private static Type OpenXmlLeafTextElementClass
-        {
-            get
-            {
-                if (_openXmlLeafTextElementClass == null)
-                {
-                    _openXmlLeafTextElementClass = typeof(OpenXmlLeafTextElement);
-                }
-
-                return _openXmlLeafTextElementClass;
-            }
-        }
-
-        private XmlWriter _xmlWriter;
+        private readonly XmlWriter _xmlWriter;
         private bool _isLeafTextElementStart; // default is false
 
         // private Stack<OpenXmlElement> _elementStack;
@@ -52,18 +36,24 @@ namespace DocumentFormat.OpenXml
         /// <param name="encoding">The encoding for the XML stream.</param>
         public OpenXmlPartWriter(OpenXmlPart openXmlPart, Encoding encoding)
         {
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            if (encoding == null)
+            if (encoding is null)
             {
                 throw new ArgumentNullException(nameof(encoding));
             }
 
-            Stream partStream = openXmlPart.GetStream(FileMode.Create);
-            Init(partStream, /*closeOutput*/true, encoding);
+            var partStream = openXmlPart.GetStream(FileMode.Create);
+            var settings = new XmlWriterSettings
+            {
+                CloseOutput = true,
+                Encoding = encoding,
+            };
+
+            _xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
         /// <summary>
@@ -82,17 +72,23 @@ namespace DocumentFormat.OpenXml
         /// <param name="encoding">The encoding for the XML stream.</param>
         public OpenXmlPartWriter(Stream partStream, Encoding encoding)
         {
-            if (partStream == null)
+            if (partStream is null)
             {
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            if (encoding == null)
+            if (encoding is null)
             {
                 throw new ArgumentNullException(nameof(encoding));
             }
 
-            Init(partStream, /*closeOutput*/false, encoding);
+            var settings = new XmlWriterSettings
+            {
+                CloseOutput = false,
+                Encoding = encoding,
+            };
+
+            _xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
         #region public OpenXmlWriter methods
@@ -155,7 +151,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
         public override void WriteStartElement(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            if (elementReader == null)
+            if (elementReader is null)
             {
                 throw new ArgumentNullException(nameof(elementReader));
             }
@@ -175,7 +171,7 @@ namespace DocumentFormat.OpenXml
 
             _xmlWriter.WriteStartElement(elementReader.Prefix, elementReader.LocalName, elementReader.NamespaceUri);
 
-            if (namespaceDeclarations != null)
+            if (namespaceDeclarations is not null)
             {
                 foreach (var item in namespaceDeclarations)
                 {
@@ -183,16 +179,16 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            if (attributes != null)
+            if (attributes is not null)
             {
                 // write attributes
-                foreach (OpenXmlAttribute attribute in attributes)
+                foreach (var attribute in attributes)
                 {
                     _xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
                 }
             }
 
-            if (IsOpenXmlLeafTextElement(elementReader.ElementType))
+            if (elementReader.ElementType.IsSubclassOf(typeof(OpenXmlLeafTextElement)))
             {
                 _isLeafTextElementStart = true;
             }
@@ -208,7 +204,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         public override void WriteStartElement(OpenXmlElement elementObject)
         {
-            if (elementObject == null)
+            if (elementObject is null)
             {
                 throw new ArgumentNullException(nameof(elementObject));
             }
@@ -225,13 +221,13 @@ namespace DocumentFormat.OpenXml
             if (elementObject.HasAttributes)
             {
                 // write attributes
-                foreach (OpenXmlAttribute attribute in elementObject.GetAttributes())
+                foreach (var attribute in elementObject.GetAttributes())
                 {
                     _xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
                 }
             }
 
-            if (IsOpenXmlLeafTextElement(elementObject))
+            if (elementObject is OpenXmlLeafTextElement)
             {
                 _isLeafTextElementStart = true;
             }
@@ -264,7 +260,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
         public override void WriteStartElement(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            if (elementObject == null)
+            if (elementObject is null)
             {
                 throw new ArgumentNullException(nameof(elementObject));
             }
@@ -278,7 +274,7 @@ namespace DocumentFormat.OpenXml
 
             _xmlWriter.WriteStartElement(elementObject.Prefix, elementObject.LocalName, elementObject.NamespaceUri);
 
-            if (namespaceDeclarations != null)
+            if (namespaceDeclarations is not null)
             {
                 foreach (var item in namespaceDeclarations)
                 {
@@ -286,16 +282,16 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            if (attributes != null)
+            if (attributes is not null)
             {
                 // write attributes
-                foreach (OpenXmlAttribute attribute in attributes)
+                foreach (var attribute in attributes)
                 {
                     _xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
                 }
             }
 
-            if (IsOpenXmlLeafTextElement(elementObject))
+            if (elementObject is OpenXmlLeafTextElement)
             {
                 _isLeafTextElementStart = true;
             }
@@ -343,7 +339,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         public override void WriteElement(OpenXmlElement elementObject)
         {
-            if (elementObject == null)
+            if (elementObject is null)
             {
                 throw new ArgumentNullException(nameof(elementObject));
             }
@@ -360,7 +356,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override void Close()
         {
-            if (_xmlWriter != null)
+            if (_xmlWriter is not null)
             {
 #if FEATURE_CLOSE
                 _xmlWriter.Close();
@@ -373,31 +369,5 @@ namespace DocumentFormat.OpenXml
         }
 
         #endregion
-
-        #region private methods
-
-        private void Init(Stream partStream, bool closeOutput, Encoding encoding)
-        {
-            XmlWriterSettings settings = new XmlWriterSettings
-            {
-                CloseOutput = closeOutput,
-                Encoding = encoding,
-            };
-
-            _xmlWriter = XmlWriter.Create(partStream, settings);
-        }
-
-        private static bool IsOpenXmlLeafTextElement(Type elementType)
-        {
-            return elementType.IsSubclassOf(OpenXmlLeafTextElementClass);
-        }
-
-        private static bool IsOpenXmlLeafTextElement(OpenXmlElement element)
-        {
-            return element is OpenXmlLeafTextElement;
-        }
-
-        #endregion
-
     }
 }

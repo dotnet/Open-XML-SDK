@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
@@ -29,7 +27,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="result"></param>
         /// <returns>True if there are required elements in this particle.</returns>
-        bool GetRequiredElements(ExpectedChildren result);
+        bool GetRequiredElements(ExpectedChildren? result);
 
         /// <summary>
         /// Get the required elements - elements which minOccurs > 0.

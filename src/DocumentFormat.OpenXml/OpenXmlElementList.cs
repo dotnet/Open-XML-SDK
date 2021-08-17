@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T First<T>()
+        public T? First<T>()
             where T : OpenXmlElement
         {
             foreach (OpenXmlElement item in this)

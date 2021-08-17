@@ -12,6 +12,7 @@ namespace DocumentFormat.OpenXml {
     using System;
     using System.Reflection;
     
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -451,11 +452,20 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invalid Hyperlink: Malformed URI is embedded as a hyperlink in the document..
+        ///   Looks up a localized string similar to A malformed URI was found in the document. Please provide a OpenSettings.RelationshipErrorRewriter to handle these errors while opening a package..
         /// </summary>
         internal static string InvalidUriFormat {
             get {
                 return ResourceManager.GetString("InvalidUriFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provided URI was invalid after rewriting malformed relationship URI.
+        /// </summary>
+        internal static string InvalidUriProvided {
+            get {
+                return ResourceManager.GetString("InvalidUriProvided", resourceCulture);
             }
         }
         
@@ -870,6 +880,15 @@ namespace DocumentFormat.OpenXml {
         internal static string UnknowMCContent {
             get {
                 return ResourceManager.GetString("UnknowMCContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An unknown error occured. Original message: &apos;{0}&apos;.
+        /// </summary>
+        internal static string UnknownError {
+            get {
+                return ResourceManager.GetString("UnknownError", resourceCulture);
             }
         }
         

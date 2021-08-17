@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -26,7 +28,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CustomXmlPropertiesPart of the CustomXmlPart
         /// </summary>
-        public CustomXmlPropertiesPart CustomXmlPropertiesPart => GetSubPartOfType<CustomXmlPropertiesPart>();
+        public CustomXmlPropertiesPart? CustomXmlPropertiesPart => GetSubPartOfType<CustomXmlPropertiesPart>();
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

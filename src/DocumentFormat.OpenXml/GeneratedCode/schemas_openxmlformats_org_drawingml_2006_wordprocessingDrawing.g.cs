@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -17,9 +19,12 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
 {
     /// <summary>
     /// <para>No Text Wrapping.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapNone.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "wrapNone")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WrapNone : OpenXmlLeafElement
     {
         /// <summary>
@@ -41,7 +46,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
 
     /// <summary>
     /// <para>Square Wrapping.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapSquare.</para>
     /// </summary>
     /// <remark>
@@ -50,6 +55,9 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description>EffectExtent &lt;wp:effectExtent></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "wrapSquare")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WrapSquare : OpenXmlCompositeElement
     {
         /// <summary>
@@ -87,7 +95,13 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Text Wrapping Location</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "wrapText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>? WrapText
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>();
             set => SetAttribute(value);
@@ -97,7 +111,13 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text (Top)</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
-        public UInt32Value DistanceFromTop
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distT")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromTop
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -107,7 +127,13 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
-        public UInt32Value DistanceFromBottom
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distB")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromBottom
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -117,7 +143,13 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        public UInt32Value DistanceFromLeft
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distL")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -127,7 +159,13 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        public UInt32Value DistanceFromRight
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distR")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -148,7 +186,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 .AddAttribute(0, "distB", a => a.DistanceFromBottom)
 .AddAttribute(0, "distL", a => a.DistanceFromLeft)
 .AddAttribute(0, "distR", a => a.DistanceFromRight);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1)
             };
@@ -161,7 +199,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public EffectExtent EffectExtent
+        public EffectExtent? EffectExtent
         {
             get => GetElement<EffectExtent>();
             set => SetElement(value);
@@ -173,7 +211,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Tight Wrapping.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapTight.</para>
     /// </summary>
     /// <remark>
@@ -182,6 +220,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>WrapPolygon &lt;wp:wrapPolygon></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "wrapTight")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WrapTight : OpenXmlCompositeElement
     {
         /// <summary>
@@ -219,7 +260,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Text Wrapping Location</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "wrapText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>? WrapText
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>();
             set => SetAttribute(value);
@@ -229,7 +276,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Test on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        public UInt32Value DistanceFromLeft
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distL")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -239,7 +292,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        public UInt32Value DistanceFromRight
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distR")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -258,7 +317,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "distL", a => a.DistanceFromLeft)
 .AddAttribute(0, "distR", a => a.DistanceFromRight);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon), 1, 1)
             };
@@ -271,7 +330,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public WrapPolygon WrapPolygon
+        public WrapPolygon? WrapPolygon
         {
             get => GetElement<WrapPolygon>();
             set => SetElement(value);
@@ -283,7 +342,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Through Wrapping.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapThrough.</para>
     /// </summary>
     /// <remark>
@@ -292,6 +351,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>WrapPolygon &lt;wp:wrapPolygon></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "wrapThrough")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WrapThrough : OpenXmlCompositeElement
     {
         /// <summary>
@@ -329,7 +391,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Text Wrapping Location</para>
         /// <para>Represents the following attribute in the schema: wrapText</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "wrapText")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>? WrapText
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>();
             set => SetAttribute(value);
@@ -339,7 +407,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        public UInt32Value DistanceFromLeft
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distL")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -349,7 +423,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        public UInt32Value DistanceFromRight
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distR")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -368,7 +448,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 })
 .AddAttribute(0, "distL", a => a.DistanceFromLeft)
 .AddAttribute(0, "distR", a => a.DistanceFromRight);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon), 1, 1)
             };
@@ -381,7 +461,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public WrapPolygon WrapPolygon
+        public WrapPolygon? WrapPolygon
         {
             get => GetElement<WrapPolygon>();
             set => SetElement(value);
@@ -393,7 +473,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Top and Bottom Wrapping.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapTopAndBottom.</para>
     /// </summary>
     /// <remark>
@@ -402,6 +482,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>EffectExtent &lt;wp:effectExtent></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "wrapTopAndBottom")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WrapTopBottom : OpenXmlCompositeElement
     {
         /// <summary>
@@ -439,7 +522,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Top Edge</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
-        public UInt32Value DistanceFromTop
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distT")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromTop
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -449,7 +538,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
-        public UInt32Value DistanceFromBottom
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distB")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromBottom
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -463,7 +558,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.AddElement<WrapTopBottom>()
 .AddAttribute(0, "distT", a => a.DistanceFromTop)
 .AddAttribute(0, "distB", a => a.DistanceFromBottom);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1)
             };
@@ -476,7 +571,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public EffectExtent EffectExtent
+        public EffectExtent? EffectExtent
         {
             get => GetElement<EffectExtent>();
             set => SetElement(value);
@@ -488,7 +583,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Inline DrawingML Object.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:inline.</para>
     /// </summary>
     /// <remark>
@@ -501,6 +596,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Graphic &lt;a:graphic></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "inline")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Inline : OpenXmlCompositeElement
     {
         /// <summary>
@@ -538,7 +636,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Top Edge</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
-        public UInt32Value DistanceFromTop
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distT")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromTop
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -548,7 +652,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
-        public UInt32Value DistanceFromBottom
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distB")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromBottom
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -558,7 +668,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        public UInt32Value DistanceFromLeft
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distL")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -568,33 +684,51 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        public UInt32Value DistanceFromRight
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distR")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>anchorId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>anchorId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: wp14:anchorId</para>
         /// </summary>
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public HexBinaryValue AnchorId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(51, "anchorId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public HexBinaryValue? AnchorId
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>editId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>editId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: wp14:editId</para>
         /// </summary>
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public HexBinaryValue EditId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(51, "editId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public HexBinaryValue? EditId
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -624,7 +758,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1),
@@ -641,7 +775,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public Extent Extent
+        public Extent? Extent
         {
             get => GetElement<Extent>();
             set => SetElement(value);
@@ -654,7 +788,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public EffectExtent EffectExtent
+        public EffectExtent? EffectExtent
         {
             get => GetElement<EffectExtent>();
             set => SetElement(value);
@@ -667,7 +801,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public DocProperties DocProperties
+        public DocProperties? DocProperties
         {
             get => GetElement<DocProperties>();
             set => SetElement(value);
@@ -680,7 +814,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public NonVisualGraphicFrameDrawingProperties NonVisualGraphicFrameDrawingProperties
+        public NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
             get => GetElement<NonVisualGraphicFrameDrawingProperties>();
             set => SetElement(value);
@@ -693,7 +827,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Graphic Graphic
+        public DocumentFormat.OpenXml.Drawing.Graphic? Graphic
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
             set => SetElement(value);
@@ -705,7 +839,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Anchor for Floating DrawingML Object.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:anchor.</para>
     /// </summary>
     /// <remark>
@@ -728,6 +862,9 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight &lt;wp14:sizeRelV></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "anchor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Anchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -765,7 +902,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Distance From Text on Top Edge</para>
         /// <para>Represents the following attribute in the schema: distT</para>
         /// </summary>
-        public UInt32Value DistanceFromTop
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distT")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromTop
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -775,7 +918,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Distance From Text on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: distB</para>
         /// </summary>
-        public UInt32Value DistanceFromBottom
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distB")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromBottom
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -785,7 +934,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Distance From Text on Left Edge</para>
         /// <para>Represents the following attribute in the schema: distL</para>
         /// </summary>
-        public UInt32Value DistanceFromLeft
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distL")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromLeft
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -795,7 +950,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Distance From Text on Right Edge</para>
         /// <para>Represents the following attribute in the schema: distR</para>
         /// </summary>
-        public UInt32Value DistanceFromRight
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "distR")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? DistanceFromRight
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -805,7 +966,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Page Positioning</para>
         /// <para>Represents the following attribute in the schema: simplePos</para>
         /// </summary>
-        public BooleanValue SimplePos
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "simplePos")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? SimplePos
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -815,7 +982,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Relative Z-Ordering Position</para>
         /// <para>Represents the following attribute in the schema: relativeHeight</para>
         /// </summary>
-        public UInt32Value RelativeHeight
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "relativeHeight")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? RelativeHeight
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -825,7 +998,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Display Behind Document Text</para>
         /// <para>Represents the following attribute in the schema: behindDoc</para>
         /// </summary>
-        public BooleanValue BehindDoc
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "behindDoc")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? BehindDoc
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -835,7 +1014,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Lock Anchor</para>
         /// <para>Represents the following attribute in the schema: locked</para>
         /// </summary>
-        public BooleanValue Locked
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "locked")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Locked
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -845,7 +1030,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Layout In Table Cell</para>
         /// <para>Represents the following attribute in the schema: layoutInCell</para>
         /// </summary>
-        public BooleanValue LayoutInCell
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "layoutInCell")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? LayoutInCell
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -855,7 +1046,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Hidden</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "hidden")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -865,33 +1062,51 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Allow Objects to Overlap</para>
         /// <para>Represents the following attribute in the schema: allowOverlap</para>
         /// </summary>
-        public BooleanValue AllowOverlap
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "allowOverlap")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? AllowOverlap
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>editId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>editId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: wp14:editId</para>
         /// </summary>
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public HexBinaryValue EditId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(51, "editId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public HexBinaryValue? EditId
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>anchorId, this property is only available in Office2010, Office2013, Office2016</para>
+        /// <para>anchorId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: wp14:anchorId</para>
         /// </summary>
         /// <remark>
         /// xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public HexBinaryValue AnchorId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(51, "anchorId")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public HexBinaryValue? AnchorId
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);
@@ -953,18 +1168,18 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
 aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1),
-                new CompositeParticle(ParticleType.Group, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare), 1, 1),
@@ -989,7 +1204,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public SimplePosition SimplePosition
+        public SimplePosition? SimplePosition
         {
             get => GetElement<SimplePosition>();
             set => SetElement(value);
@@ -1002,7 +1217,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public HorizontalPosition HorizontalPosition
+        public HorizontalPosition? HorizontalPosition
         {
             get => GetElement<HorizontalPosition>();
             set => SetElement(value);
@@ -1015,7 +1230,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public VerticalPosition VerticalPosition
+        public VerticalPosition? VerticalPosition
         {
             get => GetElement<VerticalPosition>();
             set => SetElement(value);
@@ -1028,7 +1243,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public Extent Extent
+        public Extent? Extent
         {
             get => GetElement<Extent>();
             set => SetElement(value);
@@ -1041,7 +1256,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public EffectExtent EffectExtent
+        public EffectExtent? EffectExtent
         {
             get => GetElement<EffectExtent>();
             set => SetElement(value);
@@ -1053,9 +1268,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Wrapping Polygon Start.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:start.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "start")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StartPoint : Point2DType
     {
         /// <summary>
@@ -1077,9 +1295,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Wrapping Polygon Line End Position.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:lineTo.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "lineTo")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LineTo : Point2DType
     {
         /// <summary>
@@ -1101,9 +1322,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Simple Positioning Coordinates.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:simplePos.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "simplePos")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SimplePosition : Point2DType
     {
         /// <summary>
@@ -1125,7 +1349,7 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Defines the Point2DType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class Point2DType : OpenXmlLeafElement
@@ -1141,7 +1365,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>X-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: x</para>
         /// </summary>
-        public Int64Value X
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "x")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int64Value? X
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -1151,7 +1381,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Y-Axis Coordinate</para>
         /// <para>Represents the following attribute in the schema: y</para>
         /// </summary>
-        public Int64Value Y
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "y")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int64Value? Y
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -1176,9 +1412,12 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 
     /// <summary>
     /// <para>Object Extents Including Effects.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:effectExtent.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "effectExtent")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EffectExtent : OpenXmlLeafElement
     {
         /// <summary>
@@ -1192,7 +1431,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Additional Extent on Left Edge</para>
         /// <para>Represents the following attribute in the schema: l</para>
         /// </summary>
-        public Int64Value LeftEdge
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "l")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int64Value? LeftEdge
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -1202,7 +1447,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Additional Extent on Top Edge</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public Int64Value TopEdge
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "t")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int64Value? TopEdge
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -1212,7 +1463,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Additional Extent on Right Edge</para>
         /// <para>Represents the following attribute in the schema: r</para>
         /// </summary>
-        public Int64Value RightEdge
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "r")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int64Value? RightEdge
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -1222,7 +1479,13 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         /// <para>Additional Extent on Bottom Edge</para>
         /// <para>Represents the following attribute in the schema: b</para>
         /// </summary>
-        public Int64Value BottomEdge
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "b")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int64Value? BottomEdge
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -1261,7 +1524,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
 
     /// <summary>
     /// <para>Tight Wrapping Extents Polygon.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapPolygon.</para>
     /// </summary>
     /// <remark>
@@ -1271,6 +1534,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
     ///   <item><description>LineTo &lt;wp:lineTo></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "wrapPolygon")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WrapPolygon : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1308,7 +1574,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>Wrapping Points Modified</para>
         /// <para>Represents the following attribute in the schema: edited</para>
         /// </summary>
-        public BooleanValue Edited
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "edited")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Edited
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
@@ -1322,7 +1594,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             builder.AddChild<LineTo>();
             builder.AddElement<WrapPolygon>()
 .AddAttribute(0, "edited", a => a.Edited);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.LineTo), 2, 0)
@@ -1336,7 +1608,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public StartPoint StartPoint
+        public StartPoint? StartPoint
         {
             get => GetElement<StartPoint>();
             set => SetElement(value);
@@ -1348,7 +1620,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
 
     /// <summary>
     /// <para>Horizontal Positioning.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:positionH.</para>
     /// </summary>
     /// <remark>
@@ -1359,6 +1631,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset &lt;wp14:pctPosHOffset></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "positionH")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HorizontalPosition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1396,7 +1671,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         /// <para>Horizontal Position Relative Base</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues> RelativeFrom
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "relativeFrom")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues>? RelativeFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues>>();
             set => SetAttribute(value);
@@ -1415,9 +1696,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
@@ -1433,7 +1714,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public HorizontalAlignment HorizontalAlignment
+        public HorizontalAlignment? HorizontalAlignment
         {
             get => GetElement<HorizontalAlignment>();
             set => SetElement(value);
@@ -1446,20 +1727,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public PositionOffset PositionOffset
+        public PositionOffset? PositionOffset
         {
             get => GetElement<PositionOffset>();
             set => SetElement(value);
         }
 
         /// <summary>
-        /// <para>PercentagePositionHeightOffset.</para>
+        /// <para>PercentagePositionHeightOffset, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: wp14:pctPosHOffset.</para>
         /// </summary>
         /// <remark>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset PercentagePositionHeightOffset
+        public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset? PercentagePositionHeightOffset
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>();
             set => SetElement(value);
@@ -1471,7 +1752,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Vertical Positioning.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:positionV.</para>
     /// </summary>
     /// <remark>
@@ -1482,6 +1763,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description>DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset &lt;wp14:pctPosVOffset></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "positionV")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VerticalPosition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1519,7 +1803,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Vertical Position Relative Base</para>
         /// <para>Represents the following attribute in the schema: relativeFrom</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues> RelativeFrom
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "relativeFrom")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues>? RelativeFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues>>();
             set => SetAttribute(value);
@@ -1538,9 +1828,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
@@ -1556,7 +1846,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public VerticalAlignment VerticalAlignment
+        public VerticalAlignment? VerticalAlignment
         {
             get => GetElement<VerticalAlignment>();
             set => SetElement(value);
@@ -1569,20 +1859,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
         /// </remark>
-        public PositionOffset PositionOffset
+        public PositionOffset? PositionOffset
         {
             get => GetElement<PositionOffset>();
             set => SetElement(value);
         }
 
         /// <summary>
-        /// <para>PercentagePositionVerticalOffset.</para>
+        /// <para>PercentagePositionVerticalOffset, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: wp14:pctPosVOffset.</para>
         /// </summary>
         /// <remark>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
         /// </remark>
-        public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset PercentagePositionVerticalOffset
+        public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset? PercentagePositionVerticalOffset
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>();
             set => SetElement(value);
@@ -1594,9 +1884,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
     /// <summary>
     /// <para>Inline Drawing Object Extents.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:extent.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "extent")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Extent : OpenXmlLeafElement
     {
         /// <summary>
@@ -1610,7 +1903,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Extent Length</para>
         /// <para>Represents the following attribute in the schema: cx</para>
         /// </summary>
-        public Int64Value Cx
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "cx")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int64Value? Cx
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -1620,7 +1919,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <para>Extent Width</para>
         /// <para>Represents the following attribute in the schema: cy</para>
         /// </summary>
-        public Int64Value Cy
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "cy")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int64Value? Cy
         {
             get => GetAttribute<Int64Value>();
             set => SetAttribute(value);
@@ -1649,7 +1954,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
 
     /// <summary>
     /// <para>Drawing Object Non-Visual Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:docPr.</para>
     /// </summary>
     /// <remark>
@@ -1660,6 +1965,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     ///   <item><description>DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "docPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DocProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1694,50 +2002,80 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         }
 
         /// <summary>
-        /// <para>id</para>
+        /// <para>Application defined unique identifier.</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
-        public UInt32Value Id
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "id")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? Id
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>name</para>
+        /// <para>Name compatible with Object Model (non-unique).</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>descr</para>
+        /// <para>Description of the drawing element.</para>
         /// <para>Represents the following attribute in the schema: descr</para>
         /// </summary>
-        public StringValue Description
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "descr")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Description
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>hidden</para>
+        /// <para>Flag determining to show or hide this element.</para>
         /// <para>Represents the following attribute in the schema: hidden</para>
         /// </summary>
-        public BooleanValue Hidden
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "hidden")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public BooleanValue? Hidden
         {
             get => GetAttribute<BooleanValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>title</para>
+        /// <para>Title</para>
         /// <para>Represents the following attribute in the schema: title</para>
         /// </summary>
-        public StringValue Title
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "title")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Title
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -1762,7 +2100,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 .AddAttribute(0, "descr", a => a.Description)
 .AddAttribute(0, "hidden", a => a.Hidden)
 .AddAttribute(0, "title", a => a.Title);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
@@ -1772,39 +2110,39 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>HyperlinkOnClick.</para>
+        /// <para>Hyperlink associated with clicking or selecting the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkClick.</para>
         /// </summary>
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick HyperlinkOnClick
+        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             set => SetElement(value);
         }
 
         /// <summary>
-        /// <para>HyperlinkOnHover.</para>
+        /// <para>Hyperlink associated with hovering over the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkHover.</para>
         /// </summary>
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover HyperlinkOnHover
+        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             set => SetElement(value);
         }
 
         /// <summary>
-        /// <para>NonVisualDrawingPropertiesExtensionList.</para>
+        /// <para>Future extension.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList NonVisualDrawingPropertiesExtensionList
+        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
             set => SetElement(value);
@@ -1816,7 +2154,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the NonVisualGraphicFrameDrawingProperties Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:cNvGraphicFramePr.</para>
     /// </summary>
     /// <remark>
@@ -1826,6 +2164,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "cNvGraphicFramePr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1865,7 +2206,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(16, "cNvGraphicFramePr");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
@@ -1879,7 +2220,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks GraphicFrameLocks
+        public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks? GraphicFrameLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             set => SetElement(value);
@@ -1892,7 +2233,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList ExtensionList
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             set => SetElement(value);
@@ -1904,9 +2245,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Relative Vertical Alignment.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:align.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "align")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VerticalAlignment : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1943,9 +2287,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the PositionOffset Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:posOffset.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "posOffset")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PositionOffset : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1981,9 +2328,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Relative Horizontal Alignment.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:align.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(16, "align")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HorizontalAlignment : OpenXmlLeafTextElement
     {
         /// <summary>

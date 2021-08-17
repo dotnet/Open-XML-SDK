@@ -8,33 +8,13 @@ namespace DocumentFormat.OpenXml.Packaging
     internal static class CustomPropertyPartTypeInfo
     {
         internal static string GetContentType(CustomPropertyPartType partType)
-        {
-            switch (partType)
+            => partType switch
             {
-                case CustomPropertyPartType.Spreadsheet:
-                    return "application/vnd.openxmlformats-officedocument.spreadsheetml.customProperty";
+                CustomPropertyPartType.Spreadsheet => "application/vnd.openxmlformats-officedocument.spreadsheetml.customProperty",
+                CustomPropertyPartType.Xml => "application/xml",
+                _ => throw new ArgumentOutOfRangeException(nameof(partType)),
+            };
 
-                case CustomPropertyPartType.Xml:
-                    return "application/xml";
-
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(partType));
-            }
-        }
-
-        internal static string GetTargetExtension(CustomPropertyPartType partType)
-        {
-            switch (partType)
-            {
-                case CustomPropertyPartType.Spreadsheet:
-                    return ".xml";
-
-                case CustomPropertyPartType.Xml:
-                    return ".xml";
-
-                default:
-                    return ".xml";
-            }
-        }
+        internal static string GetTargetExtension() => ".xml";
     }
 }

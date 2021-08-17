@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -16,7 +18,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
 {
     /// <summary>
     /// <para>Custom File Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is op:Properties.</para>
     /// </summary>
     /// <remark>
@@ -25,6 +27,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
     ///   <item><description>CustomDocumentProperty &lt;op:property></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(4, "Properties")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Properties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -63,7 +68,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
             base.ConfigureMetadata(builder);
             builder.SetSchema(4, "Properties");
             builder.AddChild<CustomDocumentProperty>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty), 0, 0)
             };
@@ -97,7 +102,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <summary>
         /// Gets the CustomFilePropertiesPart associated with this element.
         /// </summary>
-        public CustomFilePropertiesPart CustomFilePropertiesPart
+        public CustomFilePropertiesPart? CustomFilePropertiesPart
         {
             get => OpenXmlPart as CustomFilePropertiesPart;
             internal set => OpenXmlPart = value;
@@ -106,7 +111,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
 
     /// <summary>
     /// <para>Custom File Property.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is op:property.</para>
     /// </summary>
     /// <remark>
@@ -148,6 +153,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
     ///   <item><description>DocumentFormat.OpenXml.VariantTypes.VTClipboardData &lt;vt:cf></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(4, "property")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CustomDocumentProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -185,7 +193,13 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Format ID</para>
         /// <para>Represents the following attribute in the schema: fmtid</para>
         /// </summary>
-        public StringValue FormatId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "fmtid")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? FormatId
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -195,7 +209,13 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Property ID</para>
         /// <para>Represents the following attribute in the schema: pid</para>
         /// </summary>
-        public Int32Value PropertyId
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "pid")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? PropertyId
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -205,7 +225,13 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Custom File Property Name</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
-        public StringValue Name
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "name")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Name
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -215,7 +241,13 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Bookmark Link Target</para>
         /// <para>Represents the following attribute in the schema: linkTarget</para>
         /// </summary>
-        public StringValue LinkTarget
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "linkTarget")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? LinkTarget
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -271,7 +303,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 })
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "linkTarget", a => a.LinkTarget);
-            builder.Particle = new CompositeParticle(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTArray), 1, 1),
@@ -319,7 +351,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTVector VTVector
+        public DocumentFormat.OpenXml.VariantTypes.VTVector? VTVector
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>();
             set => SetElement(value);
@@ -332,7 +364,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTArray VTArray
+        public DocumentFormat.OpenXml.VariantTypes.VTArray? VTArray
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTArray>();
             set => SetElement(value);
@@ -345,7 +377,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTBlob VTBlob
+        public DocumentFormat.OpenXml.VariantTypes.VTBlob? VTBlob
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
             set => SetElement(value);
@@ -358,7 +390,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTOBlob VTOBlob
+        public DocumentFormat.OpenXml.VariantTypes.VTOBlob? VTOBlob
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOBlob>();
             set => SetElement(value);
@@ -371,7 +403,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTEmpty VTEmpty
+        public DocumentFormat.OpenXml.VariantTypes.VTEmpty? VTEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTEmpty>();
             set => SetElement(value);
@@ -384,7 +416,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTNull VTNull
+        public DocumentFormat.OpenXml.VariantTypes.VTNull? VTNull
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTNull>();
             set => SetElement(value);
@@ -397,7 +429,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTByte VTByte
+        public DocumentFormat.OpenXml.VariantTypes.VTByte? VTByte
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTByte>();
             set => SetElement(value);
@@ -410,7 +442,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTShort VTShort
+        public DocumentFormat.OpenXml.VariantTypes.VTShort? VTShort
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTShort>();
             set => SetElement(value);
@@ -423,7 +455,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTInt32 VTInt32
+        public DocumentFormat.OpenXml.VariantTypes.VTInt32? VTInt32
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
             set => SetElement(value);
@@ -436,7 +468,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTInt64 VTInt64
+        public DocumentFormat.OpenXml.VariantTypes.VTInt64? VTInt64
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt64>();
             set => SetElement(value);
@@ -449,7 +481,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTInteger VTInteger
+        public DocumentFormat.OpenXml.VariantTypes.VTInteger? VTInteger
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInteger>();
             set => SetElement(value);
@@ -462,7 +494,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte VTUnsignedByte
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte? VTUnsignedByte
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
             set => SetElement(value);
@@ -475,7 +507,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort VTUnsignedShort
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort? VTUnsignedShort
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             set => SetElement(value);
@@ -488,7 +520,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32 VTUnsignedInt32
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32? VTUnsignedInt32
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
             set => SetElement(value);
@@ -501,7 +533,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64 VTUnsignedInt64
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64? VTUnsignedInt64
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
             set => SetElement(value);
@@ -514,7 +546,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger VTUnsignedInteger
+        public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger? VTUnsignedInteger
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
             set => SetElement(value);
@@ -527,7 +559,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTFloat VTFloat
+        public DocumentFormat.OpenXml.VariantTypes.VTFloat? VTFloat
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
             set => SetElement(value);
@@ -540,7 +572,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTDouble VTDouble
+        public DocumentFormat.OpenXml.VariantTypes.VTDouble? VTDouble
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
             set => SetElement(value);
@@ -553,7 +585,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTDecimal VTDecimal
+        public DocumentFormat.OpenXml.VariantTypes.VTDecimal? VTDecimal
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDecimal>();
             set => SetElement(value);
@@ -566,7 +598,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTLPSTR VTLPSTR
+        public DocumentFormat.OpenXml.VariantTypes.VTLPSTR? VTLPSTR
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>();
             set => SetElement(value);
@@ -579,7 +611,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTLPWSTR VTLPWSTR
+        public DocumentFormat.OpenXml.VariantTypes.VTLPWSTR? VTLPWSTR
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>();
             set => SetElement(value);
@@ -592,7 +624,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTBString VTBString
+        public DocumentFormat.OpenXml.VariantTypes.VTBString? VTBString
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBString>();
             set => SetElement(value);
@@ -605,7 +637,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTDate VTDate
+        public DocumentFormat.OpenXml.VariantTypes.VTDate? VTDate
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDate>();
             set => SetElement(value);
@@ -618,7 +650,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTFileTime VTFileTime
+        public DocumentFormat.OpenXml.VariantTypes.VTFileTime? VTFileTime
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFileTime>();
             set => SetElement(value);
@@ -631,7 +663,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTBool VTBool
+        public DocumentFormat.OpenXml.VariantTypes.VTBool? VTBool
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBool>();
             set => SetElement(value);
@@ -644,7 +676,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTCurrency VTCurrency
+        public DocumentFormat.OpenXml.VariantTypes.VTCurrency? VTCurrency
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
             set => SetElement(value);
@@ -657,7 +689,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTError VTError
+        public DocumentFormat.OpenXml.VariantTypes.VTError? VTError
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTError>();
             set => SetElement(value);
@@ -670,7 +702,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTStreamData VTStreamData
+        public DocumentFormat.OpenXml.VariantTypes.VTStreamData? VTStreamData
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStreamData>();
             set => SetElement(value);
@@ -683,7 +715,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTOStreamData VTOStreamData
+        public DocumentFormat.OpenXml.VariantTypes.VTOStreamData? VTOStreamData
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>();
             set => SetElement(value);
@@ -696,7 +728,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTStorage VTStorage
+        public DocumentFormat.OpenXml.VariantTypes.VTStorage? VTStorage
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStorage>();
             set => SetElement(value);
@@ -709,7 +741,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTOStorage VTOStorage
+        public DocumentFormat.OpenXml.VariantTypes.VTOStorage? VTOStorage
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStorage>();
             set => SetElement(value);
@@ -722,7 +754,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTVStreamData VTVStreamData
+        public DocumentFormat.OpenXml.VariantTypes.VTVStreamData? VTVStreamData
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>();
             set => SetElement(value);
@@ -735,7 +767,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTClassId VTClassId
+        public DocumentFormat.OpenXml.VariantTypes.VTClassId? VTClassId
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClassId>();
             set => SetElement(value);
@@ -748,7 +780,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
         /// </remark>
-        public DocumentFormat.OpenXml.VariantTypes.VTClipboardData VTClipboardData
+        public DocumentFormat.OpenXml.VariantTypes.VTClipboardData? VTClipboardData
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
             set => SetElement(value);

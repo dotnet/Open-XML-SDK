@@ -5,12 +5,12 @@ using Xunit;
 
 namespace DocumentFormat.OpenXml.Framework.Tests
 {
-    public class NamespaceIdMapTests
+    public class OpenXmlNamespaceTests
     {
         [Fact]
         public void NamespaceCount()
         {
-            Assert.Equal(87, NamespaceIdMap.Count);
+            Assert.Equal(116, OpenXmlNamespace.Count);
         }
 
         [InlineData("", "", FileFormatVersions.None, 0)]
@@ -103,27 +103,19 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Theory]
         public void NamespacePrefixTest(string ns, string prefix, FileFormatVersions version, byte id)
         {
-            Assert.True(NamespaceIdMap.TryGetNamespaceId(ns, out var outId));
-            Assert.Equal(id, outId);
+            var nsFromNs = new OpenXmlNamespace(ns);
+            var nsFromId = new OpenXmlNamespace(id);
 
-            Assert.Equal(prefix, NamespaceIdMap.GetNamespacePrefix(id));
-
-            Assert.Equal(ns, NamespaceIdMap.GetNamespaceUri(prefix));
-            Assert.Equal(ns, NamespaceIdMap.GetNamespaceUri(id));
+            Assert.Equal(nsFromNs, nsFromId);
+            Assert.Equal(prefix, nsFromNs.Prefix);
+            Assert.Equal(prefix, nsFromId.Prefix);
+            Assert.Equal(ns, OpenXmlNamespace.GetNamespaceUri(prefix));
 
             foreach (var v in FileFormatVersionExtensions.AllVersions)
             {
-                Assert.Equal(v == version, NamespaceIdMap.IsInFileFormat(ns, v));
+                Assert.Equal(v == version, nsFromNs.Version == v);
+                Assert.Equal(v == version, nsFromNs.IsInVersion(v));
             }
-        }
-
-        [InlineData(null)]
-        [InlineData("some value")]
-        [Theory]
-        public void TryGetNamespaceIdFails(string ns)
-        {
-            Assert.False(NamespaceIdMap.TryGetNamespaceId(ns, out var id));
-            Assert.Equal(byte.MaxValue, id);
         }
     }
 }

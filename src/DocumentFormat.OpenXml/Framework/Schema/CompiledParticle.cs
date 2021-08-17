@@ -10,22 +10,30 @@ namespace DocumentFormat.OpenXml.Framework
 {
     internal class CompiledParticle : IComparer<OpenXmlElement>
     {
-        private Lazy<LookupItem[]> _lookup;
+        private readonly Lazy<LookupItem[]> _lookup;
 
-        public CompiledParticle(ParticleConstraint particle)
+        public CompiledParticle(ParticleConstraint? particle)
         {
             Particle = particle;
-            _lookup = new Lazy<LookupItem[]>(() => ParticleCompiler.Compile(Particle), true);
+
+            if (particle is null)
+            {
+                _lookup = new Lazy<LookupItem[]>(() => Cached.Array<LookupItem>(), true);
+            }
+            else
+            {
+                _lookup = new Lazy<LookupItem[]>(() => ParticleCompiler.Compile(particle), true);
+            }
         }
 
         public ReadOnlyArray<LookupItem> Lookup => _lookup.Value;
 
-        public ParticleConstraint Particle { get; }
+        public ParticleConstraint? Particle { get; }
 
-        public ParticlePath Find(object obj)
+        public ParticlePath? Find(object? obj)
             => Find(obj?.GetType());
 
-        public ParticlePath Find(Type type)
+        public ParticlePath? Find(Type? type)
         {
             if (type is null)
             {
@@ -43,7 +51,7 @@ namespace DocumentFormat.OpenXml.Framework
             return null;
         }
 
-        public int Compare(OpenXmlElement x, OpenXmlElement y)
+        public int Compare(OpenXmlElement? x, OpenXmlElement? y)
         {
             var xPath = Find(x?.GetType());
             var yPath = Find(y?.GetType());

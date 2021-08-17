@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-using System;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -23,17 +21,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             get { return _particleConstraint; }
         }
 
-        protected AnyParticleValidator()
-        {
-        }
-
         /// <summary>
         /// Initializes a new instance of the AnyParticleValidator.
         /// </summary>
         /// <param name="particleConstraint"></param>
         internal AnyParticleValidator(AnyParticle particleConstraint)
         {
-            Debug.Assert(particleConstraint != null);
             Debug.Assert(particleConstraint.ParticleType == ParticleType.Any);
 
             _particleConstraint = particleConstraint;
@@ -48,11 +41,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The context information for validation.</param>
         public virtual void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo != null);
-            Debug.Assert(particleMatchInfo.StartElement != null);
-            Debug.Assert(!(particleMatchInfo.StartElement is OpenXmlMiscNode));
-
             var element = particleMatchInfo.StartElement;
+
+            if (element is null)
+            {
+                return;
+            }
 
             switch (_particleConstraint.NamespaceValue)
             {
@@ -79,7 +73,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 case XsdAny.Other:
                     // Elements from any namespace that is not the target namespace of the parent element containing this element can be present.
                     if (string.IsNullOrEmpty(element.NamespaceUri) ||
-                        element.Parent != null && element.NamespaceUri != element.Parent.NamespaceUri)
+                        element.Parent is not null && element.NamespaceUri != element.Parent.NamespaceUri)
                     {
                         particleMatchInfo.Match = ParticleMatch.Matched;
                         particleMatchInfo.LastMatchedElement = element;
@@ -92,7 +86,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
 
                 case XsdAny.TargetNamespace:
-                    if (element.Parent != null && element.NamespaceUri == element.Parent.NamespaceUri)
+                    if (element.Parent is not null && element.NamespaceUri == element.Parent.NamespaceUri)
                     {
                         particleMatchInfo.Match = ParticleMatch.Matched;
                         particleMatchInfo.LastMatchedElement = element;
@@ -115,8 +109,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext">The context information for validation.</param>
         public void TryMatch(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            Debug.Assert(particleMatchInfo != null);
-            Debug.Assert(particleMatchInfo.StartElement != null);
             Debug.Assert(!(particleMatchInfo.StartElement is OpenXmlMiscNode));
 
             if (ParticleConstraint.MaxOccurs == 1)
@@ -130,7 +122,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 int matchCount = 0;
                 var next = particleMatchInfo.StartElement;
 
-                while (next != null && ParticleConstraint.MaxOccursGreaterThan(matchCount))
+                while (next is not null && ParticleConstraint.MaxOccursGreaterThan(matchCount))
                 {
                     nextParticleMatchInfo = new ParticleMatchInfo(next);
                     TryMatchOnce(nextParticleMatchInfo, validationContext);
@@ -176,11 +168,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// </summary>
         /// <param name="result"></param>
         /// <returns>True if there are required elements in this particle.</returns>
-        public virtual bool GetRequiredElements(ExpectedChildren result)
+        public virtual bool GetRequiredElements(ExpectedChildren? result)
         {
             if (ParticleConstraint.MinOccurs > 0)
             {
-                if (result != null)
+                if (result is not null)
                 {
                     result.Add(_particleConstraint.NamespaceValue.GetNamespaceString());
                 }
@@ -211,7 +203,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <returns>True if there are expected elements in this particle.</returns>
         public virtual bool GetExpectedElements(ExpectedChildren result)
         {
-            if (result != null)
+            if (result is not null)
             {
                 result.Add(_particleConstraint.NamespaceValue.GetNamespaceString());
             }

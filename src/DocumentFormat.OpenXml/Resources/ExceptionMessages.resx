@@ -385,7 +385,7 @@
     <value>You should not validate document preprocessed based on FileFormatVersions.{0} against FileFormatVersions.{1} constraints. The preprocessing file format version is set in OpenSettings. Also check the file format version setting in the OpenXmlValidator.</value>
   </data>
   <data name="InvalidUriFormat" xml:space="preserve">
-    <value>Invalid Hyperlink: Malformed URI is embedded as a hyperlink in the document.</value>
+    <value>A malformed URI was found in the document. Please provide a OpenSettings.RelationshipErrorRewriter to handle these errors while opening a package.</value>
   </data>
   <data name="FileNotFound" xml:space="preserve">
     <value>Could not find document</value>
@@ -398,5 +398,11 @@
   </data>
   <data name="AnyParticleTypeNotSupported" xml:space="preserve">
     <value>Schemas with ParticleType.Any is not supported</value>
+  </data>
+  <data name="InvalidUriProvided" xml:space="preserve">
+    <value>Provided URI was invalid after rewriting malformed relationship URI</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>An unknown error occured. Original message: '{0}'</value>
   </data>
 </root>

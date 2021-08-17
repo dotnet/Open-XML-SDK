@@ -649,10 +649,10 @@ namespace DocumentFormat.OpenXml.Tests
                         var dom = part.RootElement();
                         var host = dom
                             .Descendants()
-                            .PickFirst(d => d.FirstChild != null && !(d.FirstChild is OpenXmlUnknownElement));
+                            .PickFirst(d => d.FirstChild is not null && !(d.FirstChild is OpenXmlUnknownElement));
                         var target = host
                             .Descendants()
-                            .PickFirst(d => d.FirstChild != null && !(d.FirstChild is OpenXmlUnknownElement));
+                            .PickFirst(d => d.FirstChild is not null && !(d.FirstChild is OpenXmlUnknownElement));
 
                         var knownElement = target.FirstChild;
                         host.SetIgnorable(knownElement.Prefix);
@@ -691,10 +691,10 @@ namespace DocumentFormat.OpenXml.Tests
                         var dom = part.RootElement();
                         var host = dom
                             .Descendants()
-                            .PickFirst(d => d.FirstChild != null && !(d.FirstChild is OpenXmlUnknownElement));
+                            .PickFirst(d => d.FirstChild is not null && !(d.FirstChild is OpenXmlUnknownElement));
                         var target = host
                             .Descendants()
-                            .PickFirst(d => d.FirstChild != null && !(d.FirstChild is OpenXmlUnknownElement));
+                            .PickFirst(d => d.FirstChild is not null && !(d.FirstChild is OpenXmlUnknownElement));
 
                         var knownElement = target.FirstChild;
                         host.SetIgnorable(knownElement.Prefix);
@@ -729,10 +729,10 @@ namespace DocumentFormat.OpenXml.Tests
                 var dom = part.RootElement();
                 var host = dom
                     .Descendants()
-                    .PickFirst(d => d.FirstChild != null && !(d.FirstChild is OpenXmlUnknownElement));
+                    .PickFirst(d => d.FirstChild is not null && !(d.FirstChild is OpenXmlUnknownElement));
                 var target = host
                     .Descendants()
-                    .PickFirst(d => d.FirstChild != null && !(d.FirstChild is OpenXmlUnknownElement));
+                    .PickFirst(d => d.FirstChild is not null && !(d.FirstChild is OpenXmlUnknownElement));
 
                 host.SetIgnorable(target.FirstChild.Prefix);
 
@@ -1453,7 +1453,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
-                (Uri part, string host, string target, List<OpenXmlElement> children, OpenXmlElement expected) Setup()
+                (Uri Part, string Host, string Target, List<OpenXmlElement> Children, OpenXmlElement Expected) Setup()
                 {
                     using (var package = WordprocessingDocument.Open(stream, true))
                     {
@@ -1953,7 +1953,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
-                (Uri part, string host, string target) Setup()
+                (Uri Part, string Host, string Target) Setup()
                 {
                     using (var package = WordprocessingDocument.Open(stream, true))
                     {
@@ -1992,7 +1992,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
                 {
-                    var (host, target) = LocateElements(package, result.part, result.host, result.target);
+                    var (host, target) = LocateElements(package, result.Part, result.Host, result.Target);
 
                     Assert.NotNull(host);
                     Assert.NotNull(target);
@@ -2228,7 +2228,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
             {
-                (Uri part, string host, string target) Setup()
+                (Uri Part, string Host, string Target) Setup()
                 {
                     using (var package = WordprocessingDocument.Open(stream, false))
                     {
@@ -2270,7 +2270,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
                 {
-                    LocateElements(package, paths.part, paths.host, paths.target);
+                    LocateElements(package, paths.Part, paths.Host, paths.Target);
                 }
             }
         }
@@ -3038,7 +3038,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
             {
-                (Uri part, string host, OpenXmlElement expected) Setup()
+                (Uri Part, string Host, OpenXmlElement Expected) Setup()
                 {
                     using (var package = WordprocessingDocument.Open(stream, true))
                     {
@@ -3064,9 +3064,9 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var package = WordprocessingDocument.Open(stream, false, settings))
                 {
-                    var host = LocateElements(package, result.part, result.host);
+                    var host = LocateElements(package, result.Part, result.Host);
 
-                    VerifyKnownElement(host.FirstChild, result.expected);
+                    VerifyKnownElement(host.FirstChild, result.Expected);
                 }
             }
         }
@@ -3860,10 +3860,10 @@ namespace DocumentFormat.OpenXml.Tests
 
         private OpenXmlElement LocateElements(OpenXmlPackage package, Uri partUri, string hostPath)
         {
-            return LocateElements(package, partUri, hostPath, null).host;
+            return LocateElements(package, partUri, hostPath, null).Host;
         }
 
-        private (OpenXmlElement host, OpenXmlElement target) LocateElements(OpenXmlPackage package, Uri partUri, string hostPath, string targetPath)
+        private (OpenXmlElement Host, OpenXmlElement Target) LocateElements(OpenXmlPackage package, Uri partUri, string hostPath, string targetPath)
         {
             var part = package
                 .DescendantParts()
@@ -3882,7 +3882,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Assert.NotNull(host);
 
-            if (targetPath == null)
+            if (targetPath is null)
             {
                 return (host, null);
             }

@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml
         Office2016 = 0x8,
 
         /// <summary>
-        /// Represents Microsoft Office 2016.
+        /// Represents Microsoft Office 2019.
         /// </summary>
         Office2019 = 0x10,
     }

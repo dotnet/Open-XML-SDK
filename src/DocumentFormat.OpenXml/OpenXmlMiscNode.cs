@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -22,8 +21,6 @@ namespace DocumentFormat.OpenXml
         private const string strNonSignificantWhitespaceName = "#whitespace";
         private const string strSignificantWhitespaceName = "#significant-whitespace";
         private const string strXmlDeclaration = "xml-declaration";
-
-        private XmlNodeType _nodeType;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlMiscNode class using the
@@ -98,11 +95,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the type of XML node.
         /// </summary>
-        public XmlNodeType XmlNodeType
-        {
-            get { return _nodeType; }
-            internal set { _nodeType = value; }
-        }
+        public XmlNodeType XmlNodeType { get; private set; }
 
         /// <inheritdoc/>
         public override bool HasChildren => false;
@@ -113,7 +106,7 @@ namespace DocumentFormat.OpenXml
             get
             {
                 string localName = string.Empty;
-                switch (_nodeType)
+                switch (XmlNodeType)
                 {
                     case XmlNodeType.CDATA:
                         localName = strCDataSectionName;
@@ -244,7 +237,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override void WriteTo(XmlWriter xmlWriter)
         {
-            if (xmlWriter == null)
+            if (xmlWriter is null)
             {
                 throw new ArgumentNullException(nameof(xmlWriter));
             }
@@ -265,15 +258,6 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the XmlReader.Value on loading.
-        /// </summary>
-        internal string Value
-        {
-            get;
-            private set;
-        }
-
-        /// <summary>
         /// Load the out xml from the XmlReader.
         /// </summary>
         /// <param name="xmlReader"></param>
@@ -288,8 +272,6 @@ namespace DocumentFormat.OpenXml
 
                 case XmlNodeType.XmlDeclaration:
                     Debug.Assert(xmlReader.NodeType != XmlNodeType.XmlDeclaration);
-
-                    Value = xmlReader.Value; // version='1.0'
                     break;
 
                 case XmlNodeType.Element:
@@ -309,17 +291,14 @@ namespace DocumentFormat.OpenXml
                     break;
 
                 case XmlNodeType.Text:
-                    Value = xmlReader.Value;
                     RawOuterXml = xmlReader.Value;
                     break;
 
                 case XmlNodeType.CDATA:
-                    Value = xmlReader.Value;
                     RawOuterXml = Invariant($"<![CDATA[{xmlReader.Value}]]>");
                     break;
 
                 case XmlNodeType.SignificantWhitespace:
-                    Value = xmlReader.Value;
                     RawOuterXml = xmlReader.Value;
                     break;
 
@@ -327,12 +306,10 @@ namespace DocumentFormat.OpenXml
                     break; // O15:#3024890, OpenXmlMiscNode ignores the Whitespace NodeType.
 
                 case XmlNodeType.ProcessingInstruction:
-                    Value = xmlReader.Value;
                     RawOuterXml = Invariant($"<?{xmlReader.Name} {xmlReader.Value}?>");
                     break;
 
                 case XmlNodeType.Comment:
-                    Value = xmlReader.Value;
                     RawOuterXml = Invariant($"<!--{xmlReader.Value}-->");
                     break;
 
@@ -374,36 +351,21 @@ namespace DocumentFormat.OpenXml
         }
 
         internal static OpenXmlMiscNode CreateFromText(string text)
-        {
-            Debug.Assert(text != null);
-
-            return new OpenXmlMiscNode(XmlNodeType.Text)
+            => new OpenXmlMiscNode(XmlNodeType.Text)
             {
-                Value = text,
                 RawOuterXml = text,
             };
-        }
 
         internal static OpenXmlMiscNode CreateFromCdata(string value)
-        {
-            Debug.Assert(value != null);
-
-            return new OpenXmlMiscNode(XmlNodeType.CDATA)
+            => new OpenXmlMiscNode(XmlNodeType.CDATA)
             {
-                Value = value,
                 RawOuterXml = Invariant($"<![CDATA[{value}]]>"),
             };
-        }
 
         internal static OpenXmlMiscNode CreateFromSignificantWhitespace(string whitespace)
-        {
-            Debug.Assert(whitespace != null);
-
-            return new OpenXmlMiscNode(XmlNodeType.SignificantWhitespace)
+            => new OpenXmlMiscNode(XmlNodeType.SignificantWhitespace)
             {
-                Value = whitespace,
                 RawOuterXml = whitespace,
             };
-        }
     }
 }

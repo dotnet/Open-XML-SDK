@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -13,94 +14,44 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// Particle constraint for sequence, choice, all, and group.
     /// </summary>
     [DebuggerDisplay("ParticleType={ParticleType}")]
-    internal class CompositeParticle : ParticleConstraint, IEnumerable<ParticleConstraint>
+    internal class CompositeParticle : ParticleConstraint
     {
-        private readonly bool _filterVersion;
-
-        private IParticleValidator _particleValidator;
-        private List<ParticleConstraint> _children;
+        private IParticleValidator? _particleValidator;
 
         /// <summary>
         /// Initializes a new instance of the CompositeParticle.
         /// </summary>
-        public CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs, bool requireFilter = false, FileFormatVersions version = FileFormatVersions.Office2007)
-            : this(particleType, minOccurs, maxOccurs, requireFilter, false, version)
-        {
-        }
-
-        private CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs, bool requireFilter, bool filterVersion, FileFormatVersions version)
+        public CompositeParticle(ParticleType particleType, int minOccurs, int maxOccurs, bool requireFilter = false, FileFormatVersions version = FileFormatVersions.Office2007, in ReadOnlyArray<ParticleConstraint> children = default)
             : base(particleType, minOccurs, maxOccurs, version)
         {
+            ChildrenParticles = children;
             RequireFilter = requireFilter;
-            _filterVersion = filterVersion;
         }
 
         /// <summary>
         /// Gets the children particles.
         /// </summary>
-        public ReadOnlyList<ParticleConstraint> ChildrenParticles => _children;
+        public ReadOnlyArray<ParticleConstraint> ChildrenParticles { get; }
 
         public bool RequireFilter { get; }
 
-        public override ParticleConstraint Build(FileFormatVersions version)
+        public override ParticleConstraint? Build(FileFormatVersions version)
         {
             if (!version.AtLeast(Version))
             {
                 return null;
             }
 
-            // We can potentially limit creation of a clone to times when it is required; ie, when there
-            // is a version specific particle.
-            var clone = new CompositeParticle(ParticleType, MinOccurs, MaxOccurs, requireFilter: RequireFilter, filterVersion: true, Version);
+            var builder = new Builder(ParticleType, MinOccurs, MaxOccurs, requireFilter: RequireFilter, Version, filterVersion: true);
 
             foreach (var child in ChildrenParticles)
             {
-                clone.Add(child.Build(version));
+                builder.Add(child.Build(version));
             }
 
-            return clone;
-        }
-
-        public void Add(ParticleConstraint constraint)
-        {
-            if (constraint is null)
-            {
-                return;
-            }
-
-            if (_children is null)
-            {
-                _children = new List<ParticleConstraint>();
-            }
-            else if (_filterVersion)
-            {
-                for (int i = 0; i < _children.Count; i++)
-                {
-                    var other = _children[i];
-
-                    if (Equals(other, constraint) && constraint.Version > other.Version)
-                    {
-                        _children.RemoveAt(i);
-                        i--;
-                    }
-                }
-            }
-
-            _children.Add(constraint);
-        }
-
-        private bool Equals(ParticleConstraint constraint1, ParticleConstraint constraint2)
-        {
-            if (constraint1 is ElementParticle element1 && constraint2 is ElementParticle element2)
-            {
-                return element1.ElementType == element2.ElementType;
-            }
-            else if (RequireFilter && constraint1.ParticleType == ParticleType.Group && constraint2.ParticleType == ParticleType.Group)
-            {
-                return true;
-            }
-
-            return false;
+            // We can potentially limit creation of a clone to times when it is required; ie, when there
+            // is a version specific particle.
+            return builder;
         }
 
         /// <inheritdoc/>
@@ -108,7 +59,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             get
             {
-                if (_particleValidator == null)
+                if (_particleValidator is null)
                 {
                     _particleValidator = CreateParticleValidator();
                 }
@@ -118,30 +69,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         private ParticleValidator CreateParticleValidator()
-        {
-            switch (ParticleType)
+            => ParticleType switch
             {
-                case ParticleType.All:
-                    return new AllParticleValidator(this);
+                ParticleType.All => new AllParticleValidator(this),
+                ParticleType.Choice => new ChoiceParticleValidator(this),
+                ParticleType.Sequence => new SequenceParticleValidator(this),
+                ParticleType.Group => new GroupParticleValidator(this),
+                _ => throw new InvalidOperationException(),
+            };
 
-                case ParticleType.Choice:
-                    return new ChoiceParticleValidator(this);
-
-                case ParticleType.Sequence:
-                    return new SequenceParticleValidator(this);
-
-                case ParticleType.Group:
-                    return new GroupParticleValidator(this);
-
-                //case ParticleType.Any:
-                //    return new AnyParticleValidator(particleConstraint);
-                case ParticleType.Element:
-                default:
-                    throw new InvalidOperationException();
-            }
-        }
-
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (ReferenceEquals(this, obj))
             {
@@ -176,17 +113,82 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         public override int GetHashCode() => HashCode.Combine(base.GetHashCode(), ChildrenParticles.Length);
 
-        public IEnumerator<ParticleConstraint> GetEnumerator() => ChildrenParticles.GetEnumerator();
+        public struct Builder : IEnumerable<ParticleConstraint>
+        {
+            private readonly ParticleType _particleType;
+            private readonly int _minOccurs;
+            private readonly int _maxOccurs;
+            private readonly bool _requireFilter;
+            private readonly FileFormatVersions _version;
+            private readonly bool _filterVersion;
 
-        IEnumerator IEnumerable.GetEnumerator() => ChildrenParticles.GetEnumerator();
+            private List<ParticleConstraint>? _children;
 
-        //internal CompositeParticle NormalizeParticle(CompositeParticle compositeParticle)
-        //{
-        //    // TODO: do some normalization for the children.
-        //    // 1). Remove the group when minOccurs=1 and maxOccurs=1 for the group.
-        //    // 2). Merge sequence when minOccurs=1 and maxOccurs=1 for a child sequence.
-        //    // 3). Merge choice when minOccurs=1 and maxOccurs=1 for a child choice.
-        //    throw new NotImplementedException();
-        //}
+            public Builder(ParticleType particleType, int minOccurs, int maxOccurs, bool requireFilter = false, FileFormatVersions version = FileFormatVersions.Office2007, bool filterVersion = false)
+            {
+                _particleType = particleType;
+                _minOccurs = minOccurs;
+                _maxOccurs = maxOccurs;
+                _requireFilter = requireFilter;
+                _version = version;
+                _filterVersion = filterVersion;
+
+                _children = null;
+            }
+
+            public void Add(ParticleConstraint? constraint)
+            {
+                if (constraint is null)
+                {
+                    return;
+                }
+                else if (_children is null)
+                {
+                    _children = new List<ParticleConstraint>();
+                }
+                else if (_filterVersion)
+                {
+                    for (int i = 0; i < _children.Count; i++)
+                    {
+                        var other = _children[i];
+
+                        if (Equals(other, constraint) && constraint.Version > other.Version)
+                        {
+                            _children.RemoveAt(i);
+                            i--;
+                        }
+                    }
+                }
+
+                _children.Add(constraint);
+            }
+
+            public IEnumerator<ParticleConstraint> GetEnumerator() => _children?.GetEnumerator() ?? Enumerable.Empty<ParticleConstraint>().GetEnumerator();
+
+            IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+            public CompositeParticle Build()
+                => new CompositeParticle(_particleType, _minOccurs, _maxOccurs, _requireFilter, _version, _children?.ToArray());
+
+            public static implicit operator CompositeParticle(Builder builder)
+                => builder.Build();
+
+            public static implicit operator ParticleConstraint(Builder builder)
+                => builder.Build();
+
+            private bool Equals(ParticleConstraint constraint1, ParticleConstraint constraint2)
+            {
+                if (constraint1 is ElementParticle element1 && constraint2 is ElementParticle element2)
+                {
+                    return element1.ElementType == element2.ElementType;
+                }
+                else if (_requireFilter && constraint1.ParticleType == ParticleType.Group && constraint2.ParticleType == ParticleType.Group)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+        }
     }
 }

@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -24,12 +22,18 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _otherValues = otherValues;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
-            var element = context.Stack.Current.Element;
+            var element = context.Stack.Current?.Element;
+
+            if (element is null)
+            {
+                return null;
+            }
+
             var attribute = element.ParsedState.Attributes[_attribute];
 
-            if (!attribute.HasValue)
+            if (attribute.Value is null)
             {
                 return null;
             }
@@ -44,7 +48,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var conditionAttribute = element.ParsedState.Attributes[_conditionAttribute];
 
-            if (!conditionAttribute.HasValue)
+            if (conditionAttribute.Value is null)
             {
                 return null;
             }

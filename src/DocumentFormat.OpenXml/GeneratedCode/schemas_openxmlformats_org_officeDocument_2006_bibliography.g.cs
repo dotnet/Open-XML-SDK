@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -14,7 +16,7 @@ namespace DocumentFormat.OpenXml.Bibliography
 {
     /// <summary>
     /// <para>Sources.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Sources.</para>
     /// </summary>
     /// <remark>
@@ -23,6 +25,9 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description>Source &lt;b:Source></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Sources")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Sources : OpenXmlPartRootElement
     {
         /// <summary>
@@ -60,7 +65,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Selected Style</para>
         /// <para>Represents the following attribute in the schema: SelectedStyle</para>
         /// </summary>
-        public StringValue SelectedStyle
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "SelectedStyle")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? SelectedStyle
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -70,7 +81,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Documentation Style Name</para>
         /// <para>Represents the following attribute in the schema: StyleName</para>
         /// </summary>
-        public StringValue StyleName
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "StyleName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? StyleName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -80,7 +97,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Uniform Resource Identifier</para>
         /// <para>Represents the following attribute in the schema: URI</para>
         /// </summary>
-        public StringValue Uri
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "URI")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -104,7 +127,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 {
 aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
 });
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0, 0)
             };
@@ -116,7 +139,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Person.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Person.</para>
     /// </summary>
     /// <remark>
@@ -127,6 +150,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>Middle &lt;b:Middle></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Person")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
@@ -167,7 +193,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             builder.AddChild<Last>();
             builder.AddChild<First>();
             builder.AddChild<Middle>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.First), 0, 0),
@@ -181,9 +207,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Person's Last, or Family, Name.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Last.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Last")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Last : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -219,9 +248,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Person's First, or Given, Name.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:First.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "First")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class First : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -257,9 +289,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Person's Middle, or Other, Name.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Middle.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Middle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Middle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -295,9 +330,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Corporate Author.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Corporate.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Corporate")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Corporate : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -333,9 +371,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Abbreviated Case Number.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:AbbreviatedCaseNumber.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "AbbreviatedCaseNumber")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -371,9 +412,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Album Title.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:AlbumTitle.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "AlbumTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AlbumTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -409,9 +453,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Book Title.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:BookTitle.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "BookTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BookTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -447,9 +494,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Broadcaster.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Broadcaster.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Broadcaster")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Broadcaster : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -485,9 +535,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Broadcast Title.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:BroadcastTitle.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "BroadcastTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BroadcastTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -523,9 +576,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Case Number.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:CaseNumber.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "CaseNumber")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CaseNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -561,9 +617,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Chapter Number.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ChapterNumber.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "ChapterNumber")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ChapterNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -599,9 +658,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>City.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:City.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "City")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class City : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -637,9 +699,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Comments.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Comments.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Comments")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Comments : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -675,9 +740,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Conference or Proceedings Name.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ConferenceName.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "ConferenceName")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ConferenceName : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -713,9 +781,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Country or Region.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:CountryRegion.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "CountryRegion")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class CountryRegion : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -751,9 +822,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Court.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Court.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Court")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Court : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -789,9 +863,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Day.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Day.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Day")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Day : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -827,9 +904,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Day Accessed.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:DayAccessed.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "DayAccessed")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DayAccessed : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -865,9 +945,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Department.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Department.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Department")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Department : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -903,9 +986,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Distributor.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Distributor.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Distributor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Distributor : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -941,9 +1027,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Editor.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Edition.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Edition")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Edition : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -979,9 +1068,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>GUID.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Guid.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Guid")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GuidString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1017,9 +1109,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Institution.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Institution.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Institution")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Institution : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1055,9 +1150,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Internet Site Title.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:InternetSiteTitle.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "InternetSiteTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InternetSiteTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1093,9 +1191,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Issue.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Issue.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Issue")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Issue : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1131,9 +1232,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Journal Name.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:JournalName.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "JournalName")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class JournalName : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1169,9 +1273,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Locale ID.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:LCID.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "LCID")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LcId : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1207,9 +1314,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Medium.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Medium.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Medium")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Medium : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1245,9 +1355,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Month.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Month.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Month")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Month : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1283,9 +1396,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Month Accessed.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:MonthAccessed.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "MonthAccessed")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MonthAccessed : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1321,9 +1437,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Number of Volumes.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:NumberVolumes.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "NumberVolumes")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NumberVolumes : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1359,9 +1478,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Pages.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Pages.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Pages")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Pages : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1397,9 +1519,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Patent Number.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:PatentNumber.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "PatentNumber")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PatentNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1435,9 +1560,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Periodical Title.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:PeriodicalTitle.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "PeriodicalTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PeriodicalTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1473,9 +1601,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Production Company.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ProductionCompany.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "ProductionCompany")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ProductionCompany : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1511,9 +1642,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Publication Title.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:PublicationTitle.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "PublicationTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PublicationTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1549,9 +1683,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Publisher.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Publisher.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Publisher")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Publisher : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1587,9 +1724,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Recording Number.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:RecordingNumber.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "RecordingNumber")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RecordingNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1625,9 +1765,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Reference Order.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:RefOrder.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "RefOrder")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ReferenceOrder : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1663,9 +1806,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Reporter.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Reporter.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Reporter")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Reporter : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1701,9 +1847,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Short Title.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ShortTitle.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "ShortTitle")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShortTitle : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1739,9 +1888,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Standard Number.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:StandardNumber.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "StandardNumber")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StandardNumber : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1777,9 +1929,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>State or Province.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:StateProvince.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "StateProvince")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StateProvince : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1815,9 +1970,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Station.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Station.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Station")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Station : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1853,9 +2011,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Tag.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Tag.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Tag")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Tag : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1891,9 +2052,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Theater.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Theater.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Theater")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Theater : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1929,9 +2093,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Thesis Type.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ThesisType.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "ThesisType")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThesisType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -1967,9 +2134,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Title.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Title.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Title")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Title : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2005,9 +2175,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Type.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Type.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Type")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PatentType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2043,9 +2216,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>URL.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:URL.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "URL")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class UrlString : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2081,9 +2257,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Version.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Version.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Version")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Version : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2119,9 +2298,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Volume.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Volume.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Volume")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Volume : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2157,9 +2339,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Year.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Year.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Year")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Year : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2195,9 +2380,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Year Accessed.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:YearAccessed.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "YearAccessed")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class YearAccessed : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -2233,7 +2421,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Name List.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:NameList.</para>
     /// </summary>
     /// <remark>
@@ -2242,6 +2430,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>Person &lt;b:Person></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "NameList")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NameList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2280,7 +2471,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "NameList");
             builder.AddChild<Person>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
             };
@@ -2292,7 +2483,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Artist.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Artist.</para>
     /// </summary>
     /// <remark>
@@ -2301,6 +2492,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Artist")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Artist : NameType
     {
         /// <summary>
@@ -2338,7 +2532,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Artist");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2350,7 +2544,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Book Author.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:BookAuthor.</para>
     /// </summary>
     /// <remark>
@@ -2359,6 +2553,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "BookAuthor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BookAuthor : NameType
     {
         /// <summary>
@@ -2396,7 +2593,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "BookAuthor");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2408,7 +2605,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Compiler.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Compiler.</para>
     /// </summary>
     /// <remark>
@@ -2417,6 +2614,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Compiler")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Compiler : NameType
     {
         /// <summary>
@@ -2454,7 +2654,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Compiler");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2466,7 +2666,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Composer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Composer.</para>
     /// </summary>
     /// <remark>
@@ -2475,6 +2675,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Composer")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Composer : NameType
     {
         /// <summary>
@@ -2512,7 +2715,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Composer");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2524,7 +2727,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Conductor.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Conductor.</para>
     /// </summary>
     /// <remark>
@@ -2533,6 +2736,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Conductor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Conductor : NameType
     {
         /// <summary>
@@ -2570,7 +2776,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Conductor");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2582,7 +2788,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Counsel.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Counsel.</para>
     /// </summary>
     /// <remark>
@@ -2591,6 +2797,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Counsel")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Counsel : NameType
     {
         /// <summary>
@@ -2628,7 +2837,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Counsel");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2640,7 +2849,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Director.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Director.</para>
     /// </summary>
     /// <remark>
@@ -2649,6 +2858,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Director")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Director : NameType
     {
         /// <summary>
@@ -2686,7 +2898,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Director");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2698,7 +2910,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Editor.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Editor.</para>
     /// </summary>
     /// <remark>
@@ -2707,6 +2919,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Editor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Editor : NameType
     {
         /// <summary>
@@ -2744,7 +2959,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Editor");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2756,7 +2971,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Interviewee.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Interviewee.</para>
     /// </summary>
     /// <remark>
@@ -2765,6 +2980,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Interviewee")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Interviewee : NameType
     {
         /// <summary>
@@ -2802,7 +3020,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Interviewee");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2814,7 +3032,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Interviewer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Interviewer.</para>
     /// </summary>
     /// <remark>
@@ -2823,6 +3041,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Interviewer")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Interviewer : NameType
     {
         /// <summary>
@@ -2860,7 +3081,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Interviewer");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2872,7 +3093,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Inventor.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Inventor.</para>
     /// </summary>
     /// <remark>
@@ -2881,6 +3102,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Inventor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Inventor : NameType
     {
         /// <summary>
@@ -2918,7 +3142,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Inventor");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2930,7 +3154,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Producer Name.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ProducerName.</para>
     /// </summary>
     /// <remark>
@@ -2939,6 +3163,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "ProducerName")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ProducerName : NameType
     {
         /// <summary>
@@ -2976,7 +3203,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "ProducerName");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -2988,7 +3215,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Translator.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Translator.</para>
     /// </summary>
     /// <remark>
@@ -2997,6 +3224,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Translator")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Translator : NameType
     {
         /// <summary>
@@ -3034,7 +3264,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Translator");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -3046,7 +3276,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Writer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Writer.</para>
     /// </summary>
     /// <remark>
@@ -3055,6 +3285,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>NameList &lt;b:NameList></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Writer")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Writer : NameType
     {
         /// <summary>
@@ -3092,7 +3325,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Writer");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
             };
@@ -3104,7 +3337,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Defines the NameType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -3159,7 +3392,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public NameList NameList
+        public NameList? NameList
         {
             get => GetElement<NameList>();
             set => SetElement(value);
@@ -3168,7 +3401,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Author.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Author.</para>
     /// </summary>
     /// <remark>
@@ -3178,6 +3411,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>Corporate &lt;b:Corporate></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Author")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Author : NameOrCorporateType
     {
         /// <summary>
@@ -3215,9 +3451,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Author");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
@@ -3231,7 +3467,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Performer.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Performer.</para>
     /// </summary>
     /// <remark>
@@ -3241,6 +3477,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>Corporate &lt;b:Corporate></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Performer")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Performer : NameOrCorporateType
     {
         /// <summary>
@@ -3278,9 +3517,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(9, "Performer");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
@@ -3294,7 +3533,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Defines the NameOrCorporateType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -3351,7 +3590,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public NameList NameList
+        public NameList? NameList
         {
             get => GetElement<NameList>();
             set => SetElement(value);
@@ -3364,7 +3603,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Corporate Corporate
+        public Corporate? Corporate
         {
             get => GetElement<Corporate>();
             set => SetElement(value);
@@ -3373,7 +3612,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Contributors List.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Author.</para>
     /// </summary>
     /// <remark>
@@ -3397,6 +3636,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>Writer &lt;b:Writer></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Author")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AuthorList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3450,9 +3692,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             builder.AddChild<ProducerName>();
             builder.AddChild<Translator>();
             builder.AddChild<Writer>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Artist), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Author), 1, 1),
@@ -3481,7 +3723,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Artist Artist
+        public Artist? Artist
         {
             get => GetElement<Artist>();
             set => SetElement(value);
@@ -3494,7 +3736,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Author Author
+        public Author? Author
         {
             get => GetElement<Author>();
             set => SetElement(value);
@@ -3507,7 +3749,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public BookAuthor BookAuthor
+        public BookAuthor? BookAuthor
         {
             get => GetElement<BookAuthor>();
             set => SetElement(value);
@@ -3520,7 +3762,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Compiler Compiler
+        public Compiler? Compiler
         {
             get => GetElement<Compiler>();
             set => SetElement(value);
@@ -3533,7 +3775,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Composer Composer
+        public Composer? Composer
         {
             get => GetElement<Composer>();
             set => SetElement(value);
@@ -3546,7 +3788,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Conductor Conductor
+        public Conductor? Conductor
         {
             get => GetElement<Conductor>();
             set => SetElement(value);
@@ -3559,7 +3801,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Counsel Counsel
+        public Counsel? Counsel
         {
             get => GetElement<Counsel>();
             set => SetElement(value);
@@ -3572,7 +3814,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Director Director
+        public Director? Director
         {
             get => GetElement<Director>();
             set => SetElement(value);
@@ -3585,7 +3827,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Editor Editor
+        public Editor? Editor
         {
             get => GetElement<Editor>();
             set => SetElement(value);
@@ -3598,7 +3840,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Interviewee Interviewee
+        public Interviewee? Interviewee
         {
             get => GetElement<Interviewee>();
             set => SetElement(value);
@@ -3611,7 +3853,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Interviewer Interviewer
+        public Interviewer? Interviewer
         {
             get => GetElement<Interviewer>();
             set => SetElement(value);
@@ -3624,7 +3866,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Inventor Inventor
+        public Inventor? Inventor
         {
             get => GetElement<Inventor>();
             set => SetElement(value);
@@ -3637,7 +3879,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Performer Performer
+        public Performer? Performer
         {
             get => GetElement<Performer>();
             set => SetElement(value);
@@ -3650,7 +3892,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ProducerName ProducerName
+        public ProducerName? ProducerName
         {
             get => GetElement<ProducerName>();
             set => SetElement(value);
@@ -3663,7 +3905,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Translator Translator
+        public Translator? Translator
         {
             get => GetElement<Translator>();
             set => SetElement(value);
@@ -3676,7 +3918,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Writer Writer
+        public Writer? Writer
         {
             get => GetElement<Writer>();
             set => SetElement(value);
@@ -3688,9 +3930,12 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Source Type.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:SourceType.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "SourceType")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SourceType : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3726,7 +3971,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
 
     /// <summary>
     /// <para>Source.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Source.</para>
     /// </summary>
     /// <remark>
@@ -3786,6 +4031,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     ///   <item><description>YearAccessed &lt;b:YearAccessed></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(9, "Source")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Source : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3875,9 +4123,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
             builder.AddChild<Volume>();
             builder.AddChild<Year>();
             builder.AddChild<YearAccessed>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Choice, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AlbumTitle), 1, 1),
@@ -3942,7 +4190,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public AbbreviatedCaseNumber AbbreviatedCaseNumber
+        public AbbreviatedCaseNumber? AbbreviatedCaseNumber
         {
             get => GetElement<AbbreviatedCaseNumber>();
             set => SetElement(value);
@@ -3955,7 +4203,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public AlbumTitle AlbumTitle
+        public AlbumTitle? AlbumTitle
         {
             get => GetElement<AlbumTitle>();
             set => SetElement(value);
@@ -3968,7 +4216,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public AuthorList AuthorList
+        public AuthorList? AuthorList
         {
             get => GetElement<AuthorList>();
             set => SetElement(value);
@@ -3981,7 +4229,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public BookTitle BookTitle
+        public BookTitle? BookTitle
         {
             get => GetElement<BookTitle>();
             set => SetElement(value);
@@ -3994,7 +4242,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Broadcaster Broadcaster
+        public Broadcaster? Broadcaster
         {
             get => GetElement<Broadcaster>();
             set => SetElement(value);
@@ -4007,7 +4255,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public BroadcastTitle BroadcastTitle
+        public BroadcastTitle? BroadcastTitle
         {
             get => GetElement<BroadcastTitle>();
             set => SetElement(value);
@@ -4020,7 +4268,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public CaseNumber CaseNumber
+        public CaseNumber? CaseNumber
         {
             get => GetElement<CaseNumber>();
             set => SetElement(value);
@@ -4033,7 +4281,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ChapterNumber ChapterNumber
+        public ChapterNumber? ChapterNumber
         {
             get => GetElement<ChapterNumber>();
             set => SetElement(value);
@@ -4046,7 +4294,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public City City
+        public City? City
         {
             get => GetElement<City>();
             set => SetElement(value);
@@ -4059,7 +4307,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Comments Comments
+        public Comments? Comments
         {
             get => GetElement<Comments>();
             set => SetElement(value);
@@ -4072,7 +4320,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ConferenceName ConferenceName
+        public ConferenceName? ConferenceName
         {
             get => GetElement<ConferenceName>();
             set => SetElement(value);
@@ -4085,7 +4333,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public CountryRegion CountryRegion
+        public CountryRegion? CountryRegion
         {
             get => GetElement<CountryRegion>();
             set => SetElement(value);
@@ -4098,7 +4346,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Court Court
+        public Court? Court
         {
             get => GetElement<Court>();
             set => SetElement(value);
@@ -4111,7 +4359,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Day Day
+        public Day? Day
         {
             get => GetElement<Day>();
             set => SetElement(value);
@@ -4124,7 +4372,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DayAccessed DayAccessed
+        public DayAccessed? DayAccessed
         {
             get => GetElement<DayAccessed>();
             set => SetElement(value);
@@ -4137,7 +4385,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Department Department
+        public Department? Department
         {
             get => GetElement<Department>();
             set => SetElement(value);
@@ -4150,7 +4398,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Distributor Distributor
+        public Distributor? Distributor
         {
             get => GetElement<Distributor>();
             set => SetElement(value);
@@ -4163,7 +4411,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Edition Edition
+        public Edition? Edition
         {
             get => GetElement<Edition>();
             set => SetElement(value);
@@ -4176,7 +4424,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public GuidString GuidString
+        public GuidString? GuidString
         {
             get => GetElement<GuidString>();
             set => SetElement(value);
@@ -4189,7 +4437,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Institution Institution
+        public Institution? Institution
         {
             get => GetElement<Institution>();
             set => SetElement(value);
@@ -4202,7 +4450,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public InternetSiteTitle InternetSiteTitle
+        public InternetSiteTitle? InternetSiteTitle
         {
             get => GetElement<InternetSiteTitle>();
             set => SetElement(value);
@@ -4215,7 +4463,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Issue Issue
+        public Issue? Issue
         {
             get => GetElement<Issue>();
             set => SetElement(value);
@@ -4228,7 +4476,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public JournalName JournalName
+        public JournalName? JournalName
         {
             get => GetElement<JournalName>();
             set => SetElement(value);
@@ -4241,7 +4489,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public LcId LcId
+        public LcId? LcId
         {
             get => GetElement<LcId>();
             set => SetElement(value);
@@ -4254,7 +4502,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Medium Medium
+        public Medium? Medium
         {
             get => GetElement<Medium>();
             set => SetElement(value);
@@ -4267,7 +4515,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Month Month
+        public Month? Month
         {
             get => GetElement<Month>();
             set => SetElement(value);
@@ -4280,7 +4528,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public MonthAccessed MonthAccessed
+        public MonthAccessed? MonthAccessed
         {
             get => GetElement<MonthAccessed>();
             set => SetElement(value);
@@ -4293,7 +4541,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public NumberVolumes NumberVolumes
+        public NumberVolumes? NumberVolumes
         {
             get => GetElement<NumberVolumes>();
             set => SetElement(value);
@@ -4306,7 +4554,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Pages Pages
+        public Pages? Pages
         {
             get => GetElement<Pages>();
             set => SetElement(value);
@@ -4319,7 +4567,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PatentNumber PatentNumber
+        public PatentNumber? PatentNumber
         {
             get => GetElement<PatentNumber>();
             set => SetElement(value);
@@ -4332,7 +4580,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PeriodicalTitle PeriodicalTitle
+        public PeriodicalTitle? PeriodicalTitle
         {
             get => GetElement<PeriodicalTitle>();
             set => SetElement(value);
@@ -4345,7 +4593,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ProductionCompany ProductionCompany
+        public ProductionCompany? ProductionCompany
         {
             get => GetElement<ProductionCompany>();
             set => SetElement(value);
@@ -4358,7 +4606,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PublicationTitle PublicationTitle
+        public PublicationTitle? PublicationTitle
         {
             get => GetElement<PublicationTitle>();
             set => SetElement(value);
@@ -4371,7 +4619,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Publisher Publisher
+        public Publisher? Publisher
         {
             get => GetElement<Publisher>();
             set => SetElement(value);
@@ -4384,7 +4632,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public RecordingNumber RecordingNumber
+        public RecordingNumber? RecordingNumber
         {
             get => GetElement<RecordingNumber>();
             set => SetElement(value);
@@ -4397,7 +4645,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ReferenceOrder ReferenceOrder
+        public ReferenceOrder? ReferenceOrder
         {
             get => GetElement<ReferenceOrder>();
             set => SetElement(value);
@@ -4410,7 +4658,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Reporter Reporter
+        public Reporter? Reporter
         {
             get => GetElement<Reporter>();
             set => SetElement(value);
@@ -4423,7 +4671,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public SourceType SourceType
+        public SourceType? SourceType
         {
             get => GetElement<SourceType>();
             set => SetElement(value);
@@ -4436,7 +4684,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ShortTitle ShortTitle
+        public ShortTitle? ShortTitle
         {
             get => GetElement<ShortTitle>();
             set => SetElement(value);
@@ -4449,7 +4697,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public StandardNumber StandardNumber
+        public StandardNumber? StandardNumber
         {
             get => GetElement<StandardNumber>();
             set => SetElement(value);
@@ -4462,7 +4710,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public StateProvince StateProvince
+        public StateProvince? StateProvince
         {
             get => GetElement<StateProvince>();
             set => SetElement(value);
@@ -4475,7 +4723,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Station Station
+        public Station? Station
         {
             get => GetElement<Station>();
             set => SetElement(value);
@@ -4488,7 +4736,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Tag Tag
+        public Tag? Tag
         {
             get => GetElement<Tag>();
             set => SetElement(value);
@@ -4501,7 +4749,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Theater Theater
+        public Theater? Theater
         {
             get => GetElement<Theater>();
             set => SetElement(value);
@@ -4514,7 +4762,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ThesisType ThesisType
+        public ThesisType? ThesisType
         {
             get => GetElement<ThesisType>();
             set => SetElement(value);
@@ -4527,7 +4775,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Title Title
+        public Title? Title
         {
             get => GetElement<Title>();
             set => SetElement(value);
@@ -4540,7 +4788,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PatentType PatentType
+        public PatentType? PatentType
         {
             get => GetElement<PatentType>();
             set => SetElement(value);
@@ -4553,7 +4801,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public UrlString UrlString
+        public UrlString? UrlString
         {
             get => GetElement<UrlString>();
             set => SetElement(value);
@@ -4566,7 +4814,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Version Version
+        public Version? Version
         {
             get => GetElement<Version>();
             set => SetElement(value);
@@ -4579,7 +4827,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Volume Volume
+        public Volume? Volume
         {
             get => GetElement<Volume>();
             set => SetElement(value);
@@ -4592,7 +4840,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Year Year
+        public Year? Year
         {
             get => GetElement<Year>();
             set => SetElement(value);
@@ -4605,7 +4853,7 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public YearAccessed YearAccessed
+        public YearAccessed? YearAccessed
         {
             get => GetElement<YearAccessed>();
             set => SetElement(value);

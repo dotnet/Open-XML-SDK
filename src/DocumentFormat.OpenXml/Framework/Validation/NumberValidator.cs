@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Validation;
-using System;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml.Framework
@@ -47,7 +46,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public bool IsPositive { get; set; }
 
-        public XmlQualifiedName QName
+        public XmlQualifiedName? QName
         {
             get
             {
@@ -69,9 +68,8 @@ namespace DocumentFormat.OpenXml.Framework
         protected override void ValidateVersion(ValidationContext context)
         {
             var current = context.Stack.Current;
-            var stValue = current.Value;
 
-            if (stValue is null)
+            if (current is null || current.Value is null || current.Property is null)
             {
                 return;
             }
@@ -79,33 +77,33 @@ namespace DocumentFormat.OpenXml.Framework
             var id = current.IsAttribute ? "Sch_AttributeValueDataTypeDetailed" : "Sch_ElementValueDataTypeDetailed";
             var description = current.IsAttribute ? ValidationResources.Sch_AttributeValueDataTypeDetailed : ValidationResources.Sch_ElementValueDataTypeDetailed;
 
-            if (!stValue.IsValid)
+            if (!current.Value.IsValid)
             {
-                if (string.IsNullOrEmpty(stValue.InnerText))
+                if (string.IsNullOrEmpty(current.Value.InnerText))
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, current.Property.GetQName(), current.Value.InnerText, current.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
+                        description: SR.Format(description, current.Property.QName, current.Value.InnerText, current.IsAttribute ? ValidationResources.Sch_EmptyAttributeValue : ValidationResources.Sch_EmptyElementValue),
                         errorType: ValidationErrorType.Schema);
                 }
                 else
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, current.Property.GetQName(), current.Value.InnerText, SR.Format(ValidationResources.Sch_StringIsNotValidValue, stValue.InnerText, current.Property.TypeName)),
+                        description: SR.Format(description, current.Property.QName, current.Value.InnerText, SR.Format(ValidationResources.Sch_StringIsNotValidValue, current.Value.InnerText, current.Property.TypeName)),
                         errorType: ValidationErrorType.Schema);
                 }
 
                 return;
             }
 
-            if (TryGetValue(stValue, out var value))
+            if (TryGetValue(current.Value, out var value))
             {
                 if (IsNonNegative && (value < 0 || !IsValidNumber(value)))
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, current.Property.GetQName(), current.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, current.Value, _nonNegativeQname)),
+                        description: SR.Format(description, current.Property.QName, current.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, current.Value, _nonNegativeQname)),
                         errorType: ValidationErrorType.Schema);
                 }
 
@@ -113,7 +111,7 @@ namespace DocumentFormat.OpenXml.Framework
                 {
                     context.CreateError(
                         id: id,
-                        description: SR.Format(description, current.Property.GetQName(), current.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, current.Value, _positiveQname)),
+                        description: SR.Format(description, current.Property.QName, current.Value, SR.Format(ValidationResources.Sch_StringIsNotValidValue, current.Value, _positiveQname)),
                         errorType: ValidationErrorType.Schema);
                 }
 
@@ -155,7 +153,7 @@ namespace DocumentFormat.OpenXml.Framework
         {
             value = 0;
 
-            if (simpleType == null || !simpleType.HasValue)
+            if (simpleType is null || !simpleType.HasValue)
             {
                 return false;
             }

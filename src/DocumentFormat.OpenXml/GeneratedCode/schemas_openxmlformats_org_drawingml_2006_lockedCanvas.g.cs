@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
@@ -15,7 +17,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
 {
     /// <summary>
     /// <para>Locked Canvas Container.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is lc:lockedCanvas.</para>
     /// </summary>
     /// <remark>
@@ -33,6 +35,9 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     ///   <item><description>DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(15, "lockedCanvas")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LockedCanvas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -80,11 +85,11 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrame>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties), 1, 1),
-                new CompositeParticle(ParticleType.Choice, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TextShape), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape), 1, 1),
@@ -105,7 +110,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties NonVisualGroupShapeProperties
+        public DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>();
             set => SetElement(value);
@@ -118,7 +123,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties VisualGroupShapeProperties
+        public DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties? VisualGroupShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>();
             set => SetElement(value);

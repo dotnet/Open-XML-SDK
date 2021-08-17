@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -15,9 +17,12 @@ namespace DocumentFormat.OpenXml.Math
 {
     /// <summary>
     /// <para>Script.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:scr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "scr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Script : OpenXmlLeafElement
     {
         /// <summary>
@@ -34,7 +39,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>>();
             set => SetAttribute(value);
@@ -57,9 +68,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>style.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sty.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "sty")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Style : OpenXmlLeafElement
     {
         /// <summary>
@@ -76,7 +90,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Math.StyleValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.StyleValues>>();
             set => SetAttribute(value);
@@ -99,7 +119,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the Run Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:r.</para>
     /// </summary>
     /// <remark>
@@ -142,6 +162,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Text &lt;m:t></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "r")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
@@ -214,21 +237,21 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PositionalTab>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LastRenderedPageBreak>();
             builder.AddChild<Text>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.RunProperties), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties), 0, 1)
                     }
                 },
-                new CompositeParticle(ParticleType.Choice, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Group, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Break), 1, 1),
                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Text), 1, 1),
@@ -276,7 +299,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RunProperties MathRunProperties
+        public RunProperties? MathRunProperties
         {
             get => GetElement<RunProperties>();
             set => SetElement(value);
@@ -289,7 +312,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Wordprocessing.RunProperties RunProperties
+        public DocumentFormat.OpenXml.Wordprocessing.RunProperties? RunProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
             set => SetElement(value);
@@ -301,7 +324,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Accent.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:acc.</para>
     /// </summary>
     /// <remark>
@@ -311,6 +334,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "acc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Accent : OpenXmlCompositeElement
     {
         /// <summary>
@@ -350,7 +376,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.SetSchema(21, "acc");
             builder.AddChild<AccentProperties>();
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.AccentProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
@@ -364,7 +390,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public AccentProperties AccentProperties
+        public AccentProperties? AccentProperties
         {
             get => GetElement<AccentProperties>();
             set => SetElement(value);
@@ -377,7 +403,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -389,7 +415,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Bar.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:bar.</para>
     /// </summary>
     /// <remark>
@@ -399,6 +425,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "bar")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Bar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -438,7 +467,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.SetSchema(21, "bar");
             builder.AddChild<BarProperties>();
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BarProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
@@ -452,7 +481,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BarProperties BarProperties
+        public BarProperties? BarProperties
         {
             get => GetElement<BarProperties>();
             set => SetElement(value);
@@ -465,7 +494,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -477,7 +506,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Box Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:box.</para>
     /// </summary>
     /// <remark>
@@ -487,6 +516,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "box")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Box : OpenXmlCompositeElement
     {
         /// <summary>
@@ -526,7 +558,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.SetSchema(21, "box");
             builder.AddChild<BoxProperties>();
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BoxProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
@@ -540,7 +572,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BoxProperties BoxProperties
+        public BoxProperties? BoxProperties
         {
             get => GetElement<BoxProperties>();
             set => SetElement(value);
@@ -553,7 +585,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -565,7 +597,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Border-Box Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:borderBox.</para>
     /// </summary>
     /// <remark>
@@ -575,6 +607,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "borderBox")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BorderBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -614,7 +649,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.SetSchema(21, "borderBox");
             builder.AddChild<BorderBoxProperties>();
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBoxProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
@@ -628,7 +663,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BorderBoxProperties BorderBoxProperties
+        public BorderBoxProperties? BorderBoxProperties
         {
             get => GetElement<BorderBoxProperties>();
             set => SetElement(value);
@@ -641,7 +676,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -653,7 +688,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Delimiter Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:d.</para>
     /// </summary>
     /// <remark>
@@ -663,6 +698,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "d")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Delimiter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -702,7 +740,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.SetSchema(21, "d");
             builder.AddChild<DelimiterProperties>();
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.DelimiterProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 64)
@@ -716,7 +754,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public DelimiterProperties DelimiterProperties
+        public DelimiterProperties? DelimiterProperties
         {
             get => GetElement<DelimiterProperties>();
             set => SetElement(value);
@@ -728,7 +766,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Equation-Array Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:eqArr.</para>
     /// </summary>
     /// <remark>
@@ -738,6 +776,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "eqArr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EquationArray : OpenXmlCompositeElement
     {
         /// <summary>
@@ -777,7 +818,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.SetSchema(21, "eqArr");
             builder.AddChild<EquationArrayProperties>();
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArrayProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 64)
@@ -791,7 +832,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EquationArrayProperties EquationArrayProperties
+        public EquationArrayProperties? EquationArrayProperties
         {
             get => GetElement<EquationArrayProperties>();
             set => SetElement(value);
@@ -803,7 +844,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Fraction Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:f.</para>
     /// </summary>
     /// <remark>
@@ -814,6 +855,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Denominator &lt;m:den></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "f")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Fraction : OpenXmlCompositeElement
     {
         /// <summary>
@@ -854,7 +898,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<FractionProperties>();
             builder.AddChild<Numerator>();
             builder.AddChild<Denominator>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.FractionProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Numerator), 1, 1),
@@ -869,7 +913,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public FractionProperties FractionProperties
+        public FractionProperties? FractionProperties
         {
             get => GetElement<FractionProperties>();
             set => SetElement(value);
@@ -882,7 +926,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Numerator Numerator
+        public Numerator? Numerator
         {
             get => GetElement<Numerator>();
             set => SetElement(value);
@@ -895,7 +939,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Denominator Denominator
+        public Denominator? Denominator
         {
             get => GetElement<Denominator>();
             set => SetElement(value);
@@ -907,7 +951,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Function Apply Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:func.</para>
     /// </summary>
     /// <remark>
@@ -918,6 +962,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "func")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MathFunction : OpenXmlCompositeElement
     {
         /// <summary>
@@ -958,7 +1005,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<FunctionProperties>();
             builder.AddChild<FunctionName>();
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.FunctionProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.FunctionName), 1, 1),
@@ -973,7 +1020,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public FunctionProperties FunctionProperties
+        public FunctionProperties? FunctionProperties
         {
             get => GetElement<FunctionProperties>();
             set => SetElement(value);
@@ -986,7 +1033,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public FunctionName FunctionName
+        public FunctionName? FunctionName
         {
             get => GetElement<FunctionName>();
             set => SetElement(value);
@@ -999,7 +1046,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1011,7 +1058,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Group-Character Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:groupChr.</para>
     /// </summary>
     /// <remark>
@@ -1021,6 +1068,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "groupChr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupChar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1060,7 +1110,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.SetSchema(21, "groupChr");
             builder.AddChild<GroupCharProperties>();
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupCharProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
@@ -1074,7 +1124,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public GroupCharProperties GroupCharProperties
+        public GroupCharProperties? GroupCharProperties
         {
             get => GetElement<GroupCharProperties>();
             set => SetElement(value);
@@ -1087,7 +1137,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1099,7 +1149,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Lower-Limit Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limLow.</para>
     /// </summary>
     /// <remark>
@@ -1110,6 +1160,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Limit &lt;m:lim></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "limLow")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LimitLower : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1150,7 +1203,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<LimitLowerProperties>();
             builder.AddChild<Base>();
             builder.AddChild<Limit>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLowerProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1),
@@ -1165,7 +1218,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public LimitLowerProperties LimitLowerProperties
+        public LimitLowerProperties? LimitLowerProperties
         {
             get => GetElement<LimitLowerProperties>();
             set => SetElement(value);
@@ -1178,7 +1231,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1191,7 +1244,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Limit Limit
+        public Limit? Limit
         {
             get => GetElement<Limit>();
             set => SetElement(value);
@@ -1203,7 +1256,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Upper-Limit Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limUpp.</para>
     /// </summary>
     /// <remark>
@@ -1214,6 +1267,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Limit &lt;m:lim></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "limUpp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LimitUpper : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1254,7 +1310,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<LimitUpperProperties>();
             builder.AddChild<Base>();
             builder.AddChild<Limit>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpperProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1),
@@ -1269,7 +1325,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public LimitUpperProperties LimitUpperProperties
+        public LimitUpperProperties? LimitUpperProperties
         {
             get => GetElement<LimitUpperProperties>();
             set => SetElement(value);
@@ -1282,7 +1338,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1295,7 +1351,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Limit Limit
+        public Limit? Limit
         {
             get => GetElement<Limit>();
             set => SetElement(value);
@@ -1307,7 +1363,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Matrix Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:m.</para>
     /// </summary>
     /// <remark>
@@ -1317,6 +1373,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>MatrixRow &lt;m:mr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "m")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Matrix : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1356,7 +1415,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.SetSchema(21, "m");
             builder.AddChild<MatrixProperties>();
             builder.AddChild<MatrixRow>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixRow), 1, 256)
@@ -1370,7 +1429,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MatrixProperties MatrixProperties
+        public MatrixProperties? MatrixProperties
         {
             get => GetElement<MatrixProperties>();
             set => SetElement(value);
@@ -1382,7 +1441,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>n-ary Operator Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:nary.</para>
     /// </summary>
     /// <remark>
@@ -1394,6 +1453,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "nary")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Nary : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1435,7 +1497,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<SubArgument>();
             builder.AddChild<SuperArgument>();
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.NaryProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubArgument), 1, 1),
@@ -1451,7 +1513,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public NaryProperties NaryProperties
+        public NaryProperties? NaryProperties
         {
             get => GetElement<NaryProperties>();
             set => SetElement(value);
@@ -1464,7 +1526,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SubArgument SubArgument
+        public SubArgument? SubArgument
         {
             get => GetElement<SubArgument>();
             set => SetElement(value);
@@ -1477,7 +1539,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SuperArgument SuperArgument
+        public SuperArgument? SuperArgument
         {
             get => GetElement<SuperArgument>();
             set => SetElement(value);
@@ -1490,7 +1552,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1502,7 +1564,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Phantom Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:phant.</para>
     /// </summary>
     /// <remark>
@@ -1512,6 +1574,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "phant")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Phantom : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1551,7 +1616,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.SetSchema(21, "phant");
             builder.AddChild<PhantomProperties>();
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PhantomProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1)
@@ -1565,7 +1630,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public PhantomProperties PhantomProperties
+        public PhantomProperties? PhantomProperties
         {
             get => GetElement<PhantomProperties>();
             set => SetElement(value);
@@ -1578,7 +1643,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1590,7 +1655,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Radical Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rad.</para>
     /// </summary>
     /// <remark>
@@ -1601,6 +1666,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "rad")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Radical : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1641,7 +1709,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<RadicalProperties>();
             builder.AddChild<Degree>();
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.RadicalProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Degree), 1, 1),
@@ -1656,7 +1724,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RadicalProperties RadicalProperties
+        public RadicalProperties? RadicalProperties
         {
             get => GetElement<RadicalProperties>();
             set => SetElement(value);
@@ -1669,7 +1737,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Degree Degree
+        public Degree? Degree
         {
             get => GetElement<Degree>();
             set => SetElement(value);
@@ -1682,7 +1750,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1694,7 +1762,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Pre-Sub-Superscript Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sPre.</para>
     /// </summary>
     /// <remark>
@@ -1706,6 +1774,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "sPre")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreSubSuper : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1747,7 +1818,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<SubArgument>();
             builder.AddChild<SuperArgument>();
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuperProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubArgument), 1, 1),
@@ -1763,7 +1834,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public PreSubSuperProperties PreSubSuperProperties
+        public PreSubSuperProperties? PreSubSuperProperties
         {
             get => GetElement<PreSubSuperProperties>();
             set => SetElement(value);
@@ -1776,7 +1847,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SubArgument SubArgument
+        public SubArgument? SubArgument
         {
             get => GetElement<SubArgument>();
             set => SetElement(value);
@@ -1789,7 +1860,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SuperArgument SuperArgument
+        public SuperArgument? SuperArgument
         {
             get => GetElement<SuperArgument>();
             set => SetElement(value);
@@ -1802,7 +1873,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1814,7 +1885,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Subscript Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSub.</para>
     /// </summary>
     /// <remark>
@@ -1825,6 +1896,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>SubArgument &lt;m:sub></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "sSub")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Subscript : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1865,7 +1939,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<SubscriptProperties>();
             builder.AddChild<Base>();
             builder.AddChild<SubArgument>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubscriptProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1),
@@ -1880,7 +1954,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SubscriptProperties SubscriptProperties
+        public SubscriptProperties? SubscriptProperties
         {
             get => GetElement<SubscriptProperties>();
             set => SetElement(value);
@@ -1893,7 +1967,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -1906,7 +1980,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SubArgument SubArgument
+        public SubArgument? SubArgument
         {
             get => GetElement<SubArgument>();
             set => SetElement(value);
@@ -1918,7 +1992,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Sub-Superscript Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSubSup.</para>
     /// </summary>
     /// <remark>
@@ -1930,6 +2004,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>SuperArgument &lt;m:sup></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "sSubSup")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SubSuperscript : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1971,7 +2048,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<Base>();
             builder.AddChild<SubArgument>();
             builder.AddChild<SuperArgument>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscriptProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1),
@@ -1987,7 +2064,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SubSuperscriptProperties SubSuperscriptProperties
+        public SubSuperscriptProperties? SubSuperscriptProperties
         {
             get => GetElement<SubSuperscriptProperties>();
             set => SetElement(value);
@@ -2000,7 +2077,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -2013,7 +2090,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SubArgument SubArgument
+        public SubArgument? SubArgument
         {
             get => GetElement<SubArgument>();
             set => SetElement(value);
@@ -2026,7 +2103,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SuperArgument SuperArgument
+        public SuperArgument? SuperArgument
         {
             get => GetElement<SuperArgument>();
             set => SetElement(value);
@@ -2038,7 +2115,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Superscript Function.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSup.</para>
     /// </summary>
     /// <remark>
@@ -2049,6 +2126,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>SuperArgument &lt;m:sup></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "sSup")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Superscript : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2089,7 +2169,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<SuperscriptProperties>();
             builder.AddChild<Base>();
             builder.AddChild<SuperArgument>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SuperscriptProperties), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 1),
@@ -2104,7 +2184,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SuperscriptProperties SuperscriptProperties
+        public SuperscriptProperties? SuperscriptProperties
         {
             get => GetElement<SuperscriptProperties>();
             set => SetElement(value);
@@ -2117,7 +2197,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Base Base
+        public Base? Base
         {
             get => GetElement<Base>();
             set => SetElement(value);
@@ -2130,7 +2210,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SuperArgument SuperArgument
+        public SuperArgument? SuperArgument
         {
             get => GetElement<SuperArgument>();
             set => SetElement(value);
@@ -2142,7 +2222,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the Paragraph Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:oMathPara.</para>
     /// </summary>
     /// <remark>
@@ -2184,6 +2264,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.Run &lt;w:r></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "oMathPara")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Paragraph : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2255,43 +2338,43 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ParagraphProperties), 0, 1),
-                new CompositeParticle(ParticleType.Choice, 1, 0)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 0),
-                    new CompositeParticle(ParticleType.Group, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Group, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Choice, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                 }
                             },
-                            new CompositeParticle(ParticleType.Group, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Choice, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new CompositeParticle(ParticleType.Group, 0, 0)
+                                    new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                     {
-                                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                         {
                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                                         }
                                     },
-                                    new CompositeParticle(ParticleType.Group, 0, 0)
+                                    new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                     {
-                                        new CompositeParticle(ParticleType.Choice, 1, 1)
+                                        new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                         {
-                                            new CompositeParticle(ParticleType.Group, 0, 0)
+                                            new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                             {
-                                                new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                 {
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
@@ -2299,9 +2382,9 @@ namespace DocumentFormat.OpenXml.Math
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                                                 }
                                             },
-                                            new CompositeParticle(ParticleType.Group, 0, 0)
+                                            new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                             {
-                                                new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                 {
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -2328,9 +2411,9 @@ namespace DocumentFormat.OpenXml.Math
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
-                                    new CompositeParticle(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
+                                    new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                     {
-                                        new CompositeParticle(ParticleType.Sequence, 1, 1)
+                                        new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                         {
                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
@@ -2338,9 +2421,9 @@ namespace DocumentFormat.OpenXml.Math
                                     }
                                 }
                             },
-                            new CompositeParticle(ParticleType.Group, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Choice, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
                                     new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1)
                                 }
@@ -2358,7 +2441,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ParagraphProperties ParagraphProperties
+        public ParagraphProperties? ParagraphProperties
         {
             get => GetElement<ParagraphProperties>();
             set => SetElement(value);
@@ -2370,7 +2453,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the OfficeMath Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:oMath.</para>
     /// </summary>
     /// <remark>
@@ -2434,6 +2517,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>OfficeMath &lt;m:oMath></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "oMath")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeMath : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2527,15 +2613,15 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
             builder.AddChild<Paragraph>();
             builder.AddChild<OfficeMath>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -2556,57 +2642,57 @@ namespace DocumentFormat.OpenXml.Math
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                     }
                                 }
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
                                     }
                                 },
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
-                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                             {
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                                                             }
                                                         },
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
@@ -2614,9 +2700,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -2643,9 +2729,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
-                                                        new CompositeParticle(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
-                                                            new CompositeParticle(ParticleType.Sequence, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
@@ -2653,15 +2739,15 @@ namespace DocumentFormat.OpenXml.Math
                                                         }
                                                     }
                                                 },
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
-                                                        new CompositeParticle(ParticleType.Group, 1, 1)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -2682,9 +2768,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                                                     }
@@ -2710,7 +2796,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Math Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mathPr.</para>
     /// </summary>
     /// <remark>
@@ -2734,6 +2820,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>NaryLimitLocation &lt;m:naryLim></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "mathPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MathProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2787,7 +2876,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<WrapRight>();
             builder.AddChild<IntegralLimitLocation>();
             builder.AddChild<NaryLimitLocation>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFont), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BreakBinary), 0, 1),
@@ -2801,7 +2890,7 @@ namespace DocumentFormat.OpenXml.Math
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PostSpacing), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.InterSpacing), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.IntraSpacing), 0, 1),
-                new CompositeParticle(ParticleType.Choice, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.WrapIndent), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.WrapRight), 1, 1)
@@ -2818,7 +2907,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MathFont MathFont
+        public MathFont? MathFont
         {
             get => GetElement<MathFont>();
             set => SetElement(value);
@@ -2831,7 +2920,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BreakBinary BreakBinary
+        public BreakBinary? BreakBinary
         {
             get => GetElement<BreakBinary>();
             set => SetElement(value);
@@ -2844,7 +2933,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BreakBinarySubtraction BreakBinarySubtraction
+        public BreakBinarySubtraction? BreakBinarySubtraction
         {
             get => GetElement<BreakBinarySubtraction>();
             set => SetElement(value);
@@ -2857,7 +2946,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SmallFraction SmallFraction
+        public SmallFraction? SmallFraction
         {
             get => GetElement<SmallFraction>();
             set => SetElement(value);
@@ -2870,7 +2959,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public DisplayDefaults DisplayDefaults
+        public DisplayDefaults? DisplayDefaults
         {
             get => GetElement<DisplayDefaults>();
             set => SetElement(value);
@@ -2883,7 +2972,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public LeftMargin LeftMargin
+        public LeftMargin? LeftMargin
         {
             get => GetElement<LeftMargin>();
             set => SetElement(value);
@@ -2896,7 +2985,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RightMargin RightMargin
+        public RightMargin? RightMargin
         {
             get => GetElement<RightMargin>();
             set => SetElement(value);
@@ -2909,7 +2998,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public DefaultJustification DefaultJustification
+        public DefaultJustification? DefaultJustification
         {
             get => GetElement<DefaultJustification>();
             set => SetElement(value);
@@ -2922,7 +3011,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public PreSpacing PreSpacing
+        public PreSpacing? PreSpacing
         {
             get => GetElement<PreSpacing>();
             set => SetElement(value);
@@ -2935,7 +3024,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public PostSpacing PostSpacing
+        public PostSpacing? PostSpacing
         {
             get => GetElement<PostSpacing>();
             set => SetElement(value);
@@ -2948,7 +3037,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public InterSpacing InterSpacing
+        public InterSpacing? InterSpacing
         {
             get => GetElement<InterSpacing>();
             set => SetElement(value);
@@ -2961,7 +3050,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public IntraSpacing IntraSpacing
+        public IntraSpacing? IntraSpacing
         {
             get => GetElement<IntraSpacing>();
             set => SetElement(value);
@@ -2973,9 +3062,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Literal.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lit.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "lit")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Literal : OnOffType
     {
         /// <summary>
@@ -2997,9 +3089,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Normal Text.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:nor.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "nor")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NormalText : OnOffType
     {
         /// <summary>
@@ -3021,9 +3116,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Align.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:aln.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "aln")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Alignment : OnOffType
     {
         /// <summary>
@@ -3045,9 +3143,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Operator Emulator.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:opEmu.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "opEmu")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class OperatorEmulator : OnOffType
     {
         /// <summary>
@@ -3069,9 +3170,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>No Break.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:noBreak.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "noBreak")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NoBreak : OnOffType
     {
         /// <summary>
@@ -3093,9 +3197,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Differential.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:diff.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "diff")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Differential : OnOffType
     {
         /// <summary>
@@ -3117,9 +3224,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Top Edge.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideTop.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "hideTop")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideTop : OnOffType
     {
         /// <summary>
@@ -3141,9 +3251,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Bottom Edge.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideBot.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "hideBot")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideBottom : OnOffType
     {
         /// <summary>
@@ -3165,9 +3278,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Left Edge.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideLeft.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "hideLeft")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideLeft : OnOffType
     {
         /// <summary>
@@ -3189,9 +3305,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Right Edge.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:hideRight.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "hideRight")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideRight : OnOffType
     {
         /// <summary>
@@ -3213,9 +3332,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Border Box Strikethrough Horizontal.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeH.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "strikeH")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StrikeHorizontal : OnOffType
     {
         /// <summary>
@@ -3237,9 +3359,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Border Box Strikethrough Vertical.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeV.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "strikeV")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StrikeVertical : OnOffType
     {
         /// <summary>
@@ -3261,9 +3386,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Border Box Strikethrough Bottom-Left to Top-Right.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeBLTR.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "strikeBLTR")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StrikeBottomLeftToTopRight : OnOffType
     {
         /// <summary>
@@ -3285,9 +3413,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Border Box Strikethrough Top-Left to Bottom-Right.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:strikeTLBR.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "strikeTLBR")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class StrikeTopLeftToBottomRight : OnOffType
     {
         /// <summary>
@@ -3309,9 +3440,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Delimiter Grow.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:grow.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "grow")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GrowOperators : OnOffType
     {
         /// <summary>
@@ -3333,9 +3467,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Maximum Distribution.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:maxDist.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "maxDist")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MaxDistribution : OnOffType
     {
         /// <summary>
@@ -3357,9 +3494,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Object Distribution.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:objDist.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "objDist")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ObjectDistribution : OnOffType
     {
         /// <summary>
@@ -3381,9 +3521,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Placeholders (Matrix).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:plcHide.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "plcHide")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HidePlaceholder : OnOffType
     {
         /// <summary>
@@ -3405,9 +3548,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Subscript (n-ary).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:subHide.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "subHide")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideSubArgument : OnOffType
     {
         /// <summary>
@@ -3429,9 +3575,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Superscript (n-ary).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:supHide.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "supHide")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideSuperArgument : OnOffType
     {
         /// <summary>
@@ -3453,9 +3602,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Phantom Show.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:show.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "show")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ShowPhantom : OnOffType
     {
         /// <summary>
@@ -3477,9 +3629,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Phantom Zero Width.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroWid.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "zeroWid")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ZeroWidth : OnOffType
     {
         /// <summary>
@@ -3501,9 +3656,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Phantom Zero Ascent.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroAsc.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "zeroAsc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ZeroAscent : OnOffType
     {
         /// <summary>
@@ -3525,9 +3683,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Phantom Zero Descent.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:zeroDesc.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "zeroDesc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ZeroDescent : OnOffType
     {
         /// <summary>
@@ -3549,9 +3710,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Transparent (Phantom).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:transp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "transp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Transparent : OnOffType
     {
         /// <summary>
@@ -3573,9 +3737,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Hide Degree.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:degHide.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "degHide")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class HideDegree : OnOffType
     {
         /// <summary>
@@ -3597,9 +3764,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Align Scripts.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:alnScr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "alnScr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AlignScripts : OnOffType
     {
         /// <summary>
@@ -3621,9 +3791,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Small Fraction.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:smallFrac.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "smallFrac")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SmallFraction : OnOffType
     {
         /// <summary>
@@ -3645,9 +3818,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Use Display Math Defaults.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:dispDef.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "dispDef")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DisplayDefaults : OnOffType
     {
         /// <summary>
@@ -3669,9 +3845,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Wrap Right.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:wrapRight.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "wrapRight")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WrapRight : OnOffType
     {
         /// <summary>
@@ -3693,7 +3872,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the OnOffType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class OnOffType : OpenXmlLeafElement
@@ -3712,7 +3891,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>>();
             set => SetAttribute(value);
@@ -3728,9 +3913,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Break.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brk.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "brk")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Break : OpenXmlLeafElement
     {
         /// <summary>
@@ -3747,7 +3935,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public IntegerValue AlignAt
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "alnAt")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public IntegerValue? AlignAt
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -3760,7 +3954,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public IntegerValue Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -3787,7 +3987,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Run Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rPr.</para>
     /// </summary>
     /// <remark>
@@ -3801,6 +4001,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>Alignment &lt;m:aln></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "rPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3844,17 +4047,17 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<Style>();
             builder.AddChild<Break>();
             builder.AddChild<Alignment>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Literal), 0, 1),
-                new CompositeParticle(ParticleType.Choice, 1, 1)
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Math.NormalText), 0, 1),
-                    new CompositeParticle(ParticleType.Sequence, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Sequence, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Script), 0, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Style), 0, 1)
@@ -3874,7 +4077,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Literal Literal
+        public Literal? Literal
         {
             get => GetElement<Literal>();
             set => SetElement(value);
@@ -3886,9 +4089,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Text.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:t.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "t")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Text : OpenXmlLeafTextElement
     {
         /// <summary>
@@ -3918,7 +4124,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(1, "space")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
             set => SetAttribute(value);
@@ -3938,9 +4150,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Accent Character.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:chr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "chr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AccentChar : CharType
     {
         /// <summary>
@@ -3962,9 +4177,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Delimiter Beginning Character.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:begChr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "begChr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BeginChar : CharType
     {
         /// <summary>
@@ -3986,9 +4204,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Delimiter Separator Character.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sepChr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "sepChr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SeparatorChar : CharType
     {
         /// <summary>
@@ -4010,9 +4231,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Delimiter Ending Character.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:endChr.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "endChr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EndChar : CharType
     {
         /// <summary>
@@ -4034,7 +4258,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the CharType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class CharType : OpenXmlLeafElement
@@ -4053,7 +4277,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public StringValue Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -4073,7 +4303,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Control Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:ctrlPr.</para>
     /// </summary>
     /// <remark>
@@ -4086,6 +4316,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl &lt;w:moveTo></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "ctrlPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ControlProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4128,29 +4361,29 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromMathControl>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new CompositeParticle(ParticleType.Group, 0, 1)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Sequence, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.RunProperties), 0, 1)
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl), 1, 1)
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl), 1, 1)
                             }
@@ -4168,7 +4401,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Accent Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:accPr.</para>
     /// </summary>
     /// <remark>
@@ -4178,6 +4411,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "accPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class AccentProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4217,7 +4453,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.SetSchema(21, "accPr");
             builder.AddChild<AccentChar>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.AccentChar), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
@@ -4231,7 +4467,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public AccentChar AccentChar
+        public AccentChar? AccentChar
         {
             get => GetElement<AccentChar>();
             set => SetElement(value);
@@ -4244,7 +4480,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -4256,7 +4492,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Base.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:e.</para>
     /// </summary>
     /// <remark>
@@ -4322,6 +4558,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "e")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Base : OfficeMathArgumentType
     {
         /// <summary>
@@ -4359,16 +4598,16 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "e");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -4389,57 +4628,57 @@ namespace DocumentFormat.OpenXml.Math
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                     }
                                 }
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
                                     }
                                 },
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
-                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                             {
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                                                             }
                                                         },
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
@@ -4447,9 +4686,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -4476,9 +4715,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
-                                                        new CompositeParticle(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
-                                                            new CompositeParticle(ParticleType.Sequence, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
@@ -4486,15 +4725,15 @@ namespace DocumentFormat.OpenXml.Math
                                                         }
                                                     }
                                                 },
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
-                                                        new CompositeParticle(ParticleType.Group, 1, 1)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -4515,9 +4754,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                                                     }
@@ -4544,7 +4783,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Numerator.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:num.</para>
     /// </summary>
     /// <remark>
@@ -4610,6 +4849,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "num")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Numerator : OfficeMathArgumentType
     {
         /// <summary>
@@ -4647,16 +4889,16 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "num");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -4677,57 +4919,57 @@ namespace DocumentFormat.OpenXml.Math
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                     }
                                 }
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
                                     }
                                 },
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
-                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                             {
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                                                             }
                                                         },
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
@@ -4735,9 +4977,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -4764,9 +5006,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
-                                                        new CompositeParticle(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
-                                                            new CompositeParticle(ParticleType.Sequence, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
@@ -4774,15 +5016,15 @@ namespace DocumentFormat.OpenXml.Math
                                                         }
                                                     }
                                                 },
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
-                                                        new CompositeParticle(ParticleType.Group, 1, 1)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -4803,9 +5045,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                                                     }
@@ -4832,7 +5074,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Denominator.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:den.</para>
     /// </summary>
     /// <remark>
@@ -4898,6 +5140,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "den")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Denominator : OfficeMathArgumentType
     {
         /// <summary>
@@ -4935,16 +5180,16 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "den");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -4965,57 +5210,57 @@ namespace DocumentFormat.OpenXml.Math
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                     }
                                 }
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
                                     }
                                 },
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
-                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                             {
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                                                             }
                                                         },
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
@@ -5023,9 +5268,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -5052,9 +5297,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
-                                                        new CompositeParticle(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
-                                                            new CompositeParticle(ParticleType.Sequence, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
@@ -5062,15 +5307,15 @@ namespace DocumentFormat.OpenXml.Math
                                                         }
                                                     }
                                                 },
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
-                                                        new CompositeParticle(ParticleType.Group, 1, 1)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -5091,9 +5336,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                                                     }
@@ -5120,7 +5365,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Function Name.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:fName.</para>
     /// </summary>
     /// <remark>
@@ -5186,6 +5431,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "fName")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FunctionName : OfficeMathArgumentType
     {
         /// <summary>
@@ -5223,16 +5471,16 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "fName");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -5253,57 +5501,57 @@ namespace DocumentFormat.OpenXml.Math
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                     }
                                 }
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
                                     }
                                 },
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
-                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                             {
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                                                             }
                                                         },
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
@@ -5311,9 +5559,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -5340,9 +5588,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
-                                                        new CompositeParticle(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
-                                                            new CompositeParticle(ParticleType.Sequence, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
@@ -5350,15 +5598,15 @@ namespace DocumentFormat.OpenXml.Math
                                                         }
                                                     }
                                                 },
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
-                                                        new CompositeParticle(ParticleType.Group, 1, 1)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -5379,9 +5627,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                                                     }
@@ -5408,7 +5656,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Limit (Lower).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lim.</para>
     /// </summary>
     /// <remark>
@@ -5474,6 +5722,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "lim")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Limit : OfficeMathArgumentType
     {
         /// <summary>
@@ -5511,16 +5762,16 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "lim");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -5541,57 +5792,57 @@ namespace DocumentFormat.OpenXml.Math
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                     }
                                 }
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
                                     }
                                 },
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
-                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                             {
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                                                             }
                                                         },
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
@@ -5599,9 +5850,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -5628,9 +5879,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
-                                                        new CompositeParticle(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
-                                                            new CompositeParticle(ParticleType.Sequence, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
@@ -5638,15 +5889,15 @@ namespace DocumentFormat.OpenXml.Math
                                                         }
                                                     }
                                                 },
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
-                                                        new CompositeParticle(ParticleType.Group, 1, 1)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -5667,9 +5918,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                                                     }
@@ -5696,7 +5947,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Lower limit (n-ary) .</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sub.</para>
     /// </summary>
     /// <remark>
@@ -5762,6 +6013,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "sub")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SubArgument : OfficeMathArgumentType
     {
         /// <summary>
@@ -5799,16 +6053,16 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "sub");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -5829,57 +6083,57 @@ namespace DocumentFormat.OpenXml.Math
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                     }
                                 }
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
                                     }
                                 },
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
-                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                             {
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                                                             }
                                                         },
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
@@ -5887,9 +6141,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -5916,9 +6170,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
-                                                        new CompositeParticle(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
-                                                            new CompositeParticle(ParticleType.Sequence, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
@@ -5926,15 +6180,15 @@ namespace DocumentFormat.OpenXml.Math
                                                         }
                                                     }
                                                 },
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
-                                                        new CompositeParticle(ParticleType.Group, 1, 1)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -5955,9 +6209,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                                                     }
@@ -5984,7 +6238,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Upper limit (n-ary).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sup.</para>
     /// </summary>
     /// <remark>
@@ -6050,6 +6304,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "sup")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SuperArgument : OfficeMathArgumentType
     {
         /// <summary>
@@ -6087,16 +6344,16 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "sup");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -6117,57 +6374,57 @@ namespace DocumentFormat.OpenXml.Math
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                     }
                                 }
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
                                     }
                                 },
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
-                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                             {
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                                                             }
                                                         },
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
@@ -6175,9 +6432,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -6204,9 +6461,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
-                                                        new CompositeParticle(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
-                                                            new CompositeParticle(ParticleType.Sequence, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
@@ -6214,15 +6471,15 @@ namespace DocumentFormat.OpenXml.Math
                                                         }
                                                     }
                                                 },
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
-                                                        new CompositeParticle(ParticleType.Group, 1, 1)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -6243,9 +6500,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                                                     }
@@ -6272,7 +6529,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Degree.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:deg.</para>
     /// </summary>
     /// <remark>
@@ -6338,6 +6595,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "deg")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Degree : OfficeMathArgumentType
     {
         /// <summary>
@@ -6375,16 +6635,16 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "deg");
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentProperties), 0, 1),
-                new CompositeParticle(ParticleType.Group, 0, 0)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
-                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -6405,57 +6665,57 @@ namespace DocumentFormat.OpenXml.Math
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                     }
                                 }
                             }
                         },
-                        new CompositeParticle(ParticleType.Group, 1, 1)
+                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
-                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun), 1, 1),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SimpleField), 0, 0),
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Hyperlink), 1, 1)
                                     }
                                 },
-                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
-                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
-                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
-                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                             {
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
                                                             }
                                                         },
-                                                        new CompositeParticle(ParticleType.Group, 0, 0)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
@@ -6463,9 +6723,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
                                                                     }
                                                                 },
-                                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
@@ -6492,9 +6752,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
-                                                        new CompositeParticle(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
-                                                            new CompositeParticle(ParticleType.Sequence, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
@@ -6502,15 +6762,15 @@ namespace DocumentFormat.OpenXml.Math
                                                         }
                                                     }
                                                 },
-                                                new CompositeParticle(ParticleType.Group, 0, 0)
+                                                new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                 {
-                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
-                                                        new CompositeParticle(ParticleType.Group, 1, 1)
+                                                        new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
-                                                            new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                            new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
@@ -6531,9 +6791,9 @@ namespace DocumentFormat.OpenXml.Math
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
                                                                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
-                                                                new CompositeParticle(ParticleType.Group, 1, 1)
+                                                                new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
-                                                                    new CompositeParticle(ParticleType.Choice, 1, 1)
+                                                                    new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
                                                                         new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
                                                                     }
@@ -6560,7 +6820,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the OfficeMathArgumentType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     /// <remark>
@@ -6729,7 +6989,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ArgumentProperties ArgumentProperties
+        public ArgumentProperties? ArgumentProperties
         {
             get => GetElement<ArgumentProperties>();
             set => SetElement(value);
@@ -6738,9 +6998,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Position (Bar).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:pos.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "pos")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Position : TopBottomType
     {
         /// <summary>
@@ -6762,9 +7025,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Vertical Justification.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:vertJc.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "vertJc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class VerticalJustification : TopBottomType
     {
         /// <summary>
@@ -6786,7 +7052,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Defines the TopBottomType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class TopBottomType : OpenXmlLeafElement
@@ -6805,7 +7071,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>>();
             set => SetAttribute(value);
@@ -6824,7 +7096,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Bar Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:barPr.</para>
     /// </summary>
     /// <remark>
@@ -6834,6 +7106,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "barPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BarProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6873,7 +7148,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.SetSchema(21, "barPr");
             builder.AddChild<Position>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Position), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
@@ -6887,7 +7162,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Position Position
+        public Position? Position
         {
             get => GetElement<Position>();
             set => SetElement(value);
@@ -6900,7 +7175,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -6912,7 +7187,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Box Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:boxPr.</para>
     /// </summary>
     /// <remark>
@@ -6926,6 +7201,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "boxPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BoxProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6969,7 +7247,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<Break>();
             builder.AddChild<Alignment>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OperatorEmulator), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.NoBreak), 0, 1),
@@ -6987,7 +7265,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public OperatorEmulator OperatorEmulator
+        public OperatorEmulator? OperatorEmulator
         {
             get => GetElement<OperatorEmulator>();
             set => SetElement(value);
@@ -7000,7 +7278,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public NoBreak NoBreak
+        public NoBreak? NoBreak
         {
             get => GetElement<NoBreak>();
             set => SetElement(value);
@@ -7013,7 +7291,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Differential Differential
+        public Differential? Differential
         {
             get => GetElement<Differential>();
             set => SetElement(value);
@@ -7026,7 +7304,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Break Break
+        public Break? Break
         {
             get => GetElement<Break>();
             set => SetElement(value);
@@ -7039,7 +7317,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Alignment Alignment
+        public Alignment? Alignment
         {
             get => GetElement<Alignment>();
             set => SetElement(value);
@@ -7052,7 +7330,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -7064,7 +7342,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Border Box Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:borderBoxPr.</para>
     /// </summary>
     /// <remark>
@@ -7081,6 +7359,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "borderBoxPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BorderBoxProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7127,7 +7408,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<StrikeBottomLeftToTopRight>();
             builder.AddChild<StrikeTopLeftToBottomRight>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.HideTop), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.HideBottom), 0, 1),
@@ -7148,7 +7429,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideTop HideTop
+        public HideTop? HideTop
         {
             get => GetElement<HideTop>();
             set => SetElement(value);
@@ -7161,7 +7442,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideBottom HideBottom
+        public HideBottom? HideBottom
         {
             get => GetElement<HideBottom>();
             set => SetElement(value);
@@ -7174,7 +7455,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideLeft HideLeft
+        public HideLeft? HideLeft
         {
             get => GetElement<HideLeft>();
             set => SetElement(value);
@@ -7187,7 +7468,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideRight HideRight
+        public HideRight? HideRight
         {
             get => GetElement<HideRight>();
             set => SetElement(value);
@@ -7200,7 +7481,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public StrikeHorizontal StrikeHorizontal
+        public StrikeHorizontal? StrikeHorizontal
         {
             get => GetElement<StrikeHorizontal>();
             set => SetElement(value);
@@ -7213,7 +7494,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public StrikeVertical StrikeVertical
+        public StrikeVertical? StrikeVertical
         {
             get => GetElement<StrikeVertical>();
             set => SetElement(value);
@@ -7226,7 +7507,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public StrikeBottomLeftToTopRight StrikeBottomLeftToTopRight
+        public StrikeBottomLeftToTopRight? StrikeBottomLeftToTopRight
         {
             get => GetElement<StrikeBottomLeftToTopRight>();
             set => SetElement(value);
@@ -7239,7 +7520,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public StrikeTopLeftToBottomRight StrikeTopLeftToBottomRight
+        public StrikeTopLeftToBottomRight? StrikeTopLeftToBottomRight
         {
             get => GetElement<StrikeTopLeftToBottomRight>();
             set => SetElement(value);
@@ -7252,7 +7533,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -7264,9 +7545,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Shape (Delimiters).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:shp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "shp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Shape : OpenXmlLeafElement
     {
         /// <summary>
@@ -7283,7 +7567,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>>();
             set => SetAttribute(value);
@@ -7306,7 +7596,7 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Delimiter Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:dPr.</para>
     /// </summary>
     /// <remark>
@@ -7320,6 +7610,9 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "dPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DelimiterProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7363,7 +7656,7 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<GrowOperators>();
             builder.AddChild<Shape>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BeginChar), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SeparatorChar), 0, 1),
@@ -7381,7 +7674,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BeginChar BeginChar
+        public BeginChar? BeginChar
         {
             get => GetElement<BeginChar>();
             set => SetElement(value);
@@ -7394,7 +7687,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public SeparatorChar SeparatorChar
+        public SeparatorChar? SeparatorChar
         {
             get => GetElement<SeparatorChar>();
             set => SetElement(value);
@@ -7407,7 +7700,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EndChar EndChar
+        public EndChar? EndChar
         {
             get => GetElement<EndChar>();
             set => SetElement(value);
@@ -7420,7 +7713,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public GrowOperators GrowOperators
+        public GrowOperators? GrowOperators
         {
             get => GetElement<GrowOperators>();
             set => SetElement(value);
@@ -7433,7 +7726,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Shape Shape
+        public Shape? Shape
         {
             get => GetElement<Shape>();
             set => SetElement(value);
@@ -7446,7 +7739,7 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -7458,9 +7751,12 @@ namespace DocumentFormat.OpenXml.Math
 
     /// <summary>
     /// <para>Equation Array Base Justification.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:baseJc.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "baseJc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BaseJustification : OpenXmlLeafElement
     {
         /// <summary>
@@ -7477,7 +7773,13 @@ namespace DocumentFormat.OpenXml.Math
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>>();
             set => SetAttribute(value);
@@ -7500,9 +7802,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Row Spacing Rule.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rSpRule.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "rSpRule")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowSpacingRule : SpacingRuleType
     {
         /// <summary>
@@ -7524,9 +7829,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column Gap Rule.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cGpRule.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "cGpRule")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnGapRule : SpacingRuleType
     {
         /// <summary>
@@ -7548,7 +7856,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the SpacingRuleType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class SpacingRuleType : OpenXmlLeafElement
@@ -7567,7 +7875,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public IntegerValue Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -7587,9 +7901,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Row Spacing (Equation Array).</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rSp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "rSp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RowSpacing : UnsignedShortType
     {
         /// <summary>
@@ -7611,9 +7928,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column Gap.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cGp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "cGp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnGap : UnsignedShortType
     {
         /// <summary>
@@ -7635,7 +7955,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the UnsignedShortType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class UnsignedShortType : OpenXmlLeafElement
@@ -7654,7 +7974,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public UInt16Value Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
             set => SetAttribute(value);
@@ -7673,7 +7999,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Equation Array Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:eqArrPr.</para>
     /// </summary>
     /// <remark>
@@ -7687,6 +8013,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "eqArrPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class EquationArrayProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7730,7 +8059,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<RowSpacingRule>();
             builder.AddChild<RowSpacing>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BaseJustification), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MaxDistribution), 0, 1),
@@ -7748,7 +8077,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BaseJustification BaseJustification
+        public BaseJustification? BaseJustification
         {
             get => GetElement<BaseJustification>();
             set => SetElement(value);
@@ -7761,7 +8090,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MaxDistribution MaxDistribution
+        public MaxDistribution? MaxDistribution
         {
             get => GetElement<MaxDistribution>();
             set => SetElement(value);
@@ -7774,7 +8103,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ObjectDistribution ObjectDistribution
+        public ObjectDistribution? ObjectDistribution
         {
             get => GetElement<ObjectDistribution>();
             set => SetElement(value);
@@ -7787,7 +8116,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RowSpacingRule RowSpacingRule
+        public RowSpacingRule? RowSpacingRule
         {
             get => GetElement<RowSpacingRule>();
             set => SetElement(value);
@@ -7800,7 +8129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RowSpacing RowSpacing
+        public RowSpacing? RowSpacing
         {
             get => GetElement<RowSpacing>();
             set => SetElement(value);
@@ -7813,7 +8142,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -7825,9 +8154,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Fraction type.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:type.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "type")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FractionType : OpenXmlLeafElement
     {
         /// <summary>
@@ -7844,7 +8176,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>>();
             set => SetAttribute(value);
@@ -7867,7 +8205,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Fraction Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:fPr.</para>
     /// </summary>
     /// <remark>
@@ -7877,6 +8215,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "fPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FractionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7916,7 +8257,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(21, "fPr");
             builder.AddChild<FractionType>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.FractionType), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
@@ -7930,7 +8271,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public FractionType FractionType
+        public FractionType? FractionType
         {
             get => GetElement<FractionType>();
             set => SetElement(value);
@@ -7943,7 +8284,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -7955,7 +8296,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Function Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:funcPr.</para>
     /// </summary>
     /// <remark>
@@ -7964,6 +8305,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "funcPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class FunctionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8002,7 +8346,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "funcPr");
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
             };
@@ -8015,7 +8359,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -8027,7 +8371,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Group-Character Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:groupChrPr.</para>
     /// </summary>
     /// <remark>
@@ -8039,6 +8383,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "groupChrPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class GroupCharProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8080,7 +8427,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Position>();
             builder.AddChild<VerticalJustification>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.AccentChar), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Position), 0, 1),
@@ -8096,7 +8443,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public AccentChar AccentChar
+        public AccentChar? AccentChar
         {
             get => GetElement<AccentChar>();
             set => SetElement(value);
@@ -8109,7 +8456,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Position Position
+        public Position? Position
         {
             get => GetElement<Position>();
             set => SetElement(value);
@@ -8122,7 +8469,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public VerticalJustification VerticalJustification
+        public VerticalJustification? VerticalJustification
         {
             get => GetElement<VerticalJustification>();
             set => SetElement(value);
@@ -8135,7 +8482,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -8147,7 +8494,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Lower Limit Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limLowPr.</para>
     /// </summary>
     /// <remark>
@@ -8156,6 +8503,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "limLowPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LimitLowerProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8194,7 +8544,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "limLowPr");
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
             };
@@ -8207,7 +8557,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -8219,7 +8569,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Upper Limit Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limUppPr.</para>
     /// </summary>
     /// <remark>
@@ -8228,6 +8578,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "limUppPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LimitUpperProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8266,7 +8619,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "limUppPr");
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
             };
@@ -8279,7 +8632,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -8291,9 +8644,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column Count.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:count.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "count")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixColumnCount : OpenXmlLeafElement
     {
         /// <summary>
@@ -8310,7 +8666,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public IntegerValue Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -8334,9 +8696,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column Justification.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mcJc.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "mcJc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixColumnJustification : OpenXmlLeafElement
     {
         /// <summary>
@@ -8353,7 +8718,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>>();
             set => SetAttribute(value);
@@ -8376,7 +8747,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mcPr.</para>
     /// </summary>
     /// <remark>
@@ -8386,6 +8757,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>MatrixColumnJustification &lt;m:mcJc></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "mcPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixColumnProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8425,7 +8799,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(21, "mcPr");
             builder.AddChild<MatrixColumnCount>();
             builder.AddChild<MatrixColumnJustification>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixColumnCount), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixColumnJustification), 0, 1)
@@ -8439,7 +8813,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MatrixColumnCount MatrixColumnCount
+        public MatrixColumnCount? MatrixColumnCount
         {
             get => GetElement<MatrixColumnCount>();
             set => SetElement(value);
@@ -8452,7 +8826,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MatrixColumnJustification MatrixColumnJustification
+        public MatrixColumnJustification? MatrixColumnJustification
         {
             get => GetElement<MatrixColumnJustification>();
             set => SetElement(value);
@@ -8464,7 +8838,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mc.</para>
     /// </summary>
     /// <remark>
@@ -8473,6 +8847,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>MatrixColumnProperties &lt;m:mcPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "mc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixColumn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8511,7 +8888,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "mc");
             builder.AddChild<MatrixColumnProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixColumnProperties), 0, 1)
             };
@@ -8524,7 +8901,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MatrixColumnProperties MatrixColumnProperties
+        public MatrixColumnProperties? MatrixColumnProperties
         {
             get => GetElement<MatrixColumnProperties>();
             set => SetElement(value);
@@ -8536,9 +8913,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Column Spacing.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:cSp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "cSp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ColumnSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8560,9 +8940,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Left Margin.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lMargin.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "lMargin")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LeftMargin : TwipsMeasureType
     {
         /// <summary>
@@ -8584,9 +8967,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Right Margin.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rMargin.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "rMargin")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RightMargin : TwipsMeasureType
     {
         /// <summary>
@@ -8608,9 +8994,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Pre-Equation Spacing.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:preSp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "preSp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8632,9 +9021,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Post-Equation Spacing.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:postSp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "postSp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PostSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8656,9 +9048,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Inter-Equation Spacing.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:interSp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "interSp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class InterSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8680,9 +9075,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Intra-Equation Spacing.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:intraSp.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "intraSp")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class IntraSpacing : TwipsMeasureType
     {
         /// <summary>
@@ -8704,9 +9102,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Wrap Indent.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:wrapIndent.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "wrapIndent")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class WrapIndent : TwipsMeasureType
     {
         /// <summary>
@@ -8728,7 +9129,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the TwipsMeasureType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class TwipsMeasureType : OpenXmlLeafElement
@@ -8747,7 +9148,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public UInt32Value Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
             set => SetAttribute(value);
@@ -8767,7 +9174,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Columns.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mcs.</para>
     /// </summary>
     /// <remark>
@@ -8776,6 +9183,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>MatrixColumn &lt;m:mc></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "mcs")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixColumns : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8814,7 +9224,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "mcs");
             builder.AddChild<MatrixColumn>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MatrixColumn), 1, 64)
             };
@@ -8826,7 +9236,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mPr.</para>
     /// </summary>
     /// <remark>
@@ -8843,6 +9253,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "mPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8889,7 +9302,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ColumnGap>();
             builder.AddChild<MatrixColumns>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BaseJustification), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.HidePlaceholder), 0, 1),
@@ -8910,7 +9323,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public BaseJustification BaseJustification
+        public BaseJustification? BaseJustification
         {
             get => GetElement<BaseJustification>();
             set => SetElement(value);
@@ -8923,7 +9336,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HidePlaceholder HidePlaceholder
+        public HidePlaceholder? HidePlaceholder
         {
             get => GetElement<HidePlaceholder>();
             set => SetElement(value);
@@ -8936,7 +9349,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RowSpacingRule RowSpacingRule
+        public RowSpacingRule? RowSpacingRule
         {
             get => GetElement<RowSpacingRule>();
             set => SetElement(value);
@@ -8949,7 +9362,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ColumnGapRule ColumnGapRule
+        public ColumnGapRule? ColumnGapRule
         {
             get => GetElement<ColumnGapRule>();
             set => SetElement(value);
@@ -8962,7 +9375,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public RowSpacing RowSpacing
+        public RowSpacing? RowSpacing
         {
             get => GetElement<RowSpacing>();
             set => SetElement(value);
@@ -8975,7 +9388,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ColumnSpacing ColumnSpacing
+        public ColumnSpacing? ColumnSpacing
         {
             get => GetElement<ColumnSpacing>();
             set => SetElement(value);
@@ -8988,7 +9401,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ColumnGap ColumnGap
+        public ColumnGap? ColumnGap
         {
             get => GetElement<ColumnGap>();
             set => SetElement(value);
@@ -9001,7 +9414,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public MatrixColumns MatrixColumns
+        public MatrixColumns? MatrixColumns
         {
             get => GetElement<MatrixColumns>();
             set => SetElement(value);
@@ -9014,7 +9427,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -9026,7 +9439,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Matrix Row.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mr.</para>
     /// </summary>
     /// <remark>
@@ -9035,6 +9448,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>Base &lt;m:e></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "mr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MatrixRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9073,7 +9489,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "mr");
             builder.AddChild<Base>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Base), 1, 64)
             };
@@ -9085,9 +9501,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>n-ary Limit Location.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limLoc.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "limLoc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class LimitLocation : LimitLocationType
     {
         /// <summary>
@@ -9109,9 +9528,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Integral Limit Locations.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:intLim.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "intLim")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class IntegralLimitLocation : LimitLocationType
     {
         /// <summary>
@@ -9133,9 +9555,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>n-ary Limit Location.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:naryLim.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "naryLim")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NaryLimitLocation : LimitLocationType
     {
         /// <summary>
@@ -9157,7 +9582,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the LimitLocationType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class LimitLocationType : OpenXmlLeafElement
@@ -9176,7 +9601,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>>();
             set => SetAttribute(value);
@@ -9195,7 +9626,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>n-ary Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:naryPr.</para>
     /// </summary>
     /// <remark>
@@ -9209,6 +9640,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "naryPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class NaryProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9252,7 +9686,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<HideSubArgument>();
             builder.AddChild<HideSuperArgument>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.AccentChar), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLocation), 0, 1),
@@ -9270,7 +9704,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public AccentChar AccentChar
+        public AccentChar? AccentChar
         {
             get => GetElement<AccentChar>();
             set => SetElement(value);
@@ -9283,7 +9717,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public LimitLocation LimitLocation
+        public LimitLocation? LimitLocation
         {
             get => GetElement<LimitLocation>();
             set => SetElement(value);
@@ -9296,7 +9730,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public GrowOperators GrowOperators
+        public GrowOperators? GrowOperators
         {
             get => GetElement<GrowOperators>();
             set => SetElement(value);
@@ -9309,7 +9743,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideSubArgument HideSubArgument
+        public HideSubArgument? HideSubArgument
         {
             get => GetElement<HideSubArgument>();
             set => SetElement(value);
@@ -9322,7 +9756,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideSuperArgument HideSuperArgument
+        public HideSuperArgument? HideSuperArgument
         {
             get => GetElement<HideSuperArgument>();
             set => SetElement(value);
@@ -9335,7 +9769,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -9347,7 +9781,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Phantom Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:phantPr.</para>
     /// </summary>
     /// <remark>
@@ -9361,6 +9795,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "phantPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PhantomProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9404,7 +9841,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ZeroDescent>();
             builder.AddChild<Transparent>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ShowPhantom), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ZeroWidth), 0, 1),
@@ -9422,7 +9859,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ShowPhantom ShowPhantom
+        public ShowPhantom? ShowPhantom
         {
             get => GetElement<ShowPhantom>();
             set => SetElement(value);
@@ -9435,7 +9872,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ZeroWidth ZeroWidth
+        public ZeroWidth? ZeroWidth
         {
             get => GetElement<ZeroWidth>();
             set => SetElement(value);
@@ -9448,7 +9885,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ZeroAscent ZeroAscent
+        public ZeroAscent? ZeroAscent
         {
             get => GetElement<ZeroAscent>();
             set => SetElement(value);
@@ -9461,7 +9898,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ZeroDescent ZeroDescent
+        public ZeroDescent? ZeroDescent
         {
             get => GetElement<ZeroDescent>();
             set => SetElement(value);
@@ -9474,7 +9911,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Transparent Transparent
+        public Transparent? Transparent
         {
             get => GetElement<Transparent>();
             set => SetElement(value);
@@ -9487,7 +9924,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -9499,7 +9936,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Radical Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:radPr.</para>
     /// </summary>
     /// <remark>
@@ -9509,6 +9946,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "radPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class RadicalProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9548,7 +9988,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(21, "radPr");
             builder.AddChild<HideDegree>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.HideDegree), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
@@ -9562,7 +10002,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public HideDegree HideDegree
+        public HideDegree? HideDegree
         {
             get => GetElement<HideDegree>();
             set => SetElement(value);
@@ -9575,7 +10015,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -9587,7 +10027,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Pre-Sub-Superscript Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sPrePr.</para>
     /// </summary>
     /// <remark>
@@ -9596,6 +10036,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "sPrePr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class PreSubSuperProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9634,7 +10077,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "sPrePr");
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
             };
@@ -9647,7 +10090,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -9659,7 +10102,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Subscript Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSubPr.</para>
     /// </summary>
     /// <remark>
@@ -9668,6 +10111,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "sSubPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SubscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9706,7 +10152,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "sSubPr");
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
             };
@@ -9719,7 +10165,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -9731,7 +10177,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Sub-Superscript Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSubSupPr.</para>
     /// </summary>
     /// <remark>
@@ -9741,6 +10187,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "sSubSupPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9780,7 +10229,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.SetSchema(21, "sSubSupPr");
             builder.AddChild<AlignScripts>();
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.AlignScripts), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
@@ -9794,7 +10243,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public AlignScripts AlignScripts
+        public AlignScripts? AlignScripts
         {
             get => GetElement<AlignScripts>();
             set => SetElement(value);
@@ -9807,7 +10256,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -9819,7 +10268,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Superscript Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSupPr.</para>
     /// </summary>
     /// <remark>
@@ -9828,6 +10277,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ControlProperties &lt;m:ctrlPr></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "sSupPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SuperscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9866,7 +10318,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "sSupPr");
             builder.AddChild<ControlProperties>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ControlProperties), 0, 1)
             };
@@ -9879,7 +10331,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ControlProperties ControlProperties
+        public ControlProperties? ControlProperties
         {
             get => GetElement<ControlProperties>();
             set => SetElement(value);
@@ -9891,9 +10343,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Argument Size.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:argSz.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "argSz")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ArgumentSize : OpenXmlLeafElement
     {
         /// <summary>
@@ -9910,7 +10365,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public IntegerValue Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
             set => SetAttribute(value);
@@ -9934,7 +10395,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Argument Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:argPr.</para>
     /// </summary>
     /// <remark>
@@ -9943,6 +10404,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ArgumentSize &lt;m:argSz></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "argPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ArgumentProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9981,7 +10445,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "argPr");
             builder.AddChild<ArgumentSize>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.ArgumentSize), 0, 1)
             };
@@ -9994,7 +10458,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public ArgumentSize ArgumentSize
+        public ArgumentSize? ArgumentSize
         {
             get => GetElement<ArgumentSize>();
             set => SetElement(value);
@@ -10006,9 +10470,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Justification.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:jc.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "jc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class Justification : OfficeMathJustificationType
     {
         /// <summary>
@@ -10030,9 +10497,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Default Justification.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:defJc.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "defJc")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class DefaultJustification : OfficeMathJustificationType
     {
         /// <summary>
@@ -10054,7 +10524,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Defines the OfficeMathJustificationType Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
     public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
@@ -10073,7 +10543,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>>();
             set => SetAttribute(value);
@@ -10092,9 +10568,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
     /// <summary>
     /// <para>Math Font.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mathFont.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "mathFont")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class MathFont : OpenXmlLeafElement
     {
         /// <summary>
@@ -10111,7 +10590,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public StringValue Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Val
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -10135,9 +10620,12 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
 
     /// <summary>
     /// <para>Break on Binary Operators.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brkBin.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "brkBin")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BreakBinary : OpenXmlLeafElement
     {
         /// <summary>
@@ -10154,7 +10642,13 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>>();
             set => SetAttribute(value);
@@ -10174,9 +10668,12 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
 
     /// <summary>
     /// <para>Break on Binary Subtraction.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brkBinSub.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "brkBinSub")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class BreakBinarySubtraction : OpenXmlLeafElement
     {
         /// <summary>
@@ -10193,7 +10690,13 @@ aBuilder.AddValidator(new StringValidator() { MaxLength = (31L) });
         /// <remark>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(21, "val")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>>();
             set => SetAttribute(value);
@@ -10217,7 +10720,7 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
 
     /// <summary>
     /// <para>Office Math Paragraph Properties.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:oMathParaPr.</para>
     /// </summary>
     /// <remark>
@@ -10226,6 +10729,9 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     ///   <item><description>Justification &lt;m:jc></description></item>
     /// </list>
     /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(21, "oMathParaPr")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10264,7 +10770,7 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
             base.ConfigureMetadata(builder);
             builder.SetSchema(21, "oMathParaPr");
             builder.AddChild<Justification>();
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Justification), 0, 1)
             };
@@ -10277,7 +10783,7 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
         /// <remark>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
         /// </remark>
-        public Justification Justification
+        public Justification? Justification
         {
             get => GetElement<Justification>();
             set => SetElement(value);

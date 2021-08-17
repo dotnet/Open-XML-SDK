@@ -13,25 +13,25 @@ namespace DocumentFormat.OpenXml
     public class StringValue : OpenXmlComparableSimpleReference<string>
     {
         /// <summary>
-        /// Initializes a new instance of the StringValue class.
+        /// Initializes a new instance of the <see cref="StringValue"/> class.
         /// </summary>
         public StringValue()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the StringValue class using the supplied string.
+        /// Initializes a new instance of the <see cref="StringValue"/> class using the supplied string.
         /// </summary>
         /// <param name="value">The string value.</param>
-        public StringValue(string value)
+        public StringValue(string? value)
         {
             TextValue = value;
         }
 
         /// <summary>
-        /// Initializes a new instance of the StringValue class by deep copying the supplied StringValue class.
+        /// Initializes a new instance of the <see cref="StringValue"/> class by deep copying the supplied <see cref="StringValue"/> class.
         /// </summary>
-        /// <param name="source">The source StringValue class.</param>
+        /// <param name="source">The source <see cref="StringValue"/> class.</param>
         public StringValue(StringValue source)
             : base(source)
         {
@@ -44,64 +44,58 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets the string value.
         /// </summary>
-        public override string Value
+        public override string? Value
         {
             get => TextValue;
             set => TextValue = value;
         }
 
         /// <summary>
-        /// Implicitly converts the specified value to a String value.
+        /// Implicitly converts the specified value to a <see cref="string"/> value.
         /// </summary>
-        /// <param name="xmlAttribute">The StringValue to convert.</param>
+        /// <param name="value">The <see cref="StringValue"/> to convert.</param>
         /// <returns>
-        /// The converted String value. Returns null when xmlAttribute is null.
+        /// The converted value. Returns <c>null</c>when <paramref name="value"/> is <c>null</c>.
         /// </returns>
-        public static implicit operator string(StringValue xmlAttribute)
+        public static implicit operator string?(StringValue? value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 return null;
             }
 
-            return ToString(xmlAttribute);
+            return ToString(value);
         }
 
         /// <summary>
-        /// Implicitly converts the specified String value to a StringValue object.
+        /// Implicitly converts the specified <see cref="string"/> value to a <see cref="StringValue"/> object.
         /// </summary>
         /// <param name="value">The specified value.</param>
-        /// <returns>A new StringValue instance with the value.</returns>
-        public static implicit operator StringValue(string value)
-        {
-            return FromString(value);
-        }
+        /// <returns>A new <see cref="StringValue"/> instance with the value.</returns>
+        public static implicit operator StringValue(string? value) => FromString(value);
 
         /// <summary>
-        /// Returns a new StringValue object that was created from a String value.
+        /// Returns a new <see cref="StringValue"/> object that was created from a <see cref="string"/> value.
         /// </summary>
-        /// <param name="value">A String value to use to create a new StringValue object.</param>
-        /// <returns>A StringValue that corresponds to the value parameter.</returns>
-        public static StringValue FromString(string value)
-        {
-            return new StringValue(value);
-        }
+        /// <param name="value">A <see cref="string"/> value to use to create a new <see cref="StringValue"/> object.</param>
+        /// <returns>A <see cref="StringValue"/> that corresponds to the value parameter.</returns>
+        public static StringValue FromString(string? value) => new StringValue(value);
 
         /// <summary>
-        /// Returns the String value representation of a StringValue object.
+        /// Returns the <see cref="string"/> value representation of a <see cref="StringValue"/> object.
         /// </summary>
-        /// <param name="xmlAttribute">
-        /// A StringValue object used to retrieve a String value representation.
+        /// <param name="value">
+        /// A <see cref="StringValue"/> object used to retrieve a <see cref="string"/> value representation.
         /// </param>
-        /// <returns>A String value that represents a StringValue object.</returns>
-        public static string ToString(StringValue xmlAttribute)
+        /// <returns>A <see cref="string"/> value that represents a <see cref="StringValue"/> object.</returns>
+        public static string? ToString(StringValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return xmlAttribute.Value;
+            return value.Value;
         }
 
         private protected override OpenXmlSimpleType CloneImpl() => new StringValue(this);

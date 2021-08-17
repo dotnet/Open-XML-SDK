@@ -12,16 +12,23 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the base class for PackageRelationshipPropertyCollection and PackagePartRelationshipPropertyCollection objects.
     /// </summary>
-    abstract internal class RelationshipCollection : List<RelationshipProperty>
+    internal abstract class RelationshipCollection : List<RelationshipProperty>
     {
-        protected PackageRelationshipCollection BasePackageRelationshipCollection { get; set; }
+        protected PackageRelationshipCollection BasePackageRelationshipCollection { get; }
 
         internal bool StrictRelationshipFound { get; set; }
+
+        public RelationshipCollection(PackageRelationshipCollection collection)
+        {
+            BasePackageRelationshipCollection = collection;
+
+            Build();
+        }
 
         /// <summary>
         /// This method fills the collection with PackageRels from the PackageRelationshipCollection that is given in the sub class.
         /// </summary>
-        protected void Build()
+        private void Build()
         {
             foreach (PackageRelationship relationship in BasePackageRelationshipCollection)
             {
@@ -33,9 +40,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 relationshipProperty.RelationshipType = relationship.RelationshipType;
 
                 // If packageRel.RelationshipType is something for Strict, it tries to get the equivalent in Transitional.
-                if (NamespaceIdMap.TryGetTransitionalRelationship(relationshipProperty.RelationshipType, out var transitionalNamespace))
+                if (new OpenXmlNamespace(relationshipProperty.RelationshipType).TryGetTransitionalRelationship(out var transitionalNamespace))
                 {
-                    relationshipProperty.RelationshipType = transitionalNamespace;
+                    relationshipProperty.RelationshipType = transitionalNamespace.Uri;
                     StrictRelationshipFound = true;
                 }
 

@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 
 #pragma warning disable 0618 // CS0618: A class member was marked with the Obsolete attribute, such that a warning will be issued when the class member is referenced.
 
@@ -28,12 +27,12 @@ namespace DocumentFormat.OpenXml.Validation
         /// <param name="validationSettings">The OpenXmlPackageValidationSettings for validation events.</param>
         public void Validate(OpenXmlPackageValidationSettings validationSettings)
         {
-            if (validationSettings == null)
+            if (validationSettings is null)
             {
                 throw new ArgumentNullException(nameof(validationSettings));
             }
 
-            if (validationSettings.GetEventHandler() == null)
+            if (validationSettings.GetEventHandler() is null)
             {
                 throw new ArgumentNullException(nameof(validationSettings.EventHandler));
             }
@@ -44,6 +43,11 @@ namespace DocumentFormat.OpenXml.Validation
             }
 
             var handler = validationSettings.GetEventHandler();
+
+            if (handler is null)
+            {
+                return;
+            }
 
             foreach (var result in Validate(validationSettings.FileFormat))
             {
@@ -165,7 +169,7 @@ namespace DocumentFormat.OpenXml.Validation
                             if (version.AtLeast(rule.FileFormat))
                             {
                                 // validate content type
-                                if (rule.PartContentType != null && part.ContentType != rule.PartContentType)
+                                if (rule.PartContentType is not null && part.ContentType != rule.PartContentType)
                                 {
                                     var message = SR.Format(ExceptionMessages.InvalidContentTypePart, rule.PartContentType);
 

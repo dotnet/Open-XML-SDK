@@ -99,7 +99,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(expected, version.AtLeast(minimum));
         }
 
-        [InlineData(FileFormatVersions.None)]
         [InlineData((FileFormatVersions)(2 << 6))]
         [Theory]
         public void AtLeastExceptions(FileFormatVersions version)
@@ -176,7 +175,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private class OfficeNonElement : MockedXmlElement
+        private class OfficeNonElement : MockedOpenXmlElement
         {
             internal override void ConfigureMetadata(ElementMetadata.Builder builder)
             {
@@ -184,23 +183,12 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private class Office2007Element : MockedXmlElement
+        private class Office2007Element : MockedOpenXmlElement
         {
             internal override void ConfigureMetadata(ElementMetadata.Builder builder)
             {
                 builder.Availability = FileFormatVersions.Office2007;
             }
-        }
-
-        private class MockedXmlElement : OpenXmlElement
-        {
-            public override bool HasChildren => throw new NotImplementedException();
-
-            public override void RemoveAllChildren() => throw new NotImplementedException();
-
-            internal override void WriteContentTo(XmlWriter w) => throw new NotImplementedException();
-
-            private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode) => throw new NotImplementedException();
         }
     }
 }

@@ -8,33 +8,33 @@ using System.Xml;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents the Boolean value for attributes.
+    /// Represents the <see cref="bool"/> value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
     public class BooleanValue : OpenXmlComparableSimpleValue<bool>
     {
         /// <summary>
-        /// Initializes a new instance of the BooleanValue class.
+        /// Initializes a new instance of the <see cref="BooleanValue"/> class.
         /// </summary>
         public BooleanValue()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the BooleanValue class using the supplied Boolean value.
+        /// Initializes a new instance of the <see cref="BooleanValue"/> class using the supplied <see cref="bool"/> value.
         /// </summary>
-        /// <param name="value">The Boolean value.</param>
+        /// <param name="value">The <see cref="bool"/> value.</param>
         public BooleanValue(bool value)
             : base(value)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the BooleanValue class by deep copying
-        /// the supplied BooleanValue class.
+        /// Initializes a new instance of the <see cref="BooleanValue"/> class by deep copying
+        /// the supplied <see cref="BooleanValue"/> class.
         /// </summary>
         /// <param name="source">
-        /// The source BooleanValue class.
+        /// The source <see cref="BooleanValue"/> class.
         /// </param>
         public BooleanValue(BooleanValue source)
             : base(source)
@@ -46,57 +46,51 @@ namespace DocumentFormat.OpenXml
         private protected override bool Parse(string input) => XmlConvert.ToBoolean(input);
 
         /// <summary>
-        /// Implicitly converts the specified value to a Boolean value.
+        /// Implicitly converts the specified value to a <see cref="bool"/> value.
         /// </summary>
-        /// <param name="xmlAttribute">The BooleanValue to convert.</param>
-        /// <returns>The converted Boolean value.</returns>
-        /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator bool(BooleanValue xmlAttribute)
+        /// <param name="value">The <see cref="BooleanValue"/> to convert.</param>
+        /// <returns>The converted <see cref="bool"/> value.</returns>
+        /// <exception cref="InvalidOperationException">Thrown when <paramref name="value"/> is null.</exception>
+        public static implicit operator bool(BooleanValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return ToBoolean(xmlAttribute);
+            return ToBoolean(value);
         }
 
         /// <summary>
-        /// Initializes a new instance of the BooleanValue class by implicitly
-        /// converting the supplied Boolean value.
+        /// Initializes a new instance of the <see cref="BooleanValue"/> class by implicitly
+        /// converting the supplied <see cref="bool"/> value.
         /// </summary>
-        /// <param name="value">The Boolean value.</param>
-        /// <returns>A new BooleanValue instance with the value.</returns>
-        public static implicit operator BooleanValue(bool value)
-        {
-            return FromBoolean(value);
-        }
+        /// <param name="value">The <see cref="bool"/> value.</param>
+        /// <returns>A new <see cref="BooleanValue"/> instance with the value.</returns>
+        public static implicit operator BooleanValue(bool value) => FromBoolean(value);
 
         /// <summary>
-        /// Returns a new BooleanValue object that was created by using the supplied Boolean value.
+        /// Returns a new <see cref="BooleanValue"/> object that was created by using the supplied <see cref="bool"/> value.
         /// </summary>
-        /// <param name="value">A Boolean value to use to create a new BooleanValue object.</param>
-        /// <returns>A BooleanValue that corresponds to the value parameter.</returns>
-        public static BooleanValue FromBoolean(bool value)
-        {
-            return new BooleanValue(value);
-        }
+        /// <param name="value">A <see cref="bool"/> value to use to create a new <see cref="BooleanValue"/> object.</param>
+        /// <returns>A <see cref="BooleanValue"/> that corresponds to the value parameter.</returns>
+        public static BooleanValue FromBoolean(bool value) => new BooleanValue(value);
 
         /// <summary>
-        /// Returns the Boolean representation of a BooleanValue object.
+        /// Returns the <see cref="bool"/> representation of a <see cref="BooleanValue"/> object.
         /// </summary>
-        /// <param name="xmlAttribute">
-        /// A BooleanValue object to retrieve a Boolean representation.
+        /// <param name="value">
+        /// A <see cref="BooleanValue"/> object to retrieve a <see cref="bool"/> representation.
         /// </param>
-        /// <returns>A Boolean value that represents a BooleanValue object.</returns>
-        public static bool ToBoolean(BooleanValue xmlAttribute)
+        /// <returns>A <see cref="bool"/> value that represents a <see cref="BooleanValue"/> object.</returns>
+        public static bool ToBoolean(BooleanValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return xmlAttribute.Value;
+            return value.Value;
         }
 
         private protected override OpenXmlSimpleType CloneImpl() => new BooleanValue(this);

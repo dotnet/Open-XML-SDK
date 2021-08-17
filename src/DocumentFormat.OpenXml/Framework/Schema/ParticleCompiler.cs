@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
         private void VisitComposite(CompositeParticle seq)
         {
-            var stack = new Stack<ParticleConstraint>(seq.Reverse());
+            var stack = new Stack<ParticleConstraint>(seq.ChildrenParticles.Reverse());
             byte count = 0;
 
             while (stack.Count > 0)
@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
                 if (item.ParticleType == ParticleType.Group && item is CompositeParticle group)
                 {
-                    foreach (var child in group)
+                    foreach (var child in group.ChildrenParticles)
                     {
                         stack.Push(child);
                     }

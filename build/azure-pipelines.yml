@@ -1,11 +1,13 @@
 trigger:
-- master
+- main
+- release/*
 
 pr:
   autoCancel: true
   branches:
     include:
-    - master
+    - main
+    - release/*
 
 variables:
   RunPeVerify: true
@@ -16,40 +18,47 @@ stages:
       - template: build.yml
         parameters:
           buildTargets:
-            - name: DevFramework35
+            - name: net35
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-            - name: DevFramework40
+            - name: net40
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-            - name: DevFramework46
+            - name: net46
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-            - name: DevCore11
+            - name: netstandard1_3
               runtimes:
-                - 1.1.13
-                - 2.1.18
+                - 2.1.23
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-                - image: 'ubuntu-latest'
+                - image: 'ubuntu-20.04'
                   name: 'linux'
-            - name: DevCore21
+            - name: netcoreapp2_1
               runtimes:
-                - 2.1.18
+                - 2.1.23
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-                - image: 'ubuntu-latest'
+                - image: 'ubuntu-20.04'
                   name: 'linux'
-            - name: DevCore31
+            - name: netcoreapp3_1
+              runtimes:
+                - 3.1.10
               vmImages: 
                 - image: 'windows-2019'
                   name: 'windows'
-                - image: 'ubuntu-latest'
+                - image: 'ubuntu-20.04'
+                  name: 'linux'
+            - name: net5_0
+              vmImages: 
+                - image: 'windows-2019'
+                  name: 'windows'
+                - image: 'ubuntu-20.04'
                   name: 'linux'
 
   - stage: Package
@@ -68,20 +77,14 @@ stages:
     dependsOn: Package
     condition: succeeded()
   
-  - stage: MyGet
+  - stage: Feed
     jobs:
-      - deployment: OpenXmlMyGet
-        displayName: Deploy to MyGet
-        pool:
-          name: Hosted Windows 2019 with VS2019
-        environment: 'openxmlsdk-dotnet-myget'
-        strategy:
-          runOnce:
-            deploy:
-              steps:
-                - template: nuget.yml
-                  parameters:
-                    feed: 'OpenXML MyGet Feed'
+    - job: Feed
+      displayName: Deploy to CI Feed
+      pool:
+        name: Hosted Windows 2019 with VS2019
+      steps:
+        - template: sleet.yml
     dependsOn: 
       - Build
       - Sign
@@ -102,5 +105,6 @@ stages:
                   parameters:
                     feed: 'OpenXML NuGet Feed'
     dependsOn: 
-      - MyGet
-    condition: and(succeeded(), variables['ReleaseNuGet'], eq(variables['Build.SourceBranchName'], 'master'))
+      - Build
+      - Sign
+    condition: and(succeeded(), variables['ReleaseNuGet'])

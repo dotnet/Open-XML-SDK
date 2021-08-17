@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 log.Verify(
-                    package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId == null,
+                    package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId is null,
                     "Theme id attribute is not deleted. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId);
             }
         }

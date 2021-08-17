@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -17,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.controlproperties+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp";
-        private DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties _rootElement;
+        private DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties? _rootElement;
 
         /// <summary>
         /// Creates an instance of the ControlPropertiesPart OpenXmlType
@@ -41,7 +43,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -55,7 +57,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -68,7 +70,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => FormControlProperties;
+        internal override OpenXmlPartRootElement? PartRootElement => FormControlProperties;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

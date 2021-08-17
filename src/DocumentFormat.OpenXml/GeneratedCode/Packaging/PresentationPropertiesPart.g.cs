@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.presProps+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps";
-        private DocumentFormat.OpenXml.Presentation.PresentationProperties _rootElement;
+        private DocumentFormat.OpenXml.Presentation.PresentationProperties? _rootElement;
 
         /// <summary>
         /// Creates an instance of the PresentationPropertiesPart OpenXmlType
@@ -28,7 +30,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -41,7 +43,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => PresentationProperties;
+        internal override OpenXmlPartRootElement? PartRootElement => PresentationProperties;
 
         /// <summary>
         /// Gets or sets the root element of this part.
@@ -55,7 +57,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Presentation.PresentationProperties>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set

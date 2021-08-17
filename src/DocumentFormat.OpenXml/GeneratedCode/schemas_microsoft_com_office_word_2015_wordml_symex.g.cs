@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -15,9 +17,12 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
 {
     /// <summary>
     /// <para>Defines the SymEx Class.</para>
-    /// <para>This class is available in Office 2016 or above.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w16se:symEx.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(86, "symEx")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class SymEx : OpenXmlLeafElement
     {
         /// <summary>
@@ -28,26 +33,38 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         }
 
         /// <summary>
-        /// <para>font, this property is only available in Office2016</para>
+        /// <para>font, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: w16se:font</para>
         /// </summary>
         /// <remark>
         /// xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
         /// </remark>
-        public StringValue Font
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(86, "font")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Font
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
         }
 
         /// <summary>
-        /// <para>char, this property is only available in Office2016</para>
+        /// <para>char, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: w16se:char</para>
         /// </summary>
         /// <remark>
         /// xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
         /// </remark>
-        public HexBinaryValue Char
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(86, "char")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public HexBinaryValue? Char
         {
             get => GetAttribute<HexBinaryValue>();
             set => SetAttribute(value);

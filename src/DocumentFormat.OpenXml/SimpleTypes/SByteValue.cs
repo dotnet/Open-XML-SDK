@@ -8,32 +8,32 @@ using System.Xml;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents the SByte value for attributes.
+    /// Represents the <see cref="sbyte"/> value for attributes.
     /// </summary>
     [CLSCompliant(false)]
     [DebuggerDisplay("{InnerText}")]
     public class SByteValue : OpenXmlComparableSimpleValue<sbyte>
     {
         /// <summary>
-        /// Initializes a new instance of the SByteValue class.
+        /// Initializes a new instance of the <see cref="SByteValue"/> class.
         /// </summary>
         public SByteValue()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the SByteValue class using the supplied SByte value.
+        /// Initializes a new instance of the <see cref="SByteValue"/> class using the supplied <see cref="sbyte"/> value.
         /// </summary>
-        /// <param name="value">The SByte value.</param>
+        /// <param name="value">The <see cref="sbyte"/> value.</param>
         public SByteValue(sbyte value)
             : base(value)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the SByteValue by deep copying the supplied SByteValue class.
+        /// Initializes a new instance of the <see cref="SByteValue"/> by deep copying the supplied <see cref="SByteValue"/> class.
         /// </summary>
-        /// <param name="source">The source SByteValue class.</param>
+        /// <param name="source">The source <see cref="SByteValue"/> class.</param>
         public SByteValue(SByteValue source)
             : base(source)
         {
@@ -44,56 +44,50 @@ namespace DocumentFormat.OpenXml
         private protected override sbyte Parse(string input) => XmlConvert.ToSByte(input);
 
         /// <summary>
-        /// Implicitly converts the specified SByteValue to an SByte value.
+        /// Implicitly converts the specified <see cref="SByteValue"/> to an <see cref="sbyte"/> value.
         /// </summary>
-        /// <param name="xmlAttribute">The SByteValue to convert.</param>
-        /// <returns>The converted SByte value.</returns>
-        /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator sbyte(SByteValue xmlAttribute)
+        /// <param name="value">The <see cref="SByteValue"/> to convert.</param>
+        /// <returns>The converted <see cref="sbyte"/> value.</returns>
+        /// <exception cref="InvalidOperationException">Thrown when <paramref name="value"/> is <c>null</c>.</exception>
+        public static implicit operator sbyte(SByteValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return ToSByte(xmlAttribute);
+            return ToSByte(value);
         }
 
         /// <summary>
-        /// Implicitly converts the specified SByte value to an SByteValue instance.
+        /// Implicitly converts the specified <see cref="sbyte"/> value to an <see cref="SByteValue"/> instance.
         /// </summary>
-        /// <param name="value">The specified SByte value.</param>
-        /// <returns>A new SByteValue instance with the value.</returns>
-        public static implicit operator SByteValue(sbyte value)
-        {
-            return FromSByte(value);
-        }
+        /// <param name="value">The specified <see cref="sbyte"/> value.</param>
+        /// <returns>A new <see cref="SByteValue"/> instance with the value.</returns>
+        public static implicit operator SByteValue(sbyte value) => FromSByte(value);
 
         /// <summary>
-        /// Returns a new SByteValue object created from a Byte value.
+        /// Returns a new <see cref="SByteValue"/> object created from a Byte value.
         /// </summary>
-        /// <param name="value">An SByte value to use to create a new SByteValue object.</param>
-        /// <returns>An SByteValue that corresponds to the value parameter.</returns>
-        public static SByteValue FromSByte(sbyte value)
-        {
-            return new SByteValue(value);
-        }
+        /// <param name="value">An <see cref="sbyte"/> value to use to create a new <see cref="SByteValue"/> object.</param>
+        /// <returns>An <see cref="SByteValue"/> that corresponds to the value parameter.</returns>
+        public static SByteValue FromSByte(sbyte value) => new SByteValue(value);
 
         /// <summary>
-        /// Returns the SByte representation of an SByteValue object.
+        /// Returns the <see cref="sbyte"/> representation of an <see cref="SByteValue"/> object.
         /// </summary>
-        /// <param name="xmlAttribute">
-        /// An SByteValue object to retrieve an SByte representation.
+        /// <param name="value">
+        /// An <see cref="SByteValue"/> object to retrieve an <see cref="sbyte"/> representation.
         /// </param>
-        /// <returns>An SByte value that represents an SByteValue object.</returns>
-        public static sbyte ToSByte(SByteValue xmlAttribute)
+        /// <returns>An <see cref="sbyte"/> value that represents an <see cref="SByteValue"/> object.</returns>
+        public static sbyte ToSByte(SByteValue value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return xmlAttribute.Value;
+            return value.Value;
         }
 
         private protected override OpenXmlSimpleType CloneImpl() => new SByteValue(this);

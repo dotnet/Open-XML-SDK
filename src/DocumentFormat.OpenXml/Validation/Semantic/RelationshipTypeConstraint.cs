@@ -20,18 +20,36 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _type = type;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
-            var element = context.Stack.Current.Element;
+            var current = context.Stack.Current;
+
+            if (current is null)
+            {
+                return null;
+            }
+
+            var element = current.Element;
+
+            if (element is null)
+            {
+                return null;
+            }
+
             var attribute = element.ParsedState.Attributes[_attribute];
 
-            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
+            if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
 
             var actualType = _type;
-            var current = context.Stack.Current;
+
+            if (current.Part is null)
+            {
+                return null;
+            }
+
             var rels = current.Part.ExternalRelationships.Where(r => r.Id == attribute.Value.InnerText);
 
             if (!rels.Any())

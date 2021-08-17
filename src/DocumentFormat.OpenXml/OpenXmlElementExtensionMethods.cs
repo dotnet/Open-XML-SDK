@@ -6,9 +6,7 @@ using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Reflection;
-using System.Xml;
 
 namespace DocumentFormat.OpenXml
 {
@@ -24,12 +22,12 @@ namespace DocumentFormat.OpenXml
         /// <returns>The position index in same type element in parent.</returns>
         internal static int GetXPathIndex(this OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
 
-            if (element.Parent == null)
+            if (element.Parent is null)
             {
                 return 1;
             }
@@ -85,9 +83,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The part in which the element is in. Returns null if not in a part.</returns>
-        internal static OpenXmlPart GetPart(this OpenXmlElement element)
+        internal static OpenXmlPart? GetPart(this OpenXmlElement element)
         {
-            if (element == null)
+            if (element is null)
             {
                 throw new ArgumentNullException(nameof(element));
             }
@@ -100,11 +98,11 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The URI of the part the element is in. Returns null if not in a part.</returns>
-        internal static Uri GetPartUri(this OpenXmlElement element)
+        internal static Uri? GetPartUri(this OpenXmlElement element)
         {
             var part = element.GetPart();
 
-            if (part != null)
+            if (part is not null)
             {
                 return part.Uri;
             }
@@ -119,12 +117,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="localName"></param>
         /// <param name="namespaceUri"></param>
         /// <returns></returns>
-        internal static string GetAttributeValueEx(this OpenXmlElement element, string localName, string namespaceUri)
+        internal static string? GetAttributeValueEx(this OpenXmlElement element, string localName, string namespaceUri)
         {
             try
             {
-                OpenXmlAttribute attribute = element.GetAttribute(localName, namespaceUri);
-                return attribute.Value;
+                return element.GetAttribute(localName, namespaceUri).Value;
             }
             catch (KeyNotFoundException)
             {
@@ -138,7 +135,7 @@ namespace DocumentFormat.OpenXml
             {
                 foreach (var element in parent.Metadata.Children.Elements)
                 {
-                    if (element.Type.GetTypeInfo().IsAssignableFrom(child.GetType().GetTypeInfo()))
+                    if (element.Type is not null && element.Type.GetTypeInfo().IsAssignableFrom(child.GetType().GetTypeInfo()))
                     {
                         return true;
                     }
@@ -156,12 +153,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="namespaceUri">The namespace URI of the requested child element.</param>
         /// <param name="localName">The local name of the requested child element.</param>
         /// <returns>A new OpenXmlElement if the parent element can contains a child with the specified namespace and local name. Otherwise, returns null.</returns>
-        internal static OpenXmlElement TryCreateValidChild(this OpenXmlElement parent, FileFormatVersions fileFormat, string namespaceUri, string localName)
+        internal static OpenXmlElement? TryCreateValidChild(this OpenXmlElement parent, FileFormatVersions fileFormat, string namespaceUri, string localName)
         {
             Debug.Assert(parent is OpenXmlCompositeElement);
-            Debug.Assert(localName != null);
 
-            var newElement = parent.ElementFactory(string.Empty, localName, namespaceUri);
+            var newElement = parent.CreateElement(OpenXmlQualifiedName.Create(namespaceUri, string.Empty, localName));
             if (newElement is OpenXmlUnknownElement || !newElement.IsInVersion(fileFormat))
             {
                 return null;

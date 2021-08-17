@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -11,6 +12,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     [DebuggerDisplay("Match={Match}")]
     internal class ParticleMatchInfo
     {
+        private ExpectedChildren? _expectedChildren;
+
         /// <summary>
         /// Initializes a new instance of the ParticleMatchInfo.
         /// </summary>
@@ -37,12 +40,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Gets the start element to be matched by a particle rule.
         /// </summary>
-        internal OpenXmlElement StartElement { get; private set; }
+        internal OpenXmlElement? StartElement { get; private set; }
 
         /// <summary>
         /// Gets or sets the last element matched by the particle match.
         /// </summary>
-        internal OpenXmlElement LastMatchedElement { get; set; }
+        internal OpenXmlElement? LastMatchedElement { get; set; }
 
         /// <summary>
         /// Gets or sets message on match error
@@ -50,7 +53,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <remarks>
         /// TODO: how can this be decoupled from the validator?
         /// </remarks>
-        internal string ErrorMessage { get; set; }
+        internal string? ErrorMessage { get; set; }
 
         /// <summary>
         /// Gets the element type ids of expected children.
@@ -60,20 +63,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// Will be null if matched or not matched.
         /// Will contains the expected child element types if partial match.
         /// </remarks>
-        internal ExpectedChildren ExpectedChildren { get; private set; }
-
-        /// <summary>
-        /// The .ExpectedChildren will be non-null after this call.
-        /// </summary>
-        internal void InitExpectedChildren()
+        internal ExpectedChildren ExpectedChildren
         {
-            if (ExpectedChildren == null)
+            get
             {
-                ExpectedChildren = new ExpectedChildren();
-            }
-            else
-            {
-                ExpectedChildren.Clear();
+                if (_expectedChildren is null)
+                {
+                    _expectedChildren = new ExpectedChildren();
+                }
+
+                return _expectedChildren;
             }
         }
 
@@ -85,34 +84,24 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="expectedChildren"></param>
         internal void SetExpectedChildren(ExpectedChildren expectedChildren)
         {
-            if (expectedChildren == null || expectedChildren.Count == 0)
+            if (expectedChildren is null || expectedChildren.Count == 0)
             {
-                if (ExpectedChildren != null)
-                {
-                    ExpectedChildren.Clear();
-                }
-
-                // else, both are null, just return, nothing to do.
+                ExpectedChildren.Clear();
             }
             else
             {
-                if (ExpectedChildren == null)
-                {
-                    ExpectedChildren = new ExpectedChildren();
-                }
-
                 ExpectedChildren.Clear();
                 ExpectedChildren.Add(expectedChildren);
             }
         }
 
-        internal void Reset(OpenXmlElement startElement)
+        internal void Reset(OpenXmlElement? startElement)
         {
             StartElement = startElement;
             Match = ParticleMatch.Nomatch;
             LastMatchedElement = null;
             ErrorMessage = null;
-            if (ExpectedChildren != null)
+            if (ExpectedChildren is not null)
             {
                 ExpectedChildren.Clear();
             }

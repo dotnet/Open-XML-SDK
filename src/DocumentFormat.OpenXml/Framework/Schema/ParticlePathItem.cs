@@ -24,12 +24,12 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             index = Index;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
             => Equals(obj as ParticlePathItem);
 
         public override string ToString() => $"({Type}:{Index})";
 
-        public bool Equals(ParticlePathItem other)
+        public bool Equals(ParticlePathItem? other)
         {
             if (other is null)
             {

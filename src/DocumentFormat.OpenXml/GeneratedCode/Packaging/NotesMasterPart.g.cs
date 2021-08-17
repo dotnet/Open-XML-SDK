@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -34,7 +36,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster";
-        private DocumentFormat.OpenXml.Presentation.NotesMaster _rootElement;
+        private DocumentFormat.OpenXml.Presentation.NotesMaster? _rootElement;
 
         /// <summary>
         /// Creates an instance of the NotesMasterPart OpenXmlType
@@ -106,7 +108,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -131,7 +133,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Presentation.NotesMaster>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -145,7 +147,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        internal override OpenXmlPartRootElement PartRootElement => NotesMaster;
+        internal override OpenXmlPartRootElement? PartRootElement => NotesMaster;
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -153,7 +155,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the SlidePart of the NotesMasterPart
         /// </summary>
-        public SlidePart SlidePart => GetSubPartOfType<SlidePart>();
+        public SlidePart? SlidePart => GetSubPartOfType<SlidePart>();
 
         /// <inheritdoc/>
         internal sealed override string TargetName => "notesMaster";
@@ -164,7 +166,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ThemePart of the NotesMasterPart
         /// </summary>
-        public ThemePart ThemePart => GetSubPartOfType<ThemePart>();
+        public ThemePart? ThemePart => GetSubPartOfType<ThemePart>();
 
         /// <summary>
         /// Gets the UserDefinedTagsParts of the NotesMasterPart
@@ -229,7 +231,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType, string id)
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomXmlPart(contentType, id);
         }
@@ -242,7 +244,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType)
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomXmlPart(contentType);
         }
@@ -281,7 +283,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(EmbeddedControlPersistenceBinaryDataPartType partType, string id)
         {
             var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddEmbeddedControlPersistenceBinaryDataPart(contentType, id);
         }
@@ -294,7 +296,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(EmbeddedControlPersistenceBinaryDataPartType partType)
         {
             var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddEmbeddedControlPersistenceBinaryDataPart(contentType);
         }

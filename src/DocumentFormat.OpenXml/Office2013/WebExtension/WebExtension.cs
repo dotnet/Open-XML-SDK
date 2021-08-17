@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// </summary>
         [Obsolete("Please use the property 'Frozen' as this property will be removed in a future version")]
         [EditorBrowsable(EditorBrowsableState.Never)]
-        public BooleanValue Fronzen
+        public BooleanValue? Fronzen
         {
             get => Frozen;
             set => Frozen = value;

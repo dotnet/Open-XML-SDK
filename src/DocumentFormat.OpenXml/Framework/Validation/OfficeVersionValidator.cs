@@ -26,11 +26,16 @@ namespace DocumentFormat.OpenXml.Framework
         {
             var current = context.Stack.Current;
 
-            if (!context.FileFormat.AtLeast(OfficeVersion) && current.Value?.HasValue == true && !context.McContext.IsIgnorableNs(current.Property.GetQName().Namespace))
+            if (current is null)
+            {
+                return;
+            }
+
+            if (!context.FileFormat.AtLeast(OfficeVersion) && current.Property is not null && current.Value?.HasValue == true && !context.McContext.IsIgnorableNs(current.Property.QName.Namespace))
             {
                 context.CreateError(
                     id: "Sch_UndeclaredAttribute",
-                    description: SR.Format(ValidationResources.Sch_UndeclaredAttribute, current.Property.GetQName()),
+                    description: SR.Format(ValidationResources.Sch_UndeclaredAttribute, current.Property.QName),
                     errorType: ValidationErrorType.Schema);
             }
         }

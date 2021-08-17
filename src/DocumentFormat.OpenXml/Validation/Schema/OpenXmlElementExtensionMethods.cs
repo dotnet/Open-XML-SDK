@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -11,18 +10,18 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal static partial class OpenXmlElementExtensionMethods
     {
-        internal static OpenXmlElement GetFirstChildMc(this OpenXmlElement parent, MCContext mcContext, FileFormatVersions format)
+        internal static OpenXmlElement? GetFirstChildMc(this OpenXmlElement parent, MCContext mcContext, FileFormatVersions format)
         {
             var child = parent.GetFirstNonMiscElementChild();
             return parent.GetChildMc(child, mcContext, format);
         }
 
-        internal static OpenXmlElement GetNextChildMc(this OpenXmlElement parent, OpenXmlElement child, MCContext mcContext, FileFormatVersions format)
+        internal static OpenXmlElement? GetNextChildMc(this OpenXmlElement parent, OpenXmlElement child, MCContext mcContext, FileFormatVersions format)
         {
             var next = child.GetNextNonMiscElementSibling();
             var mcTier = child.Parent;
 
-            if (next == null && mcTier != parent)
+            if (next is null && mcTier != parent)
             {
                 // the child must be under element in ProcessContent or ACB
                 if (mcTier is AlternateContentChoice || mcTier is AlternateContentFallback)
@@ -30,10 +29,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     mcTier = mcTier.Parent;
                 }
 
-                Debug.Assert(mcTier != null);
-
-                // there is no more next sibling in this level, then try to find the next siblig of the up level.
-                return parent.GetNextChildMc(mcTier, mcContext, format);
+                // there is no more next sibling in this level, then try to find the next sibling of the up level.
+                return parent.GetNextChildMc(mcTier!, mcContext, format);
             }
 
             return parent.GetChildMc(next, mcContext, format);
@@ -47,26 +44,27 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="mcContext">Markup Compatibility context.</param>
         /// <param name="format">Targeting file format (Office2007 or Office201).</param>
         /// <returns>The logic child (when we apply a MC preprocessor).</returns>
-        private static OpenXmlElement GetChildMc(this OpenXmlElement parent, OpenXmlElement child, MCContext mcContext, FileFormatVersions format)
+        private static OpenXmlElement? GetChildMc(this OpenXmlElement parent, OpenXmlElement? child, MCContext mcContext, FileFormatVersions format)
         {
             // Use stack to cache the next siblings in different levels.
-            Stack<OpenXmlElement> nextSiblings = new Stack<OpenXmlElement>();
+            var nextSiblings = new Stack<OpenXmlElement?>();
 
-            while (child != null)
+            while (child is not null)
             {
                 var acb = child as AlternateContent;
-                if (acb == null && child.IsInVersion(format))
+                if (acb is null && child.IsInVersion(format))
                 {
                     return child;
                 }
                 else
                 {
-                    mcContext.PushMCAttributes2(child.MCAttributes, child.LookupNamespace);
-                    if (acb != null)
+                    mcContext.PushMCAttributes2(child.MCAttributes!, child.LookupNamespace);
+
+                    if (acb is not null)
                     {
                         nextSiblings.Push(child.GetNextNonMiscElementSibling());
                         var select = mcContext.GetContentFromACBlock(acb, format);
-                        if (select != null)
+                        if (select is not null)
                         {
                             child = select.GetFirstNonMiscElementChild();
                         }
@@ -104,7 +102,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     mcContext.PopMCAttributes2();
                 }
 
-                while (child == null && nextSiblings.Count > 0)
+                while (child is null && nextSiblings.Count > 0)
                 {
                     child = nextSiblings.Pop();
                 }

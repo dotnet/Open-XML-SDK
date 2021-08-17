@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -28,7 +30,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public partial class PresentationPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
-        private DocumentFormat.OpenXml.Presentation.Presentation _rootElement;
+        private DocumentFormat.OpenXml.Presentation.Presentation? _rootElement;
 
         /// <summary>
         /// Creates an instance of the PresentationPart OpenXmlType
@@ -40,7 +42,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the CommentAuthorsPart of the PresentationPart
         /// </summary>
-        public CommentAuthorsPart CommentAuthorsPart => GetSubPartOfType<CommentAuthorsPart>();
+        public CommentAuthorsPart? CommentAuthorsPart => GetSubPartOfType<CommentAuthorsPart>();
 
         /// <summary>
         /// Gets the CustomXmlParts of the PresentationPart
@@ -55,9 +57,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the HandoutMasterPart of the PresentationPart
         /// </summary>
-        public HandoutMasterPart HandoutMasterPart => GetSubPartOfType<HandoutMasterPart>();
+        public HandoutMasterPart? HandoutMasterPart => GetSubPartOfType<HandoutMasterPart>();
 
-        private protected override OpenXmlPartRootElement InternalRootElement
+        private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get
             {
@@ -73,14 +75,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the LegacyDiagramTextInfoPart of the PresentationPart
         /// </summary>
-        public LegacyDiagramTextInfoPart LegacyDiagramTextInfoPart => GetSubPartOfType<LegacyDiagramTextInfoPart>();
+        public LegacyDiagramTextInfoPart? LegacyDiagramTextInfoPart => GetSubPartOfType<LegacyDiagramTextInfoPart>();
 
         /// <summary>
         /// Gets the NotesMasterPart of the PresentationPart
         /// </summary>
-        public NotesMasterPart NotesMasterPart => GetSubPartOfType<NotesMasterPart>();
+        public NotesMasterPart? NotesMasterPart => GetSubPartOfType<NotesMasterPart>();
 
-        internal override OpenXmlPartRootElement PartRootElement => Presentation;
+        internal override OpenXmlPartRootElement? PartRootElement => Presentation;
 
         /// <summary>
         /// Gets or sets the root element of this part.
@@ -94,7 +96,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     LoadDomTree<DocumentFormat.OpenXml.Presentation.Presentation>();
                 }
 
-                return _rootElement;
+                return _rootElement!;
             }
 
             set
@@ -111,7 +113,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the PresentationPropertiesPart of the PresentationPart
         /// </summary>
-        public PresentationPropertiesPart PresentationPropertiesPart => GetSubPartOfType<PresentationPropertiesPart>();
+        public PresentationPropertiesPart? PresentationPropertiesPart => GetSubPartOfType<PresentationPropertiesPart>();
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
@@ -129,7 +131,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the TableStylesPart of the PresentationPart
         /// </summary>
-        public TableStylesPart TableStylesPart => GetSubPartOfType<TableStylesPart>();
+        public TableStylesPart? TableStylesPart => GetSubPartOfType<TableStylesPart>();
 
         /// <inheritdoc/>
         internal sealed override string TargetName => "presentation";
@@ -140,22 +142,22 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the ThemePart of the PresentationPart
         /// </summary>
-        public ThemePart ThemePart => GetSubPartOfType<ThemePart>();
+        public ThemePart? ThemePart => GetSubPartOfType<ThemePart>();
 
         /// <summary>
         /// Gets the UserDefinedTagsPart of the PresentationPart
         /// </summary>
-        public UserDefinedTagsPart UserDefinedTagsPart => GetSubPartOfType<UserDefinedTagsPart>();
+        public UserDefinedTagsPart? UserDefinedTagsPart => GetSubPartOfType<UserDefinedTagsPart>();
 
         /// <summary>
         /// Gets the VbaProjectPart of the PresentationPart
         /// </summary>
-        public VbaProjectPart VbaProjectPart => GetSubPartOfType<VbaProjectPart>();
+        public VbaProjectPart? VbaProjectPart => GetSubPartOfType<VbaProjectPart>();
 
         /// <summary>
         /// Gets the ViewPropertiesPart of the PresentationPart
         /// </summary>
-        public ViewPropertiesPart ViewPropertiesPart => GetSubPartOfType<ViewPropertiesPart>();
+        public ViewPropertiesPart? ViewPropertiesPart => GetSubPartOfType<ViewPropertiesPart>();
 
         /// <summary>
         /// Adds a CustomXmlPart to the PresentationPart
@@ -191,7 +193,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType, string id)
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomXmlPart(contentType, id);
         }
@@ -204,7 +206,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType)
         {
             var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension(partType);
+            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
             OpenXmlPackage.PartExtensionProvider.MakeSurePartExtensionExist(contentType, partExtension);
             return AddCustomXmlPart(contentType);
         }

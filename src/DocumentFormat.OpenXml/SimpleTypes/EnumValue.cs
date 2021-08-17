@@ -9,20 +9,20 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the enum value for attributes.
     /// </summary>
-    /// <typeparam name="T">Every enum value must be an enum with the EnumStringValueAttribute object.</typeparam>
+    /// <typeparam name="T">Every enum value must be an enum with the <see cref="EnumStringAttribute"/> object.</typeparam>
     [DebuggerDisplay("{InnerText}")]
     public class EnumValue<T> : OpenXmlSimpleValue<T>
         where T : struct
     {
         /// <summary>
-        /// Initializes a new instance of the EnumValue class.
+        /// Initializes a new instance of the <see cref="EnumValue{T}"/> class.
         /// </summary>
         public EnumValue()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the EnumValue class using the supplied
+        /// Initializes a new instance of the <see cref="EnumValue{T}"/> class using the supplied
         /// value of type T.
         /// </summary>
         /// <param name="value">
@@ -34,11 +34,11 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the EnumValue by deep copying the supplied
-        /// EnumValue class.
+        /// Initializes a new instance of the <see cref="EnumValue{T}"/> by deep copying the supplied
+        /// <see cref="EnumValue{T}"/> class.
         /// </summary>
         /// <param name="source">
-        /// The source EnumValue class.
+        /// The source <see cref="EnumValue{T}"/> class.
         /// </param>
         public EnumValue(EnumValue<T> source)
             : base(source)
@@ -50,40 +50,37 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Implicitly converts the specified value to an enum.
         /// </summary>
-        /// <param name="xmlAttribute">The EnumValue to convert.</param>
+        /// <param name="value">The <see cref="EnumValue{T}"/> to convert.</param>
         /// <returns>
         /// The converted enum value.
         /// </returns>
-        /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator T(EnumValue<T> xmlAttribute)
+        /// <exception cref="InvalidOperationException">Thrown when <paramref name="value"/> is <c>null</c>.</exception>
+        public static implicit operator T(EnumValue<T> value)
         {
-            if (xmlAttribute == null)
+            if (value is null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
 
-            return xmlAttribute.Value;
+            return value.Value;
         }
 
         /// <summary>
-        /// Initializes a new EnumValue class by converting the supplied enum
+        /// Initializes a new <see cref="EnumValue{T}"/> class by converting the supplied enum
         /// value.
         /// </summary>
         /// <param name="value">The specified value.</param>
-        /// <returns>A new EnumValue instance corresponding to the value.</returns>
-        public static implicit operator EnumValue<T>(T value)
-        {
-            return new EnumValue<T>(value);
-        }
+        /// <returns>A new <see cref="EnumValue{T}"/> instance corresponding to the value.</returns>
+        public static implicit operator EnumValue<T>(T value) => new EnumValue<T>(value);
 
         /// <summary>
         /// Implicitly converts the specified value to a String value.
         /// </summary>
         /// <param name="value">The value to convert.</param>
         /// <returns>The converted string.</returns>
-        public static implicit operator string(EnumValue<T> value)
+        public static implicit operator string?(EnumValue<T> value)
         {
-            if (value == null)
+            if (value is null)
             {
                 return null;
             }
@@ -101,7 +98,7 @@ namespace DocumentFormat.OpenXml
             return fileFormat.AtLeast(EnumInfoLookup<T>.GetVersion(Value));
         }
 
-        private protected override bool ShouldParse(string value) => value != null;
+        private protected override bool ShouldParse(string? value) => value is not null;
 
         private protected override void ValidateSet(T value)
         {
@@ -113,9 +110,9 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(T input) => EnumInfoLookup<T>.ToString(input);
 
-        private protected override bool TryParse(string input, out T value) => EnumInfoLookup<T>.TryParse(input, out value);
+        private protected override bool TryParse(string? input, out T value) => EnumInfoLookup<T>.TryParse(input, out value);
 
-        private protected override T Parse(string input)
+        private protected override T Parse(string? input)
         {
             if (EnumInfoLookup<T>.TryParse(input, out var value))
             {

@@ -1,8 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
 using System;
+using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -12,10 +12,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     internal class UniqueAttributeValueConstraint : SemanticConstraint
     {
         private readonly byte _attribute;
-        private readonly Type _parent;
+        private readonly Type? _parent;
         private readonly StringComparer _comparer;
 
-        public UniqueAttributeValueConstraint(byte attribute, bool caseSensitive, Type parent)
+        public UniqueAttributeValueConstraint(byte attribute, bool caseSensitive, Type? parent)
             : base(SemanticValidationLevel.Part)
         {
             _attribute = attribute;
@@ -23,24 +23,28 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _comparer = caseSensitive ? StringComparer.Ordinal : StringComparer.OrdinalIgnoreCase;
         }
 
-        public override ValidationErrorInfo ValidateCore(ValidationContext context)
+        public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
-            if (_parent != null)
+            if (_parent is not null)
             {
                 return null;
             }
 
-            var element = context.Stack.Current.Element;
+            var element = context.Stack.Current?.Element;
+
+            if (element is null)
+            {
+                return null;
+            }
+
             var attribute = element.ParsedState.Attributes[_attribute];
-            var elementType = element.GetType();
 
             //if the attribute is omitted, semantic validation will do nothing
-            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
+            if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
 
-            var part = element.GetPart();
             var root = GetRoot(element);
 
             if (root is null)
@@ -48,30 +52,32 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attributeText = attribute.Value.InnerText;
-
-            var added = false;
-            var isDuplicate = context.State.Get(new { part.Uri, elementType, _parent, attributeText, _attribute, _comparer }, () =>
+            var elementType = element.GetType();
+            var textValues = context.State.GetOrCreate(new { elementType, root, constraint = this }, static (key, context) =>
             {
-                added = true;
+                var set = new DuplicateFinder(key.constraint._comparer);
 
-                foreach (var e in root.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
+                foreach (var e in key.root.Descendants(context.FileFormat, TraversalOptions.SelectAlternateContent))
                 {
-                    if (e != element & e.GetType() == elementType)
+                    if (e.GetType() == key.elementType)
                     {
-                        var eValue = e.ParsedState.Attributes[_attribute];
+                        var eValue = e.ParsedState.Attributes[key.constraint._attribute];
 
-                        if (eValue.HasValue && _comparer.Equals(attributeText, eValue.Value.InnerText))
+                        if (eValue.Value is not null)
                         {
-                            return true;
+                            set.Add(eValue.Value.InnerText);
                         }
                     }
                 }
 
-                return false;
+                set.Complete();
+
+                return set;
             });
 
-            if (!isDuplicate || !added)
+            var isDuplicate = textValues.IsDuplicate(attribute.Value.InnerText);
+
+            if (!isDuplicate)
             {
                 return null;
             }
@@ -88,7 +94,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             };
         }
 
-        private OpenXmlElement GetRoot(OpenXmlElement element)
+        private OpenXmlElement? GetRoot(OpenXmlElement element)
         {
             if (_parent is null)
             {
@@ -104,6 +110,68 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
 
             return null;
+        }
+
+        private class DuplicateFinder
+        {
+            private readonly StringComparer _comparer;
+
+            private bool _isCompleted;
+            private HashSet<string?>? _set;
+            private HashSet<string?>? _duplicate;
+
+            public DuplicateFinder(StringComparer comparer)
+            {
+                _comparer = comparer;
+            }
+
+            /// <summary>
+            /// Add a text value and track whether it has been seen before or not.
+            /// </summary>
+            public void Add(string? text)
+            {
+                if (_isCompleted)
+                {
+                    throw new InvalidOperationException();
+                }
+
+                if (_set is null)
+                {
+                    _set = new HashSet<string?>(_comparer);
+                }
+
+                if (!_set.Add(text))
+                {
+                    if (_duplicate is null)
+                    {
+                        _duplicate = new HashSet<string?>(_comparer);
+                    }
+
+                    _duplicate.Add(text);
+                }
+            }
+
+            /// <summary>
+            /// Clear the tracking set to free up space
+            /// </summary>
+            public void Complete()
+            {
+                _isCompleted = true;
+                _set = null;
+            }
+
+            /// <summary>
+            /// Checks if a duplicate was detected. Once a duplicate is checked, subsequent calls will result in <c>false</c> so we only raise the error once.
+            /// </summary>
+            public bool IsDuplicate(string? text)
+            {
+                if (_duplicate is null)
+                {
+                    return false;
+                }
+
+                return _duplicate.Remove(text);
+            }
         }
     }
 }

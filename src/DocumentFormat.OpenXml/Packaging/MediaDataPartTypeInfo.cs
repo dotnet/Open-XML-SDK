@@ -8,153 +8,73 @@ namespace DocumentFormat.OpenXml.Packaging
     internal static class MediaDataPartTypeInfo
     {
         internal static string GetContentType(this MediaDataPartType mediaDataPartType)
-        {
-            switch (mediaDataPartType)
+            => mediaDataPartType switch
             {
-                case MediaDataPartType.Aiff:
-                    return "audio/aiff";
+                MediaDataPartType.Aiff => "audio/aiff",
 
-                //case MediaDataPartType.Basic:
-                //    return "audio/basic";
-                case MediaDataPartType.Midi:
-                    return "audio/midi";
+                //MediaDataPartType.Basic => "audio/basic",
+                MediaDataPartType.Midi => "audio/midi",
+                MediaDataPartType.Mp3 => "audio/mp3",
+                MediaDataPartType.MpegUrl => "audio/mpegurl",
+                MediaDataPartType.Wav => "audio/wav",
 
-                case MediaDataPartType.Mp3:
-                    return "audio/mp3";
-
-                case MediaDataPartType.MpegUrl:
-                    return "audio/mpegurl";
-
-                case MediaDataPartType.Wav:
-                    return "audio/wav";
-
-                //case MediaDataPartType.Wax:
-                //    return "audio/x-ms-wax";
-                case MediaDataPartType.Wma:
-                    return "audio/x-ms-wma";
-
-                case MediaDataPartType.MpegAudio:
-                    return "audio/mpeg";
-
-                case MediaDataPartType.OggAudio:
-                    return "audio/ogg";
+                //MediaDataPartType.Wax => "audio/x-ms-wax",
+                MediaDataPartType.Wma => "audio/x-ms-wma",
+                MediaDataPartType.MpegAudio => "audio/mpeg",
+                MediaDataPartType.OggAudio => "audio/ogg",
 
                 // *** Video types.
+                //MediaDataPartType.Asf => "video/x-ms-asf",
+                MediaDataPartType.Asx => "video/x-ms-asf-plugin",
+                MediaDataPartType.Avi => "video/avi",
 
-                //case MediaDataPartType.Asf:
-                //    return "video/x-ms-asf";
-                case MediaDataPartType.Asx:
-                    return "video/x-ms-asf-plugin";
+                //MediaDataPartType.Ivf => "video/x-ivf",
+                MediaDataPartType.Mpg => "video/mpg",
+                MediaDataPartType.MpegVideo => "video/mpeg",
 
-                case MediaDataPartType.Avi:
-                    return "video/avi";
-
-                //case MediaDataPartType.Ivf:
-                //    return "video/x-ivf";
-                case MediaDataPartType.Mpg:
-                    return "video/mpg";
-
-                case MediaDataPartType.MpegVideo:
-                    return "video/mpeg";
-
-                //case MediaDataPartType.WM:
-                //    return "video/x-ms-wm";
-                case MediaDataPartType.Wmv:
-                    return "video/x-ms-wmv";
-
-                case MediaDataPartType.Wmx:
-                    return "video/x-ms-wmx";
-
-                case MediaDataPartType.Wvx:
-                    return "video/x-ms-wvx";
-
-                case MediaDataPartType.Quicktime:
-                    return "video/quicktime";
-
-                case MediaDataPartType.OggVideo:
-                    return "video/ogg";
-
-                case MediaDataPartType.VC1:
-                    return "video/vc1";
-
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(mediaDataPartType));
-            }
-        }
+                //MediaDataPartType.WM => "video/x-ms-wm",
+                MediaDataPartType.Wmv => "video/x-ms-wmv",
+                MediaDataPartType.Wmx => "video/x-ms-wmx",
+                MediaDataPartType.Wvx => "video/x-ms-wvx",
+                MediaDataPartType.Quicktime => "video/quicktime",
+                MediaDataPartType.OggVideo => "video/ogg",
+                MediaDataPartType.VC1 => "video/vc1",
+                _ => throw new ArgumentOutOfRangeException(nameof(mediaDataPartType)),
+            };
 
         internal static string GetTargetExtension(this MediaDataPartType mediaDataPartType)
-        {
-            switch (mediaDataPartType)
+            => mediaDataPartType switch
             {
-                case MediaDataPartType.Aiff:
-                    return ".aiff";
+                MediaDataPartType.Aiff => ".aiff",
 
-                //case MediaDataPartType.Basic:
-                //    return ".au";
-                case MediaDataPartType.Midi:
-                    return ".midi";
+                //MediaDataPartType.Basic => ".au",
+                MediaDataPartType.Midi => ".midi",
+                MediaDataPartType.Mp3 => ".mp3",
+                MediaDataPartType.MpegUrl => ".m3u",
+                MediaDataPartType.Wav => ".wav",
 
-                case MediaDataPartType.Mp3:
-                    return ".mp3";
-
-                case MediaDataPartType.MpegUrl:
-                    return ".m3u";
-
-                case MediaDataPartType.Wav:
-                    return ".wav";
-
-                //case MediaDataPartType.Wax:
-                //    return ".wax";
-                case MediaDataPartType.Wma:
-                    return ".wma";
-
-                case MediaDataPartType.MpegAudio:
-                    return ".mpeg";
-
-                case MediaDataPartType.OggAudio:
-                    return ".ogg";
+                //MediaDataPartType.Wax => ".wax",
+                MediaDataPartType.Wma => ".wma",
+                MediaDataPartType.MpegAudio => ".mpeg",
+                MediaDataPartType.OggAudio => ".ogg",
 
                 // Video types.
+                //MediaDataPartType.Asf => ".asf",
+                MediaDataPartType.Asx => ".asx",
+                MediaDataPartType.Avi => ".avi",
 
-                //case MediaDataPartType.Asf:
-                //    return ".asf";
-                case MediaDataPartType.Asx:
-                    return ".asx";
+                //MediaDataPartType.Ivf => ".ivf",
+                MediaDataPartType.Mpg => ".mpg",
+                MediaDataPartType.MpegVideo => ".mpeg",
 
-                case MediaDataPartType.Avi:
-                    return ".avi";
-
-                //case MediaDataPartType.Ivf:
-                //    return ".ivf";
-                case MediaDataPartType.Mpg:
-                    return ".mpg";
-
-                case MediaDataPartType.MpegVideo:
-                    return ".mpeg";
-
-                //case MediaDataPartType.WM:
-                //    return ".wm";
-                case MediaDataPartType.Wmv:
-                    return ".wmv";
-
-                case MediaDataPartType.Wmx:
-                    return ".wmx";
-
-                case MediaDataPartType.Wvx:
-                    return ".wvx";
-
-                case MediaDataPartType.Quicktime:
-                    return ".mov";
-
-                case MediaDataPartType.OggVideo:
-                    return ".ogg";
-
-                case MediaDataPartType.VC1:
-                    return ".wmv";
-
-                default:
-                    return ".media";
-            }
-        }
+                //MediaDataPartType.WM => ".wm",
+                MediaDataPartType.Wmv => ".wmv",
+                MediaDataPartType.Wmx => ".wmx",
+                MediaDataPartType.Wvx => ".wvx",
+                MediaDataPartType.Quicktime => ".mov",
+                MediaDataPartType.OggVideo => ".ogg",
+                MediaDataPartType.VC1 => ".wmv",
+                _ => ".media",
+            };
     }
 }

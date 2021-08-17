@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Validation
         IEnumerable<ValidationErrorInfo> Validate(OpenXmlPackage openXmlPackage, CancellationToken token = default)
         {
             // Note: This is private on .NET 3.5 as CancellationToken on that platform is not available.
-            if (openXmlPackage == null)
+            if (openXmlPackage is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPackage));
             }
@@ -136,7 +136,7 @@ namespace DocumentFormat.OpenXml.Validation
         IEnumerable<ValidationErrorInfo> Validate(OpenXmlPart openXmlPart, CancellationToken token = default)
         {
             // Note: This is private on .NET 3.5 as CancellationToken on that platform is not available.
-            if (openXmlPart == null)
+            if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
@@ -186,7 +186,7 @@ namespace DocumentFormat.OpenXml.Validation
         IEnumerable<ValidationErrorInfo> Validate(OpenXmlElement openXmlElement, CancellationToken token = default)
         {
             // Note: This is private on .NET 3.5 as CancellationToken on that platform is not available.
-            if (openXmlElement == null)
+            if (openXmlElement is null)
             {
                 throw new ArgumentNullException(nameof(openXmlElement));
             }

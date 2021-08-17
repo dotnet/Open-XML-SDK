@@ -3,6 +3,7 @@
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), DocumentFormat.OpenXml.Package.props))\DocumentFormat.OpenXml.Package.props" />
 
   <PropertyGroup>
+    <Nullable>enable</Nullable>
     <IsShipped>true</IsShipped>
     <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
     <NoWarn>$(NoWarn);3003</NoWarn>
@@ -14,7 +15,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>  
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
@@ -25,6 +26,7 @@
     <!-- Remove all files under System as they need to be specifically opted into. They are
          helper files to fill the gaps of the various platforms that are targeted -->
     <Compile Remove="System\**\*.cs" />
+    <Compile Include="System\EnumHelper.cs" />
     <Compile Include="System\UriHelper.cs" />
     <None Include="**\*.md" />
   </ItemGroup>
@@ -34,11 +36,11 @@
   </ItemGroup>
 
   <Choose>
-    <When Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' ">
+    <When Condition=" '$(TargetFramework)' == 'net35'">
       <PropertyGroup>
         <CompileWithPeVerify>true</CompileWithPeVerify>
       </PropertyGroup>
-      
+
       <ItemGroup>
         <Reference Include="System" />
         <Reference Include="System.Xml" />
@@ -46,20 +48,46 @@
       </ItemGroup>
 
       <ItemGroup>
+        <Compile Include="System\HashCode.cs" />
+        <Compile Include="System\Lazy{T}.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
+        <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyDictionary.cs" />
+        <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+        <Compile Include="System\FormattableString.cs" />
+        <Compile Include="System\IO\StreamCopyExtensions.cs" />
         <Compile Include="System\Reflection\TypeExtensions.cs" />
-        <Compile Include="System\Runtime\InteropServices\Marshal.cs" />
+        <Compile Include="System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
+        <Compile Include="System\Runtime\CompilerServices\FormattableStringFactory.cs" />
+        <Compile Include="System\Threading\CancellationToken.cs" />
+        <Compile Include="System\Xml\Linq\XDocumentExtensions.cs" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'net40' ">
+      <PropertyGroup>
+        <CompileWithPeVerify>true</CompileWithPeVerify>
+      </PropertyGroup>
+
+      <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Xml.Linq" />
+      </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="System\HashCode.cs" />
+        <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
+        <Compile Include="System\Collections\Generic\IReadOnlyDictionary.cs" />
+        <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
+        <Compile Include="System\Reflection\TypeExtensions.cs" />
         <Compile Include="System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
         <Compile Include="System\Runtime\CompilerServices\FormattableStringFactory.cs" />
         <Compile Include="System\FormattableString.cs" />
-      </ItemGroup>
-
-      <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
-        <Compile Include="System\Collections\Concurrent\ConcurrentDictionary.cs" />
-        <Compile Include="System\IO\StreamCopyExtensions.cs" />
-        <Compile Include="System\Threading\CancellationToken.cs" />
-        <Compile Include="System\Lazy{T}.cs" />
       </ItemGroup>
     </When>
 
@@ -72,6 +100,13 @@
         <Reference Include="System" />
         <Reference Include="System.Xml" />
         <Reference Include="System.Xml.Linq" />
+      </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="System\HashCode.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
+        <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
       </ItemGroup>
     </When>
 
@@ -86,14 +121,37 @@
       </ItemGroup>
 
       <ItemGroup>
+        <Compile Include="System\HashCode.cs" />
         <Compile Include="System\ICloneable.cs" />
         <Compile Include="System\NonSerializedAttribute.cs" />
         <Compile Include="System\SerializableAttribute.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
         <Compile Include="System\Reflection\SubclassExtensions.cs" />
+        <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
       </ItemGroup>
+
     </When>
 
     <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+      <ItemGroup>
+        <PackageReference Include="System.IO.Packaging" Version="$(SystemIOPackagingVersion)" />
+      </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="System\HashCode.cs" />
+        <Compile Include="System\Span.cs" />
+        <Compile Include="System\SpanExtensions.cs" />
+        <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+      </ItemGroup>
+
+      <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->
+      <ItemGroup>
+        <EmbeddedResource Include="Properties\DocumentFormat.OpenXml.rd.xml" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'net5.0' ">
       <ItemGroup>
         <PackageReference Include="System.IO.Packaging" Version="$(SystemIOPackagingVersion)" />
       </ItemGroup>

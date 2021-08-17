@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#nullable enable
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -15,9 +17,12 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 {
     /// <summary>
     /// <para>Defines the ContentTypeSchema Class.</para>
-    /// <para>This class is available in Office 2007 or above.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ct:contentTypeSchema.</para>
     /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(38, "contentTypeSchema")]
+#pragma warning restore CS0618 // Type or member is obsolete
     public partial class ContentTypeSchema : OpenXmlCompositeElement
     {
         /// <summary>
@@ -58,7 +63,13 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ct=http://schemas.microsoft.com/office/2006/metadata/contentType
         /// </remark>
-        public StringValue UnderScore
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(38, "_")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? UnderScore
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -71,7 +82,13 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public StringValue ReservedAttributeString
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "_")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ReservedAttributeString
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -84,7 +101,13 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public StringValue ContentTypeName
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "contentTypeName")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ContentTypeName
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -97,7 +120,13 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public StringValue ContentTypeID
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "contentTypeID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ContentTypeID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -110,7 +139,13 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public Int32Value ContentTypeVersion
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "contentTypeVersion")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public Int32Value? ContentTypeVersion
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -123,7 +158,13 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public StringValue ContentTypeDescription
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "contentTypeDescription")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ContentTypeDescription
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -136,7 +177,13 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public StringValue ContentTypeScope
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "contentTypeScope")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? ContentTypeScope
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -149,7 +196,13 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         /// <remark>
         /// xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
         /// </remark>
-        public StringValue VersionID
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(41, "versionID")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? VersionID
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);
@@ -174,7 +227,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
 .AddAttribute(41, "contentTypeDescription", a => a.ContentTypeDescription)
 .AddAttribute(41, "contentTypeScope", a => a.ContentTypeScope)
 .AddAttribute(41, "versionID", a => a.VersionID);
-            builder.Particle = new CompositeParticle(ParticleType.Sequence, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new AnyParticle(XsdAny.Any, 1, 0)
             };

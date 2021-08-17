@@ -17,7 +17,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="validationContext"></param>
         internal static void Validate(ValidationContext validationContext)
         {
-            AlternateContent acElement = (AlternateContent)validationContext.Stack.Current.Element;
+            if (validationContext.Stack.Current?.Element is not AlternateContent acElement)
+            {
+                return;
+            }
 
             // Validate MC attribute on AlternateContent
             ValidateMcAttributesOnAcb(validationContext, acElement);
@@ -32,11 +35,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 validationContext.AddError(errorInfo);
             }
 
-            OpenXmlElement child;
+            var child = acElement.GetFirstNonMiscElementChild();
 
-            child = acElement.GetFirstNonMiscElementChild();
-
-            while (child != null)
+            while (child is not null)
             {
                 if (child is AlternateContent)
                 {
@@ -119,7 +120,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             // AlternateContent elements might include the attributes Ignorable, MustUnderstand, ProcessContent, PreserveElements, and PreserveAttributes
             // These attributes’ qualified names shall be prefixed when associated with an AlternateContent / Choice / Fallback element.
             // A markup consumer shall generate an error if it encounters an unprefixed attribute name associated with an AlternateContent element.
-            if (acElement.ExtendedAttributes != null)
+            if (acElement.ExtendedAttributes is not null)
             {
                 foreach (var exAttribute in acElement.ExtendedAttributes)
                 {
@@ -148,7 +149,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             if (acElement is AlternateContentChoice choice)
             {
                 // All Choice elements shall have a Requires attribute whose value contains a whitespace-delimited list of namespace prefixes
-                if (choice.Requires == null)
+                if (choice.Requires is null)
                 {
                     // report error
                     errorInfo = validationContext.ComposeMcValidationError(acElement, "MC_MissedRequiresAttribute");
@@ -160,12 +161,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     prefixes.InnerText = choice.Requires;
                     foreach (var prefix in prefixes.Items)
                     {
-                        var ignorableNamespace = choice.LookupNamespace(prefix);
-                        if (string.IsNullOrEmpty(ignorableNamespace))
+                        if (prefix.Value is not null)
                         {
-                            // report error, the prefix is not defined.
-                            errorInfo = validationContext.ComposeMcValidationError(choice, "MC_InvalidRequiresAttribute", choice.Requires);
-                            validationContext.AddError(errorInfo);
+                            var ignorableNamespace = choice.LookupNamespace(prefix.Value);
+                            if (string.IsNullOrEmpty(ignorableNamespace))
+                            {
+                                // report error, the prefix is not defined.
+                                errorInfo = validationContext.ComposeMcValidationError(choice, "MC_InvalidRequiresAttribute", choice.Requires);
+                                validationContext.AddError(errorInfo);
+                            }
                         }
                     }
                 }
