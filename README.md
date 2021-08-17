@@ -3,23 +3,7 @@ Open XML SDK
 
 [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
 [![Downloads](https://img.shields.io/nuget/dt/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
-[![Build Status](https://office.visualstudio.com/OC/_apis/build/status/OpenXmlSdk/OfficeDev.Open-XML-SDK?branchName=master)](https://office.visualstudio.com/OC/_build/latest?definitionId=7420&branchName=master)
-
-> # Office 2019 Support Available!
-> The latest release 2.13.0 provides support for Office 2019 types, including for: 
->- Rich data types in Excel
->- Threaded comments in Excel
->- Word CommentIds
->- Hyperlink color
->- SVG
->- 3D models and animated 3D models  
->
-> Please file any issues you find and label them with `Office2019`.  
-
-&nbsp;
-> # Microsoft DevDays Redmond 2021 Online
-> Join us at the Virtual Microsoft DevDays for a session on File Formats and the OpenXML SDK.  
-> Register for this and other sessions (no cost) at www.interopevents.com/redmond2021  
+[![Build Status](https://office.visualstudio.com/OC/_apis/build/status/OpenXmlSdk/OfficeDev.Open-XML-SDK?branchName=master)](https://office.visualstudio.com/OC/_build/latest?definitionId=7420&branchName=main)
 
 
 &nbsp;
