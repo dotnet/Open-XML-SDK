@@ -187,13 +187,19 @@ namespace DocumentFormat.OpenXml.Packaging
 
             //OpenXmlPart parentPart = this._ownerPart;
 
-            //Uri is auto generated to make sure it's unique
-            var targetPath = GetTargetPath(openXmlPackage, TargetPath) ?? ".";
+            // Uri is auto generated to make sure it's unique
+            string targetPath = GetTargetPath(openXmlPackage, TargetPath) ?? ".";
+
+            if (targetPath is null)
+            {
+                targetPath = ".";
+            }
 
             string? targetFileExt = targetExt;
 
             if (!IsContentTypeFixed)
             {
+                // TODO: Revisit. Does this make sense? Out parameter targetFileExt is overwritten.
                 if (!openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out targetFileExt))
                 {
                     targetFileExt = targetExt;
@@ -215,8 +221,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
             }
-            else if (parent is not null && openXmlPackage is not null &&
-                 parent.OpenXmlPackage != openXmlPackage)
+            else if (parent is not null && openXmlPackage is not null && parent.OpenXmlPackage != openXmlPackage)
             {
                 throw new ArgumentOutOfRangeException(nameof(parent));
             }
@@ -776,23 +781,21 @@ namespace DocumentFormat.OpenXml.Packaging
                     return;
                 }
 
-                try
-                {
-                    var rootElement = new T();
+            try
+            {
+                // set OpenXmlPart before loading from part to be able to access
+                // OpenXmlPart and OpenXmlPackage while loading.
+                var rootElement = new T { OpenXmlPart = this };
 
-                    if (rootElement.LoadFromPart(this, stream))
-                    {
-                        // set this part to the root Element
-                        rootElement.OpenXmlPart = this;
-
-                        // associate the root element with this part.
-                        InternalRootElement = rootElement;
-                    }
-                }
-                catch (InvalidDataException e)
+                if (rootElement.LoadFromPart(this, stream))
                 {
-                    throw new InvalidDataException(ExceptionMessages.CannotLoadRootElement, e);
+                    // associate the root element with this part.
+                    InternalRootElement = rootElement;
                 }
+            }
+            catch (InvalidDataException e)
+            {
+                throw new InvalidDataException(ExceptionMessages.CannotLoadRootElement, e);
             }
         }
 
