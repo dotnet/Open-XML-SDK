@@ -113,6 +113,7 @@
     <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
       <ItemGroup>
         <PackageReference Include="System.IO.Packaging" Version="$(SystemIOPackagingVersion)" />
+        <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
         <PackageReference Include="System.Xml.ReaderWriter" Version="4.3.1" />
       </ItemGroup>
 

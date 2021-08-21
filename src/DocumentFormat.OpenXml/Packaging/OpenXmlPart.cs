@@ -33,6 +33,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Create an instance of <see cref="OpenXmlPart"/>
         /// </summary>
         protected internal OpenXmlPart()
+            : base()
         {
         }
 
@@ -774,12 +775,11 @@ namespace DocumentFormat.OpenXml.Packaging
             // method is in synch with the part contents.
             SaveRootXElement();
 
-            using (Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read))
+            using Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read);
+            if (stream.Length == 0)
             {
-                if (stream.Length == 0)
-                {
-                    return;
-                }
+                return;
+            }
 
             try
             {

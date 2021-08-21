@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -196,18 +195,9 @@ namespace DocumentFormat.OpenXml
         {
         }
 
-        private protected void SetAttribute<TSimpleType>(TSimpleType? value, [CallerMemberName] string propertyName = null!)
+        private protected virtual void SetAttribute<TSimpleType>(TSimpleType? value, [CallerMemberName] string propertyName = null!)
             where TSimpleType : OpenXmlSimpleType
         {
-            // TODO: Revisit and add corresponding code for TableRow.
-            // Consider adding the following code to the generated code in schemas_openxmlformats_org_wordprocessingml_2006_main.g.cs.
-            // That way, the checks will only have to be performed for Paragraph and TableRow instances.
-            if (this is Paragraph p && propertyName is nameof(Paragraph.ParagraphId) && value is HexBinaryValue hexBinaryValue)
-            {
-                // TODO: Consider throwing an exception in case the value is not unique.
-                p.Document?.RegisterParagraphId(hexBinaryValue);
-            }
-
             ParsedState.Attributes.GetProperty(propertyName).Value = value;
         }
 

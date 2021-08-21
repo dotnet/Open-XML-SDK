@@ -3,41 +3,75 @@
 
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Packaging;
 using System;
+using System.Runtime.CompilerServices;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
-    public partial class Paragraph
+    public partial class Paragraph : IParagraphIdHolder
     {
-        private Document? _document;
+        private WordprocessingDocument? _wordprocessingDocument;
 
         /// <summary>
-        /// Gets the <see cref="Document" />.
+        /// Gets the <see cref="WordprocessingDocument" /> in which this <see cref="Paragraph"/>
+        /// is ultimately contained (e.g., in the <see cref="MainDocumentPart" /> or other parts
+        /// that can contain <see cref="Paragraph" /> instances.
         /// </summary>
         /// <remarks>
-        /// Lazily stores a reference to the part root element of type Document.
+        /// Lazily stores a reference to the <see cref="WordprocessingDocument"/>.
         /// Avoids having to traverse the parent hierarchy each time the
-        /// TrySetFixedAttribute() method is called.
-        /// When cloning the Paragraph instance, using CloneNode() or Clone(),
-        /// the reference will not be retained.
+        /// TrySetFixedAttribute() method is called. When cloning the Paragraph
+        /// instance, using CloneNode() or Clone(), the reference will not be
+        /// retained.
+        /// The <see cref="WordprocessingDocument" /> class implements the
+        /// <see cref="IParagraphIdService" /> interface, which we need to create
+        /// unique w14:paraId (ParagraphId) values. We could have stored a reference
+        /// to a <see cref="IParagraphIdService" /> instance. However, storing the
+        /// <see cref="WordprocessingDocument" /> reference might be useful for
+        /// future enhancements.
         /// </remarks>
-        internal Document? Document
+        internal WordprocessingDocument? WordprocessingDocument
         {
             get
             {
-                _document ??= (Document?) GetPartRootElement();
-                return _document;
+                if (_wordprocessingDocument == null)
+                {
+                    OpenXmlPartRootElement? partRootElement = GetPartRootElement();
+                    _wordprocessingDocument = partRootElement?.OpenXmlPart?.OpenXmlPackage as WordprocessingDocument;
+                }
+
+                return _wordprocessingDocument;
             }
         }
 
         /// <summary>
+        /// Sets named property's value, registering w14:paraId values.
+        /// </summary>
+        /// <typeparam name="TSimpleType">The property type.</typeparam>
+        /// <param name="value">The property value.</param>
+        /// <param name="propertyName">The property name.</param>
+        private protected override void SetAttribute<TSimpleType>(TSimpleType? value, [CallerMemberName] string propertyName = null!)
+            where TSimpleType : class
+        {
+            if (propertyName is nameof(ParagraphId) && value is HexBinaryValue hexBinaryValue)
+            {
+                // TODO: Discuss how we want to deal with duplicate w14:paraId values assigned by the caller.
+                // The RegisterParagraphId() method returns true if the hexBinaryValue was unique and false otherwise.
+                // Therefore, if desired (e.g., always or based on settings), we could throw an exception.
+                WordprocessingDocument?.RegisterParagraphId(hexBinaryValue);
+            }
+
+            base.SetAttribute(value, propertyName);
+        }
+
+        /// <summary>
         /// Attempts to set the attribute to a known attribute and registers any existing
-        /// w14:paraId values with the root <see cref="Document" /> instance.
+        /// w14:paraId values with the <see cref="WordprocessingDocument" /> instance.
         /// </summary>
         /// <remarks>
         /// This is the Paragraph-specific implementation that registers the w14:paraId
         /// values when loading the DOM tree.
-        /// The same method will have to be added to the TableRow class.
         /// </remarks>
         /// <param name="qname">The attribute's qualified name.</param>
         /// <param name="value">The attribute's value.</param>
@@ -61,7 +95,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
                     if (qname.Name == "paraId" && value is not null)
                     {
-                        Document?.RegisterParagraphId(value);
+                        WordprocessingDocument?.RegisterParagraphId(value);
                     }
 
                     return true;
@@ -71,33 +105,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             return false;
         }
 
-        /// <summary>
-        /// For Paragraph instances that have already been added to the DOM tree,
-        /// sets the <see cref="ParagraphId" /> to a random and unique value.
-        /// </summary>
-        /// <exception cref="InvalidOperationException">If the paragraph has not been added to a DOM tree.</exception>
-        public void SetUniqueParagraphId()
+        /// <inheritdoc />
+        public string SetUniqueParagraphId()
         {
-            Document? document = Document;
-
-            if (document is null)
+            WordprocessingDocument? wordprocessingDocument = WordprocessingDocument;
+            if (wordprocessingDocument is null)
             {
                 throw new InvalidOperationException("Paragraph must be added to the DOM tree before calling this method.");
             }
 
-            ParsedState.Attributes.GetProperty(nameof(ParagraphId)).Value = document.CreateUniqueParagraphId();
+            return SetUniqueParagraphId(wordprocessingDocument);
         }
 
-        /// <summary>
-        /// For Paragraph instances that have not yet been added to the DOM tree,
-        /// sets the <see cref="ParagraphId" /> to a random and unique value.
-        /// </summary>
-        /// <param name="document">The <see cref="Document" /> used to create the random and unique value.</param>
-        /// <returns>This <see cref="Paragraph" /> instance.</returns>
-        public Paragraph WithUniqueParagraphId(Document document)
+        /// <inheritdoc />
+        public string SetUniqueParagraphId(IParagraphIdService paragraphIdService)
         {
-            ParsedState.Attributes.GetProperty(nameof(ParagraphId)).Value = document.CreateUniqueParagraphId();
-            return this;
+            string paragraphId = paragraphIdService.CreateUniqueParagraphId();
+            ParsedState.Attributes.GetProperty(nameof(ParagraphId)).Value = new HexBinaryValue(paragraphId);
+            return paragraphId;
         }
     }
 }

@@ -3,6 +3,10 @@
 
 using System;
 
+#if !FEATURE_SPAN
+using System.Text;
+#endif
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
