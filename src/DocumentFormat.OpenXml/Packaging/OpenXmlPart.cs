@@ -455,7 +455,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region Linq to XML
 
         /// <summary>
-        /// Gets or sets
+        /// Gets or sets the root LINQ to XML element.
         /// </summary>
         public XElement? RootXElement
         {
