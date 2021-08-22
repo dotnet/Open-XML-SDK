@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
             part.Document = new Document(body);
 
-            Assert.Equal(count, wordDocument.ParagraphIds.Count);
+            Assert.Equal(count, wordDocument.RegisteredParagraphIds.Count);
 
             return count;
         }
@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             // The MainDocumentPart's DOM tree must have been loaded by accessing
             // the Document property before determining the number of w14:paraId
             // values currently existing in the scope of the WordprocessingDocument.
-            Assert.Equal(start, wordDocument.ParagraphIds.Count);
+            Assert.Equal(start, wordDocument.RegisteredParagraphIds.Count);
 
             for (int i = start; i < end; i++)
             {
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 body.AppendChild(paragraph);
             }
 
-            Assert.Equal(end, wordDocument.ParagraphIds.Count);
+            Assert.Equal(end, wordDocument.RegisteredParagraphIds.Count);
 
             return end - start;
         }
@@ -150,24 +150,123 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             Body body = wordDocument.MainDocumentPart!.Document!.Body!;
 
             Assert.Equal(total, body.Elements<Paragraph>().Count());
-            Assert.Equal(total, wordDocument.ParagraphIds.Count);
-            Assert.Empty(wordDocument.DuplicateParagraphIds);
+            Assert.Equal(total, wordDocument.RegisteredParagraphIds.Count);
         }
 
         [Fact]
-        public void CanLoadParagraphIds()
+        public void CanRegisterAllParagraphIds()
         {
+            // Arrange.
             using var stream = new MemoryStream();
             int count = CreateTestDocument(stream, 10000);
             count += AddOtherParts(stream, 1000);
 
             using WordprocessingDocument wordDocument = WordprocessingDocument.Open(stream, true);
+            Assert.Equal(0, wordDocument.RegisteredParagraphIds.Count);
+
+            // Act.
 #if NET452
-            ICollection<string> paragraphIds = wordDocument.GetAllParagraphIds();
+            ICollection<string> paragraphIds = wordDocument.RegisterAllParagraphIds();
 #else
-            IReadOnlyCollection<string> paragraphIds = wordDocument.GetAllParagraphIds();
+            IReadOnlyCollection<string> paragraphIds = wordDocument.RegisterAllParagraphIds();
 #endif
+
+            // Assert.
+            Assert.Equal(count, wordDocument.RegisteredParagraphIds.Count);
             Assert.Equal(count, paragraphIds.Count);
+            Assert.Equal(wordDocument.RegisteredParagraphIds, paragraphIds);
+        }
+
+        [Fact]
+        public void CanAssignUniqueParagraphIds()
+        {
+            // Arrange.
+            // Construct a document with 100 different w14:paraId values and many duplicates.
+            const int count = 1000;
+            const int divisor = 100;
+            var body = new Body();
+
+            for (var i = 0; i < count; i++)
+            {
+                string paragraphId = HexStringFactory.Create(0x00, 0x00, 0x00, (byte) (i % divisor));
+                body.AppendChild(new Paragraph(new Run(new Text(paragraphId))) { ParagraphId = paragraphId });
+            }
+
+            using var stream = new MemoryStream();
+            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+            MainDocumentPart part = wordDocument.AddMainDocumentPart();
+            part.Document = new Document(body);
+
+#if NET452
+            ICollection<string> paragraphIds = wordDocument.RegisterAllParagraphIds();
+#else
+            IReadOnlyCollection<string> paragraphIds = wordDocument.RegisterAllParagraphIds();
+#endif
+
+            Assert.Equal(divisor, paragraphIds.Count);
+
+            // Act.
+            // Assign unique w14:paraId values.
+            wordDocument.AssignUniqueParagraphIds();
+
+            // Assert.
+            // We have as many registered w14:paraId values as we have w:p elements.
+            Assert.Equal(count, wordDocument.RegisteredParagraphIds.Count);
+
+            // When checked independently, the number of w14:paraId values matches.
+            var newParaIds = new HashSet<string>(body.Elements<Paragraph>().Select(p => p.ParagraphId!.Value!));
+            Assert.Equal(count, newParaIds.Count);
+
+            // The first 100 w:p elements did not have their w14:paraId value changed.
+            Assert.All(body.Elements<Paragraph>().Take(divisor), p => Assert.Equal(p.InnerText, p.ParagraphId!.InnerText));
+
+            // The following 900 w:p elements did have their w14:paraId values changed.
+            Assert.All(body.Elements<Paragraph>().Skip(divisor), p => Assert.NotEqual(p.InnerText, p.ParagraphId!.InnerText));
+        }
+
+        [Fact]
+        public void CanReassignParagraphIdsToParagraphIdHolders()
+        {
+            // Create a test document with some paragraphs and establish the uniqueness
+            // of the w14:paraId values.
+            using var stream = new MemoryStream();
+            int count = CreateTestDocument(stream, 1000);
+
+            using WordprocessingDocument wordDocument = WordprocessingDocument.Open(stream, true);
+#if NET452
+            ICollection<string> paragraphIds = wordDocument.RegisterAllParagraphIds();
+#else
+            IReadOnlyCollection<string> paragraphIds = wordDocument.RegisterAllParagraphIds();
+#endif
+
+            Assert.Equal(count, wordDocument.RegisteredParagraphIds.Count);
+            Assert.Equal(count, paragraphIds.Count);
+            Assert.Equal(wordDocument.RegisteredParagraphIds, paragraphIds);
+
+            // Create a new w14:paraId service and assign new w14:paraId values to the
+            // w14:paraId holders (i.e., w:p and w:tr elements).
+            // This might be relevant when copying w:p or w:tr elements over to another
+            // main document part, for example.
+            var newParagraphIdService = new RandomParagraphIdService(paragraphIds);
+
+            Document document = wordDocument.MainDocumentPart!.Document!;
+            IEnumerable<IParagraphIdHolder> paraIdHolders = document.Descendants().OfType<IParagraphIdHolder>();
+
+            foreach (var paraIdHolder in paraIdHolders)
+            {
+                string? value = paraIdHolder.ParagraphId?.Value;
+
+                Assert.NotNull(value);
+                Assert.Contains(value!, newParagraphIdService.RegisteredParagraphIds);
+
+                string newValue = paraIdHolder.SetUniqueParagraphId(newParagraphIdService);
+
+                Assert.DoesNotContain(newValue, wordDocument.RegisteredParagraphIds);
+            }
+
+            // At this point, the new w14:paraId service has registered both the old and
+            // new w14:paraId values.
+            Assert.Equal(2 * count, newParagraphIdService.RegisteredParagraphIds.Count);
         }
     }
 }

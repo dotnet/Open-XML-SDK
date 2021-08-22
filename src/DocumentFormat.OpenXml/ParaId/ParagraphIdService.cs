@@ -14,59 +14,37 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Used to keep track of the existing and generated w14:paraId values.
         /// </summary>
-        protected readonly HashSet<string> InternalParagraphIds;
-
-        /// <summary>
-        /// Used to keep track of duplicate w14:paraId values that already existed
-        /// in the scope of this instance.
-        /// </summary>
-        protected readonly HashSet<string> InternalDuplicateParagraphIds;
+        protected readonly HashSet<string> InternalRegisteredParagraphIds;
 
         /// <summary>
         /// Default constructor.
         /// </summary>
         protected ParagraphIdService()
         {
-            InternalParagraphIds = new HashSet<string>();
-            InternalDuplicateParagraphIds = new HashSet<string>();
+            InternalRegisteredParagraphIds = new HashSet<string>();
         }
 
         /// <summary>
         /// Initializes a new instance with a set of existing w14:paraId (ParagraphId)
-        /// values that will not be produced by that instance.
+        /// values that will not be produced by that new instance.
         /// </summary>
         /// <param name="paragraphIds">The collection of existing w14:paraId (ParagraphId) values.</param>
         protected ParagraphIdService(IEnumerable<string> paragraphIds)
         {
-            InternalParagraphIds = new HashSet<string>(paragraphIds.Select(id => id.ToUpperInvariant()));
-            InternalDuplicateParagraphIds = new HashSet<string>();
+            InternalRegisteredParagraphIds = new HashSet<string>(paragraphIds.Select(id => id.ToUpperInvariant()));
         }
 
         /// <inheritdoc />
 #if NET35 || NET40
-        public ICollection<string> ParagraphIds => new ReadOnlyCollectionWrapper<string>(InternalParagraphIds);
+        public ICollection<string> RegisteredParagraphIds => new ReadOnlyCollectionWrapper<string>(InternalRegisteredParagraphIds);
 #else
-        public IReadOnlyCollection<string> ParagraphIds => InternalParagraphIds;
-#endif
-
-        /// <inheritdoc />
-#if NET35 || NET40
-        public ICollection<string> DuplicateParagraphIds => new ReadOnlyCollectionWrapper<string>(InternalDuplicateParagraphIds);
-#else
-        public IReadOnlyCollection<string> DuplicateParagraphIds => InternalDuplicateParagraphIds;
+        public IReadOnlyCollection<string> RegisteredParagraphIds => InternalRegisteredParagraphIds;
 #endif
 
         /// <inheritdoc />
         public virtual bool RegisterParagraphId(string value)
         {
-            bool isAdded = InternalParagraphIds.Add(value.ToUpperInvariant());
-
-            if (!isAdded)
-            {
-                InternalDuplicateParagraphIds.Add(value);
-            }
-
-            return isAdded;
+            return InternalRegisteredParagraphIds.Add(value.ToUpperInvariant());
         }
 
         /// <inheritdoc />
@@ -79,7 +57,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         public string CreateUniqueParagraphId()
         {
             string paragraphId = CreateNextParagraphId();
-            while (!InternalParagraphIds.Add(paragraphId))
+            while (!InternalRegisteredParagraphIds.Add(paragraphId))
             {
                 paragraphId = CreateNextParagraphId();
             }

@@ -50,8 +50,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             Assert.NotNull(secondParagraph.ParagraphId?.Value);
             Assert.Equal(firstParagraph.ParagraphId, secondParagraph.ParagraphId);
 
-            Assert.Contains(hexString, wordDocument.ParagraphIds);
-            Assert.Contains(hexString, wordDocument.DuplicateParagraphIds);
+            Assert.Contains(hexString, wordDocument.RegisteredParagraphIds);
         }
 
         [Fact]
@@ -80,8 +79,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             Assert.Equal(firstParagraph.ParagraphId, secondParagraph.ParagraphId);
 
             // Note that the ParagraphIdService does not know about those w14:paraId values.
-            Assert.Empty(wordDocument.ParagraphIds);
-            Assert.Empty(wordDocument.DuplicateParagraphIds);
+            Assert.Empty(wordDocument.RegisteredParagraphIds);
         }
 
         [Fact]

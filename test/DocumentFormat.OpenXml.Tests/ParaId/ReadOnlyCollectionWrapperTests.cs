@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace DocumentFormat.OpenXml.Wordprocessing
+namespace DocumentFormat.OpenXml
 {
     public class ReadOnlyCollectionWrapperTests
     {

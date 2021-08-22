@@ -12,23 +12,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     public interface IParagraphIdService
     {
         /// <summary>
-        /// Gets the w14:paraId values existring within the scope of the
+        /// Gets the w14:paraId values that have been registered with the
         /// <see cref="IParagraphIdService" /> instance.
         /// </summary>
 #if NET35 || NET40
-        ICollection<string> ParagraphIds { get; }
+        ICollection<string> RegisteredParagraphIds { get; }
 #else
-        IReadOnlyCollection<string> ParagraphIds { get; }
-#endif
-
-        /// <summary>
-        /// Gets the duplicate w14:paraId (ParagraphId) values existring within the scope
-        /// of the <see cref="IParagraphIdService" /> instance.
-        /// </summary>
-#if NET35 || NET40
-        ICollection<string> DuplicateParagraphIds { get; }
-#else
-        IReadOnlyCollection<string> DuplicateParagraphIds { get; }
+        IReadOnlyCollection<string> RegisteredParagraphIds { get; }
 #endif
 
         /// <summary>

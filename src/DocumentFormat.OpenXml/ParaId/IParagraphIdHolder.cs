@@ -12,6 +12,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     public interface IParagraphIdHolder
     {
         /// <summary>
+        /// <para>Gets or sets the w14:paraId attribute value.</para>
+        /// <para>This property is only available in Office 2010 and later.</para>
+        /// <para>Represents the following attribute in the schema: w14:paraId.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
+        /// </remark>
+        HexBinaryValue? ParagraphId { get; set; }
+
+        /// <summary>
         /// For <see cref="Paragraph" /> and <see cref="TableRow" /> instances that
         /// have already been added to the DOM tree, sets the w14:paraId (ParagraphId)
         /// value to a random and unique value.

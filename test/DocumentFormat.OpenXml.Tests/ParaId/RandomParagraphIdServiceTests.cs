@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Linq;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
@@ -21,9 +20,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             string paraId = Service.CreateUniqueParagraphId();
 
-            var newService = new RandomParagraphIdService(Service.ParagraphIds);
+            var newService = new RandomParagraphIdService(Service.RegisteredParagraphIds);
 
-            Assert.Contains(paraId, newService.ParagraphIds);
+            Assert.Contains(paraId, newService.RegisteredParagraphIds);
         }
 
         [Fact]
@@ -51,8 +50,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 Assert.Equal(paraId.ToUpperInvariant(), paraId);
             }
 
-            Assert.Equal(count, Service.ParagraphIds.Count);
-            Assert.Empty(Service.DuplicateParagraphIds);
+            Assert.Equal(count, Service.RegisteredParagraphIds.Count);
         }
 
         [Fact]
@@ -64,8 +62,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             bool isAdded = Service.RegisterParagraphId(new HexBinaryValue(paraId));
 
             Assert.False(isAdded);
-            Assert.Single(Service.ParagraphIds);
-            Assert.Equal(paraId, Service.DuplicateParagraphIds.Single());
+            Assert.Single(Service.RegisteredParagraphIds);
         }
 
         [Fact]
@@ -77,7 +74,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             bool isAdded = Service.RegisterParagraphId(paraId);
 
             Assert.False(isAdded);
-            Assert.Equal(paraId, Service.DuplicateParagraphIds.Single());
         }
 
         [Fact]
@@ -92,8 +88,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             bool isAdded = Service.RegisterParagraphId(new HexBinaryValue("12345678"));
 
             Assert.True(isAdded);
-            Assert.Single(Service.ParagraphIds);
-            Assert.Empty(Service.DuplicateParagraphIds);
+            Assert.Single(Service.RegisteredParagraphIds);
         }
 
         [Fact]
@@ -102,8 +97,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             bool isAdded = Service.RegisterParagraphId("12345678");
 
             Assert.True(isAdded);
-            Assert.Single(Service.ParagraphIds);
-            Assert.Empty(Service.DuplicateParagraphIds);
+            Assert.Single(Service.RegisteredParagraphIds);
         }
 
 #if NET452
@@ -111,27 +105,17 @@ namespace DocumentFormat.OpenXml.Wordprocessing
          * NOTES:
          * When the product targets net35 or net40, the unit test projects target net452.
          * As net35 and net40 do not support the IReadOnlyCollection<T> interface, the
-         * ParagraphIds and DuplicateParagraphIds properties are of type ICollection<T>.
-         * However, the collections are read-only, which is established by the following
-         * platform-specific unit tests.
+         * RegisteredParagraphIds property is of type ICollection<T>. However, the collection
+         * is read-only, which is established by the following platform-specific unit test.
          */
 
         [Fact]
-        public void ParagraphIds_IsReadOnly()
+        public void RegisteredParagraphIds_IsReadOnly()
         {
-            Assert.True(Service.ParagraphIds.IsReadOnly);
-            Assert.Throws<NotSupportedException>(() => Service.ParagraphIds.Add("12345678"));
-            Assert.Throws<NotSupportedException>(() => Service.ParagraphIds.Clear());
-            Assert.Throws<NotSupportedException>(() => Service.ParagraphIds.Remove("12345678"));
-        }
-
-        [Fact]
-        public void DuplicateParagraphIds_IsReadOnly()
-        {
-            Assert.True(Service.ParagraphIds.IsReadOnly);
-            Assert.Throws<NotSupportedException>(() => Service.DuplicateParagraphIds.Add("12345678"));
-            Assert.Throws<NotSupportedException>(() => Service.DuplicateParagraphIds.Clear());
-            Assert.Throws<NotSupportedException>(() => Service.DuplicateParagraphIds.Remove("12345678"));
+            Assert.True(Service.RegisteredParagraphIds.IsReadOnly);
+            Assert.Throws<NotSupportedException>(() => Service.RegisteredParagraphIds.Add("12345678"));
+            Assert.Throws<NotSupportedException>(() => Service.RegisteredParagraphIds.Clear());
+            Assert.Throws<NotSupportedException>(() => Service.RegisteredParagraphIds.Remove("12345678"));
         }
 #endif
     }

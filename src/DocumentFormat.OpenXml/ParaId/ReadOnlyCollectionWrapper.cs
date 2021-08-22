@@ -5,7 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace DocumentFormat.OpenXml.Wordprocessing
+namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Wraps collections and makes them appear read-only.
