@@ -11,14 +11,29 @@ using System.Linq;
 
 namespace DocumentFormat.OpenXml.CodeGeneration.Linq
 {
+    /// <summary>
+    /// Code generator for the namespace-related Linq-to-Xml classes.
+    /// </summary>
     public static class Program
     {
         private const string EmptyNamespace = "NoNamespace";
 
-        public static void Main()
+        /// <summary>
+        /// Generates the namespace-related classes for the Linq-to-XML feature, taking
+        /// one optional parameter that specifies the absolute or relative path to the
+        /// folder into which the generated code is written.
+        /// </summary>
+        /// <param name="args">The command line arguments.</param>
+        public static void Main(string[] args)
         {
+            const string defaultDirectoryName = "..\\..\\..\\..\\src\\DocumentFormat.OpenXml.Linq\\GeneratedCode";
+            string directoryName = args.Length > 0 ? args[0] : defaultDirectoryName;
+            directoryName = Path.GetFullPath(directoryName);
+
+            Console.WriteLine($@"Generating code in '{directoryName}' ...");
+
             var fieldInfos = new Dictionary<OpenXmlQualifiedName, FieldInfo>();
-            IReadOnlyCollection<ElementMetadata> elementMetadataCollection = AssembleElementMetadata(fieldInfos);
+            IEnumerable<ElementMetadata> elementMetadataCollection = AssembleElementMetadata(fieldInfos);
             AssembleAttributeMetadata(elementMetadataCollection, fieldInfos);
 
             IEnumerable<IGrouping<string, FieldInfo>> fieldInfoGroupings = fieldInfos.Values
@@ -59,7 +74,6 @@ namespace DocumentFormat.OpenXml.CodeGeneration.Linq
             }
 
             // Generate classes.
-            const string directoryName = "..\\..\\..\\..\\src\\DocumentFormat.OpenXml.Linq\\GeneratedCode";
             Directory.CreateDirectory(directoryName);
 
             foreach (IGrouping<string, FieldInfo> fieldInfoGrouping in fieldInfoGroupings)
@@ -279,7 +293,7 @@ namespace DocumentFormat.OpenXml.CodeGeneration.Linq
             output.WriteLine(@"    }");
         }
 
-        private static IReadOnlyCollection<ElementMetadata> AssembleElementMetadata(
+        private static IEnumerable<ElementMetadata> AssembleElementMetadata(
             IDictionary<OpenXmlQualifiedName, FieldInfo> fieldInfos)
         {
             var visitedElementTypes = new HashSet<Type>();
@@ -296,7 +310,7 @@ namespace DocumentFormat.OpenXml.CodeGeneration.Linq
         private static ElementMetadata AssembleElementMetatata(
             ElementMetadata parentMetadata,
             ElementLookup.ElementChild elementChild,
-            ISet<Type> visitedTypes,
+            HashSet<Type> visitedTypes,
             ICollection<ElementMetadata> elementMetadataCollection,
             IDictionary<OpenXmlQualifiedName, FieldInfo> fieldInfos)
         {
