@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Xunit;
@@ -161,8 +162,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             count += AddOtherParts(stream, 1000);
 
             using WordprocessingDocument wordDocument = WordprocessingDocument.Open(stream, true);
-            var paragraphIds = wordDocument.GetAllParagraphIds();
-
+#if NET452
+            ICollection<string> paragraphIds = wordDocument.GetAllParagraphIds();
+#else
+            IReadOnlyCollection<string> paragraphIds = wordDocument.GetAllParagraphIds();
+#endif
             Assert.Equal(count, paragraphIds.Count);
         }
     }

@@ -44,14 +44,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
         /// <inheritdoc />
 #if NET35 || NET40
-        public ICollection<string> ParagraphIds => InternalParagraphIds;
+        public ICollection<string> ParagraphIds => new ReadOnlyCollectionWrapper<string>(InternalParagraphIds);
 #else
         public IReadOnlyCollection<string> ParagraphIds => InternalParagraphIds;
 #endif
 
         /// <inheritdoc />
 #if NET35 || NET40
-        public ICollection<string> DuplicateParagraphIds => InternalDuplicateParagraphIds;
+        public ICollection<string> DuplicateParagraphIds => new ReadOnlyCollectionWrapper<string>(InternalDuplicateParagraphIds);
 #else
         public IReadOnlyCollection<string> DuplicateParagraphIds => InternalDuplicateParagraphIds;
 #endif

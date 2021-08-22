@@ -34,10 +34,21 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             for (var i = 0; i < count; i++)
             {
                 string paraId = Service.CreateUniqueParagraphId();
+                var hexBinaryValue = new HexBinaryValue(paraId);
+                var value = Convert.ToUInt32(paraId, 16);
 
+                // Assert that the HexBinaryValue is deemed valid. Note, however, that
+                // the rules for w14:paraId (ParagraphId) values are stricter and the
+                // convention seems to be all uppercase letters.
+                Assert.True(hexBinaryValue.IsValid);
+
+                // Assert that the value is both greater than 0x00000000 and less than
+                // 0x80000000 as specified in MS-DOCX, section 2.6.2.3.
+                Assert.True(value > 0x00000000);
+                Assert.True(value < 0x80000000);
+
+                // Assert that the value is all uppercase, as produced by Microsoft Word.
                 Assert.Equal(paraId.ToUpperInvariant(), paraId);
-                Assert.True(string.CompareOrdinal(paraId, "00000000") > 0);
-                Assert.True(string.CompareOrdinal(paraId, "80000000") < 0);
             }
 
             Assert.Equal(count, Service.ParagraphIds.Count);
@@ -94,5 +105,34 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             Assert.Single(Service.ParagraphIds);
             Assert.Empty(Service.DuplicateParagraphIds);
         }
+
+#if NET452
+        /*
+         * NOTES:
+         * When the product targets net35 or net40, the unit test projects target net452.
+         * As net35 and net40 do not support the IReadOnlyCollection<T> interface, the
+         * ParagraphIds and DuplicateParagraphIds properties are of type ICollection<T>.
+         * However, the collections are read-only, which is established by the following
+         * platform-specific unit tests.
+         */
+
+        [Fact]
+        public void ParagraphIds_IsReadOnly()
+        {
+            Assert.True(Service.ParagraphIds.IsReadOnly);
+            Assert.Throws<NotSupportedException>(() => Service.ParagraphIds.Add("12345678"));
+            Assert.Throws<NotSupportedException>(() => Service.ParagraphIds.Clear());
+            Assert.Throws<NotSupportedException>(() => Service.ParagraphIds.Remove("12345678"));
+        }
+
+        [Fact]
+        public void DuplicateParagraphIds_IsReadOnly()
+        {
+            Assert.True(Service.ParagraphIds.IsReadOnly);
+            Assert.Throws<NotSupportedException>(() => Service.DuplicateParagraphIds.Add("12345678"));
+            Assert.Throws<NotSupportedException>(() => Service.DuplicateParagraphIds.Clear());
+            Assert.Throws<NotSupportedException>(() => Service.DuplicateParagraphIds.Remove("12345678"));
+        }
+#endif
     }
 }
