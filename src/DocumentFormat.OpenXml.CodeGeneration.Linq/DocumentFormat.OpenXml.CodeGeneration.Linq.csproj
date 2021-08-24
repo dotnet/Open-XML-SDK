@@ -2,9 +2,11 @@
 
   <PropertyGroup>
     <!--
-      This is a code generator and would not need multiple targets. However, for some reason, multiple targets are necessary.
-      Thus, this code generator only targets whatever the samples target (i.e., net46, netcoreapp2.1, netcoreapp3.1, and net5.0).
-      Note that net35 and net40 are not supported!
+      This is a code generator and would not need multiple targets. However, due to the build matrix on
+      the CI system, there are times when this project will need to be built supporting a .NET 3.5 target.
+
+      To simplify this, only builds targeting .NET 5.0 will actually have any code and on other targets
+      will be a no-op.
       -->
     <TargetFrameworks>$(SamplesFrameworks)</TargetFrameworks>
     <OutputType>Exe</OutputType>
@@ -12,44 +14,20 @@
     <NoWarn>$(NoWarn);3003</NoWarn>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
-  </ItemGroup>
-
   <Choose>
-    <When Condition=" '$(TargetFramework)' == 'net46'">
+    <When Condition=" '$(TargetFramework)' == 'net5.0'">
       <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-        <Reference Include="System.Xml.Linq" />
+        <ProjectReference Include="..\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
+        <PackageReference Include="System.CodeDom" Version="5.0.0" />
+        <Compile Remove="Program.Empty.cs" />
       </ItemGroup>
     </When>
 
-    <When Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
+    <Otherwise>
       <ItemGroup>
-        <PackageReference Include="System.CodeDom" Version="5.0.0" />
+        <Compile Remove="Program.cs" />
       </ItemGroup>
-    </When>
-
-    <When Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
-      <ItemGroup>
-        <PackageReference Include="System.CodeDom" Version="5.0.0" />
-      </ItemGroup>
-    </When>
-
-    <When Condition=" '$(TargetFramework)' == 'net5.0' ">
-      <ItemGroup>
-        <PackageReference Include="System.CodeDom" Version="5.0.0" />
-      </ItemGroup>
-    </When>
+    </Otherwise>
   </Choose>
 
   <!-- Elements required for Analyzer / C# Source Generator -->
