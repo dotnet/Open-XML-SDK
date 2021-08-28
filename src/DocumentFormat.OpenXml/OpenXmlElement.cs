@@ -197,9 +197,7 @@ namespace DocumentFormat.OpenXml
 
         private protected virtual void SetAttribute<TSimpleType>(TSimpleType? value, [CallerMemberName] string propertyName = null!)
             where TSimpleType : OpenXmlSimpleType
-        {
-            ParsedState.Attributes.GetProperty(propertyName).Value = value;
-        }
+            => ParsedState.Attributes.GetProperty(propertyName).Value = value;
 
         private protected TSimpleType? GetAttribute<TSimpleType>([CallerMemberName] string propertyName = null!)
             where TSimpleType : OpenXmlSimpleType
