@@ -189,18 +189,12 @@ namespace DocumentFormat.OpenXml.Packaging
             //OpenXmlPart parentPart = this._ownerPart;
 
             // Uri is auto generated to make sure it's unique
-            string targetPath = GetTargetPath(openXmlPackage, TargetPath) ?? ".";
-
-            if (targetPath is null)
-            {
-                targetPath = ".";
-            }
+            var targetPath = GetTargetPath(openXmlPackage, TargetPath) ?? ".";
 
             string? targetFileExt = targetExt;
 
             if (!IsContentTypeFixed)
             {
-                // TODO: Revisit. Does this make sense? Out parameter targetFileExt is overwritten.
                 if (!openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out targetFileExt))
                 {
                     targetFileExt = targetExt;
@@ -776,15 +770,20 @@ namespace DocumentFormat.OpenXml.Packaging
             SaveRootXElement();
 
             using Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read);
-            if (stream.Length == 0)
+            if (stream.Length < 4)
             {
+                // The OpenXmlPartRootElement.LoadFromPart() method requires at least four
+                // bytes from the data stream. The shortest well-formed XML document would
+                // be something like "<a/>".
                 return;
             }
 
             try
             {
-                // set OpenXmlPart before loading from part to be able to access
-                // OpenXmlPart and OpenXmlPackage while loading.
+                // Set OpenXmlPart before loading from part to be able to access
+                // OpenXmlPart and OpenXmlPackage while loading. If the OpenXmlPart
+                // property is set by the OpenXmlPartRootElement.LoadFromPart() method,
+                // OpenXmlReaderWriterTest.bug247883() unit test fails.
                 var rootElement = new T { OpenXmlPart = this };
 
                 if (rootElement.LoadFromPart(this, stream))

@@ -236,7 +236,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (extension != ".docx" && extension != ".docm" && extension != ".dotx" && extension != ".dotm")
             {
-                throw new ArgumentException($@"Illegal template file: {path}", nameof(path));
+                throw new ArgumentException($"Illegal template file: {path}", nameof(path));
             }
 
             using (WordprocessingDocument template = WordprocessingDocument.Open(path, false))
