@@ -3209,6 +3209,17 @@
     "Parts": {}
   },
   {
+    "Name": "DocumentFormat.OpenXml.Packaging.WorkbookPersonPart",
+    "ContentType": "application/vnd.ms-excel.person+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2017/10/relationships/person",
+    "TargetFileExtension": ".xml",
+    "TargetName": "person",
+    "TargetPath": "persons",
+    "DataParts": {},
+    "Parts": {}
+  },
+  {
     "Name": "DocumentFormat.OpenXml.Packaging.TimeLinePart",
     "ContentType": "application/vnd.ms-excel.timeline+xml",
     "IsContentTypeFixed": true,
@@ -3216,6 +3227,17 @@
     "TargetFileExtension": ".xml",
     "TargetName": "timeline",
     "TargetPath": "../timelines",
+    "DataParts": {},
+    "Parts": {}
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.WorksheetThreadedCommentsPart",
+    "ContentType": "application/vnd.ms-excel.threadedcomments+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment",
+    "TargetFileExtension": ".xml",
+    "TargetName": "threadedcomment",
+    "TargetPath": "../threadedcomments",
     "DataParts": {},
     "Parts": {}
   },
@@ -3887,6 +3909,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
+      },
+      "http://schemas.microsoft.com/office/2017/10/relationships/person": {
+        "PartClassName": "WorkbookPersonPart",
+        "PartContentType": "application/vnd.ms-excel.person+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -4088,6 +4117,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
+      },
+      "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment": {
+        "PartClassName": "WorksheetThreadedCommentsPart",
+        "PartContentType": "application/vnd.ms-excel.threadedcomments+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },

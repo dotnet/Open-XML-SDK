@@ -37,6 +37,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(CustomDataPropertiesPart), false, true)]
     [PartConstraint(typeof(SlicerCachePart), false, true)]
     [PartConstraint(typeof(TimeLineCachePart), false, true)]
+    [PartConstraint(typeof(WorkbookPersonPart), false, true)]
     public partial class WorkbookPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
@@ -198,6 +199,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 SetDomTree(value);
             }
         }
+
+        /// <summary>
+        /// Gets the WorkbookPersonParts of the WorkbookPart
+        /// </summary>
+        public IEnumerable<WorkbookPersonPart> WorkbookPersonParts => GetPartsOfType<WorkbookPersonPart>();
 
         /// <summary>
         /// Gets the WorkbookRevisionHeaderPart of the WorkbookPart
@@ -382,6 +388,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new SlicerCachePart();
                 case TimeLineCachePart.RelationshipTypeConstant:
                     return new TimeLineCachePart();
+                case WorkbookPersonPart.RelationshipTypeConstant:
+                    return new WorkbookPersonPart();
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
