@@ -43,6 +43,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IsolatedStorageExceptionWor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SunburstChartExample", "samples\SunburstChartExample\SunburstChartExample.csproj", "{5034C012-FED8-4DE5-B422-C1E4DF9EDBF2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Linq", "src\DocumentFormat.OpenXml.Linq\DocumentFormat.OpenXml.Linq.csproj", "{8DB6A050-4584-4210-8DE1-CB299A08EA4F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.CodeGeneration.Linq", "src\DocumentFormat.OpenXml.CodeGeneration.Linq\DocumentFormat.OpenXml.CodeGeneration.Linq.csproj", "{4E3D124A-B027-46C3-B962-6F01B9B03AB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{5034C012-FED8-4DE5-B422-C1E4DF9EDBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5034C012-FED8-4DE5-B422-C1E4DF9EDBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5034C012-FED8-4DE5-B422-C1E4DF9EDBF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB6A050-4584-4210-8DE1-CB299A08EA4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB6A050-4584-4210-8DE1-CB299A08EA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB6A050-4584-4210-8DE1-CB299A08EA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB6A050-4584-4210-8DE1-CB299A08EA4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E3D124A-B027-46C3-B962-6F01B9B03AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E3D124A-B027-46C3-B962-6F01B9B03AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E3D124A-B027-46C3-B962-6F01B9B03AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E3D124A-B027-46C3-B962-6F01B9B03AB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +106,8 @@ Global
 		{65D509D0-46DC-4883-AEB3-FF7E521B1E9F} = {0782A132-968D-4BDD-911A-2C3074EAF886}
 		{F38D119D-A5B7-4027-83B1-804432922E55} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{5034C012-FED8-4DE5-B422-C1E4DF9EDBF2} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
+		{8DB6A050-4584-4210-8DE1-CB299A08EA4F} = {A4DF60EB-3AA5-48F0-B4D2-3F94B8E62F03}
+		{4E3D124A-B027-46C3-B962-6F01B9B03AB8} = {A4DF60EB-3AA5-48F0-B4D2-3F94B8E62F03}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F476383-E917-43D1-A1E5-9A61A47DA3F5}

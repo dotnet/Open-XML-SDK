@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
 #pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr(102, "personList")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class PersonList : OpenXmlCompositeElement
+    public partial class PersonList : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the PersonList class.
@@ -79,6 +79,37 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PersonList>(deep);
+
+        internal PersonList(WorkbookPersonPart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the WorkbookPersonPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(WorkbookPersonPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the WorkbookPersonPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(WorkbookPersonPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the WorkbookPersonPart associated with this element.
+        /// </summary>
+        public WorkbookPersonPart? WorkbookPersonPart
+        {
+            get => OpenXmlPart as WorkbookPersonPart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
     /// <summary>
@@ -96,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
 #pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr(102, "ThreadedComments")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class ThreadedComments : OpenXmlCompositeElement
+    public partial class ThreadedComments : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the ThreadedComments class.
@@ -145,6 +176,37 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThreadedComments>(deep);
+
+        internal ThreadedComments(WorksheetThreadedCommentsPart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the WorksheetThreadedCommentsPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(WorksheetThreadedCommentsPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the WorksheetThreadedCommentsPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(WorksheetThreadedCommentsPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the WorksheetThreadedCommentsPart associated with this element.
+        /// </summary>
+        public WorksheetThreadedCommentsPart? WorksheetThreadedCommentsPart
+        {
+            get => OpenXmlPart as WorksheetThreadedCommentsPart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
     /// <summary>

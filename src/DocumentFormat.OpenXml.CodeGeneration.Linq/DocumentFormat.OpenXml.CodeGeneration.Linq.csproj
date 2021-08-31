@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!--
+      This is a code generator and would not need multiple targets. However, due to the build matrix on
+      the CI system, there are times when this project will need to be built supporting a .NET 3.5 target.
+
+      To simplify this, only builds targeting .NET 5.0 will actually have any code and on other targets
+      will be a no-op.
+      -->
+    <TargetFrameworks>$(SamplesFrameworks)</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <NoWarn>$(NoWarn);3003</NoWarn>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition=" '$(TargetFramework)' == 'net5.0'">
+      <ItemGroup>
+        <ProjectReference Include="..\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
+        <PackageReference Include="System.CodeDom" Version="5.0.0" />
+        <Compile Remove="Program.Empty.cs" />
+      </ItemGroup>
+    </When>
+
+    <Otherwise>
+      <ItemGroup>
+        <Compile Remove="Program.cs" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
+  <!-- Elements required for Analyzer / C# Source Generator -->
+  <!--<PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>-->
+
+  <!--<ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.10.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.2" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    --><!-- Generator dependencies --><!--
+    <PackageReference Include="System.CodeDom" Version="5.0.0" GeneratePathProperty="true" PrivateAssets="all" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <GetTargetPathDependsOn>$(GetTargetPathDependsOn);GetDependencyTargets</GetTargetPathDependsOn>
+  </PropertyGroup>
+
+  <Target Name="GetDependencyTargets">
+    <ItemGroup>
+      <TargetPathWithTargetPlatformMoniker Include="$(ProjectDir)..\..\bin\$(Configuration)\DocumentFormat.OpenXml.Analyzer\netstandard2.0\DocumentFormat.OpenXml.Analyzer.dll" IncludeRuntimeDependency="false" />
+      <TargetPathWithTargetPlatformMoniker Include="$(PKGSystem_CodeDom)\lib\netstandard2.0\System.CodeDom.dll" IncludeRuntimeDependency="false" />
+    </ItemGroup>
+  </Target>-->
+</Project>

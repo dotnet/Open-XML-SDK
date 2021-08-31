@@ -126,10 +126,16 @@ namespace DocumentFormat.OpenXml.Framework
         /// Gets the default namespace prefix for the specified namespace ID.
         /// </summary>
         /// <param name="namespaceId">The namespace ID.</param>
-        /// <returns></returns>
+        /// <returns>The default namespace prefix.</returns>
         private static string GetNamespacePrefix(byte namespaceId) => _namespaceResolver[namespaceId].Prefix;
 
-        private static string? GetNamespacePrefix(string namespaceUri) => _namespaceResolver.TryGetByNamespace(namespaceUri, out var info) ? info.Prefix : null;
+        /// <summary>
+        /// Gets the default namespace prefix for the specified namespace URI.
+        /// </summary>
+        /// <param name="namespaceUri">The namespace URI.</param>
+        /// <returns>The default namespace prefix.</returns>
+        public static string? GetNamespacePrefix(string namespaceUri) =>
+            _namespaceResolver.TryGetByNamespace(namespaceUri, out var info) ? info.Prefix : null;
 
         private static string NormalizeNamespace(in OpenXmlNamespace ns)
         {
