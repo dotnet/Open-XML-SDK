@@ -79,7 +79,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 #pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr(100, "rvData")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class RichValueData : OpenXmlCompositeElement
+    public partial class RichValueData : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueData class.
@@ -149,6 +149,37 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RichValueData>(deep);
+
+        internal RichValueData(RdRichValuePart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the RdRichValuePart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(RdRichValuePart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the RdRichValuePart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(RdRichValuePart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the RdRichValuePart associated with this element.
+        /// </summary>
+        public RdRichValuePart? RdRichValuePart
+        {
+            get => OpenXmlPart as RdRichValuePart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
     /// <summary>
@@ -166,7 +197,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 #pragma warning disable CS0618 // Type or member is obsolete
     [SchemaAttr(100, "rvStructures")]
 #pragma warning restore CS0618 // Type or member is obsolete
-    public partial class RichValueStructures : OpenXmlCompositeElement
+    public partial class RichValueStructures : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueStructures class.
@@ -236,6 +267,37 @@ aBuilder.AddValidator(RequiredValidator.Instance);
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RichValueStructures>(deep);
+
+        internal RichValueStructures(RdRichValueStructurePart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the RdRichValueStructurePart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(RdRichValueStructurePart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the RdRichValueStructurePart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(RdRichValueStructurePart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the RdRichValueStructurePart associated with this element.
+        /// </summary>
+        public RdRichValueStructurePart? RdRichValueStructurePart
+        {
+            get => OpenXmlPart as RdRichValueStructurePart;
+            internal set => OpenXmlPart = value;
+        }
     }
 
     /// <summary>

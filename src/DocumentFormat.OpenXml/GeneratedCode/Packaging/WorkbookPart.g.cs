@@ -38,6 +38,13 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(SlicerCachePart), false, true)]
     [PartConstraint(typeof(TimeLineCachePart), false, true)]
     [PartConstraint(typeof(WorkbookPersonPart), false, true)]
+    [PartConstraint(typeof(RdRichValuePart), false, true)]
+    [PartConstraint(typeof(RdRichValueStructurePart), false, true)]
+    [PartConstraint(typeof(RdArrayPart), false, true)]
+    [PartConstraint(typeof(RichStylesPart), false, true)]
+    [PartConstraint(typeof(RdSupportingPropertyBagPart), false, true)]
+    [PartConstraint(typeof(RdSupportingPropertyBagStructurePart), false, true)]
+    [PartConstraint(typeof(RdRichValueTypesPart), false, true)]
     public partial class WorkbookPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
@@ -49,6 +56,11 @@ namespace DocumentFormat.OpenXml.Packaging
         internal protected WorkbookPart()
         {
         }
+
+        /// <summary>
+        /// Gets the CT_RdRichValueStructureParts of the WorkbookPart
+        /// </summary>
+        public IEnumerable<RdRichValueStructurePart> CT_RdRichValueStructureParts => GetPartsOfType<RdRichValueStructurePart>();
 
         /// <summary>
         /// Gets the CalculationChainPart of the WorkbookPart
@@ -130,8 +142,38 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<PivotTableCacheDefinitionPart> PivotTableCacheDefinitionParts => GetPartsOfType<PivotTableCacheDefinitionPart>();
 
+        /// <summary>
+        /// Gets the RdArrayParts of the WorkbookPart
+        /// </summary>
+        public IEnumerable<RdArrayPart> RdArrayParts => GetPartsOfType<RdArrayPart>();
+
+        /// <summary>
+        /// Gets the RdRichValueParts of the WorkbookPart
+        /// </summary>
+        public IEnumerable<RdRichValuePart> RdRichValueParts => GetPartsOfType<RdRichValuePart>();
+
+        /// <summary>
+        /// Gets the RdRichValueTypesParts of the WorkbookPart
+        /// </summary>
+        public IEnumerable<RdRichValueTypesPart> RdRichValueTypesParts => GetPartsOfType<RdRichValueTypesPart>();
+
+        /// <summary>
+        /// Gets the RdSupportingPropertyBagParts of the WorkbookPart
+        /// </summary>
+        public IEnumerable<RdSupportingPropertyBagPart> RdSupportingPropertyBagParts => GetPartsOfType<RdSupportingPropertyBagPart>();
+
+        /// <summary>
+        /// Gets the RdSupportingPropertyBagStructureParts of the WorkbookPart
+        /// </summary>
+        public IEnumerable<RdSupportingPropertyBagStructurePart> RdSupportingPropertyBagStructureParts => GetPartsOfType<RdSupportingPropertyBagStructurePart>();
+
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
+
+        /// <summary>
+        /// Gets the RichStylesParts of the WorkbookPart
+        /// </summary>
+        public IEnumerable<RichStylesPart> RichStylesParts => GetPartsOfType<RichStylesPart>();
 
         /// <summary>
         /// Gets the SharedStringTablePart of the WorkbookPart
@@ -390,6 +432,20 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new TimeLineCachePart();
                 case WorkbookPersonPart.RelationshipTypeConstant:
                     return new WorkbookPersonPart();
+                case RdRichValuePart.RelationshipTypeConstant:
+                    return new RdRichValuePart();
+                case RdRichValueStructurePart.RelationshipTypeConstant:
+                    return new RdRichValueStructurePart();
+                case RdArrayPart.RelationshipTypeConstant:
+                    return new RdArrayPart();
+                case RichStylesPart.RelationshipTypeConstant:
+                    return new RichStylesPart();
+                case RdSupportingPropertyBagPart.RelationshipTypeConstant:
+                    return new RdSupportingPropertyBagPart();
+                case RdSupportingPropertyBagStructurePart.RelationshipTypeConstant:
+                    return new RdSupportingPropertyBagStructurePart();
+                case RdRichValueTypesPart.RelationshipTypeConstant:
+                    return new RdRichValueTypesPart();
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
