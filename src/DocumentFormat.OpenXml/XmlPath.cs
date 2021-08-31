@@ -21,11 +21,11 @@ namespace DocumentFormat.OpenXml
     public class XmlPath
     {
         /// <summary>
-        /// Initializes a new instance of the XmlPath from the specified
-        /// OpenXmlElement.
+        /// Initializes a new instance of the <see cref="XmlPath"/> from
+        /// the specified <see cref="OpenXmlElement"/>.
         /// </summary>
         /// <param name="element">
-        /// The OpenXmlElement.
+        /// The <see cref="OpenXmlElement"/>.
         /// </param>
         public XmlPath(OpenXmlElement element)
         {
@@ -55,9 +55,10 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initializes a new instance of the XmlPath from the specified OpenXmlPart.
+        /// Initializes a new instance of the <see cref="XmlPath"/> from
+        /// the specified <see cref="OpenXmlPart"/>.
         /// </summary>
-        /// <param name="part">The OpenXmlPart.</param>
+        /// <param name="part">The <see cref="OpenXmlPart"/>.</param>
         public XmlPath(OpenXmlPart part)
         {
             if (part is null)
