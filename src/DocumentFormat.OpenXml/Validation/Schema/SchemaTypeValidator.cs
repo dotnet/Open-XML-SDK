@@ -98,8 +98,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 return;
             }
 
-            ValidationErrorInfo errorInfo;
-
             foreach (var attribute in element.ParsedState.Attributes)
             {
                 ValidateValue(validationContext, attribute.Property.Validators, attribute.Value, attribute.Property, true);
@@ -121,10 +119,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 else
                 {
                     // emit error
-                    string attributeQname = extendedAttribute.XmlQualifiedName.ToString();
-                    errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_UndeclaredAttribute", attributeQname);
-                    errorInfo.SetDebugField(attributeQname, "Sch_UndeclaredAttribute");
-                    validationContext.AddError(errorInfo);
+                    validationContext.AddError(validationContext.ComposeSchemaValidationError(element, null, "Sch_UndeclaredAttribute", extendedAttribute.XmlQualifiedName.ToString()));
                 }
             }
         }

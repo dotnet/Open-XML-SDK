@@ -32,6 +32,10 @@
   </ItemGroup>
 
   <ItemGroup>
+     <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="3.3.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
 
@@ -131,7 +135,6 @@
         <Compile Include="System\Reflection\SubclassExtensions.cs" />
         <Compile Include="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
       </ItemGroup>
-
     </When>
 
     <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
@@ -187,6 +190,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ValidationResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="PublicAPI.Shipped.$(TargetFramework).txt" Condition="Exists('PublicAPI.Shipped.$(TargetFramework).txt')" />
+    <AdditionalFiles Include="PublicAPI.Unshipped.$(TargetFramework).txt" Condition="Exists('PublicAPI.Unshipped.$(TargetFramework).txt')" />
   </ItemGroup>
 
   <Import Project="$(MSBuildThisFileDirectory)\PEVerify.targets" />

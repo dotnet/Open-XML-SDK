@@ -16,35 +16,6 @@ namespace DocumentFormat.OpenXml.Validation
         private OpenXmlElement? _element;
         private OpenXmlPart? _part;
 
-#if DEBUG
-        /// <summary>
-        /// Gets the XML qualified name for the attribute.
-        /// Returns null if the error is not for attribute.
-        /// </summary>
-        public string? AttributeQualifiedName { get; private set; }
-
-        /// <summary>
-        /// Gets schema validation error category.
-        /// </summary>
-        public string? ValidationErrorCategory { get; private set; }
-#endif
-
-        /// <summary>
-        /// Sets the two fields (AttributeQualifiedName, ValidationErrorCategory) in debug build only.
-        /// </summary>
-        /// <param name="attributeQualifiedName"></param>
-        /// <param name="validationErrorCategory"></param>
-        [Conditional("DEBUG")]
-#pragma warning disable CA1822 // Mark members as static
-        internal void SetDebugField(string attributeQualifiedName, string validationErrorCategory)
-#pragma warning restore CA1822 // Mark members as static
-        {
-#if DEBUG
-            AttributeQualifiedName = attributeQualifiedName;
-            ValidationErrorCategory = validationErrorCategory;
-#endif
-        }
-
         /// <summary>
         /// Gets the unique identifier of this error.
         /// </summary>
