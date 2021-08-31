@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.13.1] - future
+## [2.13.1] - 2021-08-17
 
 ### Fixed
 - Fixed some nullability annotations that were incorrectly defined (#953, #955)
