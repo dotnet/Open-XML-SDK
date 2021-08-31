@@ -21,9 +21,13 @@ namespace DocumentFormat.OpenXml
     public class XmlPath
     {
         /// <summary>
-        /// Initializes a new instance of the XmlPath.
+        /// Initializes a new instance of the XmlPath from the specified
+        /// OpenXmlElement.
         /// </summary>
-        internal XmlPath(OpenXmlElement element)
+        /// <param name="element">
+        /// The OpenXmlElement.
+        /// </param>
+        public XmlPath(OpenXmlElement element)
         {
             if (element is null)
             {
@@ -54,7 +58,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the XmlPath from the specified OpenXmlPart.
         /// </summary>
         /// <param name="part">The OpenXmlPart.</param>
-        internal XmlPath(OpenXmlPart part)
+        public XmlPath(OpenXmlPart part)
         {
             if (part is null)
             {
@@ -97,7 +101,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="element">The OpenXmlElement.</param>
         /// <returns>XmlPath to this element from root element.</returns>
-        internal static XmlPath? GetXPath(OpenXmlElement? element)
+        public static XmlPath? GetXPath(OpenXmlElement? element)
         {
             if (element is null)
             {
@@ -107,7 +111,15 @@ namespace DocumentFormat.OpenXml
             return new XmlPath(element);
         }
 
-        internal static XmlPath? GetXPath(OpenXmlPart? part)
+        /// <summary>
+        /// Gets XmlPath information of the specified OpenXmlPart.
+        /// </summary>
+        /// <param name="part">The OpenXmlPart.</param>
+        /// <returns>
+        /// A new <see cref="XmlPath"/> object with the <see cref="Uri"/>
+        /// of <paramref name="part"/>.
+        /// </returns>
+        public static XmlPath? GetXPath(OpenXmlPart? part)
         {
             if (part is null)
             {
