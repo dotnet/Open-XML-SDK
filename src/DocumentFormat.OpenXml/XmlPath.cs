@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="element">The OpenXmlElement.</param>
         /// <returns>XmlPath to this element from root element.</returns>
-        public static XmlPath? GetXPath(OpenXmlElement? element)
+        internal static XmlPath? GetXPath(OpenXmlElement? element)
         {
             if (element is null)
             {
@@ -111,15 +111,7 @@ namespace DocumentFormat.OpenXml
             return new XmlPath(element);
         }
 
-        /// <summary>
-        /// Gets XmlPath information of the specified OpenXmlPart.
-        /// </summary>
-        /// <param name="part">The OpenXmlPart.</param>
-        /// <returns>
-        /// A new <see cref="XmlPath"/> object with the <see cref="Uri"/>
-        /// of <paramref name="part"/>.
-        /// </returns>
-        public static XmlPath? GetXPath(OpenXmlPart? part)
+        internal static XmlPath? GetXPath(OpenXmlPart? part)
         {
             if (part is null)
             {
