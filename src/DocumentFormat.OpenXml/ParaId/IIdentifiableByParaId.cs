@@ -3,7 +3,8 @@
 
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
-    public partial class Paragraph : IIdentifiableByParaId
+    internal interface IIdentifiableByParaId
     {
+        HexBinaryValue? ParagraphId { get; set; }
     }
 }

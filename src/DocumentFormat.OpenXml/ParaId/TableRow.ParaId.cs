@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
-    public partial class Paragraph : IIdentifiableByParaId
+    public partial class TableRow : IIdentifiableByParaId
     {
     }
 }

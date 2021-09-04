@@ -1,13 +1,15 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Packaging;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
     /// <summary>
-    /// The default implementation of the <see cref="IParagraphIdGenerator" />.
+    /// A concrete implementation of the <see cref="IParagraphIdGenerator" />, which
+    /// creates secure random w14:paraId (ParagraphId) values.
     /// </summary>
     public class RandomParagraphIdGenerator : ParagraphIdGenerator
     {
@@ -17,6 +19,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Default constructor.
         /// </summary>
         public RandomParagraphIdGenerator() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance with the w14:paraId (ParagraphId) values existing
+        /// in the given <see cref="WordprocessingDocument" />.
+        /// </summary>
+        /// <param name="wordDocument">The <see cref="WordprocessingDocument" />.</param>
+        public RandomParagraphIdGenerator(WordprocessingDocument wordDocument) : base(wordDocument)
         {
         }
 
