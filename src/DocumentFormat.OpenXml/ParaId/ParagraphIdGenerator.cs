@@ -7,9 +7,9 @@ using System.Linq;
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
     /// <summary>
-    /// The base class for concrete <see cref="IParagraphIdService" /> implementations.
+    /// The base class for concrete <see cref="IParagraphIdGenerator" /> implementations.
     /// </summary>
-    public abstract class ParagraphIdService : IParagraphIdService
+    public abstract class ParagraphIdGenerator : IParagraphIdGenerator
     {
         /// <summary>
         /// Used to keep track of the existing and generated w14:paraId values.
@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Default constructor.
         /// </summary>
-        protected ParagraphIdService()
+        protected ParagraphIdGenerator()
         {
             InternalRegisteredParagraphIds = new HashSet<string>();
         }
@@ -29,28 +29,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// values that will not be produced by that new instance.
         /// </summary>
         /// <param name="paragraphIds">The collection of existing w14:paraId (ParagraphId) values.</param>
-        protected ParagraphIdService(IEnumerable<string> paragraphIds)
+        protected ParagraphIdGenerator(IEnumerable<string> paragraphIds)
         {
             InternalRegisteredParagraphIds = new HashSet<string>(paragraphIds.Select(id => id.ToUpperInvariant()));
         }
 
         /// <inheritdoc />
-#if NET35 || NET40
-        public ICollection<string> RegisteredParagraphIds => new ReadOnlyCollectionWrapper<string>(InternalRegisteredParagraphIds);
-#else
-        public IReadOnlyCollection<string> RegisteredParagraphIds => InternalRegisteredParagraphIds;
-#endif
+        public IEnumerable<string> RegisteredParagraphIds => new ReadOnlyCollectionWrapper<string>(InternalRegisteredParagraphIds);
 
         /// <inheritdoc />
-        public virtual bool RegisterParagraphId(string value)
+        bool IParagraphIdGenerator.RegisterParagraphId(string value)
         {
             return InternalRegisteredParagraphIds.Add(value.ToUpperInvariant());
         }
 
         /// <inheritdoc />
-        public bool RegisterParagraphId(HexBinaryValue value)
+        bool IParagraphIdGenerator.RegisterParagraphId(HexBinaryValue value)
         {
-            return value.Value is not null && RegisterParagraphId(value.Value);
+            return value.Value is not null && InternalRegisteredParagraphIds.Add(value.Value.ToUpperInvariant());
         }
 
         /// <inheritdoc />

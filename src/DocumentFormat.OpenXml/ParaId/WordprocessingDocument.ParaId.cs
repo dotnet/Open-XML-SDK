@@ -7,38 +7,31 @@ using System.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-    public partial class WordprocessingDocument : IParagraphIdService
+    public partial class WordprocessingDocument
     {
-        private IParagraphIdService? _paragraphIdService;
+        private ParagraphIdGenerator? _paragraphIdGenerator;
 
-        private IParagraphIdService ParagraphIdService => _paragraphIdService ??= new RandomParagraphIdService();
+        /// <summary>
+        /// Gets the <see cref="IParagraphIdGenerator" /> used to generate unique
+        /// w14:paraId (ParagraphId) values.
+        /// </summary>
+        public IParagraphIdGenerator ParagraphIdGenerator => _paragraphIdGenerator ??= new RandomParagraphIdGenerator();
 
-        /// <inheritdoc />
-#if NET35 || NET40
-        public ICollection<string> RegisteredParagraphIds => ParagraphIdService.RegisteredParagraphIds;
-#else
-        public IReadOnlyCollection<string> RegisteredParagraphIds => ParagraphIdService.RegisteredParagraphIds;
-#endif
-
-        /// <inheritdoc />
-        public bool RegisterParagraphId(string value) => ParagraphIdService.RegisterParagraphId(value);
-
-        /// <inheritdoc />
-        public bool RegisterParagraphId(HexBinaryValue value) => ParagraphIdService.RegisterParagraphId(value);
-
-        /// <inheritdoc />
-        public string CreateUniqueParagraphId() => ParagraphIdService.CreateUniqueParagraphId();
+        /// <summary>
+        /// Gets the registered w14:paraId (ParagraphId) values.
+        /// </summary>
+        /// <remarks>
+        /// To ensure all existing w14:paraId (ParagraphId) values are registered,
+        /// call <see cref="RegisterAllParagraphIds"/>.
+        /// </remarks>
+        public IEnumerable<string> RegisteredParagraphIds => ParagraphIdGenerator.RegisteredParagraphIds;
 
         /// <summary>
         /// Assigns unique w14:paraId (ParagraphId) values to w:p (Paragraph) and w:tr (TableRow)
         /// elements where those elements do not have a w14:paraId value or such values are not
         /// unique within this <see cref="WordprocessingDocument" />.
         /// </summary>
-#if NET35 || NET40
-        public ICollection<string> AssignUniqueParagraphIds()
-#else
-        public IReadOnlyCollection<string> AssignUniqueParagraphIds()
-#endif
+        public IEnumerable<string> AssignUniqueParagraphIds()
         {
             // Perform a first pass, registering all w14:paraId values.
             RegisterAllParagraphIds();
@@ -49,7 +42,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             foreach (var openXmlPart in this.GetAllParts().Where(IsParagraphContainerPart))
             {
-                OpenXmlPartRootElement? rootElement = openXmlPart.RootElement;
+                var rootElement = openXmlPart.RootElement;
                 if (rootElement is null)
                 {
                     continue;
@@ -58,7 +51,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 IEnumerable<IParagraphIdHolder> paraIdHolders = rootElement.Descendants().OfType<IParagraphIdHolder>();
                 foreach (var paraIdHolder in paraIdHolders)
                 {
-                    string? value = paraIdHolder.ParagraphId?.Value;
+                    var value = paraIdHolder.ParagraphId?.Value;
                     if (value is null || !paragraphIds.Add(value))
                     {
                         paragraphIds.Add(paraIdHolder.SetUniqueParagraphId());
@@ -81,15 +74,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// by first registering all w14:paraId (ParagraphId) values and only then generating
         /// new values.
         /// </remarks>
-#if NET35 || NET40
-        public ICollection<string> RegisterAllParagraphIds()
-#else
-        public IReadOnlyCollection<string> RegisterAllParagraphIds()
-#endif
+        public IEnumerable<string> RegisterAllParagraphIds()
         {
             foreach (var openXmlPart in this.GetAllParts().Where(IsParagraphContainerPart))
             {
-                OpenXmlPartRootElement? rootElement = openXmlPart.RootElement;
+                var rootElement = openXmlPart.RootElement;
                 if (rootElement is null)
                 {
                     continue;
@@ -98,10 +87,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 IEnumerable<IParagraphIdHolder> paraIdHolders = rootElement.Descendants().OfType<IParagraphIdHolder>();
                 foreach (var paraIdHolder in paraIdHolders)
                 {
-                    string? value = paraIdHolder.ParagraphId?.Value;
+                    var value = paraIdHolder.ParagraphId?.Value;
                     if (value is not null)
                     {
-                        RegisterParagraphId(value);
+                        ParagraphIdGenerator.RegisterParagraphId(value);
                     }
                 }
             }

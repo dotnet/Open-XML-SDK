@@ -2,25 +2,26 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Linq;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
-    public class RandomParagraphIdServiceTests
+    public class RandomParagraphIdGeneratorTests
     {
-        public RandomParagraphIdServiceTests()
+        public RandomParagraphIdGeneratorTests()
         {
-            Service = new RandomParagraphIdService();
+            Generator = new RandomParagraphIdGenerator();
         }
 
-        private IParagraphIdService Service { get; }
+        private IParagraphIdGenerator Generator { get; }
 
         [Fact]
         public void Constructor_ParagraphIdCollection()
         {
-            string paraId = Service.CreateUniqueParagraphId();
+            var paraId = Generator.CreateUniqueParagraphId();
 
-            var newService = new RandomParagraphIdService(Service.RegisteredParagraphIds);
+            var newService = new RandomParagraphIdGenerator(Generator.RegisteredParagraphIds);
 
             Assert.Contains(paraId, newService.RegisteredParagraphIds);
         }
@@ -32,7 +33,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
             for (var i = 0; i < count; i++)
             {
-                string paraId = Service.CreateUniqueParagraphId();
+                string paraId = Generator.CreateUniqueParagraphId();
                 var hexBinaryValue = new HexBinaryValue(paraId);
                 var value = Convert.ToUInt32(paraId, 16);
 
@@ -50,28 +51,28 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 Assert.Equal(paraId.ToUpperInvariant(), paraId);
             }
 
-            Assert.Equal(count, Service.RegisteredParagraphIds.Count);
+            Assert.Equal(count, Generator.RegisteredParagraphIds.Count());
         }
 
         [Fact]
         public void RegisterParagraphId_ExistingHexBinaryValue_IsNotAdded()
         {
             const string paraId = "12345678";
-            Service.RegisterParagraphId(new HexBinaryValue(paraId));
+            Generator.RegisterParagraphId(new HexBinaryValue(paraId));
 
-            bool isAdded = Service.RegisterParagraphId(new HexBinaryValue(paraId));
+            var isAdded = Generator.RegisterParagraphId(new HexBinaryValue(paraId));
 
             Assert.False(isAdded);
-            Assert.Single(Service.RegisteredParagraphIds);
+            Assert.Single(Generator.RegisteredParagraphIds);
         }
 
         [Fact]
         public void RegisterParagraphId_ExistingHexString_IsNotAdded()
         {
             const string paraId = "12345678";
-            Service.RegisterParagraphId(paraId);
+            Generator.RegisterParagraphId(paraId);
 
-            bool isAdded = Service.RegisterParagraphId(paraId);
+            var isAdded = Generator.RegisterParagraphId(paraId);
 
             Assert.False(isAdded);
         }
@@ -79,44 +80,25 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         [Fact]
         public void RegisterParagraphId_HexBinaryValueWithNullInnerText_IsNotAdded()
         {
-            Assert.False(Service.RegisterParagraphId(new HexBinaryValue()));
+            Assert.False(Generator.RegisterParagraphId(new HexBinaryValue()));
         }
 
         [Fact]
         public void RegisterParagraphId_NonExistentHexBinaryValue_IsAdded()
         {
-            bool isAdded = Service.RegisterParagraphId(new HexBinaryValue("12345678"));
+            var isAdded = Generator.RegisterParagraphId(new HexBinaryValue("12345678"));
 
             Assert.True(isAdded);
-            Assert.Single(Service.RegisteredParagraphIds);
+            Assert.Single(Generator.RegisteredParagraphIds);
         }
 
         [Fact]
         public void RegisterParagraphId_NonExistentHexString_IsAdded()
         {
-            bool isAdded = Service.RegisterParagraphId("12345678");
+            var isAdded = Generator.RegisterParagraphId("12345678");
 
             Assert.True(isAdded);
-            Assert.Single(Service.RegisteredParagraphIds);
+            Assert.Single(Generator.RegisteredParagraphIds);
         }
-
-#if NET452
-        /*
-         * NOTES:
-         * When the product targets net35 or net40, the unit test projects target net452.
-         * As net35 and net40 do not support the IReadOnlyCollection<T> interface, the
-         * RegisteredParagraphIds property is of type ICollection<T>. However, the collection
-         * is read-only, which is established by the following platform-specific unit test.
-         */
-
-        [Fact]
-        public void RegisteredParagraphIds_IsReadOnly()
-        {
-            Assert.True(Service.RegisteredParagraphIds.IsReadOnly);
-            Assert.Throws<NotSupportedException>(() => Service.RegisteredParagraphIds.Add("12345678"));
-            Assert.Throws<NotSupportedException>(() => Service.RegisteredParagraphIds.Clear());
-            Assert.Throws<NotSupportedException>(() => Service.RegisteredParagraphIds.Remove("12345678"));
-        }
-#endif
     }
 }

@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Runtime.CompilerServices;
@@ -25,9 +24,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// instance, using CloneNode() or Clone(), the reference will not be
         /// retained.
         /// The <see cref="WordprocessingDocument" /> class implements the
-        /// <see cref="IParagraphIdService" /> interface, which we need to create
+        /// <see cref="IParagraphIdGenerator" /> interface, which we need to create
         /// unique w14:paraId (ParagraphId) values. We could have stored a reference
-        /// to a <see cref="IParagraphIdService" /> instance. However, storing the
+        /// to a <see cref="IParagraphIdGenerator" /> instance. However, storing the
         /// <see cref="WordprocessingDocument" /> reference might be useful for
         /// future enhancements.
         /// </remarks>
@@ -37,7 +36,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             {
                 if (_wordprocessingDocument == null)
                 {
-                    OpenXmlPartRootElement? partRootElement = GetPartRootElement();
+                    var partRootElement = GetPartRootElement();
                     _wordprocessingDocument = partRootElement?.OpenXmlPart?.OpenXmlPackage as WordprocessingDocument;
                 }
 
@@ -59,7 +58,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 // TODO: Discuss how we want to deal with duplicate w14:paraId values assigned by the caller.
                 // The RegisterParagraphId() method returns true if the hexBinaryValue was unique and false otherwise.
                 // Therefore, if desired (e.g., always or based on settings), we could throw an exception.
-                WordprocessingDocument?.RegisterParagraphId(hexBinaryValue);
+                WordprocessingDocument?.ParagraphIdGenerator.RegisterParagraphId(hexBinaryValue);
             }
 
             base.SetAttribute(value, propertyName);
@@ -86,7 +85,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     return StrictTranslateAttribute(qname, value);
                 }
 
-                AttributeCollection.AttributeEntry attribute = RawState.Attributes[qname];
+                var attribute = RawState.Attributes[qname];
 
                 if (!attribute.IsNil)
                 {
@@ -95,7 +94,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
                     if (qname.Name == "paraId" && value is not null)
                     {
-                        WordprocessingDocument?.RegisterParagraphId(value);
+                        WordprocessingDocument?.ParagraphIdGenerator.RegisterParagraphId(value);
                     }
 
                     return true;
@@ -108,19 +107,19 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <inheritdoc />
         public string SetUniqueParagraphId()
         {
-            WordprocessingDocument? wordprocessingDocument = WordprocessingDocument;
+            var wordprocessingDocument = WordprocessingDocument;
             if (wordprocessingDocument is null)
             {
                 throw new InvalidOperationException("Paragraph must be added to the DOM tree before calling this method.");
             }
 
-            return SetUniqueParagraphId(wordprocessingDocument);
+            return SetUniqueParagraphId(wordprocessingDocument.ParagraphIdGenerator);
         }
 
         /// <inheritdoc />
-        public string SetUniqueParagraphId(IParagraphIdService paragraphIdService)
+        public string SetUniqueParagraphId(IParagraphIdGenerator paragraphIdGenerator)
         {
-            string paragraphId = paragraphIdService.CreateUniqueParagraphId();
+            string paragraphId = paragraphIdGenerator.CreateUniqueParagraphId();
             ParsedState.Attributes.GetProperty(nameof(ParagraphId)).Value = new HexBinaryValue(paragraphId);
             return paragraphId;
         }

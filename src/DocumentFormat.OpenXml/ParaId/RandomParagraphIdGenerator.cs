@@ -7,16 +7,16 @@ using System.Security.Cryptography;
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
     /// <summary>
-    /// The default implementation of the <see cref="IParagraphIdService" />.
+    /// The default implementation of the <see cref="IParagraphIdGenerator" />.
     /// </summary>
-    public class RandomParagraphIdService : ParagraphIdService
+    public class RandomParagraphIdGenerator : ParagraphIdGenerator
     {
         private static readonly RandomNumberGenerator Generator = RandomNumberGenerator.Create();
 
         /// <summary>
         /// Default constructor.
         /// </summary>
-        public RandomParagraphIdService() : base()
+        public RandomParagraphIdGenerator() : base()
         {
         }
 
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// values that will not be produced by that instance.
         /// </summary>
         /// <param name="paragraphIds">The collection of existing w14:paraId (ParagraphId) values.</param>
-        public RandomParagraphIdService(IEnumerable<string> paragraphIds) : base(paragraphIds)
+        public RandomParagraphIdGenerator(IEnumerable<string> paragraphIds) : base(paragraphIds)
         {
         }
 

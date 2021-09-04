@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// Defines operations for elements holding w14:paraId (ParagraphId) values,
     /// i.e., <see cref="Paragraph" /> and <see cref="TableRow" /> instances.
     /// </summary>
-    public interface IParagraphIdHolder
+    internal interface IParagraphIdHolder
     {
         /// <summary>
         /// <para>Gets or sets the w14:paraId attribute value.</para>
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// have not yet been added to the DOM tree, sets the w14:paraId (ParagraphId)
         /// value to a random and unique value.
         /// </summary>
-        /// <param name="paragraphIdService">The <see cref="IParagraphIdService" /> used to create the random and unique value.</param>
-        string SetUniqueParagraphId(IParagraphIdService paragraphIdService);
+        /// <param name="paragraphIdGenerator">The <see cref="IParagraphIdGenerator" /> used to create the random and unique value.</param>
+        string SetUniqueParagraphId(IParagraphIdGenerator paragraphIdGenerator);
     }
 }

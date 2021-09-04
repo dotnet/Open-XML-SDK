@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         [Fact]
         public void SetUniqueParagraphId_NotAssociatedWithWordprocessingDocument_IParagraphIdService_Success()
         {
-            var paragraphIdService = new RandomParagraphIdService();
+            var paragraphIdService = new RandomParagraphIdGenerator();
             var run = new Run(new Text("Hello World!"));
 
             Paragraph paragraph = new(run);
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             var run = new Run(new Text("Hello World!"));
 
             Paragraph paragraph = new(run);
-            string paragraphId = paragraph.SetUniqueParagraphId(wordDocument);
+            string paragraphId = paragraph.SetUniqueParagraphId(wordDocument.ParagraphIdGenerator);
 
             Assert.NotNull(paragraph.ParagraphId?.Value);
             Assert.Equal(paragraphId, paragraph.ParagraphId!.Value);
