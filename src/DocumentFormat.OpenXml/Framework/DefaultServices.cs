@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
+using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Framework
 {
@@ -10,7 +11,7 @@ namespace DocumentFormat.OpenXml.Framework
     {
         public static IServiceProvider Instance { get; } = new DefaultServices();
 
-        private readonly Lazy<IRootElementFactory> _rootElementFactory = new(() => new ReflectionBasedRootElementFactory(typeof(ReflectionBasedRootElementFactory).Assembly, ClassActivator<OpenXmlElement>.CreateActivator));
+        private readonly Lazy<IRootElementFactory> _rootElementFactory = new(() => new ReflectionBasedRootElementFactory(typeof(ReflectionBasedRootElementFactory).GetTypeInfo().Assembly, ClassActivator<OpenXmlElement>.CreateActivator));
 
         public object? GetService(Type serviceType)
         {
