@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlMiscNode), new ElementMetadata(typeof(OpenXmlMiscNode))),
         });
 
-        private readonly Lazy<ElementLookup>? _children;
+        private readonly Lazy<ElementFactoryCollection>? _children;
 
         internal ElementMetadata(
             Type type,
@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             FileFormatVersions version,
             OpenXmlQualifiedName qname,
             CompiledParticle? particle,
-            Lazy<ElementLookup> lookup)
+            Lazy<ElementFactoryCollection> lookup)
         {
             Type = type;
             Attributes = attributes;
@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public ReadOnlyArray<AttributeMetadata> Attributes { get; }
 
-        public ElementLookup Children => _children?.Value ?? ElementLookup.Empty;
+        public ElementFactoryCollection Children => _children?.Value ?? ElementFactoryCollection.Empty;
 
         public ReadOnlyArray<IValidator> Validators { get; }
 
@@ -96,12 +96,12 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public class Builder : ValidatorBuilder
         {
-            private static readonly Lazy<ElementLookup> _lazy = new Lazy<ElementLookup>(() => ElementLookup.Empty, true);
+            private static readonly Lazy<ElementFactoryCollection> _lazy = new Lazy<ElementFactoryCollection>(() => ElementFactoryCollection.Empty, true);
 
             private readonly Type _type;
 
             private List<IMetadataBuilder<AttributeMetadata>>? _attributes;
-            private HashSet<IMetadataBuilder<ElementLookup.ElementChild>>? _children;
+            private HashSet<IMetadataBuilder<ElementFactory>>? _children;
             private List<IValidator>? _constraints;
             private OpenXmlQualifiedName _qname;
 
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
                 if (_children is null)
                 {
-                    _children = new HashSet<IMetadataBuilder<ElementLookup.ElementChild>>();
+                    _children = new HashSet<IMetadataBuilder<ElementFactory>>();
                 }
 
                 _children.Add(new KnownChild<T>());
@@ -162,7 +162,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public ElementMetadata Build()
             {
-                var lookup = _children is null ? _lazy : new Lazy<ElementLookup>(() => new ElementLookup(_children.Select(c => c.Build())), true);
+                var lookup = _children is null ? _lazy : new Lazy<ElementFactoryCollection>(() => new ElementFactoryCollection(_children.Select(c => c.Build())), true);
 
                 return new ElementMetadata(_type, BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, _qname, Particle.Compile(), lookup);
             }
@@ -184,20 +184,10 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 return attributes;
             }
 
-            private class KnownChild<T> : IMetadataBuilder<ElementLookup.ElementChild>
+            private class KnownChild<T> : IMetadataBuilder<ElementFactory>
                 where T : OpenXmlElement, new()
             {
-                public ElementLookup.ElementChild Build() => new ElementChild2(ElementMetadata.Create<T>());
-
-                private class ElementChild2 : ElementLookup.ElementChild
-                {
-                    public ElementChild2(ElementMetadata metadata)
-                        : base(typeof(T), metadata.QName)
-                    {
-                    }
-
-                    public override OpenXmlElement Create() => new T();
-                }
+                public ElementFactory Build() => ElementFactory.Create<T>();
             }
         }
 

@@ -19,6 +19,8 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlPartReader : OpenXmlReader
     {
+        private static readonly IRootElementFactory _factory = ReflectionBasedRootElementFactory.Instance;
+
         private readonly XmlReader _xmlReader;
         private readonly List<OpenXmlAttribute> _attributeList = new List<OpenXmlAttribute>();
         private readonly List<KeyValuePair<string, string>> _nsDecls = new List<KeyValuePair<string, string>>();
@@ -786,9 +788,9 @@ namespace DocumentFormat.OpenXml
             return true;
         }
 
-        private static OpenXmlElement CreateElement(in OpenXmlQualifiedName qname)
+        private OpenXmlElement CreateElement(in OpenXmlQualifiedName qname)
         {
-            if (ElementLookup.Parts.Create(qname) is OpenXmlElement element)
+            if (_factory.TryCreate(qname, out var element))
             {
                 return element;
             }

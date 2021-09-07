@@ -67,11 +67,11 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             {
                 Element = type.FullName;
 
-                ElementLookup GetLookup()
+                ElementFactoryCollection GetLookup()
                 {
                     if (typeof(OpenXmlPartRootElement) == type)
                     {
-                        return ElementLookup.Parts;
+                        return ReflectionBasedRootElementFactory.Instance.Collection;
                     }
                     else if (type.GetConstructor(Cached.Array<Type>()) is not null)
                     {
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                     }
                     else
                     {
-                        return ElementLookup.Empty;
+                        return ElementFactoryCollection.Empty;
                     }
                 }
 
