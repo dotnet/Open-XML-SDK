@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlPartReader : OpenXmlReader
     {
-        private static readonly IRootElementFactory _factory = ReflectionBasedRootElementFactory.Instance;
+        private static readonly IRootElementFactory _factory = DefaultServices.Instance.GetRequiredService<IRootElementFactory>();
 
         private readonly XmlReader _xmlReader;
         private readonly List<OpenXmlAttribute> _attributeList = new List<OpenXmlAttribute>();

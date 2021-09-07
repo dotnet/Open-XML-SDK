@@ -10,8 +10,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal class ReflectionBasedRootElementFactory : IRootElementFactory
     {
-        public static ReflectionBasedRootElementFactory Instance { get; } = new ReflectionBasedRootElementFactory(typeof(ReflectionBasedRootElementFactory).Assembly, ClassActivator<OpenXmlElement>.CreateActivator);
-
         private readonly Lazy<ElementFactoryCollection> _factoryCollection;
 
         public ReflectionBasedRootElementFactory(Assembly assembly, Func<Type, Func<OpenXmlElement>> activatorFactory)

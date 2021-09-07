@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 {
                     if (typeof(OpenXmlPartRootElement) == type)
                     {
-                        return ReflectionBasedRootElementFactory.Instance.Collection;
+                        return DefaultServices.Instance.GetRequiredService<IRootElementFactory>().Collection;
                     }
                     else if (type.GetConstructor(Cached.Array<Type>()) is not null)
                     {

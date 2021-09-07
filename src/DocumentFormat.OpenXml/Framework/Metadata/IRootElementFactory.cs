@@ -8,5 +8,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
     internal interface IRootElementFactory
     {
         bool TryCreate(in OpenXmlQualifiedName qname, [NotNullWhen(true)] out OpenXmlElement? element);
+
+        ElementFactoryCollection Collection { get; }
     }
 }

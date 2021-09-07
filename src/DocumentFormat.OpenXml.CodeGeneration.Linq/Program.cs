@@ -299,7 +299,7 @@ namespace DocumentFormat.OpenXml.CodeGeneration.Linq
             var visitedElementTypes = new HashSet<Type>();
             var elementMetadataCollection = new List<ElementMetadata>();
 
-            foreach (var elementChild in ReflectionBasedRootElementFactory.Instance.Collection.Elements)
+            foreach (var elementChild in DefaultServices.Instance.GetRequiredService<IRootElementFactory>().Collection.Elements)
             {
                 AssembleElementMetatata(ElementMetadata.None, elementChild, visitedElementTypes, elementMetadataCollection, fieldInfos);
             }
