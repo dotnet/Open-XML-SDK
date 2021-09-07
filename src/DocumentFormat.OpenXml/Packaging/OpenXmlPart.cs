@@ -33,6 +33,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Create an instance of <see cref="OpenXmlPart"/>
         /// </summary>
         protected internal OpenXmlPart()
+            : base()
         {
         }
 
@@ -187,7 +188,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             //OpenXmlPart parentPart = this._ownerPart;
 
-            //Uri is auto generated to make sure it's unique
+            // Uri is auto generated to make sure it's unique
             var targetPath = GetTargetPath(openXmlPackage, TargetPath) ?? ".";
 
             string? targetFileExt = targetExt;
@@ -215,8 +216,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(ExceptionMessages.PackageRelatedArgumentNullException);
             }
-            else if (parent is not null && openXmlPackage is not null &&
-                 parent.OpenXmlPackage != openXmlPackage)
+            else if (parent is not null && openXmlPackage is not null && parent.OpenXmlPackage != openXmlPackage)
             {
                 throw new ArgumentOutOfRangeException(nameof(parent));
             }
@@ -449,7 +449,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region Linq to XML
 
         /// <summary>
-        /// Gets or sets
+        /// Gets or sets the root LINQ to XML element.
         /// </summary>
         public XElement? RootXElement
         {
@@ -769,30 +769,32 @@ namespace DocumentFormat.OpenXml.Packaging
             // method is in synch with the part contents.
             SaveRootXElement();
 
-            using (Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read))
+            using Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read);
+            if (stream.Length < 4)
             {
-                if (stream.Length == 0)
-                {
-                    return;
-                }
+                // The OpenXmlPartRootElement.LoadFromPart() method requires at least four
+                // bytes from the data stream. The shortest well-formed XML document would
+                // be something like "<a/>".
+                return;
+            }
 
-                try
-                {
-                    var rootElement = new T();
+            try
+            {
+                // Set OpenXmlPart before loading from part to be able to access
+                // OpenXmlPart and OpenXmlPackage while loading. If the OpenXmlPart
+                // property is set by the OpenXmlPartRootElement.LoadFromPart() method,
+                // OpenXmlReaderWriterTest.bug247883() unit test fails.
+                var rootElement = new T { OpenXmlPart = this };
 
-                    if (rootElement.LoadFromPart(this, stream))
-                    {
-                        // set this part to the root Element
-                        rootElement.OpenXmlPart = this;
-
-                        // associate the root element with this part.
-                        InternalRootElement = rootElement;
-                    }
-                }
-                catch (InvalidDataException e)
+                if (rootElement.LoadFromPart(this, stream))
                 {
-                    throw new InvalidDataException(ExceptionMessages.CannotLoadRootElement, e);
+                    // associate the root element with this part.
+                    InternalRootElement = rootElement;
                 }
+            }
+            catch (InvalidDataException e)
+            {
+                throw new InvalidDataException(ExceptionMessages.CannotLoadRootElement, e);
             }
         }
 
