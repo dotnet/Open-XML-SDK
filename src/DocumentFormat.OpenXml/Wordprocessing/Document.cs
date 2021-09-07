@@ -10,8 +10,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     {
         private protected override bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string? value)
         {
-            if (string.Equals("conformance", qname.Name, StringComparison.Ordinal)
-                && string.Equals("strict", value, StringComparison.Ordinal))
+            if (string.Equals("conformance", qname.Name, StringComparison.Ordinal) &&
+                string.Equals("strict", value, StringComparison.Ordinal))
             {
                 return true;
             }

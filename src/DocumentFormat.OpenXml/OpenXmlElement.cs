@@ -195,7 +195,7 @@ namespace DocumentFormat.OpenXml
         {
         }
 
-        private protected void SetAttribute<TSimpleType>(TSimpleType? value, [CallerMemberName] string propertyName = null!)
+        private protected virtual void SetAttribute<TSimpleType>(TSimpleType? value, [CallerMemberName] string propertyName = null!)
             where TSimpleType : OpenXmlSimpleType
             => ParsedState.Attributes.GetProperty(propertyName).Value = value;
 
@@ -1474,7 +1474,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="value"></param>
         /// <param name="strictRelationshipFound"></param>
         /// <returns>true if the attribute is a known attribute.</returns>
-        private bool TrySetFixedAttribute(in OpenXmlQualifiedName qname, string? value, bool strictRelationshipFound)
+        private protected virtual bool TrySetFixedAttribute(in OpenXmlQualifiedName qname, string? value, bool strictRelationshipFound)
         {
             if (RawState.Attributes.Any())
             {
