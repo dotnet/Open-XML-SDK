@@ -60,6 +60,33 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+        /// <summary>
+        /// Gets a <see cref="IFeatureCollection"/> for the current element. This feature collection will be read-only, but will inherit features from its parent part and package if available.
+        /// </summary>
+        public IFeatureCollection Features
+        {
+            get
+            {
+                if (this.GetPart()?.Features is IFeatureCollection features)
+                {
+                    if (features.IsReadOnly)
+                    {
+                        return features;
+                    }
+                    else if (features is FeatureCollection featureCollection)
+                    {
+                        return featureCollection.AsReadOnly();
+                    }
+                    else
+                    {
+                        return new FeatureCollection(features, true);
+                    }
+                }
+
+                return FeatureCollection.Empty;
+            }
+        }
+
         private MarkupCompatibilityAttributes? McAttributesFiled
         {
             get

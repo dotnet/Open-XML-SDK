@@ -65,17 +65,17 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var data = GetConstraintData(part);
 
-            Assert.Same(part.Data.PartConstraints, part.Data.PartConstraints);
-            Assert.Same(part.Data.DataPartReferenceConstraints, part.Data.DataPartReferenceConstraints);
+            Assert.Same(part.GetPartMetadata().PartConstraints, part.GetPartMetadata().PartConstraints);
+            Assert.Same(part.GetPartMetadata().DataPartReferenceConstraints, part.GetPartMetadata().DataPartReferenceConstraints);
 
-            if (!part.Data.PartConstraints.Any())
+            if (!part.GetPartMetadata().PartConstraints.Any())
             {
-                Assert.Same(PartConstraintCollection.Instance, part.Data.PartConstraints);
+                Assert.Same(PartConstraintCollection.Instance, part.GetPartMetadata().PartConstraints);
             }
 
-            if (!part.Data.DataPartReferenceConstraints.Any())
+            if (!part.GetPartMetadata().DataPartReferenceConstraints.Any())
             {
-                Assert.Same(PartConstraintCollection.Instance, part.Data.DataPartReferenceConstraints);
+                Assert.Same(PartConstraintCollection.Instance, part.GetPartMetadata().DataPartReferenceConstraints);
             }
 
             Assert.Equal(data.IsContentTypeFixed, part.IsContentTypeFixed);
@@ -90,16 +90,16 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
 #if DEBUG
-            _output.WriteObjectToTempFile(part.Data.DataPartReferenceConstraints);
+            _output.WriteObjectToTempFile(part.GetPartMetadata().DataPartReferenceConstraints);
 #endif
 
-            AssertDictionary(data.DataParts, part.Data.DataPartReferenceConstraints);
+            AssertDictionary(data.DataParts, part.GetPartMetadata().DataPartReferenceConstraints);
 
 #if DEBUG
-            _output.WriteObjectToTempFile(part.Data.PartConstraints);
+            _output.WriteObjectToTempFile(part.GetPartMetadata().PartConstraints);
 #endif
 
-            AssertDictionary(data.Parts, part.Data.PartConstraints);
+            AssertDictionary(data.Parts, part.GetPartMetadata().PartConstraints);
         }
 
         [MemberData(nameof(GetOpenXmlParts))]
@@ -130,8 +130,8 @@ namespace DocumentFormat.OpenXml.Tests
                     TargetFileExtension = t.TargetFileExtension,
                     TargetName = t.TargetName,
                     TargetPath = t.TargetPath,
-                    DataParts = t.Data.DataPartReferenceConstraints,
-                    Parts = t.Data.PartConstraints,
+                    DataParts = t.GetPartMetadata().DataPartReferenceConstraints,
+                    Parts = t.GetPartMetadata().PartConstraints,
                 })
                 .OrderBy(d => d.Name, StringComparer.Ordinal);
 

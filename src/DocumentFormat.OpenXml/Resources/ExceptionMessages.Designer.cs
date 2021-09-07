@@ -902,15 +902,6 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Service {0} is not available..
-        /// </summary>
-        internal static string UnknownService {
-            get {
-                return ResourceManager.GetString("UnknownService", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Do not add hyperlink relationships through the AddExternalRelationship() method. Use AddHyperlinkRelationship() instead..
         /// </summary>
         internal static string UseAddHyperlinkRelationship {
