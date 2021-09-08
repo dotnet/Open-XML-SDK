@@ -115,7 +115,6 @@
         <PackageReference Include="System.IO.Packaging" Version="$(SystemIOPackagingVersion)" />
         <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
         <PackageReference Include="System.Xml.ReaderWriter" Version="4.3.1" />
-        <PackageReference Include="System.ComponentModel" Version="4.3.0" />
       </ItemGroup>
 
       <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->
