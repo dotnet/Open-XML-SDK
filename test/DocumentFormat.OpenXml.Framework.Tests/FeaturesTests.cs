@@ -28,21 +28,6 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         }
 
         [Fact]
-        public void DisposesIfImplemented()
-        {
-            var features = new FeatureCollection();
-
-            var feature = Substitute.For<IDisposable>();
-
-            features.Set(feature);
-            features.Set<IDisposable>(null);
-
-            Assert.Null(features.Get<IDisposable>());
-
-            feature.Received(1).Dispose();
-        }
-
-        [Fact]
         public void ParentAvailableIfNotSet()
         {
             var features1 = new FeatureCollection();
@@ -94,6 +79,12 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             Assert.Throws<NotSupportedException>(() => features2.Set(feature1));
 
             Assert.Same(feature1, features2.Get<Feature>());
+        }
+
+        [Fact]
+        public void DefaultIsReadOnly()
+        {
+            Assert.True(FeatureCollection.Default.IsReadOnly);
         }
 
         private class Feature

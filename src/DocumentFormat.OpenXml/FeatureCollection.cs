@@ -89,24 +89,9 @@ namespace DocumentFormat.OpenXml.Framework
 
                 if (value == null)
                 {
-                    if (_features != null)
+                    if (_features != null && _features.Remove(key))
                     {
-#if NET5_0_OR_GREATER
-                        if (_features.Remove(key, out var existing))
-                        {
-#else
-                        if (_features.TryGetValue(key, out var existing))
-                        {
-                            _features.Remove(key);
-#endif
-
-                            if (existing is IDisposable disposable)
-                            {
-                                disposable.Dispose();
-                            }
-
-                            _containerRevision++;
-                        }
+                        _containerRevision++;
                     }
 
                     return;
@@ -156,7 +141,7 @@ namespace DocumentFormat.OpenXml.Framework
                     {
                         [typeof(IRootElementFactory)] = new ReflectionBasedRootElementFactory(typeof(ReflectionBasedRootElementFactory).GetTypeInfo().Assembly, ClassActivator<OpenXmlElement>.CreateActivator),
                         [typeof(IPartMetadataProvider)] = new CachedPartMetadataProvider(),
-                    };
+                    }.AsReadOnly();
 
                     Interlocked.CompareExchange(ref _default, defaultFeatures, null);
                 }
