@@ -7,7 +7,7 @@ using System.Collections.Concurrent;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal class CachedPartMetadataProvider : IPartMetadataProvider
+    internal class CachedPartMetadataProvider : IPartMetadataFeature
     {
         private readonly ConcurrentDictionary<Type, OpenXmlPartData> _partData = new();
 

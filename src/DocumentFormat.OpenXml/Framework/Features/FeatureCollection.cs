@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml.Framework.Features
                     var defaultFeatures = new FeatureCollection
                     {
                         [typeof(IRootElementFactory)] = new ReflectionBasedRootElementFactory(typeof(ReflectionBasedRootElementFactory).GetTypeInfo().Assembly, ClassActivator<OpenXmlElement>.CreateActivator),
-                        [typeof(IPartMetadataProvider)] = new CachedPartMetadataProvider(),
+                        [typeof(IPartMetadataFeature)] = new CachedPartMetadataProvider(),
                     }.AsReadOnly();
 
                     Interlocked.CompareExchange(ref _default, defaultFeatures, null);

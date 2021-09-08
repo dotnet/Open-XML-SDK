@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Framework.Features
     public static class FeatureExtensions
     {
         internal static OpenXmlPartData GetPartMetadata(this OpenXmlPartContainer part)
-            => part.Features.GetRequired<IPartMetadataProvider>().Parse(part);
+            => part.Features.GetRequired<IPartMetadataFeature>().Parse(part);
 
         /// <summary>
         /// Gets a required feature from the supplied collection.

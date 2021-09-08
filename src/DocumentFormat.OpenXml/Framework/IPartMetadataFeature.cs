@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 
 namespace DocumentFormat.OpenXml.Framework
 {
-    internal interface IPartMetadataProvider
+    internal interface IPartMetadataFeature
     {
         OpenXmlPartData Parse(OpenXmlPartContainer part);
     }
