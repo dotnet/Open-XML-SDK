@@ -903,6 +903,16 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #endregion
 
+        private protected override IFeatureCollection CreateFeatures()
+        {
+            if (_openXmlPackage is not null)
+            {
+                return new FeatureCollection(_openXmlPackage.Features);
+            }
+
+            return base.CreateFeatures();
+        }
+
         #region MC Staffs
 
         internal MarkupCompatibilityProcessSettings? MCSettings;
