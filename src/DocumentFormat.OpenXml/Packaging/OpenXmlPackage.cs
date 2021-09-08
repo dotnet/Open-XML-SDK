@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Features;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -845,7 +846,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (Data.PartConstraints.TryGetValue(relationshipType, out var partConstraintRule))
+            if (this.GetPartMetadata().PartConstraints.TryGetValue(relationshipType, out var partConstraintRule))
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
@@ -920,6 +921,9 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             return Package.CreatePart(partUri, contentType, CompressionOption);
         }
+
+        private protected override IFeatureCollection CreateFeatures()
+            => new FeatureCollection(FeatureCollection.Default);
 
         #endregion
 

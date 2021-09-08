@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework.Features;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,6 +15,7 @@ using System.Xml.Linq;
 #if FEATURE_XML_SCHEMA
 using System.ComponentModel;
 using System.Xml.Schema;
+
 #endif
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -109,7 +111,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (Data.PartConstraints.TryGetValue(relationshipType, out var partConstraintRule))
+            if (this.GetPartMetadata().PartConstraints.TryGetValue(relationshipType, out var partConstraintRule))
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
@@ -574,10 +576,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private void ResetPowerToolsAnnotations()
         {
-           RemoveAnnotations<XDocument>();
-           RemoveAnnotations<XmlNamespaceManager>();
+            RemoveAnnotations<XDocument>();
+            RemoveAnnotations<XmlNamespaceManager>();
 
-           AddAnnotation(CreateRootXDocument());
+            AddAnnotation(CreateRootXDocument());
         }
 
         private XDocument CreateRootXDocument()
@@ -900,6 +902,16 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         #endregion
+
+        private protected override IFeatureCollection CreateFeatures()
+        {
+            if (_openXmlPackage is not null)
+            {
+                return new FeatureCollection(_openXmlPackage.Features);
+            }
+
+            return base.CreateFeatures();
+        }
 
         #region MC Staffs
 

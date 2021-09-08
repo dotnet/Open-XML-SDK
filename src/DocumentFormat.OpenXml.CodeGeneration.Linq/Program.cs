@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Features;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.CodeDom.Compiler;
@@ -299,7 +300,7 @@ namespace DocumentFormat.OpenXml.CodeGeneration.Linq
             var visitedElementTypes = new HashSet<Type>();
             var elementMetadataCollection = new List<ElementMetadata>();
 
-            foreach (var elementChild in DefaultServices.Instance.GetRequiredService<IRootElementFactory>().Collection.Elements)
+            foreach (var elementChild in FeatureCollection.Default.GetRequired<IRootElementFactory>().Collection.Elements)
             {
                 AssembleElementMetatata(ElementMetadata.None, elementChild, visitedElementTypes, elementMetadataCollection, fieldInfos);
             }

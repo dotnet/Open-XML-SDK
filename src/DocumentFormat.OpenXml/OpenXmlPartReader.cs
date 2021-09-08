@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Features;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
@@ -19,7 +20,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlPartReader : OpenXmlReader
     {
-        private static readonly IRootElementFactory _factory = DefaultServices.Instance.GetRequiredService<IRootElementFactory>();
+        private static readonly IRootElementFactory _factory = FeatureCollection.Default.GetRequired<IRootElementFactory>();
 
         private readonly XmlReader _xmlReader;
         private readonly List<OpenXmlAttribute> _attributeList = new List<OpenXmlAttribute>();
