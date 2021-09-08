@@ -296,6 +296,15 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Feature {0} is not available in this collection..
+        /// </summary>
+        internal static string FeatureNotRegistered {
+            get {
+                return ResourceManager.GetString("FeatureNotRegistered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The specified FileFormatVersions parameter has an invalid value: {0}.
         /// </summary>
         internal static string FileFormatNotSupported {

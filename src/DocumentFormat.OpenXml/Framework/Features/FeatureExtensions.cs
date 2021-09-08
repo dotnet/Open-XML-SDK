@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Framework.Features
                 return feature;
             }
 
-            throw new NotSupportedException();
+            throw new NotSupportedException(SR.Format(ExceptionMessages.FeatureNotRegistered, typeof(TFeature).FullName));
         }
     }
 }

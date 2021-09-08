@@ -2164,29 +2164,19 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private IFeatureCollection? _features;
 
-        private protected virtual void AddFeatures(IFeatureCollection features)
-        {
-        }
+        private protected virtual IFeatureCollection CreateFeatures()
+            => new FeatureCollection(InternalOpenXmlPackage.Features);
 
         /// <summary>
         /// Gets the features associated with this part.
         /// </summary>
-        public IFeatureCollection Features
+        public virtual IFeatureCollection Features
         {
             get
             {
                 if (_features is null)
                 {
-                    if (ReferenceEquals(this, InternalOpenXmlPackage))
-                    {
-                        _features = new FeatureCollection(FeatureCollection.Default);
-                    }
-                    else
-                    {
-                        _features = new FeatureCollection(InternalOpenXmlPackage.Features);
-                    }
-
-                    AddFeatures(_features);
+                    _features = CreateFeatures();
                 }
 
                 return _features;
