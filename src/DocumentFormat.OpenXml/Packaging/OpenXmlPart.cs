@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Features;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -242,9 +242,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
             _packagePart = openXmlPackage.CreateMetroPart(_uri, contentType);
         }
-
-        private protected override IFeatureCollection GetFeatures()
-            => _openXmlPackage?.Features ?? base.GetFeatures();
 
         #endregion
 

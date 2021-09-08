@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Features;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -2163,8 +2164,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private IFeatureCollection? _features;
 
-        private protected virtual IFeatureCollection GetFeatures()
-            => FeatureCollection.Default;
+        private protected virtual void AddFeatures(IFeatureCollection features)
+        {
+        }
 
         /// <summary>
         /// Gets the features associated with this part.
@@ -2175,7 +2177,16 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (_features is null)
                 {
-                    _features = new FeatureCollection(GetFeatures());
+                    if (ReferenceEquals(this, InternalOpenXmlPackage))
+                    {
+                        _features = new FeatureCollection(FeatureCollection.Default);
+                    }
+                    else
+                    {
+                        _features = new FeatureCollection(InternalOpenXmlPackage.Features);
+                    }
+
+                    AddFeatures(_features);
                 }
 
                 return _features;

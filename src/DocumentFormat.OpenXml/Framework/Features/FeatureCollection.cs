@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Threading;
 
-namespace DocumentFormat.OpenXml.Framework
+namespace DocumentFormat.OpenXml.Framework.Features
 {
     /// <summary>
     /// Represents a collection of features.
