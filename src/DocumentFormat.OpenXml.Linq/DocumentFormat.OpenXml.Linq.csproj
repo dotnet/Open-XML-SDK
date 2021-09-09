@@ -26,6 +26,11 @@
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DocumentFormat.OpenXml.Features\DocumentFormat.OpenXml.Features.csproj" />
+    <ProjectReference Include="..\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
+  </ItemGroup>
+
   <Choose>
     <When Condition=" '$(TargetFramework)' == 'net35'">
       <ItemGroup>
