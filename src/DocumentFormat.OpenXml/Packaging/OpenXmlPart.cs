@@ -780,6 +780,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 return;
             }
 
+            var events = Features.Get<IPartRootEventsFeature>();
+            events?.OnChange(EventType.Reloading, this);
+
             try
             {
                 // Set OpenXmlPart before loading from part to be able to access
@@ -792,6 +795,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     // associate the root element with this part.
                     InternalRootElement = rootElement;
+                    events?.OnChange(EventType.Reloaded, this);
                 }
             }
             catch (InvalidDataException e)
@@ -815,15 +819,24 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.PartRootAlreadyHasAssociation, nameof(partRootElement));
             }
 
+            var events = Features.Get<IPartRootEventsFeature>();
+            events?.OnChange(EventType.Creating, this);
+
             partRootElement.OpenXmlPart = this;
 
-            if (InternalRootElement is not null)
+            if (InternalRootElement?.OpenXmlPart is OpenXmlPart currentPart)
             {
+                var otherEvents = currentPart.Features.Get<IPartRootEventsFeature>();
+                otherEvents?.OnChange(EventType.Removing, currentPart);
+
                 // clear the association from the previous root element.
                 InternalRootElement.OpenXmlPart = null;
+
+                otherEvents?.OnChange(EventType.Removed, currentPart);
             }
 
             InternalRootElement = partRootElement;
+            events?.OnChange(EventType.Created, this);
 
             // Synchronize RootXElement with RootElement as necessary.
             ReloadRootXElementFromRootElement();

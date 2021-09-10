@@ -6,7 +6,10 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-    internal static class OpenXmlPackageExtensions
+    /// <summary>
+    /// Extensions for <see cref="OpenXmlPackage"/> type.
+    /// </summary>
+    public static class OpenXmlPackageExtensions
     {
         /// <summary>
         /// Traverse parts in the <see cref="OpenXmlPackage"/> by breadth-first.
