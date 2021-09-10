@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract class OpenXmlPartContainer
     {
-        private readonly Dictionary<string, OpenXmlPart> _childrenPartsDictionary = new Dictionary<string, OpenXmlPart>(StringComparer.Ordinal);
+        private readonly PartDictionary _childrenPartsDictionary;
         private readonly LinkedList<ReferenceRelationship> _referenceRelationships = new LinkedList<ReferenceRelationship>();
         private object? _annotations;
 
@@ -30,12 +30,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         protected OpenXmlPartContainer()
         {
+            _childrenPartsDictionary = new(this);
         }
 
         /// <summary>
         /// Gets the children parts IDictionary.
         /// </summary>
-        internal Dictionary<string, OpenXmlPart> ChildrenRelationshipParts
+        internal PartDictionary ChildrenRelationshipParts
         {
             get
             {
@@ -1816,6 +1817,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 return false;
             }
 
+            var events = Features.Get<IPartEventsFeature>();
+            events?.OnChange(child, EventType.Deleting);
+
             child.FindAllReachableParts(processedParts);
 
             // remove from the collection
@@ -1858,6 +1862,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
             }
+
+            events?.OnChange(child, EventType.Deleted);
 
             return true;
         }

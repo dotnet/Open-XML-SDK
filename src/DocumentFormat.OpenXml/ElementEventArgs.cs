@@ -10,9 +10,6 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class ElementEventArgs : EventArgs
     {
-        private readonly OpenXmlElement _element;
-        private readonly OpenXmlElement _parentElement;
-
         /// <summary>
         /// Initializes a new instance of the ElementEventArgs class using the
         ///  supplied elements.
@@ -25,24 +22,18 @@ namespace DocumentFormat.OpenXml
         /// </param>
         public ElementEventArgs(OpenXmlElement element, OpenXmlElement parentElement)
         {
-            _element = element;
-            _parentElement = parentElement;
+            Element = element;
+            ParentElement = parentElement;
         }
 
         /// <summary>
         /// Gets the element that caused the event.
         /// </summary>
-        public OpenXmlElement Element
-        {
-            get { return _element; }
-        }
+        public OpenXmlElement Element { get; }
 
         /// <summary>
         /// Gets the parent element of the element that caused the event.
         /// </summary>
-        public OpenXmlElement ParentElement
-        {
-            get { return _parentElement; }
-        }
+        public OpenXmlElement ParentElement { get; }
     }
 }

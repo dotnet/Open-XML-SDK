@@ -512,6 +512,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (disposing)
             {
+                var closing = Features.Get<IPackageEventsFeature>();
+
+                closing?.OnChange(this, EventType.Closing);
+
                 // Try to save contents of every part in the package
                 SavePartContents(AutoSave);
                 DeleteUnusedDataPartOnClose();
@@ -522,6 +526,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 ChildrenRelationshipParts.Clear();
                 ReferenceRelationshipList.Clear();
                 _partUriHelper = null!;
+
+                closing?.OnChange(this, EventType.Closed);
             }
 
             _disposed = true;

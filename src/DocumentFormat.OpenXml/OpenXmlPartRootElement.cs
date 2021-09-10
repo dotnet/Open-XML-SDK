@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Features;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
@@ -115,6 +116,9 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
+            var events = openXmlPart.Features.Get<IPartRootEventsFeature>();
+            events?.OnChange(EventType.Reloading, openXmlPart);
+
             var context = RootElementContext;
 
             // set MaxCharactersInDocument to limit the part size on loading DOM.
@@ -173,6 +177,8 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
+            events?.OnChange(EventType.Reloaded, openXmlPart);
+
             return true;
         }
 
@@ -211,6 +217,9 @@ namespace DocumentFormat.OpenXml
                 Encoding = new UTF8Encoding(false),
             };
 
+            var events = Features.Get<IPartRootEventsFeature>();
+            events?.OnChange(EventType.Saving, OpenXmlPart);
+
             using (var xmlWriter = XmlWriter.Create(stream, settings))
             {
                 if (_standaloneDeclaration is not null)
@@ -229,6 +238,8 @@ namespace DocumentFormat.OpenXml
                     xmlWriter.WriteEndDocument();
                 }
             }
+
+            events?.OnChange(EventType.Saved, OpenXmlPart);
         }
 
         /// <summary>
