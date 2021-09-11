@@ -16,25 +16,15 @@ namespace DocumentFormat.OpenXml.Linq
     public static class OpenXmlLinqExtensions
     {
         /// <summary>
-        /// Try adding a feature to enable accessing <see cref="XElement"/> representations of parts.
-        /// </summary>
-        /// <param name="package">Package to enable feature on.</param>
-        /// <returns>Whether the feature was added. False if already present.</returns>
-        public static bool TrySetPartRootXElementFeature(this OpenXmlPackage package)
-        {
-            package.TryAddDisposableFeature();
-            package.TryAddPartRootEventsFeature();
-
-            return true;
-        }
-
-        /// <summary>
         /// Will create or get a cached instance of <see cref="IPartRootXElementFeature"/>.
         /// </summary>
         /// <param name="part">The part to provide an <see cref="XElement"/> instance.</param>
         /// <returns>A <see cref="IPartRootXElementFeature"/>.</returns>
         internal static IPartRootXElementFeature GetPartRootXElementFeature(this OpenXmlPart part)
         {
+            part.TryAddDisposableFeature();
+            part.TryAddPartRootEventsFeature();
+
             var feature = part.Features.Get<IPartRootXElementFeature>();
 
             if (feature is not null)

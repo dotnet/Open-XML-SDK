@@ -37,8 +37,6 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
 
-            wordDocument.TrySetPartRootXElementFeature();
-
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
 
             // Act.
@@ -57,8 +55,6 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
 
-            wordDocument.TrySetPartRootXElementFeature();
-
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
             part.Document = HelloWordDocument;
 
@@ -76,8 +72,6 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             // Arrange.
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
-
-            wordDocument.TrySetPartRootXElementFeature();
 
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
 
@@ -109,8 +103,6 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
 
-            wordDocument.TrySetPartRootXElementFeature();
-
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
             part.Document = HelloWordDocument;
 
@@ -140,8 +132,6 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             // Arrange.
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
-
-            wordDocument.TrySetPartRootXElementFeature();
 
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
             part.Document = HelloWordDocument;

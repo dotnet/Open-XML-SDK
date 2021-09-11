@@ -36,6 +36,13 @@ namespace DocumentFormat.OpenXml.Framework.Features
         }
 
         /// <summary>
+        /// Adds disposable feature to the package a part is contained in.
+        /// </summary>
+        /// <param name="part">Part to add disposable feature to.</param>
+        public static bool TryAddDisposableFeature(this OpenXmlPart part)
+            => part.OpenXmlPackage.TryAddDisposableFeature();
+
+        /// <summary>
         /// Adds disposable feature.
         /// </summary>
         /// <param name="features">Features collection to add disposable feature to.</param>
