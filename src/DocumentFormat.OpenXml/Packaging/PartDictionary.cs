@@ -10,67 +10,114 @@ namespace DocumentFormat.OpenXml.Packaging
 {
     internal class PartDictionary
     {
-        private readonly OpenXmlPartContainer _container;
-        private readonly Dictionary<string, OpenXmlPart> _parts = new(StringComparer.Ordinal);
-
-        private IPartEventsFeature? _events;
+        private object? _holder;
+        private Dictionary<string, OpenXmlPart>? _parts;
 
         public PartDictionary(OpenXmlPartContainer container)
         {
-            _container = container;
+            _holder = container;
         }
 
-        public IPartEventsFeature? Events
+        private IPartEventsFeature? Events
         {
             get
             {
-                if (_events is null)
+                if (_holder is IPartEventsFeature events)
                 {
-                    _events = _container.Features.Get<IPartEventsFeature>();
+                    return events;
+                }
+                else if (_holder is OpenXmlPartContainer container)
+                {
+                    var feature = container.Features.Get<IPartEventsFeature>();
+                    _holder = feature;
+                    return feature;
                 }
 
-                return _events;
+                return null;
             }
         }
 
-        public Dictionary<string, OpenXmlPart>.ValueCollection Values => _parts.Values;
+        public Dictionary<string, OpenXmlPart>.ValueCollection Values => Parts.Values;
 
         public void Add(string uri, OpenXmlPart part)
         {
             Events?.OnChange(part, EventType.Creating);
-            _parts.Add(uri, part);
+
+            Parts.Add(uri, part);
+
             Events?.OnChange(part, EventType.Created);
         }
 
         public void Clear()
         {
-            if (Events is null)
+            if (_parts is null)
             {
-                _parts.Clear();
+                return;
             }
-            else
+
+            if (Events is IPartEventsFeature events)
             {
+                // On .NET 5.0 and later, we can remove keys while enumerating. Before that, it would throw at runtime.
+#if NET5_0_OR_GREATER
                 foreach (var kv in _parts)
                 {
-                    Events.OnChange(kv.Value, EventType.Removing);
-                    Remove(kv.Key);
-                    Events.OnChange(kv.Value, EventType.Removed);
+                    events.OnChange(kv.Value, EventType.Removing);
+                    _parts.Remove(kv.Key);
+                    events.OnChange(kv.Value, EventType.Removed);
                 }
+#else
+                var parts = _parts;
+
+                foreach (var kv in parts)
+                {
+                    events.OnChange(kv.Value, EventType.Removing);
+                    events.OnChange(kv.Value, EventType.Removed);
+                }
+#endif
+            }
+
+            _parts = null;
+        }
+
+        public int Count => _parts is null ? 0 : _parts.Count;
+
+        public bool ContainsValue(OpenXmlPart part) => _parts is null ? false : _parts.ContainsValue(part);
+
+        public bool ContainsKey(string uri) => _parts is null ? false : _parts.ContainsKey(uri);
+
+        public bool TryGetValue(string uri, [MaybeNullWhen(false)] out OpenXmlPart part)
+        {
+            if (_parts is null)
+            {
+                part = null;
+                return false;
+            }
+
+            return _parts.TryGetValue(uri, out part);
+        }
+
+        private Dictionary<string, OpenXmlPart> Parts
+        {
+            get
+            {
+                if (_parts is null)
+                {
+                    _parts = new(StringComparer.Ordinal);
+                }
+
+                return _parts;
             }
         }
 
-        public int Count => _parts.Count;
-
-        public bool ContainsValue(OpenXmlPart part) => _parts.ContainsValue(part);
-
-        public bool ContainsKey(string uri) => _parts.ContainsKey(uri);
-
-        public bool TryGetValue(string uri, [MaybeNullWhen(false)] out OpenXmlPart part) => _parts.TryGetValue(uri, out part);
-
-        public Dictionary<string, OpenXmlPart>.Enumerator GetEnumerator() => _parts.GetEnumerator();
+        public Dictionary<string, OpenXmlPart>.Enumerator GetEnumerator() => Parts.GetEnumerator();
 
         public void Remove(string uri)
         {
+            if (_parts is null)
+            {
+                return;
+            }
+
             if (_parts.TryGetValue(uri, out var part))
             {
                 Events?.OnChange(part, EventType.Removing);
