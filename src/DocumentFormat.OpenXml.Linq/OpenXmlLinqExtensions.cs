@@ -22,15 +22,15 @@ namespace DocumentFormat.OpenXml.Linq
         /// <returns>A <see cref="IPartRootXElementFeature"/>.</returns>
         internal static IPartRootXElementFeature GetPartRootXElementFeature(this OpenXmlPart part)
         {
-            part.TryAddDisposableFeature();
-            part.TryAddPartRootEventsFeature();
-
             var feature = part.Features.Get<IPartRootXElementFeature>();
 
             if (feature is not null)
             {
                 return feature;
             }
+
+            part.TryAddDisposableFeature();
+            part.TryAddPartRootEventsFeature();
 
             var xelement = new RootXElementFeature(part);
 
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Linq
                     {
                         if (_part.RootElement is null)
                         {
-                            LoadRootXElementFromStream();
+                            _rootXElement = LoadRootXElementFromStream();
                         }
                         else
                         {
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Linq
                 }
             }
 
-            private void LoadRootXElementFromStream()
+            private XElement? LoadRootXElementFromStream()
             {
                 using Stream stream = _part.GetStream(FileMode.OpenOrCreate, FileAccess.Read);
 
@@ -123,16 +123,14 @@ namespace DocumentFormat.OpenXml.Linq
                 {
                     using XmlReader xmlReader = XmlReader.Create(stream);
                     XDocument rootXDocument = XDocument.Load(xmlReader);
-                    _rootXElement = rootXDocument.Root;
 
                     // TODO: Consider replacing only attributes and child nodes.
                     // If the user holds on to a reference to _rootXElement, that
                     // reference will be invalidated.
+                    return rootXDocument.Root;
                 }
-                else
-                {
-                    _rootXElement = null;
-                }
+
+                return null;
             }
 
             public void Save()
