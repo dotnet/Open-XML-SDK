@@ -42,6 +42,14 @@ namespace DocumentFormat.OpenXml.Linq
         /// <summary>
         /// Gets an <see cref="XElement"/> representation of the <paramref name="part"/>.
         /// </summary>
+        /// <remarks>
+        /// When called with a given <see cref="OpenXmlPart"/> for the first time after having
+        /// opened the containing <see cref="OpenXmlPackage"/> or saved the strongly-typed
+        /// <see cref="OpenXmlPartRootElement"/> to the OpenXmlPart, deserializes, caches, and
+        /// returns the outer XML of an already loaded OpenXmlPartRootElement or the content
+        /// of the OpenXmlPart as an <see cref="XElement"/>. In the following calls, directly 
+        /// returns the cached XElement.
+        /// </remarks>
         /// <param name="part">The part to get the contents of.</param>
         /// <returns>An <see cref="XElement"/>.</returns>
         public static XElement? GetXElement(this OpenXmlPart part)
