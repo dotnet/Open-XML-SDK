@@ -64,7 +64,6 @@ stages:
   - stage: Package
     jobs:
       - template: package.yml
-    condition: ne(variables['Build.Reason'], 'PullRequest')
 
   - stage: Sign
     jobs:
@@ -75,7 +74,7 @@ stages:
       steps:
         - template: sign.yml
     dependsOn: Package
-    condition: succeeded()
+    condition: succeeded(), ne(variables['Build.Reason'], 'PullRequest')
   
   - stage: Feed
     jobs:

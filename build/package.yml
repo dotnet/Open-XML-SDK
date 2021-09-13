@@ -30,10 +30,14 @@ jobs:
       displayName: 'Create NuGet Package'
       inputs:
         command: 'pack'
-        packagesToPack: 'src/DocumentFormat.OpenXml/DocumentFormat.OpenXml.csproj'
+        packagesToPack: 'Open-Xml-SDK.sln'
         configuration: 'Release'
-        packDirectory: '$(Build.ArtifactStagingDirectory)/unsigned'
         versioningScheme: 'off'
+
+    - task: CopyFiles@2
+      inputs:
+        sourceFolder: 'bin\Debug\packages\shipping'
+        targetFolder: '$(Build.ArtifactStagingDirectory)/unsigned'
 
     - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
       artifact: unsigned
