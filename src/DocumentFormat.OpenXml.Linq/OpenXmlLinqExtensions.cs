@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// opened the containing <see cref="OpenXmlPackage"/> or saved the strongly-typed
         /// <see cref="OpenXmlPartRootElement"/> to the OpenXmlPart, deserializes, caches, and
         /// returns the outer XML of an already loaded OpenXmlPartRootElement or the content
-        /// of the OpenXmlPart as an <see cref="XElement"/>. In the following calls, directly 
+        /// of the OpenXmlPart as an <see cref="XElement"/>. In the following calls, directly
         /// returns the cached XElement.
         /// </remarks>
         /// <param name="part">The part to get the contents of.</param>
@@ -71,109 +71,5 @@ namespace DocumentFormat.OpenXml.Linq
         /// <param name="part">The part to save to.</param>
         public static void SaveXElement(this OpenXmlPart part)
             => part.GetPartRootXElementFeature().Save();
-
-        private sealed class RootXElementFeature : IPartRootXElementFeature, IDisposable
-        {
-            private readonly OpenXmlPart _part;
-            private readonly IPartRootEventsFeature _events;
-
-            private XElement? _rootXElement;
-
-            public RootXElementFeature(OpenXmlPart part)
-            {
-                _part = part;
-                _events = _part.Features.GetRequired<IPartRootEventsFeature>();
-
-                _events.Change += OnPartRootChange;
-            }
-
-            private void OnPartRootChange(FeatureEventArgs<OpenXmlPart> obj)
-            {
-                if (_part == obj.Argument)
-                {
-                    _rootXElement = null;
-                }
-            }
-
-            /// <summary>
-            /// Gets or sets the root LINQ to XML element.
-            /// </summary>
-            public XElement? Root
-            {
-                get
-                {
-                    if (_rootXElement is null)
-                    {
-                        if (!_part.IsRootElementLoaded)
-                        {
-                            _rootXElement = LoadRootXElementFromStream();
-                        }
-                        else
-                        {
-                            _rootXElement = XElement.Parse(_part.RootElement.OuterXml);
-                        }
-                    }
-
-                    return _rootXElement;
-                }
-
-                set
-                {
-                    _rootXElement = value ?? throw new ArgumentNullException(nameof(value));
-
-                    Save();
-                }
-            }
-
-            private XElement? LoadRootXElementFromStream()
-            {
-                using Stream stream = _part.GetStream(FileMode.OpenOrCreate, FileAccess.Read);
-
-                if (stream.Length > 0)
-                {
-                    using XmlReader xmlReader = XmlReader.Create(stream);
-                    XDocument rootXDocument = XDocument.Load(xmlReader);
-
-                    // TODO: Consider replacing only attributes and child nodes.
-                    // If the user holds on to a reference to _rootXElement, that
-                    // reference will be invalidated.
-                    return rootXDocument.Root;
-                }
-
-                return null;
-            }
-
-            public void Save()
-            {
-                if (_rootXElement is null)
-                {
-                    return;
-                }
-
-                using (var stream = _part.GetStream(FileMode.Create, FileAccess.Write))
-                using (var xmlWriter = XmlWriter.Create(stream))
-                {
-                    XDocument document = CreateRootXDocument();
-                    document.Save(xmlWriter);
-                }
-
-                if (_part.IsRootElementLoaded)
-                {
-                    _part.RootElement.Reload();
-                }
-            }
-
-            private XDocument CreateRootXDocument()
-            {
-                return _rootXElement is not null
-                    ? new XDocument(new XDeclaration("1.0", "UTF-8", "yes"), _rootXElement)
-                    : new XDocument(new XDeclaration("1.0", "UTF-8", "yes"));
-            }
-
-            public void Dispose()
-            {
-                _events.Change -= OnPartRootChange;
-            }
-        }
     }
 }

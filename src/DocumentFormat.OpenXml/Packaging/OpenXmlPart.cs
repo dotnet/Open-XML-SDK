@@ -585,7 +585,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets a value indicating whether the root element is loaded from the part or it has been set.
         /// </summary>
-        internal bool IsRootElementLoaded => InternalRootElement is not null;
+        [MemberNotNullWhen(true, nameof(RootElement))]
+        public bool IsRootElementLoaded => InternalRootElement is not null;
 
         /// <summary>
         /// Sets the PartRootElement to null.

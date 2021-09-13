@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using System.Diagnostics.CodeAnalysis;
 using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Linq
@@ -14,6 +15,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <summary>
         /// Gets or sets the associated <see cref="XElement"/>. Setting will save the underlying <see cref="OpenXmlPart"/>.
         /// </summary>
+        [DisallowNull]
         XElement? Root { get; set; }
 
         /// <summary>
