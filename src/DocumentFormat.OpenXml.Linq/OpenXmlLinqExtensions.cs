@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <see cref="OpenXmlPartRootElement"/> if it was previously loaded.
         /// </summary>
         /// <param name="part">The <see cref="OpenXmlPart"/>.</param>
-        /// <param name="xElement">The element to set.</param>
+        /// <param name="element">The <see cref="XElement"/>.</param>
         public static void SetXElement(this OpenXmlPart part, XElement element)
             => part.GetPartRootXElementFeature().Root = element;
 
