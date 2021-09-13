@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <summary>
         /// Sets an <see cref="XElement"/> to the part. This will force a save to the underlying stream.
         /// </summary>
-        /// <param name="part">The part to set to.</param>
+        /// <param name="part">The <see cref="OpenXmlPart"/>.</param>
         /// <param name="xElement">The element to set.</param>
         public static void SetXElement(this OpenXmlPart part, XElement? xElement)
             => part.GetPartRootXElementFeature().Root = element;
