@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <param name="part">The part to set to.</param>
         /// <param name="xElement">The element to set.</param>
         public static void SetXElement(this OpenXmlPart part, XElement? xElement)
-            => part.GetPartRootXElementFeature().Root = xElement;
+            => part.GetPartRootXElementFeature().Root = element;
 
         /// <summary>
         /// Saves the current <see cref="XElement"/> to the part.
