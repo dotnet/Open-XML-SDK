@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Linq
                 {
                     if (_rootXElement is null)
                     {
-                        if (_part.RootElement is null)
+                        if (!_part.IsRootElementLoaded)
                         {
                             _rootXElement = LoadRootXElementFromStream();
                         }
