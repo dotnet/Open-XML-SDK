@@ -6,27 +6,48 @@ Features are a new concept in v2.14 and later that allows for behavior and state
 
 The features that are currently available are described below and at what scope they are available. This is important, because and element by itself will not have any features available, while an element in one part may have different features than another part.
 
-### IPartEventsFeature
+### IPackageEventsFeature
 
-This feature allows getting event notifications of when an event is being created. This is a feature that is added to the package level feature:
-
-```csharp
-OpenXmlPackage package = GetSomePackage();
-package.AddPartEventsFeature();
-
-var feature = package.Features.GetRequired<IPartEventsFeature>();
-```
-
-### IPackageClosingEventsFeature
-
-This feature allows getting event notifications of when a package is being closed:
+This feature allows getting event notifications of when a package is changed:
 
 ```csharp
 OpenXmlPackage package = GetSomePackage();
 package.TryAddPackageEventsFeature();
 
-var feature = package.Features.GetRequired<IPackageClosingEventsFeature>();
+var feature = package.Features.GetRequired<IPackageEventsFeature>();
 ```
+
+> Note: There may be times when the package is changed but an event is not fired. Not all areas have been identified where it would make sense to raise an event. Please file an issue if you find one.
+
+### IPartEventsFeature
+
+This feature allows getting event notifications of when an event is being created. This is a feature that is added to the part or package:
+
+```csharp
+OpenXmlPart part = GetSomePackage();
+package.AddPartEventsFeature();
+
+var feature = part.Features.GetRequired<IPartEventsFeature>();
+```
+
+Generally, assume that there may be a singleton implementation for the events and verify that the part is the correct part.
+
+> Note: There may be times when the part is changed but an event is not fired. Not all areas have been identified where it would make sense to raise an event. Please file an issue if you find one.
+
+### IPartRootEventsFeature
+
+This feature allows getting event notifications of when a part root is being modified/loaded/created/etc. This is a feature that is added to the part level feature:
+
+```csharp
+OpenXmlPart part = GetSomePart();
+part.AddPartRootEventsFeature();
+
+var feature = part.Features.GetRequired<IPartRootEventsFeature>();
+```
+
+Generally, assume that there may be a singleton implementation for the events and verify that the part is the correct part.
+
+> Note: There may be times when the part root is changed but an event is not fired. Not all areas have been identified where it would make sense to raise an event. Please file an issue if you find one.
 
 ## DocumentFormat.OpenXml.Features - unreleased
 
