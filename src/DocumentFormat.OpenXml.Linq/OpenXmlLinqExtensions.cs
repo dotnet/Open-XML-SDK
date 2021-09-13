@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// </summary>
         /// <param name="part">The <see cref="OpenXmlPart"/>.</param>
         /// <param name="xElement">The element to set.</param>
-        public static void SetXElement(this OpenXmlPart part, XElement? xElement)
+        public static void SetXElement(this OpenXmlPart part, XElement element)
             => part.GetPartRootXElementFeature().Root = element;
 
         /// <summary>
