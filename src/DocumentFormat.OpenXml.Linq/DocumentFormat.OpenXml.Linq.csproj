@@ -38,6 +38,10 @@
         <Reference Include="System.Xml" />
         <Reference Include="System.Xml.Linq" />
       </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="..\DocumentFormat.OpenXml\System\Diagnostics\CodeAnalysis\NullableAttributes.cs" Link="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+      </ItemGroup>
     </When>
 
     <When Condition=" '$(TargetFramework)' == 'net40'">
@@ -45,6 +49,10 @@
         <Reference Include="System" />
         <Reference Include="System.Xml" />
         <Reference Include="System.Xml.Linq" />
+      </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="..\DocumentFormat.OpenXml\System\Diagnostics\CodeAnalysis\NullableAttributes.cs" Link="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
       </ItemGroup>
     </When>
 
@@ -54,7 +62,28 @@
         <Reference Include="System.Xml" />
         <Reference Include="System.Xml.Linq" />
       </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="..\DocumentFormat.OpenXml\System\Diagnostics\CodeAnalysis\NullableAttributes.cs" Link="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+      </ItemGroup>
     </When>
+
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+      <ItemGroup>
+        <PackageReference Include="System.Xml.ReaderWriter" Version="4.3.1" />
+      </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="..\DocumentFormat.OpenXml\System\Diagnostics\CodeAnalysis\NullableAttributes.cs" Link="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+      <ItemGroup>
+        <Compile Include="..\DocumentFormat.OpenXml\System\Diagnostics\CodeAnalysis\NullableAttributes.cs" Link="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+      </ItemGroup>
+    </When>
+
   </Choose>
 
   <!-- C# Source Generator -->
@@ -68,10 +97,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    --><!-- Don't include the output from a previous source generator execution into future runs;
+    -->
+  <!-- Don't include the output from a previous source generator execution into future runs;
          the */** trick here ensures that there's at least one subdirectory, which is our key
          that it's coming from a source generator as opposed to something that is coming from
-         some other tool. --><!--
+         some other tool. -->
+  <!--
     <Compile Remove="$(CompilerGeneratedFilesOutputPath)/*/**/*.cs" />
   </ItemGroup>-->
 
