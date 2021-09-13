@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Linq
                     document.Save(xmlWriter);
                 }
 
-                if (_part.RootElement is not null)
+                if (_part.IsRootElementLoaded)
                 {
                     _part.RootElement.Reload();
                 }
