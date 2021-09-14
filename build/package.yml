@@ -27,13 +27,13 @@ jobs:
           dotnet tool install --global GitVersion.Tool
           dotnet gitversion /output buildserver /nofetch
 
-    - task: DotNetCoreCLI@2
-      displayName: 'Create NuGet Package'
+    - task: PowerShell@2
+      displayName: 'Create NuGet package'
+      name: createPackage
       inputs:
-        command: 'pack'
-        packagesToPack: 'Open-Xml-SDK.sln'
-        configuration: '$(Configuration)'
-        versioningScheme: 'off'
+        targetType: 'inline'
+        script: |
+          dotnet pack -c $(Configuration)
 
     - task: CopyFiles@2
       inputs:
