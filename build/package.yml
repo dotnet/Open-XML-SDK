@@ -2,6 +2,7 @@ jobs:
   - job: Pack
     variables:
       ProjectLoadStyle: All
+      Configuration: Release
     pool:
       vmImage: 'windows-2019'
     steps:
@@ -31,12 +32,12 @@ jobs:
       inputs:
         command: 'pack'
         packagesToPack: 'Open-Xml-SDK.sln'
-        configuration: 'Release'
+        configuration: '$(Configuration)'
         versioningScheme: 'off'
 
     - task: CopyFiles@2
       inputs:
-        sourceFolder: 'bin\Debug\packages\shipping'
+        sourceFolder: 'bin\$(Configuration)\packages\shipping'
         targetFolder: '$(Build.ArtifactStagingDirectory)/unsigned'
 
     - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
