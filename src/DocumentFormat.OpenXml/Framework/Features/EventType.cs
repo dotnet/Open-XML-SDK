@@ -72,5 +72,15 @@ namespace DocumentFormat.OpenXml.Framework.Features
         /// When the item is saved.
         /// </summary>
         Saving,
+
+        /// <summary>
+        /// When the item is being added.
+        /// </summary>
+        Adding,
+
+        /// <summary>
+        /// When the item is added.
+        /// </summary>
+        Added,
     }
 }
