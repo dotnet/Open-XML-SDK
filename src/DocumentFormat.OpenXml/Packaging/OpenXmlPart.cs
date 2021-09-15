@@ -8,9 +8,7 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
-using System.Text;
 using System.Xml;
-using System.Xml.Linq;
 
 #if FEATURE_XML_SCHEMA
 using System.ComponentModel;
@@ -28,8 +26,6 @@ namespace DocumentFormat.OpenXml.Packaging
         private OpenXmlPackage? _openXmlPackage;
         private PackagePart? _packagePart;
         private Uri? _uri;
-
-        private XElement? _rootXElement;
 
         /// <summary>
         /// Create an instance of <see cref="OpenXmlPart"/>
@@ -448,149 +444,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #endregion
 
-        #region Linq to XML
-
-        /// <summary>
-        /// Gets or sets the root LINQ to XML element.
-        /// </summary>
-        public XElement? RootXElement
-        {
-            get
-            {
-                if (_rootXElement is null)
-                {
-                    LoadRootXElement();
-                }
-
-                return _rootXElement;
-            }
-
-            set
-            {
-                _rootXElement = value ?? throw new ArgumentNullException(nameof(value));
-
-                // Synchronize RootXElement and RootElement as necessary.
-                InternalRootElement?.LoadFromPart(this, CreateStreamFromRootXElement());
-
-                // Manage annotations for compatibility with the Open XML PowerTools.
-                // TODO: Discuss whether we want to do this.
-                ResetPowerToolsAnnotations();
-            }
-        }
-
-        private void LoadRootXElement()
-        {
-            if (IsRootElementLoaded)
-            {
-                LoadRootXElementFromRootElement();
-            }
-            else
-            {
-                LoadRootXElementFromPart();
-            }
-        }
-
-        private void LoadRootXElementFromRootElement()
-        {
-            Debug.Assert(InternalRootElement is not null);
-
-            _rootXElement = XElement.Parse(InternalRootElement!.OuterXml);
-
-            // Manage annotations for compatibility with the Open XML PowerTools.
-            // TODO: Discuss whether we want to do this.
-            ResetPowerToolsAnnotations();
-        }
-
-        private void LoadRootXElementFromPart()
-        {
-            using Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read);
-
-            if (stream.Length > 0)
-            {
-                using XmlReader xmlReader = XmlReader.Create(stream);
-                XDocument rootXDocument = XDocument.Load(xmlReader);
-                _rootXElement = rootXDocument.Root;
-
-                // TODO: Consider replacing only attributes and child nodes.
-                // If the user holds on to a reference to _rootXElement, that
-                // reference will be invalidated.
-            }
-            else
-            {
-                _rootXElement = null;
-            }
-
-            // Manage annotations for compatibility with the Open XML PowerTools.
-            // TODO: Discuss whether we want to do this.
-            ResetPowerToolsAnnotations();
-        }
-
-        private Stream CreateStreamFromRootXElement()
-        {
-            if (_rootXElement is null)
-            {
-                return Stream.Null;
-            }
-
-            string xmlString = _rootXElement.ToString(SaveOptions.DisableFormatting);
-            byte[] xmlBytes = Encoding.UTF8.GetBytes(xmlString);
-            return new MemoryStream(xmlBytes);
-        }
-
-        internal void ReloadRootXElementFromPart()
-        {
-            if (_rootXElement is not null)
-            {
-                LoadRootXElementFromPart();
-            }
-        }
-
-        private void ReloadRootXElementFromRootElement()
-        {
-            if (_rootXElement is not null)
-            {
-                LoadRootXElementFromRootElement();
-            }
-        }
-
-        /// <summary>
-        /// Saves <see cref="RootXElement" /> to the underlying <see cref="OpenXmlPart" />
-        /// and synchronizes <see cref="RootElement" /> with <see cref="RootXElement" />.
-        /// </summary>
-        public void SaveRootXElement()
-        {
-            if (_rootXElement == null)
-            {
-                return;
-            }
-
-            using Stream stream = GetStream(FileMode.Create, FileAccess.Write);
-            using XmlWriter xmlWriter = XmlWriter.Create(stream);
-
-            XDocument document = CreateRootXDocument();
-            document.Save(xmlWriter);
-
-            // Synchronize RootXElement and RootElement as necessary.
-            InternalRootElement?.LoadFromPart(this, CreateStreamFromRootXElement());
-        }
-
-        private void ResetPowerToolsAnnotations()
-        {
-            RemoveAnnotations<XDocument>();
-            RemoveAnnotations<XmlNamespaceManager>();
-
-            AddAnnotation(CreateRootXDocument());
-        }
-
-        private XDocument CreateRootXDocument()
-        {
-            return _rootXElement is not null
-                ? new XDocument(new XDeclaration("1.0", "UTF-8", "yes"), _rootXElement)
-                : new XDocument(new XDeclaration("1.0", "UTF-8", "yes"));
-        }
-
-        #endregion
-
         #region internal properties
 
         /// <summary>
@@ -732,7 +585,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets a value indicating whether the root element is loaded from the part or it has been set.
         /// </summary>
-        internal bool IsRootElementLoaded => InternalRootElement is not null;
+        [MemberNotNullWhen(true, nameof(RootElement))]
+        public bool IsRootElementLoaded => InternalRootElement is not null;
 
         /// <summary>
         /// Sets the PartRootElement to null.
@@ -764,12 +618,6 @@ namespace DocumentFormat.OpenXml.Packaging
             where T : OpenXmlPartRootElement, new()
         {
             Debug.Assert(InternalRootElement is null);
-
-            // Synchronize RootXElement with RootElement as necessary.
-            // TODO: Discuss whether the RootElement can also be loaded from the RootXElement.
-            // The current implementation likely assumes that the RootElement loaded by this
-            // method is in synch with the part contents.
-            SaveRootXElement();
 
             using Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read);
             if (stream.Length < 4)
@@ -837,9 +685,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
             InternalRootElement = partRootElement;
             events?.OnChange(EventType.Created, this);
-
-            // Synchronize RootXElement with RootElement as necessary.
-            ReloadRootXElementFromRootElement();
         }
 
         // destroy itself (aka. dispose)

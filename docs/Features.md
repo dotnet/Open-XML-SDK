@@ -70,3 +70,23 @@ public class ExampleFeature : IDisposable
 ```
 
 This will add `ExampleFeature` to the part feature, and register it to be disposed when the part is disposed.
+
+## DocumentFormat.OpenXml.Linq - unreleased
+
+### IPartRootXElementFeature
+
+This feature allows operating on an `OpenXmlPart` by using XLinq features and directly manipulating `XElement` nodes.
+
+```csharp
+OpenXmlPart part = GetSomePart();
+
+var node = new(W.document, new XAttribute(XNamespace.Xmlns + "w", W.w),
+    new XElement(W.body,
+        new XElement(W.p,
+            new XElement(W.r,
+                new XElement(W.t, "Hello World!")))));
+
+part.SetXElement(node);
+```
+
+This `XElement` is cached but will be kept in sync with the underlying part if it were to change.
