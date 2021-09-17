@@ -1,11 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Packaging;
 using System.Diagnostics.CodeAnalysis;
 using System.Xml.Linq;
 
-namespace DocumentFormat.OpenXml.Linq
+namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
     /// Feature to allow access to <see cref="XElement"/> representation of a <see cref="OpenXmlPart"/>.
