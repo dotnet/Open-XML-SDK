@@ -14,6 +14,18 @@ namespace DocumentFormat.OpenXml.Features
     public static class ParagraphIdFeatureExtensions
     {
         /// <summary>
+        /// Gets a <see cref="IParagraphIdFeature"/> for the supplied document. If not already created, this will create one and return it.
+        /// </summary>
+        /// <param name="doc">Document to get feature from.</param>
+        /// <returns>Current or new <see cref="IParagraphIdFeature"/>.</returns>
+        public static IParagraphIdFeature GetParagraphIdFeature(this WordprocessingDocument doc)
+        {
+            doc.TryAddParagraphIdFeature();
+
+            return doc.Features.GetRequired<IParagraphIdFeature>();
+        }
+
+        /// <summary>
         /// Add the paragraph id feature if not already registered.
         /// </summary>
         /// <param name="doc">Document to add feature to.</param>
@@ -32,8 +44,8 @@ namespace DocumentFormat.OpenXml.Features
                 var randomNumber = doc.Features.GetRequired<IRandomNumberGeneratorFeature>();
                 IParagraphIdFeature feature = options switch
                 {
-                    { TrackDocumentChanges: false } => new UniqueParagraphIdFeature(randomNumber),
-                    _ => new DocumentParagraphIdFeature(doc, options, randomNumber, doc.Features.GetRequired<IPartEventsFeature>(), doc.Features.GetRequired<IElementEventFeature>()),
+                    { TrackDocument: false } => new UniqueParagraphIdFeature(randomNumber),
+                    _ => new WordDocumentParagraphIdFeature(doc, options, randomNumber, doc.Features.GetRequired<IPartEventsFeature>(), doc.Features.GetRequired<IElementEventFeature>()),
                 };
 
                 doc.Features.SetDisposable(feature);

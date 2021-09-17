@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Features
 {
-    internal class DocumentParagraphIdFeature : IParagraphIdFeature, IDisposable
+    internal class WordDocumentParagraphIdFeature : IParagraphIdFeature, IDisposable
     {
         private readonly Dictionary<OpenXmlPart, HashSet<string>> _parts = new();
         private readonly ParagraphIdOptions _options;
@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Features
         private readonly IElementEventFeature _elementEvents;
         private readonly UniqueParagraphIdFeature _other;
 
-        public DocumentParagraphIdFeature(
+        public WordDocumentParagraphIdFeature(
             WordprocessingDocument doc,
             ParagraphIdOptions options,
             IRandomNumberGeneratorFeature randomNumber,
@@ -161,7 +161,7 @@ namespace DocumentFormat.OpenXml.Features
             {
                 if (paraId is not null)
                 {
-                    if (_options.EnsureUniqueness && Contains(paraId))
+                    if (_options.EnsureUniquenessOnExistingNodes && Contains(paraId))
                     {
                         paraId = CreateUniqueParagraphId();
                         element.SetParagraphId(paraId);

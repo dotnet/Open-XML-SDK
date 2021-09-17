@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Features
         private static int CreateTestDocument(Stream stream, int count)
         {
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
-            wordDocument.TryAddParagraphIdFeature();
+            var paraIdGenerator = wordDocument.GetParagraphIdFeature();
 
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
             var body = new Body();
@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Features
                 paragraph.AppendChild(new Run(new Text(paragraph.ParagraphId!.Value!)));
             }
 
-            Assert.Equal(count, part.Features.GetRequired<IParagraphIdFeature>().Count);
+            Assert.Equal(count, paraIdGenerator.Count);
 
             return count;
         }
@@ -38,8 +38,7 @@ namespace DocumentFormat.OpenXml.Features
         private static int UpdateTestDocument(Stream stream, int start, int end)
         {
             using WordprocessingDocument wordDocument = WordprocessingDocument.Open(stream, true);
-            wordDocument.TryAddParagraphIdFeature();
-            var paraIdGenerator = wordDocument.Features.GetRequired<IParagraphIdFeature>();
+            var paraIdGenerator = wordDocument.GetParagraphIdFeature();
 
             MainDocumentPart part = wordDocument.MainDocumentPart!;
             Body body = part.Document.Body!;
@@ -70,8 +69,7 @@ namespace DocumentFormat.OpenXml.Features
             const int firstId = 0;
 
             using WordprocessingDocument wordDocument = WordprocessingDocument.Open(stream, true);
-            wordDocument.TryAddParagraphIdFeature();
-            var paraIdGenerator = wordDocument.Features.GetRequired<IParagraphIdFeature>();
+            var paraIdGenerator = wordDocument.GetParagraphIdFeature();
 
             MainDocumentPart mainDocumentPart = wordDocument.MainDocumentPart!;
 
@@ -159,14 +157,13 @@ namespace DocumentFormat.OpenXml.Features
 
             for (var i = 0; i < count; i++)
             {
-                string paragraphId = HexBinaryValue.Create(0x00, 0x00, 0x00, (byte) (i % divisor))!;
+                string paragraphId = HexStringFactory.Create(0x00, 0x00, 0x00, (byte)(i % divisor))!;
                 body.AppendChild(new Paragraph(new Run(new Text(paragraphId))) { ParagraphId = paragraphId });
             }
 
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
-            wordDocument.TryAddParagraphIdFeature(new ParagraphIdOptions { EnsureUniqueness = true });
-            var paraIdGenerator = wordDocument.Features.GetRequired<IParagraphIdFeature>();
+            var paraIdGenerator = wordDocument.GetParagraphIdFeature();
 
             var part = wordDocument.AddMainDocumentPart();
             part.Document = new Document(body);
@@ -191,8 +188,7 @@ namespace DocumentFormat.OpenXml.Features
         {
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
-            wordDocument.TryAddParagraphIdFeature();
-            var paraIdGenerator = wordDocument.Features.GetRequired<IParagraphIdFeature>();
+            var paraIdGenerator = wordDocument.GetParagraphIdFeature();
 
             var paraId = paraIdGenerator.CreateUniqueParagraphId();
 
@@ -209,8 +205,7 @@ namespace DocumentFormat.OpenXml.Features
             total += AddOtherParts(stream, count);
 
             using var wordDocument = WordprocessingDocument.Open(stream, true);
-            wordDocument.TryAddParagraphIdFeature();
-            var generator = wordDocument.Features.GetRequired<IParagraphIdFeature>();
+            var generator = wordDocument.GetParagraphIdFeature();
 
             // Assert that we have the expected number of registered w14:paraId values.
             Assert.Equal(total, generator.Count);
@@ -235,8 +230,7 @@ namespace DocumentFormat.OpenXml.Features
             // Assert that we have the expected total number of w14:paraId values
             // and no duplicates.
             using WordprocessingDocument wordDocument = WordprocessingDocument.Open(stream, true);
-            wordDocument.TryAddParagraphIdFeature();
-            var paraIdGenerator = wordDocument.Features.GetRequired<IParagraphIdFeature>();
+            var paraIdGenerator = wordDocument.GetParagraphIdFeature();
             Body body = wordDocument.MainDocumentPart!.Document!.Body!;
 
             Assert.Equal(total, body.Elements<Paragraph>().Count());
@@ -253,10 +247,10 @@ namespace DocumentFormat.OpenXml.Features
             total += AddOtherParts(stream, count);
 
             using var wordDocument = WordprocessingDocument.Open(stream, true);
-            wordDocument.TryAddParagraphIdFeature();
+            var paraIdGenerator = wordDocument.GetParagraphIdFeature();
 
             // Assert that all w14:paraId values have been registered.
-            Assert.Equal(total, wordDocument.Features.GetRequired<IParagraphIdFeature>().Count);
+            Assert.Equal(total, paraIdGenerator.Count);
         }
     }
 }
