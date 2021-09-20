@@ -11,6 +11,20 @@ Open XML SDK
 
 &nbsp;
 
+> # Office 2021 Support Available!
+> There is a [prerelease version](https://www.nuget.org/packages/DocumentFormat.OpenXml/2.14.0-beta0001) available with support for Office 2021 types, including for:
+> - Label Information part support
+> - PowerPoint Comments support
+> - Excel Named Sheet Views support
+> - Excel Rich Data enhancements
+> - Word Comments Extensibilty part types
+> - Document Tasks support in Word
+> - Drawing Sketchy Shapes support   
+>
+> Feel free to try this out and let us know how it works for you. Please file any issues you find and label them with `Office2021`.
+
+&nbsp;
+
 The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:
 
 - High-performance generation of word-processing documents, spreadsheets, and presentations.
