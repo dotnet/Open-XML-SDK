@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(103, "dataDisplayOptions16")]
+    [SchemaAttr(105, "dataDisplayOptions16")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class DataDisplayOptions16 : OpenXmlCompositeElement
     {
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(103, "dataDisplayOptions16");
+            builder.SetSchema(105, "dataDisplayOptions16");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<BooleanFalse>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
     /// <para>When the object is serialized out as xml, it's qualified name is c16r3:dispNaAsBlank.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(103, "dispNaAsBlank")]
+    [SchemaAttr(105, "dispNaAsBlank")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class BooleanFalse : OpenXmlLeafElement
     {
@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(103, "val")]
+        [SchemaAttr(105, "val")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public BooleanValue? Val
@@ -130,10 +130,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(103, "dispNaAsBlank");
+            builder.SetSchema(105, "dispNaAsBlank");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<BooleanFalse>()
-.AddAttribute(103, "val", a => a.Val, aBuilder =>
+.AddAttribute(105, "val", a => a.Val, aBuilder =>
 {
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2019));
 });

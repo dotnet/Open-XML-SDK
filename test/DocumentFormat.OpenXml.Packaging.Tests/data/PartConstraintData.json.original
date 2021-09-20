@@ -1299,20 +1299,6 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
-      },
-      "http://schemas.microsoft.com/office/2019/05/relationships/documenttasks": {
-        "PartClassName": "DocumentTasksPart",
-        "PartContentType": "application/vnd.ms-office.documenttasks+xml",
-        "MinOccursIsNonZero": false,
-        "MaxOccursGreatThanOne": false,
-        "FileFormat": "Office2021"
-      },
-      "http://schemas.microsoft.com/office/2018/08/relationships/commentsExtensible": {
-        "PartClassName": "WordCommentsExtensiblePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml",
-        "MinOccursIsNonZero": false,
-        "MaxOccursGreatThanOne": false,
-        "FileFormat": "Office2021"
       }
     }
   },
@@ -1988,20 +1974,6 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
-      },
-      "http://schemas.microsoft.com/office/2019/05/relationships/documenttasks": {
-        "PartClassName": "DocumentTasksPart",
-        "PartContentType": "application/vnd.ms-office.documenttasks+xml",
-        "MinOccursIsNonZero": false,
-        "MaxOccursGreatThanOne": false,
-        "FileFormat": "Office2021"
-      },
-      "http://schemas.microsoft.com/office/2018/08/relationships/commentsExtensible": {
-        "PartClassName": "WordCommentsExtensiblePart",
-        "PartContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml",
-        "MinOccursIsNonZero": false,
-        "MaxOccursGreatThanOne": false,
-        "FileFormat": "Office2021"
       }
     }
   },
@@ -2465,20 +2437,6 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
-      },
-      "http://schemas.microsoft.com/office/2018/10/relationships/comments": {
-        "PartClassName": "PowerPointCommentPart",
-        "PartContentType": "application/vnd.ms-powerpoint.comments+xml",
-        "MinOccursIsNonZero": false,
-        "MaxOccursGreatThanOne": true,
-        "FileFormat": "Office2021"
-      },
-      "http://schemas.microsoft.com/office/2018/10/relationships/authors": {
-        "PartClassName": "PowerPointAuthorsPart",
-        "PartContentType": "application/vnd.ms-powerpoint.authors+xml",
-        "MinOccursIsNonZero": false,
-        "MaxOccursGreatThanOne": false,
-        "FileFormat": "Office2021"
       }
     }
   },
@@ -2489,28 +2447,6 @@
     "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps",
     "TargetFileExtension": ".xml",
     "TargetName": "presProps",
-    "TargetPath": ".",
-    "DataParts": {},
-    "Parts": {}
-  },
-  {
-    "Name": "DocumentFormat.OpenXml.Packaging.PowerPointCommentPart",
-    "ContentType": "application/vnd.ms-powerpoint.comments+xml",
-    "IsContentTypeFixed": true,
-    "RelationshipType": "http://schemas.microsoft.com/office/2018/10/relationships/comments",
-    "TargetFileExtension": ".xml",
-    "TargetName": "moderncomment",
-    "TargetPath": "comments",
-    "DataParts": {},
-    "Parts": {}
-  },
-  {
-    "Name": "DocumentFormat.OpenXml.Packaging.PowerPointAuthorsPart",
-    "ContentType": "application/vnd.ms-powerpoint.authors+xml",
-    "IsContentTypeFixed": true,
-    "RelationshipType": "http://schemas.microsoft.com/office/2018/10/relationships/authors",
-    "TargetFileExtension": ".xml",
-    "TargetName": "authors",
     "TargetPath": ".",
     "DataParts": {},
     "Parts": {}
@@ -3383,28 +3319,6 @@
     "Parts": {}
   },
   {
-    "Name": "DocumentFormat.OpenXml.Packaging.NamedSheetViewsPart",
-    "ContentType": "application/vnd.ms-excel.namedsheetviews+xml",
-    "IsContentTypeFixed": true,
-    "RelationshipType": "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView",
-    "TargetFileExtension": ".xml",
-    "TargetName": "namedSheetView",
-    "TargetPath": "namedSheetViews",
-    "DataParts": {},
-    "Parts": {}
-  },
-  {
-    "Name": "DocumentFormat.OpenXml.Packaging.RdRichValueWebImagePart",
-    "ContentType": "application/vnd.ms-excel.rdrichvaluewebimage+xml",
-    "IsContentTypeFixed": true,
-    "RelationshipType": "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage",
-    "TargetFileExtension": ".xml",
-    "TargetName": "rdrichvaluewebimage",
-    "TargetPath": "richdata",
-    "DataParts": {},
-    "Parts": {}
-  },
-  {
     "Name": "DocumentFormat.OpenXml.Packaging.UserDefinedTagsPart",
     "ContentType": "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
     "IsContentTypeFixed": true,
@@ -3664,17 +3578,6 @@
         "FileFormat": "Office2007"
       }
     }
-  },
-  {
-    "Name": "DocumentFormat.OpenXml.Packaging.WordCommentsExtensiblePart",
-    "ContentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml",
-    "IsContentTypeFixed": true,
-    "RelationshipType": "http://schemas.microsoft.com/office/2018/08/relationships/commentsExtensible",
-    "TargetFileExtension": ".xml",
-    "TargetName": "commentsExtensible",
-    "TargetPath": ".",
-    "DataParts": {},
-    "Parts": {}
   },
   {
     "Name": "DocumentFormat.OpenXml.Packaging.WordprocessingCommentsIdsPart",
@@ -4139,20 +4042,6 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
-      },
-      "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView": {
-        "PartClassName": "NamedSheetViewsPart",
-        "PartContentType": "application/vnd.ms-excel.namedsheetviews+xml",
-        "MinOccursIsNonZero": false,
-        "MaxOccursGreatThanOne": false,
-        "FileFormat": "Office2021"
-      },
-      "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage": {
-        "PartClassName": "RdRichValueWebImagePart",
-        "PartContentType": "application/vnd.ms-excel.rdrichvaluewebimage+xml",
-        "MinOccursIsNonZero": false,
-        "MaxOccursGreatThanOne": false,
-        "FileFormat": "Office2021"
       }
     }
   },
@@ -4383,28 +4272,6 @@
     "TargetFileExtension": ".xml",
     "TargetName": "sig",
     "TargetPath": "_xmlsignatures",
-    "DataParts": {},
-    "Parts": {}
-  },
-  {
-    "Name": "DocumentFormat.OpenXml.Packaging.LabelInfoPart",
-    "ContentType": "application/xml",
-    "IsContentTypeFixed": true,
-    "RelationshipType": "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels",
-    "TargetFileExtension": ".xml",
-    "TargetName": "LabelInfo",
-    "TargetPath": "docMetadata",
-    "DataParts": {},
-    "Parts": {}
-  },
-  {
-    "Name": "DocumentFormat.OpenXml.Packaging.DocumentTasksPart",
-    "ContentType": "application/vnd.ms-office.documenttasks+xml",
-    "IsContentTypeFixed": true,
-    "RelationshipType": "http://schemas.microsoft.com/office/2019/05/relationships/documenttasks",
-    "TargetFileExtension": ".xml",
-    "TargetName": "tasks",
-    "TargetPath": ".",
     "DataParts": {},
     "Parts": {}
   }
