@@ -245,6 +245,7 @@ namespace DocumentFormat.OpenXml.Framework
             { "http://schemas.microsoft.com/office/spreadsheetml/2014/11/main", "x16", FileFormatVersions.Office2016 },
             { "http://schemas.microsoft.com/office/spreadsheetml/2015/02/main", "x16r2", FileFormatVersions.Office2016 },
             { "http://schemas.microsoft.com/office/word/2015/wordml/symex", "w16se", FileFormatVersions.Office2016 },
+
             // Named 2013/main/command with "oac" ns prefix to avoid conflict with officedocument/2006/characteristics
             { "http://schemas.microsoft.com/office/drawing/2013/main/command", "oac", FileFormatVersions.Office2016 },
             { "http://schemas.microsoft.com/office/powerpoint/2013/main/command", "pc", FileFormatVersions.Office2016 },
@@ -300,7 +301,6 @@ namespace DocumentFormat.OpenXml.Framework
             { "http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh"  , "xlrvr", FileFormatVersions.Office2021 },
             { "http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020"  , "xxpim", FileFormatVersions.Office2021 },
             { "http://schemas.microsoft.com/office/powerpoint/2019/12/main"  , "ppt1912SchemaUri", FileFormatVersions.Office2021 },
-
         };
 
         internal static int Count => _namespaceResolver.Count;
