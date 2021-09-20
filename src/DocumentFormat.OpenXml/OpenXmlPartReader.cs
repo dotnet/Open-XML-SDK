@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Features;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
@@ -19,6 +20,8 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlPartReader : OpenXmlReader
     {
+        private static readonly IRootElementFactory _factory = FeatureCollection.Default.GetRequired<IRootElementFactory>();
+
         private readonly XmlReader _xmlReader;
         private readonly List<OpenXmlAttribute> _attributeList = new List<OpenXmlAttribute>();
         private readonly List<KeyValuePair<string, string>> _nsDecls = new List<KeyValuePair<string, string>>();
@@ -786,9 +789,9 @@ namespace DocumentFormat.OpenXml
             return true;
         }
 
-        private static OpenXmlElement CreateElement(in OpenXmlQualifiedName qname)
+        private OpenXmlElement CreateElement(in OpenXmlQualifiedName qname)
         {
-            if (ElementLookup.Parts.Create(qname) is OpenXmlElement element)
+            if (_factory.TryCreate(qname, out var element))
             {
                 return element;
             }

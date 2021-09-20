@@ -11,7 +11,7 @@ using Xunit;
 #nullable enable
 #pragma warning disable SA1116 // Split parameters should start on line after declaration
 
-namespace DocumentFormat.OpenXml.Tests.Linq
+namespace DocumentFormat.OpenXml.Linq.Tests
 {
     public class OpenXmlPartTests
     {
@@ -36,10 +36,11 @@ namespace DocumentFormat.OpenXml.Tests.Linq
             // Arrange.
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
 
             // Act.
-            XElement? rootXElement = part.RootXElement;
+            XElement? rootXElement = part.GetXElement();
 
             // Assert.
             Assert.Null(rootXElement);
@@ -53,11 +54,12 @@ namespace DocumentFormat.OpenXml.Tests.Linq
             // Arrange.
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
             part.Document = HelloWordDocument;
 
             // Act.
-            XElement? rootXElement = part.RootXElement;
+            XElement? rootXElement = part.GetXElement();
 
             // Assert.
             Assert.NotNull(rootXElement);
@@ -70,16 +72,17 @@ namespace DocumentFormat.OpenXml.Tests.Linq
             // Arrange.
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
 
             // Act.
-            part.RootXElement = HelloWorldXElement;
+            part.SetXElement(HelloWorldXElement);
 
             // Assert.
             // Note that the RootXElement has the expected markup.
-            XElement? rootXElement = part.RootXElement;
+            XElement? rootXElement = part.GetXElement();
             Assert.NotNull(rootXElement);
-            Assert.Equal(HelloWorldXmlString, rootXElement.ToString(SaveOptions.DisableFormatting));
+            Assert.Equal(HelloWorldXmlString, rootXElement!.ToString(SaveOptions.DisableFormatting));
 
             // Note that the RootElement has the expected markup.
             OpenXmlPartRootElement? rootElement = part.RootElement;
@@ -99,15 +102,16 @@ namespace DocumentFormat.OpenXml.Tests.Linq
             // Set up a WordprocessingDocument with a MainDocumentPart and a Document with a single paragraph.
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
             part.Document = HelloWordDocument;
 
             // Note that the RootXElement is synchronized with the Document (RootElement).
-            Assert.Equal(HelloWorldXmlString, part.RootXElement!.ToString(SaveOptions.DisableFormatting));
+            Assert.Equal(HelloWorldXmlString, part.GetXElement()!.ToString(SaveOptions.DisableFormatting));
             Assert.Same(part.Document, part.RootElement);
 
             // Add a second paragraph to the RootXElement.
-            XElement body = part.RootXElement.Elements(W.body).Single();
+            XElement body = part.GetXElement()!.Elements(W.body).Single();
             body.Add(new XElement(W.p, new XElement(W.r, new XElement(W.t, "Lorem ipsum"))));
 
             // Note that the Document still has a single paragraph.
@@ -115,7 +119,7 @@ namespace DocumentFormat.OpenXml.Tests.Linq
             Assert.Single(part.RootElement!.Descendants<Paragraph>());
 
             // Act.
-            part.SaveRootXElement();
+            part.SaveXElement();
 
             // Assert.
             // Note that, after saving the RootXElement, the Document has now two paragraphs.
@@ -128,46 +132,47 @@ namespace DocumentFormat.OpenXml.Tests.Linq
             // Arrange.
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
             part.Document = HelloWordDocument;
             part.Document.Save();
 
             Assert.Same(part.Document, part.RootElement);
             Assert.Equal(HelloWorldXmlString, part.Document.OuterXml);
-            Assert.Equal(HelloWorldXmlString, part.RootXElement!.ToString(SaveOptions.DisableFormatting));
+            Assert.Equal(HelloWorldXmlString, part.GetXElement()!.ToString(SaveOptions.DisableFormatting));
 
             // Act and Assert.
             // Add a second W.p
-            part.RootXElement.Element(W.body)!.Add(new XElement(W.p));
+            part.GetXElement()!.Element(W.body)!.Add(new XElement(W.p));
 
             Assert.Single(part.Document.Descendants<Paragraph>());
-            Assert.Equal(2, part.RootXElement.Descendants(W.p).Count());
+            Assert.Equal(2, part.GetXElement()!.Descendants(W.p).Count());
 
             // Reload the Document (RootElement) and note that the RootXElement was reset.
             part.Document.Reload();
 
             Assert.Single(part.Document.Descendants<Paragraph>());
-            Assert.Single(part.RootXElement.Descendants(W.p));
+            Assert.Single(part.GetXElement()!.Descendants(W.p));
 
             // Re-add a second W.p and save the RootXElement.
-            part.RootXElement.Element(W.body)!.Add(new XElement(W.p));
-            part.SaveRootXElement();
+            part.GetXElement()!.Element(W.body)!.Add(new XElement(W.p));
+            part.SaveXElement();
 
             Assert.Equal(2, part.Document.Descendants<Paragraph>().Count());
-            Assert.Equal(2, part.RootXElement.Descendants(W.p).Count());
+            Assert.Equal(2, part.GetXElement()!.Descendants(W.p).Count());
 
             // Add a third Paragraph and save the Document.
             part.Document.Body!.AppendChild(new Paragraph(new Run(new Text("Far far away"))));
             part.Document.Save();
 
             Assert.Equal(3, part.Document.Descendants<Paragraph>().Count());
-            Assert.Equal(3, part.RootXElement.Descendants(W.p).Count());
+            Assert.Equal(3, part.GetXElement()!.Descendants(W.p).Count());
 
             // Set a new Document (RootElement).
             part.Document = HelloWordDocument;
 
             Assert.Equal(HelloWorldXmlString, part.Document.OuterXml);
-            Assert.Equal(HelloWorldXmlString, part.RootXElement.ToString(SaveOptions.DisableFormatting));
+            Assert.Equal(HelloWorldXmlString, part.GetXElement()!.ToString(SaveOptions.DisableFormatting));
         }
     }
 }

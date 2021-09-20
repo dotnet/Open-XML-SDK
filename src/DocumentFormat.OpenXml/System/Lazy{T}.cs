@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml
         private Func<T?>? _factory;
         private bool _isValueCreated;
 
-        public Lazy(Func<T?> factory, bool threadSafe)
+        public Lazy(Func<T?> factory, bool isThreadSafe)
         {
             _factory = factory;
         }

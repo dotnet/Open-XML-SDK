@@ -405,4 +405,7 @@
   <data name="UnknownError" xml:space="preserve">
     <value>An unknown error occured. Original message: '{0}'</value>
   </data>
+  <data name="FeatureNotRegistered" xml:space="preserve">
+    <value>Feature {0} is not available in this collection.</value>
+  </data>
 </root>

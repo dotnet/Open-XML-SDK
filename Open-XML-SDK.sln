@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29009.5
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0B53C729-D408-450D-B755-7A57184CDE93}"
 	ProjectSection(SolutionItems) = preProject
@@ -46,6 +46,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Linq", "src\DocumentFormat.OpenXml.Linq\DocumentFormat.OpenXml.Linq.csproj", "{8DB6A050-4584-4210-8DE1-CB299A08EA4F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.CodeGeneration.Linq", "src\DocumentFormat.OpenXml.CodeGeneration.Linq\DocumentFormat.OpenXml.CodeGeneration.Linq.csproj", "{4E3D124A-B027-46C3-B962-6F01B9B03AB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Features", "src\DocumentFormat.OpenXml.Features\DocumentFormat.OpenXml.Features.csproj", "{8D6D3961-9C39-405B-A953-4823D87227D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Framework.Features.Tests", "test\DocumentFormat.OpenXml.Framework.Features.Tests\DocumentFormat.OpenXml.Framework.Features.Tests.csproj", "{E157C5F1-D70B-4939-A199-0B758FED8541}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Linq.Tests", "test\DocumentFormat.OpenXml.Linq.Tests\DocumentFormat.OpenXml.Linq.Tests.csproj", "{3B82C340-3B10-42BF-9A2C-2E2327A9CFD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +99,18 @@ Global
 		{4E3D124A-B027-46C3-B962-6F01B9B03AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E3D124A-B027-46C3-B962-6F01B9B03AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E3D124A-B027-46C3-B962-6F01B9B03AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D6D3961-9C39-405B-A953-4823D87227D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D6D3961-9C39-405B-A953-4823D87227D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D6D3961-9C39-405B-A953-4823D87227D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D6D3961-9C39-405B-A953-4823D87227D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E157C5F1-D70B-4939-A199-0B758FED8541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E157C5F1-D70B-4939-A199-0B758FED8541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E157C5F1-D70B-4939-A199-0B758FED8541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E157C5F1-D70B-4939-A199-0B758FED8541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B82C340-3B10-42BF-9A2C-2E2327A9CFD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B82C340-3B10-42BF-9A2C-2E2327A9CFD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B82C340-3B10-42BF-9A2C-2E2327A9CFD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B82C340-3B10-42BF-9A2C-2E2327A9CFD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,6 +126,9 @@ Global
 		{5034C012-FED8-4DE5-B422-C1E4DF9EDBF2} = {7DAF7304-40CC-4180-88A5-9A89DD13C565}
 		{8DB6A050-4584-4210-8DE1-CB299A08EA4F} = {A4DF60EB-3AA5-48F0-B4D2-3F94B8E62F03}
 		{4E3D124A-B027-46C3-B962-6F01B9B03AB8} = {A4DF60EB-3AA5-48F0-B4D2-3F94B8E62F03}
+		{8D6D3961-9C39-405B-A953-4823D87227D9} = {A4DF60EB-3AA5-48F0-B4D2-3F94B8E62F03}
+		{E157C5F1-D70B-4939-A199-0B758FED8541} = {0782A132-968D-4BDD-911A-2C3074EAF886}
+		{3B82C340-3B10-42BF-9A2C-2E2327A9CFD4} = {0782A132-968D-4BDD-911A-2C3074EAF886}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F476383-E917-43D1-A1E5-9A61A47DA3F5}
