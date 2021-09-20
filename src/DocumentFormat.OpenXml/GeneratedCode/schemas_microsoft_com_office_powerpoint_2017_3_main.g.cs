@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(87, "tracksInfo")]
+    [SchemaAttr(89, "tracksInfo")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TracksInfo : OpenXmlCompositeElement
     {
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(87, "tracksInfo");
+            builder.SetSchema(89, "tracksInfo");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<TrackList>();
             builder.AddElement<TracksInfo>()
@@ -119,7 +119,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is p173:track.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(87, "track")]
+    [SchemaAttr(89, "track")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Track : OpenXmlLeafElement
     {
@@ -219,7 +219,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(87, "track");
+            builder.SetSchema(89, "track");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Track>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -252,7 +252,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(87, "trackLst")]
+    [SchemaAttr(89, "trackLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class TrackList : OpenXmlCompositeElement
     {
@@ -290,7 +290,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(87, "trackLst");
+            builder.SetSchema(89, "trackLst");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<Track>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

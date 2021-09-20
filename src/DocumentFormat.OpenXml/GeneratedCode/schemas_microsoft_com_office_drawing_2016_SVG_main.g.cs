@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.SVG
     /// <para>When the object is serialized out as xml, it's qualified name is asvg:svgBlip.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(115, "svgBlip")]
+    [SchemaAttr(117, "svgBlip")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class SVGBlip : OpenXmlLeafElement
     {
@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.SVG
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(115, "svgBlip");
+            builder.SetSchema(117, "svgBlip");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<SVGBlip>()
 .AddAttribute(19, "embed", a => a.Embed)

@@ -34,6 +34,8 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(WordprocessingCommentsExPart), false, false)]
     [PartConstraint(typeof(WordprocessingPeoplePart), false, false)]
     [PartConstraint(typeof(WordprocessingCommentsIdsPart), false, false)]
+    [PartConstraint(typeof(DocumentTasksPart), false, false)]
+    [PartConstraint(typeof(WordCommentsExtensiblePart), false, false)]
     [PartConstraint(typeof(AlternativeFormatImportPart), false, true)]
     [PartConstraint(typeof(ChartPart), false, true)]
     [PartConstraint(typeof(ExtendedChartPart), false, true)]
@@ -134,6 +136,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the DocumentSettingsPart of the MainDocumentPart
         /// </summary>
         public DocumentSettingsPart? DocumentSettingsPart => GetSubPartOfType<DocumentSettingsPart>();
+
+        /// <summary>
+        /// Gets the DocumentTasksPart of the MainDocumentPart
+        /// </summary>
+        public DocumentTasksPart? DocumentTasksPart => GetSubPartOfType<DocumentTasksPart>();
 
         /// <summary>
         /// Gets the EmbeddedControlPersistenceParts of the MainDocumentPart
@@ -248,6 +255,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WebSettingsPart of the MainDocumentPart
         /// </summary>
         public WebSettingsPart? WebSettingsPart => GetSubPartOfType<WebSettingsPart>();
+
+        /// <summary>
+        /// Gets the WordCommentsExtensiblePart of the MainDocumentPart
+        /// </summary>
+        public WordCommentsExtensiblePart? WordCommentsExtensiblePart => GetSubPartOfType<WordCommentsExtensiblePart>();
 
         /// <summary>
         /// Gets the WordprocessingCommentsExPart of the MainDocumentPart
@@ -630,6 +642,10 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new WordprocessingPeoplePart();
                 case WordprocessingCommentsIdsPart.RelationshipTypeConstant:
                     return new WordprocessingCommentsIdsPart();
+                case DocumentTasksPart.RelationshipTypeConstant:
+                    return new DocumentTasksPart();
+                case WordCommentsExtensiblePart.RelationshipTypeConstant:
+                    return new WordCommentsExtensiblePart();
                 case AlternativeFormatImportPart.RelationshipTypeConstant:
                     return new AlternativeFormatImportPart();
                 case ChartPart.RelationshipTypeConstant:

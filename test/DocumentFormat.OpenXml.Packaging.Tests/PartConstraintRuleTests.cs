@@ -97,6 +97,7 @@ namespace DocumentFormat.OpenXml.Tests
             AssertDictionary(data.DataParts, part.GetPartMetadata().DataPartReferenceConstraints);
 
 #if DEBUG
+            _output.WriteObjectToTempFile(data.Parts);
             _output.WriteObjectToTempFile(part.GetPartMetadata().PartConstraints);
 #endif
 

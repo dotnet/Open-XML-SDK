@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(114, "commentsIds")]
+    [SchemaAttr(116, "commentsIds")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentsIds : OpenXmlPartRootElement
     {
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(114, "commentsIds");
+            builder.SetSchema(116, "commentsIds");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<CommentId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
     /// <para>When the object is serialized out as xml, it's qualified name is w16cid:commentId.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(114, "commentId")]
+    [SchemaAttr(116, "commentId")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class CommentId : OpenXmlLeafElement
     {
@@ -136,7 +136,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(114, "paraId")]
+        [SchemaAttr(116, "paraId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? ParaId
@@ -155,7 +155,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
 
 #pragma warning disable CS0618 // Type or member is obsolete
 
-        [SchemaAttr(114, "durableId")]
+        [SchemaAttr(116, "durableId")]
 #pragma warning restore CS0618 // Type or member is obsolete
 
         public HexBinaryValue? DurableId
@@ -167,16 +167,16 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(114, "commentId");
+            builder.SetSchema(116, "commentId");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<CommentId>()
-.AddAttribute(114, "paraId", a => a.ParaId, aBuilder =>
+.AddAttribute(116, "paraId", a => a.ParaId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2019));
 aBuilder.AddValidator(new StringValidator() { Length = (4L) });
 })
-.AddAttribute(114, "durableId", a => a.DurableId, aBuilder =>
+.AddAttribute(116, "durableId", a => a.DurableId, aBuilder =>
 {
 aBuilder.AddValidator(RequiredValidator.Instance);
 aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2019));
