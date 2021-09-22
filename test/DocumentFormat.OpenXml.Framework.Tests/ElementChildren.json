@@ -9882,6 +9882,10 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor"
       },
       {
+        "Name": "lineSketchStyleProps",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/sketchyshapes"
+      },
+      {
         "Name": "contentPart",
         "Namespace": "http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing"
       },
@@ -11921,6 +11925,24 @@
   {
     "Element": "DocumentFormat.OpenXml.Drawing.LineJoinBevel",
     "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtension",
+    "Children": [
+      {
+        "Name": "lineSketchStyleProps",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/sketchyshapes"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
   },
   {
     "Element": "DocumentFormat.OpenXml.Drawing.LineReference",

@@ -1708,7 +1708,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -1793,7 +1793,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -13644,7 +13644,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -14783,6 +14783,56 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtension",
+  "Value": [
+   {
+    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2021",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchStyleProperties"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
+  "Value": [
+   {
+    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtension",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Drawing.LineReference",
   "Value": [
    {
@@ -15817,7 +15867,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -17001,7 +17051,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -19847,7 +19897,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -19951,7 +20001,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -20105,7 +20155,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -35615,7 +35665,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -47751,7 +47801,7 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
        "MinOccurs": 0
       }
      ],
