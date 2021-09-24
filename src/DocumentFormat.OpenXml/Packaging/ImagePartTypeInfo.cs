@@ -24,6 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 ImagePartType.Jpeg => "image/jpeg",
                 ImagePartType.Emf => "image/x-emf",
                 ImagePartType.Wmf => "image/x-wmf",
+                ImagePartType.Svg => "image/svg+xml",
                 _ => throw new ArgumentOutOfRangeException(nameof(imageType)),
             };
 
@@ -44,6 +45,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 ImagePartType.Jpeg => ".jpg",
                 ImagePartType.Emf => ".emf",
                 ImagePartType.Wmf => ".wmf",
+                ImagePartType.Svg => ".svg",
                 _ => ".image",
             };
     }
