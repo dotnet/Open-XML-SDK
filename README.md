@@ -100,8 +100,9 @@ Related tools
 - **[Serialize.OpenXml.CodeGen](https://github.com/rmboggs/Serialize.OpenXml.CodeGen)**: This is a tool that converts an OpenXml document into the .NET code required to create it.
 - **[Html2OpenXml](https://github.com/onizet/html2openxml)**: This is a tool that takes HTML and converts it to an OpenXml document.
 - **[DocxToSource](https://github.com/rmboggs/DocxToSource)**: This is a tool designed to be a replacement for the old OpenXML SDK Productivity Tool.
-- **[OOXML Viewer](https://github.com/yuenm18/ooxml-viewer-vscode)**: This is an extension for Visual Studio Code to View and Edit the xml parts of an Office Open XML file and to view a diff with the previous version of an OOXML part when saved from an outside program. Search OOXML in the VS Code extensions tab or get it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=yuenm18.ooxml-viewer)
+- **[OOXML Viewer](https://github.com/yuenm18/ooxml-viewer-vscode)**: This is an extension for Visual Studio Code to View and Edit the xml parts of an Office Open XML file and to view a diff with the previous version of an OOXML part when saved from an outside program. Search OOXML in the VS Code extensions tab or downoad it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=yuenm18.ooxml-viewer)
 - **[ShapeCrawler](https://github.com/ShapeCrawler/ShapeCrawler)**: This library provides a simplified object model on top of the OpenXml SDK to manipulate PowerPoint documents.
+- **[OOXML Validator](https://github.com/mikeebowen/ooxml-validator-vscode)**: VS Code extension to validate Office Open XML files.  Search OOXML in the VS Code extensions tab or download it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=mikeebowen.ooxml-validator-vscode)
 
 Code of Conduct
 ---------------
