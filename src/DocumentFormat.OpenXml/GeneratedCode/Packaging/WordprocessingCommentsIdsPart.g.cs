@@ -27,6 +27,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
     [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
     [PartConstraint(typeof(ImagePart), false, true)]
+    [PartConstraint(typeof(Model3DReferenceRelationshipPart), false, true)]
     [DataPartConstraint(typeof(VideoReferenceRelationship), false, true)]
     public partial class WordprocessingCommentsIdsPart : OpenXmlPart, IFixedContentTypePart
     {
@@ -142,6 +143,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 _rootElement = value as DocumentFormat.OpenXml.Office2019.Word.Cid.CommentsIds;
             }
         }
+
+        /// <summary>
+        /// Gets the Model3DReferenceRelationshipParts of the WordprocessingCommentsIdsPart
+        /// </summary>
+        public IEnumerable<Model3DReferenceRelationshipPart> Model3DReferenceRelationshipParts => GetPartsOfType<Model3DReferenceRelationshipPart>();
 
         internal override OpenXmlPartRootElement? PartRootElement => CommentsIds;
 
@@ -388,6 +394,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new EmbeddedPackagePart();
                 case ImagePart.RelationshipTypeConstant:
                     return new ImagePart();
+                case Model3DReferenceRelationshipPart.RelationshipTypeConstant:
+                    return new Model3DReferenceRelationshipPart();
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));

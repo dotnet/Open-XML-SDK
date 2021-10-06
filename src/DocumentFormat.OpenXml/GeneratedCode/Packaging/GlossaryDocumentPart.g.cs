@@ -45,6 +45,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
     [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
     [PartConstraint(typeof(ImagePart), false, true)]
+    [PartConstraint(typeof(Model3DReferenceRelationshipPart), false, true)]
     [DataPartConstraint(typeof(VideoReferenceRelationship), false, true)]
     public partial class GlossaryDocumentPart : OpenXmlPart, IFixedContentTypePart
     {
@@ -200,6 +201,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument;
             }
         }
+
+        /// <summary>
+        /// Gets the Model3DReferenceRelationshipParts of the GlossaryDocumentPart
+        /// </summary>
+        public IEnumerable<Model3DReferenceRelationshipPart> Model3DReferenceRelationshipParts => GetPartsOfType<Model3DReferenceRelationshipPart>();
 
         /// <summary>
         /// Gets the NumberingDefinitionsPart of the GlossaryDocumentPart
@@ -539,6 +545,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new EmbeddedPackagePart();
                 case ImagePart.RelationshipTypeConstant:
                     return new ImagePart();
+                case Model3DReferenceRelationshipPart.RelationshipTypeConstant:
+                    return new Model3DReferenceRelationshipPart();
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
