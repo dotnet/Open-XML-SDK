@@ -36337,6 +36337,36 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.microsoft.com/office/2020/mipLabelMetadata"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabelList",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/2020/mipLabelMetadata"
+      },
+      {
+        "Name": "label",
+        "Namespace": "http://schemas.microsoft.com/office/2020/mipLabelMetadata"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension",
     "Children": []
   },
@@ -36721,6 +36751,10 @@
       {
         "Name": "customUI",
         "Namespace": "http://schemas.microsoft.com/office/2009/07/customui"
+      },
+      {
+        "Name": "labelList",
+        "Namespace": "http://schemas.microsoft.com/office/2020/mipLabelMetadata"
       },
       {
         "Name": "drawing",

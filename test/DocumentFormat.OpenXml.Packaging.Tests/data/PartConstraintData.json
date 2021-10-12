@@ -4500,7 +4500,7 @@
   },
   {
     "Name": "DocumentFormat.OpenXml.Packaging.LabelInfoPart",
-    "ContentType": "application/xml",
+    "ContentType": "application/vnd.ms-office.classificationlabels+xml",
     "IsContentTypeFixed": true,
     "RelationshipType": "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels",
     "TargetFileExtension": ".xml",
