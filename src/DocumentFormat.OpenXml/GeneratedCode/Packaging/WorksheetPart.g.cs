@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(TimeLinePart), false, true)]
     [PartConstraint(typeof(WorksheetThreadedCommentsPart), false, true)]
     [PartConstraint(typeof(Model3DReferenceRelationshipPart), false, true)]
-    [PartConstraint(typeof(NamedSheetViewsPart), false, false)]
+    [PartConstraint(typeof(NamedSheetViewsPart), false, true)]
     public partial class WorksheetPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml";
@@ -110,9 +110,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public IEnumerable<Model3DReferenceRelationshipPart> Model3DReferenceRelationshipParts => GetPartsOfType<Model3DReferenceRelationshipPart>();
 
         /// <summary>
-        /// Gets the NamedSheetViewsPart of the WorksheetPart
+        /// Gets the NamedSheetViewsParts of the WorksheetPart
         /// </summary>
-        public NamedSheetViewsPart? NamedSheetViewsPart => GetSubPartOfType<NamedSheetViewsPart>();
+        public IEnumerable<NamedSheetViewsPart> NamedSheetViewsParts => GetPartsOfType<NamedSheetViewsPart>();
 
         internal override OpenXmlPartRootElement? PartRootElement => Worksheet;
 

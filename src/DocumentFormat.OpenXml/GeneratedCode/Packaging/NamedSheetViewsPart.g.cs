@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal sealed override string TargetName => "namedSheetView";
 
         /// <inheritdoc/>
-        internal sealed override string TargetPath => "namedSheetViews";
+        internal sealed override string TargetPath => "../namedSheetViews";
 
         internal override bool IsInVersion(FileFormatVersions version)
         {

@@ -3473,7 +3473,7 @@
     "RelationshipType": "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView",
     "TargetFileExtension": ".xml",
     "TargetName": "namedSheetView",
-    "TargetPath": "namedSheetViews",
+    "TargetPath": "../namedSheetViews",
     "DataParts": {},
     "Parts": {}
   },
@@ -4471,7 +4471,7 @@
         "PartClassName": "NamedSheetViewsPart",
         "PartContentType": "application/vnd.ms-excel.namedsheetviews+xml",
         "MinOccursIsNonZero": false,
-        "MaxOccursGreatThanOne": false,
+        "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2021"
       }
     }
