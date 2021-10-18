@@ -46,7 +46,6 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(RdSupportingPropertyBagStructurePart), false, true)]
     [PartConstraint(typeof(RdRichValueTypesPart), false, true)]
     [PartConstraint(typeof(RdRichValueWebImagePart), false, false)]
-    [PartConstraint(typeof(NamedSheetViewsPart), false, false)]
     public partial class WorkbookPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
@@ -136,11 +135,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the MacroSheetParts of the WorkbookPart
         /// </summary>
         public IEnumerable<MacroSheetPart> MacroSheetParts => GetPartsOfType<MacroSheetPart>();
-
-        /// <summary>
-        /// Gets the NamedSheetViewsPart of the WorkbookPart
-        /// </summary>
-        public NamedSheetViewsPart? NamedSheetViewsPart => GetSubPartOfType<NamedSheetViewsPart>();
 
         internal override OpenXmlPartRootElement? PartRootElement => Workbook;
 
@@ -460,8 +454,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new RdRichValueTypesPart();
                 case RdRichValueWebImagePart.RelationshipTypeConstant:
                     return new RdRichValueWebImagePart();
-                case NamedSheetViewsPart.RelationshipTypeConstant:
-                    return new NamedSheetViewsPart();
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
