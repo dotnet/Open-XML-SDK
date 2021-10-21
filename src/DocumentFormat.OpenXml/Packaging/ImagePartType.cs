@@ -93,10 +93,5 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Scalable Vector Graphics (.svg).
         /// </summary>
         Svg,
-
-        /// <summary>
-        /// Representation of 3D models saved in the GL Transmission Format (.glb).
-        /// </summary>
-        Glb,
     }
 }

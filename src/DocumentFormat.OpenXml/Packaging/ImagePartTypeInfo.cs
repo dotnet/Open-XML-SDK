@@ -25,7 +25,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 ImagePartType.Emf => "image/x-emf",
                 ImagePartType.Wmf => "image/x-wmf",
                 ImagePartType.Svg => "image/svg+xml",
-                ImagePartType.Glb => "model/gltf-binary",
                 _ => throw new ArgumentOutOfRangeException(nameof(imageType)),
             };
 
@@ -47,7 +46,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 ImagePartType.Emf => ".emf",
                 ImagePartType.Wmf => ".wmf",
                 ImagePartType.Svg => ".svg",
-                ImagePartType.Glb => ".glb",
                 _ => ".image",
             };
     }
