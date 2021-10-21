@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
-
 namespace DocumentFormat.OpenXml.Framework.Features
 {
     /// <summary>
@@ -10,13 +8,6 @@ namespace DocumentFormat.OpenXml.Framework.Features
     /// </summary>
     public interface IFeatureCollection
     {
-        /// <summary>
-        /// Gets or sets a given feature. Setting a null value removes the feature.
-        /// </summary>
-        /// <param name="key"></param>
-        /// <returns>The requested feature, or null if it is not present.</returns>
-        object? this[Type key] { get; set; }
-
         /// <summary>
         /// Gets a value indicating whether the collection can be modified.
         /// </summary>
