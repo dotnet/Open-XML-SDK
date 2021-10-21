@@ -750,6 +750,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -971,6 +978,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -1075,6 +1089,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -1313,6 +1334,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2021"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -1452,6 +1480,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -1556,6 +1591,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -2002,6 +2044,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2021"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -2141,6 +2190,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -2287,6 +2343,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -2787,6 +2850,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -2947,6 +3017,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -3135,6 +3212,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2013"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -3389,7 +3473,7 @@
     "RelationshipType": "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView",
     "TargetFileExtension": ".xml",
     "TargetName": "namedSheetView",
-    "TargetPath": "namedSheetViews",
+    "TargetPath": "../namedSheetViews",
     "DataParts": {},
     "Parts": {}
   },
@@ -3662,6 +3746,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -3777,6 +3868,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -3881,6 +3979,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2007"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
       }
     }
   },
@@ -4140,13 +4245,6 @@
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
       },
-      "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView": {
-        "PartClassName": "NamedSheetViewsPart",
-        "PartContentType": "application/vnd.ms-excel.namedsheetviews+xml",
-        "MinOccursIsNonZero": false,
-        "MaxOccursGreatThanOne": false,
-        "FileFormat": "Office2021"
-      },
       "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage": {
         "PartClassName": "RdRichValueWebImagePart",
         "PartContentType": "application/vnd.ms-excel.rdrichvaluewebimage+xml",
@@ -4361,6 +4459,20 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": true,
         "FileFormat": "Office2019"
+      },
+      "http://schemas.microsoft.com/office/2017/06/relationships/model3d": {
+        "PartClassName": "Model3DReferenceRelationshipPart",
+        "PartContentType": "model/gltf-binary",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2019"
+      },
+      "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView": {
+        "PartClassName": "NamedSheetViewsPart",
+        "PartContentType": "application/vnd.ms-excel.namedsheetviews+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Office2021"
       }
     }
   },
@@ -4388,7 +4500,7 @@
   },
   {
     "Name": "DocumentFormat.OpenXml.Packaging.LabelInfoPart",
-    "ContentType": "application/xml",
+    "ContentType": "application/vnd.ms-office.classificationlabels+xml",
     "IsContentTypeFixed": true,
     "RelationshipType": "http://schemas.microsoft.com/office/2020/02/relationships/classificationlabels",
     "TargetFileExtension": ".xml",
@@ -4405,6 +4517,17 @@
     "TargetFileExtension": ".xml",
     "TargetName": "tasks",
     "TargetPath": ".",
+    "DataParts": {},
+    "Parts": {}
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.Model3DReferenceRelationshipPart",
+    "ContentType": "model/gltf-binary",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2017/06/relationships/model3d",
+    "TargetFileExtension": ".glb",
+    "TargetName": "model3d",
+    "TargetPath": "../media",
     "DataParts": {},
     "Parts": {}
   }

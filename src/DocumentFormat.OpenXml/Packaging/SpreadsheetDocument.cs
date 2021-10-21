@@ -23,6 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(RibbonExtensibilityPart), false, false)]
     [PartConstraint(typeof(RibbonAndBackstageCustomizationsPart), false, false)]
     [PartConstraint(typeof(WebExTaskpanesPart), false, false)]
+    [PartConstraint(typeof(LabelInfoPart), false, false)]
     public partial class SpreadsheetDocument : OpenXmlPackage
     {
         /// <summary>
@@ -450,6 +451,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 RibbonExtensibilityPart.RelationshipTypeConstant => new RibbonExtensibilityPart(),
                 RibbonAndBackstageCustomizationsPart.RelationshipTypeConstant => new RibbonAndBackstageCustomizationsPart(),
                 WebExTaskpanesPart.RelationshipTypeConstant => new WebExTaskpanesPart(),
+                LabelInfoPart.RelationshipTypeConstant => new LabelInfoPart(),
                 _ => throw new ArgumentOutOfRangeException(nameof(relationshipType)),
             };
         }
@@ -605,6 +607,17 @@ namespace DocumentFormat.OpenXml.Packaging
             return childPart;
         }
 
+        /// <summary>
+        /// Adds a LabelInfoPart to the SpreadsheetDocument, this part is only available in Office2021.
+        /// </summary>
+        /// <returns>The newly added LabelInfoPart.</returns>
+        public LabelInfoPart AddLabelInfoPart()
+        {
+            LabelInfoPart childPart = new LabelInfoPart();
+            InitPart(childPart, LabelInfoPart.ContentTypeConstant);
+            return childPart;
+        }
+
         /// <inheritdoc />
         public override OpenXmlPart? RootPart => WorkbookPart;
 
@@ -688,6 +701,15 @@ namespace DocumentFormat.OpenXml.Packaging
         public WebExTaskpanesPart? WebExTaskpanesPart
         {
             get { return GetSubPartOfType<WebExTaskpanesPart>(); }
+        }
+
+        /// <summary>
+        /// Gets the LabelInfoPart of the SpreadsheetDocument, only available in Office2021.
+        /// </summary>
+        [OfficeAvailability(FileFormatVersions.Office2021)]
+        public LabelInfoPart? LabelInfoPart
+        {
+            get { return GetSubPartOfType<LabelInfoPart>(); }
         }
 
         #region cloning

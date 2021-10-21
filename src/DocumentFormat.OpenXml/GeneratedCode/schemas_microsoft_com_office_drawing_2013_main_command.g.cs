@@ -8375,7 +8375,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
     ///   <item><description>DocumentFormat.OpenXml.Drawing.Miter &lt;a:miter></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Drawing.HeadEnd &lt;a:headEnd></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Drawing.TailEnd &lt;a:tailEnd></description></item>
-    ///   <item><description>DocumentFormat.OpenXml.Drawing.ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8415,7 +8415,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         }
 
         /// <summary>
-        /// <para>Line Width</para>
+        /// <para>line width</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
 
@@ -8431,7 +8431,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         }
 
         /// <summary>
-        /// <para>Line Ending Cap Type</para>
+        /// <para>line cap</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
 
@@ -8447,7 +8447,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         }
 
         /// <summary>
-        /// <para>Compound Line Type</para>
+        /// <para>compound line type</para>
         /// <para>Represents the following attribute in the schema: cmpd</para>
         /// </summary>
 
@@ -8463,7 +8463,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         }
 
         /// <summary>
-        /// <para>Stroke Alignment</para>
+        /// <para>pen alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
 
@@ -8494,7 +8494,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Miter>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HeadEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TailEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList>();
             builder.AddElement<LinePropertiesType>()
 .AddAttribute(0, "w", a => a.Width, aBuilder =>
 {
@@ -8543,7 +8543,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList), 0, 1)
             };
         }
 

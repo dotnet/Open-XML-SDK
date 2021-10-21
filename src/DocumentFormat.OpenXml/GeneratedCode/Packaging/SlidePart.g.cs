@@ -27,6 +27,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(ImagePart), false, true)]
     [PartConstraint(typeof(VmlDrawingPart), false, true)]
     [PartConstraint(typeof(EmbeddedControlPersistenceBinaryDataPart), false, true)]
+    [PartConstraint(typeof(Model3DReferenceRelationshipPart), false, true)]
     [PartConstraint(typeof(SlideCommentsPart), false, false)]
     [PartConstraint(typeof(NotesSlidePart), false, false)]
     [PartConstraint(typeof(ThemeOverridePart), false, false)]
@@ -132,6 +133,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 _rootElement = value as DocumentFormat.OpenXml.Presentation.Slide;
             }
         }
+
+        /// <summary>
+        /// Gets the Model3DReferenceRelationshipParts of the SlidePart
+        /// </summary>
+        public IEnumerable<Model3DReferenceRelationshipPart> Model3DReferenceRelationshipParts => GetPartsOfType<Model3DReferenceRelationshipPart>();
 
         /// <summary>
         /// Gets the NotesSlidePart of the SlidePart
@@ -541,6 +547,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new VmlDrawingPart();
                 case EmbeddedControlPersistenceBinaryDataPart.RelationshipTypeConstant:
                     return new EmbeddedControlPersistenceBinaryDataPart();
+                case Model3DReferenceRelationshipPart.RelationshipTypeConstant:
+                    return new Model3DReferenceRelationshipPart();
                 case SlideCommentsPart.RelationshipTypeConstant:
                     return new SlideCommentsPart();
                 case NotesSlidePart.RelationshipTypeConstant:

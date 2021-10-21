@@ -9882,6 +9882,10 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor"
       },
       {
+        "Name": "lineSketchStyleProps",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/sketchyshapes"
+      },
+      {
         "Name": "contentPart",
         "Namespace": "http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing"
       },
@@ -11921,6 +11925,24 @@
   {
     "Element": "DocumentFormat.OpenXml.Drawing.LineJoinBevel",
     "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtension",
+    "Children": [
+      {
+        "Name": "lineSketchStyleProps",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2018/sketchyshapes"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
   },
   {
     "Element": "DocumentFormat.OpenXml.Drawing.LineReference",
@@ -36315,6 +36337,36 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.microsoft.com/office/2020/mipLabelMetadata"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabelList",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/2020/mipLabelMetadata"
+      },
+      {
+        "Name": "label",
+        "Namespace": "http://schemas.microsoft.com/office/2020/mipLabelMetadata"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension",
     "Children": []
   },
@@ -36699,6 +36751,10 @@
       {
         "Name": "customUI",
         "Namespace": "http://schemas.microsoft.com/office/2009/07/customui"
+      },
+      {
+        "Name": "labelList",
+        "Namespace": "http://schemas.microsoft.com/office/2020/mipLabelMetadata"
       },
       {
         "Name": "drawing",

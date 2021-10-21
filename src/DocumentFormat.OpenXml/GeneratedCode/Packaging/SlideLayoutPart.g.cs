@@ -27,6 +27,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(ImagePart), false, true)]
     [PartConstraint(typeof(VmlDrawingPart), false, true)]
     [PartConstraint(typeof(EmbeddedControlPersistenceBinaryDataPart), false, true)]
+    [PartConstraint(typeof(Model3DReferenceRelationshipPart), false, true)]
     [PartConstraint(typeof(SlidePart), false, true)]
     [PartConstraint(typeof(SlideMasterPart), false, false)]
     [PartConstraint(typeof(ThemeOverridePart), false, false)]
@@ -128,6 +129,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 _rootElement = value as DocumentFormat.OpenXml.Presentation.SlideLayout;
             }
         }
+
+        /// <summary>
+        /// Gets the Model3DReferenceRelationshipParts of the SlideLayoutPart
+        /// </summary>
+        public IEnumerable<Model3DReferenceRelationshipPart> Model3DReferenceRelationshipParts => GetPartsOfType<Model3DReferenceRelationshipPart>();
 
         internal override OpenXmlPartRootElement? PartRootElement => SlideLayout;
 
@@ -517,6 +523,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new VmlDrawingPart();
                 case EmbeddedControlPersistenceBinaryDataPart.RelationshipTypeConstant:
                     return new EmbeddedControlPersistenceBinaryDataPart();
+                case Model3DReferenceRelationshipPart.RelationshipTypeConstant:
+                    return new Model3DReferenceRelationshipPart();
                 case SlidePart.RelationshipTypeConstant:
                     return new SlidePart();
                 case SlideMasterPart.RelationshipTypeConstant:

@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <summary>
     /// <para>Defines the Model3D Class.</para>
     /// <para>This class is available in Office 2019 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is am3d:model3D.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is am3d:model3d.</para>
     /// </summary>
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(111, "model3D")]
+    [SchemaAttr(111, "model3d")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Model3D : OpenXmlCompositeElement
     {
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(111, "model3D");
+            builder.SetSchema(111, "model3d");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<ShapeProperties>();
             builder.AddChild<Model3DCamera>();
