@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             HelloWorldXElement.ToString(SaveOptions.DisableFormatting);
 
         [Fact]
-        public void RootXElement_Get_NewPart_NullAndSynchronized()
+        public void GetXElement_NewPart_NullAndSynchronized()
         {
             // Arrange.
             using var stream = new MemoryStream();
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
 
             // Act.
-            XElement? rootXElement = part.GetXElement();
+            var rootXElement = part.GetXElement();
 
             // Assert.
             Assert.Null(rootXElement);
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
         }
 
         [Fact]
-        public void RootXElement_Get_PartWithRootElementSetButNotSaved_NotNullAndSynchronized()
+        public void GetXElement_PartWithRootElementSetButNotSaved_NotNullAndSynchronized()
         {
             // Arrange.
             using var stream = new MemoryStream();
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             part.Document = HelloWordDocument;
 
             // Act.
-            XElement? rootXElement = part.GetXElement();
+            var rootXElement = part.GetXElement();
 
             // Assert.
             Assert.NotNull(rootXElement);
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
         }
 
         [Fact]
-        public void RootXElement_Set_NewPart_NotNullAndSynchronized()
+        public void SetXElement_NewPart_NotNullAndSynchronized()
         {
             // Arrange.
             using var stream = new MemoryStream();
@@ -80,12 +80,12 @@ namespace DocumentFormat.OpenXml.Linq.Tests
 
             // Assert.
             // Note that the RootXElement has the expected markup.
-            XElement? rootXElement = part.GetXElement();
+            var rootXElement = part.GetXElement();
             Assert.NotNull(rootXElement);
             Assert.Equal(HelloWorldXmlString, rootXElement!.ToString(SaveOptions.DisableFormatting));
 
             // Note that the RootElement has the expected markup.
-            OpenXmlPartRootElement? rootElement = part.RootElement;
+            var rootElement = part.RootElement;
             Assert.NotNull(rootElement);
             Assert.Equal(HelloWorldXmlString, rootElement!.OuterXml);
 

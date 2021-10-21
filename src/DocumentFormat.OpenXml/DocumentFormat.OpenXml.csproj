@@ -113,7 +113,6 @@
     <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
       <ItemGroup>
         <PackageReference Include="System.IO.Packaging" Version="$(SystemIOPackagingVersion)" />
-        <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
       </ItemGroup>
 
       <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->
