@@ -26,7 +26,6 @@ namespace DocumentFormat.OpenXml.Packaging
     /// L".emf",    L"image/x-emf",
     /// L".wmf",    L"image/x-wmf",
     /// L".svg",    L"image/svg+xml",
-    /// L".glb",    L"model/gltf-binary",
     /// ]]>
     /// </summary>
     public enum ImagePartType
