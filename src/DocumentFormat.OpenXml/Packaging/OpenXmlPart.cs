@@ -26,6 +26,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private OpenXmlPackage? _openXmlPackage;
         private PackagePart? _packagePart;
         private Uri? _uri;
+        private bool _isLoading;
 
         /// <summary>
         /// Create an instance of <see cref="OpenXmlPart"/>
@@ -617,38 +618,54 @@ namespace DocumentFormat.OpenXml.Packaging
         internal void LoadDomTree<T>()
             where T : OpenXmlPartRootElement, new()
         {
-            Debug.Assert(InternalRootElement is null);
-
-            using Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read);
-            if (stream.Length < 4)
+            if (_isLoading)
             {
-                // The OpenXmlPartRootElement.LoadFromPart() method requires at least four
-                // bytes from the data stream. The shortest well-formed XML document would
-                // be something like "<a/>".
-                return;
+                throw new InvalidOperationException(ExceptionMessages.UnexpectedReentrancy);
             }
 
-            var events = Features.Get<IPartRootEventsFeature>();
-            events?.OnChange(EventType.Reloading, this);
+            _isLoading = true;
+
+            Debug.Assert(InternalRootElement is null);
 
             try
             {
-                // Set OpenXmlPart before loading from part to be able to access
-                // OpenXmlPart and OpenXmlPackage while loading. If the OpenXmlPart
-                // property is set by the OpenXmlPartRootElement.LoadFromPart() method,
-                // OpenXmlReaderWriterTest.bug247883() unit test fails.
-                var rootElement = new T { OpenXmlPart = this };
+                var events = Features.Get<IPartRootEventsFeature>();
+                events?.OnChange(EventType.Creating, this);
 
-                if (rootElement.LoadFromPart(this, stream))
+                using (Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read))
                 {
-                    // associate the root element with this part.
-                    InternalRootElement = rootElement;
-                    events?.OnChange(EventType.Reloaded, this);
+                    if (stream.Length < 4)
+                    {
+                        // The OpenXmlPartRootElement.LoadFromPart() method requires at least four
+                        // bytes from the data stream. The shortest well-formed XML document would
+                        // be something like "<a/>".
+                        return;
+                    }
+
+                    try
+                    {
+                        // Set OpenXmlPart before loading from part to be able to access
+                        // OpenXmlPart and OpenXmlPackage while loading. If the OpenXmlPart
+                        // property is set by the OpenXmlPartRootElement.LoadFromPart() method,
+                        // OpenXmlReaderWriterTest.bug247883() unit test fails.
+                        var rootElement = new T { OpenXmlPart = this };
+
+                        if (rootElement.LoadFromPart(this, stream))
+                        {
+                            // associate the root element with this part.
+                            InternalRootElement = rootElement;
+                            events?.OnChange(EventType.Created, this);
+                        }
+                    }
+                    catch (InvalidDataException e)
+                    {
+                        throw new InvalidDataException(ExceptionMessages.CannotLoadRootElement, e);
+                    }
                 }
             }
-            catch (InvalidDataException e)
+            finally
             {
-                throw new InvalidDataException(ExceptionMessages.CannotLoadRootElement, e);
+                _isLoading = false;
             }
         }
 
