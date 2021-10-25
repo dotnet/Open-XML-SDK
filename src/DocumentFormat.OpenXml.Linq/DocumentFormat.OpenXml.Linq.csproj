@@ -6,6 +6,11 @@
     <Description>Provides additional LINQ functionality to the Open XML SDK to allow operations using XLINQ.</Description>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DocumentFormat.OpenXml.Features\DocumentFormat.OpenXml.Features.csproj" />
+    <ProjectReference Include="..\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
+  </ItemGroup>
+
   <Choose>
     <When Condition=" '$(TargetFramework)' == 'net35'">
       <ItemGroup>
