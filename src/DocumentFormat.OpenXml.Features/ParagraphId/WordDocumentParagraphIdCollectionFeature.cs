@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml.Features
         {
             if (!_parts.TryGetValue(part, out var set))
             {
-                set = ParagraphIdCollectionFeature.CreateSet();
+                set = new(ParagraphIdCollectionFeature.Comparer);
                 _parts[part] = set;
             }
 
