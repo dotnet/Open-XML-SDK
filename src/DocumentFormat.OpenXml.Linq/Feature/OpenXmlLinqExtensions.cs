@@ -25,8 +25,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 return feature;
             }
 
-            part.TryAddDisposableFeature();
-            part.TryAddPartRootEventsFeature();
+            part.AddDisposableFeature();
+            part.AddPartRootEventsFeature();
 
             var xelement = new RootXElementFeature(part);
 
