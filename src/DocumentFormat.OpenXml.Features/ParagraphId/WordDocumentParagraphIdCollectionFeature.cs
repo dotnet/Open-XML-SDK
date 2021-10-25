@@ -4,66 +4,40 @@
 using DocumentFormat.OpenXml.Framework.Features;
 using DocumentFormat.OpenXml.Packaging;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Features
 {
-    internal class WordDocumentParagraphIdFeature : IParagraphIdFeature, IDisposable
+    internal class WordDocumentParagraphIdCollectionFeature : IParagraphIdCollectionFeature, IDisposable
     {
         private readonly Dictionary<OpenXmlPart, HashSet<string>> _parts = new();
+        private readonly WordprocessingDocument _doc;
         private readonly ParagraphIdOptions _options;
         private readonly IPartEventsFeature _partEvents;
         private readonly IElementEventFeature _elementEvents;
-        private readonly UniqueParagraphIdFeature _other;
 
-        public WordDocumentParagraphIdFeature(
+        public WordDocumentParagraphIdCollectionFeature(
             WordprocessingDocument doc,
             ParagraphIdOptions options,
-            IRandomNumberGeneratorFeature randomNumber,
             IPartEventsFeature partEvents,
             IElementEventFeature elementEvents)
         {
-            _other = new UniqueParagraphIdFeature(randomNumber);
+            _doc = doc;
             _options = options;
-
-            Register(doc);
 
             _partEvents = partEvents;
             _elementEvents = elementEvents;
-
-            RegisterEvents();
         }
 
-        string IParagraphIdFeature.CreateUniqueParagraphId() => _other.CreateUniqueParagraphId(Contains, true);
-
-        public string CreateUniqueParagraphId() => _other.CreateUniqueParagraphId(Contains, false);
-
-        public IEnumerable<string> RegisteredParagraphIds
+        internal void Initialize()
         {
-            get
-            {
-                foreach (var other in _other.RegisteredParagraphIds)
-                {
-                    yield return other;
-                }
-
-                foreach (var part in _parts)
-                {
-                    foreach (var paraId in part.Value)
-                    {
-                        yield return paraId;
-                    }
-                }
-            }
+            Register(_doc);
+            RegisterEvents();
         }
 
         public bool Contains(string paraId)
         {
-            if (_other.Contains(paraId))
-            {
-                return true;
-            }
-
             foreach (var part in _parts)
             {
                 if (part.Value.Contains(paraId))
@@ -81,12 +55,12 @@ namespace DocumentFormat.OpenXml.Features
             {
                 var count = 0;
 
-                foreach (var parts in _parts)
+                foreach (var names in _parts.Values)
                 {
-                    count += parts.Value.Count;
+                    count += names.Count;
                 }
 
-                return _other.Count + count;
+                return count;
             }
         }
 
@@ -94,6 +68,12 @@ namespace DocumentFormat.OpenXml.Features
         {
             _elementEvents.Change += ElementsChange;
             _partEvents.Change += PartEventsChange;
+        }
+
+        private void UnregisterEvents()
+        {
+            _elementEvents.Change -= ElementsChange;
+            _partEvents.Change -= PartEventsChange;
         }
 
         private void ElementsChange(FeatureEventArgs<PartElementEventArgs> obj)
@@ -120,12 +100,6 @@ namespace DocumentFormat.OpenXml.Features
             {
                 _parts.Remove(obj.Argument);
             }
-        }
-
-        private void UnregisterEvents()
-        {
-            _elementEvents.Change -= ElementsChange;
-            _partEvents.Change -= PartEventsChange;
         }
 
         private void Register(WordprocessingDocument wordDocument)
@@ -161,9 +135,13 @@ namespace DocumentFormat.OpenXml.Features
             {
                 if (paraId is not null)
                 {
-                    if (_options.EnsureUniquenessOnExistingNodes && Contains(paraId))
+                    var collection = _doc.Features.GetRequired<IParagraphIdCollectionFeature>();
+
+                    if (_options.EnsureUniquenessOnExistingNodes && collection.Contains(paraId))
                     {
-                        paraId = CreateUniqueParagraphId();
+                        var generator = _doc.Features.GetRequired<IParagraphIdGeneratorFeature>();
+
+                        paraId = generator.CreateUniqueParagraphId();
                         element.SetParagraphId(paraId);
                     }
 
@@ -171,7 +149,9 @@ namespace DocumentFormat.OpenXml.Features
                 }
                 else if (_options.AutoGenerateIds)
                 {
-                    paraId = CreateUniqueParagraphId();
+                    var generator = _doc.Features.GetRequired<IParagraphIdGeneratorFeature>();
+
+                    paraId = generator.CreateUniqueParagraphId();
                     element.SetParagraphId(paraId);
 
                     Add(part, paraId);
@@ -183,7 +163,7 @@ namespace DocumentFormat.OpenXml.Features
         {
             if (!_parts.TryGetValue(part, out var set))
             {
-                set = new();
+                set = ParagraphIdCollectionFeature.CreateSet();
                 _parts[part] = set;
             }
 
@@ -204,5 +184,18 @@ namespace DocumentFormat.OpenXml.Features
         {
             UnregisterEvents();
         }
+
+        public IEnumerator<string> GetEnumerator()
+        {
+            foreach (var part in _parts)
+            {
+                foreach (var paraId in part.Value)
+                {
+                    yield return paraId;
+                }
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

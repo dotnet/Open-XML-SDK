@@ -10,7 +10,6 @@
 
 namespace DocumentFormat.OpenXml {
     using System;
-    using System.Reflection;
     
     
     /// <summary>
@@ -40,7 +39,7 @@ namespace DocumentFormat.OpenXml {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DocumentFormat.OpenXml.Resources.ExceptionMessages", typeof(ExceptionMessages).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DocumentFormat.OpenXml.Resources.ExceptionMessages", typeof(ExceptionMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -880,6 +879,15 @@ namespace DocumentFormat.OpenXml {
         internal static string TextIsInvalidTrueFalseValue {
             get {
                 return ResourceManager.GetString("TextIsInvalidTrueFalseValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encountered unexpected reentrancy while accessing part root. Please check if part root is loaded first by calling OpenXmlPart.IsRootElementLoaded.
+        /// </summary>
+        internal static string UnexpectedReentrancy {
+            get {
+                return ResourceManager.GetString("UnexpectedReentrancy", resourceCulture);
             }
         }
         

@@ -40,62 +40,59 @@ namespace DocumentFormat.OpenXml.Features
 
         private void Register(OpenXmlPart part)
         {
-            if (part.RootElement is null)
+            if (part.RootElement?.OpenXmlElementContext is not OpenXmlElementContext context)
             {
                 return;
             }
 
-            if (part.RootElement.OpenXmlElementContext is OpenXmlElementContext context)
+            if (_rootElements.TryGetValue(part, out var existing))
             {
-                if (_rootElements.TryGetValue(part, out var existing))
+                if (ReferenceEquals(existing.Context, context))
                 {
-                    if (ReferenceEquals(existing.Context, context))
-                    {
-                        return;
-                    }
-
-                    // Unregister events
-                    existing.Dispose();
-
-                    _rootElements.Remove(part);
+                    return;
                 }
 
-                context.ElementInserting += ContextElementInserting;
-                context.ElementInserted += ContextElementInserted;
-                context.ElementRemoved += ContextElementRemoved;
-                context.ElementRemoving += ContextElementRemoving;
+                // Unregister events
+                existing.Dispose();
 
-                _rootElements.Add(part, new(context, Dispose));
+                _rootElements.Remove(part);
+            }
 
-                RaiseOnLoad(part);
+            context.ElementInserting += ContextElementInserting;
+            context.ElementInserted += ContextElementInserted;
+            context.ElementRemoved += ContextElementRemoved;
+            context.ElementRemoving += ContextElementRemoving;
 
-                void ContextElementInserting(object? sender, ElementEventArgs e)
-                {
-                    Change?.Invoke(new FeatureEventArgs<PartElementEventArgs>(EventType.Adding, new PartElementEventArgs(part, e)));
-                }
+            _rootElements.Add(part, new(context, Dispose));
 
-                void ContextElementInserted(object? sender, ElementEventArgs e)
-                {
-                    Change?.Invoke(new FeatureEventArgs<PartElementEventArgs>(EventType.Added, new PartElementEventArgs(part, e)));
-                }
+            RaiseOnLoad(part);
 
-                void ContextElementRemoved(object? sender, ElementEventArgs e)
-                {
-                    Change?.Invoke(new FeatureEventArgs<PartElementEventArgs>(EventType.Removed, new PartElementEventArgs(part, e)));
-                }
+            void ContextElementInserting(object? sender, ElementEventArgs e)
+            {
+                Change?.Invoke(new FeatureEventArgs<PartElementEventArgs>(EventType.Adding, new PartElementEventArgs(part, e)));
+            }
 
-                void ContextElementRemoving(object? sender, ElementEventArgs e)
-                {
-                    Change?.Invoke(new FeatureEventArgs<PartElementEventArgs>(EventType.Removing, new PartElementEventArgs(part, e)));
-                }
+            void ContextElementInserted(object? sender, ElementEventArgs e)
+            {
+                Change?.Invoke(new FeatureEventArgs<PartElementEventArgs>(EventType.Added, new PartElementEventArgs(part, e)));
+            }
 
-                void Dispose()
-                {
-                    context.ElementInserting -= ContextElementInserting;
-                    context.ElementInserted -= ContextElementInserted;
-                    context.ElementRemoved -= ContextElementRemoved;
-                    context.ElementRemoving -= ContextElementRemoving;
-                }
+            void ContextElementRemoved(object? sender, ElementEventArgs e)
+            {
+                Change?.Invoke(new FeatureEventArgs<PartElementEventArgs>(EventType.Removed, new PartElementEventArgs(part, e)));
+            }
+
+            void ContextElementRemoving(object? sender, ElementEventArgs e)
+            {
+                Change?.Invoke(new FeatureEventArgs<PartElementEventArgs>(EventType.Removing, new PartElementEventArgs(part, e)));
+            }
+
+            void Dispose()
+            {
+                context.ElementInserting -= ContextElementInserting;
+                context.ElementInserted -= ContextElementInserted;
+                context.ElementRemoved -= ContextElementRemoved;
+                context.ElementRemoving -= ContextElementRemoving;
             }
         }
 
