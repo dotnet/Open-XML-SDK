@@ -1,10 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Threading;
 
 namespace DocumentFormat.OpenXml.Framework.Features
@@ -14,9 +12,7 @@ namespace DocumentFormat.OpenXml.Framework.Features
     /// </summary>
     public class FeatureCollection : IFeatureCollection
     {
-        private static IFeatureCollection? _default;
-
-        private readonly int _initialCapacity;
+        private readonly int _initialCapacity = 2;
         private readonly IFeatureCollection? _defaults;
         private Dictionary<Type, object>? _features;
         private volatile int _containerRevision;
@@ -63,60 +59,45 @@ namespace DocumentFormat.OpenXml.Framework.Features
         public bool IsReadOnly { get; }
 
         /// <inheritdoc/>
-        public object? this[Type key]
-        {
-            get
-            {
-                if (key == null)
-                {
-                    throw new ArgumentNullException(nameof(key));
-                }
-
-                return _features != null && _features.TryGetValue(key, out var result) ? result : _defaults?[key];
-            }
-
-            set
-            {
-                if (key == null)
-                {
-                    throw new ArgumentNullException(nameof(key));
-                }
-
-                if (IsReadOnly)
-                {
-                    throw new NotSupportedException();
-                }
-
-                if (value == null)
-                {
-                    if (_features != null && _features.Remove(key))
-                    {
-                        _containerRevision++;
-                    }
-
-                    return;
-                }
-
-                if (_features == null)
-                {
-                    _features = new Dictionary<Type, object>(_initialCapacity);
-                }
-
-                _features[key] = value;
-                _containerRevision++;
-            }
-        }
-
-        /// <inheritdoc/>
         public TFeature? Get<TFeature>()
         {
-            return (TFeature?)this[typeof(TFeature)];
+            if (_features is not null && _features.TryGetValue(typeof(TFeature), out var feature) && feature is TFeature t)
+            {
+                return t;
+            }
+            else if (_defaults is not null)
+            {
+                return _defaults.Get<TFeature>();
+            }
+
+            return default;
         }
 
         /// <inheritdoc/>
         public void Set<TFeature>(TFeature? instance)
         {
-            this[typeof(TFeature)] = instance;
+            if (IsReadOnly)
+            {
+                throw new NotSupportedException();
+            }
+
+            if (instance is null)
+            {
+                if (_features is not null && _features.Remove(typeof(TFeature)))
+                {
+                    _containerRevision++;
+                }
+
+                return;
+            }
+
+            if (_features is null)
+            {
+                _features = new(_initialCapacity);
+            }
+
+            _features[typeof(TFeature)] = instance;
+            _containerRevision++;
         }
 
         internal static IFeatureCollection Empty { get; } = new EmptyFeatures();
@@ -131,33 +112,10 @@ namespace DocumentFormat.OpenXml.Framework.Features
             return _readOnly;
         }
 
-        internal static IFeatureCollection Default
-        {
-            get
-            {
-                if (_default is null)
-                {
-                    var defaultFeatures = new FeatureCollection
-                    {
-                        [typeof(IRootElementFactory)] = new ReflectionBasedRootElementFactory(typeof(ReflectionBasedRootElementFactory).GetTypeInfo().Assembly, ClassActivator<OpenXmlElement>.CreateActivator),
-                        [typeof(IPartMetadataFeature)] = new CachedPartMetadataProvider(),
-                    }.AsReadOnly();
-
-                    Interlocked.CompareExchange(ref _default, defaultFeatures, null);
-                }
-
-                return _default;
-            }
-        }
+        internal static IFeatureCollection Default => DefaultFeatures.Shared;
 
         private class EmptyFeatures : IFeatureCollection
         {
-            public object? this[Type key]
-            {
-                get => null;
-                set { }
-            }
-
             public bool IsReadOnly => true;
 
             public int Revision => 0;
