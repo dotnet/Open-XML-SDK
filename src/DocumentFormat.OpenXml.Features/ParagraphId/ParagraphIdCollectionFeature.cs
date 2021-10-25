@@ -9,29 +9,13 @@ namespace DocumentFormat.OpenXml.Features
 {
     internal class ParagraphIdCollectionFeature : IParagraphIdCollectionFeature
     {
-        private const int DefaultSize = 20;
+        internal static readonly StringComparer Comparer = StringComparer.OrdinalIgnoreCase;
 
         private readonly HashSet<string> _set;
 
-        public ParagraphIdCollectionFeature(HashSet<string> set)
+        public ParagraphIdCollectionFeature(IEnumerable<string> set)
         {
-            _set = set;
-        }
-
-        internal static HashSet<string> CreateSet(int? count = DefaultSize)
-            => new(
-#if NET5_0_OR_GREATER
-                count ?? DefaultSize,
-#endif
-                StringComparer.OrdinalIgnoreCase);
-
-        public static IParagraphIdCollectionFeature CreateSnapshot(IParagraphIdCollectionFeature other)
-        {
-            var set = CreateSet(other.Count);
-
-            set.UnionWith(other);
-
-            return new ParagraphIdCollectionFeature(set);
+            _set = new HashSet<string>(set, Comparer);
         }
 
         public int Count => _set.Count;

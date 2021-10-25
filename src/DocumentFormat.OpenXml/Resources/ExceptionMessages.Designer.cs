@@ -10,7 +10,7 @@
 
 namespace DocumentFormat.OpenXml {
     using System;
-    
+    using System.Reflection;
     
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DocumentFormat.OpenXml.Resources.ExceptionMessages", typeof(ExceptionMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DocumentFormat.OpenXml.Resources.ExceptionMessages", typeof(ExceptionMessages).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

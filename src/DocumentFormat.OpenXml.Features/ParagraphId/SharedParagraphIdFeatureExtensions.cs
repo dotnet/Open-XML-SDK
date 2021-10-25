@@ -56,6 +56,18 @@ namespace DocumentFormat.OpenXml.Features
             return shared;
         }
 
+        /// <summary>
+        /// Add arbitrary values to be tracked as a shared collection.
+        /// </summary>
+        /// <param name="shared">Shared collection feature.</param>
+        /// <param name="paragraphIds">Paragraph ids to be included with the shared collection.</param>
+        /// <returns></returns>
+        public static ISharedFeature<IParagraphIdCollectionFeature> Add(this ISharedFeature<IParagraphIdCollectionFeature> shared, IEnumerable<string> paragraphIds)
+        {
+            shared.Add(new ParagraphIdCollectionFeature(paragraphIds));
+            return shared;
+        }
+
         internal class SharedParagraphIdCollectionFeature : IParagraphIdCollectionFeature, ISharedFeature<IParagraphIdCollectionFeature>
         {
             private readonly List<IParagraphIdCollectionFeature> _others = new();
@@ -136,7 +148,7 @@ namespace DocumentFormat.OpenXml.Features
                 {
                     if (_shared.Remove(_collection))
                     {
-                        _shared.Add(ParagraphIdCollectionFeature.CreateSnapshot(_collection));
+                        _shared.Add(new ParagraphIdCollectionFeature(_collection));
                     }
                 }
             }
