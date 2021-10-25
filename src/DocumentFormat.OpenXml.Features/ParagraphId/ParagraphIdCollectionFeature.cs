@@ -19,11 +19,11 @@ namespace DocumentFormat.OpenXml.Features
         }
 
         internal static HashSet<string> CreateSet(int? count = DefaultSize)
+            => new(
 #if NET5_0_OR_GREATER
-            => new(count ?? DefaultSize, StringComparer.OrdinalIgnoreCase);
-#else
-            => new(StringComparer.OrdinalIgnoreCase);
+                count ?? DefaultSize,
 #endif
+                StringComparer.OrdinalIgnoreCase);
 
         public static IParagraphIdCollectionFeature CreateSnapshot(IParagraphIdCollectionFeature other)
         {
