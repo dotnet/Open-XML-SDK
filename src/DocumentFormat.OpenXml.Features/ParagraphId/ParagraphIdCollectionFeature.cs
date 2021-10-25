@@ -18,7 +18,12 @@ namespace DocumentFormat.OpenXml.Features
             _set = set;
         }
 
-        internal static HashSet<string> CreateSet(int? count = DefaultSize) => new(count ?? DefaultSize, StringComparer.OrdinalIgnoreCase);
+        internal static HashSet<string> CreateSet(int? count = DefaultSize)
+#if NET5_0_OR_GREATER
+            => new(count ?? DefaultSize, StringComparer.OrdinalIgnoreCase);
+#else
+            => new(StringComparer.OrdinalIgnoreCase);
+#endif
 
         public static IParagraphIdCollectionFeature CreateSnapshot(IParagraphIdCollectionFeature other)
         {
