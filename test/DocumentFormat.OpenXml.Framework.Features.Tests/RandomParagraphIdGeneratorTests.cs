@@ -1,47 +1,36 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework.Features;
 using DocumentFormat.OpenXml.Packaging;
-using System;
+using DocumentFormat.OpenXml.Wordprocessing;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Xunit;
 
-#nullable enable
-
-namespace DocumentFormat.OpenXml.Wordprocessing
+namespace DocumentFormat.OpenXml.Features
 {
     public class RandomParagraphIdGeneratorTests
     {
-        public RandomParagraphIdGeneratorTests()
-        {
-            Generator = new RandomParagraphIdGenerator();
-        }
-
-        private IParagraphIdGenerator Generator { get; }
-
         private static int CreateTestDocument(Stream stream, int count)
         {
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
-            var paraIdGenerator = new RandomParagraphIdGenerator();
+            var paraIdCollection = wordDocument.GetParagraphIdCollectionFeature();
+
             MainDocumentPart part = wordDocument.AddMainDocumentPart();
             var body = new Body();
+            part.Document = new Document(body);
 
             for (var i = 0; i < count; i++)
             {
-                Paragraph paragraph = new()
-                {
-                    ParagraphId = paraIdGenerator.CreateUniqueParagraphId(),
-                };
+                Paragraph paragraph = new();
 
-                paragraph.AppendChild(new Run(new Text(paragraph.ParagraphId.Value!)));
                 body.AppendChild(paragraph);
+                paragraph.AppendChild(new Run(new Text(paragraph.ParagraphId!.Value!)));
             }
 
-            part.Document = new Document(body);
-
-            Assert.Equal(count, paraIdGenerator.RegisteredParagraphIds.Count());
+            Assert.Equal(count, paraIdCollection.Count);
 
             return count;
         }
@@ -49,27 +38,24 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         private static int UpdateTestDocument(Stream stream, int start, int end)
         {
             using WordprocessingDocument wordDocument = WordprocessingDocument.Open(stream, true);
-            var paraIdGenerator = new RandomParagraphIdGenerator(wordDocument);
+            var paraIdCollection = wordDocument.GetParagraphIdCollectionFeature();
+
             MainDocumentPart part = wordDocument.MainDocumentPart!;
             Body body = part.Document.Body!;
 
             // The MainDocumentPart's DOM tree must have been loaded by accessing
             // the Document property before determining the number of w14:paraId
             // values currently existing in the scope of the WordprocessingDocument.
-            Assert.Equal(start, paraIdGenerator.RegisteredParagraphIds.Count());
+            Assert.Equal(start, paraIdCollection.Count);
 
             for (var i = start; i < end; i++)
             {
-                Paragraph paragraph = new()
-                {
-                    ParagraphId = paraIdGenerator.CreateUniqueParagraphId(),
-                };
-
-                paragraph.AppendChild(new Run(new Text(paragraph.ParagraphId.Value!)));
-                body.AppendChild(paragraph);
+                var features = body.Features;
+                var paragraph = body.AppendChild(new Paragraph());
+                paragraph.AppendChild(new Run(new Text(paragraph.ParagraphId!.Value!)));
             }
 
-            Assert.Equal(end, paraIdGenerator.RegisteredParagraphIds.Count());
+            Assert.Equal(end, paraIdCollection.Count);
 
             return end - start;
         }
@@ -79,23 +65,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             const int firstId = 0;
 
             using WordprocessingDocument wordDocument = WordprocessingDocument.Open(stream, true);
-            var paraIdGenerator = new RandomParagraphIdGenerator(wordDocument);
+            wordDocument.TryAddParagraphIdFeature();
+
             MainDocumentPart mainDocumentPart = wordDocument.MainDocumentPart!;
 
             // Add Header.
-            var headerParagraph = new Paragraph(new Run(new Text("Header")))
-            {
-                ParagraphId = paraIdGenerator.CreateUniqueParagraphId(),
-            };
+            var headerParagraph = new Paragraph(new Run(new Text("Header")));
 
             var headerPart = mainDocumentPart.AddNewPart<HeaderPart>();
             headerPart.Header = new Header(headerParagraph);
 
             // Add Footer.
-            var footerParagraph = new Paragraph(new Run(new Text("Footer")))
-            {
-                ParagraphId = paraIdGenerator.CreateUniqueParagraphId(),
-            };
+            var footerParagraph = new Paragraph(new Run(new Text("Footer")));
 
             var footerPart = mainDocumentPart.AddNewPart<FooterPart>();
             footerPart.Footer = new Footer(footerParagraph);
@@ -105,10 +86,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
             for (var id = firstId; id < firstId + count; id++)
             {
-                var paragraph = new Paragraph(new Run(new Text($"Comment #{id}")))
-                {
-                    ParagraphId = paraIdGenerator.CreateUniqueParagraphId(),
-                };
+                var paragraph = new Paragraph(new Run(new Text($"Comment #{id}")));
 
                 comments.AppendChild(new Comment(paragraph)
                 {
@@ -125,10 +103,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
             for (var id = firstId; id < firstId + count; id++)
             {
-                var paragraph = new Paragraph(new Run(new Text($"Footnote #{id}")))
-                {
-                    ParagraphId = paraIdGenerator.CreateUniqueParagraphId(),
-                };
+                var paragraph = new Paragraph(new Run(new Text($"Footnote #{id}")));
 
                 footnotes.AppendChild(new Footnote(paragraph) { Id = id });
             }
@@ -141,10 +116,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
             for (var id = firstId; id < firstId + count; id++)
             {
-                var paragraph = new Paragraph(new Run(new Text($"Endnote #{id}")))
-                {
-                    ParagraphId = paraIdGenerator.CreateUniqueParagraphId(),
-                };
+                var paragraph = new Paragraph(new Run(new Text($"Endnote #{id}")));
 
                 endnotes.AppendChild(new Endnote(paragraph) { Id = id });
             }
@@ -166,25 +138,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
             for (var i = 0; i < count; i++)
             {
-                string paragraphId = HexStringFactory.Create(0x00, 0x00, 0x00, (byte) (i % divisor));
+                string paragraphId = HexStringFactory.Create(0x00, 0x00, 0x00, (byte)(i % divisor))!;
                 body.AppendChild(new Paragraph(new Run(new Text(paragraphId))) { ParagraphId = paragraphId });
             }
 
             using var stream = new MemoryStream();
             using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+            var paraIdCollection = wordDocument.GetParagraphIdCollectionFeature();
+
             var part = wordDocument.AddMainDocumentPart();
             part.Document = new Document(body);
 
-            IParagraphIdGenerator paraIdGenerator = new RandomParagraphIdGenerator(wordDocument);
-            Assert.Equal(divisor, paraIdGenerator.RegisteredParagraphIds.Count());
-
-            // Act.
-            // Assign unique w14:paraId values.
-            paraIdGenerator.AssignUniqueParagraphIds(wordDocument);
-
             // Assert.
             // We have as many registered w14:paraId values as we have w:p elements.
-            Assert.Equal(count, paraIdGenerator.RegisteredParagraphIds.Count());
+            Assert.Equal(count, paraIdCollection.Count);
 
             // When checked independently, the number of w14:paraId values matches.
             var newParaIds = new HashSet<string>(body.Elements<Paragraph>().Select(p => p.ParagraphId!.Value!));
@@ -198,35 +165,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         [Fact]
-        public void Constructor_Default_NoParagraphIdsRegistered()
-        {
-            var generator = new RandomParagraphIdGenerator();
-
-            Assert.Empty(generator.RegisteredParagraphIds);
-        }
-
-        [Fact]
-        public void Constructor_IEnumerable_NonEmptyCollection_ParaIdsRegistered()
-        {
-            var paraId = Generator.CreateUniqueParagraphId();
-
-            var generator = new RandomParagraphIdGenerator(Generator.RegisteredParagraphIds);
-
-            Assert.Contains(paraId, generator.RegisteredParagraphIds);
-        }
-
-        [Fact]
-        public void Constructor_IEnumerable_UpperAndLowerCase_SingleParaIdRegistered()
-        {
-            const string paraId = "789ABCDE";
-            var paraIds = new[] { paraId, paraId.ToLowerInvariant() };
-
-            var generator = new RandomParagraphIdGenerator(paraIds);
-
-            Assert.Equal(paraId, generator.RegisteredParagraphIds.Single());
-        }
-
-        [Fact]
         public void Constructor_WordprocessingDocument_ExistingParaIds_ParaIdsRegistered()
         {
             // Arrange, creating a new WordprocessingDocument.
@@ -236,31 +174,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             total += AddOtherParts(stream, count);
 
             using var wordDocument = WordprocessingDocument.Open(stream, true);
-
-            // Act, creating a new generator.
-            var generator = new RandomParagraphIdGenerator(wordDocument);
+            var collection = wordDocument.GetParagraphIdCollectionFeature();
 
             // Assert that we have the expected number of registered w14:paraId values.
-            Assert.Equal(total, generator.RegisteredParagraphIds.Count());
-        }
-
-        [Fact]
-        public void Constructor_WordprocessingDocument_Duplicates_Success()
-        {
-            // Arrange.
-            const string paraId = "789ABCDE";
-            var paraIds = new[] { paraId, paraId.ToLowerInvariant() };
-
-            using var stream = new MemoryStream();
-            using var wordDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
-            var part = wordDocument.AddMainDocumentPart();
-            part.Document = new Document(new Body(paraIds.Select(id => new Paragraph { ParagraphId = id })));
-
-            // Act.
-            var generator = new RandomParagraphIdGenerator(wordDocument);
-
-            // Assert.
-            Assert.Equal(paraId, generator.RegisteredParagraphIds.Single());
+            Assert.Equal(total, collection.Count);
         }
 
         [Fact]
@@ -282,39 +199,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             // Assert that we have the expected total number of w14:paraId values
             // and no duplicates.
             using WordprocessingDocument wordDocument = WordprocessingDocument.Open(stream, true);
-            var paraIdGenerator = new RandomParagraphIdGenerator(wordDocument);
+            var paraIdCollection = wordDocument.GetParagraphIdCollectionFeature();
             Body body = wordDocument.MainDocumentPart!.Document!.Body!;
 
             Assert.Equal(total, body.Elements<Paragraph>().Count());
-            Assert.Equal(total, paraIdGenerator.RegisteredParagraphIds.Count());
-        }
-
-        [Fact]
-        public void CreateUniqueParagraphId_ManyValuesCreated_AllGeneratedValuesAreValidAndUnique()
-        {
-            const int count = 10000;
-
-            for (var i = 0; i < count; i++)
-            {
-                string paraId = Generator.CreateUniqueParagraphId();
-                var hexBinaryValue = new HexBinaryValue(paraId);
-                var value = Convert.ToUInt32(paraId, 16);
-
-                // Assert that the HexBinaryValue is deemed valid. Note, however, that
-                // the rules for w14:paraId (ParagraphId) values are stricter and the
-                // convention seems to be all uppercase letters.
-                Assert.True(hexBinaryValue.IsValid);
-
-                // Assert that the value is both greater than 0x00000000 and less than
-                // 0x80000000 as specified in MS-DOCX, section 2.6.2.3.
-                Assert.True(value > 0x00000000);
-                Assert.True(value < 0x80000000);
-
-                // Assert that the value is all uppercase, as produced by Microsoft Word.
-                Assert.Equal(paraId.ToUpperInvariant(), paraId);
-            }
-
-            Assert.Equal(count, Generator.RegisteredParagraphIds.Count());
+            Assert.Equal(total, paraIdCollection.Count);
         }
 
         [Fact]
@@ -327,12 +216,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             total += AddOtherParts(stream, count);
 
             using var wordDocument = WordprocessingDocument.Open(stream, true);
-
-            // Act, registering all paragraphIds.
-            Generator.RegisterAllParagraphIds(wordDocument);
+            var paraIdCollection = wordDocument.GetParagraphIdCollectionFeature();
 
             // Assert that all w14:paraId values have been registered.
-            Assert.Equal(total, Generator.RegisteredParagraphIds.Count());
+            Assert.Equal(total, paraIdCollection.Count);
         }
     }
 }

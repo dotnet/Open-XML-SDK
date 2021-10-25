@@ -27,6 +27,8 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(HandoutMasterPart), false, false)]
     [PartConstraint(typeof(LegacyDiagramTextInfoPart), false, false)]
     [PartConstraint(typeof(VbaProjectPart), false, false)]
+    [PartConstraint(typeof(PowerPointCommentPart), false, true)]
+    [PartConstraint(typeof(PowerPointAuthorsPart), false, false)]
     public partial class PresentationPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
@@ -158,6 +160,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ViewPropertiesPart of the PresentationPart
         /// </summary>
         public ViewPropertiesPart? ViewPropertiesPart => GetSubPartOfType<ViewPropertiesPart>();
+
+        /// <summary>
+        /// Gets the authorsPart of the PresentationPart
+        /// </summary>
+        public PowerPointAuthorsPart? authorsPart => GetSubPartOfType<PowerPointAuthorsPart>();
+
+        /// <summary>
+        /// Gets the commentParts of the PresentationPart
+        /// </summary>
+        public IEnumerable<PowerPointCommentPart> commentParts => GetPartsOfType<PowerPointCommentPart>();
 
         /// <summary>
         /// Adds a CustomXmlPart to the PresentationPart
@@ -302,6 +314,10 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new LegacyDiagramTextInfoPart();
                 case VbaProjectPart.RelationshipTypeConstant:
                     return new VbaProjectPart();
+                case PowerPointCommentPart.RelationshipTypeConstant:
+                    return new PowerPointCommentPart();
+                case PowerPointAuthorsPart.RelationshipTypeConstant:
+                    return new PowerPointAuthorsPart();
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));

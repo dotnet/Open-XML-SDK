@@ -70,3 +70,71 @@ public class ExampleFeature : IDisposable
 ```
 
 This will add `ExampleFeature` to the part feature, and register it to be disposed when the part is disposed.
+
+### IRandomNumberGeneratorFeature
+This feature allows for a shared service to generate random numbers and fill an array.
+
+### IParagraphIdGeneratorFeature
+
+This feature allows for population and tracking of elements that contain paragraph ids. By default, this will ensure uniqueness of values and ensure that values that do exist are valid per the constraints of the standard. To use this feature:
+
+```csharp
+WordprocessingDocument document = CreateWordDocument();
+document.TryAddParagraphIdFeature();
+
+var part = doc.AddMainDocumentPart();
+var body = new Body();
+part.Document = new Document(body);
+
+var p = new Paragraph();
+body.AddChild(p); // After adding p.ParagraphId will be set to a unique, valid value
+```
+
+This feature can also be used to ensure uniqueness among multiple documents with a slight change:
+
+```csharp
+using var doc1 = CreateDocument1();
+using var doc2 = CreateDocument2();
+
+var shared = doc1
+    .AddSharedParagraphIdFeature()
+    .Add(doc2);
+
+// Add item to doc1
+var part1 = doc1.AddMainDocumentPart();
+var body1 = new Body();
+var p1 = new Paragraph();
+part1.Document = new Document(body1);
+body1.AddChild(p1);
+
+// Add item with same ID to doc2
+var part2 = doc2.AddMainDocumentPart();
+var body2 = new Body();
+var p2 = new Paragraph { ParagraphId = p1.ParagraphId };
+part2.Document = new Document(body2);
+body2.AddChild(p2);
+
+// Assert
+Assert.NotEqual(p1.ParagraphId, p2.ParagraphId);
+Assert.Equal(2, shared.Count);
+```
+
+## DocumentFormat.OpenXml.Linq - unreleased
+
+### IPartRootXElementFeature
+
+This feature allows operating on an `OpenXmlPart` by using XLinq features and directly manipulating `XElement` nodes.
+
+```csharp
+OpenXmlPart part = GetSomePart();
+
+var node = new(W.document, new XAttribute(XNamespace.Xmlns + "w", W.w),
+    new XElement(W.body,
+        new XElement(W.p,
+            new XElement(W.r,
+                new XElement(W.t, "Hello World!")))));
+
+part.SetXElement(node);
+```
+
+This `XElement` is cached but will be kept in sync with the underlying part if it were to change.

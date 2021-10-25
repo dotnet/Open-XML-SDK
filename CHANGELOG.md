@@ -4,13 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.14.0] -
+## [2.14.0-beta1] - 2021-09-20
 
 ### Added
 - Added `Features` property to `OpenXmlPartContainer` and `OpenXmlElement` to enable a per-part or per-document state storage
 - Added public constructors for `XmlPath` (#1013)
 - Added parts for Rich Data types (#1002)
 - Added methods to generate unique paragraph ids (#1000)
+- Added generated classes for Office 2021 types and constraints (#1030)
 
 Thanks to the following for their contributions:
 

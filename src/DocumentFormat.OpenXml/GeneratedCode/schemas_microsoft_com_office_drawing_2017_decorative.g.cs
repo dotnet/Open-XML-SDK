@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
     /// <para>When the object is serialized out as xml, it's qualified name is adec:decorative.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(110, "decorative")]
+    [SchemaAttr(112, "decorative")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Decorative : OpenXmlLeafElement
     {
@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(110, "decorative");
+            builder.SetSchema(112, "decorative");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Decorative>()
 .AddAttribute(0, "val", a => a.Val);

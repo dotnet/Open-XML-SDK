@@ -25,6 +25,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// L".jpeg",   L"image/jpeg",
     /// L".emf",    L"image/x-emf",
     /// L".wmf",    L"image/x-wmf",
+    /// L".svg",    L"image/svg+xml",
     /// ]]>
     /// </summary>
     public enum ImagePartType
@@ -87,5 +88,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Windows Metafile (.wmf).
         /// </summary>
         Wmf,
+
+        /// <summary>
+        /// Scalable Vector Graphics (.svg).
+        /// </summary>
+        Svg,
     }
 }
