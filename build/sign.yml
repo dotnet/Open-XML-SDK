@@ -7,7 +7,7 @@ steps:
   - pwsh: |
       mkdir raw
       cd raw
-      gci ..\unsigned\*.nupkg | % { Expand-Archive $_ }
+      gci ..\*.nupkg | % { Expand-Archive $_ }
       cd ..
       gci -r
     workingDirectory: '$(Pipeline.Workspace)/unsigned'
