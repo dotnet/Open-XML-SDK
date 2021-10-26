@@ -70,7 +70,6 @@ stages:
         vmImage: 'windows-2019'
       steps:
         - template: sign.yml
-
     dependsOn: Build
     condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
   
