@@ -94,11 +94,11 @@ steps:
             }
         ]
 
-# - task: CopyFiles@2
-#   inputs:
-#     sourceFolder: '$(Pipeline.Workspace)/unsigned'
-#     contents: '*.snupkg'
-#     targetFolder: '$(Build.ArtifactStagingDirectory)'
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: '$(Pipeline.Workspace)/unsigned'
+      contents: '*.snupkg'
+      targetFolder: '$(Build.ArtifactStagingDirectory)'
 
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Signed'
