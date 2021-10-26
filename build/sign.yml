@@ -4,74 +4,6 @@ steps:
   - download: current
     artifact: unsigned
 
-  - powershell: |
-      $version=gci DocumentFormat.OpenXml.*.nupkg | % { $_ -match 'DocumentFormat.OpenXml.(.*).nupkg' | Out-Null; $matches[1] }
-      Write-Host "##vso[task.setvariable variable=Version]$version"
-      Write-Host "Setting version to $version"
-    workingDirectory: '$(Pipeline.Workspace)/unsigned'
-
-  - task: ExtractFiles@1
-    inputs:
-      archiveFilePatterns: '$(Pipeline.Workspace)/unsigned/DocumentFormat.OpenXml.$(Version).nupkg'
-      destinationFolder: '$(Pipeline.Workspace)/$(Version)'
-
-  - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
-    displayName: 'OpenXML SDK Assembly ESRP CodeSigning'
-    inputs:
-      ConnectedServiceName: 'Open-XML-SDK-ESRP-2021b'
-      FolderPath: '$(Pipeline.Workspace)\$(Version)'
-      Pattern: '**\DocumentFormat.OpenXml.dll'
-      UseMinimatch: true
-      signConfigType: inlineSignParams
-      inlineOperation: |
-        [
-          {
-            "keyCode": "CP-230012",
-            "operationSetCode": "SigntoolSign",
-            "parameters": [
-              {
-                "parameterName": "OpusName",
-                "parameterValue": "Microsoft"
-              },
-              {
-                "parameterName": "OpusInfo",
-                "parameterValue": "http://www.microsoft.com"
-              },
-              {
-                "parameterName": "PageHash",
-                "parameterValue": "/NPH"
-              },
-              {
-                "parameterName": "FileDigest",
-                "parameterValue": "/fd sha256"
-              },
-              {
-                "parameterName": "TimeStamp",
-                "parameterValue": "/tr \"http://rfc3161.gtm.corp.microsoft.com/TSS/HttpTspServer\" /td sha256"
-              }
-            ],
-            "toolName": "signtool.exe",
-            "toolVersion": "6.2.9304.0"
-          }
-        ]
-
-  - task: PowerShell@2
-    displayName: 'Remove code sign summary'
-    name: removeSummary
-    inputs:
-      targetType: 'inline'
-      script: |
-        rm $(Pipeline.Workspace)/$(Version)/CodeSignSummary*
-
-  - task: ArchiveFiles@2
-    inputs:
-      rootFolderOrFile: '$(Pipeline.Workspace)/$(Version)' 
-      includeRootFolder: false
-      archiveType: 'zip'
-      archiveFile: '$(Build.ArtifactStagingDirectory)/DocumentFormat.OpenXml.$(Version).nupkg' 
-      replaceExistingArchive: true 
-      verbose: true
-
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
     displayName: 'OpenXML SDK Nuget Pkg ESRP CodeSigning'
     inputs:
@@ -102,7 +34,7 @@ steps:
       sourceFolder: '$(Pipeline.Workspace)/unsigned'
       contents: '*.snupkg'
       targetFolder: '$(Build.ArtifactStagingDirectory)'
-  
+
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Signed'
     inputs:
