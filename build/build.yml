@@ -41,15 +41,15 @@ jobs:
           command: 'test'
           arguments: '-c $(buildConfiguration)'
       
-      - task: DotNetCoreCLI@2
-        displayName: 'Benchmark'
-        inputs:
-          command: 'run'
-          projects: 'test/DocumentFormat.OpenXml.Benchmarks/DocumentFormat.OpenXml.Benchmarks.csproj'
-          arguments: '-c Release -- $(Build.ArtifactStagingDirectory)/results'
-        condition: eq('release', variables['buildConfiguration'])
+      # - task: DotNetCoreCLI@2
+      #   displayName: 'Benchmark'
+      #   inputs:
+      #     command: 'run'
+      #     projects: 'test/DocumentFormat.OpenXml.Benchmarks/DocumentFormat.OpenXml.Benchmarks.csproj'
+      #     arguments: '-c Release -- $(Build.ArtifactStagingDirectory)/results'
+      #   condition: eq('release', variables['buildConfiguration'])
 
-      - publish: '$(Build.ArtifactStagingDirectory)/results'
-        artifact: benchmarks_${{ buildTarget.name }}_${{ vmImage.name }}
-        displayName: 'Upload benchmark results'
-        condition: eq('release', variables['buildConfiguration'])
+      # - publish: '$(Build.ArtifactStagingDirectory)/results'
+      #   artifact: benchmarks_${{ buildTarget.name }}_${{ vmImage.name }}
+      #   displayName: 'Upload benchmark results'
+      #   condition: eq('release', variables['buildConfiguration'])
