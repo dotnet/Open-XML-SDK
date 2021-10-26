@@ -4,11 +4,61 @@ steps:
   - download: current
     artifact: unsigned
 
+  - powershell: |
+      mkdir raw
+      gci ..\unsigned\*.nupkg | % { Expand-Archive $_ }
+    workingDirectory: '$(Pipeline.Workspace)/unsigned'
+
+  - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
+    displayName: 'OpenXML SDK Assembly ESRP CodeSigning'
+    inputs:
+      ConnectedServiceName: 'Open-XML-SDK-ESRP-2021b'
+      FolderPath: '$(Pipeline.Workspace)\$(Version)'
+      Pattern: '**\DocumentFormat.OpenXml*.dll'
+      UseMinimatch: true
+      signConfigType: inlineSignParams
+      inlineOperation: |
+        [
+          {
+            "keyCode": "CP-230012",
+            "operationSetCode": "SigntoolSign",
+            "parameters": [
+              {
+                "parameterName": "OpusName",
+                "parameterValue": "Microsoft"
+              },
+              {
+                "parameterName": "OpusInfo",
+                "parameterValue": "http://www.microsoft.com"
+              },
+              {
+                "parameterName": "PageHash",
+                "parameterValue": "/NPH"
+              },
+              {
+                "parameterName": "FileDigest",
+                "parameterValue": "/fd sha256"
+              },
+              {
+                "parameterName": "TimeStamp",
+                "parameterValue": "/tr \"http://rfc3161.gtm.corp.microsoft.com/TSS/HttpTspServer\" /td sha256"
+              }
+            ],
+            "toolName": "signtool.exe",
+            "toolVersion": "6.2.9304.0"
+          }
+        ]
+
+  - powershell: |
+      gci -r CodeSignSummary | rm
+      gci -Directory | % { [IO.Compression.ZipFile]::CreateFromDirectory($_, "$_.nupkg") }
+    workingDirectory: '$(Pipeline.Workspace)/unsigned/raw'
+
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
     displayName: 'OpenXML SDK Nuget Pkg ESRP CodeSigning'
     inputs:
       ConnectedServiceName: 'Open-XML-SDK-ESRP-2021b'
-      FolderPath: '$(Build.ArtifactStagingDirectory)'
+      FolderPath: '$(Pipeline.Workspace)/unsigned/raw'
       Pattern: '*.nupkg'
       signConfigType: inlineSignParams
       inlineOperation: |
@@ -35,6 +85,12 @@ steps:
       contents: '*.snupkg'
       targetFolder: '$(Build.ArtifactStagingDirectory)'
 
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: '$(Pipeline.Workspace)/unsigned/raw'
+      contents: '*.nupkg'
+      targetFolder: '$(Build.ArtifactStagingDirectory)'
+  
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Signed'
     inputs:
