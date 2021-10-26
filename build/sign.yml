@@ -100,8 +100,8 @@ steps:
 #     contents: '*.snupkg'
 #     targetFolder: '$(Build.ArtifactStagingDirectory)'
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Signed'
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    artifactName: 'signed'
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Signed'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      artifactName: 'signed'
