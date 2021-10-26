@@ -2,12 +2,10 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using System;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
 using System.Text;
-using System.Xml.Linq;
 using Xunit;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;

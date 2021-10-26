@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.Reflection;
 
-namespace DocumentFormat.OpenXml.Framework.Features
+namespace DocumentFormat.OpenXml.Features
 {
     internal class DefaultFeatures : IFeatureCollection
     {

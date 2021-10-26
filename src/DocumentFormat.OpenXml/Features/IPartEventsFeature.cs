@@ -2,14 +2,13 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using System;
 
-namespace DocumentFormat.OpenXml.Framework.Features
+namespace DocumentFormat.OpenXml.Features
 {
     /// <summary>
-    /// A feature to track events around the package.
+    /// A feature to track events around parts.
     /// </summary>
-    public interface IPackageEventsFeature : IFeatureEvent<OpenXmlPackage>
+    public interface IPartEventsFeature : IFeatureEvent<OpenXmlPart>
     {
     }
 }

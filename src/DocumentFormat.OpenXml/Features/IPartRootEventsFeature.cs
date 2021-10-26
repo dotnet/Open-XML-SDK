@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 
-namespace DocumentFormat.OpenXml.Framework.Features
+namespace DocumentFormat.OpenXml.Features
 {
     /// <summary>
     /// A feature to track events around parts.

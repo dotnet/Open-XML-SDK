@@ -3,9 +3,8 @@
 
 using System;
 using System.Collections.Generic;
-using System.Threading;
 
-namespace DocumentFormat.OpenXml.Framework.Features
+namespace DocumentFormat.OpenXml.Features
 {
     /// <summary>
     /// Represents a collection of features.
