@@ -3,12 +3,12 @@
 
 using DocumentFormat.OpenXml.Packaging;
 
-namespace DocumentFormat.OpenXml.Framework.Features
+namespace DocumentFormat.OpenXml.Features
 {
     /// <summary>
-    /// A feature to track events around parts.
+    /// A feature to track events around the package.
     /// </summary>
-    public interface IPartEventsFeature : IFeatureEvent<OpenXmlPart>
+    public interface IPackageEventsFeature : IFeatureEvent<OpenXmlPackage>
     {
     }
 }

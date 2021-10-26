@@ -1,11 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using NSubstitute;
 using System;
 using Xunit;
 
-namespace DocumentFormat.OpenXml.Framework.Features.Tests
+namespace DocumentFormat.OpenXml.Features.Tests
 {
     public class FeaturesTests
     {

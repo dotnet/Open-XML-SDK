@@ -5,7 +5,6 @@ using BenchmarkDotNet.Attributes;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Tests;
 using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Wordprocessing;
 using System.IO;
 
 namespace DocumentFormat.OpenXml.Benchmarks

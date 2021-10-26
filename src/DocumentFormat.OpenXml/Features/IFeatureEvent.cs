@@ -3,7 +3,7 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml.Framework.Features
+namespace DocumentFormat.OpenXml.Features
 {
     /// <summary>
     /// Interface for general feature eventing.

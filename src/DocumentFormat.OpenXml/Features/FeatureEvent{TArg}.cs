@@ -3,7 +3,7 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml.Framework.Features
+namespace DocumentFormat.OpenXml.Features
 {
     internal abstract class FeatureEvent<TArg> : IFeatureEvent<TArg>, IRaiseFeatureEvent<TArg>
     {
