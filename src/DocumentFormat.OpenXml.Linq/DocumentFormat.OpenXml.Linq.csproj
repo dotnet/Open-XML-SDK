@@ -1,30 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), DocumentFormat.OpenXml.Package.props))\DocumentFormat.OpenXml.Package.props" />
-
   <PropertyGroup>
-    <Nullable>enable</Nullable>
     <IsShipped>true</IsShipped>
-    <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
-    <NoWarn>$(NoWarn);3003</NoWarn>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Summary>Provides additional LINQ functionality to the Open XML SDK.</Summary>
+    <Description>Provides additional LINQ functionality to the Open XML SDK to allow operations using XLINQ.</Description>
   </PropertyGroup>
-
-  <PropertyGroup>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <IncludeSymbols>true</IncludeSymbols>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DocumentFormat.OpenXml.Features\DocumentFormat.OpenXml.Features.csproj" />
@@ -85,25 +65,5 @@
     </When>
 
   </Choose>
-
-  <!-- C# Source Generator -->
-  <!--<ItemGroup>
-    <ProjectReference Include="..\DocumentFormat.OpenXml.CodeGeneration.Linq\DocumentFormat.OpenXml.CodeGeneration.Linq.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-  </ItemGroup>
-
-  <PropertyGroup>
-    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-    <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
-  </PropertyGroup>
-
-  <ItemGroup>
-    -->
-  <!-- Don't include the output from a previous source generator execution into future runs;
-         the */** trick here ensures that there's at least one subdirectory, which is our key
-         that it's coming from a source generator as opposed to something that is coming from
-         some other tool. -->
-  <!--
-    <Compile Remove="$(CompilerGeneratedFilesOutputPath)/*/**/*.cs" />
-  </ItemGroup>-->
 
 </Project>

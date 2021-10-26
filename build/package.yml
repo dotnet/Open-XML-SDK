@@ -2,6 +2,7 @@ jobs:
   - job: Pack
     variables:
       ProjectLoadStyle: All
+      Configuration: Release
     pool:
       vmImage: 'windows-2019'
     steps:
@@ -26,14 +27,18 @@ jobs:
           dotnet tool install --global GitVersion.Tool
           dotnet gitversion /output buildserver /nofetch
 
-    - task: DotNetCoreCLI@2
-      displayName: 'Create NuGet Package'
+    - task: PowerShell@2
+      displayName: 'Create NuGet package'
+      name: createPackage
       inputs:
-        command: 'pack'
-        packagesToPack: 'src/DocumentFormat.OpenXml/DocumentFormat.OpenXml.csproj'
-        configuration: 'Release'
-        packDirectory: '$(Build.ArtifactStagingDirectory)/unsigned'
-        versioningScheme: 'off'
+        targetType: 'inline'
+        script: |
+          dotnet pack -c $(Configuration)
+
+    - task: CopyFiles@2
+      inputs:
+        sourceFolder: 'bin\$(Configuration)\packages\shipping'
+        targetFolder: '$(Build.ArtifactStagingDirectory)/unsigned'
 
     - publish: '$(Build.ArtifactStagingDirectory)/unsigned'
       artifact: unsigned
