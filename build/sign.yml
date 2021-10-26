@@ -1,3 +1,6 @@
+parameters:
+  libraryName: ''
+
 steps:
   - checkout: none
 
@@ -5,14 +8,14 @@ steps:
     artifact: unsigned
 
   - powershell: |
-      $version=gci DocumentFormat.OpenXml.*.nupkg | % { $_ -match 'DocumentFormat.OpenXml.(.*).nupkg' | Out-Null; $matches[1] }
+      $version=gci $(libraryName).*.nupkg | % { $_ -match '$(libraryName).(.*).nupkg' | Out-Null; $matches[1] }
       Write-Host "##vso[task.setvariable variable=Version]$version"
       Write-Host "Setting version to $version"
     workingDirectory: '$(Pipeline.Workspace)/unsigned'
 
   - task: ExtractFiles@1
     inputs:
-      archiveFilePatterns: '$(Pipeline.Workspace)/unsigned/DocumentFormat.OpenXml.$(Version).nupkg'
+      archiveFilePatterns: '$(Pipeline.Workspace)/unsigned/$(libraryName).$(Version).nupkg'
       destinationFolder: '$(Pipeline.Workspace)/$(Version)'
 
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
@@ -20,7 +23,7 @@ steps:
     inputs:
       ConnectedServiceName: 'Open-XML-SDK-ESRP-2021b'
       FolderPath: '$(Pipeline.Workspace)\$(Version)'
-      Pattern: '**\DocumentFormat.OpenXml.dll'
+      Pattern: '**\$(libraryName).dll'
       UseMinimatch: true
       signConfigType: inlineSignParams
       inlineOperation: |
@@ -68,7 +71,7 @@ steps:
       rootFolderOrFile: '$(Pipeline.Workspace)/$(Version)' 
       includeRootFolder: false
       archiveType: 'zip'
-      archiveFile: '$(Build.ArtifactStagingDirectory)/DocumentFormat.OpenXml.$(Version).nupkg' 
+      archiveFile: '$(Build.ArtifactStagingDirectory)/$(libraryName).$(Version).nupkg' 
       replaceExistingArchive: true 
       verbose: true
 

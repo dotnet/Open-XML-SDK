@@ -70,6 +70,15 @@ stages:
         vmImage: 'windows-2019'
       steps:
         - template: sign.yml
+          parameters:
+            libraryName: 'DocumentFormat.OpenXml'
+        - template: sign.yml
+          parameters:
+            libraryName: 'DocumentFormat.OpenXml.Features'
+        - template: sign.yml
+          parameters:
+            libraryName: 'DocumentFormat.OpenXml.Linq'
+
     dependsOn: Build
     condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
   
