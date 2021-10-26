@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 
-namespace DocumentFormat.OpenXml.Features
+namespace DocumentFormat.OpenXml.Framework.Features
 {
     /// <summary>
     /// Extensions to add events around parts.

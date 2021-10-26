@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using Xunit;
 
-namespace DocumentFormat.OpenXml.Features.Tests
+namespace DocumentFormat.OpenXml.Framework.Features.Tests
 {
     public class PackageEventsTests
     {

@@ -3,7 +3,7 @@
 
 using System;
 
-namespace DocumentFormat.OpenXml.Features
+namespace DocumentFormat.OpenXml.Framework.Features
 {
     /// <summary>
     /// Feature to track items to dispose when a package is disposed.

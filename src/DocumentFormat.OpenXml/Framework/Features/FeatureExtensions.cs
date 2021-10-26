@@ -4,7 +4,7 @@
 using DocumentFormat.OpenXml.Packaging;
 using System;
 
-namespace DocumentFormat.OpenXml.Features
+namespace DocumentFormat.OpenXml.Framework.Features
 {
     /// <summary>
     /// Methods to help with using <see cref="IFeatureCollection"/>.

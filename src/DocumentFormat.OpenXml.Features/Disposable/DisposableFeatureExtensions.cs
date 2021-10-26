@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 
-namespace DocumentFormat.OpenXml.Features
+namespace DocumentFormat.OpenXml.Framework.Features
 {
     /// <summary>
     /// Extension methods to add retrieve disposable features.

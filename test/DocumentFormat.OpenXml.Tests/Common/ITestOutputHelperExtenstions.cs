@@ -3,7 +3,10 @@
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.Common.OutputHelperExtensions

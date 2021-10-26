@@ -7,7 +7,7 @@ using NSubstitute.Extensions;
 using System;
 using Xunit;
 
-namespace DocumentFormat.OpenXml.Features.Tests
+namespace DocumentFormat.OpenXml.Framework.Features.Tests
 {
     public class DisposableFeatureTests
     {
