@@ -4,7 +4,7 @@ jobs:
       ProjectLoadStyle: All
       Configuration: Release
     pool:
-      vmImage: 'ubuntu-20.04'
+      vmImage: 'windows-2019' # Needed for PEVerify
     steps:
     - task: UseDotNet@2
       displayName: 'Install SDK'
