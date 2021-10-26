@@ -16,17 +16,13 @@ namespace DocumentFormat.OpenXml.Features
         /// <summary>
         /// Add a random number generator to the package.
         /// </summary>
-        /// <returns>True if feature was added.</returns>
-        public static bool TryAddRandomNumberGeneratorFeature(this OpenXmlPackage package)
+        public static void AddRandomNumberGeneratorFeature(this OpenXmlPackage package)
         {
             if (package.Features.Get<IRandomNumberGeneratorFeature>() is null)
             {
-                package.TryAddDisposableFeature();
+                package.AddDisposableFeature();
                 package.Features.SetDisposable<IRandomNumberGeneratorFeature>(new RandomNumberGeneratorFeature());
-                return true;
             }
-
-            return false;
         }
 
         private class RandomNumberGeneratorFeature : IRandomNumberGeneratorFeature, IDisposable

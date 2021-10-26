@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Framework.Features.Tests
             using (var ms = new MemoryStream())
             using (var package = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document))
             {
-                package.TryAddPackageEventsFeature();
+                package.AddPackageEventsFeature();
                 package.Features.Get<IPackageEventsFeature>().Change += a => events.Add(a.Type);
             }
 
@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Framework.Features.Tests
             using (var ms = new MemoryStream())
             using (var package = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document))
             {
-                package.TryAddPartEventsFeature();
+                package.AddPartEventsFeature();
 
                 var creating = default(OpenXmlPart);
                 var created = default(OpenXmlPart);

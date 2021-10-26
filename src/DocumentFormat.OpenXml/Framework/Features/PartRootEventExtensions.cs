@@ -14,15 +14,12 @@ namespace DocumentFormat.OpenXml.Framework.Features
         /// Adds a feature to track eventing for a package lifecycle events.
         /// </summary>
         /// <param name="container">Container to add the feature to.</param>
-        public static bool TryAddPartRootEventsFeature(this OpenXmlPartContainer container)
+        public static void AddPartRootEventsFeature(this OpenXmlPartContainer container)
         {
             if (container.Features.Get<IPartRootEventsFeature>() is null)
             {
                 container.Features.Set<IPartRootEventsFeature>(new PartRootEventsFeature());
-                return true;
             }
-
-            return false;
         }
 
         internal static void OnChange(this IPartRootEventsFeature events, EventType type, OpenXmlPart? part)

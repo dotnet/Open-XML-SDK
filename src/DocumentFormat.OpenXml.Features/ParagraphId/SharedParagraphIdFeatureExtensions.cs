@@ -21,16 +21,21 @@ namespace DocumentFormat.OpenXml.Features
         /// <returns>The existing or new shared collection.</returns>
         public static ISharedFeature<IParagraphIdCollectionFeature> AddSharedParagraphIdFeature(this WordprocessingDocument doc)
         {
-            var existingFeature = doc.GetParagraphIdCollectionFeature();
+            var existingShared = doc.Features.Get<ISharedFeature<IParagraphIdCollectionFeature>>();
 
-            if (existingFeature is ISharedFeature<IParagraphIdCollectionFeature> shared)
+            if (existingShared is not null)
             {
-                return shared;
+                return existingShared;
             }
 
-            var sharedFeature = new SharedParagraphIdCollectionFeature { existingFeature };
+            doc.AddParagraphIdFeature();
 
-            doc.Features.Set(sharedFeature.Composite);
+            var sharedFeature = new SharedParagraphIdCollectionFeature
+            {
+                doc.Features.GetRequired<IParagraphIdCollectionFeature>(),
+            };
+
+            doc.Features.Set<IParagraphIdCollectionFeature>(sharedFeature);
             doc.Features.Set<ISharedFeature<IParagraphIdCollectionFeature>>(sharedFeature);
 
             return sharedFeature;
@@ -45,9 +50,10 @@ namespace DocumentFormat.OpenXml.Features
         /// <exception cref="InvalidOperationException"></exception>
         public static ISharedFeature<IParagraphIdCollectionFeature> Add(this ISharedFeature<IParagraphIdCollectionFeature> shared, WordprocessingDocument doc)
         {
-            doc.TryAddPackageEventsFeature();
-            var paragraphIdCollection = doc.GetParagraphIdCollectionFeature();
+            doc.AddPackageEventsFeature();
+            doc.AddParagraphIdFeature();
 
+            var paragraphIdCollection = doc.Features.GetRequired<IParagraphIdCollectionFeature>();
             shared.Add(paragraphIdCollection);
             doc.Features.SetDisposable(new ParagraphIdSnapshotGenerator(paragraphIdCollection, shared, doc.Features.GetRequired<IPackageEventsFeature>()));
             doc.Features.Set(shared);
