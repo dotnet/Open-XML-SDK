@@ -6,7 +6,10 @@ steps:
 
   - pwsh: |
       mkdir raw
+      cd raw
       gci ..\unsigned\*.nupkg | % { Expand-Archive $_ }
+      cd ..
+      gci -r
     workingDirectory: '$(Pipeline.Workspace)/unsigned'
 
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
