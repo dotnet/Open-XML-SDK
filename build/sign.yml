@@ -13,7 +13,7 @@ steps:
     displayName: 'OpenXML SDK Assembly ESRP CodeSigning'
     inputs:
       ConnectedServiceName: 'Open-XML-SDK-ESRP-2021b'
-      FolderPath: '$(Pipeline.Workspace)\$(Version)'
+      FolderPath: '$(Pipeline.Workspace)\unsigned\raw'
       Pattern: '**\DocumentFormat.OpenXml*.dll'
       UseMinimatch: true
       signConfigType: inlineSignParams
