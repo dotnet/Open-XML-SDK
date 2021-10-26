@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(102, "personList")]
+    [SchemaAttr(104, "personList")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PersonList : OpenXmlPartRootElement
     {
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(102, "personList");
+            builder.SetSchema(104, "personList");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<Person>();
             builder.AddChild<ExtensionList>();
@@ -125,7 +125,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(102, "ThreadedComments")]
+    [SchemaAttr(104, "ThreadedComments")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThreadedComments : OpenXmlPartRootElement
     {
@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(102, "ThreadedComments");
+            builder.SetSchema(104, "ThreadedComments");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<ThreadedComment>();
             builder.AddChild<ExtensionList>();
@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(102, "person")]
+    [SchemaAttr(104, "person")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Person : OpenXmlCompositeElement
     {
@@ -323,7 +323,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(102, "person");
+            builder.SetSchema(104, "person");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<ExtensionList>();
             builder.AddElement<Person>()
@@ -373,7 +373,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(102, "extLst")]
+    [SchemaAttr(104, "extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ExtensionList : OpenXmlCompositeElement
     {
@@ -411,7 +411,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(102, "extLst");
+            builder.SetSchema(104, "extLst");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -444,7 +444,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(102, "threadedComment")]
+    [SchemaAttr(104, "threadedComment")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThreadedComment : OpenXmlCompositeElement
     {
@@ -578,7 +578,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(102, "threadedComment");
+            builder.SetSchema(104, "threadedComment");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<ThreadedCommentText>();
             builder.AddChild<ThreadedCommentMentions>();
@@ -658,7 +658,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:text.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(102, "text")]
+    [SchemaAttr(104, "text")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThreadedCommentText : OpenXmlLeafTextElement
     {
@@ -685,7 +685,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(102, "text");
+            builder.SetSchema(104, "text");
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -705,7 +705,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(102, "mentions")]
+    [SchemaAttr(104, "mentions")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class ThreadedCommentMentions : OpenXmlCompositeElement
     {
@@ -743,7 +743,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(102, "mentions");
+            builder.SetSchema(104, "mentions");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<Mention>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -762,7 +762,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:mention.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(102, "mention")]
+    [SchemaAttr(104, "mention")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class Mention : OpenXmlLeafElement
     {
@@ -840,7 +840,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(102, "mention");
+            builder.SetSchema(104, "mention");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Mention>()
 .AddAttribute(0, "mentionpersonId", a => a.MentionpersonId, aBuilder =>

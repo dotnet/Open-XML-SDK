@@ -1,29 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), DocumentFormat.OpenXml.Package.props))\DocumentFormat.OpenXml.Package.props" />
-
   <PropertyGroup>
-    <Nullable>enable</Nullable>
     <IsShipped>true</IsShipped>
-    <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
-    <NoWarn>$(NoWarn);3003</NoWarn>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <IncludeSymbols>true</IncludeSymbols>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <Summary>Provides additional LINQ functionality to the Open XML SDK.</Summary>
+    <Description>Provides additional LINQ functionality to the Open XML SDK to allow operations using XLINQ.</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+    <ProjectReference Include="..\DocumentFormat.OpenXml.Features\DocumentFormat.OpenXml.Features.csproj" />
+    <ProjectReference Include="..\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
   </ItemGroup>
 
   <Choose>
@@ -33,6 +18,10 @@
         <Reference Include="System.Xml" />
         <Reference Include="System.Xml.Linq" />
       </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="..\DocumentFormat.OpenXml\System\Diagnostics\CodeAnalysis\NullableAttributes.cs" Link="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+      </ItemGroup>
     </When>
 
     <When Condition=" '$(TargetFramework)' == 'net40'">
@@ -40,6 +29,10 @@
         <Reference Include="System" />
         <Reference Include="System.Xml" />
         <Reference Include="System.Xml.Linq" />
+      </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="..\DocumentFormat.OpenXml\System\Diagnostics\CodeAnalysis\NullableAttributes.cs" Link="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
       </ItemGroup>
     </When>
 
@@ -49,25 +42,28 @@
         <Reference Include="System.Xml" />
         <Reference Include="System.Xml.Linq" />
       </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="..\DocumentFormat.OpenXml\System\Diagnostics\CodeAnalysis\NullableAttributes.cs" Link="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+      </ItemGroup>
     </When>
+
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+      <ItemGroup>
+        <PackageReference Include="System.Xml.ReaderWriter" Version="4.3.1" />
+      </ItemGroup>
+
+      <ItemGroup>
+        <Compile Include="..\DocumentFormat.OpenXml\System\Diagnostics\CodeAnalysis\NullableAttributes.cs" Link="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+      <ItemGroup>
+        <Compile Include="..\DocumentFormat.OpenXml\System\Diagnostics\CodeAnalysis\NullableAttributes.cs" Link="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+      </ItemGroup>
+    </When>
+
   </Choose>
-
-  <!-- C# Source Generator -->
-  <!--<ItemGroup>
-    <ProjectReference Include="..\DocumentFormat.OpenXml.CodeGeneration.Linq\DocumentFormat.OpenXml.CodeGeneration.Linq.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-  </ItemGroup>
-
-  <PropertyGroup>
-    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-    <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
-  </PropertyGroup>
-
-  <ItemGroup>
-    --><!-- Don't include the output from a previous source generator execution into future runs;
-         the */** trick here ensures that there's at least one subdirectory, which is our key
-         that it's coming from a source generator as opposed to something that is coming from
-         some other tool. --><!--
-    <Compile Remove="$(CompilerGeneratedFilesOutputPath)/*/**/*.cs" />
-  </ItemGroup>-->
 
 </Project>

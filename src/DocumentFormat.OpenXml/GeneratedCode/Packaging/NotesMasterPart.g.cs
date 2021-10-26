@@ -27,6 +27,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(ImagePart), false, true)]
     [PartConstraint(typeof(VmlDrawingPart), false, true)]
     [PartConstraint(typeof(EmbeddedControlPersistenceBinaryDataPart), false, true)]
+    [PartConstraint(typeof(Model3DReferenceRelationshipPart), false, true)]
     [PartConstraint(typeof(ThemePart), false, false)]
     [PartConstraint(typeof(UserDefinedTagsPart), false, true)]
     [PartConstraint(typeof(SlidePart), false, false)]
@@ -120,6 +121,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 _rootElement = value as DocumentFormat.OpenXml.Presentation.NotesMaster;
             }
         }
+
+        /// <summary>
+        /// Gets the Model3DReferenceRelationshipParts of the NotesMasterPart
+        /// </summary>
+        public IEnumerable<Model3DReferenceRelationshipPart> Model3DReferenceRelationshipParts => GetPartsOfType<Model3DReferenceRelationshipPart>();
 
         /// <summary>
         /// Gets or sets the root element of this part.
@@ -433,6 +439,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new VmlDrawingPart();
                 case EmbeddedControlPersistenceBinaryDataPart.RelationshipTypeConstant:
                     return new EmbeddedControlPersistenceBinaryDataPart();
+                case Model3DReferenceRelationshipPart.RelationshipTypeConstant:
+                    return new Model3DReferenceRelationshipPart();
                 case ThemePart.RelationshipTypeConstant:
                     return new ThemePart();
                 case UserDefinedTagsPart.RelationshipTypeConstant:

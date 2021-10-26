@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
@@ -57,6 +58,33 @@ namespace DocumentFormat.OpenXml
                 }
 
                 MiscAttrContainer.ExtendedAttributesField = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets a <see cref="IFeatureCollection"/> for the current element. This feature collection will be read-only, but will inherit features from its parent part and package if available.
+        /// </summary>
+        public IFeatureCollection Features
+        {
+            get
+            {
+                if (this.GetPart()?.Features is IFeatureCollection features)
+                {
+                    if (features.IsReadOnly)
+                    {
+                        return features;
+                    }
+                    else if (features is FeatureCollection featureCollection)
+                    {
+                        return featureCollection.AsReadOnly();
+                    }
+                    else
+                    {
+                        return new FeatureCollection(features, true);
+                    }
+                }
+
+                return FeatureCollection.Empty;
             }
         }
 
@@ -195,7 +223,7 @@ namespace DocumentFormat.OpenXml
         {
         }
 
-        private protected void SetAttribute<TSimpleType>(TSimpleType? value, [CallerMemberName] string propertyName = null!)
+        private protected virtual void SetAttribute<TSimpleType>(TSimpleType? value, [CallerMemberName] string propertyName = null!)
             where TSimpleType : OpenXmlSimpleType
             => ParsedState.Attributes.GetProperty(propertyName).Value = value;
 
@@ -1474,7 +1502,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="value"></param>
         /// <param name="strictRelationshipFound"></param>
         /// <returns>true if the attribute is a known attribute.</returns>
-        private bool TrySetFixedAttribute(in OpenXmlQualifiedName qname, string? value, bool strictRelationshipFound)
+        private protected virtual bool TrySetFixedAttribute(in OpenXmlQualifiedName qname, string? value, bool strictRelationshipFound)
         {
             if (RawState.Attributes.Any())
             {

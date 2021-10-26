@@ -1,25 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), DocumentFormat.OpenXml.Package.props))\DocumentFormat.OpenXml.Package.props" />
-
   <PropertyGroup>
-    <Nullable>enable</Nullable>
     <IsShipped>true</IsShipped>
-    <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
     <NoWarn>$(NoWarn);3003</NoWarn>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <IncludeSymbols>true</IncludeSymbols>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-  </PropertyGroup>
+    <Summary>The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents</Summary>
+    <Description><![CDATA[The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:
 
-  <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+- High-performance generation of word-processing documents, spreadsheets, and presentations.
+- Populating content in Word files from an XML data source.
+- Splitting up (shredding) a Word or PowerPoint file into multiple files, and combining multiple Word/PowerPoint files into a single file.
+- Extraction of data from Excel documents.
+- Searching and replacing content in Word/PowerPoint using regular expressions.
+- Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.
+- Document modification, such as removing tracked revisions or removing unacceptable content from documents.]]>
+    </Description>
   </PropertyGroup>
 
   <ItemGroup>
@@ -117,7 +114,6 @@
     <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
       <ItemGroup>
         <PackageReference Include="System.IO.Packaging" Version="$(SystemIOPackagingVersion)" />
-        <PackageReference Include="System.Xml.ReaderWriter" Version="4.3.1" />
       </ItemGroup>
 
       <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->

@@ -16,6 +16,7 @@ using DocumentFormat.OpenXml.Office2016.Drawing;
 using DocumentFormat.OpenXml.Office2019.Drawing;
 using DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor;
 using DocumentFormat.OpenXml.Office2019.Drawing.SVG;
+using DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -11002,7 +11003,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>Miter &lt;a:miter></description></item>
     ///   <item><description>HeadEnd &lt;a:headEnd></description></item>
     ///   <item><description>TailEnd &lt;a:tailEnd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>LinePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11076,7 +11077,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList), 0, 1)
             };
         }
 
@@ -11103,7 +11104,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>Miter &lt;a:miter></description></item>
     ///   <item><description>HeadEnd &lt;a:headEnd></description></item>
     ///   <item><description>TailEnd &lt;a:tailEnd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>LinePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11177,7 +11178,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList), 0, 1)
             };
         }
 
@@ -11204,7 +11205,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>Miter &lt;a:miter></description></item>
     ///   <item><description>HeadEnd &lt;a:headEnd></description></item>
     ///   <item><description>TailEnd &lt;a:tailEnd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>LinePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11278,7 +11279,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList), 0, 1)
             };
         }
 
@@ -11305,7 +11306,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>Miter &lt;a:miter></description></item>
     ///   <item><description>HeadEnd &lt;a:headEnd></description></item>
     ///   <item><description>TailEnd &lt;a:tailEnd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>LinePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11379,7 +11380,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList), 0, 1)
             };
         }
 
@@ -11406,7 +11407,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>Miter &lt;a:miter></description></item>
     ///   <item><description>HeadEnd &lt;a:headEnd></description></item>
     ///   <item><description>TailEnd &lt;a:tailEnd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>LinePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11480,7 +11481,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList), 0, 1)
             };
         }
 
@@ -11507,7 +11508,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>Miter &lt;a:miter></description></item>
     ///   <item><description>HeadEnd &lt;a:headEnd></description></item>
     ///   <item><description>TailEnd &lt;a:tailEnd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>LinePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11581,7 +11582,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList), 0, 1)
             };
         }
 
@@ -11608,7 +11609,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>Miter &lt;a:miter></description></item>
     ///   <item><description>HeadEnd &lt;a:headEnd></description></item>
     ///   <item><description>TailEnd &lt;a:tailEnd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>LinePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11682,7 +11683,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList), 0, 1)
             };
         }
 
@@ -11709,7 +11710,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>Miter &lt;a:miter></description></item>
     ///   <item><description>HeadEnd &lt;a:headEnd></description></item>
     ///   <item><description>TailEnd &lt;a:tailEnd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>LinePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11783,7 +11784,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList), 0, 1)
             };
         }
 
@@ -11810,7 +11811,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>Miter &lt;a:miter></description></item>
     ///   <item><description>HeadEnd &lt;a:headEnd></description></item>
     ///   <item><description>TailEnd &lt;a:tailEnd></description></item>
-    ///   <item><description>ExtensionList &lt;a:extLst></description></item>
+    ///   <item><description>LinePropertiesExtensionList &lt;a:extLst></description></item>
     /// </list>
     /// </remark>
     public abstract partial class LinePropertiesType : OpenXmlCompositeElement
@@ -11847,7 +11848,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Line Width</para>
+        /// <para>line width</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
 
@@ -11863,7 +11864,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Line Ending Cap Type</para>
+        /// <para>line cap</para>
         /// <para>Represents the following attribute in the schema: cap</para>
         /// </summary>
 
@@ -11879,7 +11880,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Compound Line Type</para>
+        /// <para>compound line type</para>
         /// <para>Represents the following attribute in the schema: cmpd</para>
         /// </summary>
 
@@ -11895,7 +11896,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         }
 
         /// <summary>
-        /// <para>Stroke Alignment</para>
+        /// <para>pen alignment</para>
         /// <para>Represents the following attribute in the schema: algn</para>
         /// </summary>
 
@@ -11924,7 +11925,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<Miter>();
             builder.AddChild<HeadEnd>();
             builder.AddChild<TailEnd>();
-            builder.AddChild<ExtensionList>();
+            builder.AddChild<LinePropertiesExtensionList>();
             builder.AddElement<LinePropertiesType>()
 .AddAttribute(0, "w", a => a.Width, aBuilder =>
 {
@@ -16921,6 +16922,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     ///   <item><description>ThemeManager &lt;a:themeManager></description></item>
     ///   <item><description>Table &lt;a:tbl></description></item>
     ///   <item><description>TableStyleList &lt;a:tblStyleLst></description></item>
+    ///   <item><description>DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchStyleProperties &lt;ask:lineSketchStyleProps></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL &lt;a1611:picAttrSrcUrl></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip &lt;asvg:svgBlip></description></item>
     ///   <item><description>DocumentFormat.OpenXml.Office2019.Drawing.Decorative &lt;adec:decorative></description></item>
@@ -17236,6 +17238,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             builder.AddChild<ThemeManager>();
             builder.AddChild<Table>();
             builder.AddChild<TableStyleList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchStyleProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.PictureAttributionSourceURL>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.SVG.SVGBlip>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Decorative>();
@@ -22689,141 +22692,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DashStop>(deep);
-    }
-
-    /// <summary>
-    /// <para>Line Head/End Style.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:headEnd.</para>
-    /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(10, "headEnd")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class HeadEnd : LineEndPropertiesType
-    {
-        /// <summary>
-        /// Initializes a new instance of the HeadEnd class.
-        /// </summary>
-        public HeadEnd() : base()
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(10, "headEnd");
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeadEnd>(deep);
-    }
-
-    /// <summary>
-    /// <para>Tail line end style.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:tailEnd.</para>
-    /// </summary>
-#pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(10, "tailEnd")]
-#pragma warning restore CS0618 // Type or member is obsolete
-    public partial class TailEnd : LineEndPropertiesType
-    {
-        /// <summary>
-        /// Initializes a new instance of the TailEnd class.
-        /// </summary>
-        public TailEnd() : base()
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(10, "tailEnd");
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TailEnd>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the LineEndPropertiesType Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
-    /// </summary>
-    public abstract partial class LineEndPropertiesType : OpenXmlLeafElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the LineEndPropertiesType class.
-        /// </summary>
-        protected LineEndPropertiesType() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>Line Head/End Type</para>
-        /// <para>Represents the following attribute in the schema: type</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "type")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndValues>? Type
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineEndValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Width of Head/End</para>
-        /// <para>Represents the following attribute in the schema: w</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "w")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndWidthValues>? Width
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineEndWidthValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Length of Head/End</para>
-        /// <para>Represents the following attribute in the schema: len</para>
-        /// </summary>
-
-#pragma warning disable CS0618 // Type or member is obsolete
-
-        [SchemaAttr(0, "len")]
-#pragma warning restore CS0618 // Type or member is obsolete
-
-        public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndLengthValues>? Length
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineEndLengthValues>>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.AddElement<LineEndPropertiesType>()
-                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "w", a => a.Width, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "len", a => a.Length, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           });
-        }
     }
 
     /// <summary>
@@ -34975,6 +34843,288 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BlipExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the LinePropertiesExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchStyleProperties &lt;ask:lineSketchStyleProps></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "ext")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class LinePropertiesExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the LinePropertiesExtension class.
+        /// </summary>
+        public LinePropertiesExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LinePropertiesExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LinePropertiesExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LinePropertiesExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LinePropertiesExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LinePropertiesExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public LinePropertiesExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "uri")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchStyleProperties>();
+            builder.AddElement<LinePropertiesExtension>()
+.AddAttribute(0, "uri", a => a.Uri, aBuilder =>
+{
+aBuilder.AddValidator(RequiredValidator.Instance);
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+});
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchStyleProperties), 1, 1, version: FileFormatVersions.Office2021),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinePropertiesExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>default head line end style is none.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:headEnd.</para>
+    /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "headEnd")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class HeadEnd : LineEndPropertiesType
+    {
+        /// <summary>
+        /// Initializes a new instance of the HeadEnd class.
+        /// </summary>
+        public HeadEnd() : base()
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "headEnd");
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeadEnd>(deep);
+    }
+
+    /// <summary>
+    /// <para>default tail line end style is none.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:tailEnd.</para>
+    /// </summary>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "tailEnd")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class TailEnd : LineEndPropertiesType
+    {
+        /// <summary>
+        /// Initializes a new instance of the TailEnd class.
+        /// </summary>
+        public TailEnd() : base()
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "tailEnd");
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TailEnd>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the LineEndPropertiesType Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
+    /// </summary>
+    public abstract partial class LineEndPropertiesType : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the LineEndPropertiesType class.
+        /// </summary>
+        protected LineEndPropertiesType() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Line Head/End Type</para>
+        /// <para>Represents the following attribute in the schema: type</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "type")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndValues>? Type
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineEndValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Width of Head/End</para>
+        /// <para>Represents the following attribute in the schema: w</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "w")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndWidthValues>? Width
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineEndWidthValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Length of Head/End</para>
+        /// <para>Represents the following attribute in the schema: len</para>
+        /// </summary>
+
+#pragma warning disable CS0618 // Type or member is obsolete
+
+        [SchemaAttr(0, "len")]
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public EnumValue<DocumentFormat.OpenXml.Drawing.LineEndLengthValues>? Length
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.LineEndLengthValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<LineEndPropertiesType>()
+                           .AddAttribute(0, "type", a => a.Type, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "w", a => a.Width, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                           })
+                           .AddAttribute(0, "len", a => a.Length, aBuilder =>
+                           {
+                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                           });
+        }
+    }
+
+    /// <summary>
+    /// <para>Future extensions..</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description>LinePropertiesExtension &lt;a:ext></description></item>
+    /// </list>
+    /// </remark>
+#pragma warning disable CS0618 // Type or member is obsolete
+    [SchemaAttr(10, "extLst")]
+#pragma warning restore CS0618 // Type or member is obsolete
+    public partial class LinePropertiesExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the LinePropertiesExtensionList class.
+        /// </summary>
+        public LinePropertiesExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LinePropertiesExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LinePropertiesExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LinePropertiesExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LinePropertiesExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LinePropertiesExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public LinePropertiesExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(10, "extLst");
+            builder.AddChild<LinePropertiesExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LinePropertiesExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinePropertiesExtensionList>(deep);
     }
 
     /// <summary>

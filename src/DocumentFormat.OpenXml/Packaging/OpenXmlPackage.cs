@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -511,6 +512,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (disposing)
             {
+                var closing = Features.Get<IPackageEventsFeature>();
+
+                closing?.OnChange(this, EventType.Closing);
+
                 // Try to save contents of every part in the package
                 SavePartContents(AutoSave);
                 DeleteUnusedDataPartOnClose();
@@ -521,6 +526,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 ChildrenRelationshipParts.Clear();
                 ReferenceRelationshipList.Clear();
                 _partUriHelper = null!;
+
+                closing?.OnChange(this, EventType.Closed);
             }
 
             _disposed = true;
@@ -845,7 +852,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(contentType));
             }
 
-            if (Data.PartConstraints.TryGetValue(relationshipType, out var partConstraintRule))
+            if (this.GetPartMetadata().PartConstraints.TryGetValue(relationshipType, out var partConstraintRule))
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
@@ -920,6 +927,9 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             return Package.CreatePart(partUri, contentType, CompressionOption);
         }
+
+        private protected override IFeatureCollection CreateFeatures()
+            => new FeatureCollection(FeatureCollection.Default);
 
         #endregion
 

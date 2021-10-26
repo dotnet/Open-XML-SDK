@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract class OpenXmlPartContainer
     {
-        private readonly Dictionary<string, OpenXmlPart> _childrenPartsDictionary = new Dictionary<string, OpenXmlPart>(StringComparer.Ordinal);
+        private readonly PartDictionary _childrenPartsDictionary;
         private readonly LinkedList<ReferenceRelationship> _referenceRelationships = new LinkedList<ReferenceRelationship>();
         private object? _annotations;
 
@@ -29,13 +30,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         protected OpenXmlPartContainer()
         {
-            Data = PackageCache.Cache.ParsePartData(this);
+            _childrenPartsDictionary = new(this);
         }
 
         /// <summary>
         /// Gets the children parts IDictionary.
         /// </summary>
-        internal Dictionary<string, OpenXmlPart> ChildrenRelationshipParts
+        internal PartDictionary ChildrenRelationshipParts
         {
             get
             {
@@ -1434,7 +1435,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException);
             }
 
-            if (Data.PartConstraints.TryGetValue(newPart.RelationshipType, out var partConstraintRule))
+            if (this.GetPartMetadata().PartConstraints.TryGetValue(newPart.RelationshipType, out var partConstraintRule))
             {
                 if (!partConstraintRule.MaxOccursGreatThanOne)
                 {
@@ -1513,7 +1514,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            if (!Data.PartConstraints.TryGetValue(subPart.RelationshipType, out var partConstraintRule))
+            if (!this.GetPartMetadata().PartConstraints.TryGetValue(subPart.RelationshipType, out var partConstraintRule))
             {
                 if (subPart is ExtendedPart)
                 {
@@ -1722,7 +1723,8 @@ namespace DocumentFormat.OpenXml.Packaging
         // Updates of existing dictionary keys during enumeration are only allowed after net 5.0.
         // Before that we need a temporary dictionary to store the updated values for the keys.
 #if NET50_OR_LATER
-        private void UpdateDataParts(Dictionary<DataPart, DataPart?> dataPartsDictionary) {
+        private void UpdateDataParts(Dictionary<DataPart, DataPart?> dataPartsDictionary)
+        {
             foreach (var (key, value) in dataPartsDictionary)
             {
                 if (value is null)
@@ -1741,7 +1743,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 #else
-        private void UpdateDataParts(Dictionary<DataPart, DataPart?> dataPartsDictionary) {
+        private void UpdateDataParts(Dictionary<DataPart, DataPart?> dataPartsDictionary)
+        {
             var updatedParts = new Dictionary<DataPart, DataPart>();
             foreach (var item in dataPartsDictionary)
             {
@@ -1767,7 +1770,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 dataPartsDictionary[updatedItem.Key] = updatedItem.Value;
             }
         }
-    #endif
+#endif
 
         /// <summary>
         /// Attaches the child to the package (create the relationship)
@@ -1814,6 +1817,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 return false;
             }
 
+            var events = Features.Get<IPartEventsFeature>();
+            events?.OnChange(child, EventType.Deleting);
+
             child.FindAllReachableParts(processedParts);
 
             // remove from the collection
@@ -1856,6 +1862,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     }
                 }
             }
+
+            events?.OnChange(child, EventType.Deleted);
 
             return true;
         }
@@ -2017,7 +2025,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(relationshipType));
             }
 
-            if (Data.PartConstraints.ContainsRelationship(relationshipType))
+            if (this.GetPartMetadata().PartConstraints.ContainsRelationship(relationshipType))
             {
                 return CreatePartCore(relationshipType);
             }
@@ -2117,8 +2125,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         abstract internal OpenXmlPart? ThisOpenXmlPart { get; }
 
-        internal OpenXmlPartData Data { get; }
-
         /// <summary>
         /// Test whether the object is already disposed.
         /// </summary>
@@ -2160,6 +2166,27 @@ namespace DocumentFormat.OpenXml.Packaging
             return InternalOpenXmlPackage is not null &&
                 targetPart.OpenXmlPackage is not null &&
                 targetPart.OpenXmlPackage == InternalOpenXmlPackage;
+        }
+
+        private IFeatureCollection? _features;
+
+        private protected virtual IFeatureCollection CreateFeatures()
+            => new FeatureCollection(FeatureCollection.Default);
+
+        /// <summary>
+        /// Gets the features associated with this part.
+        /// </summary>
+        public virtual IFeatureCollection Features
+        {
+            get
+            {
+                if (_features is null)
+                {
+                    _features = CreateFeatures();
+                }
+
+                return _features;
+            }
         }
     }
 }

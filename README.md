@@ -11,15 +11,27 @@ Open XML SDK
 
 &nbsp;
 
+> # Office 2021 Support Available!
+> There is a [prerelease version](https://www.nuget.org/packages/DocumentFormat.OpenXml/2.14.0-beta0001) available with support for Office 2021 types, including for:
+> - Label Information part support
+> - PowerPoint Comments support
+> - Excel Named Sheet Views support
+> - Excel Rich Data enhancements
+> - Word Comments Extensibilty part types
+> - Document Tasks support in Word
+> - Drawing Sketchy Shapes support   
+>
+> Feel free to try this out and let us know how it works for you. Please file any issues you find and label them with `Office2021`.
+
+&nbsp;
+
 The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:
 
 - High-performance generation of word-processing documents, spreadsheets, and presentations.
-- Populating content in Word files from an XML data source.
-- Splitting up (shredding) a Word or PowerPoint file into multiple files, and combining multiple Word/PowerPoint files into a single file.
-- Extraction of data from Excel documents.
-- Searching and replacing content in Word/PowerPoint using regular expressions.
-- Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.
 - Document modification, such as adding, updating, and removing content and metadata.
+- Search and replace content using regular expressions.
+- Splitting up (shredding) a file into multiple files, and combining multiple files into a single file.
+- Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.
 
 Table of Contents
 -----------------
@@ -88,8 +100,9 @@ Related tools
 - **[Serialize.OpenXml.CodeGen](https://github.com/rmboggs/Serialize.OpenXml.CodeGen)**: This is a tool that converts an OpenXml document into the .NET code required to create it.
 - **[Html2OpenXml](https://github.com/onizet/html2openxml)**: This is a tool that takes HTML and converts it to an OpenXml document.
 - **[DocxToSource](https://github.com/rmboggs/DocxToSource)**: This is a tool designed to be a replacement for the old OpenXML SDK Productivity Tool.
-- **[OOXML Viewer](https://github.com/yuenm18/ooxml-viewer-vscode)**: This is an extension for Visual Studio Code to View and Edit the xml parts of an Office Open XML file and to view a diff with the previous version of an OOXML part when saved from an outside program. Search OOXML in the VS Code extensions tab or get it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=yuenm18.ooxml-viewer)
+- **[OOXML Viewer](https://github.com/yuenm18/ooxml-viewer-vscode)**: This is an extension for Visual Studio Code to View and Edit the xml parts of an Office Open XML file and to view a diff with the previous version of an OOXML part when saved from an outside program. Search "OOXML" in the VS Code extensions tab or download it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=yuenm18.ooxml-viewer)
 - **[ShapeCrawler](https://github.com/ShapeCrawler/ShapeCrawler)**: This library provides a simplified object model on top of the OpenXml SDK to manipulate PowerPoint documents.
+- **[OOXML Validator](https://github.com/mikeebowen/ooxml-validator-vscode)**: VS Code extension to validate Office Open XML files.  Search "OOXML" in the VS Code extensions tab or download it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=mikeebowen.ooxml-validator-vscode)
 
 Code of Conduct
 ---------------

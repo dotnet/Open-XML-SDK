@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System;
@@ -92,9 +93,6 @@ namespace DocumentFormat.OpenXml
             {
                 LoadFromPart(openXmlPart, partStream);
             }
-
-            // Synchronize RootXElement with RootElement as necessary.
-            openXmlPart.ReloadRootXElementFromPart();
         }
 
         /// <summary>
@@ -114,6 +112,9 @@ namespace DocumentFormat.OpenXml
                 // The XmlReader.Read() method requires at least four bytes from the data stream in order to begin parsing.
                 return false;
             }
+
+            var events = openXmlPart.Features.Get<IPartRootEventsFeature>();
+            events?.OnChange(EventType.Reloading, openXmlPart);
 
             var context = RootElementContext;
 
@@ -173,6 +174,8 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
+            events?.OnChange(EventType.Reloaded, openXmlPart);
+
             return true;
         }
 
@@ -190,9 +193,6 @@ namespace DocumentFormat.OpenXml
             {
                 Save(partStream);
             }
-
-            // Synchronize RootXElement with RootElement as necessary.
-            openXmlPart.ReloadRootXElementFromPart();
         }
 
         /// <summary>
@@ -210,6 +210,9 @@ namespace DocumentFormat.OpenXml
                 // We use UTF8 with no BOM as some viewers that consume documents cannot handle the BOM
                 Encoding = new UTF8Encoding(false),
             };
+
+            var events = Features.Get<IPartRootEventsFeature>();
+            events?.OnChange(EventType.Saving, OpenXmlPart);
 
             using (var xmlWriter = XmlWriter.Create(stream, settings))
             {
@@ -229,6 +232,8 @@ namespace DocumentFormat.OpenXml
                     xmlWriter.WriteEndDocument();
                 }
             }
+
+            events?.OnChange(EventType.Saved, OpenXmlPart);
         }
 
         /// <summary>

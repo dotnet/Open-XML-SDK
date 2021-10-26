@@ -1,13 +1,11 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Tests.Common.OutputHelperExtensions;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using Xunit;
@@ -67,11 +65,11 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             {
                 Element = type.FullName;
 
-                ElementLookup GetLookup()
+                ElementFactoryCollection GetLookup()
                 {
                     if (typeof(OpenXmlPartRootElement) == type)
                     {
-                        return ElementLookup.Parts;
+                        return FeatureCollection.Default.GetRequired<IRootElementFactory>().Collection;
                     }
                     else if (type.GetConstructor(Cached.Array<Type>()) is not null)
                     {
@@ -80,7 +78,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                     }
                     else
                     {
-                        return ElementLookup.Empty;
+                        return ElementFactoryCollection.Empty;
                     }
                 }
 

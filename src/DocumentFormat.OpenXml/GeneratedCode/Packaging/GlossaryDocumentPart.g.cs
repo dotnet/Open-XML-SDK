@@ -31,6 +31,8 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(WordprocessingCommentsExPart), false, false)]
     [PartConstraint(typeof(WordprocessingPeoplePart), false, false)]
     [PartConstraint(typeof(WordprocessingCommentsIdsPart), false, false)]
+    [PartConstraint(typeof(DocumentTasksPart), false, false)]
+    [PartConstraint(typeof(WordCommentsExtensiblePart), false, false)]
     [PartConstraint(typeof(AlternativeFormatImportPart), false, true)]
     [PartConstraint(typeof(ChartPart), false, true)]
     [PartConstraint(typeof(ExtendedChartPart), false, true)]
@@ -43,6 +45,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
     [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
     [PartConstraint(typeof(ImagePart), false, true)]
+    [PartConstraint(typeof(Model3DReferenceRelationshipPart), false, true)]
     [DataPartConstraint(typeof(VideoReferenceRelationship), false, true)]
     public partial class GlossaryDocumentPart : OpenXmlPart, IFixedContentTypePart
     {
@@ -104,6 +107,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the DocumentSettingsPart of the GlossaryDocumentPart
         /// </summary>
         public DocumentSettingsPart? DocumentSettingsPart => GetSubPartOfType<DocumentSettingsPart>();
+
+        /// <summary>
+        /// Gets the DocumentTasksPart of the GlossaryDocumentPart
+        /// </summary>
+        public DocumentTasksPart? DocumentTasksPart => GetSubPartOfType<DocumentTasksPart>();
 
         /// <summary>
         /// Gets the EmbeddedControlPersistenceParts of the GlossaryDocumentPart
@@ -195,6 +203,11 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
+        /// Gets the Model3DReferenceRelationshipParts of the GlossaryDocumentPart
+        /// </summary>
+        public IEnumerable<Model3DReferenceRelationshipPart> Model3DReferenceRelationshipParts => GetPartsOfType<Model3DReferenceRelationshipPart>();
+
+        /// <summary>
         /// Gets the NumberingDefinitionsPart of the GlossaryDocumentPart
         /// </summary>
         public NumberingDefinitionsPart? NumberingDefinitionsPart => GetSubPartOfType<NumberingDefinitionsPart>();
@@ -229,6 +242,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WebSettingsPart of the GlossaryDocumentPart
         /// </summary>
         public WebSettingsPart? WebSettingsPart => GetSubPartOfType<WebSettingsPart>();
+
+        /// <summary>
+        /// Gets the WordCommentsExtensiblePart of the GlossaryDocumentPart
+        /// </summary>
+        public WordCommentsExtensiblePart? WordCommentsExtensiblePart => GetSubPartOfType<WordCommentsExtensiblePart>();
 
         /// <summary>
         /// Gets the WordprocessingCommentsExPart of the GlossaryDocumentPart
@@ -499,6 +517,10 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new WordprocessingPeoplePart();
                 case WordprocessingCommentsIdsPart.RelationshipTypeConstant:
                     return new WordprocessingCommentsIdsPart();
+                case DocumentTasksPart.RelationshipTypeConstant:
+                    return new DocumentTasksPart();
+                case WordCommentsExtensiblePart.RelationshipTypeConstant:
+                    return new WordCommentsExtensiblePart();
                 case AlternativeFormatImportPart.RelationshipTypeConstant:
                     return new AlternativeFormatImportPart();
                 case ChartPart.RelationshipTypeConstant:
@@ -523,6 +545,8 @@ namespace DocumentFormat.OpenXml.Packaging
                     return new EmbeddedPackagePart();
                 case ImagePart.RelationshipTypeConstant:
                     return new ImagePart();
+                case Model3DReferenceRelationshipPart.RelationshipTypeConstant:
+                    return new Model3DReferenceRelationshipPart();
             }
 
             throw new ArgumentOutOfRangeException(nameof(relationshipType));

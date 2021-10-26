@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(112, "embedAnim")]
+    [SchemaAttr(114, "embedAnim")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class EmbeddedAnimation : OpenXmlCompositeElement
     {
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(112, "embedAnim");
+            builder.SetSchema(114, "embedAnim");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<AnimationProperties>();
             builder.AddChild<OfficeArtExtensionList>();
@@ -135,7 +135,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>When the object is serialized out as xml, it's qualified name is a3danim:posterFrame.</para>
     /// </summary>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(112, "posterFrame")]
+    [SchemaAttr(114, "posterFrame")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class PosterFrame : OpenXmlLeafElement
     {
@@ -181,7 +181,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(112, "posterFrame");
+            builder.SetSchema(114, "posterFrame");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<PosterFrame>()
 .AddAttribute(0, "animId", a => a.AnimId, aBuilder =>
@@ -210,7 +210,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(112, "animPr")]
+    [SchemaAttr(114, "animPr")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class AnimationProperties : OpenXmlCompositeElement
     {
@@ -360,7 +360,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(112, "animPr");
+            builder.SetSchema(114, "animPr");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
             builder.AddElement<AnimationProperties>()
@@ -416,7 +416,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
-    [SchemaAttr(112, "extLst")]
+    [SchemaAttr(114, "extLst")]
 #pragma warning restore CS0618 // Type or member is obsolete
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
@@ -454,7 +454,7 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema(112, "extLst");
+            builder.SetSchema(114, "extLst");
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

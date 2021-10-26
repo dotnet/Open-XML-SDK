@@ -12,7 +12,6 @@ namespace DocumentFormat.OpenXml {
     using System;
     using System.Reflection;
     
-    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -20,7 +19,7 @@ namespace DocumentFormat.OpenXml {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class ExceptionMessages {
@@ -292,6 +291,15 @@ namespace DocumentFormat.OpenXml {
         internal static string ExternalRelationshipIsNotReferenced {
             get {
                 return ResourceManager.GetString("ExternalRelationshipIsNotReferenced", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feature {0} is not available in this collection..
+        /// </summary>
+        internal static string FeatureNotRegistered {
+            get {
+                return ResourceManager.GetString("FeatureNotRegistered", resourceCulture);
             }
         }
         
@@ -871,6 +879,15 @@ namespace DocumentFormat.OpenXml {
         internal static string TextIsInvalidTrueFalseValue {
             get {
                 return ResourceManager.GetString("TextIsInvalidTrueFalseValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Encountered unexpected reentrancy while accessing part root. Please check if part root is loaded first by calling OpenXmlPart.IsRootElementLoaded.
+        /// </summary>
+        internal static string UnexpectedReentrancy {
+            get {
+                return ResourceManager.GetString("UnexpectedReentrancy", resourceCulture);
             }
         }
         

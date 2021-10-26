@@ -171,46 +171,7 @@ namespace DocumentFormat.OpenXml
 #endif
         static HexBinaryValue Create(ReadOnlySpan<byte> bytes)
         {
-            if (bytes.Length == 0)
-            {
-                return new HexBinaryValue(string.Empty);
-            }
-
-#if FEATURE_SPAN
-            Span<char> chars = stackalloc char[bytes.Length * 2];
-
-            for (int i = 0; i < bytes.Length; i++)
-            {
-                var b = bytes[i];
-                chars[i * 2] = ToCharUpper(b >> 4);
-                chars[i * 2 + 1] = ToCharUpper(b);
-            }
-
-            return new HexBinaryValue(new string(chars));
-#else
-            var sb = new StringBuilder(bytes.Length * 2);
-
-            foreach (var b in bytes)
-            {
-                sb.Append(ToCharUpper(b >> 4));
-                sb.Append(ToCharUpper(b));
-            }
-
-            return new HexBinaryValue(sb.ToString());
-#endif
-
-            static char ToCharUpper(int value)
-            {
-                value &= 0xF;
-                value += '0';
-
-                if (value > '9')
-                {
-                    value += 'A' - ('9' + 1);
-                }
-
-                return (char)value;
-            }
+            return new(HexStringFactory.Create(bytes));
         }
 
         /// <summary>
@@ -228,12 +189,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The converted HexBinary string. Returns null when <paramref name="value"/> is <c>null</c>.</returns>
         public static implicit operator string?(HexBinaryValue? value)
         {
-            if (value is null)
-            {
-                return null;
-            }
-
-            return ToString(value);
+            return value is null ? null : ToString(value);
         }
 
         /// <summary>

@@ -405,4 +405,10 @@
   <data name="UnknownError" xml:space="preserve">
     <value>An unknown error occured. Original message: '{0}'</value>
   </data>
+  <data name="FeatureNotRegistered" xml:space="preserve">
+    <value>Feature {0} is not available in this collection.</value>
+  </data>
+  <data name="UnexpectedReentrancy" xml:space="preserve">
+    <value>Encountered unexpected reentrancy while accessing part root. Please check if part root is loaded first by calling OpenXmlPart.IsRootElementLoaded</value>
+  </data>
 </root>

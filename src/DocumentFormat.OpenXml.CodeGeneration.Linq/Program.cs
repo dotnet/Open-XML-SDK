@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using System;
 using System.CodeDom.Compiler;
@@ -299,7 +300,7 @@ namespace DocumentFormat.OpenXml.CodeGeneration.Linq
             var visitedElementTypes = new HashSet<Type>();
             var elementMetadataCollection = new List<ElementMetadata>();
 
-            foreach (ElementLookup.ElementChild elementChild in ElementLookup.Parts.Elements)
+            foreach (var elementChild in FeatureCollection.Default.GetRequired<IRootElementFactory>().Collection.Elements)
             {
                 AssembleElementMetatata(ElementMetadata.None, elementChild, visitedElementTypes, elementMetadataCollection, fieldInfos);
             }
@@ -309,7 +310,7 @@ namespace DocumentFormat.OpenXml.CodeGeneration.Linq
 
         private static ElementMetadata AssembleElementMetatata(
             ElementMetadata parentMetadata,
-            ElementLookup.ElementChild elementChild,
+            ElementFactory elementChild,
             HashSet<Type> visitedTypes,
             ICollection<ElementMetadata> elementMetadataCollection,
             IDictionary<OpenXmlQualifiedName, FieldInfo> fieldInfos)
@@ -329,7 +330,7 @@ namespace DocumentFormat.OpenXml.CodeGeneration.Linq
 
             if (visitedTypes.Add(element.GetType()))
             {
-                foreach (ElementLookup.ElementChild child in elementMetadata.Children.Elements)
+                foreach (var child in elementMetadata.Children.Elements)
                 {
                     fieldInfo.AddChildElementMetadata(
                         AssembleElementMetatata(elementMetadata, child, visitedTypes, elementMetadataCollection, fieldInfos));
