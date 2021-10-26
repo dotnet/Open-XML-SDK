@@ -4,11 +4,16 @@ steps:
   - download: current
     artifact: unsigned
 
-  - task: ExtractFiles@1
-    inputs:
-      archiveFilePatterns: '$(Pipeline.Workspace)/unsigned/*.nupkg'
-      destinationFolder: '$(Pipeline.Workspace)/raw'
-    displayName: Extract NuGet Packages
+  # - task: ExtractFiles@1
+  #   inputs:
+  #     archiveFilePatterns: '$(Pipeline.Workspace)/unsigned/${{ library.Name }}.*.nupkg'
+  #     destinationFolder: '$(Pipeline.Workspace)/raw'
+  #   displayName: Extract NuGet Packages
+
+  - powershell: |
+      gci unsigned/*.nupkg `
+        | % { Expand-Archive -LiteralPath $_ -DestinationPath raw/$(_.Name.Replace('.nupkg', '')) }
+    workingDirectory: '$(Pipeline.Workspace)'
 
   - powershell: |
       gci -r
