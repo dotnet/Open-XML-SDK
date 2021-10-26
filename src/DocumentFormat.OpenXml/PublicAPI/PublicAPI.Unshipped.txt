@@ -11,51 +11,51 @@ DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList.LinePropertiesExtensi
 DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList.LinePropertiesExtensionList(params DocumentFormat.OpenXml.OpenXmlElement![]! childElements) -> void
 DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList.LinePropertiesExtensionList(string! outerXml) -> void
 DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList.LinePropertiesExtensionList(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
+DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Added = 14 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Adding = 13 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Closed = 1 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Closing = 2 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Created = 6 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Creating = 5 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Deleted = 4 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Deleting = 3 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.None = 0 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Reloaded = 10 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Reloading = 9 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Removed = 8 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Removing = 7 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Saved = 11 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.EventType.Saving = 12 -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.FeatureCollection
+DocumentFormat.OpenXml.Features.FeatureCollection.FeatureCollection() -> void
+DocumentFormat.OpenXml.Features.FeatureCollection.FeatureCollection(DocumentFormat.OpenXml.Features.IFeatureCollection! defaults, bool isReadOnly = false) -> void
+DocumentFormat.OpenXml.Features.FeatureCollection.FeatureCollection(int initialCapacity) -> void
+DocumentFormat.OpenXml.Features.FeatureCollection.Get<TFeature>() -> TFeature?
+DocumentFormat.OpenXml.Features.FeatureCollection.IsReadOnly.get -> bool
+DocumentFormat.OpenXml.Features.FeatureCollection.Set<TFeature>(TFeature? instance) -> void
+DocumentFormat.OpenXml.Features.FeatureEventArgs<TArg>
+DocumentFormat.OpenXml.Features.FeatureEventArgs<TArg>.Argument.get -> TArg
+DocumentFormat.OpenXml.Features.FeatureEventArgs<TArg>.FeatureEventArgs() -> void
+DocumentFormat.OpenXml.Features.FeatureEventArgs<TArg>.FeatureEventArgs(DocumentFormat.OpenXml.Features.EventType type, TArg arg) -> void
+DocumentFormat.OpenXml.Features.FeatureEventArgs<TArg>.Type.get -> DocumentFormat.OpenXml.Features.EventType
+DocumentFormat.OpenXml.Features.FeatureExtensions
+DocumentFormat.OpenXml.Features.IFeatureCollection
+DocumentFormat.OpenXml.Features.IFeatureCollection.Get<TFeature>() -> TFeature?
+DocumentFormat.OpenXml.Features.IFeatureCollection.IsReadOnly.get -> bool
+DocumentFormat.OpenXml.Features.IFeatureCollection.Revision.get -> int
+DocumentFormat.OpenXml.Features.IFeatureCollection.Set<TFeature>(TFeature? instance) -> void
+DocumentFormat.OpenXml.Features.IFeatureEvent<TArg>
+DocumentFormat.OpenXml.Features.IFeatureEvent<TArg>.Change -> System.Action<DocumentFormat.OpenXml.Features.FeatureEventArgs<TArg>>!
+DocumentFormat.OpenXml.Features.IPackageEventsFeature
+DocumentFormat.OpenXml.Features.IPartEventsFeature
+DocumentFormat.OpenXml.Features.IPartRootEventsFeature
+DocumentFormat.OpenXml.Features.IRaiseFeatureEvent<TArg>
+DocumentFormat.OpenXml.Features.IRaiseFeatureEvent<TArg>.OnChange(DocumentFormat.OpenXml.Features.EventType type, TArg arg) -> void
+DocumentFormat.OpenXml.Features.PackageEventExtensions
+DocumentFormat.OpenXml.Features.PartEventFeatureExtensions
+DocumentFormat.OpenXml.Features.PartRootEventExtensions
 DocumentFormat.OpenXml.FileFormatVersions.Office2021 = 32 -> DocumentFormat.OpenXml.FileFormatVersions
-DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Added = 14 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Adding = 13 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Closed = 1 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Closing = 2 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Created = 6 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Creating = 5 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Deleted = 4 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Deleting = 3 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.None = 0 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Reloaded = 10 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Reloading = 9 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Removed = 8 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Removing = 7 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Saved = 11 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.EventType.Saving = 12 -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.FeatureCollection
-DocumentFormat.OpenXml.Framework.Features.FeatureCollection.FeatureCollection() -> void
-DocumentFormat.OpenXml.Framework.Features.FeatureCollection.FeatureCollection(DocumentFormat.OpenXml.Framework.Features.IFeatureCollection! defaults, bool isReadOnly = false) -> void
-DocumentFormat.OpenXml.Framework.Features.FeatureCollection.FeatureCollection(int initialCapacity) -> void
-DocumentFormat.OpenXml.Framework.Features.FeatureCollection.Get<TFeature>() -> TFeature?
-DocumentFormat.OpenXml.Framework.Features.FeatureCollection.IsReadOnly.get -> bool
-DocumentFormat.OpenXml.Framework.Features.FeatureCollection.Set<TFeature>(TFeature? instance) -> void
-DocumentFormat.OpenXml.Framework.Features.FeatureEventArgs<TArg>
-DocumentFormat.OpenXml.Framework.Features.FeatureEventArgs<TArg>.Argument.get -> TArg
-DocumentFormat.OpenXml.Framework.Features.FeatureEventArgs<TArg>.FeatureEventArgs() -> void
-DocumentFormat.OpenXml.Framework.Features.FeatureEventArgs<TArg>.FeatureEventArgs(DocumentFormat.OpenXml.Framework.Features.EventType type, TArg arg) -> void
-DocumentFormat.OpenXml.Framework.Features.FeatureEventArgs<TArg>.Type.get -> DocumentFormat.OpenXml.Framework.Features.EventType
-DocumentFormat.OpenXml.Framework.Features.FeatureExtensions
-DocumentFormat.OpenXml.Framework.Features.IFeatureCollection
-DocumentFormat.OpenXml.Framework.Features.IFeatureCollection.Get<TFeature>() -> TFeature?
-DocumentFormat.OpenXml.Framework.Features.IFeatureCollection.IsReadOnly.get -> bool
-DocumentFormat.OpenXml.Framework.Features.IFeatureCollection.Revision.get -> int
-DocumentFormat.OpenXml.Framework.Features.IFeatureCollection.Set<TFeature>(TFeature? instance) -> void
-DocumentFormat.OpenXml.Framework.Features.IFeatureEvent<TArg>
-DocumentFormat.OpenXml.Framework.Features.IFeatureEvent<TArg>.Change -> System.Action<DocumentFormat.OpenXml.Framework.Features.FeatureEventArgs<TArg>>!
-DocumentFormat.OpenXml.Framework.Features.IPackageEventsFeature
-DocumentFormat.OpenXml.Framework.Features.IPartEventsFeature
-DocumentFormat.OpenXml.Framework.Features.IPartRootEventsFeature
-DocumentFormat.OpenXml.Framework.Features.IRaiseFeatureEvent<TArg>
-DocumentFormat.OpenXml.Framework.Features.IRaiseFeatureEvent<TArg>.OnChange(DocumentFormat.OpenXml.Framework.Features.EventType type, TArg arg) -> void
-DocumentFormat.OpenXml.Framework.Features.PackageEventExtensions
-DocumentFormat.OpenXml.Framework.Features.PartEventFeatureExtensions
-DocumentFormat.OpenXml.Framework.Features.PartRootEventExtensions
 DocumentFormat.OpenXml.Office2016.Drawing.Command.BlipFillProperties
 DocumentFormat.OpenXml.Office2016.Drawing.Command.BlipFillProperties.Blip.get -> DocumentFormat.OpenXml.Drawing.Blip?
 DocumentFormat.OpenXml.Office2016.Drawing.Command.BlipFillProperties.Blip.set -> void
@@ -1761,7 +1761,7 @@ DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension.Extension(string!
 DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension.Extension(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childElements) -> void
 DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension.Uri.get -> DocumentFormat.OpenXml.StringValue?
 DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension.Uri.set -> void
-DocumentFormat.OpenXml.OpenXmlElement.Features.get -> DocumentFormat.OpenXml.Framework.Features.IFeatureCollection!
+DocumentFormat.OpenXml.OpenXmlElement.Features.get -> DocumentFormat.OpenXml.Features.IFeatureCollection!
 DocumentFormat.OpenXml.Packaging.DocumentTasksPart
 DocumentFormat.OpenXml.Packaging.DocumentTasksPart.DocumentTasksPart() -> void
 DocumentFormat.OpenXml.Packaging.DocumentTasksPart.Tasks.get -> DocumentFormat.OpenXml.Office2021.DocumentTasks.Tasks!
@@ -2134,10 +2134,10 @@ override sealed DocumentFormat.OpenXml.Packaging.WorkbookPersonPart.ContentType.
 override sealed DocumentFormat.OpenXml.Packaging.WorkbookPersonPart.RelationshipType.get -> string!
 override sealed DocumentFormat.OpenXml.Packaging.WorksheetThreadedCommentsPart.ContentType.get -> string!
 override sealed DocumentFormat.OpenXml.Packaging.WorksheetThreadedCommentsPart.RelationshipType.get -> string!
-static DocumentFormat.OpenXml.Framework.Features.FeatureExtensions.GetRequired<TFeature>(this DocumentFormat.OpenXml.Framework.Features.IFeatureCollection! features) -> TFeature
-static DocumentFormat.OpenXml.Framework.Features.PackageEventExtensions.TryAddPackageEventsFeature(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! package) -> bool
-static DocumentFormat.OpenXml.Framework.Features.PartEventFeatureExtensions.TryAddPartEventsFeature(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! package) -> bool
-static DocumentFormat.OpenXml.Framework.Features.PartRootEventExtensions.TryAddPartRootEventsFeature(this DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer! container) -> bool
+static DocumentFormat.OpenXml.Features.FeatureExtensions.GetRequired<TFeature>(this DocumentFormat.OpenXml.Features.IFeatureCollection! features) -> TFeature
+static DocumentFormat.OpenXml.Features.PackageEventExtensions.AddPackageEventsFeature(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! package) -> void
+static DocumentFormat.OpenXml.Features.PartEventFeatureExtensions.AddPartEventsFeature(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! package) -> void
+static DocumentFormat.OpenXml.Features.PartRootEventExtensions.AddPartRootEventsFeature(this DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer! container) -> void
 static DocumentFormat.OpenXml.Packaging.OpenXmlPackageExtensions.GetAllParts(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! package) -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Packaging.OpenXmlPart!>!
-virtual DocumentFormat.OpenXml.Framework.Features.FeatureCollection.Revision.get -> int
-virtual DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.Features.get -> DocumentFormat.OpenXml.Framework.Features.IFeatureCollection!
+virtual DocumentFormat.OpenXml.Features.FeatureCollection.Revision.get -> int
+virtual DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.Features.get -> DocumentFormat.OpenXml.Features.IFeatureCollection!
