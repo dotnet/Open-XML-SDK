@@ -7,7 +7,7 @@ using NSubstitute;
 using System.IO;
 using Xunit;
 
-namespace DocumentFormat.OpenXml.Framework.Features.Tests
+namespace DocumentFormat.OpenXml.Features.Tests
 {
     public class FeaturesInOpenXmlPartContainerTests
     {

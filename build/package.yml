@@ -4,19 +4,13 @@ jobs:
       ProjectLoadStyle: All
       Configuration: Release
     pool:
-      vmImage: 'windows-2019'
+      vmImage: 'windows-2019' # Needed for PEVerify
     steps:
     - task: UseDotNet@2
       displayName: 'Install SDK'
       inputs:
         packageType: 'sdk'
         useGlobalJson: true
-
-    - task: UseDotNet@2
-      displayName: 'Install .NET Runtime 3.1.10'
-      inputs:
-        packageType: 'runtime'
-        version: 3.1.10
 
     - task: PowerShell@2
       displayName: 'Update version'

@@ -7,7 +7,7 @@ using NSubstitute.Extensions;
 using System;
 using Xunit;
 
-namespace DocumentFormat.OpenXml.Framework.Features.Tests
+namespace DocumentFormat.OpenXml.Features.Tests
 {
     public class DisposableFeatureTests
     {
@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Framework.Features.Tests
 
             var feature = Substitute.For<IDisposable>();
 
-            features.TryAddDisposableFeature();
+            features.AddDisposableFeature();
             features.SetDisposable(feature);
 
             var package = Substitute.ForPartsOf<OpenXmlPackage>();
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Framework.Features.Tests
 
             var feature = Substitute.For<IDisposable>();
 
-            features.TryAddDisposableFeature();
+            features.AddDisposableFeature();
             features.SetDisposable(feature);
 
             var part = Substitute.ForPartsOf<OpenXmlPart>();
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Framework.Features.Tests
 
             var feature = Substitute.For<IDisposable>();
 
-            features.TryAddDisposableFeature();
+            features.AddDisposableFeature();
             features.SetDisposable(feature);
 
             var part = Substitute.ForPartsOf<OpenXmlPart>();

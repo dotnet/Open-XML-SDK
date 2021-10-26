@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 
-namespace DocumentFormat.OpenXml.Framework.Features
+namespace DocumentFormat.OpenXml.Features
 {
     /// <summary>
     /// Extension methods to add retrieve disposable features.
@@ -16,69 +16,61 @@ namespace DocumentFormat.OpenXml.Framework.Features
         /// Adds disposable feature.
         /// </summary>
         /// <param name="package">Package to add disposable feature to.</param>
-        public static bool TryAddDisposableFeature(this OpenXmlPackage package)
+        public static void AddDisposableFeature(this OpenXmlPackage package)
         {
-            package.TryAddPartEventsFeature();
-            package.TryAddPackageEventsFeature();
-
-            if (package.Features.TryAddDisposableFeature())
+            if (package.Features.Get<IDisposableFeature>() is not null)
             {
-                // Add feature to all parts already created
-                foreach (var part in package.GetAllParts())
-                {
-                    part.Features.Set<IDisposableFeature>(new DisposableFeature());
-                }
-
-                return true;
+                return;
             }
 
-            return false;
+            package.AddPartEventsFeature();
+            package.AddPackageEventsFeature();
+            package.Features.AddDisposableFeature();
+
+            // Add feature to all parts already created
+            foreach (var part in package.GetAllParts())
+            {
+                part.Features.AddDisposableFeature();
+            }
         }
 
         /// <summary>
         /// Adds disposable feature to the package a part is contained in.
         /// </summary>
         /// <param name="part">Part to add disposable feature to.</param>
-        public static bool TryAddDisposableFeature(this OpenXmlPart part)
+        public static void AddDisposableFeature(this OpenXmlPart part)
         {
             if (part.Features.Get<IDisposableFeature>() is null)
             {
-                return part.OpenXmlPackage.TryAddDisposableFeature();
+                part.OpenXmlPackage.AddDisposableFeature();
             }
-
-            return false;
         }
 
         /// <summary>
         /// Adds disposable feature.
         /// </summary>
         /// <param name="features">Features collection to add disposable feature to.</param>
-        public static bool TryAddDisposableFeature(this IFeatureCollection features)
+        public static void AddDisposableFeature(this IFeatureCollection features)
         {
-            if (features.Get<IDisposableFeature>() is not null)
+            if (features.Get<IDisposableFeature>() is null)
             {
-                return false;
+                features.Set<IDisposableFeature>(new DisposableFeature());
+
+                AddPackageEvents(features);
+                AddPartEvents(features);
             }
+        }
 
-            var feature = new DisposableFeature();
-
-            features.Set<IDisposableFeature>(feature);
-
+        private static void AddPackageEvents(this IFeatureCollection features)
+        {
             var packageEvents = features.GetRequired<IPackageEventsFeature>();
+
             packageEvents.Change += PackageChanged;
 
-            // Add events to add to any new events
-            var events = features.GetRequired<IPartEventsFeature>();
-
-            events.Change += PartChanged;
-
-            feature.Register(new DelegateDisposable(() =>
+            features.SetDisposable(new DelegateDisposable(() =>
             {
-                events.Change -= PartChanged;
                 packageEvents.Change -= PackageChanged;
             }));
-
-            return true;
 
             static void PackageChanged(FeatureEventArgs<OpenXmlPackage> arg)
             {
@@ -87,6 +79,18 @@ namespace DocumentFormat.OpenXml.Framework.Features
                     arg.Argument.Features.Dispose();
                 }
             }
+        }
+
+        private static void AddPartEvents(this IFeatureCollection features)
+        {
+            var partEvents = features.GetRequired<IPartEventsFeature>();
+
+            partEvents.Change += PartChanged;
+
+            features.SetDisposable(new DelegateDisposable(() =>
+            {
+                partEvents.Change -= PartChanged;
+            }));
 
             static void PartChanged(FeatureEventArgs<OpenXmlPart> arg)
             {
@@ -99,18 +103,6 @@ namespace DocumentFormat.OpenXml.Framework.Features
                     arg.Argument.Features.Dispose();
                 }
             }
-        }
-
-        private class DelegateDisposable : IDisposable
-        {
-            private readonly Action _action;
-
-            public DelegateDisposable(Action action)
-            {
-                _action = action;
-            }
-
-            public void Dispose() => _action();
         }
 
         /// <summary>
@@ -137,6 +129,18 @@ namespace DocumentFormat.OpenXml.Framework.Features
             {
                 feature.Dispose();
             }
+        }
+
+        private class DelegateDisposable : IDisposable
+        {
+            private readonly Action _action;
+
+            public DelegateDisposable(Action action)
+            {
+                _action = action;
+            }
+
+            public void Dispose() => _action();
         }
 
         private sealed class DisposableFeature : IDisposableFeature, IDisposable

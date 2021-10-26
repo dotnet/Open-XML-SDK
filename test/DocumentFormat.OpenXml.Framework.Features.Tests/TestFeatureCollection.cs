@@ -5,7 +5,7 @@ using NSubstitute;
 using System;
 using System.Collections.Generic;
 
-namespace DocumentFormat.OpenXml.Framework.Features.Tests
+namespace DocumentFormat.OpenXml.Features.Tests
 {
     internal class TestFeatureCollection : IFeatureCollection
     {

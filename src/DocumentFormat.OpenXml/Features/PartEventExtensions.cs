@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 
-namespace DocumentFormat.OpenXml.Framework.Features
+namespace DocumentFormat.OpenXml.Features
 {
     /// <summary>
     /// Extensions to add events around parts.
@@ -14,15 +14,12 @@ namespace DocumentFormat.OpenXml.Framework.Features
         /// Adds a feature to track eventing for a package creating or removing parts.
         /// </summary>
         /// <param name="package">Package to add the feature to.</param>
-        public static bool TryAddPartEventsFeature(this OpenXmlPackage package)
+        public static void AddPartEventsFeature(this OpenXmlPackage package)
         {
             if (package.Features.Get<IPartEventsFeature>() is null)
             {
                 package.Features.Set<IPartEventsFeature>(new PartEventsFeature());
-                return true;
             }
-
-            return false;
         }
 
         internal static void OnChange(this IPartEventsFeature events, OpenXmlPart part, EventType type)

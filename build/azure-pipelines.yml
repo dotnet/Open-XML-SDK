@@ -15,6 +15,7 @@ variables:
 stages:
   - stage: Build
     jobs:
+      - template: package.yml
       - template: build.yml
         parameters:
           buildTargets:
@@ -61,19 +62,15 @@ stages:
                 - image: 'ubuntu-20.04'
                   name: 'linux'
 
-  - stage: Package
-    jobs:
-      - template: package.yml
-
   - stage: Sign
     jobs:
     - job: Sign
       displayName: Sign assemblies and package
       pool:
-        name: Hosted Windows 2019 with VS2019
+        vmImage: 'windows-2019'
       steps:
         - template: sign.yml
-    dependsOn: Package
+    dependsOn: Build
     condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
   
   - stage: Feed
@@ -81,7 +78,7 @@ stages:
     - job: Feed
       displayName: Deploy to CI Feed
       pool:
-        name: Hosted Windows 2019 with VS2019
+        vmImage: 'ubuntu-20.04'
       steps:
         - template: sleet.yml
     dependsOn: 
