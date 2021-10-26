@@ -5,6 +5,7 @@
     <IsTestProject>true</IsTestProject>
     <IsPackable>false</IsPackable>
     <Nullable>enable</Nullable>
+    <IncludeFrameworkShims>true</IncludeFrameworkShims>
   </PropertyGroup>
 
   <ItemGroup>

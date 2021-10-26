@@ -31,7 +31,7 @@
     <ShimFile Include="$(MSBuildThisFileDirectory)System\FormattableString.cs" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net452' ">
     <ShimFile Include="$(MSBuildThisFileDirectory)System\HashCode.cs" />
     <ShimFile Include="$(MSBuildThisFileDirectory)System\Span.cs" />
     <ShimFile Include="$(MSBuildThisFileDirectory)System\SpanExtensions.cs" />
