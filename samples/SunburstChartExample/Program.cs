@@ -9,7 +9,6 @@ using A = DocumentFormat.OpenXml.Drawing;
 using C = DocumentFormat.OpenXml.Drawing.Charts;
 using C16 = DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using Cs = DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle;
-using P = DocumentFormat.OpenXml.Presentation;
 using P14 = DocumentFormat.OpenXml.Office2010.PowerPoint;
 
 #pragma warning disable CA1303 // Do not pass literals as localized parameters
