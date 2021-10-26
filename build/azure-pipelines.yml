@@ -1,7 +1,6 @@
 trigger:
 - main
 - release/*
-- signing
 
 pr:
   autoCancel: true
