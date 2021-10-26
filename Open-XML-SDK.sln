@@ -27,6 +27,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentFormat.OpenXml.Packaging.Tests", "test\DocumentFormat.OpenXml.Packaging.Tests\DocumentFormat.OpenXml.Packaging.Tests.csproj", "{B9138975-0D18-4EC7-92C3-A2DB71DF64E9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A4DF60EB-3AA5-48F0-B4D2-3F94B8E62F03}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0782A132-968D-4BDD-911A-2C3074EAF886}"
 EndProject

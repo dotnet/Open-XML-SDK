@@ -28,14 +28,6 @@
     <None Include="**\*.md" />
   </ItemGroup>
 
-  <ItemGroup>
-     <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="3.3.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-  </ItemGroup>
-
   <Choose>
     <When Condition=" '$(TargetFramework)' == 'net35'">
       <PropertyGroup>
@@ -189,8 +181,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="PublicAPI.Shipped.$(TargetFramework).txt" Condition="Exists('PublicAPI.Shipped.$(TargetFramework).txt')" />
-    <AdditionalFiles Include="PublicAPI.Unshipped.$(TargetFramework).txt" Condition="Exists('PublicAPI.Unshipped.$(TargetFramework).txt')" />
+    <AdditionalFiles Include="PublicAPI\$(TargetFramework)\PublicAPI.Shipped.txt" />
+    <AdditionalFiles Include="PublicAPI\PublicAPI.Unshipped.txt" />
   </ItemGroup>
 
   <Import Project="$(MSBuildThisFileDirectory)\PEVerify.targets" />

@@ -1,0 +1,35 @@
+﻿DocumentFormat.OpenXml.Features.IParagraphIdCollectionFeature
+DocumentFormat.OpenXml.Features.IParagraphIdCollectionFeature.Contains(string! id) -> bool
+DocumentFormat.OpenXml.Features.IParagraphIdCollectionFeature.Count.get -> int
+DocumentFormat.OpenXml.Features.IParagraphIdGeneratorFeature
+DocumentFormat.OpenXml.Features.IParagraphIdGeneratorFeature.CreateUniqueParagraphId() -> string!
+DocumentFormat.OpenXml.Features.IRandomNumberGeneratorFeature
+DocumentFormat.OpenXml.Features.IRandomNumberGeneratorFeature.GetBytes(byte[]! bytes) -> void
+DocumentFormat.OpenXml.Features.ISharedFeature<T>
+DocumentFormat.OpenXml.Features.ISharedFeature<T>.Add(T feature) -> void
+DocumentFormat.OpenXml.Features.ISharedFeature<T>.Composite.get -> T
+DocumentFormat.OpenXml.Features.ISharedFeature<T>.Count.get -> int
+DocumentFormat.OpenXml.Features.ISharedFeature<T>.Remove(T feature) -> bool
+DocumentFormat.OpenXml.Features.ParagraphIdFeatureExtensions
+DocumentFormat.OpenXml.Features.ParagraphIdOptions
+DocumentFormat.OpenXml.Features.ParagraphIdOptions.AutoGenerateIds.get -> bool
+DocumentFormat.OpenXml.Features.ParagraphIdOptions.AutoGenerateIds.init -> void
+DocumentFormat.OpenXml.Features.ParagraphIdOptions.EnsureUniquenessOnExistingNodes.get -> bool
+DocumentFormat.OpenXml.Features.ParagraphIdOptions.EnsureUniquenessOnExistingNodes.init -> void
+DocumentFormat.OpenXml.Features.ParagraphIdOptions.ParagraphIdOptions() -> void
+DocumentFormat.OpenXml.Features.RandomNumberGeneratorFeatureExtensions
+DocumentFormat.OpenXml.Features.SharedParagraphIdFeatureExtensions
+DocumentFormat.OpenXml.Framework.Features.DisposableFeatureExtensions
+DocumentFormat.OpenXml.Framework.Features.IDisposableFeature
+DocumentFormat.OpenXml.Framework.Features.IDisposableFeature.Register(System.IDisposable! disposable) -> void
+static DocumentFormat.OpenXml.Features.ParagraphIdFeatureExtensions.GetParagraphIdCollectionFeature(this DocumentFormat.OpenXml.Packaging.WordprocessingDocument! doc) -> DocumentFormat.OpenXml.Features.IParagraphIdCollectionFeature!
+static DocumentFormat.OpenXml.Features.ParagraphIdFeatureExtensions.TryAddParagraphIdFeature(this DocumentFormat.OpenXml.Packaging.WordprocessingDocument! doc, DocumentFormat.OpenXml.Features.ParagraphIdOptions? options = null) -> bool
+static DocumentFormat.OpenXml.Features.ParagraphIdFeatureExtensions.TryAddParagraphIdGeneratorFeature(this DocumentFormat.OpenXml.Packaging.WordprocessingDocument! doc) -> bool
+static DocumentFormat.OpenXml.Features.RandomNumberGeneratorFeatureExtensions.TryAddRandomNumberGeneratorFeature(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! package) -> bool
+static DocumentFormat.OpenXml.Features.SharedParagraphIdFeatureExtensions.Add(this DocumentFormat.OpenXml.Features.ISharedFeature<DocumentFormat.OpenXml.Features.IParagraphIdCollectionFeature!>! shared, DocumentFormat.OpenXml.Packaging.WordprocessingDocument! doc) -> DocumentFormat.OpenXml.Features.ISharedFeature<DocumentFormat.OpenXml.Features.IParagraphIdCollectionFeature!>!
+static DocumentFormat.OpenXml.Features.SharedParagraphIdFeatureExtensions.Add(this DocumentFormat.OpenXml.Features.ISharedFeature<DocumentFormat.OpenXml.Features.IParagraphIdCollectionFeature!>! shared, System.Collections.Generic.IEnumerable<string!>! paragraphIds) -> DocumentFormat.OpenXml.Features.ISharedFeature<DocumentFormat.OpenXml.Features.IParagraphIdCollectionFeature!>!
+static DocumentFormat.OpenXml.Features.SharedParagraphIdFeatureExtensions.AddSharedParagraphIdFeature(this DocumentFormat.OpenXml.Packaging.WordprocessingDocument! doc) -> DocumentFormat.OpenXml.Features.ISharedFeature<DocumentFormat.OpenXml.Features.IParagraphIdCollectionFeature!>!
+static DocumentFormat.OpenXml.Framework.Features.DisposableFeatureExtensions.SetDisposable<TFeature>(this DocumentFormat.OpenXml.Framework.Features.IFeatureCollection! features, TFeature feature) -> void
+static DocumentFormat.OpenXml.Framework.Features.DisposableFeatureExtensions.TryAddDisposableFeature(this DocumentFormat.OpenXml.Framework.Features.IFeatureCollection! features) -> bool
+static DocumentFormat.OpenXml.Framework.Features.DisposableFeatureExtensions.TryAddDisposableFeature(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! package) -> bool
+static DocumentFormat.OpenXml.Framework.Features.DisposableFeatureExtensions.TryAddDisposableFeature(this DocumentFormat.OpenXml.Packaging.OpenXmlPart! part) -> bool

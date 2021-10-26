@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// A factory of hex strings.
     /// </summary>
-    public static class HexStringFactory
+    internal static class HexStringFactory
     {
         /// <summary>
         /// Returns a new hex string that was created from <paramref name="bytes"/>.

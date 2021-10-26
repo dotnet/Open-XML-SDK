@@ -1,3 +1,0 @@
-﻿#nullable enable
-DocumentFormat.OpenXml.Packaging.OpenXmlPart.ValidateXml(string! schemaFile, System.Xml.Schema.ValidationEventHandler! validationEventHandler) -> void
-DocumentFormat.OpenXml.Packaging.OpenXmlPart.ValidateXml(System.Xml.Schema.XmlSchemaSet! schemas, System.Xml.Schema.ValidationEventHandler! validationEventHandler) -> void

@@ -1,6 +1,0 @@
-﻿#nullable enable
-DocumentFormat.OpenXml.Validation.OpenXmlValidator.Validate(DocumentFormat.OpenXml.OpenXmlElement! openXmlElement, System.Threading.CancellationToken token = default(System.Threading.CancellationToken)) -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Validation.ValidationErrorInfo!>!
-DocumentFormat.OpenXml.Validation.OpenXmlValidator.Validate(DocumentFormat.OpenXml.Packaging.OpenXmlPackage! openXmlPackage, System.Threading.CancellationToken token = default(System.Threading.CancellationToken)) -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Validation.ValidationErrorInfo!>!
-DocumentFormat.OpenXml.Validation.OpenXmlValidator.Validate(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, System.Threading.CancellationToken token = default(System.Threading.CancellationToken)) -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Validation.ValidationErrorInfo!>!
-DocumentFormat.OpenXml.Packaging.OpenXmlPart.ValidateXml(string! schemaFile, System.Xml.Schema.ValidationEventHandler! validationEventHandler) -> void
-DocumentFormat.OpenXml.Packaging.OpenXmlPart.ValidateXml(System.Xml.Schema.XmlSchemaSet! schemas, System.Xml.Schema.ValidationEventHandler! validationEventHandler) -> void
