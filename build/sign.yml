@@ -51,7 +51,7 @@ steps:
 
   - powershell: |
       gci -r CodeSignSummary | rm
-      gci -Directory | % { Compress-Archive $_ -DestinationPath "$_.nupkg" }
+      gci -Directory | % { [IO.Compression.ZipFile]::CreateFromDirectory($_, "$_.nupkg") }
     workingDirectory: '$(Pipeline.Workspace)/unsigned/raw'
 
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
