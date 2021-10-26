@@ -4,7 +4,7 @@ steps:
   - download: current
     artifact: unsigned
 
-  - powershell: |
+  - pwsh: |
       mkdir raw
       gci ..\unsigned\*.nupkg | % { Expand-Archive $_ }
     workingDirectory: '$(Pipeline.Workspace)/unsigned'
@@ -49,7 +49,7 @@ steps:
           }
         ]
 
-  - powershell: |
+  - pwsh: |
       gci -r CodeSignSummary | rm
       gci -Directory | % { [IO.Compression.ZipFile]::CreateFromDirectory($_, "$_.nupkg") }
     workingDirectory: '$(Pipeline.Workspace)/unsigned/raw'
