@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Features
 {
     internal class AnnotationsFeature
     {
