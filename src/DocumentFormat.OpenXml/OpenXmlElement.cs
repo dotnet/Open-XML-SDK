@@ -12,7 +12,6 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Xml;
 using System.Xml.Linq;
@@ -27,9 +26,7 @@ namespace DocumentFormat.OpenXml
     /// </remarks>
     public abstract partial class OpenXmlElement : IEnumerable<OpenXmlElement>, ICloneable
     {
-        // implement annotations mechanism like XObject in LINQ to XML
-        // Annotations will not be cloned when calling .Clone() and .CloneNode(bool)
-        private object? _annotations;
+        private IFeatureCollection? _features;
 
         private string _rawOuterXml = string.Empty;
 
@@ -68,23 +65,12 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (this.GetPart()?.Features is IFeatureCollection features)
+                if (_features is null)
                 {
-                    if (features.IsReadOnly)
-                    {
-                        return features;
-                    }
-                    else if (features is FeatureCollection featureCollection)
-                    {
-                        return featureCollection.AsReadOnly();
-                    }
-                    else
-                    {
-                        return new FeatureCollection(features, true);
-                    }
+                    _features = new ElementFeatureCollection(this);
                 }
 
-                return FeatureCollection.Empty;
+                return _features;
             }
         }
 
@@ -1931,49 +1917,11 @@ namespace DocumentFormat.OpenXml
 
         #region annotations
 
-        //  This code is copied from PartContainer.
-        //  Duplicate code.
-        //  Fix both code on bug fixing.
-
         /// <summary>
         /// Adds an object to the current OpenXmlElement element's list of annotations.
         /// </summary>
         /// <param name="annotation">The annotation to add to the current OpenXmlElement element.</param>
-        public void AddAnnotation(object annotation)
-        {
-            if (annotation is null)
-            {
-                throw new ArgumentNullException(nameof(annotation));
-            }
-
-            if (_annotations is null)
-            {
-                _annotations = (annotation is object[]) ? new object[] { annotation } : annotation;
-            }
-            else
-            {
-                if (_annotations is not object[] annotations)
-                {
-                    _annotations = new object[] { _annotations, annotation };
-                }
-                else
-                {
-                    var index = 0;
-                    while ((index < annotations.Length) && (annotations[index] is not null))
-                    {
-                        index++;
-                    }
-
-                    if (index == annotations.Length)
-                    {
-                        Array.Resize<object>(ref annotations, index * 2);
-                        _annotations = annotations;
-                    }
-
-                    annotations[index] = annotation;
-                }
-            }
-        }
+        public void AddAnnotation(object annotation) => Features.GetRequired<AnnotationsFeature>().AddAnnotation(annotation);
 
         /// <summary>
         /// Get the first annotation object of the specified type from the current OpenXmlElement element.
@@ -1983,30 +1931,7 @@ namespace DocumentFormat.OpenXml
         public T? Annotation<T>()
             where T : class
         {
-            if (_annotations is not null)
-            {
-                if (_annotations is not object[] annotations)
-                {
-                    return _annotations as T;
-                }
-
-                for (var i = 0; i < annotations.Length; i++)
-                {
-                    var obj = annotations[i];
-
-                    if (obj is null)
-                    {
-                        break;
-                    }
-
-                    if (obj is T t)
-                    {
-                        return t;
-                    }
-                }
-            }
-
-            return null;
+            return Features.GetRequired<AnnotationsFeature>().Annotation<T>();
         }
 
         /// <summary>
@@ -2014,42 +1939,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="type">The type of the annotation to retrieve.</param>
         /// <returns>The first annotation object with the specified type.</returns>
-        public object? Annotation(Type type)
-        {
-            if (type is null)
-            {
-                throw new ArgumentNullException(nameof(type));
-            }
-
-            if (_annotations is not null)
-            {
-                if (_annotations is not object[] annotations)
-                {
-                    if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
-                    {
-                        return _annotations;
-                    }
-                }
-                else
-                {
-                    for (var i = 0; i < annotations.Length; i++)
-                    {
-                        var obj = annotations[i];
-                        if (obj is null)
-                        {
-                            break;
-                        }
-
-                        if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
-                        {
-                            return obj;
-                        }
-                    }
-                }
-            }
-
-            return null;
-        }
+        public object? Annotation(Type type) => Features.GetRequired<AnnotationsFeature>().Annotation(type);
 
         /// <summary>
         /// Gets a collection of annotations with the specified type for the current OpenXmlElement element.
@@ -2059,33 +1949,7 @@ namespace DocumentFormat.OpenXml
         public IEnumerable<T> Annotations<T>()
             where T : class
         {
-            if (_annotations is not null)
-            {
-                var annotations = _annotations as object[];
-                if (annotations is null)
-                {
-                    if (_annotations is T)
-                    {
-                        yield return (T)_annotations;
-                    }
-                }
-                else
-                {
-                    for (var i = 0; i < annotations.Length; i++)
-                    {
-                        var obj = annotations[i];
-                        if (obj is null)
-                        {
-                            break;
-                        }
-
-                        if (obj is T)
-                        {
-                            yield return (T)obj;
-                        }
-                    }
-                }
-            }
+            return Features.GetRequired<AnnotationsFeature>().Annotations<T>();
         }
 
         /// <summary>
@@ -2093,41 +1957,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="type">The type of the annotations to retrieve.</param>
         /// <returns>An IEnumerable(T) object that contains the annotations for the current OpenXmlElement element.</returns>
-        public IEnumerable<object> Annotations(Type type)
-        {
-            if (type is null)
-            {
-                throw new ArgumentNullException(nameof(type));
-            }
-
-            if (_annotations is not null)
-            {
-                var annotations = _annotations as object[];
-                if (annotations is null)
-                {
-                    if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
-                    {
-                        yield return _annotations;
-                    }
-                }
-                else
-                {
-                    for (var i = 0; i < annotations.Length; i++)
-                    {
-                        var obj = annotations[i];
-                        if (obj is null)
-                        {
-                            break;
-                        }
-
-                        if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
-                        {
-                            yield return obj;
-                        }
-                    }
-                }
-            }
-        }
+        public IEnumerable<object> Annotations(Type type) => Features.GetRequired<AnnotationsFeature>().Annotations(type);
 
         /// <summary>
         /// Removes the annotations with the specified type from the current OpenXmlElement element.
@@ -2136,104 +1966,14 @@ namespace DocumentFormat.OpenXml
         public void RemoveAnnotations<T>()
             where T : class
         {
-            if (_annotations is not null)
-            {
-                if (_annotations is not object?[] annotations)
-                {
-                    if (_annotations is T)
-                    {
-                        _annotations = null;
-                    }
-                }
-                else
-                {
-                    var index = 0;
-                    var num = 0;
-                    while (index < annotations.Length)
-                    {
-                        var obj = annotations[index];
-                        if (obj is null)
-                        {
-                            break;
-                        }
-
-                        if (!(obj is T))
-                        {
-                            annotations[num++] = obj;
-                        }
-
-                        index++;
-                    }
-
-                    if (num != 0)
-                    {
-                        while (num < index)
-                        {
-                            annotations[num++] = null;
-                        }
-                    }
-                    else
-                    {
-                        _annotations = null;
-                    }
-                }
-            }
+            Features.GetRequired<AnnotationsFeature>().RemoveAnnotations<T>();
         }
 
         /// <summary>
         /// Removes the annotations of the specified type from the current OpenXmlElement element.
         /// </summary>
         /// <param name="type">The type of the annotations to remove.</param>
-        public void RemoveAnnotations(Type type)
-        {
-            if (type is null)
-            {
-                throw new ArgumentNullException(nameof(type));
-            }
-
-            if (_annotations is not null)
-            {
-                if (_annotations is not object?[] annotations)
-                {
-                    if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
-                    {
-                        _annotations = null;
-                    }
-                }
-                else
-                {
-                    var index = 0;
-                    var num = 0;
-                    while (index < annotations.Length)
-                    {
-                        var o = annotations[index];
-                        if (o is null)
-                        {
-                            break;
-                        }
-
-                        if (!type.GetTypeInfo().IsAssignableFrom(o.GetType().GetTypeInfo()))
-                        {
-                            annotations[num++] = o;
-                        }
-
-                        index++;
-                    }
-
-                    if (num != 0)
-                    {
-                        while (num < index)
-                        {
-                            annotations[num++] = null;
-                        }
-                    }
-                    else
-                    {
-                        _annotations = null;
-                    }
-                }
-            }
-        }
+        public void RemoveAnnotations(Type type) => Features.GetRequired<AnnotationsFeature>().RemoveAnnotations(type);
 
         #endregion
 
@@ -2849,6 +2589,51 @@ namespace DocumentFormat.OpenXml
             }
 
             return root as OpenXmlPartRootElement;
+        }
+
+        private sealed class ElementFeatureCollection : IFeatureCollection
+        {
+            private readonly OpenXmlElement _owner;
+            private AnnotationsFeature? _annotations = null;
+
+            public ElementFeatureCollection(OpenXmlElement owner)
+            {
+                _owner = owner;
+            }
+
+            public bool IsReadOnly => true;
+
+            public int Revision => GetPartFeatures()?.Revision ?? 0;
+
+            public IFeatureCollection? GetPartFeatures()
+                => _owner.GetPart()?.Features;
+
+            public TFeature? Get<TFeature>()
+            {
+                if (typeof(TFeature) == typeof(AnnotationsFeature))
+                {
+                    if (_annotations is null)
+                    {
+                        _annotations = new();
+                    }
+
+                    return (TFeature)(object)_annotations;
+                }
+
+                var defaultFeatures = GetPartFeatures();
+
+                if (defaultFeatures is null)
+                {
+                    return default;
+                }
+
+                return defaultFeatures.Get<TFeature>();
+            }
+
+            public void Set<TFeature>(TFeature? instance)
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
