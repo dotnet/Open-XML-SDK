@@ -71,16 +71,13 @@ stages:
       steps:
         - template: sign.yml
           parameters:
-            libraryName: 'DocumentFormat.OpenXml'
-        - template: sign.yml
-          parameters:
-            libraryName: 'DocumentFormat.OpenXml.Features'
-        - template: sign.yml
-          parameters:
-            libraryName: 'DocumentFormat.OpenXml.Linq'
+            libraryNames: 
+              - name: 'DocumentFormat.OpenXml'
+              - name: 'DocumentFormat.OpenXml.Features'
+              - name: 'DocumentFormat.OpenXml.Linq'
 
     dependsOn: Build
-    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+    # condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
   
   - stage: Feed
     jobs:
