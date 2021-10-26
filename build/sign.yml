@@ -8,7 +8,7 @@ steps:
     inputs:
       archiveFilePatterns: '$(Pipeline.Workspace)/unsigned/*.nupkg'
       destinationFolder: '$(Pipeline.Workspace)/raw'
-    displayName: Extract ${{ library.Name }}
+    displayName: Extract NuGet Packages
 
   - powershell: |
       gci -r
