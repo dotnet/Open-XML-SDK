@@ -6,6 +6,5 @@
 
   <Import Condition="$(IncludeFrameworkShims)" Project="$(MSBuildThisFileDirectory)common\FrameworkShims.targets" />
 
-
   <Import Project="..\Directory.Build.targets" />
 </Project>
