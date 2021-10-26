@@ -4,23 +4,20 @@ steps:
   - download: current
     artifact: unsigned
 
-  - powershell: |
-      $version=gci DocumentFormat.OpenXml.*.nupkg | % { $_ -match 'DocumentFormat.OpenXml.(.*).nupkg' | Out-Null; $matches[1] }
-      Write-Host "##vso[task.setvariable variable=Version]$version"
-      Write-Host "Setting version to $version"
+  - pwsh: |
+      mkdir raw
+      cd raw
+      gci ..\unsigned\*.nupkg | % { Expand-Archive $_ }
+      cd ..
+      gci -r
     workingDirectory: '$(Pipeline.Workspace)/unsigned'
-
-  - task: ExtractFiles@1
-    inputs:
-      archiveFilePatterns: '$(Pipeline.Workspace)/unsigned/DocumentFormat.OpenXml.$(Version).nupkg'
-      destinationFolder: '$(Pipeline.Workspace)/$(Version)'
 
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
     displayName: 'OpenXML SDK Assembly ESRP CodeSigning'
     inputs:
       ConnectedServiceName: 'Open-XML-SDK-ESRP-2021b'
-      FolderPath: '$(Pipeline.Workspace)\$(Version)'
-      Pattern: '**\DocumentFormat.OpenXml.dll'
+      FolderPath: '$(Pipeline.Workspace)\unsigned\raw'
+      Pattern: '**\DocumentFormat.OpenXml*.dll'
       UseMinimatch: true
       signConfigType: inlineSignParams
       inlineOperation: |
@@ -55,28 +52,16 @@ steps:
           }
         ]
 
-  - task: PowerShell@2
-    displayName: 'Remove code sign summary'
-    name: removeSummary
-    inputs:
-      targetType: 'inline'
-      script: |
-        rm $(Pipeline.Workspace)/$(Version)/CodeSignSummary*
-
-  - task: ArchiveFiles@2
-    inputs:
-      rootFolderOrFile: '$(Pipeline.Workspace)/$(Version)' 
-      includeRootFolder: false
-      archiveType: 'zip'
-      archiveFile: '$(Build.ArtifactStagingDirectory)/DocumentFormat.OpenXml.$(Version).nupkg' 
-      replaceExistingArchive: true 
-      verbose: true
+  - pwsh: |
+      gci -r CodeSignSummary | rm
+      gci -Directory | % { [IO.Compression.ZipFile]::CreateFromDirectory($_, "$_.nupkg") }
+    workingDirectory: '$(Pipeline.Workspace)/unsigned/raw'
 
   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
     displayName: 'OpenXML SDK Nuget Pkg ESRP CodeSigning'
     inputs:
       ConnectedServiceName: 'Open-XML-SDK-ESRP-2021b'
-      FolderPath: '$(Build.ArtifactStagingDirectory)'
+      FolderPath: '$(Pipeline.Workspace)/unsigned/raw'
       Pattern: '*.nupkg'
       signConfigType: inlineSignParams
       inlineOperation: |
@@ -101,6 +86,12 @@ steps:
     inputs:
       sourceFolder: '$(Pipeline.Workspace)/unsigned'
       contents: '*.snupkg'
+      targetFolder: '$(Build.ArtifactStagingDirectory)'
+
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: '$(Pipeline.Workspace)/unsigned/raw'
+      contents: '*.nupkg'
       targetFolder: '$(Build.ArtifactStagingDirectory)'
   
   - task: PublishBuildArtifacts@1
