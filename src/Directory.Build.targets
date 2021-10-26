@@ -1,0 +1,11 @@
+<Project>
+
+  <PropertyGroup>
+    <IncludeFrameworkShims Condition=" '$(IncludeFrameworkShims)' == '' ">false</IncludeFrameworkShims>
+  </PropertyGroup>
+
+  <Import Condition="$(IncludeFrameworkShims)" Project="$(MSBuildThisFileDirectory)common\FrameworkShims.targets" />
+
+
+  <Import Project="..\Directory.Build.targets" />
+</Project>

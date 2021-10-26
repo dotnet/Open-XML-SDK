@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <IsShipped>true</IsShipped>
+    <IncludeFrameworkShims>true</IncludeFrameworkShims>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -19,16 +20,6 @@
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
     <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
-    <Compile Remove="System/Runtime/CompilerServices/IsExternalInit.cs" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' != 'net5.0' ">
-    <Compile Include="..\DocumentFormat.OpenXml\System\Span.cs" Link="System\Span.cs" />
-    <Compile Include="..\DocumentFormat.OpenXml\System\SpanExtensions.cs" Link="System\SpanExtensions.cs" />
-    <Compile Include="..\DocumentFormat.OpenXml\System\Diagnostics\CodeAnalysis\NullableAttributes.cs" Link="System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
   </ItemGroup>
 
 </Project>
