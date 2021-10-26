@@ -10,14 +10,14 @@ steps:
   #     destinationFolder: '$(Pipeline.Workspace)/raw'
   #   displayName: Extract NuGet Packages
 
-  - powershell: |
-      gci unsigned/*.nupkg `
-        | % { Expand-Archive -LiteralPath $_ -DestinationPath raw/$(_.Name.Replace('.nupkg', '')) }
-    workingDirectory: '$(Pipeline.Workspace)'
+  # - powershell: |
+  #     gci unsigned/*.nupkg `
+  #       | % { Expand-Archive -LiteralPath $_ -DestinationPath raw/$(_.Name.Replace('.nupkg', '')) }
+  #   workingDirectory: '$(Pipeline.Workspace)'
 
-  - powershell: |
-      gci -r
-    workingDirectory: '$(Pipeline.Workspace)'
+  # - powershell: |
+  #     gci -r
+  #   workingDirectory: '$(Pipeline.Workspace)'
 
 #   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
 #     displayName: 'OpenXML SDK Assembly ESRP CodeSigning [${{ library.Name }}]'
@@ -69,30 +69,30 @@ steps:
 #       verbose: true
 #     displayName: Creating archive for ${{ library.Name }}
 
-#   - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
-#     displayName: 'OpenXML SDK Nuget Pkg ESRP CodeSigning [${{ library.Name }}]'
-#     inputs:
-#       ConnectedServiceName: 'Open-XML-SDK-ESRP-2021b'
-#       FolderPath: '$(Build.ArtifactStagingDirectory)'
-#       Pattern: '*.nupkg'
-#       signConfigType: inlineSignParams
-#       inlineOperation: |
-#         [
-#             {
-#                 "keyCode": "CP-401405",
-#                 "operationSetCode": "NuGetSign",
-#                 "parameters": [ ],
-#                 "toolName": "sign",
-#                 "toolVersion": "1.0"
-#             },
-#             {
-#                 "keyCode": "CP-401405",
-#                 "operationSetCode": "NuGetVerify",
-#                 "parameters": [ ],
-#                 "toolName": "sign",
-#                 "toolVersion": "1.0"
-#             }
-#         ]
+  - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
+    displayName: 'OpenXML SDK Nuget Pkg ESRP CodeSigning'
+    inputs:
+      ConnectedServiceName: 'Open-XML-SDK-ESRP-2021b'
+      FolderPath: '$(Build.ArtifactStagingDirectory)'
+      Pattern: '*.nupkg'
+      signConfigType: inlineSignParams
+      inlineOperation: |
+        [
+            {
+                "keyCode": "CP-401405",
+                "operationSetCode": "NuGetSign",
+                "parameters": [ ],
+                "toolName": "sign",
+                "toolVersion": "1.0"
+            },
+            {
+                "keyCode": "CP-401405",
+                "operationSetCode": "NuGetVerify",
+                "parameters": [ ],
+                "toolName": "sign",
+                "toolVersion": "1.0"
+            }
+        ]
 
 # - task: CopyFiles@2
 #   inputs:
@@ -100,8 +100,8 @@ steps:
 #     contents: '*.snupkg'
 #     targetFolder: '$(Build.ArtifactStagingDirectory)'
 
-# - task: PublishBuildArtifacts@1
-#   displayName: 'Publish Signed'
-#   inputs:
-#     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-#     artifactName: 'signed'
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Signed'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'signed'
