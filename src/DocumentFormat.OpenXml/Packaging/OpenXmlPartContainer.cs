@@ -11,7 +11,6 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO.Packaging;
 using System.Linq;
-using System.Reflection;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -21,9 +20,10 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract class OpenXmlPartContainer
     {
+        private IFeatureCollection? _features;
+
         private readonly PartDictionary _childrenPartsDictionary;
         private readonly LinkedList<ReferenceRelationship> _referenceRelationships = new LinkedList<ReferenceRelationship>();
-        private object? _annotations;
 
         /// <summary>
         /// Initializes OpenXmlPartContainer.
@@ -963,41 +963,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Adds an object to the annotation list of this PartContainer.
         /// </summary>
         /// <param name="annotation">The annotation to add to this PartContainer.</param>
-        public void AddAnnotation(object annotation)
-        {
-            if (annotation is null)
-            {
-                throw new ArgumentNullException(nameof(annotation));
-            }
-
-            if (_annotations is null)
-            {
-                _annotations = (annotation is object[]) ? new object[] { annotation } : annotation;
-            }
-            else
-            {
-                if (_annotations is not object?[] annotations)
-                {
-                    _annotations = new object[] { _annotations, annotation };
-                }
-                else
-                {
-                    var index = 0;
-                    while ((index < annotations.Length) && (annotations[index] is not null))
-                    {
-                        index++;
-                    }
-
-                    if (index == annotations.Length)
-                    {
-                        Array.Resize(ref annotations, index * 2);
-                        _annotations = annotations;
-                    }
-
-                    annotations[index] = annotation;
-                }
-            }
-        }
+        public void AddAnnotation(object annotation) => Features.GetRequired<AnnotationsFeature>().AddAnnotation(annotation);
 
         /// <summary>
         /// Get the first annotation object of the specified type from this PartContainer.
@@ -1007,30 +973,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public T? Annotation<T>()
             where T : class
         {
-            if (_annotations is not null)
-            {
-                if (_annotations is not object?[] annotations)
-                {
-                    return _annotations as T;
-                }
-
-                for (var i = 0; i < annotations.Length; i++)
-                {
-                    var obj = annotations[i];
-
-                    if (obj is null)
-                    {
-                        break;
-                    }
-
-                    if (obj is T t)
-                    {
-                        return t;
-                    }
-                }
-            }
-
-            return null;
+            return Features.GetRequired<AnnotationsFeature>().Annotation<T>();
         }
 
         /// <summary>
@@ -1040,39 +983,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The first annotation object of the specified type.</returns>
         public object? Annotation(Type type)
         {
-            if (type is null)
-            {
-                throw new ArgumentNullException(nameof(type));
-            }
-
-            if (_annotations is not null)
-            {
-                if (_annotations is not object?[] annotations)
-                {
-                    if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
-                    {
-                        return _annotations;
-                    }
-                }
-                else
-                {
-                    for (var i = 0; i < annotations.Length; i++)
-                    {
-                        var obj = annotations[i];
-                        if (obj is null)
-                        {
-                            break;
-                        }
-
-                        if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
-                        {
-                            return obj;
-                        }
-                    }
-                }
-            }
-
-            return null;
+            return Features.GetRequired<AnnotationsFeature>().Annotation(type);
         }
 
         /// <summary>
@@ -1083,32 +994,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public IEnumerable<T> Annotations<T>()
             where T : class
         {
-            if (_annotations is not null)
-            {
-                if (_annotations is not object?[] annotations)
-                {
-                    if (_annotations is T t)
-                    {
-                        yield return t;
-                    }
-                }
-                else
-                {
-                    for (var i = 0; i < annotations.Length; i++)
-                    {
-                        var obj = annotations[i];
-                        if (obj is null)
-                        {
-                            break;
-                        }
-
-                        if (obj is T t)
-                        {
-                            yield return t;
-                        }
-                    }
-                }
-            }
+            return Features.GetRequired<AnnotationsFeature>().Annotations<T>();
         }
 
         /// <summary>
@@ -1116,40 +1002,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="type">The Type of the annotations to retrieve.</param>
         /// <returns>An IEnumerable(T) of object that contains the annotations for this PartContainer.</returns>
-        public IEnumerable<object> Annotations(Type type)
-        {
-            if (type is null)
-            {
-                throw new ArgumentNullException(nameof(type));
-            }
-
-            if (_annotations is not null)
-            {
-                if (_annotations is not object?[] annotations)
-                {
-                    if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
-                    {
-                        yield return _annotations;
-                    }
-                }
-                else
-                {
-                    for (var i = 0; i < annotations.Length; i++)
-                    {
-                        var obj = annotations[i];
-                        if (obj is null)
-                        {
-                            break;
-                        }
-
-                        if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
-                        {
-                            yield return obj;
-                        }
-                    }
-                }
-            }
-        }
+        public IEnumerable<object> Annotations(Type type) => Features.GetRequired<AnnotationsFeature>().Annotations(type);
 
         /// <summary>
         /// Removes the annotations of the specified type from this PartContainer.
@@ -1158,104 +1011,14 @@ namespace DocumentFormat.OpenXml.Packaging
         public void RemoveAnnotations<T>()
             where T : class
         {
-            if (_annotations is not null)
-            {
-                if (_annotations is not object?[] annotations)
-                {
-                    if (_annotations is T)
-                    {
-                        _annotations = null;
-                    }
-                }
-                else
-                {
-                    var index = 0;
-                    var num = 0;
-                    while (index < annotations.Length)
-                    {
-                        var obj = annotations[index];
-                        if (obj is null)
-                        {
-                            break;
-                        }
-
-                        if (!(obj is T))
-                        {
-                            annotations[num++] = obj;
-                        }
-
-                        index++;
-                    }
-
-                    if (num != 0)
-                    {
-                        while (num < index)
-                        {
-                            annotations[num++] = null;
-                        }
-                    }
-                    else
-                    {
-                        _annotations = null;
-                    }
-                }
-            }
+            Features.GetRequired<AnnotationsFeature>().RemoveAnnotations<T>();
         }
 
         /// <summary>
         /// Removes the annotations of the specified type from this PartContainer.
         /// </summary>
         /// <param name="type">The Type of the annotations to remove.</param>
-        public void RemoveAnnotations(Type type)
-        {
-            if (type is null)
-            {
-                throw new ArgumentNullException(nameof(type));
-            }
-
-            if (_annotations is not null)
-            {
-                if (_annotations is not object?[] annotations)
-                {
-                    if (type.GetTypeInfo().IsAssignableFrom(_annotations.GetType().GetTypeInfo()))
-                    {
-                        _annotations = null;
-                    }
-                }
-                else
-                {
-                    var index = 0;
-                    var num = 0;
-                    while (index < annotations.Length)
-                    {
-                        var o = annotations[index];
-                        if (o is null)
-                        {
-                            break;
-                        }
-
-                        if (!type.GetTypeInfo().IsAssignableFrom(o.GetType().GetTypeInfo()))
-                        {
-                            annotations[num++] = o;
-                        }
-
-                        index++;
-                    }
-
-                    if (num != 0)
-                    {
-                        while (num < index)
-                        {
-                            annotations[num++] = null;
-                        }
-                    }
-                    else
-                    {
-                        _annotations = null;
-                    }
-                }
-            }
-        }
+        public void RemoveAnnotations(Type type) => Features.GetRequired<AnnotationsFeature>().RemoveAnnotations(type);
 
         #endregion
 
@@ -2168,8 +1931,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 targetPart.OpenXmlPackage == InternalOpenXmlPackage;
         }
 
-        private IFeatureCollection? _features;
-
         private protected virtual IFeatureCollection CreateFeatures()
             => new FeatureCollection(FeatureCollection.Default);
 
@@ -2183,6 +1944,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 if (_features is null)
                 {
                     _features = CreateFeatures();
+                    _features.Set(new AnnotationsFeature());
                 }
 
                 return _features;
