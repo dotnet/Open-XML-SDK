@@ -78,6 +78,12 @@
   </Target>
 
   <PropertyGroup>
+    <IncludeFrameworkShims Condition=" '$(IncludeFrameworkShims)' == '' ">false</IncludeFrameworkShims>
+  </PropertyGroup>
+
+  <Import Condition="$(IncludeFrameworkShims)" Project="$(MSBuildThisFileDirectory)src\common\FrameworkShims.targets" />
+
+  <PropertyGroup>
     <PackageOutputPath>$(MSBuildThisFileDirectory)bin\$(Configuration)\packages\</PackageOutputPath>
     <PackageOutputPath Condition="$(IsShipped)">$(PackageOutputPath)shipping\</PackageOutputPath>
   </PropertyGroup>

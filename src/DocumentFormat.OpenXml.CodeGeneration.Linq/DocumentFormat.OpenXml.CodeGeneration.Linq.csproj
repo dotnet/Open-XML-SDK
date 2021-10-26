@@ -30,6 +30,10 @@
     </Otherwise>
   </Choose>
 
+  <ItemGroup>
+    <PackageReference Remove="Microsoft.CodeAnalysis.PublicApiAnalyzers" />
+  </ItemGroup>
+
   <!-- Elements required for Analyzer / C# Source Generator -->
   <!--<PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>

@@ -5,7 +5,12 @@
     <IsTestProject>true</IsTestProject>
     <IsPackable>false</IsPackable>
     <Nullable>enable</Nullable>
+    <IncludeFrameworkShims>true</IncludeFrameworkShims>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\src\DocumentFormat.OpenXml\SimpleTypes\HexStringFactory.cs" Link="HexStringFactory.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\DocumentFormat.OpenXml.Features\DocumentFormat.OpenXml.Features.csproj" />

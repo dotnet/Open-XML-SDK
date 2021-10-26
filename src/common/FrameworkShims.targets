@@ -1,0 +1,65 @@
+<Project>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\HashCode.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Lazy{T}.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Span.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\SpanExtensions.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Collections\Concurrent\ConcurrentDictionary.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Collections\Generic\IReadOnlyCollection.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Collections\Generic\IReadOnlyDictionary.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\FormattableString.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\IO\StreamCopyExtensions.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Reflection\TypeExtensions.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Runtime\CompilerServices\FormattableStringFactory.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Threading\CancellationToken.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Xml\Linq\XDocumentExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\HashCode.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Collections\Generic\IReadOnlyCollection.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Collections\Generic\IReadOnlyDictionary.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Span.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\SpanExtensions.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Reflection\TypeExtensions.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Runtime\CompilerServices\CallerMemberNameAttribute.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Runtime\CompilerServices\FormattableStringFactory.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\FormattableString.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net452' ">
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\HashCode.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Span.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\SpanExtensions.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\HashCode.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\ICloneable.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\NonSerializedAttribute.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\SerializableAttribute.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Span.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\SpanExtensions.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Reflection\SubclassExtensions.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\HashCode.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Span.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\SpanExtensions.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\Diagnostics\CodeAnalysis\NullableAttributes.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="@(ShimFile)">
+      <Link>$([MSBuild]::MakeRelative($(MSBuildThisFileDirectory), %(FullPath)))</Link>
+    </Compile>
+  </ItemGroup>
+
+</Project>
