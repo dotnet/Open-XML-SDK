@@ -49,16 +49,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)\stylecop.json" />
 
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.321">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
-
-    <!-- To address CVE-2017-0249 that System.Net.Http has a vulnerability. This will only affect the tests and benchmarks as the
-         framework library doesn't require System.Net.Http. This is brought in by the .NET Core app framework -->
-    <PackageReference Include="System.Net.Http" Version="4.3.4" Condition="!$(IsShipped)" />
 
   </ItemGroup>
 
