@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <IsShipped>true</IsShipped>
+    <IsShipped>false</IsShipped>
     <IncludeFrameworkShims>true</IncludeFrameworkShims>
   </PropertyGroup>
 

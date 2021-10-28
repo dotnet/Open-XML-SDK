@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <IsShipped>true</IsShipped>
+    <IsShipped>false</IsShipped>
     <Summary>Provides additional LINQ functionality to the Open XML SDK.</Summary>
     <Description>Provides additional LINQ functionality to the Open XML SDK to allow operations using XLINQ.</Description>
     <NoWarn>$(NoWarn);RS0041</NoWarn>
