@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml
         Office2019 = 0x10,
 
         /// <summary>
-        /// Represents Microsoft Office 2019.
+        /// Represents Microsoft Office 2021.
         /// </summary>
         Office2021 = 0x20,
     }
