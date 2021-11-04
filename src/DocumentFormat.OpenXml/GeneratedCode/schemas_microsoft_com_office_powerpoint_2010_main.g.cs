@@ -4087,74 +4087,70 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <summary>
     /// Defines the TransitionPatternValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TransitionPatternValues
     {
-        ///<summary>
-        ///diamond.
-        ///<para>When the item is serialized out as xml, its value is "diamond".</para>
-        ///</summary>
+        /// <summary>
+        /// diamond.
+        /// <para>When the item is serialized out as xml, its value is "diamond".</para>
+        /// </summary>
         [EnumString("diamond")]
         Diamond,
-        ///<summary>
-        ///hexagon.
-        ///<para>When the item is serialized out as xml, its value is "hexagon".</para>
-        ///</summary>
+        /// <summary>
+        /// hexagon.
+        /// <para>When the item is serialized out as xml, its value is "hexagon".</para>
+        /// </summary>
         [EnumString("hexagon")]
-        Hexagon,
+        Hexagon
     }
 
     /// <summary>
     /// Defines the TransitionCenterDirectionTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TransitionCenterDirectionTypeValues
     {
-        ///<summary>
-        ///center.
-        ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///</summary>
+        /// <summary>
+        /// center.
+        /// <para>When the item is serialized out as xml, its value is "center".</para>
+        /// </summary>
         [EnumString("center")]
-        Center,
+        Center
     }
 
     /// <summary>
     /// Defines the TransitionShredPatternValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TransitionShredPatternValues
     {
-        ///<summary>
-        ///strip.
-        ///<para>When the item is serialized out as xml, its value is "strip".</para>
-        ///</summary>
+        /// <summary>
+        /// strip.
+        /// <para>When the item is serialized out as xml, its value is "strip".</para>
+        /// </summary>
         [EnumString("strip")]
         Strip,
-        ///<summary>
-        ///rectangle.
-        ///<para>When the item is serialized out as xml, its value is "rectangle".</para>
-        ///</summary>
+        /// <summary>
+        /// rectangle.
+        /// <para>When the item is serialized out as xml, its value is "rectangle".</para>
+        /// </summary>
         [EnumString("rectangle")]
-        Rectangle,
+        Rectangle
     }
 
     /// <summary>
     /// Defines the TransitionLeftRightDirectionTypeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TransitionLeftRightDirectionTypeValues
     {
-        ///<summary>
-        ///l.
-        ///<para>When the item is serialized out as xml, its value is "l".</para>
-        ///</summary>
+        /// <summary>
+        /// l.
+        /// <para>When the item is serialized out as xml, its value is "l".</para>
+        /// </summary>
         [EnumString("l")]
         Left,
-        ///<summary>
-        ///r.
-        ///<para>When the item is serialized out as xml, its value is "r".</para>
-        ///</summary>
+        /// <summary>
+        /// r.
+        /// <para>When the item is serialized out as xml, its value is "r".</para>
+        /// </summary>
         [EnumString("r")]
-        Right,
+        Right
     }
 }

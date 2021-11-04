@@ -1218,26 +1218,25 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <summary>
     /// Defines the SdtAppearance enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum SdtAppearance
     {
-        ///<summary>
-        ///boundingBox.
-        ///<para>When the item is serialized out as xml, its value is "boundingBox".</para>
-        ///</summary>
+        /// <summary>
+        /// boundingBox.
+        /// <para>When the item is serialized out as xml, its value is "boundingBox".</para>
+        /// </summary>
         [EnumString("boundingBox")]
         BoundingBox,
-        ///<summary>
-        ///tags.
-        ///<para>When the item is serialized out as xml, its value is "tags".</para>
-        ///</summary>
+        /// <summary>
+        /// tags.
+        /// <para>When the item is serialized out as xml, its value is "tags".</para>
+        /// </summary>
         [EnumString("tags")]
         Tags,
-        ///<summary>
-        ///hidden.
-        ///<para>When the item is serialized out as xml, its value is "hidden".</para>
-        ///</summary>
+        /// <summary>
+        /// hidden.
+        /// <para>When the item is serialized out as xml, its value is "hidden".</para>
+        /// </summary>
         [EnumString("hidden")]
-        Hidden,
+        Hidden
     }
 }

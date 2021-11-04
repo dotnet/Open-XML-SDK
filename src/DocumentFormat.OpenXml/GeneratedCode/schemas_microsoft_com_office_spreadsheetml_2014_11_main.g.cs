@@ -314,62 +314,61 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <summary>
     /// Defines the ModelTimeGroupingContentType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum ModelTimeGroupingContentType
     {
-        ///<summary>
-        ///years.
-        ///<para>When the item is serialized out as xml, its value is "years".</para>
-        ///</summary>
+        /// <summary>
+        /// years.
+        /// <para>When the item is serialized out as xml, its value is "years".</para>
+        /// </summary>
         [EnumString("years")]
         Years,
-        ///<summary>
-        ///quarters.
-        ///<para>When the item is serialized out as xml, its value is "quarters".</para>
-        ///</summary>
+        /// <summary>
+        /// quarters.
+        /// <para>When the item is serialized out as xml, its value is "quarters".</para>
+        /// </summary>
         [EnumString("quarters")]
         Quarters,
-        ///<summary>
-        ///monthsindex.
-        ///<para>When the item is serialized out as xml, its value is "monthsindex".</para>
-        ///</summary>
+        /// <summary>
+        /// monthsindex.
+        /// <para>When the item is serialized out as xml, its value is "monthsindex".</para>
+        /// </summary>
         [EnumString("monthsindex")]
         Monthsindex,
-        ///<summary>
-        ///months.
-        ///<para>When the item is serialized out as xml, its value is "months".</para>
-        ///</summary>
+        /// <summary>
+        /// months.
+        /// <para>When the item is serialized out as xml, its value is "months".</para>
+        /// </summary>
         [EnumString("months")]
         Months,
-        ///<summary>
-        ///daysindex.
-        ///<para>When the item is serialized out as xml, its value is "daysindex".</para>
-        ///</summary>
+        /// <summary>
+        /// daysindex.
+        /// <para>When the item is serialized out as xml, its value is "daysindex".</para>
+        /// </summary>
         [EnumString("daysindex")]
         Daysindex,
-        ///<summary>
-        ///days.
-        ///<para>When the item is serialized out as xml, its value is "days".</para>
-        ///</summary>
+        /// <summary>
+        /// days.
+        /// <para>When the item is serialized out as xml, its value is "days".</para>
+        /// </summary>
         [EnumString("days")]
         Days,
-        ///<summary>
-        ///hours.
-        ///<para>When the item is serialized out as xml, its value is "hours".</para>
-        ///</summary>
+        /// <summary>
+        /// hours.
+        /// <para>When the item is serialized out as xml, its value is "hours".</para>
+        /// </summary>
         [EnumString("hours")]
         Hours,
-        ///<summary>
-        ///minutes.
-        ///<para>When the item is serialized out as xml, its value is "minutes".</para>
-        ///</summary>
+        /// <summary>
+        /// minutes.
+        /// <para>When the item is serialized out as xml, its value is "minutes".</para>
+        /// </summary>
         [EnumString("minutes")]
         Minutes,
-        ///<summary>
-        ///seconds.
-        ///<para>When the item is serialized out as xml, its value is "seconds".</para>
-        ///</summary>
+        /// <summary>
+        /// seconds.
+        /// <para>When the item is serialized out as xml, its value is "seconds".</para>
+        /// </summary>
         [EnumString("seconds")]
-        Seconds,
+        Seconds
     }
 }

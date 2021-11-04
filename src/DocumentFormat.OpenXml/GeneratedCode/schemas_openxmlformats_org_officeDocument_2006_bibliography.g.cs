@@ -4868,107 +4868,107 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
     /// </summary>
     public enum DataSourceValues
     {
-        ///<summary>
-        ///Article in a Periodical.
-        ///<para>When the item is serialized out as xml, its value is "ArticleInAPeriodical".</para>
-        ///</summary>
+        /// <summary>
+        /// Article in a Periodical.
+        /// <para>When the item is serialized out as xml, its value is "ArticleInAPeriodical".</para>
+        /// </summary>
         [EnumString("ArticleInAPeriodical")]
         ArticleInAPeriodical,
-        ///<summary>
-        ///Book.
-        ///<para>When the item is serialized out as xml, its value is "Book".</para>
-        ///</summary>
+        /// <summary>
+        /// Book.
+        /// <para>When the item is serialized out as xml, its value is "Book".</para>
+        /// </summary>
         [EnumString("Book")]
         Book,
-        ///<summary>
-        ///Book Section.
-        ///<para>When the item is serialized out as xml, its value is "BookSection".</para>
-        ///</summary>
+        /// <summary>
+        /// Book Section.
+        /// <para>When the item is serialized out as xml, its value is "BookSection".</para>
+        /// </summary>
         [EnumString("BookSection")]
         BookSection,
-        ///<summary>
-        ///Journal Article.
-        ///<para>When the item is serialized out as xml, its value is "JournalArticle".</para>
-        ///</summary>
+        /// <summary>
+        /// Journal Article.
+        /// <para>When the item is serialized out as xml, its value is "JournalArticle".</para>
+        /// </summary>
         [EnumString("JournalArticle")]
         JournalArticle,
-        ///<summary>
-        ///Conference Proceedings.
-        ///<para>When the item is serialized out as xml, its value is "ConferenceProceedings".</para>
-        ///</summary>
+        /// <summary>
+        /// Conference Proceedings.
+        /// <para>When the item is serialized out as xml, its value is "ConferenceProceedings".</para>
+        /// </summary>
         [EnumString("ConferenceProceedings")]
         ConferenceProceedings,
-        ///<summary>
-        ///Reporter.
-        ///<para>When the item is serialized out as xml, its value is "Report".</para>
-        ///</summary>
+        /// <summary>
+        /// Reporter.
+        /// <para>When the item is serialized out as xml, its value is "Report".</para>
+        /// </summary>
         [EnumString("Report")]
         Report,
-        ///<summary>
-        ///Sound Recording.
-        ///<para>When the item is serialized out as xml, its value is "SoundRecording".</para>
-        ///</summary>
+        /// <summary>
+        /// Sound Recording.
+        /// <para>When the item is serialized out as xml, its value is "SoundRecording".</para>
+        /// </summary>
         [EnumString("SoundRecording")]
         SoundRecording,
-        ///<summary>
-        ///Performance.
-        ///<para>When the item is serialized out as xml, its value is "Performance".</para>
-        ///</summary>
+        /// <summary>
+        /// Performance.
+        /// <para>When the item is serialized out as xml, its value is "Performance".</para>
+        /// </summary>
         [EnumString("Performance")]
         Performance,
-        ///<summary>
-        ///Art.
-        ///<para>When the item is serialized out as xml, its value is "Art".</para>
-        ///</summary>
+        /// <summary>
+        /// Art.
+        /// <para>When the item is serialized out as xml, its value is "Art".</para>
+        /// </summary>
         [EnumString("Art")]
         Art,
-        ///<summary>
-        ///Document from Internet Site.
-        ///<para>When the item is serialized out as xml, its value is "DocumentFromInternetSite".</para>
-        ///</summary>
+        /// <summary>
+        /// Document from Internet Site.
+        /// <para>When the item is serialized out as xml, its value is "DocumentFromInternetSite".</para>
+        /// </summary>
         [EnumString("DocumentFromInternetSite")]
         DocumentFromInternetSite,
-        ///<summary>
-        ///Internet Site.
-        ///<para>When the item is serialized out as xml, its value is "InternetSite".</para>
-        ///</summary>
+        /// <summary>
+        /// Internet Site.
+        /// <para>When the item is serialized out as xml, its value is "InternetSite".</para>
+        /// </summary>
         [EnumString("InternetSite")]
         InternetSite,
-        ///<summary>
-        ///Film.
-        ///<para>When the item is serialized out as xml, its value is "Film".</para>
-        ///</summary>
+        /// <summary>
+        /// Film.
+        /// <para>When the item is serialized out as xml, its value is "Film".</para>
+        /// </summary>
         [EnumString("Film")]
         Film,
-        ///<summary>
-        ///Interview.
-        ///<para>When the item is serialized out as xml, its value is "Interview".</para>
-        ///</summary>
+        /// <summary>
+        /// Interview.
+        /// <para>When the item is serialized out as xml, its value is "Interview".</para>
+        /// </summary>
         [EnumString("Interview")]
         Interview,
-        ///<summary>
-        ///Patent.
-        ///<para>When the item is serialized out as xml, its value is "Patent".</para>
-        ///</summary>
+        /// <summary>
+        /// Patent.
+        /// <para>When the item is serialized out as xml, its value is "Patent".</para>
+        /// </summary>
         [EnumString("Patent")]
         Patent,
-        ///<summary>
-        ///Electronic Source.
-        ///<para>When the item is serialized out as xml, its value is "ElectronicSource".</para>
-        ///</summary>
+        /// <summary>
+        /// Electronic Source.
+        /// <para>When the item is serialized out as xml, its value is "ElectronicSource".</para>
+        /// </summary>
         [EnumString("ElectronicSource")]
         ElectronicSource,
-        ///<summary>
-        ///Case.
-        ///<para>When the item is serialized out as xml, its value is "Case".</para>
-        ///</summary>
+        /// <summary>
+        /// Case.
+        /// <para>When the item is serialized out as xml, its value is "Case".</para>
+        /// </summary>
         [EnumString("Case")]
         Case,
-        ///<summary>
-        ///Miscellaneous.
-        ///<para>When the item is serialized out as xml, its value is "Misc".</para>
-        ///</summary>
+        /// <summary>
+        /// Miscellaneous.
+        /// <para>When the item is serialized out as xml, its value is "Misc".</para>
+        /// </summary>
         [EnumString("Misc")]
-        Miscellaneous,
+        Miscellaneous
     }
 }

@@ -2316,132 +2316,132 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
     /// </summary>
     public enum VectorBaseValues
     {
-        ///<summary>
-        ///Variant Base Type.
-        ///<para>When the item is serialized out as xml, its value is "variant".</para>
-        ///</summary>
+        /// <summary>
+        /// Variant Base Type.
+        /// <para>When the item is serialized out as xml, its value is "variant".</para>
+        /// </summary>
         [EnumString("variant")]
         Variant,
-        ///<summary>
-        ///Vector Base Type Enumeration Value.
-        ///<para>When the item is serialized out as xml, its value is "i1".</para>
-        ///</summary>
+        /// <summary>
+        /// Vector Base Type Enumeration Value.
+        /// <para>When the item is serialized out as xml, its value is "i1".</para>
+        /// </summary>
         [EnumString("i1")]
         OneByteSignedInteger,
-        ///<summary>
-        ///2-Byte Signed Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "i2".</para>
-        ///</summary>
+        /// <summary>
+        /// 2-Byte Signed Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "i2".</para>
+        /// </summary>
         [EnumString("i2")]
         TwoBytesSignedInteger,
-        ///<summary>
-        ///4-Byte Signed Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "i4".</para>
-        ///</summary>
+        /// <summary>
+        /// 4-Byte Signed Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "i4".</para>
+        /// </summary>
         [EnumString("i4")]
         FourBytesSignedInteger,
-        ///<summary>
-        ///8-Byte Signed Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "i8".</para>
-        ///</summary>
+        /// <summary>
+        /// 8-Byte Signed Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "i8".</para>
+        /// </summary>
         [EnumString("i8")]
         EightBytesSignedInteger,
-        ///<summary>
-        ///1-Byte Unsigned Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "ui1".</para>
-        ///</summary>
+        /// <summary>
+        /// 1-Byte Unsigned Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "ui1".</para>
+        /// </summary>
         [EnumString("ui1")]
         OneByteUnsignedInteger,
-        ///<summary>
-        ///2-Byte Unsigned Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "ui2".</para>
-        ///</summary>
+        /// <summary>
+        /// 2-Byte Unsigned Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "ui2".</para>
+        /// </summary>
         [EnumString("ui2")]
         TwoBytesUnsignedInteger,
-        ///<summary>
-        ///4-Byte Unsigned Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "ui4".</para>
-        ///</summary>
+        /// <summary>
+        /// 4-Byte Unsigned Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "ui4".</para>
+        /// </summary>
         [EnumString("ui4")]
         FourBytesUnsignedInteger,
-        ///<summary>
-        ///8-Byte Unsigned Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "ui8".</para>
-        ///</summary>
+        /// <summary>
+        /// 8-Byte Unsigned Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "ui8".</para>
+        /// </summary>
         [EnumString("ui8")]
         EightBytesUnsignedInteger,
-        ///<summary>
-        ///4-Byte Real Number Base Type.
-        ///<para>When the item is serialized out as xml, its value is "r4".</para>
-        ///</summary>
+        /// <summary>
+        /// 4-Byte Real Number Base Type.
+        /// <para>When the item is serialized out as xml, its value is "r4".</para>
+        /// </summary>
         [EnumString("r4")]
         FourBytesReal,
-        ///<summary>
-        ///8-Byte Real Number Base Type.
-        ///<para>When the item is serialized out as xml, its value is "r8".</para>
-        ///</summary>
+        /// <summary>
+        /// 8-Byte Real Number Base Type.
+        /// <para>When the item is serialized out as xml, its value is "r8".</para>
+        /// </summary>
         [EnumString("r8")]
         EightBytesReal,
-        ///<summary>
-        ///LPSTR Base Type.
-        ///<para>When the item is serialized out as xml, its value is "lpstr".</para>
-        ///</summary>
+        /// <summary>
+        /// LPSTR Base Type.
+        /// <para>When the item is serialized out as xml, its value is "lpstr".</para>
+        /// </summary>
         [EnumString("lpstr")]
         Lpstr,
-        ///<summary>
-        ///LPWSTR Base Type.
-        ///<para>When the item is serialized out as xml, its value is "lpwstr".</para>
-        ///</summary>
+        /// <summary>
+        /// LPWSTR Base Type.
+        /// <para>When the item is serialized out as xml, its value is "lpwstr".</para>
+        /// </summary>
         [EnumString("lpwstr")]
         Lpwstr,
-        ///<summary>
-        ///Basic String Base Type.
-        ///<para>When the item is serialized out as xml, its value is "bstr".</para>
-        ///</summary>
+        /// <summary>
+        /// Basic String Base Type.
+        /// <para>When the item is serialized out as xml, its value is "bstr".</para>
+        /// </summary>
         [EnumString("bstr")]
         Bstr,
-        ///<summary>
-        ///Date and Time Base Type.
-        ///<para>When the item is serialized out as xml, its value is "date".</para>
-        ///</summary>
+        /// <summary>
+        /// Date and Time Base Type.
+        /// <para>When the item is serialized out as xml, its value is "date".</para>
+        /// </summary>
         [EnumString("date")]
         Date,
-        ///<summary>
-        ///File Time Base Type.
-        ///<para>When the item is serialized out as xml, its value is "filetime".</para>
-        ///</summary>
+        /// <summary>
+        /// File Time Base Type.
+        /// <para>When the item is serialized out as xml, its value is "filetime".</para>
+        /// </summary>
         [EnumString("filetime")]
         Filetime,
-        ///<summary>
-        ///Boolean Base Type.
-        ///<para>When the item is serialized out as xml, its value is "bool".</para>
-        ///</summary>
+        /// <summary>
+        /// Boolean Base Type.
+        /// <para>When the item is serialized out as xml, its value is "bool".</para>
+        /// </summary>
         [EnumString("bool")]
         Bool,
-        ///<summary>
-        ///Currency Base Type.
-        ///<para>When the item is serialized out as xml, its value is "cy".</para>
-        ///</summary>
+        /// <summary>
+        /// Currency Base Type.
+        /// <para>When the item is serialized out as xml, its value is "cy".</para>
+        /// </summary>
         [EnumString("cy")]
         Currency,
-        ///<summary>
-        ///Error Status Code Base Type.
-        ///<para>When the item is serialized out as xml, its value is "error".</para>
-        ///</summary>
+        /// <summary>
+        /// Error Status Code Base Type.
+        /// <para>When the item is serialized out as xml, its value is "error".</para>
+        /// </summary>
         [EnumString("error")]
         Error,
-        ///<summary>
-        ///Class ID Base Type.
-        ///<para>When the item is serialized out as xml, its value is "clsid".</para>
-        ///</summary>
+        /// <summary>
+        /// Class ID Base Type.
+        /// <para>When the item is serialized out as xml, its value is "clsid".</para>
+        /// </summary>
         [EnumString("clsid")]
         ClassId,
-        ///<summary>
-        ///Clipboard Data Base Type.
-        ///<para>When the item is serialized out as xml, its value is "cf".</para>
-        ///</summary>
+        /// <summary>
+        /// Clipboard Data Base Type.
+        /// <para>When the item is serialized out as xml, its value is "cf".</para>
+        /// </summary>
         [EnumString("cf")]
-        ClipboardData,
+        ClipboardData
     }
 
     /// <summary>
@@ -2449,107 +2449,107 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("\\s*\\{[a-fA-F0-9]{8}-
     /// </summary>
     public enum ArrayBaseValues
     {
-        ///<summary>
-        ///Variant Base Type.
-        ///<para>When the item is serialized out as xml, its value is "variant".</para>
-        ///</summary>
+        /// <summary>
+        /// Variant Base Type.
+        /// <para>When the item is serialized out as xml, its value is "variant".</para>
+        /// </summary>
         [EnumString("variant")]
         Variant,
-        ///<summary>
-        ///1-Byte Signed Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "i1".</para>
-        ///</summary>
+        /// <summary>
+        /// 1-Byte Signed Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "i1".</para>
+        /// </summary>
         [EnumString("i1")]
         OneByteSignedInteger,
-        ///<summary>
-        ///2-Byte Signed Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "i2".</para>
-        ///</summary>
+        /// <summary>
+        /// 2-Byte Signed Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "i2".</para>
+        /// </summary>
         [EnumString("i2")]
         TwoBytesSignedInteger,
-        ///<summary>
-        ///4-Byte Signed Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "i4".</para>
-        ///</summary>
+        /// <summary>
+        /// 4-Byte Signed Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "i4".</para>
+        /// </summary>
         [EnumString("i4")]
         FourBytesSignedInteger,
-        ///<summary>
-        ///Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "int".</para>
-        ///</summary>
+        /// <summary>
+        /// Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "int".</para>
+        /// </summary>
         [EnumString("int")]
         Integer,
-        ///<summary>
-        ///1-Byte Unsigned Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "ui1".</para>
-        ///</summary>
+        /// <summary>
+        /// 1-Byte Unsigned Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "ui1".</para>
+        /// </summary>
         [EnumString("ui1")]
         OneByteUnsignedInteger,
-        ///<summary>
-        ///2-Byte Unsigned Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "ui2".</para>
-        ///</summary>
+        /// <summary>
+        /// 2-Byte Unsigned Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "ui2".</para>
+        /// </summary>
         [EnumString("ui2")]
         TwoBytesUnsignedInteger,
-        ///<summary>
-        ///4-Byte Unsigned Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "ui4".</para>
-        ///</summary>
+        /// <summary>
+        /// 4-Byte Unsigned Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "ui4".</para>
+        /// </summary>
         [EnumString("ui4")]
         FourBytesUnsignedInteger,
-        ///<summary>
-        ///Unsigned Integer Base Type.
-        ///<para>When the item is serialized out as xml, its value is "uint".</para>
-        ///</summary>
+        /// <summary>
+        /// Unsigned Integer Base Type.
+        /// <para>When the item is serialized out as xml, its value is "uint".</para>
+        /// </summary>
         [EnumString("uint")]
         UnsignedInteger,
-        ///<summary>
-        ///4-Byte Real Number Base Type.
-        ///<para>When the item is serialized out as xml, its value is "r4".</para>
-        ///</summary>
+        /// <summary>
+        /// 4-Byte Real Number Base Type.
+        /// <para>When the item is serialized out as xml, its value is "r4".</para>
+        /// </summary>
         [EnumString("r4")]
         FourBytesReal,
-        ///<summary>
-        ///8-Byte Real Number Base Type.
-        ///<para>When the item is serialized out as xml, its value is "r8".</para>
-        ///</summary>
+        /// <summary>
+        /// 8-Byte Real Number Base Type.
+        /// <para>When the item is serialized out as xml, its value is "r8".</para>
+        /// </summary>
         [EnumString("r8")]
         EightBytesReal,
-        ///<summary>
-        ///Decimal Base Type.
-        ///<para>When the item is serialized out as xml, its value is "decimal".</para>
-        ///</summary>
+        /// <summary>
+        /// Decimal Base Type.
+        /// <para>When the item is serialized out as xml, its value is "decimal".</para>
+        /// </summary>
         [EnumString("decimal")]
         Decimal,
-        ///<summary>
-        ///Basic String Base Type.
-        ///<para>When the item is serialized out as xml, its value is "bstr".</para>
-        ///</summary>
+        /// <summary>
+        /// Basic String Base Type.
+        /// <para>When the item is serialized out as xml, its value is "bstr".</para>
+        /// </summary>
         [EnumString("bstr")]
         Bstr,
-        ///<summary>
-        ///Date and Time Base Type.
-        ///<para>When the item is serialized out as xml, its value is "date".</para>
-        ///</summary>
+        /// <summary>
+        /// Date and Time Base Type.
+        /// <para>When the item is serialized out as xml, its value is "date".</para>
+        /// </summary>
         [EnumString("date")]
         Date,
-        ///<summary>
-        ///Boolean Base Type.
-        ///<para>When the item is serialized out as xml, its value is "bool".</para>
-        ///</summary>
+        /// <summary>
+        /// Boolean Base Type.
+        /// <para>When the item is serialized out as xml, its value is "bool".</para>
+        /// </summary>
         [EnumString("bool")]
         Bool,
-        ///<summary>
-        ///Currency Base Type.
-        ///<para>When the item is serialized out as xml, its value is "cy".</para>
-        ///</summary>
+        /// <summary>
+        /// Currency Base Type.
+        /// <para>When the item is serialized out as xml, its value is "cy".</para>
+        /// </summary>
         [EnumString("cy")]
         Currency,
-        ///<summary>
-        ///Error Status Code Base Type.
-        ///<para>When the item is serialized out as xml, its value is "error".</para>
-        ///</summary>
+        /// <summary>
+        /// Error Status Code Base Type.
+        /// <para>When the item is serialized out as xml, its value is "error".</para>
+        /// </summary>
         [EnumString("error")]
-        Error,
+        Error
     }
 }

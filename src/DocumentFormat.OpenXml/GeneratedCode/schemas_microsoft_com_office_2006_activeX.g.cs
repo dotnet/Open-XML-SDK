@@ -457,29 +457,29 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum PersistenceValues
     {
-        ///<summary>
-        ///persistPropertyBag.
-        ///<para>When the item is serialized out as xml, its value is "persistPropertyBag".</para>
-        ///</summary>
+        /// <summary>
+        /// persistPropertyBag.
+        /// <para>When the item is serialized out as xml, its value is "persistPropertyBag".</para>
+        /// </summary>
         [EnumString("persistPropertyBag")]
         PersistPropertyBag,
-        ///<summary>
-        ///persistStream.
-        ///<para>When the item is serialized out as xml, its value is "persistStream".</para>
-        ///</summary>
+        /// <summary>
+        /// persistStream.
+        /// <para>When the item is serialized out as xml, its value is "persistStream".</para>
+        /// </summary>
         [EnumString("persistStream")]
         PersistStream,
-        ///<summary>
-        ///persistStreamInit.
-        ///<para>When the item is serialized out as xml, its value is "persistStreamInit".</para>
-        ///</summary>
+        /// <summary>
+        /// persistStreamInit.
+        /// <para>When the item is serialized out as xml, its value is "persistStreamInit".</para>
+        /// </summary>
         [EnumString("persistStreamInit")]
         PersistStreamInit,
-        ///<summary>
-        ///persistStorage.
-        ///<para>When the item is serialized out as xml, its value is "persistStorage".</para>
-        ///</summary>
+        /// <summary>
+        /// persistStorage.
+        /// <para>When the item is serialized out as xml, its value is "persistStorage".</para>
+        /// </summary>
         [EnumString("persistStorage")]
-        PersistStorage,
+        PersistStorage
     }
 }

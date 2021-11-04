@@ -293,14 +293,13 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office2019.Drawing.Animation
     /// <summary>
     /// Defines the Indefinite enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2019)]
     public enum Indefinite
     {
-        ///<summary>
-        ///indefinite.
-        ///<para>When the item is serialized out as xml, its value is "indefinite".</para>
-        ///</summary>
+        /// <summary>
+        /// indefinite.
+        /// <para>When the item is serialized out as xml, its value is "indefinite".</para>
+        /// </summary>
         [EnumString("indefinite")]
-        Indefinite,
+        Indefinite
     }
 }

@@ -18651,18 +18651,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     /// </summary>
     public enum SizeValues
     {
-        ///<summary>
-        ///normal.
-        ///<para>When the item is serialized out as xml, its value is "normal".</para>
-        ///</summary>
+        /// <summary>
+        /// normal.
+        /// <para>When the item is serialized out as xml, its value is "normal".</para>
+        /// </summary>
         [EnumString("normal")]
         Normal,
-        ///<summary>
-        ///large.
-        ///<para>When the item is serialized out as xml, its value is "large".</para>
-        ///</summary>
+        /// <summary>
+        /// large.
+        /// <para>When the item is serialized out as xml, its value is "large".</para>
+        /// </summary>
         [EnumString("large")]
-        Large,
+        Large
     }
 
     /// <summary>
@@ -18670,18 +18670,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     /// </summary>
     public enum ItemSizeValues
     {
-        ///<summary>
-        ///normal.
-        ///<para>When the item is serialized out as xml, its value is "normal".</para>
-        ///</summary>
+        /// <summary>
+        /// normal.
+        /// <para>When the item is serialized out as xml, its value is "normal".</para>
+        /// </summary>
         [EnumString("normal")]
         Normal,
-        ///<summary>
-        ///large.
-        ///<para>When the item is serialized out as xml, its value is "large".</para>
-        ///</summary>
+        /// <summary>
+        /// large.
+        /// <para>When the item is serialized out as xml, its value is "large".</para>
+        /// </summary>
         [EnumString("large")]
-        Large,
+        Large
     }
 
     /// <summary>
@@ -18689,17 +18689,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     /// </summary>
     public enum BoxStyleValues
     {
-        ///<summary>
-        ///horizontal.
-        ///<para>When the item is serialized out as xml, its value is "horizontal".</para>
-        ///</summary>
+        /// <summary>
+        /// horizontal.
+        /// <para>When the item is serialized out as xml, its value is "horizontal".</para>
+        /// </summary>
         [EnumString("horizontal")]
         Horizontal,
-        ///<summary>
-        ///vertical.
-        ///<para>When the item is serialized out as xml, its value is "vertical".</para>
-        ///</summary>
+        /// <summary>
+        /// vertical.
+        /// <para>When the item is serialized out as xml, its value is "vertical".</para>
+        /// </summary>
         [EnumString("vertical")]
-        Vertical,
+        Vertical
     }
 }

@@ -17,100 +17,98 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Ink
     /// <summary>
     /// Defines the ExtendedBrushPropertyName enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2019)]
     public enum ExtendedBrushPropertyName
     {
-        ///<summary>
-        ///inkEffects.
-        ///<para>When the item is serialized out as xml, its value is "inkEffects".</para>
-        ///</summary>
+        /// <summary>
+        /// inkEffects.
+        /// <para>When the item is serialized out as xml, its value is "inkEffects".</para>
+        /// </summary>
         [EnumString("inkEffects")]
         InkEffects,
-        ///<summary>
-        ///anchorX.
-        ///<para>When the item is serialized out as xml, its value is "anchorX".</para>
-        ///</summary>
+        /// <summary>
+        /// anchorX.
+        /// <para>When the item is serialized out as xml, its value is "anchorX".</para>
+        /// </summary>
         [EnumString("anchorX")]
         AnchorX,
-        ///<summary>
-        ///anchorY.
-        ///<para>When the item is serialized out as xml, its value is "anchorY".</para>
-        ///</summary>
+        /// <summary>
+        /// anchorY.
+        /// <para>When the item is serialized out as xml, its value is "anchorY".</para>
+        /// </summary>
         [EnumString("anchorY")]
         AnchorY,
-        ///<summary>
-        ///scaleFactor.
-        ///<para>When the item is serialized out as xml, its value is "scaleFactor".</para>
-        ///</summary>
+        /// <summary>
+        /// scaleFactor.
+        /// <para>When the item is serialized out as xml, its value is "scaleFactor".</para>
+        /// </summary>
         [EnumString("scaleFactor")]
-        ScaleFactor,
+        ScaleFactor
     }
 
     /// <summary>
     /// Defines the InkEffectsType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2019)]
     public enum InkEffectsType
     {
-        ///<summary>
-        ///none.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// none.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///pencil.
-        ///<para>When the item is serialized out as xml, its value is "pencil".</para>
-        ///</summary>
+        /// <summary>
+        /// pencil.
+        /// <para>When the item is serialized out as xml, its value is "pencil".</para>
+        /// </summary>
         [EnumString("pencil")]
         Pencil,
-        ///<summary>
-        ///rainbow.
-        ///<para>When the item is serialized out as xml, its value is "rainbow".</para>
-        ///</summary>
+        /// <summary>
+        /// rainbow.
+        /// <para>When the item is serialized out as xml, its value is "rainbow".</para>
+        /// </summary>
         [EnumString("rainbow")]
         Rainbow,
-        ///<summary>
-        ///galaxy.
-        ///<para>When the item is serialized out as xml, its value is "galaxy".</para>
-        ///</summary>
+        /// <summary>
+        /// galaxy.
+        /// <para>When the item is serialized out as xml, its value is "galaxy".</para>
+        /// </summary>
         [EnumString("galaxy")]
         Galaxy,
-        ///<summary>
-        ///gold.
-        ///<para>When the item is serialized out as xml, its value is "gold".</para>
-        ///</summary>
+        /// <summary>
+        /// gold.
+        /// <para>When the item is serialized out as xml, its value is "gold".</para>
+        /// </summary>
         [EnumString("gold")]
         Gold,
-        ///<summary>
-        ///silver.
-        ///<para>When the item is serialized out as xml, its value is "silver".</para>
-        ///</summary>
+        /// <summary>
+        /// silver.
+        /// <para>When the item is serialized out as xml, its value is "silver".</para>
+        /// </summary>
         [EnumString("silver")]
         Silver,
-        ///<summary>
-        ///lava.
-        ///<para>When the item is serialized out as xml, its value is "lava".</para>
-        ///</summary>
+        /// <summary>
+        /// lava.
+        /// <para>When the item is serialized out as xml, its value is "lava".</para>
+        /// </summary>
         [EnumString("lava")]
         Lava,
-        ///<summary>
-        ///ocean.
-        ///<para>When the item is serialized out as xml, its value is "ocean".</para>
-        ///</summary>
+        /// <summary>
+        /// ocean.
+        /// <para>When the item is serialized out as xml, its value is "ocean".</para>
+        /// </summary>
         [EnumString("ocean")]
         Ocean,
-        ///<summary>
-        ///rosegold.
-        ///<para>When the item is serialized out as xml, its value is "rosegold".</para>
-        ///</summary>
+        /// <summary>
+        /// rosegold.
+        /// <para>When the item is serialized out as xml, its value is "rosegold".</para>
+        /// </summary>
         [EnumString("rosegold")]
         Rosegold,
-        ///<summary>
-        ///bronze.
-        ///<para>When the item is serialized out as xml, its value is "bronze".</para>
-        ///</summary>
+        /// <summary>
+        /// bronze.
+        /// <para>When the item is serialized out as xml, its value is "bronze".</para>
+        /// </summary>
         [EnumString("bronze")]
-        Bronze,
+        Bronze
     }
 }

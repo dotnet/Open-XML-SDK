@@ -8703,404 +8703,391 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <summary>
     /// Defines the RevisionContext enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum RevisionContext
     {
-        ///<summary>
-        ///normal.
-        ///<para>When the item is serialized out as xml, its value is "normal".</para>
-        ///</summary>
+        /// <summary>
+        /// normal.
+        /// <para>When the item is serialized out as xml, its value is "normal".</para>
+        /// </summary>
         [EnumString("normal")]
         Normal,
-        ///<summary>
-        ///undo.
-        ///<para>When the item is serialized out as xml, its value is "undo".</para>
-        ///</summary>
+        /// <summary>
+        /// undo.
+        /// <para>When the item is serialized out as xml, its value is "undo".</para>
+        /// </summary>
         [EnumString("undo")]
         Undo,
-        ///<summary>
-        ///redo.
-        ///<para>When the item is serialized out as xml, its value is "redo".</para>
-        ///</summary>
+        /// <summary>
+        /// redo.
+        /// <para>When the item is serialized out as xml, its value is "redo".</para>
+        /// </summary>
         [EnumString("redo")]
         Redo,
-        ///<summary>
-        ///copy.
-        ///<para>When the item is serialized out as xml, its value is "copy".</para>
-        ///</summary>
+        /// <summary>
+        /// copy.
+        /// <para>When the item is serialized out as xml, its value is "copy".</para>
+        /// </summary>
         [EnumString("copy")]
-        Copy,
+        Copy
     }
 
     /// <summary>
     /// Defines the RwColAction enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum RwColAction
     {
-        ///<summary>
-        ///insr.
-        ///<para>When the item is serialized out as xml, its value is "insr".</para>
-        ///</summary>
+        /// <summary>
+        /// insr.
+        /// <para>When the item is serialized out as xml, its value is "insr".</para>
+        /// </summary>
         [EnumString("insr")]
         Insr,
-        ///<summary>
-        ///delr.
-        ///<para>When the item is serialized out as xml, its value is "delr".</para>
-        ///</summary>
+        /// <summary>
+        /// delr.
+        /// <para>When the item is serialized out as xml, its value is "delr".</para>
+        /// </summary>
         [EnumString("delr")]
         Delr,
-        ///<summary>
-        ///insc.
-        ///<para>When the item is serialized out as xml, its value is "insc".</para>
-        ///</summary>
+        /// <summary>
+        /// insc.
+        /// <para>When the item is serialized out as xml, its value is "insc".</para>
+        /// </summary>
         [EnumString("insc")]
         Insc,
-        ///<summary>
-        ///delc.
-        ///<para>When the item is serialized out as xml, its value is "delc".</para>
-        ///</summary>
+        /// <summary>
+        /// delc.
+        /// <para>When the item is serialized out as xml, its value is "delc".</para>
+        /// </summary>
         [EnumString("delc")]
-        Delc,
+        Delc
     }
 
     /// <summary>
     /// Defines the FeatureType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum FeatureType
     {
-        ///<summary>
-        ///dataValidation.
-        ///<para>When the item is serialized out as xml, its value is "dataValidation".</para>
-        ///</summary>
+        /// <summary>
+        /// dataValidation.
+        /// <para>When the item is serialized out as xml, its value is "dataValidation".</para>
+        /// </summary>
         [EnumString("dataValidation")]
         DataValidation,
-        ///<summary>
-        ///hyperlink.
-        ///<para>When the item is serialized out as xml, its value is "hyperlink".</para>
-        ///</summary>
+        /// <summary>
+        /// hyperlink.
+        /// <para>When the item is serialized out as xml, its value is "hyperlink".</para>
+        /// </summary>
         [EnumString("hyperlink")]
         Hyperlink,
-        ///<summary>
-        ///rowColVisualOps.
-        ///<para>When the item is serialized out as xml, its value is "rowColVisualOps".</para>
-        ///</summary>
+        /// <summary>
+        /// rowColVisualOps.
+        /// <para>When the item is serialized out as xml, its value is "rowColVisualOps".</para>
+        /// </summary>
         [EnumString("rowColVisualOps")]
         RowColVisualOps,
-        ///<summary>
-        ///freezePanes.
-        ///<para>When the item is serialized out as xml, its value is "freezePanes".</para>
-        ///</summary>
+        /// <summary>
+        /// freezePanes.
+        /// <para>When the item is serialized out as xml, its value is "freezePanes".</para>
+        /// </summary>
         [EnumString("freezePanes")]
         FreezePanes,
-        ///<summary>
-        ///sparklines.
-        ///<para>When the item is serialized out as xml, its value is "sparklines".</para>
-        ///</summary>
+        /// <summary>
+        /// sparklines.
+        /// <para>When the item is serialized out as xml, its value is "sparklines".</para>
+        /// </summary>
         [EnumString("sparklines")]
         Sparklines,
-        ///<summary>
-        ///hideUnhideSheet.
-        ///<para>When the item is serialized out as xml, its value is "hideUnhideSheet".</para>
-        ///</summary>
+        /// <summary>
+        /// hideUnhideSheet.
+        /// <para>When the item is serialized out as xml, its value is "hideUnhideSheet".</para>
+        /// </summary>
         [EnumString("hideUnhideSheet")]
         HideUnhideSheet,
-        ///<summary>
-        ///showGridlinesHeadings.
-        ///<para>When the item is serialized out as xml, its value is "showGridlinesHeadings".</para>
-        ///</summary>
+        /// <summary>
+        /// showGridlinesHeadings.
+        /// <para>When the item is serialized out as xml, its value is "showGridlinesHeadings".</para>
+        /// </summary>
         [EnumString("showGridlinesHeadings")]
         ShowGridlinesHeadings,
-        ///<summary>
-        ///comment.
-        ///<para>When the item is serialized out as xml, its value is "comment".</para>
-        ///</summary>
+        /// <summary>
+        /// comment.
+        /// <para>When the item is serialized out as xml, its value is "comment".</para>
+        /// </summary>
         [EnumString("comment")]
         Comment,
-        ///<summary>
-        ///outlines.
-        ///<para>When the item is serialized out as xml, its value is "outlines".</para>
-        ///</summary>
+        /// <summary>
+        /// outlines.
+        /// <para>When the item is serialized out as xml, its value is "outlines".</para>
+        /// </summary>
         [EnumString("outlines")]
         Outlines,
-        ///<summary>
-        ///drawingElement.
-        ///<para>When the item is serialized out as xml, its value is "drawingElement".</para>
-        ///</summary>
+        /// <summary>
+        /// drawingElement.
+        /// <para>When the item is serialized out as xml, its value is "drawingElement".</para>
+        /// </summary>
         [EnumString("drawingElement")]
         DrawingElement,
-        ///<summary>
-        ///autoFilter.
-        ///<para>When the item is serialized out as xml, its value is "autoFilter".</para>
-        ///</summary>
+        /// <summary>
+        /// autoFilter.
+        /// <para>When the item is serialized out as xml, its value is "autoFilter".</para>
+        /// </summary>
         [EnumString("autoFilter")]
         AutoFilter,
-        ///<summary>
-        ///pivotTable.
-        ///<para>When the item is serialized out as xml, its value is "pivotTable".</para>
-        ///</summary>
+        /// <summary>
+        /// pivotTable.
+        /// <para>When the item is serialized out as xml, its value is "pivotTable".</para>
+        /// </summary>
         [EnumString("pivotTable")]
         PivotTable,
-        ///<summary>
-        ///future.
-        ///<para>When the item is serialized out as xml, its value is "future".</para>
-        ///</summary>
+        /// <summary>
+        /// future.
+        /// <para>When the item is serialized out as xml, its value is "future".</para>
+        /// </summary>
         [EnumString("future")]
-        Future,
+        Future
     }
 
     /// <summary>
     /// Defines the ExtFeatureType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum ExtFeatureType
     {
-        ///<summary>
-        ///reserved.
-        ///<para>When the item is serialized out as xml, its value is "reserved".</para>
-        ///</summary>
+        /// <summary>
+        /// reserved.
+        /// <para>When the item is serialized out as xml, its value is "reserved".</para>
+        /// </summary>
         [EnumString("reserved")]
-        Reserved,
+        Reserved
     }
 
     /// <summary>
     /// Defines the SubFeatureType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum SubFeatureType
     {
-        ///<summary>
-        ///none.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// none.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///future.
-        ///<para>When the item is serialized out as xml, its value is "future".</para>
-        ///</summary>
+        /// <summary>
+        /// future.
+        /// <para>When the item is serialized out as xml, its value is "future".</para>
+        /// </summary>
         [EnumString("future")]
-        Future,
+        Future
     }
 
     /// <summary>
     /// Defines the ExtSubFeatureType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum ExtSubFeatureType
     {
-        ///<summary>
-        ///reserved.
-        ///<para>When the item is serialized out as xml, its value is "reserved".</para>
-        ///</summary>
+        /// <summary>
+        /// reserved.
+        /// <para>When the item is serialized out as xml, its value is "reserved".</para>
+        /// </summary>
         [EnumString("reserved")]
-        Reserved,
+        Reserved
     }
 
     /// <summary>
     /// Defines the RowColVisualOp enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum RowColVisualOp
     {
-        ///<summary>
-        ///hide.
-        ///<para>When the item is serialized out as xml, its value is "hide".</para>
-        ///</summary>
+        /// <summary>
+        /// hide.
+        /// <para>When the item is serialized out as xml, its value is "hide".</para>
+        /// </summary>
         [EnumString("hide")]
         Hide,
-        ///<summary>
-        ///unhide.
-        ///<para>When the item is serialized out as xml, its value is "unhide".</para>
-        ///</summary>
+        /// <summary>
+        /// unhide.
+        /// <para>When the item is serialized out as xml, its value is "unhide".</para>
+        /// </summary>
         [EnumString("unhide")]
         Unhide,
-        ///<summary>
-        ///resize.
-        ///<para>When the item is serialized out as xml, its value is "resize".</para>
-        ///</summary>
+        /// <summary>
+        /// resize.
+        /// <para>When the item is serialized out as xml, its value is "resize".</para>
+        /// </summary>
         [EnumString("resize")]
         Resize,
-        ///<summary>
-        ///autosize.
-        ///<para>When the item is serialized out as xml, its value is "autosize".</para>
-        ///</summary>
+        /// <summary>
+        /// autosize.
+        /// <para>When the item is serialized out as xml, its value is "autosize".</para>
+        /// </summary>
         [EnumString("autosize")]
-        Autosize,
+        Autosize
     }
 
     /// <summary>
     /// Defines the SheetOp enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum SheetOp
     {
-        ///<summary>
-        ///insert.
-        ///<para>When the item is serialized out as xml, its value is "insert".</para>
-        ///</summary>
+        /// <summary>
+        /// insert.
+        /// <para>When the item is serialized out as xml, its value is "insert".</para>
+        /// </summary>
         [EnumString("insert")]
         Insert,
-        ///<summary>
-        ///delete.
-        ///<para>When the item is serialized out as xml, its value is "delete".</para>
-        ///</summary>
+        /// <summary>
+        /// delete.
+        /// <para>When the item is serialized out as xml, its value is "delete".</para>
+        /// </summary>
         [EnumString("delete")]
         Delete,
-        ///<summary>
-        ///reorder.
-        ///<para>When the item is serialized out as xml, its value is "reorder".</para>
-        ///</summary>
+        /// <summary>
+        /// reorder.
+        /// <para>When the item is serialized out as xml, its value is "reorder".</para>
+        /// </summary>
         [EnumString("reorder")]
         Reorder,
-        ///<summary>
-        ///rename.
-        ///<para>When the item is serialized out as xml, its value is "rename".</para>
-        ///</summary>
+        /// <summary>
+        /// rename.
+        /// <para>When the item is serialized out as xml, its value is "rename".</para>
+        /// </summary>
         [EnumString("rename")]
-        Rename,
+        Rename
     }
 
     /// <summary>
     /// Defines the FillType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum FillType
     {
-        ///<summary>
-        ///fill.
-        ///<para>When the item is serialized out as xml, its value is "fill".</para>
-        ///</summary>
+        /// <summary>
+        /// fill.
+        /// <para>When the item is serialized out as xml, its value is "fill".</para>
+        /// </summary>
         [EnumString("fill")]
         Fill,
-        ///<summary>
-        ///array.
-        ///<para>When the item is serialized out as xml, its value is "array".</para>
-        ///</summary>
+        /// <summary>
+        /// array.
+        /// <para>When the item is serialized out as xml, its value is "array".</para>
+        /// </summary>
         [EnumString("array")]
         Array,
-        ///<summary>
-        ///future.
-        ///<para>When the item is serialized out as xml, its value is "future".</para>
-        ///</summary>
+        /// <summary>
+        /// future.
+        /// <para>When the item is serialized out as xml, its value is "future".</para>
+        /// </summary>
         [EnumString("future")]
-        Future,
+        Future
     }
 
     /// <summary>
     /// Defines the FillTypeExt enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum FillTypeExt
     {
-        ///<summary>
-        ///test.
-        ///<para>When the item is serialized out as xml, its value is "test".</para>
-        ///</summary>
+        /// <summary>
+        /// test.
+        /// <para>When the item is serialized out as xml, its value is "test".</para>
+        /// </summary>
         [EnumString("test")]
-        Test,
+        Test
     }
 
     /// <summary>
     /// Defines the AdjustType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum AdjustType
     {
-        ///<summary>
-        ///fmla.
-        ///<para>When the item is serialized out as xml, its value is "fmla".</para>
-        ///</summary>
+        /// <summary>
+        /// fmla.
+        /// <para>When the item is serialized out as xml, its value is "fmla".</para>
+        /// </summary>
         [EnumString("fmla")]
         Fmla,
-        ///<summary>
-        ///format.
-        ///<para>When the item is serialized out as xml, its value is "format".</para>
-        ///</summary>
+        /// <summary>
+        /// format.
+        /// <para>When the item is serialized out as xml, its value is "format".</para>
+        /// </summary>
         [EnumString("format")]
         Format,
-        ///<summary>
-        ///condFmt.
-        ///<para>When the item is serialized out as xml, its value is "condFmt".</para>
-        ///</summary>
+        /// <summary>
+        /// condFmt.
+        /// <para>When the item is serialized out as xml, its value is "condFmt".</para>
+        /// </summary>
         [EnumString("condFmt")]
         CondFmt,
-        ///<summary>
-        ///sparkline.
-        ///<para>When the item is serialized out as xml, its value is "sparkline".</para>
-        ///</summary>
+        /// <summary>
+        /// sparkline.
+        /// <para>When the item is serialized out as xml, its value is "sparkline".</para>
+        /// </summary>
         [EnumString("sparkline")]
         Sparkline,
-        ///<summary>
-        ///anchor.
-        ///<para>When the item is serialized out as xml, its value is "anchor".</para>
-        ///</summary>
+        /// <summary>
+        /// anchor.
+        /// <para>When the item is serialized out as xml, its value is "anchor".</para>
+        /// </summary>
         [EnumString("anchor")]
         Anchor,
-        ///<summary>
-        ///fmlaNoSticky.
-        ///<para>When the item is serialized out as xml, its value is "fmlaNoSticky".</para>
-        ///</summary>
+        /// <summary>
+        /// fmlaNoSticky.
+        /// <para>When the item is serialized out as xml, its value is "fmlaNoSticky".</para>
+        /// </summary>
         [EnumString("fmlaNoSticky")]
         FmlaNoSticky,
-        ///<summary>
-        ///noAdj.
-        ///<para>When the item is serialized out as xml, its value is "noAdj".</para>
-        ///</summary>
+        /// <summary>
+        /// noAdj.
+        /// <para>When the item is serialized out as xml, its value is "noAdj".</para>
+        /// </summary>
         [EnumString("noAdj")]
         NoAdj,
-        ///<summary>
-        ///fragile.
-        ///<para>When the item is serialized out as xml, its value is "fragile".</para>
-        ///</summary>
+        /// <summary>
+        /// fragile.
+        /// <para>When the item is serialized out as xml, its value is "fragile".</para>
+        /// </summary>
         [EnumString("fragile")]
         Fragile,
-        ///<summary>
-        ///future.
-        ///<para>When the item is serialized out as xml, its value is "future".</para>
-        ///</summary>
+        /// <summary>
+        /// future.
+        /// <para>When the item is serialized out as xml, its value is "future".</para>
+        /// </summary>
         [EnumString("future")]
-        Future,
+        Future
     }
 
     /// <summary>
     /// Defines the AdjustTypeExt enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum AdjustTypeExt
     {
-        ///<summary>
-        ///test.
-        ///<para>When the item is serialized out as xml, its value is "test".</para>
-        ///</summary>
+        /// <summary>
+        /// test.
+        /// <para>When the item is serialized out as xml, its value is "test".</para>
+        /// </summary>
         [EnumString("test")]
-        Test,
+        Test
     }
 
     /// <summary>
     /// Defines the OartAnchorType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum OartAnchorType
     {
-        ///<summary>
-        ///twoCell.
-        ///<para>When the item is serialized out as xml, its value is "twoCell".</para>
-        ///</summary>
+        /// <summary>
+        /// twoCell.
+        /// <para>When the item is serialized out as xml, its value is "twoCell".</para>
+        /// </summary>
         [EnumString("twoCell")]
         TwoCell,
-        ///<summary>
-        ///oneCell.
-        ///<para>When the item is serialized out as xml, its value is "oneCell".</para>
-        ///</summary>
+        /// <summary>
+        /// oneCell.
+        /// <para>When the item is serialized out as xml, its value is "oneCell".</para>
+        /// </summary>
         [EnumString("oneCell")]
         OneCell,
-        ///<summary>
-        ///absolute.
-        ///<para>When the item is serialized out as xml, its value is "absolute".</para>
-        ///</summary>
+        /// <summary>
+        /// absolute.
+        /// <para>When the item is serialized out as xml, its value is "absolute".</para>
+        /// </summary>
         [EnumString("absolute")]
-        Absolute,
+        Absolute
     }
 }

@@ -6502,358 +6502,347 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (2L), MaxInclusive 
     /// <summary>
     /// Defines the ColorStyleMethodEnum enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum ColorStyleMethodEnum
     {
-        ///<summary>
-        ///cycle.
-        ///<para>When the item is serialized out as xml, its value is "cycle".</para>
-        ///</summary>
+        /// <summary>
+        /// cycle.
+        /// <para>When the item is serialized out as xml, its value is "cycle".</para>
+        /// </summary>
         [EnumString("cycle")]
         Cycle,
-        ///<summary>
-        ///withinLinear.
-        ///<para>When the item is serialized out as xml, its value is "withinLinear".</para>
-        ///</summary>
+        /// <summary>
+        /// withinLinear.
+        /// <para>When the item is serialized out as xml, its value is "withinLinear".</para>
+        /// </summary>
         [EnumString("withinLinear")]
         WithinLinear,
-        ///<summary>
-        ///acrossLinear.
-        ///<para>When the item is serialized out as xml, its value is "acrossLinear".</para>
-        ///</summary>
+        /// <summary>
+        /// acrossLinear.
+        /// <para>When the item is serialized out as xml, its value is "acrossLinear".</para>
+        /// </summary>
         [EnumString("acrossLinear")]
         AcrossLinear,
-        ///<summary>
-        ///withinLinearReversed.
-        ///<para>When the item is serialized out as xml, its value is "withinLinearReversed".</para>
-        ///</summary>
+        /// <summary>
+        /// withinLinearReversed.
+        /// <para>When the item is serialized out as xml, its value is "withinLinearReversed".</para>
+        /// </summary>
         [EnumString("withinLinearReversed")]
         WithinLinearReversed,
-        ///<summary>
-        ///acrossLinearReversed.
-        ///<para>When the item is serialized out as xml, its value is "acrossLinearReversed".</para>
-        ///</summary>
+        /// <summary>
+        /// acrossLinearReversed.
+        /// <para>When the item is serialized out as xml, its value is "acrossLinearReversed".</para>
+        /// </summary>
         [EnumString("acrossLinearReversed")]
-        AcrossLinearReversed,
+        AcrossLinearReversed
     }
 
     /// <summary>
     /// Defines the StyleReferenceModifierEnum enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum StyleReferenceModifierEnum
     {
-        ///<summary>
-        ///ignoreCSTransforms.
-        ///<para>When the item is serialized out as xml, its value is "ignoreCSTransforms".</para>
-        ///</summary>
+        /// <summary>
+        /// ignoreCSTransforms.
+        /// <para>When the item is serialized out as xml, its value is "ignoreCSTransforms".</para>
+        /// </summary>
         [EnumString("ignoreCSTransforms")]
-        IgnoreCSTransforms,
+        IgnoreCSTransforms
     }
 
     /// <summary>
     /// Defines the StyleColorEnum enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum StyleColorEnum
     {
-        ///<summary>
-        ///auto.
-        ///<para>When the item is serialized out as xml, its value is "auto".</para>
-        ///</summary>
+        /// <summary>
+        /// auto.
+        /// <para>When the item is serialized out as xml, its value is "auto".</para>
+        /// </summary>
         [EnumString("auto")]
-        Automatic,
+        Automatic
     }
 
     /// <summary>
     /// Defines the StyleEntryModifierEnum enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum StyleEntryModifierEnum
     {
-        ///<summary>
-        ///allowNoFillOverride.
-        ///<para>When the item is serialized out as xml, its value is "allowNoFillOverride".</para>
-        ///</summary>
+        /// <summary>
+        /// allowNoFillOverride.
+        /// <para>When the item is serialized out as xml, its value is "allowNoFillOverride".</para>
+        /// </summary>
         [EnumString("allowNoFillOverride")]
         AllowNoFillOverride,
-        ///<summary>
-        ///allowNoLineOverride.
-        ///<para>When the item is serialized out as xml, its value is "allowNoLineOverride".</para>
-        ///</summary>
+        /// <summary>
+        /// allowNoLineOverride.
+        /// <para>When the item is serialized out as xml, its value is "allowNoLineOverride".</para>
+        /// </summary>
         [EnumString("allowNoLineOverride")]
-        AllowNoLineOverride,
+        AllowNoLineOverride
     }
 
     /// <summary>
     /// Defines the MarkerStyle enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum MarkerStyle
     {
-        ///<summary>
-        ///circle.
-        ///<para>When the item is serialized out as xml, its value is "circle".</para>
-        ///</summary>
+        /// <summary>
+        /// circle.
+        /// <para>When the item is serialized out as xml, its value is "circle".</para>
+        /// </summary>
         [EnumString("circle")]
         Circle,
-        ///<summary>
-        ///dash.
-        ///<para>When the item is serialized out as xml, its value is "dash".</para>
-        ///</summary>
+        /// <summary>
+        /// dash.
+        /// <para>When the item is serialized out as xml, its value is "dash".</para>
+        /// </summary>
         [EnumString("dash")]
         Dash,
-        ///<summary>
-        ///diamond.
-        ///<para>When the item is serialized out as xml, its value is "diamond".</para>
-        ///</summary>
+        /// <summary>
+        /// diamond.
+        /// <para>When the item is serialized out as xml, its value is "diamond".</para>
+        /// </summary>
         [EnumString("diamond")]
         Diamond,
-        ///<summary>
-        ///dot.
-        ///<para>When the item is serialized out as xml, its value is "dot".</para>
-        ///</summary>
+        /// <summary>
+        /// dot.
+        /// <para>When the item is serialized out as xml, its value is "dot".</para>
+        /// </summary>
         [EnumString("dot")]
         Dot,
-        ///<summary>
-        ///plus.
-        ///<para>When the item is serialized out as xml, its value is "plus".</para>
-        ///</summary>
+        /// <summary>
+        /// plus.
+        /// <para>When the item is serialized out as xml, its value is "plus".</para>
+        /// </summary>
         [EnumString("plus")]
         Plus,
-        ///<summary>
-        ///square.
-        ///<para>When the item is serialized out as xml, its value is "square".</para>
-        ///</summary>
+        /// <summary>
+        /// square.
+        /// <para>When the item is serialized out as xml, its value is "square".</para>
+        /// </summary>
         [EnumString("square")]
         Square,
-        ///<summary>
-        ///star.
-        ///<para>When the item is serialized out as xml, its value is "star".</para>
-        ///</summary>
+        /// <summary>
+        /// star.
+        /// <para>When the item is serialized out as xml, its value is "star".</para>
+        /// </summary>
         [EnumString("star")]
         Star,
-        ///<summary>
-        ///triangle.
-        ///<para>When the item is serialized out as xml, its value is "triangle".</para>
-        ///</summary>
+        /// <summary>
+        /// triangle.
+        /// <para>When the item is serialized out as xml, its value is "triangle".</para>
+        /// </summary>
         [EnumString("triangle")]
         Triangle,
-        ///<summary>
-        ///x.
-        ///<para>When the item is serialized out as xml, its value is "x".</para>
-        ///</summary>
+        /// <summary>
+        /// x.
+        /// <para>When the item is serialized out as xml, its value is "x".</para>
+        /// </summary>
         [EnumString("x")]
-        X,
+        X
     }
 
     /// <summary>
     /// Defines the Boolean enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum Boolean
     {
-        ///<summary>
-        ///false.
-        ///<para>When the item is serialized out as xml, its value is "false".</para>
-        ///</summary>
+        /// <summary>
+        /// false.
+        /// <para>When the item is serialized out as xml, its value is "false".</para>
+        /// </summary>
         [EnumString("false")]
         False,
-        ///<summary>
-        ///true.
-        ///<para>When the item is serialized out as xml, its value is "true".</para>
-        ///</summary>
+        /// <summary>
+        /// true.
+        /// <para>When the item is serialized out as xml, its value is "true".</para>
+        /// </summary>
         [EnumString("true")]
         True,
-        ///<summary>
-        ///ninch.
-        ///<para>When the item is serialized out as xml, its value is "ninch".</para>
-        ///</summary>
+        /// <summary>
+        /// ninch.
+        /// <para>When the item is serialized out as xml, its value is "ninch".</para>
+        /// </summary>
         [EnumString("ninch")]
-        Ninch,
+        Ninch
     }
 
     /// <summary>
     /// Defines the TickMarkNinch enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum TickMarkNinch
     {
-        ///<summary>
-        ///cross.
-        ///<para>When the item is serialized out as xml, its value is "cross".</para>
-        ///</summary>
+        /// <summary>
+        /// cross.
+        /// <para>When the item is serialized out as xml, its value is "cross".</para>
+        /// </summary>
         [EnumString("cross")]
         Cross,
-        ///<summary>
-        ///inside.
-        ///<para>When the item is serialized out as xml, its value is "inside".</para>
-        ///</summary>
+        /// <summary>
+        /// inside.
+        /// <para>When the item is serialized out as xml, its value is "inside".</para>
+        /// </summary>
         [EnumString("inside")]
         Inside,
-        ///<summary>
-        ///none.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// none.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///outside.
-        ///<para>When the item is serialized out as xml, its value is "outside".</para>
-        ///</summary>
+        /// <summary>
+        /// outside.
+        /// <para>When the item is serialized out as xml, its value is "outside".</para>
+        /// </summary>
         [EnumString("outside")]
         Outside,
-        ///<summary>
-        ///ninch.
-        ///<para>When the item is serialized out as xml, its value is "ninch".</para>
-        ///</summary>
+        /// <summary>
+        /// ninch.
+        /// <para>When the item is serialized out as xml, its value is "ninch".</para>
+        /// </summary>
         [EnumString("ninch")]
-        Ninch,
+        Ninch
     }
 
     /// <summary>
     /// Defines the TickLabelPositionNinch enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum TickLabelPositionNinch
     {
-        ///<summary>
-        ///high.
-        ///<para>When the item is serialized out as xml, its value is "high".</para>
-        ///</summary>
+        /// <summary>
+        /// high.
+        /// <para>When the item is serialized out as xml, its value is "high".</para>
+        /// </summary>
         [EnumString("high")]
         High,
-        ///<summary>
-        ///low.
-        ///<para>When the item is serialized out as xml, its value is "low".</para>
-        ///</summary>
+        /// <summary>
+        /// low.
+        /// <para>When the item is serialized out as xml, its value is "low".</para>
+        /// </summary>
         [EnumString("low")]
         Low,
-        ///<summary>
-        ///nextToAxis.
-        ///<para>When the item is serialized out as xml, its value is "nextToAxis".</para>
-        ///</summary>
+        /// <summary>
+        /// nextToAxis.
+        /// <para>When the item is serialized out as xml, its value is "nextToAxis".</para>
+        /// </summary>
         [EnumString("nextToAxis")]
         NextToAxis,
-        ///<summary>
-        ///none.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// none.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///ninch.
-        ///<para>When the item is serialized out as xml, its value is "ninch".</para>
-        ///</summary>
+        /// <summary>
+        /// ninch.
+        /// <para>When the item is serialized out as xml, its value is "ninch".</para>
+        /// </summary>
         [EnumString("ninch")]
-        Ninch,
+        Ninch
     }
 
     /// <summary>
     /// Defines the DataLabelsPosition enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum DataLabelsPosition
     {
-        ///<summary>
-        ///center.
-        ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///</summary>
+        /// <summary>
+        /// center.
+        /// <para>When the item is serialized out as xml, its value is "center".</para>
+        /// </summary>
         [EnumString("center")]
         Center,
-        ///<summary>
-        ///insideEnd.
-        ///<para>When the item is serialized out as xml, its value is "insideEnd".</para>
-        ///</summary>
+        /// <summary>
+        /// insideEnd.
+        /// <para>When the item is serialized out as xml, its value is "insideEnd".</para>
+        /// </summary>
         [EnumString("insideEnd")]
         InsideEnd,
-        ///<summary>
-        ///insideBase.
-        ///<para>When the item is serialized out as xml, its value is "insideBase".</para>
-        ///</summary>
+        /// <summary>
+        /// insideBase.
+        /// <para>When the item is serialized out as xml, its value is "insideBase".</para>
+        /// </summary>
         [EnumString("insideBase")]
         InsideBase,
-        ///<summary>
-        ///outsideEnd.
-        ///<para>When the item is serialized out as xml, its value is "outsideEnd".</para>
-        ///</summary>
+        /// <summary>
+        /// outsideEnd.
+        /// <para>When the item is serialized out as xml, its value is "outsideEnd".</para>
+        /// </summary>
         [EnumString("outsideEnd")]
         OutsideEnd,
-        ///<summary>
-        ///ninch.
-        ///<para>When the item is serialized out as xml, its value is "ninch".</para>
-        ///</summary>
+        /// <summary>
+        /// ninch.
+        /// <para>When the item is serialized out as xml, its value is "ninch".</para>
+        /// </summary>
         [EnumString("ninch")]
-        Ninch,
+        Ninch
     }
 
     /// <summary>
     /// Defines the LegendPosition enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum LegendPosition
     {
-        ///<summary>
-        ///right.
-        ///<para>When the item is serialized out as xml, its value is "right".</para>
-        ///</summary>
+        /// <summary>
+        /// right.
+        /// <para>When the item is serialized out as xml, its value is "right".</para>
+        /// </summary>
         [EnumString("right")]
         Right,
-        ///<summary>
-        ///top.
-        ///<para>When the item is serialized out as xml, its value is "top".</para>
-        ///</summary>
+        /// <summary>
+        /// top.
+        /// <para>When the item is serialized out as xml, its value is "top".</para>
+        /// </summary>
         [EnumString("top")]
         Top,
-        ///<summary>
-        ///left.
-        ///<para>When the item is serialized out as xml, its value is "left".</para>
-        ///</summary>
+        /// <summary>
+        /// left.
+        /// <para>When the item is serialized out as xml, its value is "left".</para>
+        /// </summary>
         [EnumString("left")]
         Left,
-        ///<summary>
-        ///bottom.
-        ///<para>When the item is serialized out as xml, its value is "bottom".</para>
-        ///</summary>
+        /// <summary>
+        /// bottom.
+        /// <para>When the item is serialized out as xml, its value is "bottom".</para>
+        /// </summary>
         [EnumString("bottom")]
         Bottom,
-        ///<summary>
-        ///ninch.
-        ///<para>When the item is serialized out as xml, its value is "ninch".</para>
-        ///</summary>
+        /// <summary>
+        /// ninch.
+        /// <para>When the item is serialized out as xml, its value is "ninch".</para>
+        /// </summary>
         [EnumString("ninch")]
-        Ninch,
+        Ninch
     }
 
     /// <summary>
     /// Defines the TitlePosition enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum TitlePosition
     {
-        ///<summary>
-        ///above.
-        ///<para>When the item is serialized out as xml, its value is "above".</para>
-        ///</summary>
+        /// <summary>
+        /// above.
+        /// <para>When the item is serialized out as xml, its value is "above".</para>
+        /// </summary>
         [EnumString("above")]
         Above,
-        ///<summary>
-        ///overlay.
-        ///<para>When the item is serialized out as xml, its value is "overlay".</para>
-        ///</summary>
+        /// <summary>
+        /// overlay.
+        /// <para>When the item is serialized out as xml, its value is "overlay".</para>
+        /// </summary>
         [EnumString("overlay")]
         Overlay,
-        ///<summary>
-        ///off.
-        ///<para>When the item is serialized out as xml, its value is "off".</para>
-        ///</summary>
+        /// <summary>
+        /// off.
+        /// <para>When the item is serialized out as xml, its value is "off".</para>
+        /// </summary>
         [EnumString("off")]
         Off,
-        ///<summary>
-        ///ninch.
-        ///<para>When the item is serialized out as xml, its value is "ninch".</para>
-        ///</summary>
+        /// <summary>
+        /// ninch.
+        /// <para>When the item is serialized out as xml, its value is "ninch".</para>
+        /// </summary>
         [EnumString("ninch")]
-        Ninch,
+        Ninch
     }
 }

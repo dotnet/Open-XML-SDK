@@ -2373,30 +2373,30 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum WrapTextValues
     {
-        ///<summary>
-        ///Both Sides.
-        ///<para>When the item is serialized out as xml, its value is "bothSides".</para>
-        ///</summary>
+        /// <summary>
+        /// Both Sides.
+        /// <para>When the item is serialized out as xml, its value is "bothSides".</para>
+        /// </summary>
         [EnumString("bothSides")]
         BothSides,
-        ///<summary>
-        ///Left Side Only.
-        ///<para>When the item is serialized out as xml, its value is "left".</para>
-        ///</summary>
+        /// <summary>
+        /// Left Side Only.
+        /// <para>When the item is serialized out as xml, its value is "left".</para>
+        /// </summary>
         [EnumString("left")]
         Left,
-        ///<summary>
-        ///Right Side Only.
-        ///<para>When the item is serialized out as xml, its value is "right".</para>
-        ///</summary>
+        /// <summary>
+        /// Right Side Only.
+        /// <para>When the item is serialized out as xml, its value is "right".</para>
+        /// </summary>
         [EnumString("right")]
         Right,
-        ///<summary>
-        ///Largest Side Only.
-        ///<para>When the item is serialized out as xml, its value is "largest".</para>
-        ///</summary>
+        /// <summary>
+        /// Largest Side Only.
+        /// <para>When the item is serialized out as xml, its value is "largest".</para>
+        /// </summary>
         [EnumString("largest")]
-        Largest,
+        Largest
     }
 
     /// <summary>
@@ -2404,36 +2404,36 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum HorizontalAlignmentValues
     {
-        ///<summary>
-        ///Left Alignment.
-        ///<para>When the item is serialized out as xml, its value is "left".</para>
-        ///</summary>
+        /// <summary>
+        /// Left Alignment.
+        /// <para>When the item is serialized out as xml, its value is "left".</para>
+        /// </summary>
         [EnumString("left")]
         Left,
-        ///<summary>
-        ///Right Alignment.
-        ///<para>When the item is serialized out as xml, its value is "right".</para>
-        ///</summary>
+        /// <summary>
+        /// Right Alignment.
+        /// <para>When the item is serialized out as xml, its value is "right".</para>
+        /// </summary>
         [EnumString("right")]
         Right,
-        ///<summary>
-        ///Center Alignment.
-        ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///</summary>
+        /// <summary>
+        /// Center Alignment.
+        /// <para>When the item is serialized out as xml, its value is "center".</para>
+        /// </summary>
         [EnumString("center")]
         Center,
-        ///<summary>
-        ///Inside.
-        ///<para>When the item is serialized out as xml, its value is "inside".</para>
-        ///</summary>
+        /// <summary>
+        /// Inside.
+        /// <para>When the item is serialized out as xml, its value is "inside".</para>
+        /// </summary>
         [EnumString("inside")]
         Inside,
-        ///<summary>
-        ///Outside.
-        ///<para>When the item is serialized out as xml, its value is "outside".</para>
-        ///</summary>
+        /// <summary>
+        /// Outside.
+        /// <para>When the item is serialized out as xml, its value is "outside".</para>
+        /// </summary>
         [EnumString("outside")]
-        Outside,
+        Outside
     }
 
     /// <summary>
@@ -2441,54 +2441,54 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum HorizontalRelativePositionValues
     {
-        ///<summary>
-        ///Page Margin.
-        ///<para>When the item is serialized out as xml, its value is "margin".</para>
-        ///</summary>
+        /// <summary>
+        /// Page Margin.
+        /// <para>When the item is serialized out as xml, its value is "margin".</para>
+        /// </summary>
         [EnumString("margin")]
         Margin,
-        ///<summary>
-        ///Page Edge.
-        ///<para>When the item is serialized out as xml, its value is "page".</para>
-        ///</summary>
+        /// <summary>
+        /// Page Edge.
+        /// <para>When the item is serialized out as xml, its value is "page".</para>
+        /// </summary>
         [EnumString("page")]
         Page,
-        ///<summary>
-        ///Column.
-        ///<para>When the item is serialized out as xml, its value is "column".</para>
-        ///</summary>
+        /// <summary>
+        /// Column.
+        /// <para>When the item is serialized out as xml, its value is "column".</para>
+        /// </summary>
         [EnumString("column")]
         Column,
-        ///<summary>
-        ///Character.
-        ///<para>When the item is serialized out as xml, its value is "character".</para>
-        ///</summary>
+        /// <summary>
+        /// Character.
+        /// <para>When the item is serialized out as xml, its value is "character".</para>
+        /// </summary>
         [EnumString("character")]
         Character,
-        ///<summary>
-        ///Left Margin.
-        ///<para>When the item is serialized out as xml, its value is "leftMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// Left Margin.
+        /// <para>When the item is serialized out as xml, its value is "leftMargin".</para>
+        /// </summary>
         [EnumString("leftMargin")]
         LeftMargin,
-        ///<summary>
-        ///Right Margin.
-        ///<para>When the item is serialized out as xml, its value is "rightMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// Right Margin.
+        /// <para>When the item is serialized out as xml, its value is "rightMargin".</para>
+        /// </summary>
         [EnumString("rightMargin")]
         RightMargin,
-        ///<summary>
-        ///Inside Margin.
-        ///<para>When the item is serialized out as xml, its value is "insideMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// Inside Margin.
+        /// <para>When the item is serialized out as xml, its value is "insideMargin".</para>
+        /// </summary>
         [EnumString("insideMargin")]
         InsideMargin,
-        ///<summary>
-        ///Outside Margin.
-        ///<para>When the item is serialized out as xml, its value is "outsideMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// Outside Margin.
+        /// <para>When the item is serialized out as xml, its value is "outsideMargin".</para>
+        /// </summary>
         [EnumString("outsideMargin")]
-        OutsideMargin,
+        OutsideMargin
     }
 
     /// <summary>
@@ -2496,36 +2496,36 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum VerticalAlignmentValues
     {
-        ///<summary>
-        ///Top.
-        ///<para>When the item is serialized out as xml, its value is "top".</para>
-        ///</summary>
+        /// <summary>
+        /// Top.
+        /// <para>When the item is serialized out as xml, its value is "top".</para>
+        /// </summary>
         [EnumString("top")]
         Top,
-        ///<summary>
-        ///Bottom.
-        ///<para>When the item is serialized out as xml, its value is "bottom".</para>
-        ///</summary>
+        /// <summary>
+        /// Bottom.
+        /// <para>When the item is serialized out as xml, its value is "bottom".</para>
+        /// </summary>
         [EnumString("bottom")]
         Bottom,
-        ///<summary>
-        ///Center Alignment.
-        ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///</summary>
+        /// <summary>
+        /// Center Alignment.
+        /// <para>When the item is serialized out as xml, its value is "center".</para>
+        /// </summary>
         [EnumString("center")]
         Center,
-        ///<summary>
-        ///Inside.
-        ///<para>When the item is serialized out as xml, its value is "inside".</para>
-        ///</summary>
+        /// <summary>
+        /// Inside.
+        /// <para>When the item is serialized out as xml, its value is "inside".</para>
+        /// </summary>
         [EnumString("inside")]
         Inside,
-        ///<summary>
-        ///Outside.
-        ///<para>When the item is serialized out as xml, its value is "outside".</para>
-        ///</summary>
+        /// <summary>
+        /// Outside.
+        /// <para>When the item is serialized out as xml, its value is "outside".</para>
+        /// </summary>
         [EnumString("outside")]
-        Outside,
+        Outside
     }
 
     /// <summary>
@@ -2533,53 +2533,53 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum VerticalRelativePositionValues
     {
-        ///<summary>
-        ///Page Margin.
-        ///<para>When the item is serialized out as xml, its value is "margin".</para>
-        ///</summary>
+        /// <summary>
+        /// Page Margin.
+        /// <para>When the item is serialized out as xml, its value is "margin".</para>
+        /// </summary>
         [EnumString("margin")]
         Margin,
-        ///<summary>
-        ///Page Edge.
-        ///<para>When the item is serialized out as xml, its value is "page".</para>
-        ///</summary>
+        /// <summary>
+        /// Page Edge.
+        /// <para>When the item is serialized out as xml, its value is "page".</para>
+        /// </summary>
         [EnumString("page")]
         Page,
-        ///<summary>
-        ///Paragraph.
-        ///<para>When the item is serialized out as xml, its value is "paragraph".</para>
-        ///</summary>
+        /// <summary>
+        /// Paragraph.
+        /// <para>When the item is serialized out as xml, its value is "paragraph".</para>
+        /// </summary>
         [EnumString("paragraph")]
         Paragraph,
-        ///<summary>
-        ///Line.
-        ///<para>When the item is serialized out as xml, its value is "line".</para>
-        ///</summary>
+        /// <summary>
+        /// Line.
+        /// <para>When the item is serialized out as xml, its value is "line".</para>
+        /// </summary>
         [EnumString("line")]
         Line,
-        ///<summary>
-        ///Top Margin.
-        ///<para>When the item is serialized out as xml, its value is "topMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// Top Margin.
+        /// <para>When the item is serialized out as xml, its value is "topMargin".</para>
+        /// </summary>
         [EnumString("topMargin")]
         TopMargin,
-        ///<summary>
-        ///Bottom Margin.
-        ///<para>When the item is serialized out as xml, its value is "bottomMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// Bottom Margin.
+        /// <para>When the item is serialized out as xml, its value is "bottomMargin".</para>
+        /// </summary>
         [EnumString("bottomMargin")]
         BottomMargin,
-        ///<summary>
-        ///Inside Margin.
-        ///<para>When the item is serialized out as xml, its value is "insideMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// Inside Margin.
+        /// <para>When the item is serialized out as xml, its value is "insideMargin".</para>
+        /// </summary>
         [EnumString("insideMargin")]
         InsideMargin,
-        ///<summary>
-        ///Outside Margin.
-        ///<para>When the item is serialized out as xml, its value is "outsideMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// Outside Margin.
+        /// <para>When the item is serialized out as xml, its value is "outsideMargin".</para>
+        /// </summary>
         [EnumString("outsideMargin")]
-        OutsideMargin,
+        OutsideMargin
     }
 }

@@ -306,20 +306,19 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <summary>
     /// Defines the DisplayLocation enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2019)]
     public enum DisplayLocation
     {
-        ///<summary>
-        ///media.
-        ///<para>When the item is serialized out as xml, its value is "media".</para>
-        ///</summary>
+        /// <summary>
+        /// media.
+        /// <para>When the item is serialized out as xml, its value is "media".</para>
+        /// </summary>
         [EnumString("media")]
         Media,
-        ///<summary>
-        ///slide.
-        ///<para>When the item is serialized out as xml, its value is "slide".</para>
-        ///</summary>
+        /// <summary>
+        /// slide.
+        /// <para>When the item is serialized out as xml, its value is "slide".</para>
+        /// </summary>
         [EnumString("slide")]
-        Slide,
+        Slide
     }
 }

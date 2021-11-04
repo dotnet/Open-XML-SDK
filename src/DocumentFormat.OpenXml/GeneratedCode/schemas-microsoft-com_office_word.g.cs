@@ -325,168 +325,168 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// </summary>
     public enum BorderValues
     {
-        ///<summary>
-        ///No Border.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// No Border.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///Single Line Border.
-        ///<para>When the item is serialized out as xml, its value is "single".</para>
-        ///</summary>
+        /// <summary>
+        /// Single Line Border.
+        /// <para>When the item is serialized out as xml, its value is "single".</para>
+        /// </summary>
         [EnumString("single")]
         Single,
-        ///<summary>
-        ///Thick Line Border.
-        ///<para>When the item is serialized out as xml, its value is "thick".</para>
-        ///</summary>
+        /// <summary>
+        /// Thick Line Border.
+        /// <para>When the item is serialized out as xml, its value is "thick".</para>
+        /// </summary>
         [EnumString("thick")]
         Thick,
-        ///<summary>
-        ///Double Line Border.
-        ///<para>When the item is serialized out as xml, its value is "double".</para>
-        ///</summary>
+        /// <summary>
+        /// Double Line Border.
+        /// <para>When the item is serialized out as xml, its value is "double".</para>
+        /// </summary>
         [EnumString("double")]
         Double,
-        ///<summary>
-        ///Hairline Border.
-        ///<para>When the item is serialized out as xml, its value is "hairline".</para>
-        ///</summary>
+        /// <summary>
+        /// Hairline Border.
+        /// <para>When the item is serialized out as xml, its value is "hairline".</para>
+        /// </summary>
         [EnumString("hairline")]
         Hairline,
-        ///<summary>
-        ///Dotted Border.
-        ///<para>When the item is serialized out as xml, its value is "dot".</para>
-        ///</summary>
+        /// <summary>
+        /// Dotted Border.
+        /// <para>When the item is serialized out as xml, its value is "dot".</para>
+        /// </summary>
         [EnumString("dot")]
         Dot,
-        ///<summary>
-        ///pecifies a line border consisting of a dashed line around the parent object..
-        ///<para>When the item is serialized out as xml, its value is "dash".</para>
-        ///</summary>
+        /// <summary>
+        /// pecifies a line border consisting of a dashed line around the parent object..
+        /// <para>When the item is serialized out as xml, its value is "dash".</para>
+        /// </summary>
         [EnumString("dash")]
         Dash,
-        ///<summary>
-        ///Dot Dash Border.
-        ///<para>When the item is serialized out as xml, its value is "dotDash".</para>
-        ///</summary>
+        /// <summary>
+        /// Dot Dash Border.
+        /// <para>When the item is serialized out as xml, its value is "dotDash".</para>
+        /// </summary>
         [EnumString("dotDash")]
         DotDash,
-        ///<summary>
-        ///Dash Dot Dot Border.
-        ///<para>When the item is serialized out as xml, its value is "dashDotDot".</para>
-        ///</summary>
+        /// <summary>
+        /// Dash Dot Dot Border.
+        /// <para>When the item is serialized out as xml, its value is "dashDotDot".</para>
+        /// </summary>
         [EnumString("dashDotDot")]
         DashDotDot,
-        ///<summary>
-        ///Triple Line Border.
-        ///<para>When the item is serialized out as xml, its value is "triple".</para>
-        ///</summary>
+        /// <summary>
+        /// Triple Line Border.
+        /// <para>When the item is serialized out as xml, its value is "triple".</para>
+        /// </summary>
         [EnumString("triple")]
         Triple,
-        ///<summary>
-        ///Thin Thick Small Gap Border.
-        ///<para>When the item is serialized out as xml, its value is "thinThickSmall".</para>
-        ///</summary>
+        /// <summary>
+        /// Thin Thick Small Gap Border.
+        /// <para>When the item is serialized out as xml, its value is "thinThickSmall".</para>
+        /// </summary>
         [EnumString("thinThickSmall")]
         ThinThickSmall,
-        ///<summary>
-        ///Small thick-thin lines border.
-        ///<para>When the item is serialized out as xml, its value is "thickThinSmall".</para>
-        ///</summary>
+        /// <summary>
+        /// Small thick-thin lines border.
+        /// <para>When the item is serialized out as xml, its value is "thickThinSmall".</para>
+        /// </summary>
         [EnumString("thickThinSmall")]
         ThickThinSmall,
-        ///<summary>
-        ///Small thin-thick-thin Lines Border.
-        ///<para>When the item is serialized out as xml, its value is "thickBetweenThinSmall".</para>
-        ///</summary>
+        /// <summary>
+        /// Small thin-thick-thin Lines Border.
+        /// <para>When the item is serialized out as xml, its value is "thickBetweenThinSmall".</para>
+        /// </summary>
         [EnumString("thickBetweenThinSmall")]
         ThickBetweenThinSmall,
-        ///<summary>
-        ///Thin Thick Line Border.
-        ///<para>When the item is serialized out as xml, its value is "thinThick".</para>
-        ///</summary>
+        /// <summary>
+        /// Thin Thick Line Border.
+        /// <para>When the item is serialized out as xml, its value is "thinThick".</para>
+        /// </summary>
         [EnumString("thinThick")]
         ThinThick,
-        ///<summary>
-        ///Thick Thin Line Border.
-        ///<para>When the item is serialized out as xml, its value is "thickThin".</para>
-        ///</summary>
+        /// <summary>
+        /// Thick Thin Line Border.
+        /// <para>When the item is serialized out as xml, its value is "thickThin".</para>
+        /// </summary>
         [EnumString("thickThin")]
         ThickThin,
-        ///<summary>
-        ///Thin-thick-thin Border.
-        ///<para>When the item is serialized out as xml, its value is "thickBetweenThin".</para>
-        ///</summary>
+        /// <summary>
+        /// Thin-thick-thin Border.
+        /// <para>When the item is serialized out as xml, its value is "thickBetweenThin".</para>
+        /// </summary>
         [EnumString("thickBetweenThin")]
         ThickBetweenThin,
-        ///<summary>
-        ///Thin Thick Large Gap Border.
-        ///<para>When the item is serialized out as xml, its value is "thinThickLarge".</para>
-        ///</summary>
+        /// <summary>
+        /// Thin Thick Large Gap Border.
+        /// <para>When the item is serialized out as xml, its value is "thinThickLarge".</para>
+        /// </summary>
         [EnumString("thinThickLarge")]
         ThinThickLarge,
-        ///<summary>
-        ///Thick Thin Large Gap Border.
-        ///<para>When the item is serialized out as xml, its value is "thickThinLarge".</para>
-        ///</summary>
+        /// <summary>
+        /// Thick Thin Large Gap Border.
+        /// <para>When the item is serialized out as xml, its value is "thickThinLarge".</para>
+        /// </summary>
         [EnumString("thickThinLarge")]
         ThickThinLarge,
-        ///<summary>
-        ///Large thin-thick-thin Border.
-        ///<para>When the item is serialized out as xml, its value is "thickBetweenThinLarge".</para>
-        ///</summary>
+        /// <summary>
+        /// Large thin-thick-thin Border.
+        /// <para>When the item is serialized out as xml, its value is "thickBetweenThinLarge".</para>
+        /// </summary>
         [EnumString("thickBetweenThinLarge")]
         ThickBetweenThinLarge,
-        ///<summary>
-        ///Wavy Border.
-        ///<para>When the item is serialized out as xml, its value is "wave".</para>
-        ///</summary>
+        /// <summary>
+        /// Wavy Border.
+        /// <para>When the item is serialized out as xml, its value is "wave".</para>
+        /// </summary>
         [EnumString("wave")]
         Wave,
-        ///<summary>
-        ///Double Wavy Lines Border.
-        ///<para>When the item is serialized out as xml, its value is "doubleWave".</para>
-        ///</summary>
+        /// <summary>
+        /// Double Wavy Lines Border.
+        /// <para>When the item is serialized out as xml, its value is "doubleWave".</para>
+        /// </summary>
         [EnumString("doubleWave")]
         DoubleWave,
-        ///<summary>
-        ///Small Dash Border.
-        ///<para>When the item is serialized out as xml, its value is "dashedSmall".</para>
-        ///</summary>
+        /// <summary>
+        /// Small Dash Border.
+        /// <para>When the item is serialized out as xml, its value is "dashedSmall".</para>
+        /// </summary>
         [EnumString("dashedSmall")]
         DashedSmall,
-        ///<summary>
-        ///Stroked Dash Dot Border.
-        ///<para>When the item is serialized out as xml, its value is "dashDotStroked".</para>
-        ///</summary>
+        /// <summary>
+        /// Stroked Dash Dot Border.
+        /// <para>When the item is serialized out as xml, its value is "dashDotStroked".</para>
+        /// </summary>
         [EnumString("dashDotStroked")]
         DashDotStroked,
-        ///<summary>
-        ///3D Embossed Border.
-        ///<para>When the item is serialized out as xml, its value is "threeDEmboss".</para>
-        ///</summary>
+        /// <summary>
+        /// 3D Embossed Border.
+        /// <para>When the item is serialized out as xml, its value is "threeDEmboss".</para>
+        /// </summary>
         [EnumString("threeDEmboss")]
         ThreeDEmboss,
-        ///<summary>
-        ///3D Engraved Border.
-        ///<para>When the item is serialized out as xml, its value is "threeDEngrave".</para>
-        ///</summary>
+        /// <summary>
+        /// 3D Engraved Border.
+        /// <para>When the item is serialized out as xml, its value is "threeDEngrave".</para>
+        /// </summary>
         [EnumString("threeDEngrave")]
         ThreeDEngrave,
-        ///<summary>
-        ///Outset Border.
-        ///<para>When the item is serialized out as xml, its value is "HTMLOutset".</para>
-        ///</summary>
+        /// <summary>
+        /// Outset Border.
+        /// <para>When the item is serialized out as xml, its value is "HTMLOutset".</para>
+        /// </summary>
         [EnumString("HTMLOutset")]
         HTMLOutset,
-        ///<summary>
-        ///Inset Border.
-        ///<para>When the item is serialized out as xml, its value is "HTMLInset".</para>
-        ///</summary>
+        /// <summary>
+        /// Inset Border.
+        /// <para>When the item is serialized out as xml, its value is "HTMLInset".</para>
+        /// </summary>
         [EnumString("HTMLInset")]
-        HTMLInset,
+        HTMLInset
     }
 
     /// <summary>
@@ -494,36 +494,36 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// </summary>
     public enum WrapValues
     {
-        ///<summary>
-        ///Top and bottom wrapping.
-        ///<para>When the item is serialized out as xml, its value is "topAndBottom".</para>
-        ///</summary>
+        /// <summary>
+        /// Top and bottom wrapping.
+        /// <para>When the item is serialized out as xml, its value is "topAndBottom".</para>
+        /// </summary>
         [EnumString("topAndBottom")]
         TopAndBottom,
-        ///<summary>
-        ///Square wrapping.
-        ///<para>When the item is serialized out as xml, its value is "square".</para>
-        ///</summary>
+        /// <summary>
+        /// Square wrapping.
+        /// <para>When the item is serialized out as xml, its value is "square".</para>
+        /// </summary>
         [EnumString("square")]
         Square,
-        ///<summary>
-        ///No wrapping.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// No wrapping.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///Tight wrapping.
-        ///<para>When the item is serialized out as xml, its value is "tight".</para>
-        ///</summary>
+        /// <summary>
+        /// Tight wrapping.
+        /// <para>When the item is serialized out as xml, its value is "tight".</para>
+        /// </summary>
         [EnumString("tight")]
         Tight,
-        ///<summary>
-        ///Through wrapping.
-        ///<para>When the item is serialized out as xml, its value is "through".</para>
-        ///</summary>
+        /// <summary>
+        /// Through wrapping.
+        /// <para>When the item is serialized out as xml, its value is "through".</para>
+        /// </summary>
         [EnumString("through")]
-        Through,
+        Through
     }
 
     /// <summary>
@@ -531,30 +531,30 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// </summary>
     public enum WrapSideValues
     {
-        ///<summary>
-        ///Both sides.
-        ///<para>When the item is serialized out as xml, its value is "both".</para>
-        ///</summary>
+        /// <summary>
+        /// Both sides.
+        /// <para>When the item is serialized out as xml, its value is "both".</para>
+        /// </summary>
         [EnumString("both")]
         Both,
-        ///<summary>
-        ///Left side.
-        ///<para>When the item is serialized out as xml, its value is "left".</para>
-        ///</summary>
+        /// <summary>
+        /// Left side.
+        /// <para>When the item is serialized out as xml, its value is "left".</para>
+        /// </summary>
         [EnumString("left")]
         Left,
-        ///<summary>
-        ///Right side.
-        ///<para>When the item is serialized out as xml, its value is "right".</para>
-        ///</summary>
+        /// <summary>
+        /// Right side.
+        /// <para>When the item is serialized out as xml, its value is "right".</para>
+        /// </summary>
         [EnumString("right")]
         Right,
-        ///<summary>
-        ///Largest side.
-        ///<para>When the item is serialized out as xml, its value is "largest".</para>
-        ///</summary>
+        /// <summary>
+        /// Largest side.
+        /// <para>When the item is serialized out as xml, its value is "largest".</para>
+        /// </summary>
         [EnumString("largest")]
-        Largest,
+        Largest
     }
 
     /// <summary>
@@ -562,24 +562,24 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// </summary>
     public enum HorizontalAnchorValues
     {
-        ///<summary>
-        ///Margin.
-        ///<para>When the item is serialized out as xml, its value is "margin".</para>
-        ///</summary>
+        /// <summary>
+        /// Margin.
+        /// <para>When the item is serialized out as xml, its value is "margin".</para>
+        /// </summary>
         [EnumString("margin")]
         Margin,
-        ///<summary>
-        ///Page.
-        ///<para>When the item is serialized out as xml, its value is "page".</para>
-        ///</summary>
+        /// <summary>
+        /// Page.
+        /// <para>When the item is serialized out as xml, its value is "page".</para>
+        /// </summary>
         [EnumString("page")]
         Page,
-        ///<summary>
-        ///Text.
-        ///<para>When the item is serialized out as xml, its value is "text".</para>
-        ///</summary>
+        /// <summary>
+        /// Text.
+        /// <para>When the item is serialized out as xml, its value is "text".</para>
+        /// </summary>
         [EnumString("text")]
-        Text,
+        Text
     }
 
     /// <summary>
@@ -587,23 +587,23 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// </summary>
     public enum VerticalAnchorValues
     {
-        ///<summary>
-        ///Margin.
-        ///<para>When the item is serialized out as xml, its value is "margin".</para>
-        ///</summary>
+        /// <summary>
+        /// Margin.
+        /// <para>When the item is serialized out as xml, its value is "margin".</para>
+        /// </summary>
         [EnumString("margin")]
         Margin,
-        ///<summary>
-        ///Page.
-        ///<para>When the item is serialized out as xml, its value is "page".</para>
-        ///</summary>
+        /// <summary>
+        /// Page.
+        /// <para>When the item is serialized out as xml, its value is "page".</para>
+        /// </summary>
         [EnumString("page")]
         Page,
-        ///<summary>
-        ///Text.
-        ///<para>When the item is serialized out as xml, its value is "text".</para>
-        ///</summary>
+        /// <summary>
+        /// Text.
+        /// <para>When the item is serialized out as xml, its value is "text".</para>
+        /// </summary>
         [EnumString("text")]
-        Text,
+        Text
     }
 }

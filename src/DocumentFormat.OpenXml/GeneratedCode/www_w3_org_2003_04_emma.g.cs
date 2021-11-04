@@ -3908,30 +3908,30 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum EndPointRoleValues
     {
-        ///<summary>
-        ///source.
-        ///<para>When the item is serialized out as xml, its value is "source".</para>
-        ///</summary>
+        /// <summary>
+        /// source.
+        /// <para>When the item is serialized out as xml, its value is "source".</para>
+        /// </summary>
         [EnumString("source")]
         Source,
-        ///<summary>
-        ///sink.
-        ///<para>When the item is serialized out as xml, its value is "sink".</para>
-        ///</summary>
+        /// <summary>
+        /// sink.
+        /// <para>When the item is serialized out as xml, its value is "sink".</para>
+        /// </summary>
         [EnumString("sink")]
         Sink,
-        ///<summary>
-        ///reply-to.
-        ///<para>When the item is serialized out as xml, its value is "reply-to".</para>
-        ///</summary>
+        /// <summary>
+        /// reply-to.
+        /// <para>When the item is serialized out as xml, its value is "reply-to".</para>
+        /// </summary>
         [EnumString("reply-to")]
         Replyto,
-        ///<summary>
-        ///router.
-        ///<para>When the item is serialized out as xml, its value is "router".</para>
-        ///</summary>
+        /// <summary>
+        /// router.
+        /// <para>When the item is serialized out as xml, its value is "router".</para>
+        /// </summary>
         [EnumString("router")]
-        Router,
+        Router
     }
 
     /// <summary>
@@ -3939,24 +3939,24 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum MediumValues
     {
-        ///<summary>
-        ///acoustic.
-        ///<para>When the item is serialized out as xml, its value is "acoustic".</para>
-        ///</summary>
+        /// <summary>
+        /// acoustic.
+        /// <para>When the item is serialized out as xml, its value is "acoustic".</para>
+        /// </summary>
         [EnumString("acoustic")]
         Acoustic,
-        ///<summary>
-        ///tactile.
-        ///<para>When the item is serialized out as xml, its value is "tactile".</para>
-        ///</summary>
+        /// <summary>
+        /// tactile.
+        /// <para>When the item is serialized out as xml, its value is "tactile".</para>
+        /// </summary>
         [EnumString("tactile")]
         Tactile,
-        ///<summary>
-        ///visual.
-        ///<para>When the item is serialized out as xml, its value is "visual".</para>
-        ///</summary>
+        /// <summary>
+        /// visual.
+        /// <para>When the item is serialized out as xml, its value is "visual".</para>
+        /// </summary>
         [EnumString("visual")]
-        Visual,
+        Visual
     }
 
     /// <summary>
@@ -3964,18 +3964,18 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum AnchorPointValues
     {
-        ///<summary>
-        ///start.
-        ///<para>When the item is serialized out as xml, its value is "start".</para>
-        ///</summary>
+        /// <summary>
+        /// start.
+        /// <para>When the item is serialized out as xml, its value is "start".</para>
+        /// </summary>
         [EnumString("start")]
         Start,
-        ///<summary>
-        ///end.
-        ///<para>When the item is serialized out as xml, its value is "end".</para>
-        ///</summary>
+        /// <summary>
+        /// end.
+        /// <para>When the item is serialized out as xml, its value is "end".</para>
+        /// </summary>
         [EnumString("end")]
-        End,
+        End
     }
 
     /// <summary>
@@ -3983,29 +3983,29 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum DisjunctionTypeValues
     {
-        ///<summary>
-        ///recognition.
-        ///<para>When the item is serialized out as xml, its value is "recognition".</para>
-        ///</summary>
+        /// <summary>
+        /// recognition.
+        /// <para>When the item is serialized out as xml, its value is "recognition".</para>
+        /// </summary>
         [EnumString("recognition")]
         Recognition,
-        ///<summary>
-        ///understanding.
-        ///<para>When the item is serialized out as xml, its value is "understanding".</para>
-        ///</summary>
+        /// <summary>
+        /// understanding.
+        /// <para>When the item is serialized out as xml, its value is "understanding".</para>
+        /// </summary>
         [EnumString("understanding")]
         Understanding,
-        ///<summary>
-        ///multi-device.
-        ///<para>When the item is serialized out as xml, its value is "multi-device".</para>
-        ///</summary>
+        /// <summary>
+        /// multi-device.
+        /// <para>When the item is serialized out as xml, its value is "multi-device".</para>
+        /// </summary>
         [EnumString("multi-device")]
         Multidevice,
-        ///<summary>
-        ///multi-process.
-        ///<para>When the item is serialized out as xml, its value is "multi-process".</para>
-        ///</summary>
+        /// <summary>
+        /// multi-process.
+        /// <para>When the item is serialized out as xml, its value is "multi-process".</para>
+        /// </summary>
         [EnumString("multi-process")]
-        Multiprocess,
+        Multiprocess
     }
 }

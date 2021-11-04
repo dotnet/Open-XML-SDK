@@ -66,32 +66,31 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <summary>
     /// Defines the ClassificationOutcomeType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2019)]
     public enum ClassificationOutcomeType
     {
-        ///<summary>
-        ///none.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// none.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///hdr.
-        ///<para>When the item is serialized out as xml, its value is "hdr".</para>
-        ///</summary>
+        /// <summary>
+        /// hdr.
+        /// <para>When the item is serialized out as xml, its value is "hdr".</para>
+        /// </summary>
         [EnumString("hdr")]
         Hdr,
-        ///<summary>
-        ///ftr.
-        ///<para>When the item is serialized out as xml, its value is "ftr".</para>
-        ///</summary>
+        /// <summary>
+        /// ftr.
+        /// <para>When the item is serialized out as xml, its value is "ftr".</para>
+        /// </summary>
         [EnumString("ftr")]
         Ftr,
-        ///<summary>
-        ///watermark.
-        ///<para>When the item is serialized out as xml, its value is "watermark".</para>
-        ///</summary>
+        /// <summary>
+        /// watermark.
+        /// <para>When the item is serialized out as xml, its value is "watermark".</para>
+        /// </summary>
         [EnumString("watermark")]
-        Watermark,
+        Watermark
     }
 }

@@ -23570,18 +23570,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum LayoutTargetValues
     {
-        ///<summary>
-        ///Inner.
-        ///<para>When the item is serialized out as xml, its value is "inner".</para>
-        ///</summary>
+        /// <summary>
+        /// Inner.
+        /// <para>When the item is serialized out as xml, its value is "inner".</para>
+        /// </summary>
         [EnumString("inner")]
         Inner,
-        ///<summary>
-        ///Outer.
-        ///<para>When the item is serialized out as xml, its value is "outer".</para>
-        ///</summary>
+        /// <summary>
+        /// Outer.
+        /// <para>When the item is serialized out as xml, its value is "outer".</para>
+        /// </summary>
         [EnumString("outer")]
-        Outer,
+        Outer
     }
 
     /// <summary>
@@ -23589,18 +23589,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum LayoutModeValues
     {
-        ///<summary>
-        ///Edge.
-        ///<para>When the item is serialized out as xml, its value is "edge".</para>
-        ///</summary>
+        /// <summary>
+        /// Edge.
+        /// <para>When the item is serialized out as xml, its value is "edge".</para>
+        /// </summary>
         [EnumString("edge")]
         Edge,
-        ///<summary>
-        ///Factor.
-        ///<para>When the item is serialized out as xml, its value is "factor".</para>
-        ///</summary>
+        /// <summary>
+        /// Factor.
+        /// <para>When the item is serialized out as xml, its value is "factor".</para>
+        /// </summary>
         [EnumString("factor")]
-        Factor,
+        Factor
     }
 
     /// <summary>
@@ -23608,18 +23608,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum SizeRepresentsValues
     {
-        ///<summary>
-        ///Bubble Size Represents Area.
-        ///<para>When the item is serialized out as xml, its value is "area".</para>
-        ///</summary>
+        /// <summary>
+        /// Bubble Size Represents Area.
+        /// <para>When the item is serialized out as xml, its value is "area".</para>
+        /// </summary>
         [EnumString("area")]
         Area,
-        ///<summary>
-        ///Bubble Size Represents Width.
-        ///<para>When the item is serialized out as xml, its value is "w".</para>
-        ///</summary>
+        /// <summary>
+        /// Bubble Size Represents Width.
+        /// <para>When the item is serialized out as xml, its value is "w".</para>
+        /// </summary>
         [EnumString("w")]
-        Width,
+        Width
     }
 
     /// <summary>
@@ -23627,24 +23627,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum LabelAlignmentValues
     {
-        ///<summary>
-        ///Center.
-        ///<para>When the item is serialized out as xml, its value is "ctr".</para>
-        ///</summary>
+        /// <summary>
+        /// Center.
+        /// <para>When the item is serialized out as xml, its value is "ctr".</para>
+        /// </summary>
         [EnumString("ctr")]
         Center,
-        ///<summary>
-        ///Left.
-        ///<para>When the item is serialized out as xml, its value is "l".</para>
-        ///</summary>
+        /// <summary>
+        /// Left.
+        /// <para>When the item is serialized out as xml, its value is "l".</para>
+        /// </summary>
         [EnumString("l")]
         Left,
-        ///<summary>
-        ///Right.
-        ///<para>When the item is serialized out as xml, its value is "r".</para>
-        ///</summary>
+        /// <summary>
+        /// Right.
+        /// <para>When the item is serialized out as xml, its value is "r".</para>
+        /// </summary>
         [EnumString("r")]
-        Right,
+        Right
     }
 
     /// <summary>
@@ -23652,60 +23652,60 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum DataLabelPositionValues
     {
-        ///<summary>
-        ///Best Fit.
-        ///<para>When the item is serialized out as xml, its value is "bestFit".</para>
-        ///</summary>
+        /// <summary>
+        /// Best Fit.
+        /// <para>When the item is serialized out as xml, its value is "bestFit".</para>
+        /// </summary>
         [EnumString("bestFit")]
         BestFit,
-        ///<summary>
-        ///Bottom.
-        ///<para>When the item is serialized out as xml, its value is "b".</para>
-        ///</summary>
+        /// <summary>
+        /// Bottom.
+        /// <para>When the item is serialized out as xml, its value is "b".</para>
+        /// </summary>
         [EnumString("b")]
         Bottom,
-        ///<summary>
-        ///Center.
-        ///<para>When the item is serialized out as xml, its value is "ctr".</para>
-        ///</summary>
+        /// <summary>
+        /// Center.
+        /// <para>When the item is serialized out as xml, its value is "ctr".</para>
+        /// </summary>
         [EnumString("ctr")]
         Center,
-        ///<summary>
-        ///Inside Base.
-        ///<para>When the item is serialized out as xml, its value is "inBase".</para>
-        ///</summary>
+        /// <summary>
+        /// Inside Base.
+        /// <para>When the item is serialized out as xml, its value is "inBase".</para>
+        /// </summary>
         [EnumString("inBase")]
         InsideBase,
-        ///<summary>
-        ///Inside End.
-        ///<para>When the item is serialized out as xml, its value is "inEnd".</para>
-        ///</summary>
+        /// <summary>
+        /// Inside End.
+        /// <para>When the item is serialized out as xml, its value is "inEnd".</para>
+        /// </summary>
         [EnumString("inEnd")]
         InsideEnd,
-        ///<summary>
-        ///Left.
-        ///<para>When the item is serialized out as xml, its value is "l".</para>
-        ///</summary>
+        /// <summary>
+        /// Left.
+        /// <para>When the item is serialized out as xml, its value is "l".</para>
+        /// </summary>
         [EnumString("l")]
         Left,
-        ///<summary>
-        ///Outside End.
-        ///<para>When the item is serialized out as xml, its value is "outEnd".</para>
-        ///</summary>
+        /// <summary>
+        /// Outside End.
+        /// <para>When the item is serialized out as xml, its value is "outEnd".</para>
+        /// </summary>
         [EnumString("outEnd")]
         OutsideEnd,
-        ///<summary>
-        ///Right.
-        ///<para>When the item is serialized out as xml, its value is "r".</para>
-        ///</summary>
+        /// <summary>
+        /// Right.
+        /// <para>When the item is serialized out as xml, its value is "r".</para>
+        /// </summary>
         [EnumString("r")]
         Right,
-        ///<summary>
-        ///Top.
-        ///<para>When the item is serialized out as xml, its value is "t".</para>
-        ///</summary>
+        /// <summary>
+        /// Top.
+        /// <para>When the item is serialized out as xml, its value is "t".</para>
+        /// </summary>
         [EnumString("t")]
-        Top,
+        Top
     }
 
     /// <summary>
@@ -23713,42 +23713,42 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum TrendlineValues
     {
-        ///<summary>
-        ///Exponential.
-        ///<para>When the item is serialized out as xml, its value is "exp".</para>
-        ///</summary>
+        /// <summary>
+        /// Exponential.
+        /// <para>When the item is serialized out as xml, its value is "exp".</para>
+        /// </summary>
         [EnumString("exp")]
         Exponential,
-        ///<summary>
-        ///Linear.
-        ///<para>When the item is serialized out as xml, its value is "linear".</para>
-        ///</summary>
+        /// <summary>
+        /// Linear.
+        /// <para>When the item is serialized out as xml, its value is "linear".</para>
+        /// </summary>
         [EnumString("linear")]
         Linear,
-        ///<summary>
-        ///Logarithmic.
-        ///<para>When the item is serialized out as xml, its value is "log".</para>
-        ///</summary>
+        /// <summary>
+        /// Logarithmic.
+        /// <para>When the item is serialized out as xml, its value is "log".</para>
+        /// </summary>
         [EnumString("log")]
         Logarithmic,
-        ///<summary>
-        ///Moving Average.
-        ///<para>When the item is serialized out as xml, its value is "movingAvg".</para>
-        ///</summary>
+        /// <summary>
+        /// Moving Average.
+        /// <para>When the item is serialized out as xml, its value is "movingAvg".</para>
+        /// </summary>
         [EnumString("movingAvg")]
         MovingAverage,
-        ///<summary>
-        ///Polynomial.
-        ///<para>When the item is serialized out as xml, its value is "poly".</para>
-        ///</summary>
+        /// <summary>
+        /// Polynomial.
+        /// <para>When the item is serialized out as xml, its value is "poly".</para>
+        /// </summary>
         [EnumString("poly")]
         Polynomial,
-        ///<summary>
-        ///Power.
-        ///<para>When the item is serialized out as xml, its value is "power".</para>
-        ///</summary>
+        /// <summary>
+        /// Power.
+        /// <para>When the item is serialized out as xml, its value is "power".</para>
+        /// </summary>
         [EnumString("power")]
-        Power,
+        Power
     }
 
     /// <summary>
@@ -23756,18 +23756,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum ErrorBarDirectionValues
     {
-        ///<summary>
-        ///X.
-        ///<para>When the item is serialized out as xml, its value is "x".</para>
-        ///</summary>
+        /// <summary>
+        /// X.
+        /// <para>When the item is serialized out as xml, its value is "x".</para>
+        /// </summary>
         [EnumString("x")]
         X,
-        ///<summary>
-        ///Y.
-        ///<para>When the item is serialized out as xml, its value is "y".</para>
-        ///</summary>
+        /// <summary>
+        /// Y.
+        /// <para>When the item is serialized out as xml, its value is "y".</para>
+        /// </summary>
         [EnumString("y")]
-        Y,
+        Y
     }
 
     /// <summary>
@@ -23775,24 +23775,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum ErrorBarValues
     {
-        ///<summary>
-        ///Both.
-        ///<para>When the item is serialized out as xml, its value is "both".</para>
-        ///</summary>
+        /// <summary>
+        /// Both.
+        /// <para>When the item is serialized out as xml, its value is "both".</para>
+        /// </summary>
         [EnumString("both")]
         Both,
-        ///<summary>
-        ///Minus.
-        ///<para>When the item is serialized out as xml, its value is "minus".</para>
-        ///</summary>
+        /// <summary>
+        /// Minus.
+        /// <para>When the item is serialized out as xml, its value is "minus".</para>
+        /// </summary>
         [EnumString("minus")]
         Minus,
-        ///<summary>
-        ///Plus.
-        ///<para>When the item is serialized out as xml, its value is "plus".</para>
-        ///</summary>
+        /// <summary>
+        /// Plus.
+        /// <para>When the item is serialized out as xml, its value is "plus".</para>
+        /// </summary>
         [EnumString("plus")]
-        Plus,
+        Plus
     }
 
     /// <summary>
@@ -23800,36 +23800,36 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum ErrorValues
     {
-        ///<summary>
-        ///Custom Error Bars.
-        ///<para>When the item is serialized out as xml, its value is "cust".</para>
-        ///</summary>
+        /// <summary>
+        /// Custom Error Bars.
+        /// <para>When the item is serialized out as xml, its value is "cust".</para>
+        /// </summary>
         [EnumString("cust")]
         Custom,
-        ///<summary>
-        ///Fixed Value.
-        ///<para>When the item is serialized out as xml, its value is "fixedVal".</para>
-        ///</summary>
+        /// <summary>
+        /// Fixed Value.
+        /// <para>When the item is serialized out as xml, its value is "fixedVal".</para>
+        /// </summary>
         [EnumString("fixedVal")]
         FixedValue,
-        ///<summary>
-        ///Percentage.
-        ///<para>When the item is serialized out as xml, its value is "percentage".</para>
-        ///</summary>
+        /// <summary>
+        /// Percentage.
+        /// <para>When the item is serialized out as xml, its value is "percentage".</para>
+        /// </summary>
         [EnumString("percentage")]
         Percentage,
-        ///<summary>
-        ///Standard Deviation.
-        ///<para>When the item is serialized out as xml, its value is "stdDev".</para>
-        ///</summary>
+        /// <summary>
+        /// Standard Deviation.
+        /// <para>When the item is serialized out as xml, its value is "stdDev".</para>
+        /// </summary>
         [EnumString("stdDev")]
         StandardDeviation,
-        ///<summary>
-        ///Standard Error.
-        ///<para>When the item is serialized out as xml, its value is "stdErr".</para>
-        ///</summary>
+        /// <summary>
+        /// Standard Error.
+        /// <para>When the item is serialized out as xml, its value is "stdErr".</para>
+        /// </summary>
         [EnumString("stdErr")]
-        StandardError,
+        StandardError
     }
 
     /// <summary>
@@ -23837,24 +23837,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum GroupingValues
     {
-        ///<summary>
-        ///100% Stacked.
-        ///<para>When the item is serialized out as xml, its value is "percentStacked".</para>
-        ///</summary>
+        /// <summary>
+        /// 100% Stacked.
+        /// <para>When the item is serialized out as xml, its value is "percentStacked".</para>
+        /// </summary>
         [EnumString("percentStacked")]
         PercentStacked,
-        ///<summary>
-        ///Standard.
-        ///<para>When the item is serialized out as xml, its value is "standard".</para>
-        ///</summary>
+        /// <summary>
+        /// Standard.
+        /// <para>When the item is serialized out as xml, its value is "standard".</para>
+        /// </summary>
         [EnumString("standard")]
         Standard,
-        ///<summary>
-        ///Stacked.
-        ///<para>When the item is serialized out as xml, its value is "stacked".</para>
-        ///</summary>
+        /// <summary>
+        /// Stacked.
+        /// <para>When the item is serialized out as xml, its value is "stacked".</para>
+        /// </summary>
         [EnumString("stacked")]
-        Stacked,
+        Stacked
     }
 
     /// <summary>
@@ -23862,24 +23862,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum RadarStyleValues
     {
-        ///<summary>
-        ///Standard.
-        ///<para>When the item is serialized out as xml, its value is "standard".</para>
-        ///</summary>
+        /// <summary>
+        /// Standard.
+        /// <para>When the item is serialized out as xml, its value is "standard".</para>
+        /// </summary>
         [EnumString("standard")]
         Standard,
-        ///<summary>
-        ///Marker.
-        ///<para>When the item is serialized out as xml, its value is "marker".</para>
-        ///</summary>
+        /// <summary>
+        /// Marker.
+        /// <para>When the item is serialized out as xml, its value is "marker".</para>
+        /// </summary>
         [EnumString("marker")]
         Marker,
-        ///<summary>
-        ///Filled.
-        ///<para>When the item is serialized out as xml, its value is "filled".</para>
-        ///</summary>
+        /// <summary>
+        /// Filled.
+        /// <para>When the item is serialized out as xml, its value is "filled".</para>
+        /// </summary>
         [EnumString("filled")]
-        Filled,
+        Filled
     }
 
     /// <summary>
@@ -23887,30 +23887,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum BarGroupingValues
     {
-        ///<summary>
-        ///100% Stacked.
-        ///<para>When the item is serialized out as xml, its value is "percentStacked".</para>
-        ///</summary>
+        /// <summary>
+        /// 100% Stacked.
+        /// <para>When the item is serialized out as xml, its value is "percentStacked".</para>
+        /// </summary>
         [EnumString("percentStacked")]
         PercentStacked,
-        ///<summary>
-        ///Clustered.
-        ///<para>When the item is serialized out as xml, its value is "clustered".</para>
-        ///</summary>
+        /// <summary>
+        /// Clustered.
+        /// <para>When the item is serialized out as xml, its value is "clustered".</para>
+        /// </summary>
         [EnumString("clustered")]
         Clustered,
-        ///<summary>
-        ///Standard.
-        ///<para>When the item is serialized out as xml, its value is "standard".</para>
-        ///</summary>
+        /// <summary>
+        /// Standard.
+        /// <para>When the item is serialized out as xml, its value is "standard".</para>
+        /// </summary>
         [EnumString("standard")]
         Standard,
-        ///<summary>
-        ///Stacked.
-        ///<para>When the item is serialized out as xml, its value is "stacked".</para>
-        ///</summary>
+        /// <summary>
+        /// Stacked.
+        /// <para>When the item is serialized out as xml, its value is "stacked".</para>
+        /// </summary>
         [EnumString("stacked")]
-        Stacked,
+        Stacked
     }
 
     /// <summary>
@@ -23918,18 +23918,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum BarDirectionValues
     {
-        ///<summary>
-        ///Bar.
-        ///<para>When the item is serialized out as xml, its value is "bar".</para>
-        ///</summary>
+        /// <summary>
+        /// Bar.
+        /// <para>When the item is serialized out as xml, its value is "bar".</para>
+        /// </summary>
         [EnumString("bar")]
         Bar,
-        ///<summary>
-        ///Column.
-        ///<para>When the item is serialized out as xml, its value is "col".</para>
-        ///</summary>
+        /// <summary>
+        /// Column.
+        /// <para>When the item is serialized out as xml, its value is "col".</para>
+        /// </summary>
         [EnumString("col")]
-        Column,
+        Column
     }
 
     /// <summary>
@@ -23937,42 +23937,42 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum ShapeValues
     {
-        ///<summary>
-        ///Cone.
-        ///<para>When the item is serialized out as xml, its value is "cone".</para>
-        ///</summary>
+        /// <summary>
+        /// Cone.
+        /// <para>When the item is serialized out as xml, its value is "cone".</para>
+        /// </summary>
         [EnumString("cone")]
         Cone,
-        ///<summary>
-        ///Cone to Max.
-        ///<para>When the item is serialized out as xml, its value is "coneToMax".</para>
-        ///</summary>
+        /// <summary>
+        /// Cone to Max.
+        /// <para>When the item is serialized out as xml, its value is "coneToMax".</para>
+        /// </summary>
         [EnumString("coneToMax")]
         ConeToMax,
-        ///<summary>
-        ///Box.
-        ///<para>When the item is serialized out as xml, its value is "box".</para>
-        ///</summary>
+        /// <summary>
+        /// Box.
+        /// <para>When the item is serialized out as xml, its value is "box".</para>
+        /// </summary>
         [EnumString("box")]
         Box,
-        ///<summary>
-        ///Cylinder.
-        ///<para>When the item is serialized out as xml, its value is "cylinder".</para>
-        ///</summary>
+        /// <summary>
+        /// Cylinder.
+        /// <para>When the item is serialized out as xml, its value is "cylinder".</para>
+        /// </summary>
         [EnumString("cylinder")]
         Cylinder,
-        ///<summary>
-        ///Pyramid.
-        ///<para>When the item is serialized out as xml, its value is "pyramid".</para>
-        ///</summary>
+        /// <summary>
+        /// Pyramid.
+        /// <para>When the item is serialized out as xml, its value is "pyramid".</para>
+        /// </summary>
         [EnumString("pyramid")]
         Pyramid,
-        ///<summary>
-        ///Pyramid to Maximum.
-        ///<para>When the item is serialized out as xml, its value is "pyramidToMax".</para>
-        ///</summary>
+        /// <summary>
+        /// Pyramid to Maximum.
+        /// <para>When the item is serialized out as xml, its value is "pyramidToMax".</para>
+        /// </summary>
         [EnumString("pyramidToMax")]
-        PyramidToMaximum,
+        PyramidToMaximum
     }
 
     /// <summary>
@@ -23980,18 +23980,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum OfPieValues
     {
-        ///<summary>
-        ///Pie.
-        ///<para>When the item is serialized out as xml, its value is "pie".</para>
-        ///</summary>
+        /// <summary>
+        /// Pie.
+        /// <para>When the item is serialized out as xml, its value is "pie".</para>
+        /// </summary>
         [EnumString("pie")]
         Pie,
-        ///<summary>
-        ///Bar.
-        ///<para>When the item is serialized out as xml, its value is "bar".</para>
-        ///</summary>
+        /// <summary>
+        /// Bar.
+        /// <para>When the item is serialized out as xml, its value is "bar".</para>
+        /// </summary>
         [EnumString("bar")]
-        Bar,
+        Bar
     }
 
     /// <summary>
@@ -23999,30 +23999,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum AxisPositionValues
     {
-        ///<summary>
-        ///Bottom.
-        ///<para>When the item is serialized out as xml, its value is "b".</para>
-        ///</summary>
+        /// <summary>
+        /// Bottom.
+        /// <para>When the item is serialized out as xml, its value is "b".</para>
+        /// </summary>
         [EnumString("b")]
         Bottom,
-        ///<summary>
-        ///Left.
-        ///<para>When the item is serialized out as xml, its value is "l".</para>
-        ///</summary>
+        /// <summary>
+        /// Left.
+        /// <para>When the item is serialized out as xml, its value is "l".</para>
+        /// </summary>
         [EnumString("l")]
         Left,
-        ///<summary>
-        ///Right.
-        ///<para>When the item is serialized out as xml, its value is "r".</para>
-        ///</summary>
+        /// <summary>
+        /// Right.
+        /// <para>When the item is serialized out as xml, its value is "r".</para>
+        /// </summary>
         [EnumString("r")]
         Right,
-        ///<summary>
-        ///Top.
-        ///<para>When the item is serialized out as xml, its value is "t".</para>
-        ///</summary>
+        /// <summary>
+        /// Top.
+        /// <para>When the item is serialized out as xml, its value is "t".</para>
+        /// </summary>
         [EnumString("t")]
-        Top,
+        Top
     }
 
     /// <summary>
@@ -24030,24 +24030,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum CrossesValues
     {
-        ///<summary>
-        ///Axis Crosses at Zero.
-        ///<para>When the item is serialized out as xml, its value is "autoZero".</para>
-        ///</summary>
+        /// <summary>
+        /// Axis Crosses at Zero.
+        /// <para>When the item is serialized out as xml, its value is "autoZero".</para>
+        /// </summary>
         [EnumString("autoZero")]
         AutoZero,
-        ///<summary>
-        ///Maximum.
-        ///<para>When the item is serialized out as xml, its value is "max".</para>
-        ///</summary>
+        /// <summary>
+        /// Maximum.
+        /// <para>When the item is serialized out as xml, its value is "max".</para>
+        /// </summary>
         [EnumString("max")]
         Maximum,
-        ///<summary>
-        ///Minimum.
-        ///<para>When the item is serialized out as xml, its value is "min".</para>
-        ///</summary>
+        /// <summary>
+        /// Minimum.
+        /// <para>When the item is serialized out as xml, its value is "min".</para>
+        /// </summary>
         [EnumString("min")]
-        Minimum,
+        Minimum
     }
 
     /// <summary>
@@ -24055,18 +24055,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum CrossBetweenValues
     {
-        ///<summary>
-        ///Between.
-        ///<para>When the item is serialized out as xml, its value is "between".</para>
-        ///</summary>
+        /// <summary>
+        /// Between.
+        /// <para>When the item is serialized out as xml, its value is "between".</para>
+        /// </summary>
         [EnumString("between")]
         Between,
-        ///<summary>
-        ///Midpoint of Category.
-        ///<para>When the item is serialized out as xml, its value is "midCat".</para>
-        ///</summary>
+        /// <summary>
+        /// Midpoint of Category.
+        /// <para>When the item is serialized out as xml, its value is "midCat".</para>
+        /// </summary>
         [EnumString("midCat")]
-        MidpointCategory,
+        MidpointCategory
     }
 
     /// <summary>
@@ -24074,30 +24074,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum TickMarkValues
     {
-        ///<summary>
-        ///Cross.
-        ///<para>When the item is serialized out as xml, its value is "cross".</para>
-        ///</summary>
+        /// <summary>
+        /// Cross.
+        /// <para>When the item is serialized out as xml, its value is "cross".</para>
+        /// </summary>
         [EnumString("cross")]
         Cross,
-        ///<summary>
-        ///Inside.
-        ///<para>When the item is serialized out as xml, its value is "in".</para>
-        ///</summary>
+        /// <summary>
+        /// Inside.
+        /// <para>When the item is serialized out as xml, its value is "in".</para>
+        /// </summary>
         [EnumString("in")]
         Inside,
-        ///<summary>
-        ///None.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// None.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///Outside.
-        ///<para>When the item is serialized out as xml, its value is "out".</para>
-        ///</summary>
+        /// <summary>
+        /// Outside.
+        /// <para>When the item is serialized out as xml, its value is "out".</para>
+        /// </summary>
         [EnumString("out")]
-        Outside,
+        Outside
     }
 
     /// <summary>
@@ -24105,30 +24105,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum TickLabelPositionValues
     {
-        ///<summary>
-        ///High.
-        ///<para>When the item is serialized out as xml, its value is "high".</para>
-        ///</summary>
+        /// <summary>
+        /// High.
+        /// <para>When the item is serialized out as xml, its value is "high".</para>
+        /// </summary>
         [EnumString("high")]
         High,
-        ///<summary>
-        ///Low.
-        ///<para>When the item is serialized out as xml, its value is "low".</para>
-        ///</summary>
+        /// <summary>
+        /// Low.
+        /// <para>When the item is serialized out as xml, its value is "low".</para>
+        /// </summary>
         [EnumString("low")]
         Low,
-        ///<summary>
-        ///Next To.
-        ///<para>When the item is serialized out as xml, its value is "nextTo".</para>
-        ///</summary>
+        /// <summary>
+        /// Next To.
+        /// <para>When the item is serialized out as xml, its value is "nextTo".</para>
+        /// </summary>
         [EnumString("nextTo")]
         NextTo,
-        ///<summary>
-        ///None.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// None.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
-        None,
+        None
     }
 
     /// <summary>
@@ -24136,24 +24136,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum TimeUnitValues
     {
-        ///<summary>
-        ///Days.
-        ///<para>When the item is serialized out as xml, its value is "days".</para>
-        ///</summary>
+        /// <summary>
+        /// Days.
+        /// <para>When the item is serialized out as xml, its value is "days".</para>
+        /// </summary>
         [EnumString("days")]
         Days,
-        ///<summary>
-        ///Months.
-        ///<para>When the item is serialized out as xml, its value is "months".</para>
-        ///</summary>
+        /// <summary>
+        /// Months.
+        /// <para>When the item is serialized out as xml, its value is "months".</para>
+        /// </summary>
         [EnumString("months")]
         Months,
-        ///<summary>
-        ///Years.
-        ///<para>When the item is serialized out as xml, its value is "years".</para>
-        ///</summary>
+        /// <summary>
+        /// Years.
+        /// <para>When the item is serialized out as xml, its value is "years".</para>
+        /// </summary>
         [EnumString("years")]
-        Years,
+        Years
     }
 
     /// <summary>
@@ -24161,60 +24161,60 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum BuiltInUnitValues
     {
-        ///<summary>
-        ///Hundreds.
-        ///<para>When the item is serialized out as xml, its value is "hundreds".</para>
-        ///</summary>
+        /// <summary>
+        /// Hundreds.
+        /// <para>When the item is serialized out as xml, its value is "hundreds".</para>
+        /// </summary>
         [EnumString("hundreds")]
         Hundreds,
-        ///<summary>
-        ///Thousands.
-        ///<para>When the item is serialized out as xml, its value is "thousands".</para>
-        ///</summary>
+        /// <summary>
+        /// Thousands.
+        /// <para>When the item is serialized out as xml, its value is "thousands".</para>
+        /// </summary>
         [EnumString("thousands")]
         Thousands,
-        ///<summary>
-        ///Ten Thousands.
-        ///<para>When the item is serialized out as xml, its value is "tenThousands".</para>
-        ///</summary>
+        /// <summary>
+        /// Ten Thousands.
+        /// <para>When the item is serialized out as xml, its value is "tenThousands".</para>
+        /// </summary>
         [EnumString("tenThousands")]
         TenThousands,
-        ///<summary>
-        ///Hundred Thousands.
-        ///<para>When the item is serialized out as xml, its value is "hundredThousands".</para>
-        ///</summary>
+        /// <summary>
+        /// Hundred Thousands.
+        /// <para>When the item is serialized out as xml, its value is "hundredThousands".</para>
+        /// </summary>
         [EnumString("hundredThousands")]
         HundredThousands,
-        ///<summary>
-        ///Millions.
-        ///<para>When the item is serialized out as xml, its value is "millions".</para>
-        ///</summary>
+        /// <summary>
+        /// Millions.
+        /// <para>When the item is serialized out as xml, its value is "millions".</para>
+        /// </summary>
         [EnumString("millions")]
         Millions,
-        ///<summary>
-        ///Ten Millions.
-        ///<para>When the item is serialized out as xml, its value is "tenMillions".</para>
-        ///</summary>
+        /// <summary>
+        /// Ten Millions.
+        /// <para>When the item is serialized out as xml, its value is "tenMillions".</para>
+        /// </summary>
         [EnumString("tenMillions")]
         TenMillions,
-        ///<summary>
-        ///Hundred Millions.
-        ///<para>When the item is serialized out as xml, its value is "hundredMillions".</para>
-        ///</summary>
+        /// <summary>
+        /// Hundred Millions.
+        /// <para>When the item is serialized out as xml, its value is "hundredMillions".</para>
+        /// </summary>
         [EnumString("hundredMillions")]
         HundredMillions,
-        ///<summary>
-        ///Billions.
-        ///<para>When the item is serialized out as xml, its value is "billions".</para>
-        ///</summary>
+        /// <summary>
+        /// Billions.
+        /// <para>When the item is serialized out as xml, its value is "billions".</para>
+        /// </summary>
         [EnumString("billions")]
         Billions,
-        ///<summary>
-        ///Trillions.
-        ///<para>When the item is serialized out as xml, its value is "trillions".</para>
-        ///</summary>
+        /// <summary>
+        /// Trillions.
+        /// <para>When the item is serialized out as xml, its value is "trillions".</para>
+        /// </summary>
         [EnumString("trillions")]
-        Trillions,
+        Trillions
     }
 
     /// <summary>
@@ -24222,24 +24222,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum PictureFormatValues
     {
-        ///<summary>
-        ///Stretch.
-        ///<para>When the item is serialized out as xml, its value is "stretch".</para>
-        ///</summary>
+        /// <summary>
+        /// Stretch.
+        /// <para>When the item is serialized out as xml, its value is "stretch".</para>
+        /// </summary>
         [EnumString("stretch")]
         Stretch,
-        ///<summary>
-        ///Stack.
-        ///<para>When the item is serialized out as xml, its value is "stack".</para>
-        ///</summary>
+        /// <summary>
+        /// Stack.
+        /// <para>When the item is serialized out as xml, its value is "stack".</para>
+        /// </summary>
         [EnumString("stack")]
         Stack,
-        ///<summary>
-        ///Stack and Scale.
-        ///<para>When the item is serialized out as xml, its value is "stackScale".</para>
-        ///</summary>
+        /// <summary>
+        /// Stack and Scale.
+        /// <para>When the item is serialized out as xml, its value is "stackScale".</para>
+        /// </summary>
         [EnumString("stackScale")]
-        StackScale,
+        StackScale
     }
 
     /// <summary>
@@ -24247,18 +24247,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum OrientationValues
     {
-        ///<summary>
-        ///Maximum to Minimum.
-        ///<para>When the item is serialized out as xml, its value is "maxMin".</para>
-        ///</summary>
+        /// <summary>
+        /// Maximum to Minimum.
+        /// <para>When the item is serialized out as xml, its value is "maxMin".</para>
+        /// </summary>
         [EnumString("maxMin")]
         MaxMin,
-        ///<summary>
-        ///Minimum to Maximum.
-        ///<para>When the item is serialized out as xml, its value is "minMax".</para>
-        ///</summary>
+        /// <summary>
+        /// Minimum to Maximum.
+        /// <para>When the item is serialized out as xml, its value is "minMax".</para>
+        /// </summary>
         [EnumString("minMax")]
-        MinMax,
+        MinMax
     }
 
     /// <summary>
@@ -24266,36 +24266,36 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum LegendPositionValues
     {
-        ///<summary>
-        ///Bottom.
-        ///<para>When the item is serialized out as xml, its value is "b".</para>
-        ///</summary>
+        /// <summary>
+        /// Bottom.
+        /// <para>When the item is serialized out as xml, its value is "b".</para>
+        /// </summary>
         [EnumString("b")]
         Bottom,
-        ///<summary>
-        ///Top Right.
-        ///<para>When the item is serialized out as xml, its value is "tr".</para>
-        ///</summary>
+        /// <summary>
+        /// Top Right.
+        /// <para>When the item is serialized out as xml, its value is "tr".</para>
+        /// </summary>
         [EnumString("tr")]
         TopRight,
-        ///<summary>
-        ///Left.
-        ///<para>When the item is serialized out as xml, its value is "l".</para>
-        ///</summary>
+        /// <summary>
+        /// Left.
+        /// <para>When the item is serialized out as xml, its value is "l".</para>
+        /// </summary>
         [EnumString("l")]
         Left,
-        ///<summary>
-        ///Right.
-        ///<para>When the item is serialized out as xml, its value is "r".</para>
-        ///</summary>
+        /// <summary>
+        /// Right.
+        /// <para>When the item is serialized out as xml, its value is "r".</para>
+        /// </summary>
         [EnumString("r")]
         Right,
-        ///<summary>
-        ///Top.
-        ///<para>When the item is serialized out as xml, its value is "t".</para>
-        ///</summary>
+        /// <summary>
+        /// Top.
+        /// <para>When the item is serialized out as xml, its value is "t".</para>
+        /// </summary>
         [EnumString("t")]
-        Top,
+        Top
     }
 
     /// <summary>
@@ -24303,24 +24303,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum DisplayBlanksAsValues
     {
-        ///<summary>
-        ///Span.
-        ///<para>When the item is serialized out as xml, its value is "span".</para>
-        ///</summary>
+        /// <summary>
+        /// Span.
+        /// <para>When the item is serialized out as xml, its value is "span".</para>
+        /// </summary>
         [EnumString("span")]
         Span,
-        ///<summary>
-        ///Gap.
-        ///<para>When the item is serialized out as xml, its value is "gap".</para>
-        ///</summary>
+        /// <summary>
+        /// Gap.
+        /// <para>When the item is serialized out as xml, its value is "gap".</para>
+        /// </summary>
         [EnumString("gap")]
         Gap,
-        ///<summary>
-        ///Zero.
-        ///<para>When the item is serialized out as xml, its value is "zero".</para>
-        ///</summary>
+        /// <summary>
+        /// Zero.
+        /// <para>When the item is serialized out as xml, its value is "zero".</para>
+        /// </summary>
         [EnumString("zero")]
-        Zero,
+        Zero
     }
 
     /// <summary>
@@ -24328,24 +24328,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum PageSetupOrientationValues
     {
-        ///<summary>
-        ///Default Page Orientation.
-        ///<para>When the item is serialized out as xml, its value is "default".</para>
-        ///</summary>
+        /// <summary>
+        /// Default Page Orientation.
+        /// <para>When the item is serialized out as xml, its value is "default".</para>
+        /// </summary>
         [EnumString("default")]
         Default,
-        ///<summary>
-        ///Portrait Page.
-        ///<para>When the item is serialized out as xml, its value is "portrait".</para>
-        ///</summary>
+        /// <summary>
+        /// Portrait Page.
+        /// <para>When the item is serialized out as xml, its value is "portrait".</para>
+        /// </summary>
         [EnumString("portrait")]
         Portrait,
-        ///<summary>
-        ///Landscape Page.
-        ///<para>When the item is serialized out as xml, its value is "landscape".</para>
-        ///</summary>
+        /// <summary>
+        /// Landscape Page.
+        /// <para>When the item is serialized out as xml, its value is "landscape".</para>
+        /// </summary>
         [EnumString("landscape")]
-        Landscape,
+        Landscape
     }
 
     /// <summary>
@@ -24353,36 +24353,36 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum ScatterStyleValues
     {
-        ///<summary>
-        ///Line.
-        ///<para>When the item is serialized out as xml, its value is "line".</para>
-        ///</summary>
+        /// <summary>
+        /// Line.
+        /// <para>When the item is serialized out as xml, its value is "line".</para>
+        /// </summary>
         [EnumString("line")]
         Line,
-        ///<summary>
-        ///Line with Markers.
-        ///<para>When the item is serialized out as xml, its value is "lineMarker".</para>
-        ///</summary>
+        /// <summary>
+        /// Line with Markers.
+        /// <para>When the item is serialized out as xml, its value is "lineMarker".</para>
+        /// </summary>
         [EnumString("lineMarker")]
         LineMarker,
-        ///<summary>
-        ///Marker.
-        ///<para>When the item is serialized out as xml, its value is "marker".</para>
-        ///</summary>
+        /// <summary>
+        /// Marker.
+        /// <para>When the item is serialized out as xml, its value is "marker".</para>
+        /// </summary>
         [EnumString("marker")]
         Marker,
-        ///<summary>
-        ///Smooth.
-        ///<para>When the item is serialized out as xml, its value is "smooth".</para>
-        ///</summary>
+        /// <summary>
+        /// Smooth.
+        /// <para>When the item is serialized out as xml, its value is "smooth".</para>
+        /// </summary>
         [EnumString("smooth")]
         Smooth,
-        ///<summary>
-        ///Smooth with Markers.
-        ///<para>When the item is serialized out as xml, its value is "smoothMarker".</para>
-        ///</summary>
+        /// <summary>
+        /// Smooth with Markers.
+        /// <para>When the item is serialized out as xml, its value is "smoothMarker".</para>
+        /// </summary>
         [EnumString("smoothMarker")]
-        SmoothMarker,
+        SmoothMarker
     }
 
     /// <summary>
@@ -24390,78 +24390,78 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum MarkerStyleValues
     {
-        ///<summary>
-        ///auto.
-        ///<para>When the item is serialized out as xml, its value is "auto".</para>
-        ///</summary>
+        /// <summary>
+        /// auto.
+        /// <para>When the item is serialized out as xml, its value is "auto".</para>
+        /// </summary>
         [EnumString("auto")]
         Auto,
-        ///<summary>
-        ///Circle.
-        ///<para>When the item is serialized out as xml, its value is "circle".</para>
-        ///</summary>
+        /// <summary>
+        /// Circle.
+        /// <para>When the item is serialized out as xml, its value is "circle".</para>
+        /// </summary>
         [EnumString("circle")]
         Circle,
-        ///<summary>
-        ///Dash.
-        ///<para>When the item is serialized out as xml, its value is "dash".</para>
-        ///</summary>
+        /// <summary>
+        /// Dash.
+        /// <para>When the item is serialized out as xml, its value is "dash".</para>
+        /// </summary>
         [EnumString("dash")]
         Dash,
-        ///<summary>
-        ///Diamond.
-        ///<para>When the item is serialized out as xml, its value is "diamond".</para>
-        ///</summary>
+        /// <summary>
+        /// Diamond.
+        /// <para>When the item is serialized out as xml, its value is "diamond".</para>
+        /// </summary>
         [EnumString("diamond")]
         Diamond,
-        ///<summary>
-        ///Dot.
-        ///<para>When the item is serialized out as xml, its value is "dot".</para>
-        ///</summary>
+        /// <summary>
+        /// Dot.
+        /// <para>When the item is serialized out as xml, its value is "dot".</para>
+        /// </summary>
         [EnumString("dot")]
         Dot,
-        ///<summary>
-        ///None.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// None.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///Picture.
-        ///<para>When the item is serialized out as xml, its value is "picture".</para>
-        ///</summary>
+        /// <summary>
+        /// Picture.
+        /// <para>When the item is serialized out as xml, its value is "picture".</para>
+        /// </summary>
         [EnumString("picture")]
         Picture,
-        ///<summary>
-        ///Plus.
-        ///<para>When the item is serialized out as xml, its value is "plus".</para>
-        ///</summary>
+        /// <summary>
+        /// Plus.
+        /// <para>When the item is serialized out as xml, its value is "plus".</para>
+        /// </summary>
         [EnumString("plus")]
         Plus,
-        ///<summary>
-        ///Square.
-        ///<para>When the item is serialized out as xml, its value is "square".</para>
-        ///</summary>
+        /// <summary>
+        /// Square.
+        /// <para>When the item is serialized out as xml, its value is "square".</para>
+        /// </summary>
         [EnumString("square")]
         Square,
-        ///<summary>
-        ///Star.
-        ///<para>When the item is serialized out as xml, its value is "star".</para>
-        ///</summary>
+        /// <summary>
+        /// Star.
+        /// <para>When the item is serialized out as xml, its value is "star".</para>
+        /// </summary>
         [EnumString("star")]
         Star,
-        ///<summary>
-        ///Triangle.
-        ///<para>When the item is serialized out as xml, its value is "triangle".</para>
-        ///</summary>
+        /// <summary>
+        /// Triangle.
+        /// <para>When the item is serialized out as xml, its value is "triangle".</para>
+        /// </summary>
         [EnumString("triangle")]
         Triangle,
-        ///<summary>
-        ///X.
-        ///<para>When the item is serialized out as xml, its value is "x".</para>
-        ///</summary>
+        /// <summary>
+        /// X.
+        /// <para>When the item is serialized out as xml, its value is "x".</para>
+        /// </summary>
         [EnumString("x")]
-        X,
+        X
     }
 
     /// <summary>
@@ -24469,29 +24469,29 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum SplitValues
     {
-        ///<summary>
-        ///Custom Split.
-        ///<para>When the item is serialized out as xml, its value is "cust".</para>
-        ///</summary>
+        /// <summary>
+        /// Custom Split.
+        /// <para>When the item is serialized out as xml, its value is "cust".</para>
+        /// </summary>
         [EnumString("cust")]
         Custom,
-        ///<summary>
-        ///Split by Percentage.
-        ///<para>When the item is serialized out as xml, its value is "percent".</para>
-        ///</summary>
+        /// <summary>
+        /// Split by Percentage.
+        /// <para>When the item is serialized out as xml, its value is "percent".</para>
+        /// </summary>
         [EnumString("percent")]
         Percent,
-        ///<summary>
-        ///Split by Position.
-        ///<para>When the item is serialized out as xml, its value is "pos".</para>
-        ///</summary>
+        /// <summary>
+        /// Split by Position.
+        /// <para>When the item is serialized out as xml, its value is "pos".</para>
+        /// </summary>
         [EnumString("pos")]
         Position,
-        ///<summary>
-        ///Split by Value.
-        ///<para>When the item is serialized out as xml, its value is "val".</para>
-        ///</summary>
+        /// <summary>
+        /// Split by Value.
+        /// <para>When the item is serialized out as xml, its value is "val".</para>
+        /// </summary>
         [EnumString("val")]
-        Value,
+        Value
     }
 }

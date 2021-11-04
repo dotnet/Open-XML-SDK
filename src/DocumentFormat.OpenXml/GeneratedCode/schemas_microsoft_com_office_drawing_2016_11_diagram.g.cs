@@ -362,20 +362,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <summary>
     /// Defines the STorageType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2019)]
     public enum STorageType
     {
-        ///<summary>
-        ///sibTrans.
-        ///<para>When the item is serialized out as xml, its value is "sibTrans".</para>
-        ///</summary>
+        /// <summary>
+        /// sibTrans.
+        /// <para>When the item is serialized out as xml, its value is "sibTrans".</para>
+        /// </summary>
         [EnumString("sibTrans")]
         SibTrans,
-        ///<summary>
-        ///parTrans.
-        ///<para>When the item is serialized out as xml, its value is "parTrans".</para>
-        ///</summary>
+        /// <summary>
+        /// parTrans.
+        /// <para>When the item is serialized out as xml, its value is "parTrans".</para>
+        /// </summary>
         [EnumString("parTrans")]
-        ParTrans,
+        ParTrans
     }
 }

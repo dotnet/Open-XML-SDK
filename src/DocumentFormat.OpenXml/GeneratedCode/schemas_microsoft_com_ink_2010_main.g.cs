@@ -683,144 +683,144 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </summary>
     public enum KnownContextNodeTypeValues
     {
-        ///<summary>
-        ///root.
-        ///<para>When the item is serialized out as xml, its value is "root".</para>
-        ///</summary>
+        /// <summary>
+        /// root.
+        /// <para>When the item is serialized out as xml, its value is "root".</para>
+        /// </summary>
         [EnumString("root")]
         Root,
-        ///<summary>
-        ///unclassifiedInk.
-        ///<para>When the item is serialized out as xml, its value is "unclassifiedInk".</para>
-        ///</summary>
+        /// <summary>
+        /// unclassifiedInk.
+        /// <para>When the item is serialized out as xml, its value is "unclassifiedInk".</para>
+        /// </summary>
         [EnumString("unclassifiedInk")]
         UnclassifiedInk,
-        ///<summary>
-        ///writingRegion.
-        ///<para>When the item is serialized out as xml, its value is "writingRegion".</para>
-        ///</summary>
+        /// <summary>
+        /// writingRegion.
+        /// <para>When the item is serialized out as xml, its value is "writingRegion".</para>
+        /// </summary>
         [EnumString("writingRegion")]
         WritingRegion,
-        ///<summary>
-        ///analysisHint.
-        ///<para>When the item is serialized out as xml, its value is "analysisHint".</para>
-        ///</summary>
+        /// <summary>
+        /// analysisHint.
+        /// <para>When the item is serialized out as xml, its value is "analysisHint".</para>
+        /// </summary>
         [EnumString("analysisHint")]
         AnalysisHint,
-        ///<summary>
-        ///object.
-        ///<para>When the item is serialized out as xml, its value is "object".</para>
-        ///</summary>
+        /// <summary>
+        /// object.
+        /// <para>When the item is serialized out as xml, its value is "object".</para>
+        /// </summary>
         [EnumString("object")]
         Object,
-        ///<summary>
-        ///inkDrawing.
-        ///<para>When the item is serialized out as xml, its value is "inkDrawing".</para>
-        ///</summary>
+        /// <summary>
+        /// inkDrawing.
+        /// <para>When the item is serialized out as xml, its value is "inkDrawing".</para>
+        /// </summary>
         [EnumString("inkDrawing")]
         InkDrawing,
-        ///<summary>
-        ///image.
-        ///<para>When the item is serialized out as xml, its value is "image".</para>
-        ///</summary>
+        /// <summary>
+        /// image.
+        /// <para>When the item is serialized out as xml, its value is "image".</para>
+        /// </summary>
         [EnumString("image")]
         Image,
-        ///<summary>
-        ///paragraph.
-        ///<para>When the item is serialized out as xml, its value is "paragraph".</para>
-        ///</summary>
+        /// <summary>
+        /// paragraph.
+        /// <para>When the item is serialized out as xml, its value is "paragraph".</para>
+        /// </summary>
         [EnumString("paragraph")]
         Paragraph,
-        ///<summary>
-        ///line.
-        ///<para>When the item is serialized out as xml, its value is "line".</para>
-        ///</summary>
+        /// <summary>
+        /// line.
+        /// <para>When the item is serialized out as xml, its value is "line".</para>
+        /// </summary>
         [EnumString("line")]
         Line,
-        ///<summary>
-        ///inkBullet.
-        ///<para>When the item is serialized out as xml, its value is "inkBullet".</para>
-        ///</summary>
+        /// <summary>
+        /// inkBullet.
+        /// <para>When the item is serialized out as xml, its value is "inkBullet".</para>
+        /// </summary>
         [EnumString("inkBullet")]
         InkBullet,
-        ///<summary>
-        ///inkWord.
-        ///<para>When the item is serialized out as xml, its value is "inkWord".</para>
-        ///</summary>
+        /// <summary>
+        /// inkWord.
+        /// <para>When the item is serialized out as xml, its value is "inkWord".</para>
+        /// </summary>
         [EnumString("inkWord")]
         InkWord,
-        ///<summary>
-        ///textWord.
-        ///<para>When the item is serialized out as xml, its value is "textWord".</para>
-        ///</summary>
+        /// <summary>
+        /// textWord.
+        /// <para>When the item is serialized out as xml, its value is "textWord".</para>
+        /// </summary>
         [EnumString("textWord")]
         TextWord,
-        ///<summary>
-        ///customRecognizer.
-        ///<para>When the item is serialized out as xml, its value is "customRecognizer".</para>
-        ///</summary>
+        /// <summary>
+        /// customRecognizer.
+        /// <para>When the item is serialized out as xml, its value is "customRecognizer".</para>
+        /// </summary>
         [EnumString("customRecognizer")]
         CustomRecognizer,
-        ///<summary>
-        ///mathRegion.
-        ///<para>When the item is serialized out as xml, its value is "mathRegion".</para>
-        ///</summary>
+        /// <summary>
+        /// mathRegion.
+        /// <para>When the item is serialized out as xml, its value is "mathRegion".</para>
+        /// </summary>
         [EnumString("mathRegion")]
         MathRegion,
-        ///<summary>
-        ///mathEquation.
-        ///<para>When the item is serialized out as xml, its value is "mathEquation".</para>
-        ///</summary>
+        /// <summary>
+        /// mathEquation.
+        /// <para>When the item is serialized out as xml, its value is "mathEquation".</para>
+        /// </summary>
         [EnumString("mathEquation")]
         MathEquation,
-        ///<summary>
-        ///mathStruct.
-        ///<para>When the item is serialized out as xml, its value is "mathStruct".</para>
-        ///</summary>
+        /// <summary>
+        /// mathStruct.
+        /// <para>When the item is serialized out as xml, its value is "mathStruct".</para>
+        /// </summary>
         [EnumString("mathStruct")]
         MathStruct,
-        ///<summary>
-        ///mathSymbol.
-        ///<para>When the item is serialized out as xml, its value is "mathSymbol".</para>
-        ///</summary>
+        /// <summary>
+        /// mathSymbol.
+        /// <para>When the item is serialized out as xml, its value is "mathSymbol".</para>
+        /// </summary>
         [EnumString("mathSymbol")]
         MathSymbol,
-        ///<summary>
-        ///mathIdentifier.
-        ///<para>When the item is serialized out as xml, its value is "mathIdentifier".</para>
-        ///</summary>
+        /// <summary>
+        /// mathIdentifier.
+        /// <para>When the item is serialized out as xml, its value is "mathIdentifier".</para>
+        /// </summary>
         [EnumString("mathIdentifier")]
         MathIdentifier,
-        ///<summary>
-        ///mathOperator.
-        ///<para>When the item is serialized out as xml, its value is "mathOperator".</para>
-        ///</summary>
+        /// <summary>
+        /// mathOperator.
+        /// <para>When the item is serialized out as xml, its value is "mathOperator".</para>
+        /// </summary>
         [EnumString("mathOperator")]
         MathOperator,
-        ///<summary>
-        ///mathNumber.
-        ///<para>When the item is serialized out as xml, its value is "mathNumber".</para>
-        ///</summary>
+        /// <summary>
+        /// mathNumber.
+        /// <para>When the item is serialized out as xml, its value is "mathNumber".</para>
+        /// </summary>
         [EnumString("mathNumber")]
         MathNumber,
-        ///<summary>
-        ///nonInkDrawing.
-        ///<para>When the item is serialized out as xml, its value is "nonInkDrawing".</para>
-        ///</summary>
+        /// <summary>
+        /// nonInkDrawing.
+        /// <para>When the item is serialized out as xml, its value is "nonInkDrawing".</para>
+        /// </summary>
         [EnumString("nonInkDrawing")]
         NonInkDrawing,
-        ///<summary>
-        ///groupNode.
-        ///<para>When the item is serialized out as xml, its value is "groupNode".</para>
-        ///</summary>
+        /// <summary>
+        /// groupNode.
+        /// <para>When the item is serialized out as xml, its value is "groupNode".</para>
+        /// </summary>
         [EnumString("groupNode")]
         GroupNode,
-        ///<summary>
-        ///mixedDrawing.
-        ///<para>When the item is serialized out as xml, its value is "mixedDrawing".</para>
-        ///</summary>
+        /// <summary>
+        /// mixedDrawing.
+        /// <para>When the item is serialized out as xml, its value is "mixedDrawing".</para>
+        /// </summary>
         [EnumString("mixedDrawing")]
-        MixedDrawing,
+        MixedDrawing
     }
 
     /// <summary>
@@ -828,24 +828,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </summary>
     public enum LinkDirectionValues
     {
-        ///<summary>
-        ///to.
-        ///<para>When the item is serialized out as xml, its value is "to".</para>
-        ///</summary>
+        /// <summary>
+        /// to.
+        /// <para>When the item is serialized out as xml, its value is "to".</para>
+        /// </summary>
         [EnumString("to")]
         To,
-        ///<summary>
-        ///from.
-        ///<para>When the item is serialized out as xml, its value is "from".</para>
-        ///</summary>
+        /// <summary>
+        /// from.
+        /// <para>When the item is serialized out as xml, its value is "from".</para>
+        /// </summary>
         [EnumString("from")]
         From,
-        ///<summary>
-        ///with.
-        ///<para>When the item is serialized out as xml, its value is "with".</para>
-        ///</summary>
+        /// <summary>
+        /// with.
+        /// <para>When the item is serialized out as xml, its value is "with".</para>
+        /// </summary>
         [EnumString("with")]
-        With,
+        With
     }
 
     /// <summary>
@@ -853,71 +853,71 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// </summary>
     public enum KnownSemanticTypeValues
     {
-        ///<summary>
-        ///none.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// none.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///underline.
-        ///<para>When the item is serialized out as xml, its value is "underline".</para>
-        ///</summary>
+        /// <summary>
+        /// underline.
+        /// <para>When the item is serialized out as xml, its value is "underline".</para>
+        /// </summary>
         [EnumString("underline")]
         Underline,
-        ///<summary>
-        ///strikethrough.
-        ///<para>When the item is serialized out as xml, its value is "strikethrough".</para>
-        ///</summary>
+        /// <summary>
+        /// strikethrough.
+        /// <para>When the item is serialized out as xml, its value is "strikethrough".</para>
+        /// </summary>
         [EnumString("strikethrough")]
         Strikethrough,
-        ///<summary>
-        ///highlight.
-        ///<para>When the item is serialized out as xml, its value is "highlight".</para>
-        ///</summary>
+        /// <summary>
+        /// highlight.
+        /// <para>When the item is serialized out as xml, its value is "highlight".</para>
+        /// </summary>
         [EnumString("highlight")]
         Highlight,
-        ///<summary>
-        ///scratchOut.
-        ///<para>When the item is serialized out as xml, its value is "scratchOut".</para>
-        ///</summary>
+        /// <summary>
+        /// scratchOut.
+        /// <para>When the item is serialized out as xml, its value is "scratchOut".</para>
+        /// </summary>
         [EnumString("scratchOut")]
         ScratchOut,
-        ///<summary>
-        ///verticalRange.
-        ///<para>When the item is serialized out as xml, its value is "verticalRange".</para>
-        ///</summary>
+        /// <summary>
+        /// verticalRange.
+        /// <para>When the item is serialized out as xml, its value is "verticalRange".</para>
+        /// </summary>
         [EnumString("verticalRange")]
         VerticalRange,
-        ///<summary>
-        ///callout.
-        ///<para>When the item is serialized out as xml, its value is "callout".</para>
-        ///</summary>
+        /// <summary>
+        /// callout.
+        /// <para>When the item is serialized out as xml, its value is "callout".</para>
+        /// </summary>
         [EnumString("callout")]
         Callout,
-        ///<summary>
-        ///enclosure.
-        ///<para>When the item is serialized out as xml, its value is "enclosure".</para>
-        ///</summary>
+        /// <summary>
+        /// enclosure.
+        /// <para>When the item is serialized out as xml, its value is "enclosure".</para>
+        /// </summary>
         [EnumString("enclosure")]
         Enclosure,
-        ///<summary>
-        ///comment.
-        ///<para>When the item is serialized out as xml, its value is "comment".</para>
-        ///</summary>
+        /// <summary>
+        /// comment.
+        /// <para>When the item is serialized out as xml, its value is "comment".</para>
+        /// </summary>
         [EnumString("comment")]
         Comment,
-        ///<summary>
-        ///container.
-        ///<para>When the item is serialized out as xml, its value is "container".</para>
-        ///</summary>
+        /// <summary>
+        /// container.
+        /// <para>When the item is serialized out as xml, its value is "container".</para>
+        /// </summary>
         [EnumString("container")]
         Container,
-        ///<summary>
-        ///connector.
-        ///<para>When the item is serialized out as xml, its value is "connector".</para>
-        ///</summary>
+        /// <summary>
+        /// connector.
+        /// <para>When the item is serialized out as xml, its value is "connector".</para>
+        /// </summary>
         [EnumString("connector")]
-        Connector,
+        Connector
     }
 }

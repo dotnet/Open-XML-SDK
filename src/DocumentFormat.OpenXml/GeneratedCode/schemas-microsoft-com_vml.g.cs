@@ -15427,24 +15427,24 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum ExtensionHandlingBehaviorValues
     {
-        ///<summary>
-        ///Not renderable.
-        ///<para>When the item is serialized out as xml, its value is "view".</para>
-        ///</summary>
+        /// <summary>
+        /// Not renderable.
+        /// <para>When the item is serialized out as xml, its value is "view".</para>
+        /// </summary>
         [EnumString("view")]
         View,
-        ///<summary>
-        ///Editable.
-        ///<para>When the item is serialized out as xml, its value is "edit".</para>
-        ///</summary>
+        /// <summary>
+        /// Editable.
+        /// <para>When the item is serialized out as xml, its value is "edit".</para>
+        /// </summary>
         [EnumString("edit")]
         Edit,
-        ///<summary>
-        ///Renderable.
-        ///<para>When the item is serialized out as xml, its value is "backwardCompatible".</para>
-        ///</summary>
+        /// <summary>
+        /// Renderable.
+        /// <para>When the item is serialized out as xml, its value is "backwardCompatible".</para>
+        /// </summary>
         [EnumString("backwardCompatible")]
-        BackwardCompatible,
+        BackwardCompatible
     }
 
     /// <summary>
@@ -15452,42 +15452,42 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum FillTypeValues
     {
-        ///<summary>
-        ///Solid Fill.
-        ///<para>When the item is serialized out as xml, its value is "solid".</para>
-        ///</summary>
+        /// <summary>
+        /// Solid Fill.
+        /// <para>When the item is serialized out as xml, its value is "solid".</para>
+        /// </summary>
         [EnumString("solid")]
         Solid,
-        ///<summary>
-        ///Linear Gradient.
-        ///<para>When the item is serialized out as xml, its value is "gradient".</para>
-        ///</summary>
+        /// <summary>
+        /// Linear Gradient.
+        /// <para>When the item is serialized out as xml, its value is "gradient".</para>
+        /// </summary>
         [EnumString("gradient")]
         Gradient,
-        ///<summary>
-        ///Radial Gradient.
-        ///<para>When the item is serialized out as xml, its value is "gradientRadial".</para>
-        ///</summary>
+        /// <summary>
+        /// Radial Gradient.
+        /// <para>When the item is serialized out as xml, its value is "gradientRadial".</para>
+        /// </summary>
         [EnumString("gradientRadial")]
         GradientRadial,
-        ///<summary>
-        ///Tiled Image.
-        ///<para>When the item is serialized out as xml, its value is "tile".</para>
-        ///</summary>
+        /// <summary>
+        /// Tiled Image.
+        /// <para>When the item is serialized out as xml, its value is "tile".</para>
+        /// </summary>
         [EnumString("tile")]
         Tile,
-        ///<summary>
-        ///Image Pattern.
-        ///<para>When the item is serialized out as xml, its value is "pattern".</para>
-        ///</summary>
+        /// <summary>
+        /// Image Pattern.
+        /// <para>When the item is serialized out as xml, its value is "pattern".</para>
+        /// </summary>
         [EnumString("pattern")]
         Pattern,
-        ///<summary>
-        ///Stretch Image to Fit.
-        ///<para>When the item is serialized out as xml, its value is "frame".</para>
-        ///</summary>
+        /// <summary>
+        /// Stretch Image to Fit.
+        /// <para>When the item is serialized out as xml, its value is "frame".</para>
+        /// </summary>
         [EnumString("frame")]
-        Frame,
+        Frame
     }
 
     /// <summary>
@@ -15495,36 +15495,36 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum FillMethodValues
     {
-        ///<summary>
-        ///No Gradient Fill.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// No Gradient Fill.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///Linear Fill.
-        ///<para>When the item is serialized out as xml, its value is "linear".</para>
-        ///</summary>
+        /// <summary>
+        /// Linear Fill.
+        /// <para>When the item is serialized out as xml, its value is "linear".</para>
+        /// </summary>
         [EnumString("linear")]
         Linear,
-        ///<summary>
-        ///Sigma Fill.
-        ///<para>When the item is serialized out as xml, its value is "sigma".</para>
-        ///</summary>
+        /// <summary>
+        /// Sigma Fill.
+        /// <para>When the item is serialized out as xml, its value is "sigma".</para>
+        /// </summary>
         [EnumString("sigma")]
         Sigma,
-        ///<summary>
-        ///Application Default Fill.
-        ///<para>When the item is serialized out as xml, its value is "any".</para>
-        ///</summary>
+        /// <summary>
+        /// Application Default Fill.
+        /// <para>When the item is serialized out as xml, its value is "any".</para>
+        /// </summary>
         [EnumString("any")]
         Any,
-        ///<summary>
-        ///Linear Sigma Fill.
-        ///<para>When the item is serialized out as xml, its value is "linear sigma".</para>
-        ///</summary>
+        /// <summary>
+        /// Linear Sigma Fill.
+        /// <para>When the item is serialized out as xml, its value is "linear sigma".</para>
+        /// </summary>
         [EnumString("linear sigma")]
-        Linearsigma,
+        Linearsigma
     }
 
     /// <summary>
@@ -15532,36 +15532,36 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum StrokeLineStyleValues
     {
-        ///<summary>
-        ///Single Line.
-        ///<para>When the item is serialized out as xml, its value is "single".</para>
-        ///</summary>
+        /// <summary>
+        /// Single Line.
+        /// <para>When the item is serialized out as xml, its value is "single".</para>
+        /// </summary>
         [EnumString("single")]
         Single,
-        ///<summary>
-        ///Two Thin Lines.
-        ///<para>When the item is serialized out as xml, its value is "thinThin".</para>
-        ///</summary>
+        /// <summary>
+        /// Two Thin Lines.
+        /// <para>When the item is serialized out as xml, its value is "thinThin".</para>
+        /// </summary>
         [EnumString("thinThin")]
         ThinThin,
-        ///<summary>
-        ///Thin Line Outside Thick Line.
-        ///<para>When the item is serialized out as xml, its value is "thinThick".</para>
-        ///</summary>
+        /// <summary>
+        /// Thin Line Outside Thick Line.
+        /// <para>When the item is serialized out as xml, its value is "thinThick".</para>
+        /// </summary>
         [EnumString("thinThick")]
         ThinThick,
-        ///<summary>
-        ///Thick Line Outside Thin Line.
-        ///<para>When the item is serialized out as xml, its value is "thickThin".</para>
-        ///</summary>
+        /// <summary>
+        /// Thick Line Outside Thin Line.
+        /// <para>When the item is serialized out as xml, its value is "thickThin".</para>
+        /// </summary>
         [EnumString("thickThin")]
         ThickThin,
-        ///<summary>
-        ///Thck Line Between Thin Lines.
-        ///<para>When the item is serialized out as xml, its value is "thickBetweenThin".</para>
-        ///</summary>
+        /// <summary>
+        /// Thck Line Between Thin Lines.
+        /// <para>When the item is serialized out as xml, its value is "thickBetweenThin".</para>
+        /// </summary>
         [EnumString("thickBetweenThin")]
-        ThickBetweenThin,
+        ThickBetweenThin
     }
 
     /// <summary>
@@ -15569,24 +15569,24 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum StrokeJoinStyleValues
     {
-        ///<summary>
-        ///Round Joint.
-        ///<para>When the item is serialized out as xml, its value is "round".</para>
-        ///</summary>
+        /// <summary>
+        /// Round Joint.
+        /// <para>When the item is serialized out as xml, its value is "round".</para>
+        /// </summary>
         [EnumString("round")]
         Round,
-        ///<summary>
-        ///Bevel Joint.
-        ///<para>When the item is serialized out as xml, its value is "bevel".</para>
-        ///</summary>
+        /// <summary>
+        /// Bevel Joint.
+        /// <para>When the item is serialized out as xml, its value is "bevel".</para>
+        /// </summary>
         [EnumString("bevel")]
         Bevel,
-        ///<summary>
-        ///Miter Joint.
-        ///<para>When the item is serialized out as xml, its value is "miter".</para>
-        ///</summary>
+        /// <summary>
+        /// Miter Joint.
+        /// <para>When the item is serialized out as xml, its value is "miter".</para>
+        /// </summary>
         [EnumString("miter")]
-        Miter,
+        Miter
     }
 
     /// <summary>
@@ -15594,24 +15594,24 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum StrokeEndCapValues
     {
-        ///<summary>
-        ///Flat End.
-        ///<para>When the item is serialized out as xml, its value is "flat".</para>
-        ///</summary>
+        /// <summary>
+        /// Flat End.
+        /// <para>When the item is serialized out as xml, its value is "flat".</para>
+        /// </summary>
         [EnumString("flat")]
         Flat,
-        ///<summary>
-        ///Square End.
-        ///<para>When the item is serialized out as xml, its value is "square".</para>
-        ///</summary>
+        /// <summary>
+        /// Square End.
+        /// <para>When the item is serialized out as xml, its value is "square".</para>
+        /// </summary>
         [EnumString("square")]
         Square,
-        ///<summary>
-        ///Round End.
-        ///<para>When the item is serialized out as xml, its value is "round".</para>
-        ///</summary>
+        /// <summary>
+        /// Round End.
+        /// <para>When the item is serialized out as xml, its value is "round".</para>
+        /// </summary>
         [EnumString("round")]
-        Round,
+        Round
     }
 
     /// <summary>
@@ -15619,24 +15619,24 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum StrokeArrowLengthValues
     {
-        ///<summary>
-        ///Short Arrowhead.
-        ///<para>When the item is serialized out as xml, its value is "short".</para>
-        ///</summary>
+        /// <summary>
+        /// Short Arrowhead.
+        /// <para>When the item is serialized out as xml, its value is "short".</para>
+        /// </summary>
         [EnumString("short")]
         Short,
-        ///<summary>
-        ///Medium Arrowhead.
-        ///<para>When the item is serialized out as xml, its value is "medium".</para>
-        ///</summary>
+        /// <summary>
+        /// Medium Arrowhead.
+        /// <para>When the item is serialized out as xml, its value is "medium".</para>
+        /// </summary>
         [EnumString("medium")]
         Medium,
-        ///<summary>
-        ///Long Arrowhead.
-        ///<para>When the item is serialized out as xml, its value is "long".</para>
-        ///</summary>
+        /// <summary>
+        /// Long Arrowhead.
+        /// <para>When the item is serialized out as xml, its value is "long".</para>
+        /// </summary>
         [EnumString("long")]
-        Long,
+        Long
     }
 
     /// <summary>
@@ -15644,24 +15644,24 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum StrokeArrowWidthValues
     {
-        ///<summary>
-        ///Narrow Arrowhead.
-        ///<para>When the item is serialized out as xml, its value is "narrow".</para>
-        ///</summary>
+        /// <summary>
+        /// Narrow Arrowhead.
+        /// <para>When the item is serialized out as xml, its value is "narrow".</para>
+        /// </summary>
         [EnumString("narrow")]
         Narrow,
-        ///<summary>
-        ///Medium Arrowhead.
-        ///<para>When the item is serialized out as xml, its value is "medium".</para>
-        ///</summary>
+        /// <summary>
+        /// Medium Arrowhead.
+        /// <para>When the item is serialized out as xml, its value is "medium".</para>
+        /// </summary>
         [EnumString("medium")]
         Medium,
-        ///<summary>
-        ///Wide Arrowhead.
-        ///<para>When the item is serialized out as xml, its value is "wide".</para>
-        ///</summary>
+        /// <summary>
+        /// Wide Arrowhead.
+        /// <para>When the item is serialized out as xml, its value is "wide".</para>
+        /// </summary>
         [EnumString("wide")]
-        Wide,
+        Wide
     }
 
     /// <summary>
@@ -15669,42 +15669,42 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum StrokeArrowValues
     {
-        ///<summary>
-        ///No Arrowhead.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// No Arrowhead.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///Block Arrowhead.
-        ///<para>When the item is serialized out as xml, its value is "block".</para>
-        ///</summary>
+        /// <summary>
+        /// Block Arrowhead.
+        /// <para>When the item is serialized out as xml, its value is "block".</para>
+        /// </summary>
         [EnumString("block")]
         Block,
-        ///<summary>
-        ///Classic Arrowhead.
-        ///<para>When the item is serialized out as xml, its value is "classic".</para>
-        ///</summary>
+        /// <summary>
+        /// Classic Arrowhead.
+        /// <para>When the item is serialized out as xml, its value is "classic".</para>
+        /// </summary>
         [EnumString("classic")]
         Classic,
-        ///<summary>
-        ///Oval Arrowhead.
-        ///<para>When the item is serialized out as xml, its value is "oval".</para>
-        ///</summary>
+        /// <summary>
+        /// Oval Arrowhead.
+        /// <para>When the item is serialized out as xml, its value is "oval".</para>
+        /// </summary>
         [EnumString("oval")]
         Oval,
-        ///<summary>
-        ///Diamond Arrowhead.
-        ///<para>When the item is serialized out as xml, its value is "diamond".</para>
-        ///</summary>
+        /// <summary>
+        /// Diamond Arrowhead.
+        /// <para>When the item is serialized out as xml, its value is "diamond".</para>
+        /// </summary>
         [EnumString("diamond")]
         Diamond,
-        ///<summary>
-        ///Open Arrowhead.
-        ///<para>When the item is serialized out as xml, its value is "open".</para>
-        ///</summary>
+        /// <summary>
+        /// Open Arrowhead.
+        /// <para>When the item is serialized out as xml, its value is "open".</para>
+        /// </summary>
         [EnumString("open")]
-        Open,
+        Open
     }
 
     /// <summary>
@@ -15712,24 +15712,24 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum ImageAspectValues
     {
-        ///<summary>
-        ///Ignore Aspect Ratio.
-        ///<para>When the item is serialized out as xml, its value is "ignore".</para>
-        ///</summary>
+        /// <summary>
+        /// Ignore Aspect Ratio.
+        /// <para>When the item is serialized out as xml, its value is "ignore".</para>
+        /// </summary>
         [EnumString("ignore")]
         Ignore,
-        ///<summary>
-        ///At Most.
-        ///<para>When the item is serialized out as xml, its value is "atMost".</para>
-        ///</summary>
+        /// <summary>
+        /// At Most.
+        /// <para>When the item is serialized out as xml, its value is "atMost".</para>
+        /// </summary>
         [EnumString("atMost")]
         AtMost,
-        ///<summary>
-        ///At Least.
-        ///<para>When the item is serialized out as xml, its value is "atLeast".</para>
-        ///</summary>
+        /// <summary>
+        /// At Least.
+        /// <para>When the item is serialized out as xml, its value is "atLeast".</para>
+        /// </summary>
         [EnumString("atLeast")]
-        AtLeast,
+        AtLeast
     }
 
     /// <summary>
@@ -15737,48 +15737,48 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum EditAsValues
     {
-        ///<summary>
-        ///Shape Canvas.
-        ///<para>When the item is serialized out as xml, its value is "canvas".</para>
-        ///</summary>
+        /// <summary>
+        /// Shape Canvas.
+        /// <para>When the item is serialized out as xml, its value is "canvas".</para>
+        /// </summary>
         [EnumString("canvas")]
         Canvas,
-        ///<summary>
-        ///Organization Chart Diagram.
-        ///<para>When the item is serialized out as xml, its value is "orgchart".</para>
-        ///</summary>
+        /// <summary>
+        /// Organization Chart Diagram.
+        /// <para>When the item is serialized out as xml, its value is "orgchart".</para>
+        /// </summary>
         [EnumString("orgchart")]
         OrganizationChart,
-        ///<summary>
-        ///Radial Diagram.
-        ///<para>When the item is serialized out as xml, its value is "radial".</para>
-        ///</summary>
+        /// <summary>
+        /// Radial Diagram.
+        /// <para>When the item is serialized out as xml, its value is "radial".</para>
+        /// </summary>
         [EnumString("radial")]
         Radial,
-        ///<summary>
-        ///Cycle Diagram.
-        ///<para>When the item is serialized out as xml, its value is "cycle".</para>
-        ///</summary>
+        /// <summary>
+        /// Cycle Diagram.
+        /// <para>When the item is serialized out as xml, its value is "cycle".</para>
+        /// </summary>
         [EnumString("cycle")]
         Cycle,
-        ///<summary>
-        ///Pyramid Diagram.
-        ///<para>When the item is serialized out as xml, its value is "stacked".</para>
-        ///</summary>
+        /// <summary>
+        /// Pyramid Diagram.
+        /// <para>When the item is serialized out as xml, its value is "stacked".</para>
+        /// </summary>
         [EnumString("stacked")]
         Stacked,
-        ///<summary>
-        ///Venn Diagram.
-        ///<para>When the item is serialized out as xml, its value is "venn".</para>
-        ///</summary>
+        /// <summary>
+        /// Venn Diagram.
+        /// <para>When the item is serialized out as xml, its value is "venn".</para>
+        /// </summary>
         [EnumString("venn")]
         Venn,
-        ///<summary>
-        ///Bullseye Diagram.
-        ///<para>When the item is serialized out as xml, its value is "bullseye".</para>
-        ///</summary>
+        /// <summary>
+        /// Bullseye Diagram.
+        /// <para>When the item is serialized out as xml, its value is "bullseye".</para>
+        /// </summary>
         [EnumString("bullseye")]
-        Bullseye,
+        Bullseye
     }
 
     /// <summary>
@@ -15786,42 +15786,42 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum ShadowValues
     {
-        ///<summary>
-        ///Single Shadow.
-        ///<para>When the item is serialized out as xml, its value is "single".</para>
-        ///</summary>
+        /// <summary>
+        /// Single Shadow.
+        /// <para>When the item is serialized out as xml, its value is "single".</para>
+        /// </summary>
         [EnumString("single")]
         Single,
-        ///<summary>
-        ///Double Shadow.
-        ///<para>When the item is serialized out as xml, its value is "double".</para>
-        ///</summary>
+        /// <summary>
+        /// Double Shadow.
+        /// <para>When the item is serialized out as xml, its value is "double".</para>
+        /// </summary>
         [EnumString("double")]
         Double,
-        ///<summary>
-        ///Embossed Shadow.
-        ///<para>When the item is serialized out as xml, its value is "emboss".</para>
-        ///</summary>
+        /// <summary>
+        /// Embossed Shadow.
+        /// <para>When the item is serialized out as xml, its value is "emboss".</para>
+        /// </summary>
         [EnumString("emboss")]
         Emboss,
-        ///<summary>
-        ///Perspective Shadow.
-        ///<para>When the item is serialized out as xml, its value is "perspective".</para>
-        ///</summary>
+        /// <summary>
+        /// Perspective Shadow.
+        /// <para>When the item is serialized out as xml, its value is "perspective".</para>
+        /// </summary>
         [EnumString("perspective")]
         Perspective,
-        ///<summary>
-        ///shapeRelative.
-        ///<para>When the item is serialized out as xml, its value is "shapeRelative".</para>
-        ///</summary>
+        /// <summary>
+        /// shapeRelative.
+        /// <para>When the item is serialized out as xml, its value is "shapeRelative".</para>
+        /// </summary>
         [EnumString("shapeRelative")]
         ShapeRelative,
-        ///<summary>
-        ///drawingRelative.
-        ///<para>When the item is serialized out as xml, its value is "drawingRelative".</para>
-        ///</summary>
+        /// <summary>
+        /// drawingRelative.
+        /// <para>When the item is serialized out as xml, its value is "drawingRelative".</para>
+        /// </summary>
         [EnumString("drawingRelative")]
-        DrawingRelative,
+        DrawingRelative
     }
 
     /// <summary>
@@ -15829,29 +15829,29 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// </summary>
     public enum StrokeFillTypeValues
     {
-        ///<summary>
-        ///solid.
-        ///<para>When the item is serialized out as xml, its value is "solid".</para>
-        ///</summary>
+        /// <summary>
+        /// solid.
+        /// <para>When the item is serialized out as xml, its value is "solid".</para>
+        /// </summary>
         [EnumString("solid")]
         Solid,
-        ///<summary>
-        ///tile.
-        ///<para>When the item is serialized out as xml, its value is "tile".</para>
-        ///</summary>
+        /// <summary>
+        /// tile.
+        /// <para>When the item is serialized out as xml, its value is "tile".</para>
+        /// </summary>
         [EnumString("tile")]
         Tile,
-        ///<summary>
-        ///pattern.
-        ///<para>When the item is serialized out as xml, its value is "pattern".</para>
-        ///</summary>
+        /// <summary>
+        /// pattern.
+        /// <para>When the item is serialized out as xml, its value is "pattern".</para>
+        /// </summary>
         [EnumString("pattern")]
         Pattern,
-        ///<summary>
-        ///frame.
-        ///<para>When the item is serialized out as xml, its value is "frame".</para>
-        ///</summary>
+        /// <summary>
+        /// frame.
+        /// <para>When the item is serialized out as xml, its value is "frame".</para>
+        /// </summary>
         [EnumString("frame")]
-        Frame,
+        Frame
     }
 }

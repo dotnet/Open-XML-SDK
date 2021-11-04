@@ -10798,24 +10798,24 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     /// </summary>
     public enum HorizontalAlignmentValues
     {
-        ///<summary>
-        ///Left Justification.
-        ///<para>When the item is serialized out as xml, its value is "left".</para>
-        ///</summary>
+        /// <summary>
+        /// Left Justification.
+        /// <para>When the item is serialized out as xml, its value is "left".</para>
+        /// </summary>
         [EnumString("left")]
         Left,
-        ///<summary>
-        ///Center.
-        ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///</summary>
+        /// <summary>
+        /// Center.
+        /// <para>When the item is serialized out as xml, its value is "center".</para>
+        /// </summary>
         [EnumString("center")]
         Center,
-        ///<summary>
-        ///Right.
-        ///<para>When the item is serialized out as xml, its value is "right".</para>
-        ///</summary>
+        /// <summary>
+        /// Right.
+        /// <para>When the item is serialized out as xml, its value is "right".</para>
+        /// </summary>
         [EnumString("right")]
-        Right,
+        Right
     }
 
     /// <summary>
@@ -10823,18 +10823,18 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     /// </summary>
     public enum ShapeDelimiterValues
     {
-        ///<summary>
-        ///Centered (Delimiters).
-        ///<para>When the item is serialized out as xml, its value is "centered".</para>
-        ///</summary>
+        /// <summary>
+        /// Centered (Delimiters).
+        /// <para>When the item is serialized out as xml, its value is "centered".</para>
+        /// </summary>
         [EnumString("centered")]
         Centered,
-        ///<summary>
-        ///Match.
-        ///<para>When the item is serialized out as xml, its value is "match".</para>
-        ///</summary>
+        /// <summary>
+        /// Match.
+        /// <para>When the item is serialized out as xml, its value is "match".</para>
+        /// </summary>
         [EnumString("match")]
-        Match,
+        Match
     }
 
     /// <summary>
@@ -10842,30 +10842,30 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     /// </summary>
     public enum FractionTypeValues
     {
-        ///<summary>
-        ///Bar Fraction.
-        ///<para>When the item is serialized out as xml, its value is "bar".</para>
-        ///</summary>
+        /// <summary>
+        /// Bar Fraction.
+        /// <para>When the item is serialized out as xml, its value is "bar".</para>
+        /// </summary>
         [EnumString("bar")]
         Bar,
-        ///<summary>
-        ///Skewed.
-        ///<para>When the item is serialized out as xml, its value is "skw".</para>
-        ///</summary>
+        /// <summary>
+        /// Skewed.
+        /// <para>When the item is serialized out as xml, its value is "skw".</para>
+        /// </summary>
         [EnumString("skw")]
         Skewed,
-        ///<summary>
-        ///Linear Fraction.
-        ///<para>When the item is serialized out as xml, its value is "lin".</para>
-        ///</summary>
+        /// <summary>
+        /// Linear Fraction.
+        /// <para>When the item is serialized out as xml, its value is "lin".</para>
+        /// </summary>
         [EnumString("lin")]
         Linear,
-        ///<summary>
-        ///No-Bar Fraction (Stack).
-        ///<para>When the item is serialized out as xml, its value is "noBar".</para>
-        ///</summary>
+        /// <summary>
+        /// No-Bar Fraction (Stack).
+        /// <para>When the item is serialized out as xml, its value is "noBar".</para>
+        /// </summary>
         [EnumString("noBar")]
-        NoBar,
+        NoBar
     }
 
     /// <summary>
@@ -10873,18 +10873,18 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     /// </summary>
     public enum LimitLocationValues
     {
-        ///<summary>
-        ///Under-Over location.
-        ///<para>When the item is serialized out as xml, its value is "undOvr".</para>
-        ///</summary>
+        /// <summary>
+        /// Under-Over location.
+        /// <para>When the item is serialized out as xml, its value is "undOvr".</para>
+        /// </summary>
         [EnumString("undOvr")]
         UnderOver,
-        ///<summary>
-        ///Subscript-Superscript location.
-        ///<para>When the item is serialized out as xml, its value is "subSup".</para>
-        ///</summary>
+        /// <summary>
+        /// Subscript-Superscript location.
+        /// <para>When the item is serialized out as xml, its value is "subSup".</para>
+        /// </summary>
         [EnumString("subSup")]
-        SubscriptSuperscript,
+        SubscriptSuperscript
     }
 
     /// <summary>
@@ -10892,18 +10892,18 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     /// </summary>
     public enum VerticalJustificationValues
     {
-        ///<summary>
-        ///Top.
-        ///<para>When the item is serialized out as xml, its value is "top".</para>
-        ///</summary>
+        /// <summary>
+        /// Top.
+        /// <para>When the item is serialized out as xml, its value is "top".</para>
+        /// </summary>
         [EnumString("top")]
         Top,
-        ///<summary>
-        ///Bottom Alignment.
-        ///<para>When the item is serialized out as xml, its value is "bot".</para>
-        ///</summary>
+        /// <summary>
+        /// Bottom Alignment.
+        /// <para>When the item is serialized out as xml, its value is "bot".</para>
+        /// </summary>
         [EnumString("bot")]
-        Bottom,
+        Bottom
     }
 
     /// <summary>
@@ -10911,42 +10911,42 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     /// </summary>
     public enum ScriptValues
     {
-        ///<summary>
-        ///Roman.
-        ///<para>When the item is serialized out as xml, its value is "roman".</para>
-        ///</summary>
+        /// <summary>
+        /// Roman.
+        /// <para>When the item is serialized out as xml, its value is "roman".</para>
+        /// </summary>
         [EnumString("roman")]
         Roman,
-        ///<summary>
-        ///Script.
-        ///<para>When the item is serialized out as xml, its value is "script".</para>
-        ///</summary>
+        /// <summary>
+        /// Script.
+        /// <para>When the item is serialized out as xml, its value is "script".</para>
+        /// </summary>
         [EnumString("script")]
         Script,
-        ///<summary>
-        ///Fraktur.
-        ///<para>When the item is serialized out as xml, its value is "fraktur".</para>
-        ///</summary>
+        /// <summary>
+        /// Fraktur.
+        /// <para>When the item is serialized out as xml, its value is "fraktur".</para>
+        /// </summary>
         [EnumString("fraktur")]
         Fraktur,
-        ///<summary>
-        ///double-struck.
-        ///<para>When the item is serialized out as xml, its value is "double-struck".</para>
-        ///</summary>
+        /// <summary>
+        /// double-struck.
+        /// <para>When the item is serialized out as xml, its value is "double-struck".</para>
+        /// </summary>
         [EnumString("double-struck")]
         DoubleStruck,
-        ///<summary>
-        ///Sans-Serif.
-        ///<para>When the item is serialized out as xml, its value is "sans-serif".</para>
-        ///</summary>
+        /// <summary>
+        /// Sans-Serif.
+        /// <para>When the item is serialized out as xml, its value is "sans-serif".</para>
+        /// </summary>
         [EnumString("sans-serif")]
         SansSerif,
-        ///<summary>
-        ///Monospace.
-        ///<para>When the item is serialized out as xml, its value is "monospace".</para>
-        ///</summary>
+        /// <summary>
+        /// Monospace.
+        /// <para>When the item is serialized out as xml, its value is "monospace".</para>
+        /// </summary>
         [EnumString("monospace")]
-        Monospace,
+        Monospace
     }
 
     /// <summary>
@@ -10954,30 +10954,30 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     /// </summary>
     public enum StyleValues
     {
-        ///<summary>
-        ///Plain.
-        ///<para>When the item is serialized out as xml, its value is "p".</para>
-        ///</summary>
+        /// <summary>
+        /// Plain.
+        /// <para>When the item is serialized out as xml, its value is "p".</para>
+        /// </summary>
         [EnumString("p")]
         Plain,
-        ///<summary>
-        ///Bold.
-        ///<para>When the item is serialized out as xml, its value is "b".</para>
-        ///</summary>
+        /// <summary>
+        /// Bold.
+        /// <para>When the item is serialized out as xml, its value is "b".</para>
+        /// </summary>
         [EnumString("b")]
         Bold,
-        ///<summary>
-        ///Italic.
-        ///<para>When the item is serialized out as xml, its value is "i".</para>
-        ///</summary>
+        /// <summary>
+        /// Italic.
+        /// <para>When the item is serialized out as xml, its value is "i".</para>
+        /// </summary>
         [EnumString("i")]
         Italic,
-        ///<summary>
-        ///Bold-Italic.
-        ///<para>When the item is serialized out as xml, its value is "bi".</para>
-        ///</summary>
+        /// <summary>
+        /// Bold-Italic.
+        /// <para>When the item is serialized out as xml, its value is "bi".</para>
+        /// </summary>
         [EnumString("bi")]
-        BoldItalic,
+        BoldItalic
     }
 
     /// <summary>
@@ -10985,30 +10985,30 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     /// </summary>
     public enum JustificationValues
     {
-        ///<summary>
-        ///Left Justification.
-        ///<para>When the item is serialized out as xml, its value is "left".</para>
-        ///</summary>
+        /// <summary>
+        /// Left Justification.
+        /// <para>When the item is serialized out as xml, its value is "left".</para>
+        /// </summary>
         [EnumString("left")]
         Left,
-        ///<summary>
-        ///Right.
-        ///<para>When the item is serialized out as xml, its value is "right".</para>
-        ///</summary>
+        /// <summary>
+        /// Right.
+        /// <para>When the item is serialized out as xml, its value is "right".</para>
+        /// </summary>
         [EnumString("right")]
         Right,
-        ///<summary>
-        ///Center (Equation).
-        ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///</summary>
+        /// <summary>
+        /// Center (Equation).
+        /// <para>When the item is serialized out as xml, its value is "center".</para>
+        /// </summary>
         [EnumString("center")]
         Center,
-        ///<summary>
-        ///Centered as Group (Equations).
-        ///<para>When the item is serialized out as xml, its value is "centerGroup".</para>
-        ///</summary>
+        /// <summary>
+        /// Centered as Group (Equations).
+        /// <para>When the item is serialized out as xml, its value is "centerGroup".</para>
+        /// </summary>
         [EnumString("centerGroup")]
-        CenterGroup,
+        CenterGroup
     }
 
     /// <summary>
@@ -11016,24 +11016,24 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     /// </summary>
     public enum BreakBinaryOperatorValues
     {
-        ///<summary>
-        ///Before.
-        ///<para>When the item is serialized out as xml, its value is "before".</para>
-        ///</summary>
+        /// <summary>
+        /// Before.
+        /// <para>When the item is serialized out as xml, its value is "before".</para>
+        /// </summary>
         [EnumString("before")]
         Before,
-        ///<summary>
-        ///After.
-        ///<para>When the item is serialized out as xml, its value is "after".</para>
-        ///</summary>
+        /// <summary>
+        /// After.
+        /// <para>When the item is serialized out as xml, its value is "after".</para>
+        /// </summary>
         [EnumString("after")]
         After,
-        ///<summary>
-        ///Repeat.
-        ///<para>When the item is serialized out as xml, its value is "repeat".</para>
-        ///</summary>
+        /// <summary>
+        /// Repeat.
+        /// <para>When the item is serialized out as xml, its value is "repeat".</para>
+        /// </summary>
         [EnumString("repeat")]
-        Repeat,
+        Repeat
     }
 
     /// <summary>
@@ -11041,24 +11041,24 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     /// </summary>
     public enum BreakBinarySubtractionValues
     {
-        ///<summary>
-        ///Minus Minus.
-        ///<para>When the item is serialized out as xml, its value is "--".</para>
-        ///</summary>
+        /// <summary>
+        /// Minus Minus.
+        /// <para>When the item is serialized out as xml, its value is "--".</para>
+        /// </summary>
         [EnumString("--")]
         MinusMinus,
-        ///<summary>
-        ///Minus Plus.
-        ///<para>When the item is serialized out as xml, its value is "-+".</para>
-        ///</summary>
+        /// <summary>
+        /// Minus Plus.
+        /// <para>When the item is serialized out as xml, its value is "-+".</para>
+        /// </summary>
         [EnumString("-+")]
         MinusPlus,
-        ///<summary>
-        ///Plus Minus.
-        ///<para>When the item is serialized out as xml, its value is "+-".</para>
-        ///</summary>
+        /// <summary>
+        /// Plus Minus.
+        /// <para>When the item is serialized out as xml, its value is "+-".</para>
+        /// </summary>
         [EnumString("+-")]
-        PlusMinus,
+        PlusMinus
     }
 
     /// <summary>
@@ -11066,30 +11066,30 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     /// </summary>
     public enum VerticalAlignmentValues
     {
-        ///<summary>
-        ///Top.
-        ///<para>When the item is serialized out as xml, its value is "top".</para>
-        ///</summary>
+        /// <summary>
+        /// Top.
+        /// <para>When the item is serialized out as xml, its value is "top".</para>
+        /// </summary>
         [EnumString("top")]
         Top,
-        ///<summary>
-        ///Center (Function).
-        ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///</summary>
+        /// <summary>
+        /// Center (Function).
+        /// <para>When the item is serialized out as xml, its value is "center".</para>
+        /// </summary>
         [EnumString("center")]
         Center,
-        ///<summary>
-        ///bottom.
-        ///<para>When the item is serialized out as xml, its value is "bottom".</para>
-        ///</summary>
+        /// <summary>
+        /// bottom.
+        /// <para>When the item is serialized out as xml, its value is "bottom".</para>
+        /// </summary>
         [EnumString("bottom")]
         Bottom,
-        ///<summary>
-        ///Bottom Alignment.
-        ///<para>When the item is serialized out as xml, its value is "bot".</para>
-        ///</summary>
+        /// <summary>
+        /// Bottom Alignment.
+        /// <para>When the item is serialized out as xml, its value is "bot".</para>
+        /// </summary>
         [EnumString("bot")]
-        Bot,
+        Bot
     }
 
     /// <summary>
@@ -11097,41 +11097,41 @@ aBuilder.AddValidator(new RequiredValidator() { IsRequired = (false), InitialVer
     /// </summary>
     public enum BooleanValues
     {
-        ///<summary>
-        ///true.
-        ///<para>When the item is serialized out as xml, its value is "true".</para>
-        ///</summary>
+        /// <summary>
+        /// true.
+        /// <para>When the item is serialized out as xml, its value is "true".</para>
+        /// </summary>
         [EnumString("true")]
         True,
-        ///<summary>
-        ///false.
-        ///<para>When the item is serialized out as xml, its value is "false".</para>
-        ///</summary>
+        /// <summary>
+        /// false.
+        /// <para>When the item is serialized out as xml, its value is "false".</para>
+        /// </summary>
         [EnumString("false")]
         False,
-        ///<summary>
-        ///On.
-        ///<para>When the item is serialized out as xml, its value is "on".</para>
-        ///</summary>
+        /// <summary>
+        /// On.
+        /// <para>When the item is serialized out as xml, its value is "on".</para>
+        /// </summary>
         [EnumString("on")]
         On,
-        ///<summary>
-        ///Off.
-        ///<para>When the item is serialized out as xml, its value is "off".</para>
-        ///</summary>
+        /// <summary>
+        /// Off.
+        /// <para>When the item is serialized out as xml, its value is "off".</para>
+        /// </summary>
         [EnumString("off")]
         Off,
-        ///<summary>
-        ///0.
-        ///<para>When the item is serialized out as xml, its value is "0".</para>
-        ///</summary>
+        /// <summary>
+        /// 0.
+        /// <para>When the item is serialized out as xml, its value is "0".</para>
+        /// </summary>
         [EnumString("0")]
         Zero,
-        ///<summary>
-        ///1.
-        ///<para>When the item is serialized out as xml, its value is "1".</para>
-        ///</summary>
+        /// <summary>
+        /// 1.
+        /// <para>When the item is serialized out as xml, its value is "1".</para>
+        /// </summary>
         [EnumString("1")]
-        One,
+        One
     }
 }
