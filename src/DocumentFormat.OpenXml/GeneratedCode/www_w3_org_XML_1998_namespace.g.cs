@@ -19,17 +19,17 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public enum SpaceProcessingModeValues
     {
-        ///<summary>
-        ///default.
-        ///<para>When the item is serialized out as xml, its value is "default".</para>
-        ///</summary>
+        /// <summary>
+        /// default.
+        /// <para>When the item is serialized out as xml, its value is "default".</para>
+        /// </summary>
         [EnumString("default")]
         Default,
-        ///<summary>
-        ///preserve.
-        ///<para>When the item is serialized out as xml, its value is "preserve".</para>
-        ///</summary>
+        /// <summary>
+        /// preserve.
+        /// <para>When the item is serialized out as xml, its value is "preserve".</para>
+        /// </summary>
         [EnumString("preserve")]
-        Preserve,
+        Preserve
     }
 }

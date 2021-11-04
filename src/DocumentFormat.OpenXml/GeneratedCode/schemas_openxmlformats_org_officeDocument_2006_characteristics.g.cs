@@ -189,35 +189,35 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// </summary>
     public enum RelationValues
     {
-        ///<summary>
-        ///Greater Than or Equal to.
-        ///<para>When the item is serialized out as xml, its value is "ge".</para>
-        ///</summary>
+        /// <summary>
+        /// Greater Than or Equal to.
+        /// <para>When the item is serialized out as xml, its value is "ge".</para>
+        /// </summary>
         [EnumString("ge")]
         GreaterThanOrEqualTo,
-        ///<summary>
-        ///Less Than or Equal To.
-        ///<para>When the item is serialized out as xml, its value is "le".</para>
-        ///</summary>
+        /// <summary>
+        /// Less Than or Equal To.
+        /// <para>When the item is serialized out as xml, its value is "le".</para>
+        /// </summary>
         [EnumString("le")]
         LessThanOrEqualTo,
-        ///<summary>
-        ///Greater Than.
-        ///<para>When the item is serialized out as xml, its value is "gt".</para>
-        ///</summary>
+        /// <summary>
+        /// Greater Than.
+        /// <para>When the item is serialized out as xml, its value is "gt".</para>
+        /// </summary>
         [EnumString("gt")]
         GreaterThan,
-        ///<summary>
-        ///Less Than.
-        ///<para>When the item is serialized out as xml, its value is "lt".</para>
-        ///</summary>
+        /// <summary>
+        /// Less Than.
+        /// <para>When the item is serialized out as xml, its value is "lt".</para>
+        /// </summary>
         [EnumString("lt")]
         LessThan,
-        ///<summary>
-        ///Equal To.
-        ///<para>When the item is serialized out as xml, its value is "eq".</para>
-        ///</summary>
+        /// <summary>
+        /// Equal To.
+        /// <para>When the item is serialized out as xml, its value is "eq".</para>
+        /// </summary>
         [EnumString("eq")]
-        EqualTo,
+        EqualTo
     }
 }

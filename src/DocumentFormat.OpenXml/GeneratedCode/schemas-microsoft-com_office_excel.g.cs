@@ -3035,36 +3035,36 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum ClipboardFormatValues
     {
-        ///<summary>
-        ///WMF.
-        ///<para>When the item is serialized out as xml, its value is "PictOld".</para>
-        ///</summary>
+        /// <summary>
+        /// WMF.
+        /// <para>When the item is serialized out as xml, its value is "PictOld".</para>
+        /// </summary>
         [EnumString("PictOld")]
         PictureOld,
-        ///<summary>
-        ///EMF.
-        ///<para>When the item is serialized out as xml, its value is "Pict".</para>
-        ///</summary>
+        /// <summary>
+        /// EMF.
+        /// <para>When the item is serialized out as xml, its value is "Pict".</para>
+        /// </summary>
         [EnumString("Pict")]
         Picture,
-        ///<summary>
-        ///Bitmap.
-        ///<para>When the item is serialized out as xml, its value is "Bitmap".</para>
-        ///</summary>
+        /// <summary>
+        /// Bitmap.
+        /// <para>When the item is serialized out as xml, its value is "Bitmap".</para>
+        /// </summary>
         [EnumString("Bitmap")]
         Bitmap,
-        ///<summary>
-        ///Printer Picture.
-        ///<para>When the item is serialized out as xml, its value is "PictPrint".</para>
-        ///</summary>
+        /// <summary>
+        /// Printer Picture.
+        /// <para>When the item is serialized out as xml, its value is "PictPrint".</para>
+        /// </summary>
         [EnumString("PictPrint")]
         PicturePrint,
-        ///<summary>
-        ///Screen Picture EMF.
-        ///<para>When the item is serialized out as xml, its value is "PictScreen".</para>
-        ///</summary>
+        /// <summary>
+        /// Screen Picture EMF.
+        /// <para>When the item is serialized out as xml, its value is "PictScreen".</para>
+        /// </summary>
         [EnumString("PictScreen")]
-        PictureScreen,
+        PictureScreen
     }
 
     /// <summary>
@@ -3072,120 +3072,120 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum ObjectValues
     {
-        ///<summary>
-        ///Pushbutton.
-        ///<para>When the item is serialized out as xml, its value is "Button".</para>
-        ///</summary>
+        /// <summary>
+        /// Pushbutton.
+        /// <para>When the item is serialized out as xml, its value is "Button".</para>
+        /// </summary>
         [EnumString("Button")]
         Button,
-        ///<summary>
-        ///Checkbox.
-        ///<para>When the item is serialized out as xml, its value is "Checkbox".</para>
-        ///</summary>
+        /// <summary>
+        /// Checkbox.
+        /// <para>When the item is serialized out as xml, its value is "Checkbox".</para>
+        /// </summary>
         [EnumString("Checkbox")]
         Checkbox,
-        ///<summary>
-        ///Dialog.
-        ///<para>When the item is serialized out as xml, its value is "Dialog".</para>
-        ///</summary>
+        /// <summary>
+        /// Dialog.
+        /// <para>When the item is serialized out as xml, its value is "Dialog".</para>
+        /// </summary>
         [EnumString("Dialog")]
         Dialog,
-        ///<summary>
-        ///Dropdown Box.
-        ///<para>When the item is serialized out as xml, its value is "Drop".</para>
-        ///</summary>
+        /// <summary>
+        /// Dropdown Box.
+        /// <para>When the item is serialized out as xml, its value is "Drop".</para>
+        /// </summary>
         [EnumString("Drop")]
         Drop,
-        ///<summary>
-        ///Editable Text Field.
-        ///<para>When the item is serialized out as xml, its value is "Edit".</para>
-        ///</summary>
+        /// <summary>
+        /// Editable Text Field.
+        /// <para>When the item is serialized out as xml, its value is "Edit".</para>
+        /// </summary>
         [EnumString("Edit")]
         Edit,
-        ///<summary>
-        ///Group Box.
-        ///<para>When the item is serialized out as xml, its value is "GBox".</para>
-        ///</summary>
+        /// <summary>
+        /// Group Box.
+        /// <para>When the item is serialized out as xml, its value is "GBox".</para>
+        /// </summary>
         [EnumString("GBox")]
         GroupBox,
-        ///<summary>
-        ///Label.
-        ///<para>When the item is serialized out as xml, its value is "Label".</para>
-        ///</summary>
+        /// <summary>
+        /// Label.
+        /// <para>When the item is serialized out as xml, its value is "Label".</para>
+        /// </summary>
         [EnumString("Label")]
         Label,
-        ///<summary>
-        ///Auditing Line.
-        ///<para>When the item is serialized out as xml, its value is "LineA".</para>
-        ///</summary>
+        /// <summary>
+        /// Auditing Line.
+        /// <para>When the item is serialized out as xml, its value is "LineA".</para>
+        /// </summary>
         [EnumString("LineA")]
         AuditingLine,
-        ///<summary>
-        ///List Box.
-        ///<para>When the item is serialized out as xml, its value is "List".</para>
-        ///</summary>
+        /// <summary>
+        /// List Box.
+        /// <para>When the item is serialized out as xml, its value is "List".</para>
+        /// </summary>
         [EnumString("List")]
         List,
-        ///<summary>
-        ///Movie.
-        ///<para>When the item is serialized out as xml, its value is "Movie".</para>
-        ///</summary>
+        /// <summary>
+        /// Movie.
+        /// <para>When the item is serialized out as xml, its value is "Movie".</para>
+        /// </summary>
         [EnumString("Movie")]
         Movie,
-        ///<summary>
-        ///Comment.
-        ///<para>When the item is serialized out as xml, its value is "Note".</para>
-        ///</summary>
+        /// <summary>
+        /// Comment.
+        /// <para>When the item is serialized out as xml, its value is "Note".</para>
+        /// </summary>
         [EnumString("Note")]
         Note,
-        ///<summary>
-        ///Image.
-        ///<para>When the item is serialized out as xml, its value is "Pict".</para>
-        ///</summary>
+        /// <summary>
+        /// Image.
+        /// <para>When the item is serialized out as xml, its value is "Pict".</para>
+        /// </summary>
         [EnumString("Pict")]
         Picture,
-        ///<summary>
-        ///Radio Button.
-        ///<para>When the item is serialized out as xml, its value is "Radio".</para>
-        ///</summary>
+        /// <summary>
+        /// Radio Button.
+        /// <para>When the item is serialized out as xml, its value is "Radio".</para>
+        /// </summary>
         [EnumString("Radio")]
         Radio,
-        ///<summary>
-        ///Auditing Rectangle.
-        ///<para>When the item is serialized out as xml, its value is "RectA".</para>
-        ///</summary>
+        /// <summary>
+        /// Auditing Rectangle.
+        /// <para>When the item is serialized out as xml, its value is "RectA".</para>
+        /// </summary>
         [EnumString("RectA")]
         AuditingRectangle,
-        ///<summary>
-        ///Scroll Bar.
-        ///<para>When the item is serialized out as xml, its value is "Scroll".</para>
-        ///</summary>
+        /// <summary>
+        /// Scroll Bar.
+        /// <para>When the item is serialized out as xml, its value is "Scroll".</para>
+        /// </summary>
         [EnumString("Scroll")]
         Scroll,
-        ///<summary>
-        ///Spin Button.
-        ///<para>When the item is serialized out as xml, its value is "Spin".</para>
-        ///</summary>
+        /// <summary>
+        /// Spin Button.
+        /// <para>When the item is serialized out as xml, its value is "Spin".</para>
+        /// </summary>
         [EnumString("Spin")]
         Spin,
-        ///<summary>
-        ///Plain Shape.
-        ///<para>When the item is serialized out as xml, its value is "Shape".</para>
-        ///</summary>
+        /// <summary>
+        /// Plain Shape.
+        /// <para>When the item is serialized out as xml, its value is "Shape".</para>
+        /// </summary>
         [EnumString("Shape")]
         Shape,
-        ///<summary>
-        ///Group.
-        ///<para>When the item is serialized out as xml, its value is "Group".</para>
-        ///</summary>
+        /// <summary>
+        /// Group.
+        /// <para>When the item is serialized out as xml, its value is "Group".</para>
+        /// </summary>
         [EnumString("Group")]
         Group,
-        ///<summary>
-        ///Plain Rectangle.
-        ///<para>When the item is serialized out as xml, its value is "Rect".</para>
-        ///</summary>
+        /// <summary>
+        /// Plain Rectangle.
+        /// <para>When the item is serialized out as xml, its value is "Rect".</para>
+        /// </summary>
         [EnumString("Rect")]
-        Rectangle,
+        Rectangle
     }
 
     /// <summary>
@@ -3193,35 +3193,35 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// </summary>
     public enum BooleanEntryWithBlankValues
     {
-        ///<summary>
-        ///Logical True.
-        ///<para>When the item is serialized out as xml, its value is "True".</para>
-        ///</summary>
+        /// <summary>
+        /// Logical True.
+        /// <para>When the item is serialized out as xml, its value is "True".</para>
+        /// </summary>
         [EnumString("True")]
         True,
-        ///<summary>
-        ///Logical True.
-        ///<para>When the item is serialized out as xml, its value is "t".</para>
-        ///</summary>
+        /// <summary>
+        /// Logical True.
+        /// <para>When the item is serialized out as xml, its value is "t".</para>
+        /// </summary>
         [EnumString("t")]
         T,
-        ///<summary>
-        ///Logical False.
-        ///<para>When the item is serialized out as xml, its value is "False".</para>
-        ///</summary>
+        /// <summary>
+        /// Logical False.
+        /// <para>When the item is serialized out as xml, its value is "False".</para>
+        /// </summary>
         [EnumString("False")]
         False,
-        ///<summary>
-        ///Logical False.
-        ///<para>When the item is serialized out as xml, its value is "f".</para>
-        ///</summary>
+        /// <summary>
+        /// Logical False.
+        /// <para>When the item is serialized out as xml, its value is "f".</para>
+        /// </summary>
         [EnumString("f")]
         F,
-        ///<summary>
-        ///Blank - Default Value.
-        ///<para>When the item is serialized out as xml, its value is "".</para>
-        ///</summary>
+        /// <summary>
+        /// Blank - Default Value.
+        /// <para>When the item is serialized out as xml, its value is "".</para>
+        /// </summary>
         [EnumString("")]
-        Empty,
+        Empty
     }
 }

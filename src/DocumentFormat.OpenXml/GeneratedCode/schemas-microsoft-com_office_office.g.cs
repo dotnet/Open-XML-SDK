@@ -4402,42 +4402,42 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum AlignmentValues
     {
-        ///<summary>
-        ///Top Alignment.
-        ///<para>When the item is serialized out as xml, its value is "top".</para>
-        ///</summary>
+        /// <summary>
+        /// Top Alignment.
+        /// <para>When the item is serialized out as xml, its value is "top".</para>
+        /// </summary>
         [EnumString("top")]
         Top,
-        ///<summary>
-        ///Middle Alignment.
-        ///<para>When the item is serialized out as xml, its value is "middle".</para>
-        ///</summary>
+        /// <summary>
+        /// Middle Alignment.
+        /// <para>When the item is serialized out as xml, its value is "middle".</para>
+        /// </summary>
         [EnumString("middle")]
         Middle,
-        ///<summary>
-        ///Bottom Alignment.
-        ///<para>When the item is serialized out as xml, its value is "bottom".</para>
-        ///</summary>
+        /// <summary>
+        /// Bottom Alignment.
+        /// <para>When the item is serialized out as xml, its value is "bottom".</para>
+        /// </summary>
         [EnumString("bottom")]
         Bottom,
-        ///<summary>
-        ///Left Alignment.
-        ///<para>When the item is serialized out as xml, its value is "left".</para>
-        ///</summary>
+        /// <summary>
+        /// Left Alignment.
+        /// <para>When the item is serialized out as xml, its value is "left".</para>
+        /// </summary>
         [EnumString("left")]
         Left,
-        ///<summary>
-        ///Center Alignment.
-        ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///</summary>
+        /// <summary>
+        /// Center Alignment.
+        /// <para>When the item is serialized out as xml, its value is "center".</para>
+        /// </summary>
         [EnumString("center")]
         Center,
-        ///<summary>
-        ///Right Alignment.
-        ///<para>When the item is serialized out as xml, its value is "right".</para>
-        ///</summary>
+        /// <summary>
+        /// Right Alignment.
+        /// <para>When the item is serialized out as xml, its value is "right".</para>
+        /// </summary>
         [EnumString("right")]
-        Right,
+        Right
     }
 
     /// <summary>
@@ -4445,42 +4445,42 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum ScreenSizeValues
     {
-        ///<summary>
-        ///544x376 pixels.
-        ///<para>When the item is serialized out as xml, its value is "544,376".</para>
-        ///</summary>
+        /// <summary>
+        /// 544x376 pixels.
+        /// <para>When the item is serialized out as xml, its value is "544,376".</para>
+        /// </summary>
         [EnumString("544,376")]
         Sz544x376,
-        ///<summary>
-        ///640x480 pixels.
-        ///<para>When the item is serialized out as xml, its value is "640,480".</para>
-        ///</summary>
+        /// <summary>
+        /// 640x480 pixels.
+        /// <para>When the item is serialized out as xml, its value is "640,480".</para>
+        /// </summary>
         [EnumString("640,480")]
         Sz640x480,
-        ///<summary>
-        ///720x512 pixels.
-        ///<para>When the item is serialized out as xml, its value is "720,512".</para>
-        ///</summary>
+        /// <summary>
+        /// 720x512 pixels.
+        /// <para>When the item is serialized out as xml, its value is "720,512".</para>
+        /// </summary>
         [EnumString("720,512")]
         Sz720x512,
-        ///<summary>
-        ///800x600 pixels.
-        ///<para>When the item is serialized out as xml, its value is "800,600".</para>
-        ///</summary>
+        /// <summary>
+        /// 800x600 pixels.
+        /// <para>When the item is serialized out as xml, its value is "800,600".</para>
+        /// </summary>
         [EnumString("800,600")]
         Sz800x600,
-        ///<summary>
-        ///1024x768 pixels.
-        ///<para>When the item is serialized out as xml, its value is "1024,768".</para>
-        ///</summary>
+        /// <summary>
+        /// 1024x768 pixels.
+        /// <para>When the item is serialized out as xml, its value is "1024,768".</para>
+        /// </summary>
         [EnumString("1024,768")]
         Sz1024x768,
-        ///<summary>
-        ///1152x862 pixels.
-        ///<para>When the item is serialized out as xml, its value is "1152,862".</para>
-        ///</summary>
+        /// <summary>
+        /// 1152x862 pixels.
+        /// <para>When the item is serialized out as xml, its value is "1152,862".</para>
+        /// </summary>
         [EnumString("1152,862")]
-        Sz1152x862,
+        Sz1152x862
     }
 
     /// <summary>
@@ -4488,18 +4488,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum InsetMarginValues
     {
-        ///<summary>
-        ///Automatic Margins.
-        ///<para>When the item is serialized out as xml, its value is "auto".</para>
-        ///</summary>
+        /// <summary>
+        /// Automatic Margins.
+        /// <para>When the item is serialized out as xml, its value is "auto".</para>
+        /// </summary>
         [EnumString("auto")]
         Auto,
-        ///<summary>
-        ///Custom Margins.
-        ///<para>When the item is serialized out as xml, its value is "custom".</para>
-        ///</summary>
+        /// <summary>
+        /// Custom Margins.
+        /// <para>When the item is serialized out as xml, its value is "custom".</para>
+        /// </summary>
         [EnumString("custom")]
-        Custom,
+        Custom
     }
 
     /// <summary>
@@ -4507,18 +4507,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum ColorModeValues
     {
-        ///<summary>
-        ///Use Shape Fill Color.
-        ///<para>When the item is serialized out as xml, its value is "auto".</para>
-        ///</summary>
+        /// <summary>
+        /// Use Shape Fill Color.
+        /// <para>When the item is serialized out as xml, its value is "auto".</para>
+        /// </summary>
         [EnumString("auto")]
         Auto,
-        ///<summary>
-        ///Use Custom Color.
-        ///<para>When the item is serialized out as xml, its value is "custom".</para>
-        ///</summary>
+        /// <summary>
+        /// Use Custom Color.
+        /// <para>When the item is serialized out as xml, its value is "custom".</para>
+        /// </summary>
         [EnumString("custom")]
-        Custom,
+        Custom
     }
 
     /// <summary>
@@ -4526,18 +4526,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum ExtrusionValues
     {
-        ///<summary>
-        ///Perspective Projection.
-        ///<para>When the item is serialized out as xml, its value is "perspective".</para>
-        ///</summary>
+        /// <summary>
+        /// Perspective Projection.
+        /// <para>When the item is serialized out as xml, its value is "perspective".</para>
+        /// </summary>
         [EnumString("perspective")]
         Perspective,
-        ///<summary>
-        ///Parallel Projection.
-        ///<para>When the item is serialized out as xml, its value is "parallel".</para>
-        ///</summary>
+        /// <summary>
+        /// Parallel Projection.
+        /// <para>When the item is serialized out as xml, its value is "parallel".</para>
+        /// </summary>
         [EnumString("parallel")]
-        Parallel,
+        Parallel
     }
 
     /// <summary>
@@ -4545,24 +4545,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum ExtrusionRenderValues
     {
-        ///<summary>
-        ///Solid.
-        ///<para>When the item is serialized out as xml, its value is "solid".</para>
-        ///</summary>
+        /// <summary>
+        /// Solid.
+        /// <para>When the item is serialized out as xml, its value is "solid".</para>
+        /// </summary>
         [EnumString("solid")]
         Solid,
-        ///<summary>
-        ///Wireframe.
-        ///<para>When the item is serialized out as xml, its value is "wireFrame".</para>
-        ///</summary>
+        /// <summary>
+        /// Wireframe.
+        /// <para>When the item is serialized out as xml, its value is "wireFrame".</para>
+        /// </summary>
         [EnumString("wireFrame")]
         WireFrame,
-        ///<summary>
-        ///Bounding Cube.
-        ///<para>When the item is serialized out as xml, its value is "boundingCube".</para>
-        ///</summary>
+        /// <summary>
+        /// Bounding Cube.
+        /// <para>When the item is serialized out as xml, its value is "boundingCube".</para>
+        /// </summary>
         [EnumString("boundingCube")]
-        BoundingCube,
+        BoundingCube
     }
 
     /// <summary>
@@ -4570,24 +4570,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum ExtrusionPlaneValues
     {
-        ///<summary>
-        ///XY Plane.
-        ///<para>When the item is serialized out as xml, its value is "XY".</para>
-        ///</summary>
+        /// <summary>
+        /// XY Plane.
+        /// <para>When the item is serialized out as xml, its value is "XY".</para>
+        /// </summary>
         [EnumString("XY")]
         XY,
-        ///<summary>
-        ///ZX Plane.
-        ///<para>When the item is serialized out as xml, its value is "ZX".</para>
-        ///</summary>
+        /// <summary>
+        /// ZX Plane.
+        /// <para>When the item is serialized out as xml, its value is "ZX".</para>
+        /// </summary>
         [EnumString("ZX")]
         ZX,
-        ///<summary>
-        ///YZ Plane.
-        ///<para>When the item is serialized out as xml, its value is "YZ".</para>
-        ///</summary>
+        /// <summary>
+        /// YZ Plane.
+        /// <para>When the item is serialized out as xml, its value is "YZ".</para>
+        /// </summary>
         [EnumString("YZ")]
-        YZ,
+        YZ
     }
 
     /// <summary>
@@ -4595,42 +4595,42 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum AngleValues
     {
-        ///<summary>
-        ///Any Angle.
-        ///<para>When the item is serialized out as xml, its value is "any".</para>
-        ///</summary>
+        /// <summary>
+        /// Any Angle.
+        /// <para>When the item is serialized out as xml, its value is "any".</para>
+        /// </summary>
         [EnumString("any")]
         Any,
-        ///<summary>
-        ///30 degrees.
-        ///<para>When the item is serialized out as xml, its value is "30".</para>
-        ///</summary>
+        /// <summary>
+        /// 30 degrees.
+        /// <para>When the item is serialized out as xml, its value is "30".</para>
+        /// </summary>
         [EnumString("30")]
         Degree30,
-        ///<summary>
-        ///45 degrees.
-        ///<para>When the item is serialized out as xml, its value is "45".</para>
-        ///</summary>
+        /// <summary>
+        /// 45 degrees.
+        /// <para>When the item is serialized out as xml, its value is "45".</para>
+        /// </summary>
         [EnumString("45")]
         Degree45,
-        ///<summary>
-        ///60 degrees.
-        ///<para>When the item is serialized out as xml, its value is "60".</para>
-        ///</summary>
+        /// <summary>
+        /// 60 degrees.
+        /// <para>When the item is serialized out as xml, its value is "60".</para>
+        /// </summary>
         [EnumString("60")]
         Degree60,
-        ///<summary>
-        ///90 degrees.
-        ///<para>When the item is serialized out as xml, its value is "90".</para>
-        ///</summary>
+        /// <summary>
+        /// 90 degrees.
+        /// <para>When the item is serialized out as xml, its value is "90".</para>
+        /// </summary>
         [EnumString("90")]
         Degree90,
-        ///<summary>
-        ///Automatic Angle.
-        ///<para>When the item is serialized out as xml, its value is "auto".</para>
-        ///</summary>
+        /// <summary>
+        /// Automatic Angle.
+        /// <para>When the item is serialized out as xml, its value is "auto".</para>
+        /// </summary>
         [EnumString("auto")]
-        Auto,
+        Auto
     }
 
     /// <summary>
@@ -4638,30 +4638,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum CalloutPlacementValues
     {
-        ///<summary>
-        ///Top placement.
-        ///<para>When the item is serialized out as xml, its value is "top".</para>
-        ///</summary>
+        /// <summary>
+        /// Top placement.
+        /// <para>When the item is serialized out as xml, its value is "top".</para>
+        /// </summary>
         [EnumString("top")]
         Top,
-        ///<summary>
-        ///Center placement.
-        ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///</summary>
+        /// <summary>
+        /// Center placement.
+        /// <para>When the item is serialized out as xml, its value is "center".</para>
+        /// </summary>
         [EnumString("center")]
         Center,
-        ///<summary>
-        ///Bottom placement.
-        ///<para>When the item is serialized out as xml, its value is "bottom".</para>
-        ///</summary>
+        /// <summary>
+        /// Bottom placement.
+        /// <para>When the item is serialized out as xml, its value is "bottom".</para>
+        /// </summary>
         [EnumString("bottom")]
         Bottom,
-        ///<summary>
-        ///User-defined placement.
-        ///<para>When the item is serialized out as xml, its value is "user".</para>
-        ///</summary>
+        /// <summary>
+        /// User-defined placement.
+        /// <para>When the item is serialized out as xml, its value is "user".</para>
+        /// </summary>
         [EnumString("user")]
-        User,
+        User
     }
 
     /// <summary>
@@ -4669,30 +4669,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum ConnectorValues
     {
-        ///<summary>
-        ///No Connector.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// No Connector.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///Straight Connector.
-        ///<para>When the item is serialized out as xml, its value is "straight".</para>
-        ///</summary>
+        /// <summary>
+        /// Straight Connector.
+        /// <para>When the item is serialized out as xml, its value is "straight".</para>
+        /// </summary>
         [EnumString("straight")]
         Straight,
-        ///<summary>
-        ///Elbow Connector.
-        ///<para>When the item is serialized out as xml, its value is "elbow".</para>
-        ///</summary>
+        /// <summary>
+        /// Elbow Connector.
+        /// <para>When the item is serialized out as xml, its value is "elbow".</para>
+        /// </summary>
         [EnumString("elbow")]
         Elbow,
-        ///<summary>
-        ///Curved Connector.
-        ///<para>When the item is serialized out as xml, its value is "curved".</para>
-        ///</summary>
+        /// <summary>
+        /// Curved Connector.
+        /// <para>When the item is serialized out as xml, its value is "curved".</para>
+        /// </summary>
         [EnumString("curved")]
-        Curved,
+        Curved
     }
 
     /// <summary>
@@ -4700,24 +4700,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum HorizontalRuleAlignmentValues
     {
-        ///<summary>
-        ///Left Alignment.
-        ///<para>When the item is serialized out as xml, its value is "left".</para>
-        ///</summary>
+        /// <summary>
+        /// Left Alignment.
+        /// <para>When the item is serialized out as xml, its value is "left".</para>
+        /// </summary>
         [EnumString("left")]
         Left,
-        ///<summary>
-        ///Right Alignment.
-        ///<para>When the item is serialized out as xml, its value is "right".</para>
-        ///</summary>
+        /// <summary>
+        /// Right Alignment.
+        /// <para>When the item is serialized out as xml, its value is "right".</para>
+        /// </summary>
         [EnumString("right")]
         Right,
-        ///<summary>
-        ///Center Alignment.
-        ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///</summary>
+        /// <summary>
+        /// Center Alignment.
+        /// <para>When the item is serialized out as xml, its value is "center".</para>
+        /// </summary>
         [EnumString("center")]
-        Center,
+        Center
     }
 
     /// <summary>
@@ -4725,30 +4725,30 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum ConnectValues
     {
-        ///<summary>
-        ///No.
-        ///<para>When the item is serialized out as xml, its value is "none".</para>
-        ///</summary>
+        /// <summary>
+        /// No.
+        /// <para>When the item is serialized out as xml, its value is "none".</para>
+        /// </summary>
         [EnumString("none")]
         None,
-        ///<summary>
-        ///Four Connections.
-        ///<para>When the item is serialized out as xml, its value is "rect".</para>
-        ///</summary>
+        /// <summary>
+        /// Four Connections.
+        /// <para>When the item is serialized out as xml, its value is "rect".</para>
+        /// </summary>
         [EnumString("rect")]
         Rectangle,
-        ///<summary>
-        ///Edit Point Connections.
-        ///<para>When the item is serialized out as xml, its value is "segments".</para>
-        ///</summary>
+        /// <summary>
+        /// Edit Point Connections.
+        /// <para>When the item is serialized out as xml, its value is "segments".</para>
+        /// </summary>
         [EnumString("segments")]
         Segments,
-        ///<summary>
-        ///Custom Connections.
-        ///<para>When the item is serialized out as xml, its value is "custom".</para>
-        ///</summary>
+        /// <summary>
+        /// Custom Connections.
+        /// <para>When the item is serialized out as xml, its value is "custom".</para>
+        /// </summary>
         [EnumString("custom")]
-        Custom,
+        Custom
     }
 
     /// <summary>
@@ -4756,24 +4756,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum OleLinkValues
     {
-        ///<summary>
-        ///Other Image.
-        ///<para>When the item is serialized out as xml, its value is "Picture".</para>
-        ///</summary>
+        /// <summary>
+        /// Other Image.
+        /// <para>When the item is serialized out as xml, its value is "Picture".</para>
+        /// </summary>
         [EnumString("Picture")]
         Picture,
-        ///<summary>
-        ///Bitmap Image.
-        ///<para>When the item is serialized out as xml, its value is "Bitmap".</para>
-        ///</summary>
+        /// <summary>
+        /// Bitmap Image.
+        /// <para>When the item is serialized out as xml, its value is "Bitmap".</para>
+        /// </summary>
         [EnumString("Bitmap")]
         Bitmap,
-        ///<summary>
-        ///Enhanced Metafile Image.
-        ///<para>When the item is serialized out as xml, its value is "EnhancedMetaFile".</para>
-        ///</summary>
+        /// <summary>
+        /// Enhanced Metafile Image.
+        /// <para>When the item is serialized out as xml, its value is "EnhancedMetaFile".</para>
+        /// </summary>
         [EnumString("EnhancedMetaFile")]
-        EnhancedMetaFile,
+        EnhancedMetaFile
     }
 
     /// <summary>
@@ -4781,18 +4781,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum OleValues
     {
-        ///<summary>
-        ///Embedded Object.
-        ///<para>When the item is serialized out as xml, its value is "Embed".</para>
-        ///</summary>
+        /// <summary>
+        /// Embedded Object.
+        /// <para>When the item is serialized out as xml, its value is "Embed".</para>
+        /// </summary>
         [EnumString("Embed")]
         Embed,
-        ///<summary>
-        ///Linked Object.
-        ///<para>When the item is serialized out as xml, its value is "Link".</para>
-        ///</summary>
+        /// <summary>
+        /// Linked Object.
+        /// <para>When the item is serialized out as xml, its value is "Link".</para>
+        /// </summary>
         [EnumString("Link")]
-        Link,
+        Link
     }
 
     /// <summary>
@@ -4800,18 +4800,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum OleDrawAspectValues
     {
-        ///<summary>
-        ///Snapshot.
-        ///<para>When the item is serialized out as xml, its value is "Content".</para>
-        ///</summary>
+        /// <summary>
+        /// Snapshot.
+        /// <para>When the item is serialized out as xml, its value is "Content".</para>
+        /// </summary>
         [EnumString("Content")]
         Content,
-        ///<summary>
-        ///Icon.
-        ///<para>When the item is serialized out as xml, its value is "Icon".</para>
-        ///</summary>
+        /// <summary>
+        /// Icon.
+        /// <para>When the item is serialized out as xml, its value is "Icon".</para>
+        /// </summary>
         [EnumString("Icon")]
-        Icon,
+        Icon
     }
 
     /// <summary>
@@ -4819,18 +4819,18 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum OleUpdateModeValues
     {
-        ///<summary>
-        ///Server Application Update.
-        ///<para>When the item is serialized out as xml, its value is "Always".</para>
-        ///</summary>
+        /// <summary>
+        /// Server Application Update.
+        /// <para>When the item is serialized out as xml, its value is "Always".</para>
+        /// </summary>
         [EnumString("Always")]
         Always,
-        ///<summary>
-        ///User Update.
-        ///<para>When the item is serialized out as xml, its value is "OnCall".</para>
-        ///</summary>
+        /// <summary>
+        /// User Update.
+        /// <para>When the item is serialized out as xml, its value is "OnCall".</para>
+        /// </summary>
         [EnumString("OnCall")]
-        OnCall,
+        OnCall
     }
 
     /// <summary>
@@ -4838,60 +4838,60 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum FillValues
     {
-        ///<summary>
-        ///Centered Radial Gradient.
-        ///<para>When the item is serialized out as xml, its value is "gradientCenter".</para>
-        ///</summary>
+        /// <summary>
+        /// Centered Radial Gradient.
+        /// <para>When the item is serialized out as xml, its value is "gradientCenter".</para>
+        /// </summary>
         [EnumString("gradientCenter")]
         GradientCenter,
-        ///<summary>
-        ///Solid Fill.
-        ///<para>When the item is serialized out as xml, its value is "solid".</para>
-        ///</summary>
+        /// <summary>
+        /// Solid Fill.
+        /// <para>When the item is serialized out as xml, its value is "solid".</para>
+        /// </summary>
         [EnumString("solid")]
         Solid,
-        ///<summary>
-        ///Image Pattern.
-        ///<para>When the item is serialized out as xml, its value is "pattern".</para>
-        ///</summary>
+        /// <summary>
+        /// Image Pattern.
+        /// <para>When the item is serialized out as xml, its value is "pattern".</para>
+        /// </summary>
         [EnumString("pattern")]
         Pattern,
-        ///<summary>
-        ///Tiled Image.
-        ///<para>When the item is serialized out as xml, its value is "tile".</para>
-        ///</summary>
+        /// <summary>
+        /// Tiled Image.
+        /// <para>When the item is serialized out as xml, its value is "tile".</para>
+        /// </summary>
         [EnumString("tile")]
         Tile,
-        ///<summary>
-        ///Stretch Image to Fit.
-        ///<para>When the item is serialized out as xml, its value is "frame".</para>
-        ///</summary>
+        /// <summary>
+        /// Stretch Image to Fit.
+        /// <para>When the item is serialized out as xml, its value is "frame".</para>
+        /// </summary>
         [EnumString("frame")]
         Frame,
-        ///<summary>
-        ///Unscaled Gradient.
-        ///<para>When the item is serialized out as xml, its value is "gradientUnscaled".</para>
-        ///</summary>
+        /// <summary>
+        /// Unscaled Gradient.
+        /// <para>When the item is serialized out as xml, its value is "gradientUnscaled".</para>
+        /// </summary>
         [EnumString("gradientUnscaled")]
         GradientUnscaled,
-        ///<summary>
-        ///Radial Gradient.
-        ///<para>When the item is serialized out as xml, its value is "gradientRadial".</para>
-        ///</summary>
+        /// <summary>
+        /// Radial Gradient.
+        /// <para>When the item is serialized out as xml, its value is "gradientRadial".</para>
+        /// </summary>
         [EnumString("gradientRadial")]
         GradientRadial,
-        ///<summary>
-        ///Linear Gradient.
-        ///<para>When the item is serialized out as xml, its value is "gradient".</para>
-        ///</summary>
+        /// <summary>
+        /// Linear Gradient.
+        /// <para>When the item is serialized out as xml, its value is "gradient".</para>
+        /// </summary>
         [EnumString("gradient")]
         Gradient,
-        ///<summary>
-        ///Use Background Fill.
-        ///<para>When the item is serialized out as xml, its value is "background".</para>
-        ///</summary>
+        /// <summary>
+        /// Use Background Fill.
+        /// <para>When the item is serialized out as xml, its value is "background".</para>
+        /// </summary>
         [EnumString("background")]
-        Background,
+        Background
     }
 
     /// <summary>
@@ -4899,24 +4899,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum RuleValues
     {
-        ///<summary>
-        ///Arc Rule.
-        ///<para>When the item is serialized out as xml, its value is "arc".</para>
-        ///</summary>
+        /// <summary>
+        /// Arc Rule.
+        /// <para>When the item is serialized out as xml, its value is "arc".</para>
+        /// </summary>
         [EnumString("arc")]
         Arc,
-        ///<summary>
-        ///Callout Rule.
-        ///<para>When the item is serialized out as xml, its value is "callout".</para>
-        ///</summary>
+        /// <summary>
+        /// Callout Rule.
+        /// <para>When the item is serialized out as xml, its value is "callout".</para>
+        /// </summary>
         [EnumString("callout")]
         Callout,
-        ///<summary>
-        ///Connector Rule.
-        ///<para>When the item is serialized out as xml, its value is "connector".</para>
-        ///</summary>
+        /// <summary>
+        /// Connector Rule.
+        /// <para>When the item is serialized out as xml, its value is "connector".</para>
+        /// </summary>
         [EnumString("connector")]
-        Connector,
+        Connector
     }
 
     /// <summary>
@@ -4924,71 +4924,71 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum BlackAndWhiteModeValues
     {
-        ///<summary>
-        ///Color.
-        ///<para>When the item is serialized out as xml, its value is "color".</para>
-        ///</summary>
+        /// <summary>
+        /// Color.
+        /// <para>When the item is serialized out as xml, its value is "color".</para>
+        /// </summary>
         [EnumString("color")]
         Color,
-        ///<summary>
-        ///Automatic.
-        ///<para>When the item is serialized out as xml, its value is "auto".</para>
-        ///</summary>
+        /// <summary>
+        /// Automatic.
+        /// <para>When the item is serialized out as xml, its value is "auto".</para>
+        /// </summary>
         [EnumString("auto")]
         Auto,
-        ///<summary>
-        ///Grayscale.
-        ///<para>When the item is serialized out as xml, its value is "grayScale".</para>
-        ///</summary>
+        /// <summary>
+        /// Grayscale.
+        /// <para>When the item is serialized out as xml, its value is "grayScale".</para>
+        /// </summary>
         [EnumString("grayScale")]
         GrayScale,
-        ///<summary>
-        ///Light grayscale.
-        ///<para>When the item is serialized out as xml, its value is "lightGrayScale".</para>
-        ///</summary>
+        /// <summary>
+        /// Light grayscale.
+        /// <para>When the item is serialized out as xml, its value is "lightGrayScale".</para>
+        /// </summary>
         [EnumString("lightGrayScale")]
         LightGrayScale,
-        ///<summary>
-        ///Inverse Grayscale.
-        ///<para>When the item is serialized out as xml, its value is "inverseGray".</para>
-        ///</summary>
+        /// <summary>
+        /// Inverse Grayscale.
+        /// <para>When the item is serialized out as xml, its value is "inverseGray".</para>
+        /// </summary>
         [EnumString("inverseGray")]
         InverseGray,
-        ///<summary>
-        ///Gray Outlines.
-        ///<para>When the item is serialized out as xml, its value is "grayOutline".</para>
-        ///</summary>
+        /// <summary>
+        /// Gray Outlines.
+        /// <para>When the item is serialized out as xml, its value is "grayOutline".</para>
+        /// </summary>
         [EnumString("grayOutline")]
         GrayOutline,
-        ///<summary>
-        ///Black And White.
-        ///<para>When the item is serialized out as xml, its value is "highContrast".</para>
-        ///</summary>
+        /// <summary>
+        /// Black And White.
+        /// <para>When the item is serialized out as xml, its value is "highContrast".</para>
+        /// </summary>
         [EnumString("highContrast")]
         HighContrast,
-        ///<summary>
-        ///Black.
-        ///<para>When the item is serialized out as xml, its value is "black".</para>
-        ///</summary>
+        /// <summary>
+        /// Black.
+        /// <para>When the item is serialized out as xml, its value is "black".</para>
+        /// </summary>
         [EnumString("black")]
         Black,
-        ///<summary>
-        ///White.
-        ///<para>When the item is serialized out as xml, its value is "white".</para>
-        ///</summary>
+        /// <summary>
+        /// White.
+        /// <para>When the item is serialized out as xml, its value is "white".</para>
+        /// </summary>
         [EnumString("white")]
         White,
-        ///<summary>
-        ///Do Not Show.
-        ///<para>When the item is serialized out as xml, its value is "undrawn".</para>
-        ///</summary>
+        /// <summary>
+        /// Do Not Show.
+        /// <para>When the item is serialized out as xml, its value is "undrawn".</para>
+        /// </summary>
         [EnumString("undrawn")]
         Undrawn,
-        ///<summary>
-        ///Black Text And Lines.
-        ///<para>When the item is serialized out as xml, its value is "blackTextAndLines".</para>
-        ///</summary>
+        /// <summary>
+        /// Black Text And Lines.
+        /// <para>When the item is serialized out as xml, its value is "blackTextAndLines".</para>
+        /// </summary>
         [EnumString("blackTextAndLines")]
-        BlackTextAndLines,
+        BlackTextAndLines
     }
 }

@@ -67,20 +67,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <summary>
     /// Defines the HyperlinkColorEnum enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2019)]
     public enum HyperlinkColorEnum
     {
-        ///<summary>
-        ///hlink.
-        ///<para>When the item is serialized out as xml, its value is "hlink".</para>
-        ///</summary>
+        /// <summary>
+        /// hlink.
+        /// <para>When the item is serialized out as xml, its value is "hlink".</para>
+        /// </summary>
         [EnumString("hlink")]
         HLink,
-        ///<summary>
-        ///tx.
-        ///<para>When the item is serialized out as xml, its value is "tx".</para>
-        ///</summary>
+        /// <summary>
+        /// tx.
+        /// <para>When the item is serialized out as xml, its value is "tx".</para>
+        /// </summary>
         [EnumString("tx")]
-        Tx,
+        Tx
     }
 }

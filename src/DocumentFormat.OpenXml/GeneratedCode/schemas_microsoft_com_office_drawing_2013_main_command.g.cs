@@ -9328,52 +9328,50 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <summary>
     /// Defines the ResourceLinkage enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum ResourceLinkage
     {
-        ///<summary>
-        ///embed.
-        ///<para>When the item is serialized out as xml, its value is "embed".</para>
-        ///</summary>
+        /// <summary>
+        /// embed.
+        /// <para>When the item is serialized out as xml, its value is "embed".</para>
+        /// </summary>
         [EnumString("embed")]
         Embed,
-        ///<summary>
-        ///link.
-        ///<para>When the item is serialized out as xml, its value is "link".</para>
-        ///</summary>
+        /// <summary>
+        /// link.
+        /// <para>When the item is serialized out as xml, its value is "link".</para>
+        /// </summary>
         [EnumString("link")]
         Link,
-        ///<summary>
-        ///linkAndEmbed.
-        ///<para>When the item is serialized out as xml, its value is "linkAndEmbed".</para>
-        ///</summary>
+        /// <summary>
+        /// linkAndEmbed.
+        /// <para>When the item is serialized out as xml, its value is "linkAndEmbed".</para>
+        /// </summary>
         [EnumString("linkAndEmbed")]
-        LinkAndEmbed,
+        LinkAndEmbed
     }
 
     /// <summary>
     /// Defines the DetachConnection enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2016)]
     public enum DetachConnection
     {
-        ///<summary>
-        ///start.
-        ///<para>When the item is serialized out as xml, its value is "start".</para>
-        ///</summary>
+        /// <summary>
+        /// start.
+        /// <para>When the item is serialized out as xml, its value is "start".</para>
+        /// </summary>
         [EnumString("start")]
         Start,
-        ///<summary>
-        ///end.
-        ///<para>When the item is serialized out as xml, its value is "end".</para>
-        ///</summary>
+        /// <summary>
+        /// end.
+        /// <para>When the item is serialized out as xml, its value is "end".</para>
+        /// </summary>
         [EnumString("end")]
         End,
-        ///<summary>
-        ///both.
-        ///<para>When the item is serialized out as xml, its value is "both".</para>
-        ///</summary>
+        /// <summary>
+        /// both.
+        /// <para>When the item is serialized out as xml, its value is "both".</para>
+        /// </summary>
         [EnumString("both")]
-        Both,
+        Both
     }
 }

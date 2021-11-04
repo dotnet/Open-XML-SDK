@@ -492,74 +492,73 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
     /// <summary>
     /// Defines the TargetScreenSize enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum TargetScreenSize
     {
-        ///<summary>
-        ///544x376.
-        ///<para>When the item is serialized out as xml, its value is "544x376".</para>
-        ///</summary>
+        /// <summary>
+        /// 544x376.
+        /// <para>When the item is serialized out as xml, its value is "544x376".</para>
+        /// </summary>
         [EnumString("544x376")]
         Sz544x376,
-        ///<summary>
-        ///640x480.
-        ///<para>When the item is serialized out as xml, its value is "640x480".</para>
-        ///</summary>
+        /// <summary>
+        /// 640x480.
+        /// <para>When the item is serialized out as xml, its value is "640x480".</para>
+        /// </summary>
         [EnumString("640x480")]
         Sz640x480,
-        ///<summary>
-        ///720x512.
-        ///<para>When the item is serialized out as xml, its value is "720x512".</para>
-        ///</summary>
+        /// <summary>
+        /// 720x512.
+        /// <para>When the item is serialized out as xml, its value is "720x512".</para>
+        /// </summary>
         [EnumString("720x512")]
         Sz720x512,
-        ///<summary>
-        ///800x600.
-        ///<para>When the item is serialized out as xml, its value is "800x600".</para>
-        ///</summary>
+        /// <summary>
+        /// 800x600.
+        /// <para>When the item is serialized out as xml, its value is "800x600".</para>
+        /// </summary>
         [EnumString("800x600")]
         Sz800x600,
-        ///<summary>
-        ///1024x768.
-        ///<para>When the item is serialized out as xml, its value is "1024x768".</para>
-        ///</summary>
+        /// <summary>
+        /// 1024x768.
+        /// <para>When the item is serialized out as xml, its value is "1024x768".</para>
+        /// </summary>
         [EnumString("1024x768")]
         Sz1024x768,
-        ///<summary>
-        ///1152x882.
-        ///<para>When the item is serialized out as xml, its value is "1152x882".</para>
-        ///</summary>
+        /// <summary>
+        /// 1152x882.
+        /// <para>When the item is serialized out as xml, its value is "1152x882".</para>
+        /// </summary>
         [EnumString("1152x882")]
         Sz1152x882,
-        ///<summary>
-        ///1152x900.
-        ///<para>When the item is serialized out as xml, its value is "1152x900".</para>
-        ///</summary>
+        /// <summary>
+        /// 1152x900.
+        /// <para>When the item is serialized out as xml, its value is "1152x900".</para>
+        /// </summary>
         [EnumString("1152x900")]
         Sz1152x900,
-        ///<summary>
-        ///1280x1024.
-        ///<para>When the item is serialized out as xml, its value is "1280x1024".</para>
-        ///</summary>
+        /// <summary>
+        /// 1280x1024.
+        /// <para>When the item is serialized out as xml, its value is "1280x1024".</para>
+        /// </summary>
         [EnumString("1280x1024")]
         Sz1280x1024,
-        ///<summary>
-        ///1600x1200.
-        ///<para>When the item is serialized out as xml, its value is "1600x1200".</para>
-        ///</summary>
+        /// <summary>
+        /// 1600x1200.
+        /// <para>When the item is serialized out as xml, its value is "1600x1200".</para>
+        /// </summary>
         [EnumString("1600x1200")]
         Sz1600x1200,
-        ///<summary>
-        ///1800x1440.
-        ///<para>When the item is serialized out as xml, its value is "1800x1440".</para>
-        ///</summary>
+        /// <summary>
+        /// 1800x1440.
+        /// <para>When the item is serialized out as xml, its value is "1800x1440".</para>
+        /// </summary>
         [EnumString("1800x1440")]
         Sz1800x1440,
-        ///<summary>
-        ///1920x1200.
-        ///<para>When the item is serialized out as xml, its value is "1920x1200".</para>
-        ///</summary>
+        /// <summary>
+        /// 1920x1200.
+        /// <para>When the item is serialized out as xml, its value is "1920x1200".</para>
+        /// </summary>
         [EnumString("1920x1200")]
-        Sz1920x1200,
+        Sz1920x1200
     }
 }

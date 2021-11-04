@@ -342,11 +342,11 @@ aBuilder.AddValidator(new StringValidator() { Pattern = ("[0-9a-fA-F]{8}\\-[0-9a
     /// </summary>
     public enum TrueOnlyValues
     {
-        ///<summary>
-        ///true.
-        ///<para>When the item is serialized out as xml, its value is "true".</para>
-        ///</summary>
+        /// <summary>
+        /// true.
+        /// <para>When the item is serialized out as xml, its value is "true".</para>
+        /// </summary>
         [EnumString("true")]
-        True,
+        True
     }
 }

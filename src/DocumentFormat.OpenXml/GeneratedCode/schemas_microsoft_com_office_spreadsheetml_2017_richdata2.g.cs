@@ -3444,164 +3444,160 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <summary>
     /// Defines the SupportingPropertyBagValueType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2019)]
     public enum SupportingPropertyBagValueType
     {
-        ///<summary>
-        ///d.
-        ///<para>When the item is serialized out as xml, its value is "d".</para>
-        ///</summary>
+        /// <summary>
+        /// d.
+        /// <para>When the item is serialized out as xml, its value is "d".</para>
+        /// </summary>
         [EnumString("d")]
         D,
-        ///<summary>
-        ///i.
-        ///<para>When the item is serialized out as xml, its value is "i".</para>
-        ///</summary>
+        /// <summary>
+        /// i.
+        /// <para>When the item is serialized out as xml, its value is "i".</para>
+        /// </summary>
         [EnumString("i")]
         I,
-        ///<summary>
-        ///b.
-        ///<para>When the item is serialized out as xml, its value is "b".</para>
-        ///</summary>
+        /// <summary>
+        /// b.
+        /// <para>When the item is serialized out as xml, its value is "b".</para>
+        /// </summary>
         [EnumString("b")]
         B,
-        ///<summary>
-        ///s.
-        ///<para>When the item is serialized out as xml, its value is "s".</para>
-        ///</summary>
+        /// <summary>
+        /// s.
+        /// <para>When the item is serialized out as xml, its value is "s".</para>
+        /// </summary>
         [EnumString("s")]
         S,
-        ///<summary>
-        ///spb.
-        ///<para>When the item is serialized out as xml, its value is "spb".</para>
-        ///</summary>
+        /// <summary>
+        /// spb.
+        /// <para>When the item is serialized out as xml, its value is "spb".</para>
+        /// </summary>
         [EnumString("spb")]
         Spb,
-        ///<summary>
-        ///spba.
-        ///<para>When the item is serialized out as xml, its value is "spba".</para>
-        ///</summary>
+        /// <summary>
+        /// spba.
+        /// <para>When the item is serialized out as xml, its value is "spba".</para>
+        /// </summary>
         [EnumString("spba")]
-        Spba,
+        Spba
     }
 
     /// <summary>
     /// Defines the SupportingPropertyBagArrayValueType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2019)]
     public enum SupportingPropertyBagArrayValueType
     {
-        ///<summary>
-        ///d.
-        ///<para>When the item is serialized out as xml, its value is "d".</para>
-        ///</summary>
+        /// <summary>
+        /// d.
+        /// <para>When the item is serialized out as xml, its value is "d".</para>
+        /// </summary>
         [EnumString("d")]
         D,
-        ///<summary>
-        ///i.
-        ///<para>When the item is serialized out as xml, its value is "i".</para>
-        ///</summary>
+        /// <summary>
+        /// i.
+        /// <para>When the item is serialized out as xml, its value is "i".</para>
+        /// </summary>
         [EnumString("i")]
         I,
-        ///<summary>
-        ///b.
-        ///<para>When the item is serialized out as xml, its value is "b".</para>
-        ///</summary>
+        /// <summary>
+        /// b.
+        /// <para>When the item is serialized out as xml, its value is "b".</para>
+        /// </summary>
         [EnumString("b")]
         B,
-        ///<summary>
-        ///s.
-        ///<para>When the item is serialized out as xml, its value is "s".</para>
-        ///</summary>
+        /// <summary>
+        /// s.
+        /// <para>When the item is serialized out as xml, its value is "s".</para>
+        /// </summary>
         [EnumString("s")]
         S,
-        ///<summary>
-        ///spb.
-        ///<para>When the item is serialized out as xml, its value is "spb".</para>
-        ///</summary>
+        /// <summary>
+        /// spb.
+        /// <para>When the item is serialized out as xml, its value is "spb".</para>
+        /// </summary>
         [EnumString("spb")]
-        Spb,
+        Spb
     }
 
     /// <summary>
     /// Defines the ArrayValueType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2019)]
     public enum ArrayValueType
     {
-        ///<summary>
-        ///d.
-        ///<para>When the item is serialized out as xml, its value is "d".</para>
-        ///</summary>
+        /// <summary>
+        /// d.
+        /// <para>When the item is serialized out as xml, its value is "d".</para>
+        /// </summary>
         [EnumString("d")]
         D,
-        ///<summary>
-        ///i.
-        ///<para>When the item is serialized out as xml, its value is "i".</para>
-        ///</summary>
+        /// <summary>
+        /// i.
+        /// <para>When the item is serialized out as xml, its value is "i".</para>
+        /// </summary>
         [EnumString("i")]
         I,
-        ///<summary>
-        ///b.
-        ///<para>When the item is serialized out as xml, its value is "b".</para>
-        ///</summary>
+        /// <summary>
+        /// b.
+        /// <para>When the item is serialized out as xml, its value is "b".</para>
+        /// </summary>
         [EnumString("b")]
         B,
-        ///<summary>
-        ///e.
-        ///<para>When the item is serialized out as xml, its value is "e".</para>
-        ///</summary>
+        /// <summary>
+        /// e.
+        /// <para>When the item is serialized out as xml, its value is "e".</para>
+        /// </summary>
         [EnumString("e")]
         E,
-        ///<summary>
-        ///s.
-        ///<para>When the item is serialized out as xml, its value is "s".</para>
-        ///</summary>
+        /// <summary>
+        /// s.
+        /// <para>When the item is serialized out as xml, its value is "s".</para>
+        /// </summary>
         [EnumString("s")]
         S,
-        ///<summary>
-        ///r.
-        ///<para>When the item is serialized out as xml, its value is "r".</para>
-        ///</summary>
+        /// <summary>
+        /// r.
+        /// <para>When the item is serialized out as xml, its value is "r".</para>
+        /// </summary>
         [EnumString("r")]
         R,
-        ///<summary>
-        ///a.
-        ///<para>When the item is serialized out as xml, its value is "a".</para>
-        ///</summary>
+        /// <summary>
+        /// a.
+        /// <para>When the item is serialized out as xml, its value is "a".</para>
+        /// </summary>
         [EnumString("a")]
-        A,
+        A
     }
 
     /// <summary>
     /// Defines the RichFormatPropertyType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2019)]
     public enum RichFormatPropertyType
     {
-        ///<summary>
-        ///b.
-        ///<para>When the item is serialized out as xml, its value is "b".</para>
-        ///</summary>
+        /// <summary>
+        /// b.
+        /// <para>When the item is serialized out as xml, its value is "b".</para>
+        /// </summary>
         [EnumString("b")]
         B,
-        ///<summary>
-        ///n.
-        ///<para>When the item is serialized out as xml, its value is "n".</para>
-        ///</summary>
+        /// <summary>
+        /// n.
+        /// <para>When the item is serialized out as xml, its value is "n".</para>
+        /// </summary>
         [EnumString("n")]
         N,
-        ///<summary>
-        ///i.
-        ///<para>When the item is serialized out as xml, its value is "i".</para>
-        ///</summary>
+        /// <summary>
+        /// i.
+        /// <para>When the item is serialized out as xml, its value is "i".</para>
+        /// </summary>
         [EnumString("i")]
         I,
-        ///<summary>
-        ///s.
-        ///<para>When the item is serialized out as xml, its value is "s".</para>
-        ///</summary>
+        /// <summary>
+        /// s.
+        /// <para>When the item is serialized out as xml, its value is "s".</para>
+        /// </summary>
         [EnumString("s")]
-        S,
+        S
     }
 }

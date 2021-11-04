@@ -3990,23 +3990,23 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// </summary>
     public enum EditAsValues
     {
-        ///<summary>
-        ///Move and Resize With Anchor Cells.
-        ///<para>When the item is serialized out as xml, its value is "twoCell".</para>
-        ///</summary>
+        /// <summary>
+        /// Move and Resize With Anchor Cells.
+        /// <para>When the item is serialized out as xml, its value is "twoCell".</para>
+        /// </summary>
         [EnumString("twoCell")]
         TwoCell,
-        ///<summary>
-        ///Move With Cells but Do Not Resize.
-        ///<para>When the item is serialized out as xml, its value is "oneCell".</para>
-        ///</summary>
+        /// <summary>
+        /// Move With Cells but Do Not Resize.
+        /// <para>When the item is serialized out as xml, its value is "oneCell".</para>
+        /// </summary>
         [EnumString("oneCell")]
         OneCell,
-        ///<summary>
-        ///Do Not Move or Resize With Underlying Rows/Columns.
-        ///<para>When the item is serialized out as xml, its value is "absolute".</para>
-        ///</summary>
+        /// <summary>
+        /// Do Not Move or Resize With Underlying Rows/Columns.
+        /// <para>When the item is serialized out as xml, its value is "absolute".</para>
+        /// </summary>
         [EnumString("absolute")]
-        Absolute,
+        Absolute
     }
 }

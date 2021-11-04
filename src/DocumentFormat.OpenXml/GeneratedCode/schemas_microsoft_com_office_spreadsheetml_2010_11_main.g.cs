@@ -6941,314 +6941,307 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <summary>
     /// Defines the TimelineStyleType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum TimelineStyleType
     {
-        ///<summary>
-        ///selectionLabel.
-        ///<para>When the item is serialized out as xml, its value is "selectionLabel".</para>
-        ///</summary>
+        /// <summary>
+        /// selectionLabel.
+        /// <para>When the item is serialized out as xml, its value is "selectionLabel".</para>
+        /// </summary>
         [EnumString("selectionLabel")]
         SelectionLabel,
-        ///<summary>
-        ///timeLevel.
-        ///<para>When the item is serialized out as xml, its value is "timeLevel".</para>
-        ///</summary>
+        /// <summary>
+        /// timeLevel.
+        /// <para>When the item is serialized out as xml, its value is "timeLevel".</para>
+        /// </summary>
         [EnumString("timeLevel")]
         TimeLevel,
-        ///<summary>
-        ///periodLabel1.
-        ///<para>When the item is serialized out as xml, its value is "periodLabel1".</para>
-        ///</summary>
+        /// <summary>
+        /// periodLabel1.
+        /// <para>When the item is serialized out as xml, its value is "periodLabel1".</para>
+        /// </summary>
         [EnumString("periodLabel1")]
         PeriodLabel1,
-        ///<summary>
-        ///periodLabel2.
-        ///<para>When the item is serialized out as xml, its value is "periodLabel2".</para>
-        ///</summary>
+        /// <summary>
+        /// periodLabel2.
+        /// <para>When the item is serialized out as xml, its value is "periodLabel2".</para>
+        /// </summary>
         [EnumString("periodLabel2")]
         PeriodLabel2,
-        ///<summary>
-        ///selectedTimeBlock.
-        ///<para>When the item is serialized out as xml, its value is "selectedTimeBlock".</para>
-        ///</summary>
+        /// <summary>
+        /// selectedTimeBlock.
+        /// <para>When the item is serialized out as xml, its value is "selectedTimeBlock".</para>
+        /// </summary>
         [EnumString("selectedTimeBlock")]
         SelectedTimeBlock,
-        ///<summary>
-        ///unselectedTimeBlock.
-        ///<para>When the item is serialized out as xml, its value is "unselectedTimeBlock".</para>
-        ///</summary>
+        /// <summary>
+        /// unselectedTimeBlock.
+        /// <para>When the item is serialized out as xml, its value is "unselectedTimeBlock".</para>
+        /// </summary>
         [EnumString("unselectedTimeBlock")]
         UnselectedTimeBlock,
-        ///<summary>
-        ///selectedTimeBlockSpace.
-        ///<para>When the item is serialized out as xml, its value is "selectedTimeBlockSpace".</para>
-        ///</summary>
+        /// <summary>
+        /// selectedTimeBlockSpace.
+        /// <para>When the item is serialized out as xml, its value is "selectedTimeBlockSpace".</para>
+        /// </summary>
         [EnumString("selectedTimeBlockSpace")]
-        SelectedTimeBlockSpace,
+        SelectedTimeBlockSpace
     }
 
     /// <summary>
     /// Defines the CalculatedMemberNumberFormat enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum CalculatedMemberNumberFormat
     {
-        ///<summary>
-        ///default.
-        ///<para>When the item is serialized out as xml, its value is "default".</para>
-        ///</summary>
+        /// <summary>
+        /// default.
+        /// <para>When the item is serialized out as xml, its value is "default".</para>
+        /// </summary>
         [EnumString("default")]
         Default,
-        ///<summary>
-        ///number.
-        ///<para>When the item is serialized out as xml, its value is "number".</para>
-        ///</summary>
+        /// <summary>
+        /// number.
+        /// <para>When the item is serialized out as xml, its value is "number".</para>
+        /// </summary>
         [EnumString("number")]
         Number,
-        ///<summary>
-        ///percent.
-        ///<para>When the item is serialized out as xml, its value is "percent".</para>
-        ///</summary>
+        /// <summary>
+        /// percent.
+        /// <para>When the item is serialized out as xml, its value is "percent".</para>
+        /// </summary>
         [EnumString("percent")]
-        Percent,
+        Percent
     }
 
     /// <summary>
     /// Defines the SXVCellType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum SXVCellType
     {
-        ///<summary>
-        ///b.
-        ///<para>When the item is serialized out as xml, its value is "b".</para>
-        ///</summary>
+        /// <summary>
+        /// b.
+        /// <para>When the item is serialized out as xml, its value is "b".</para>
+        /// </summary>
         [EnumString("b")]
         Boolean,
-        ///<summary>
-        ///n.
-        ///<para>When the item is serialized out as xml, its value is "n".</para>
-        ///</summary>
+        /// <summary>
+        /// n.
+        /// <para>When the item is serialized out as xml, its value is "n".</para>
+        /// </summary>
         [EnumString("n")]
         Number,
-        ///<summary>
-        ///e.
-        ///<para>When the item is serialized out as xml, its value is "e".</para>
-        ///</summary>
+        /// <summary>
+        /// e.
+        /// <para>When the item is serialized out as xml, its value is "e".</para>
+        /// </summary>
         [EnumString("e")]
         Error,
-        ///<summary>
-        ///str.
-        ///<para>When the item is serialized out as xml, its value is "str".</para>
-        ///</summary>
+        /// <summary>
+        /// str.
+        /// <para>When the item is serialized out as xml, its value is "str".</para>
+        /// </summary>
         [EnumString("str")]
         String,
-        ///<summary>
-        ///d.
-        ///<para>When the item is serialized out as xml, its value is "d".</para>
-        ///</summary>
+        /// <summary>
+        /// d.
+        /// <para>When the item is serialized out as xml, its value is "d".</para>
+        /// </summary>
         [EnumString("d")]
         Date,
-        ///<summary>
-        ///bl.
-        ///<para>When the item is serialized out as xml, its value is "bl".</para>
-        ///</summary>
+        /// <summary>
+        /// bl.
+        /// <para>When the item is serialized out as xml, its value is "bl".</para>
+        /// </summary>
         [EnumString("bl")]
-        Blank,
+        Blank
     }
 
     /// <summary>
     /// Defines the MovingPeriodStep enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum MovingPeriodStep
     {
-        ///<summary>
-        ///year.
-        ///<para>When the item is serialized out as xml, its value is "year".</para>
-        ///</summary>
+        /// <summary>
+        /// year.
+        /// <para>When the item is serialized out as xml, its value is "year".</para>
+        /// </summary>
         [EnumString("year")]
         Year,
-        ///<summary>
-        ///quarter.
-        ///<para>When the item is serialized out as xml, its value is "quarter".</para>
-        ///</summary>
+        /// <summary>
+        /// quarter.
+        /// <para>When the item is serialized out as xml, its value is "quarter".</para>
+        /// </summary>
         [EnumString("quarter")]
         Quarter,
-        ///<summary>
-        ///month.
-        ///<para>When the item is serialized out as xml, its value is "month".</para>
-        ///</summary>
+        /// <summary>
+        /// month.
+        /// <para>When the item is serialized out as xml, its value is "month".</para>
+        /// </summary>
         [EnumString("month")]
         Month,
-        ///<summary>
-        ///week.
-        ///<para>When the item is serialized out as xml, its value is "week".</para>
-        ///</summary>
+        /// <summary>
+        /// week.
+        /// <para>When the item is serialized out as xml, its value is "week".</para>
+        /// </summary>
         [EnumString("week")]
         Week,
-        ///<summary>
-        ///day.
-        ///<para>When the item is serialized out as xml, its value is "day".</para>
-        ///</summary>
+        /// <summary>
+        /// day.
+        /// <para>When the item is serialized out as xml, its value is "day".</para>
+        /// </summary>
         [EnumString("day")]
-        Day,
+        Day
     }
 
     /// <summary>
     /// Defines the QuestionType enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum QuestionType
     {
-        ///<summary>
-        ///checkBox.
-        ///<para>When the item is serialized out as xml, its value is "checkBox".</para>
-        ///</summary>
+        /// <summary>
+        /// checkBox.
+        /// <para>When the item is serialized out as xml, its value is "checkBox".</para>
+        /// </summary>
         [EnumString("checkBox")]
         CheckBox,
-        ///<summary>
-        ///choice.
-        ///<para>When the item is serialized out as xml, its value is "choice".</para>
-        ///</summary>
+        /// <summary>
+        /// choice.
+        /// <para>When the item is serialized out as xml, its value is "choice".</para>
+        /// </summary>
         [EnumString("choice")]
         Choice,
-        ///<summary>
-        ///date.
-        ///<para>When the item is serialized out as xml, its value is "date".</para>
-        ///</summary>
+        /// <summary>
+        /// date.
+        /// <para>When the item is serialized out as xml, its value is "date".</para>
+        /// </summary>
         [EnumString("date")]
         Date,
-        ///<summary>
-        ///time.
-        ///<para>When the item is serialized out as xml, its value is "time".</para>
-        ///</summary>
+        /// <summary>
+        /// time.
+        /// <para>When the item is serialized out as xml, its value is "time".</para>
+        /// </summary>
         [EnumString("time")]
         Time,
-        ///<summary>
-        ///multipleLinesOfText.
-        ///<para>When the item is serialized out as xml, its value is "multipleLinesOfText".</para>
-        ///</summary>
+        /// <summary>
+        /// multipleLinesOfText.
+        /// <para>When the item is serialized out as xml, its value is "multipleLinesOfText".</para>
+        /// </summary>
         [EnumString("multipleLinesOfText")]
         MultipleLinesOfText,
-        ///<summary>
-        ///number.
-        ///<para>When the item is serialized out as xml, its value is "number".</para>
-        ///</summary>
+        /// <summary>
+        /// number.
+        /// <para>When the item is serialized out as xml, its value is "number".</para>
+        /// </summary>
         [EnumString("number")]
         Number,
-        ///<summary>
-        ///singleLineOfText.
-        ///<para>When the item is serialized out as xml, its value is "singleLineOfText".</para>
-        ///</summary>
+        /// <summary>
+        /// singleLineOfText.
+        /// <para>When the item is serialized out as xml, its value is "singleLineOfText".</para>
+        /// </summary>
         [EnumString("singleLineOfText")]
-        SingleLineOfText,
+        SingleLineOfText
     }
 
     /// <summary>
     /// Defines the QuestionFormat enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum QuestionFormat
     {
-        ///<summary>
-        ///generalDate.
-        ///<para>When the item is serialized out as xml, its value is "generalDate".</para>
-        ///</summary>
+        /// <summary>
+        /// generalDate.
+        /// <para>When the item is serialized out as xml, its value is "generalDate".</para>
+        /// </summary>
         [EnumString("generalDate")]
         GeneralDate,
-        ///<summary>
-        ///longDate.
-        ///<para>When the item is serialized out as xml, its value is "longDate".</para>
-        ///</summary>
+        /// <summary>
+        /// longDate.
+        /// <para>When the item is serialized out as xml, its value is "longDate".</para>
+        /// </summary>
         [EnumString("longDate")]
         LongDate,
-        ///<summary>
-        ///shortDate.
-        ///<para>When the item is serialized out as xml, its value is "shortDate".</para>
-        ///</summary>
+        /// <summary>
+        /// shortDate.
+        /// <para>When the item is serialized out as xml, its value is "shortDate".</para>
+        /// </summary>
         [EnumString("shortDate")]
         ShortDate,
-        ///<summary>
-        ///longTime.
-        ///<para>When the item is serialized out as xml, its value is "longTime".</para>
-        ///</summary>
+        /// <summary>
+        /// longTime.
+        /// <para>When the item is serialized out as xml, its value is "longTime".</para>
+        /// </summary>
         [EnumString("longTime")]
         LongTime,
-        ///<summary>
-        ///shortTime.
-        ///<para>When the item is serialized out as xml, its value is "shortTime".</para>
-        ///</summary>
+        /// <summary>
+        /// shortTime.
+        /// <para>When the item is serialized out as xml, its value is "shortTime".</para>
+        /// </summary>
         [EnumString("shortTime")]
         ShortTime,
-        ///<summary>
-        ///generalNumber.
-        ///<para>When the item is serialized out as xml, its value is "generalNumber".</para>
-        ///</summary>
+        /// <summary>
+        /// generalNumber.
+        /// <para>When the item is serialized out as xml, its value is "generalNumber".</para>
+        /// </summary>
         [EnumString("generalNumber")]
         GeneralNumber,
-        ///<summary>
-        ///standard.
-        ///<para>When the item is serialized out as xml, its value is "standard".</para>
-        ///</summary>
+        /// <summary>
+        /// standard.
+        /// <para>When the item is serialized out as xml, its value is "standard".</para>
+        /// </summary>
         [EnumString("standard")]
         Standard,
-        ///<summary>
-        ///fixed.
-        ///<para>When the item is serialized out as xml, its value is "fixed".</para>
-        ///</summary>
+        /// <summary>
+        /// fixed.
+        /// <para>When the item is serialized out as xml, its value is "fixed".</para>
+        /// </summary>
         [EnumString("fixed")]
         Fixed,
-        ///<summary>
-        ///percent.
-        ///<para>When the item is serialized out as xml, its value is "percent".</para>
-        ///</summary>
+        /// <summary>
+        /// percent.
+        /// <para>When the item is serialized out as xml, its value is "percent".</para>
+        /// </summary>
         [EnumString("percent")]
         Percent,
-        ///<summary>
-        ///currency.
-        ///<para>When the item is serialized out as xml, its value is "currency".</para>
-        ///</summary>
+        /// <summary>
+        /// currency.
+        /// <para>When the item is serialized out as xml, its value is "currency".</para>
+        /// </summary>
         [EnumString("currency")]
-        Currency,
+        Currency
     }
 
     /// <summary>
     /// Defines the SurveyPosition enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2013)]
     public enum SurveyPosition
     {
-        ///<summary>
-        ///absolute.
-        ///<para>When the item is serialized out as xml, its value is "absolute".</para>
-        ///</summary>
+        /// <summary>
+        /// absolute.
+        /// <para>When the item is serialized out as xml, its value is "absolute".</para>
+        /// </summary>
         [EnumString("absolute")]
         Absolute,
-        ///<summary>
-        ///fixed.
-        ///<para>When the item is serialized out as xml, its value is "fixed".</para>
-        ///</summary>
+        /// <summary>
+        /// fixed.
+        /// <para>When the item is serialized out as xml, its value is "fixed".</para>
+        /// </summary>
         [EnumString("fixed")]
         Fixed,
-        ///<summary>
-        ///relative.
-        ///<para>When the item is serialized out as xml, its value is "relative".</para>
-        ///</summary>
+        /// <summary>
+        /// relative.
+        /// <para>When the item is serialized out as xml, its value is "relative".</para>
+        /// </summary>
         [EnumString("relative")]
         Relative,
-        ///<summary>
-        ///static.
-        ///<para>When the item is serialized out as xml, its value is "static".</para>
-        ///</summary>
+        /// <summary>
+        /// static.
+        /// <para>When the item is serialized out as xml, its value is "static".</para>
+        /// </summary>
         [EnumString("static")]
         Static,
-        ///<summary>
-        ///inherit.
-        ///<para>When the item is serialized out as xml, its value is "inherit".</para>
-        ///</summary>
+        /// <summary>
+        /// inherit.
+        /// <para>When the item is serialized out as xml, its value is "inherit".</para>
+        /// </summary>
         [EnumString("inherit")]
-        Inherit,
+        Inherit
     }
 }

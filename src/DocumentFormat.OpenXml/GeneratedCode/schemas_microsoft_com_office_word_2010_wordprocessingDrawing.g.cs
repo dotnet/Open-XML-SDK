@@ -382,88 +382,86 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <summary>
     /// Defines the SizeRelativeHorizontallyValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum SizeRelativeHorizontallyValues
     {
-        ///<summary>
-        ///margin.
-        ///<para>When the item is serialized out as xml, its value is "margin".</para>
-        ///</summary>
+        /// <summary>
+        /// margin.
+        /// <para>When the item is serialized out as xml, its value is "margin".</para>
+        /// </summary>
         [EnumString("margin")]
         Margin,
-        ///<summary>
-        ///page.
-        ///<para>When the item is serialized out as xml, its value is "page".</para>
-        ///</summary>
+        /// <summary>
+        /// page.
+        /// <para>When the item is serialized out as xml, its value is "page".</para>
+        /// </summary>
         [EnumString("page")]
         Page,
-        ///<summary>
-        ///leftMargin.
-        ///<para>When the item is serialized out as xml, its value is "leftMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// leftMargin.
+        /// <para>When the item is serialized out as xml, its value is "leftMargin".</para>
+        /// </summary>
         [EnumString("leftMargin")]
         LeftMargin,
-        ///<summary>
-        ///rightMargin.
-        ///<para>When the item is serialized out as xml, its value is "rightMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// rightMargin.
+        /// <para>When the item is serialized out as xml, its value is "rightMargin".</para>
+        /// </summary>
         [EnumString("rightMargin")]
         RightMargin,
-        ///<summary>
-        ///insideMargin.
-        ///<para>When the item is serialized out as xml, its value is "insideMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// insideMargin.
+        /// <para>When the item is serialized out as xml, its value is "insideMargin".</para>
+        /// </summary>
         [EnumString("insideMargin")]
         InsideMargin,
-        ///<summary>
-        ///outsideMargin.
-        ///<para>When the item is serialized out as xml, its value is "outsideMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// outsideMargin.
+        /// <para>When the item is serialized out as xml, its value is "outsideMargin".</para>
+        /// </summary>
         [EnumString("outsideMargin")]
-        OutsideMargin,
+        OutsideMargin
     }
 
     /// <summary>
     /// Defines the SizeRelativeVerticallyValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum SizeRelativeVerticallyValues
     {
-        ///<summary>
-        ///margin.
-        ///<para>When the item is serialized out as xml, its value is "margin".</para>
-        ///</summary>
+        /// <summary>
+        /// margin.
+        /// <para>When the item is serialized out as xml, its value is "margin".</para>
+        /// </summary>
         [EnumString("margin")]
         Margin,
-        ///<summary>
-        ///page.
-        ///<para>When the item is serialized out as xml, its value is "page".</para>
-        ///</summary>
+        /// <summary>
+        /// page.
+        /// <para>When the item is serialized out as xml, its value is "page".</para>
+        /// </summary>
         [EnumString("page")]
         Page,
-        ///<summary>
-        ///topMargin.
-        ///<para>When the item is serialized out as xml, its value is "topMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// topMargin.
+        /// <para>When the item is serialized out as xml, its value is "topMargin".</para>
+        /// </summary>
         [EnumString("topMargin")]
         TopMargin,
-        ///<summary>
-        ///bottomMargin.
-        ///<para>When the item is serialized out as xml, its value is "bottomMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// bottomMargin.
+        /// <para>When the item is serialized out as xml, its value is "bottomMargin".</para>
+        /// </summary>
         [EnumString("bottomMargin")]
         BottomMargin,
-        ///<summary>
-        ///insideMargin.
-        ///<para>When the item is serialized out as xml, its value is "insideMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// insideMargin.
+        /// <para>When the item is serialized out as xml, its value is "insideMargin".</para>
+        /// </summary>
         [EnumString("insideMargin")]
         InsideMargin,
-        ///<summary>
-        ///outsideMargin.
-        ///<para>When the item is serialized out as xml, its value is "outsideMargin".</para>
-        ///</summary>
+        /// <summary>
+        /// outsideMargin.
+        /// <para>When the item is serialized out as xml, its value is "outsideMargin".</para>
+        /// </summary>
         [EnumString("outsideMargin")]
-        OutsideMargin,
+        OutsideMargin
     }
 }

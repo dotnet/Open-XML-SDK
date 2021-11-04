@@ -30085,258 +30085,249 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <summary>
     /// Defines the GalleryShowInRibbonValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum GalleryShowInRibbonValues
     {
-        ///<summary>
-        ///false.
-        ///<para>When the item is serialized out as xml, its value is "false".</para>
-        ///</summary>
+        /// <summary>
+        /// false.
+        /// <para>When the item is serialized out as xml, its value is "false".</para>
+        /// </summary>
         [EnumString("false")]
         False,
-        ///<summary>
-        ///0.
-        ///<para>When the item is serialized out as xml, its value is "0".</para>
-        ///</summary>
+        /// <summary>
+        /// 0.
+        /// <para>When the item is serialized out as xml, its value is "0".</para>
+        /// </summary>
         [EnumString("0")]
-        Zero,
+        Zero
     }
 
     /// <summary>
     /// Defines the SizeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum SizeValues
     {
-        ///<summary>
-        ///normal.
-        ///<para>When the item is serialized out as xml, its value is "normal".</para>
-        ///</summary>
+        /// <summary>
+        /// normal.
+        /// <para>When the item is serialized out as xml, its value is "normal".</para>
+        /// </summary>
         [EnumString("normal")]
         Normal,
-        ///<summary>
-        ///large.
-        ///<para>When the item is serialized out as xml, its value is "large".</para>
-        ///</summary>
+        /// <summary>
+        /// large.
+        /// <para>When the item is serialized out as xml, its value is "large".</para>
+        /// </summary>
         [EnumString("large")]
-        Large,
+        Large
     }
 
     /// <summary>
     /// Defines the ItemSizeValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum ItemSizeValues
     {
-        ///<summary>
-        ///normal.
-        ///<para>When the item is serialized out as xml, its value is "normal".</para>
-        ///</summary>
+        /// <summary>
+        /// normal.
+        /// <para>When the item is serialized out as xml, its value is "normal".</para>
+        /// </summary>
         [EnumString("normal")]
         Normal,
-        ///<summary>
-        ///large.
-        ///<para>When the item is serialized out as xml, its value is "large".</para>
-        ///</summary>
+        /// <summary>
+        /// large.
+        /// <para>When the item is serialized out as xml, its value is "large".</para>
+        /// </summary>
         [EnumString("large")]
-        Large,
+        Large
     }
 
     /// <summary>
     /// Defines the BoxStyleValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum BoxStyleValues
     {
-        ///<summary>
-        ///horizontal.
-        ///<para>When the item is serialized out as xml, its value is "horizontal".</para>
-        ///</summary>
+        /// <summary>
+        /// horizontal.
+        /// <para>When the item is serialized out as xml, its value is "horizontal".</para>
+        /// </summary>
         [EnumString("horizontal")]
         Horizontal,
-        ///<summary>
-        ///vertical.
-        ///<para>When the item is serialized out as xml, its value is "vertical".</para>
-        ///</summary>
+        /// <summary>
+        /// vertical.
+        /// <para>When the item is serialized out as xml, its value is "vertical".</para>
+        /// </summary>
         [EnumString("vertical")]
-        Vertical,
+        Vertical
     }
 
     /// <summary>
     /// Defines the TaskSizesValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum TaskSizesValues
     {
-        ///<summary>
-        ///largeMediumSmall.
-        ///<para>When the item is serialized out as xml, its value is "largeMediumSmall".</para>
-        ///</summary>
+        /// <summary>
+        /// largeMediumSmall.
+        /// <para>When the item is serialized out as xml, its value is "largeMediumSmall".</para>
+        /// </summary>
         [EnumString("largeMediumSmall")]
         LargeMediumSmall,
-        ///<summary>
-        ///largeMedium.
-        ///<para>When the item is serialized out as xml, its value is "largeMedium".</para>
-        ///</summary>
+        /// <summary>
+        /// largeMedium.
+        /// <para>When the item is serialized out as xml, its value is "largeMedium".</para>
+        /// </summary>
         [EnumString("largeMedium")]
         LargeMedium,
-        ///<summary>
-        ///large.
-        ///<para>When the item is serialized out as xml, its value is "large".</para>
-        ///</summary>
+        /// <summary>
+        /// large.
+        /// <para>When the item is serialized out as xml, its value is "large".</para>
+        /// </summary>
         [EnumString("large")]
         Large,
-        ///<summary>
-        ///mediumSmall.
-        ///<para>When the item is serialized out as xml, its value is "mediumSmall".</para>
-        ///</summary>
+        /// <summary>
+        /// mediumSmall.
+        /// <para>When the item is serialized out as xml, its value is "mediumSmall".</para>
+        /// </summary>
         [EnumString("mediumSmall")]
         MediumSmall,
-        ///<summary>
-        ///medium.
-        ///<para>When the item is serialized out as xml, its value is "medium".</para>
-        ///</summary>
+        /// <summary>
+        /// medium.
+        /// <para>When the item is serialized out as xml, its value is "medium".</para>
+        /// </summary>
         [EnumString("medium")]
         Medium,
-        ///<summary>
-        ///small.
-        ///<para>When the item is serialized out as xml, its value is "small".</para>
-        ///</summary>
+        /// <summary>
+        /// small.
+        /// <para>When the item is serialized out as xml, its value is "small".</para>
+        /// </summary>
         [EnumString("small")]
-        Small,
+        Small
     }
 
     /// <summary>
     /// Defines the ExpandValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum ExpandValues
     {
-        ///<summary>
-        ///topLeft.
-        ///<para>When the item is serialized out as xml, its value is "topLeft".</para>
-        ///</summary>
+        /// <summary>
+        /// topLeft.
+        /// <para>When the item is serialized out as xml, its value is "topLeft".</para>
+        /// </summary>
         [EnumString("topLeft")]
         TopLeft,
-        ///<summary>
-        ///top.
-        ///<para>When the item is serialized out as xml, its value is "top".</para>
-        ///</summary>
+        /// <summary>
+        /// top.
+        /// <para>When the item is serialized out as xml, its value is "top".</para>
+        /// </summary>
         [EnumString("top")]
         Top,
-        ///<summary>
-        ///topRight.
-        ///<para>When the item is serialized out as xml, its value is "topRight".</para>
-        ///</summary>
+        /// <summary>
+        /// topRight.
+        /// <para>When the item is serialized out as xml, its value is "topRight".</para>
+        /// </summary>
         [EnumString("topRight")]
         TopRight,
-        ///<summary>
-        ///left.
-        ///<para>When the item is serialized out as xml, its value is "left".</para>
-        ///</summary>
+        /// <summary>
+        /// left.
+        /// <para>When the item is serialized out as xml, its value is "left".</para>
+        /// </summary>
         [EnumString("left")]
         Left,
-        ///<summary>
-        ///center.
-        ///<para>When the item is serialized out as xml, its value is "center".</para>
-        ///</summary>
+        /// <summary>
+        /// center.
+        /// <para>When the item is serialized out as xml, its value is "center".</para>
+        /// </summary>
         [EnumString("center")]
         Center,
-        ///<summary>
-        ///right.
-        ///<para>When the item is serialized out as xml, its value is "right".</para>
-        ///</summary>
+        /// <summary>
+        /// right.
+        /// <para>When the item is serialized out as xml, its value is "right".</para>
+        /// </summary>
         [EnumString("right")]
         Right,
-        ///<summary>
-        ///bottomLeft.
-        ///<para>When the item is serialized out as xml, its value is "bottomLeft".</para>
-        ///</summary>
+        /// <summary>
+        /// bottomLeft.
+        /// <para>When the item is serialized out as xml, its value is "bottomLeft".</para>
+        /// </summary>
         [EnumString("bottomLeft")]
         BottomLeft,
-        ///<summary>
-        ///bottom.
-        ///<para>When the item is serialized out as xml, its value is "bottom".</para>
-        ///</summary>
+        /// <summary>
+        /// bottom.
+        /// <para>When the item is serialized out as xml, its value is "bottom".</para>
+        /// </summary>
         [EnumString("bottom")]
         Bottom,
-        ///<summary>
-        ///bottomRight.
-        ///<para>When the item is serialized out as xml, its value is "bottomRight".</para>
-        ///</summary>
+        /// <summary>
+        /// bottomRight.
+        /// <para>When the item is serialized out as xml, its value is "bottomRight".</para>
+        /// </summary>
         [EnumString("bottomRight")]
-        BottomRight,
+        BottomRight
     }
 
     /// <summary>
     /// Defines the StyleValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum StyleValues
     {
-        ///<summary>
-        ///normal.
-        ///<para>When the item is serialized out as xml, its value is "normal".</para>
-        ///</summary>
+        /// <summary>
+        /// normal.
+        /// <para>When the item is serialized out as xml, its value is "normal".</para>
+        /// </summary>
         [EnumString("normal")]
         Normal,
-        ///<summary>
-        ///warning.
-        ///<para>When the item is serialized out as xml, its value is "warning".</para>
-        ///</summary>
+        /// <summary>
+        /// warning.
+        /// <para>When the item is serialized out as xml, its value is "warning".</para>
+        /// </summary>
         [EnumString("warning")]
         Warning,
-        ///<summary>
-        ///error.
-        ///<para>When the item is serialized out as xml, its value is "error".</para>
-        ///</summary>
+        /// <summary>
+        /// error.
+        /// <para>When the item is serialized out as xml, its value is "error".</para>
+        /// </summary>
         [EnumString("error")]
-        Error,
+        Error
     }
 
     /// <summary>
     /// Defines the Style2Values enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum Style2Values
     {
-        ///<summary>
-        ///normal.
-        ///<para>When the item is serialized out as xml, its value is "normal".</para>
-        ///</summary>
+        /// <summary>
+        /// normal.
+        /// <para>When the item is serialized out as xml, its value is "normal".</para>
+        /// </summary>
         [EnumString("normal")]
         Normal,
-        ///<summary>
-        ///borderless.
-        ///<para>When the item is serialized out as xml, its value is "borderless".</para>
-        ///</summary>
+        /// <summary>
+        /// borderless.
+        /// <para>When the item is serialized out as xml, its value is "borderless".</para>
+        /// </summary>
         [EnumString("borderless")]
         Borderless,
-        ///<summary>
-        ///large.
-        ///<para>When the item is serialized out as xml, its value is "large".</para>
-        ///</summary>
+        /// <summary>
+        /// large.
+        /// <para>When the item is serialized out as xml, its value is "large".</para>
+        /// </summary>
         [EnumString("large")]
-        Large,
+        Large
     }
 
     /// <summary>
     /// Defines the LayoutChildrenValues enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2010)]
     public enum LayoutChildrenValues
     {
-        ///<summary>
-        ///horizontal.
-        ///<para>When the item is serialized out as xml, its value is "horizontal".</para>
-        ///</summary>
+        /// <summary>
+        /// horizontal.
+        /// <para>When the item is serialized out as xml, its value is "horizontal".</para>
+        /// </summary>
         [EnumString("horizontal")]
         Horizontal,
-        ///<summary>
-        ///vertical.
-        ///<para>When the item is serialized out as xml, its value is "vertical".</para>
-        ///</summary>
+        /// <summary>
+        /// vertical.
+        /// <para>When the item is serialized out as xml, its value is "vertical".</para>
+        /// </summary>
         [EnumString("vertical")]
-        Vertical,
+        Vertical
     }
 }

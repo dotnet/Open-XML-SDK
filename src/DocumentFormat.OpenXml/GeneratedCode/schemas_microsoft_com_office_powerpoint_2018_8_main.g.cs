@@ -1317,26 +1317,25 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <summary>
     /// Defines the CommentStatus enumeration.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2021)]
     public enum CommentStatus
     {
-        ///<summary>
-        ///active.
-        ///<para>When the item is serialized out as xml, its value is "active".</para>
-        ///</summary>
+        /// <summary>
+        /// active.
+        /// <para>When the item is serialized out as xml, its value is "active".</para>
+        /// </summary>
         [EnumString("active")]
         Active,
-        ///<summary>
-        ///resolved.
-        ///<para>When the item is serialized out as xml, its value is "resolved".</para>
-        ///</summary>
+        /// <summary>
+        /// resolved.
+        /// <para>When the item is serialized out as xml, its value is "resolved".</para>
+        /// </summary>
         [EnumString("resolved")]
         Resolved,
-        ///<summary>
-        ///closed.
-        ///<para>When the item is serialized out as xml, its value is "closed".</para>
-        ///</summary>
+        /// <summary>
+        /// closed.
+        /// <para>When the item is serialized out as xml, its value is "closed".</para>
+        /// </summary>
         [EnumString("closed")]
-        Closed,
+        Closed
     }
 }
