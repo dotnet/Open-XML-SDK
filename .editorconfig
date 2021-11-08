@@ -2,29 +2,6 @@
 
 # SA1101: Prefix local calls with this
 dotnet_diagnostic.SA1101.severity = none
-dotnet_diagnostic.SA1600.severity=silent
-dotnet_diagnostic.SA1601.severity=silent
-dotnet_diagnostic.SA1602.severity=silent
-dotnet_diagnostic.SA1604.severity=silent
-dotnet_diagnostic.SA1605.severity=silent
-dotnet_diagnostic.SA1607.severity=silent
-dotnet_diagnostic.SA1608.severity=silent
-dotnet_diagnostic.SA1609.severity=silent
-dotnet_diagnostic.SA1610.severity=silent
-dotnet_diagnostic.SA1611.severity=silent
-dotnet_diagnostic.SA1612.severity=silent
-dotnet_diagnostic.SA1613.severity=silent
-dotnet_diagnostic.SA1614.severity=silent
-dotnet_diagnostic.SA1615.severity=silent
-dotnet_diagnostic.SA1616.severity=silent
-dotnet_diagnostic.SA1617.severity=silent
-dotnet_diagnostic.SA1618.severity=silent
-dotnet_diagnostic.SA1619.severity=silent
-dotnet_diagnostic.SA1620.severity=silent
-dotnet_diagnostic.SA1621.severity=silent
-dotnet_diagnostic.SA1622.severity=silent
-dotnet_diagnostic.SA1642.severity=silent
-dotnet_diagnostic.SA1643.severity=silent
 
 # SA1629: Documentation text should end with a period
 dotnet_diagnostic.SA1629.severity = none
@@ -56,3 +33,18 @@ dotnet_diagnostic.SA1204.severity = none
 # SA1308: Variable names should not be prefixed
 dotnet_diagnostic.SA1308.severity = none
 dotnet_diagnostic.SA0001.severity=silent
+
+# SA1614: Element parameter documentation should have text
+dotnet_diagnostic.SA1614.severity = none
+
+# SA1616: Element return value documentation should have text
+dotnet_diagnostic.SA1616.severity = none
+
+# SA1642: Constructor summary documentation should begin with standard text
+dotnet_diagnostic.SA1642.severity = none
+
+# SA1600: Elements should be documented
+dotnet_diagnostic.SA1600.severity = none
+
+# SA1622: Generic type parameter documentation should have text
+dotnet_diagnostic.SA1622.severity = none

@@ -33,7 +33,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         /// Semantic validation logic
         /// </summary>
         /// <param name="context">return null if validation succeed</param>
-        /// <returns></returns>
         public void Validate(ValidationContext context)
         {
             Get(context, out var level, out var type);
