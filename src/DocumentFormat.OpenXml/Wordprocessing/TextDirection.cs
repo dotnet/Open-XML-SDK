@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     {
         private const string StrictTranslationLocalName = "val";
 
-        private static readonly Dictionary<string, string> s_attributeMap = new Dictionary<string, string>(StringComparer.Ordinal)
+        private static readonly Dictionary<string, string> AttributeMap = new Dictionary<string, string>(StringComparer.Ordinal)
         {
             { "lr", "btLr" },
             { "tb", "lrTb" },
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </remarks>
         private protected override bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string? value)
         {
-            if (string.Equals(StrictTranslationLocalName, qname.Name, StringComparison.Ordinal) && value is not null && s_attributeMap.TryGetValue(value, out var result))
+            if (string.Equals(StrictTranslationLocalName, qname.Name, StringComparison.Ordinal) && value is not null && AttributeMap.TryGetValue(value, out var result))
             {
                 value = result;
             }

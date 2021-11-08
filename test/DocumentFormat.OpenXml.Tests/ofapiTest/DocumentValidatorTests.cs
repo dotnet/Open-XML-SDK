@@ -8,14 +8,14 @@ using Xunit;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for SchemaValidatorTest and is intended
-    ///to contain all SchemaValidatorTest Unit Tests
-    ///</summary>
+    /// This is a test class for SchemaValidatorTest and is intended
+    /// to contain all SchemaValidatorTest Unit Tests
+    /// </summary>
     public class DocumentValidatorTests
     {
         /// <summary>
-        ///A test for Validating LeafElement.
-        ///</summary>
+        /// A test for Validating LeafElement.
+        /// </summary>
         [Fact]
         public void LeafElementValidateTest()
         {

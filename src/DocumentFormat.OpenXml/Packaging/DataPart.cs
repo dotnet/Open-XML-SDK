@@ -22,13 +22,13 @@ namespace DocumentFormat.OpenXml.Packaging
         private const string DefaultTargetExt = ".bin";
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private OpenXmlPackage? _openXmlPackage;
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private readonly PackagePart _metroPart;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private readonly Uri _uri;
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        private OpenXmlPackage? _openXmlPackage;
 
         #endregion
 

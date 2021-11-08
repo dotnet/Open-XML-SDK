@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                //Get Extension Uri value
+                // Get Extension Uri value
                 P15.ChartTrackingReferenceBased chartTrackingReferenceBased = package.PresentationPart.PresentationPropertiesPart.PresentationProperties.PresentationPropertiesExtensionList.Descendants<P15.ChartTrackingReferenceBased>().Single();
                 PresentationPropertiesExtension presentationPropertiesExtension = (PresentationPropertiesExtension)chartTrackingReferenceBased.Parent;
                 ChartTrackingReferenceBasedExtUri = presentationPropertiesExtension.Uri;

@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class WordprocessingDocumentTests : DocumentTests<WordprocessingDocument>
     {
-        protected override string Path => TestAssets.TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm;
+        protected override string Path => TestAssets.TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm;
 
         protected override void AddMainPart(WordprocessingDocument source)
         {

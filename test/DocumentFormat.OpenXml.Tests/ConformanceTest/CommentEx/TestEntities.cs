@@ -28,46 +28,46 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 Comment comment = null;
                 W15.CommentEx commentEx = null;
 
-                //2.1 Change comment text
+                // 2.1 Change comment text
                 comment = GetComment(commentPart, CommentIDs.CommentID1);
                 Text text = comment.Descendants<Text>().First();
                 text.Text = CommentStrings.CommentChangeString1;
 
-                //2.2 Change comment initials attribute
+                // 2.2 Change comment initials attribute
                 comment = GetComment(commentPart, CommentIDs.CommentID1);
 
                 comment.Initials = CommentInitials.Initial2;
 
-                //2.2 Change comment date attribute
+                // 2.2 Change comment date attribute
                 comment.Date = new DateTimeValue(new DateTime(2015, 12, 24, 12, 34, 56, 77));
 
-                //2.2 Change comment author attribute
+                // 2.2 Change comment author attribute
                 comment.Author = CommentAuthors.Author2;
 
-                //2.3 Change comment parent-child relationship, Case of parent attribute deletion.
+                // 2.3 Change comment parent-child relationship, Case of parent attribute deletion.
                 commentEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2);
                 commentEx.ParaIdParent = null;
 
-                //2.3 Change comment parent-child relationship, Case of parent attribute appending.
+                // 2.3 Change comment parent-child relationship, Case of parent attribute appending.
                 commentEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID3);
                 W15.CommentEx comEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2);
                 commentEx.ParaIdParent = comEx.ParaId;
 
-                //2.4 Change commentEx done attribute, Case of value "1" setting.
+                // 2.4 Change commentEx done attribute, Case of value "1" setting.
                 GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID1).Done = true;
 
-                //2.4 Change commentEx done attribute, Case of value "0" setting.
+                // 2.4 Change commentEx done attribute, Case of value "0" setting.
                 GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID3).Done = false;
 
-                //2.5 Add comment and CommentEx.
+                // 2.5 Add comment and CommentEx.
                 CommentRangeStart commentRangeStart1 = new CommentRangeStart();
                 commentRangeStart1.Id = CommentIDs.CommentID4;
-                CommentRangeEnd CommentRangeEnd1 = new CommentRangeEnd();
-                CommentRangeEnd1.Id = CommentIDs.CommentID4;
+                CommentRangeEnd commentRangeEnd1 = new CommentRangeEnd();
+                commentRangeEnd1.Id = CommentIDs.CommentID4;
 
                 Paragraph paragraph1 = package.MainDocumentPart.Document.Descendants<Paragraph>().Where(e => e.InnerText == CommentBodyStrings.Comment2).First();
                 paragraph1.Descendants<Run>().Where(e => e.InnerText == CommentBodyStrings.Comment2).First().InsertBeforeSelf<CommentRangeStart>(commentRangeStart1);
-                paragraph1.Descendants<Run>().Where(e => e.InnerText == CommentBodyStrings.Comment2).First().InsertAfterSelf<CommentRangeEnd>(CommentRangeEnd1);
+                paragraph1.Descendants<Run>().Where(e => e.InnerText == CommentBodyStrings.Comment2).First().InsertAfterSelf<CommentRangeEnd>(commentRangeEnd1);
 
                 CommentReference commentReference1 = new CommentReference();
                 commentReference1.Id = CommentIDs.CommentID4;
@@ -86,15 +86,15 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 commentEx1.ParaId = AppendCommentExIDs.AppendCommentID1;
                 commentExPart.CommentsEx.AppendChild<W15.CommentEx>(commentEx1);
 
-                //2.5 Add comment and CommentEx.
+                // 2.5 Add comment and CommentEx.
                 CommentRangeStart commentRangeStart2 = new CommentRangeStart();
                 commentRangeStart2.Id = CommentIDs.CommentID5;
-                CommentRangeEnd CommentRangeEnd2 = new CommentRangeEnd();
-                CommentRangeEnd2.Id = CommentIDs.CommentID5;
+                CommentRangeEnd commentRangeEnd2 = new CommentRangeEnd();
+                commentRangeEnd2.Id = CommentIDs.CommentID5;
 
                 Paragraph paragraph2 = package.MainDocumentPart.Document.Descendants<Paragraph>().Where(e => e.InnerText == CommentBodyStrings.Comment2).First();
                 paragraph2.Descendants<Run>().Where(e => e.InnerText == CommentBodyStrings.Comment2).First().InsertBeforeSelf<CommentRangeStart>(commentRangeStart2);
-                paragraph2.Descendants<Run>().Where(e => e.InnerText == CommentBodyStrings.Comment2).First().InsertAfterSelf<CommentRangeEnd>(CommentRangeEnd2);
+                paragraph2.Descendants<Run>().Where(e => e.InnerText == CommentBodyStrings.Comment2).First().InsertAfterSelf<CommentRangeEnd>(commentRangeEnd2);
 
                 CommentReference commentReference2 = new CommentReference();
                 commentReference2.Id = CommentIDs.CommentID5;
@@ -130,16 +130,16 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 Comment comment = null;
                 W15.CommentEx commentEx = null;
 
-                //2.1 Verifying comment text
+                // 2.1 Verifying comment text
                 comment = GetComment(commentPart, CommentIDs.CommentID1);
                 Text text = comment.Descendants<Text>().First();
                 Assert.Equal(text.Text, CommentStrings.CommentChangeString1);
 
-                //2.2 Verifying comment initials attribute
+                // 2.2 Verifying comment initials attribute
                 comment = GetComment(commentPart, CommentIDs.CommentID1);
                 Assert.Equal(comment.Initials, CommentInitials.Initial2);
 
-                //2.2 Verifying comment date attribute
+                // 2.2 Verifying comment date attribute
                 Assert.Equal(2015, comment.Date.Value.Year);
                 Assert.Equal(12, comment.Date.Value.Month);
                 Assert.Equal(24, comment.Date.Value.Day);
@@ -148,29 +148,29 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 Assert.Equal(56, comment.Date.Value.Second);
                 Assert.Equal(77, comment.Date.Value.Millisecond);
 
-                //2.2 Verifying comment author attribute
+                // 2.2 Verifying comment author attribute
                 Assert.Equal(comment.Author, CommentAuthors.Author2);
 
-                //2.3 Verifying comment parent-child relationship, Case of parent attribute deletion.
+                // 2.3 Verifying comment parent-child relationship, Case of parent attribute deletion.
                 commentEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2);
                 Assert.Null(commentEx.ParaIdParent);
 
-                //2.3 Verifying comment parent-child relationship, Case of parent attribute appending.
+                // 2.3 Verifying comment parent-child relationship, Case of parent attribute appending.
                 commentEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID3);
                 W15.CommentEx comEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2);
                 Assert.Equal(commentEx.ParaIdParent.Value, GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2).ParaId.Value);
 
-                //2.4 Verifying commentEx done attribute, Case of value "1" setting.
+                // 2.4 Verifying commentEx done attribute, Case of value "1" setting.
                 Assert.True(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID1).Done);
 
-                //2.4 Verifying commentEx done attribute, Case of value "0" setting.
+                // 2.4 Verifying commentEx done attribute, Case of value "0" setting.
                 Assert.False(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID3).Done);
 
-                //2.5 Verifying comment and CommentEx append.
+                // 2.5 Verifying comment and CommentEx append.
                 Assert.NotNull(GetComment(commentPart, CommentIDs.CommentID4));
                 Assert.NotNull(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID4));
 
-                //2.5 Verifying comment and CommentEx append.
+                // 2.5 Verifying comment and CommentEx append.
                 Assert.NotNull(GetComment(commentPart, CommentIDs.CommentID5));
                 Assert.NotNull(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID5));
                 Assert.Equal(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID5).ParaIdParent.Value, GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID4).ParaId.Value);
@@ -216,7 +216,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
             using (WordprocessingDocument package = WordprocessingDocument.Open(stream, false))
             {
                 Assert.Null(package.MainDocumentPart.WordprocessingCommentsPart);
-                Assert.Null(package.MainDocumentPart.WordprocessingCommentsExPart );
+                Assert.Null(package.MainDocumentPart.WordprocessingCommentsExPart);
                 Assert.Empty(package.MainDocumentPart.Document.Descendants<CommentRangeStart>());
                 Assert.Empty(package.MainDocumentPart.Document.Descendants<CommentRangeEnd>());
                 Assert.Empty(package.MainDocumentPart.Document.Descendants<CommentReference>());

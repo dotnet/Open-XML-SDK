@@ -248,11 +248,11 @@ namespace DocumentFormat.OpenXml.Tests
                 unchecked
                 {
                     int hash = 17;
-                    hash = hash * HashMultiplier + StringComparer.Ordinal.GetHashCode(PartClassName);
-                    hash = hash * HashMultiplier + StringComparer.Ordinal.GetHashCode(PartContentType);
-                    hash = hash * HashMultiplier + MinOccursIsNonZero.GetHashCode();
-                    hash = hash * HashMultiplier + MaxOccursGreatThanOne.GetHashCode();
-                    hash = hash * HashMultiplier + FileFormat.GetHashCode();
+                    hash = (hash * HashMultiplier) + StringComparer.Ordinal.GetHashCode(PartClassName);
+                    hash = (hash * HashMultiplier) + StringComparer.Ordinal.GetHashCode(PartContentType);
+                    hash = (hash * HashMultiplier) + MinOccursIsNonZero.GetHashCode();
+                    hash = (hash * HashMultiplier) + MaxOccursGreatThanOne.GetHashCode();
+                    hash = (hash * HashMultiplier) + FileFormat.GetHashCode();
                     return hash;
                 }
             }

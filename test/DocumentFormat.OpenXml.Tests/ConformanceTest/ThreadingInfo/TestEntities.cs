@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                //Get Extension Uri value
+                // Get Extension Uri value
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
                 CommentExtension commentExtension = (CommentExtension)threadingInfo.Parent;

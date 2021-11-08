@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A <see cref="string"/> value to use to create a new <see cref="Base64BinaryValue"/> object.</param>
         /// <returns>A <see cref="Base64BinaryValue"/> that corresponds to the value parameter.</returns>
-        public new static Base64BinaryValue FromString(string? value) => new Base64BinaryValue(value);
+        public static new Base64BinaryValue FromString(string? value) => new Base64BinaryValue(value);
 
         /// <summary>
         /// Returns the <see cref="string"/>  value representation of a <see cref="Base64BinaryValue"/> object.

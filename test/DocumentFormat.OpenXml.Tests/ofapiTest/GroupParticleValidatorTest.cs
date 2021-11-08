@@ -9,9 +9,9 @@ using Xunit;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for GroupParticleValidatorTest and is intended
-    ///to contain all GroupParticleValidatorTest Unit Tests
-    ///</summary>
+    /// This is a test class for GroupParticleValidatorTest and is intended
+    /// to contain all GroupParticleValidatorTest Unit Tests
+    /// </summary>
     public class GroupParticleValidatorTest
     {
         private const FileFormatVersions Version = FileFormatVersions.Office2007;
@@ -30,44 +30,44 @@ namespace DocumentFormat.OpenXml.Tests
             var target = particleConstraint.ParticleValidator as GroupParticleValidator;
             validationContext.Stack.Push(element: header);
 
-            //<xsd:complexType name="CT_HdrFtr">
+            // <xsd:complexType name="CT_HdrFtr">
             //  <xsd:group ref="EG_BlockLevelElts" minOccurs="1" maxOccurs="unbounded" />
-            //</xsd:complexType>
+            // </xsd:complexType>
 
-            //<xs:group name="EG_BlockLevelElts">
+            // <xs:group name="EG_BlockLevelElts">
             //  <xs:choice>
             //    <xs:group ref="EG_BlockLevelEltsBase" minOccurs="0" maxOccurs="unbounded" />
             //    <xs:group ref="EG_BlockLevelChunkElts" minOccurs="0" maxOccurs="unbounded" />
             //  </xs:choice>
-            //</xs:group>
+            // </xs:group>
 
-            //<xs:group name="EG_BlockLevelEltsBase">
+            // <xs:group name="EG_BlockLevelEltsBase">
             //  <xs:choice>
             //    <xs:element name="altChunk" type="CT_AltChunk" minOccurs="0" maxOccurs="unbounded"></xs:element>
             //  </xs:choice>
-            //</xs:group>
+            // </xs:group>
 
-            //<xsd:group name="EG_BlockLevelChunkElts">
+            // <xsd:group name="EG_BlockLevelChunkElts">
             //  <xsd:choice>
             //    <xsd:group ref="EG_ContentBlockContent" minOccurs="0" maxOccurs="unbounded" />
             //  </xsd:choice>
-            //</xsd:group>
+            // </xsd:group>
 
-            //<xs:group name="EG_ContentBlockContent">
+            // <xs:group name="EG_ContentBlockContent">
             //  <xs:choice>
             //    <xs:group ref="EG_ContentBlockContentBase" minOccurs="0" maxOccurs="unbounded" />
             //    <xs:group ref="EG_RunLevelElts" minOccurs="0" maxOccurs="unbounded" />
             //  </xs:choice>
-            //</xs:group>
+            // </xs:group>
 
-            //<xs:group name="EG_ContentBlockContentBase">
+            // <xs:group name="EG_ContentBlockContentBase">
             //  <xs:choice>
             //    <xs:element name="customXml" type="CT_CustomXmlBlock"></xs:element>
             //    <xs:element name="sdt" type="CT_SdtBlock"></xs:element>
             //    <xs:element name="p" type="CT_P" minOccurs="0" maxOccurs="unbounded"></xs:element>
             //    <xs:element name="tbl" type="CT_Tbl" minOccurs="0" maxOccurs="unbounded"></xs:element>
             //  </xs:choice>
-            //</xs:group>
+            // </xs:group>
 
             // ***** good case ******
             // empty is OK
@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(validationContext.Valid);
 
             // ***** error case ******
-            //first is invalid
+            // first is invalid
             errorChild = header.PrependChild(new Run());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -125,7 +125,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             validationContext.Clear();
 
-            //last is invalid
+            // last is invalid
             errorChild = header.AppendChild(new Run());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -151,23 +151,23 @@ namespace DocumentFormat.OpenXml.Tests
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Stack.Push(element: sectPr);
 
-            //<xsd:complexType name="CT_SectPr">
+            // <xsd:complexType name="CT_SectPr">
             //  <xsd:sequence>
             //    <xsd:group ref="EG_HdrFtrReferences" minOccurs="0" maxOccurs="6"></xsd:group>
             //    <xsd:group ref="EG_SectPrContents" minOccurs="0"></xsd:group>
             //    <xsd:element name="sectPrChange" type="CT_SectPrChange" minOccurs="0">
             //  </xsd:sequence>
             //  <xsd:attributeGroup ref="AG_SectPrAttributes"></xsd:attributeGroup>
-            //</xsd:complexType>
+            // </xsd:complexType>
 
-            //<xsd:group name="EG_HdrFtrReferences">
+            // <xsd:group name="EG_HdrFtrReferences">
             //  <xsd:choice>
             //    <xsd:element name="headerReference" type="CT_HdrFtrRef" minOccurs="0">
             //    <xsd:element name="footerReference" type="CT_HdrFtrRef" minOccurs="0">
             //  </xsd:choice>
-            //</xsd:group>
+            // </xsd:group>
 
-            //<xsd:group name="EG_SectPrContents">
+            // <xsd:group name="EG_SectPrContents">
             //  <xsd:sequence>
             //    <xsd:element name="footnotePr" type="CT_FtnProps" minOccurs="0">
             //    <xsd:element name="endnotePr" type="CT_EdnProps" minOccurs="0">
@@ -189,7 +189,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:element name="docGrid" type="CT_DocGrid" minOccurs="0">
             //    <xsd:element name="printerSettings" type="CT_Rel" minOccurs="0">
             //  </xsd:sequence>
-            //</xsd:group>
+            // </xsd:group>
 
             // ***** good case ******
             // empty is ok
@@ -265,12 +265,12 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
 
-            //first is invalid
+            // first is invalid
             errorChild = sectPr.PrependChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -287,7 +287,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             validationContext.Clear();
 
-            //invalid child in middle
+            // invalid child in middle
             errorChild = sectPr.InsertBefore(new Paragraph(), sectPr.LastChild);
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -296,7 +296,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
@@ -311,7 +311,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
 
@@ -326,7 +326,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
@@ -340,7 +340,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
@@ -355,7 +355,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
         }
     }
 }

@@ -34,14 +34,14 @@ namespace DocumentFormat.OpenXml.Tests
         {
             if (part is CustomXmlPart)
             {
-                XElement PartRoot = null;
+                XElement partRoot = null;
                 using (var stream = part.GetStream())
                 using (var reader = XmlReader.Create(stream))
                 {
-                    PartRoot = XElement.Load(reader);
+                    partRoot = XElement.Load(reader);
                 }
 
-                if (PartRoot.Name.LocalName == "Sources")
+                if (partRoot.Name.LocalName == "Sources")
                 {
                     return true;
                 }
@@ -54,14 +54,14 @@ namespace DocumentFormat.OpenXml.Tests
         {
             if (part is CustomXmlPart)
             {
-                XElement PartRoot = null;
+                XElement partRoot = null;
                 using (var stream = part.GetStream())
                 using (var reader = XmlReader.Create(stream))
                 {
-                    PartRoot = XElement.Load(reader);
+                    partRoot = XElement.Load(reader);
                 }
 
-                if (PartRoot.Name.LocalName == "additionalCharacteristics")
+                if (partRoot.Name.LocalName == "additionalCharacteristics")
                 {
                     return true;
                 }
@@ -74,14 +74,14 @@ namespace DocumentFormat.OpenXml.Tests
         {
             if (part is CustomXmlPart)
             {
-                XElement PartRoot = null;
+                XElement partRoot = null;
                 using (var stream = part.GetStream())
                 using (var reader = XmlReader.Create(stream))
                 {
-                    PartRoot = XElement.Load(reader);
+                    partRoot = XElement.Load(reader);
                 }
 
-                if (PartRoot.Name.LocalName == "ink")
+                if (partRoot.Name.LocalName == "ink")
                 {
                     return true;
                 }
@@ -105,12 +105,12 @@ namespace DocumentFormat.OpenXml.Tests
             var parts = new List<OpenXmlPart>();
             var uriList = new List<string>();
 
-            addChildParts(parts, uriList, root);
+            AddChildParts(parts, uriList, root);
 
             return parts;
         }
 
-        private static void addChildParts(IList<OpenXmlPart> list, List<string> uriList, OpenXmlPartContainer root)
+        private static void AddChildParts(IList<OpenXmlPart> list, List<string> uriList, OpenXmlPartContainer root)
         {
             foreach (var ip in root.Parts)
             {
@@ -118,19 +118,19 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     list.Add(ip.OpenXmlPart);
                     uriList.Add(ip.OpenXmlPart.Uri.ToString());
-                    addChildParts(list, uriList, ip.OpenXmlPart);
+                    AddChildParts(list, uriList, ip.OpenXmlPart);
                 }
             }
         }
 
-        private static void addChildIdPartPairs(IList<IdPartPair> list, OpenXmlPartContainer root)
+        private static void AddChildIdPartPairs(IList<IdPartPair> list, OpenXmlPartContainer root)
         {
             foreach (var idPartPair in root.Parts)
             {
                 if (!list.Where(i => i.RelationshipId == idPartPair.RelationshipId && ReferenceEquals(i.OpenXmlPart, idPartPair.OpenXmlPart)).Any())
                 {
                     list.Add(idPartPair);
-                    addChildIdPartPairs(list, idPartPair.OpenXmlPart);
+                    AddChildIdPartPairs(list, idPartPair.OpenXmlPart);
                 }
             }
         }
@@ -217,14 +217,13 @@ namespace DocumentFormat.OpenXml.Tests
         /// <returns>TRUE, if two parts contains the same content. FALSE, if not</returns>
         public static bool Compare(this OpenXmlPart sourcePart, OpenXmlPart targetPart)
         {
-            HashSet<Uri> ComparedParts = new HashSet<Uri>();
+            HashSet<Uri> comparedParts = new HashSet<Uri>();
 
-            return sourcePart.CompareDescendentsAndSelf(targetPart, ComparedParts);
+            return sourcePart.CompareDescendentsAndSelf(targetPart, comparedParts);
         }
 
-        private static bool CompareDescendentsAndSelf(this OpenXmlPart sourcePart, OpenXmlPart targetPart, HashSet<Uri> ComparedPart)
+        private static bool CompareDescendentsAndSelf(this OpenXmlPart sourcePart, OpenXmlPart targetPart, HashSet<Uri> comparedPart)
         {
-            #region compare content of two parts
             // if two parts have the same reference, return true;
             if (sourcePart == targetPart)
             {
@@ -237,13 +236,13 @@ namespace DocumentFormat.OpenXml.Tests
                 return false;
             }
 
-            //if two parts have different content type, return false
+            // if two parts have different content type, return false
             if (sourcePart.ContentType != targetPart.ContentType)
             {
                 return false;
             }
 
-            //if two parts have different number of external relationships, return false
+            // if two parts have different number of external relationships, return false
             if (sourcePart.ExternalRelationships.Count() != targetPart.ExternalRelationships.Count())
             {
                 return false;
@@ -261,7 +260,7 @@ namespace DocumentFormat.OpenXml.Tests
                 return false;
             }
             //// if two parts have different URI, return false
-            //if (sourcePart.Uri != targetPart.Uri)
+            // if (sourcePart.Uri != targetPart.Uri)
             //    return false;
             // if two parts contains different number of parts, return false;
             if (sourcePart.Parts.Count() != targetPart.Parts.Count())
@@ -269,7 +268,7 @@ namespace DocumentFormat.OpenXml.Tests
                 return false;
             }
 
-            //compare each external relationship
+            // compare each external relationship
             foreach (var id in sourcePart.ExternalRelationships)
             {
                 if (targetPart.ExternalRelationships.Where(i => i.Id == id.Id && i.RelationshipType == id.RelationshipType && i.Uri == id.Uri).Count() != 1)
@@ -278,7 +277,7 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
 
-            //compare each hyperlink relationship
+            // compare each hyperlink relationship
             foreach (var id in sourcePart.HyperlinkRelationships)
             {
                 if (targetPart.HyperlinkRelationships.Where(i => i.Id == id.Id && i.IsExternal == id.IsExternal && i.Uri == id.Uri).Count() != 1)
@@ -336,7 +335,8 @@ namespace DocumentFormat.OpenXml.Tests
                             {
                                 return false;
                             }
-                        } while (i != -1 && j != -1);
+                        }
+                        while (i != -1 && j != -1);
                     }
                 }
             }
@@ -348,15 +348,14 @@ namespace DocumentFormat.OpenXml.Tests
                     return false;
                 }
             }
-            #endregion
 
-            ComparedPart.Add(sourcePart.Uri);
+            comparedPart.Add(sourcePart.Uri);
 
             foreach (var part in sourcePart.Parts)
             {
-                if (!ComparedPart.Contains(part.OpenXmlPart.Uri))
+                if (!comparedPart.Contains(part.OpenXmlPart.Uri))
                 {
-                    if (part.OpenXmlPart.CompareDescendentsAndSelf(targetPart.Parts.Single(p => p.RelationshipId == part.RelationshipId).OpenXmlPart, ComparedPart) == false)
+                    if (part.OpenXmlPart.CompareDescendentsAndSelf(targetPart.Parts.Single(p => p.RelationshipId == part.RelationshipId).OpenXmlPart, comparedPart) == false)
                     {
                         return false;
                     }

@@ -15,27 +15,27 @@ using static DocumentFormat.OpenXml.Tests.TestAssets;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for OpenXmlElementTest and is intended
-    ///to contain all OpenXmlElementTest Unit Tests
-    ///</summary>
+    /// This is a test class for OpenXmlElementTest and is intended
+    /// to contain all OpenXmlElementTest Unit Tests
+    /// </summary>
     public class OpenXmlElementTest
     {
         /// <summary>
-        ///A test for RemoveAttribute
-        ///</summary>
+        /// A test for RemoveAttribute
+        /// </summary>
         [Fact]
         public void GetAttributeTest()
         {
             var paragraph = new FooterReference();
 
-            //OpenXmlAttribute target = paragraph.GetAttribute("type", null);
-            //Assert.Null(target);
+            // OpenXmlAttribute target = paragraph.GetAttribute("type", null);
+            // Assert.Null(target);
             OpenXmlAttribute target;
 
-            //target = paragraph.GetAttribute("type", paragraph.NamespaceURI);
-            //Assert.Null(target);
+            // target = paragraph.GetAttribute("type", paragraph.NamespaceURI);
+            // Assert.Null(target);
 
-            //  2 predefined attributes
+            // 2 predefined attributes
             paragraph.Type = HeaderFooterValues.Default;
             paragraph.Id = "1";
 
@@ -61,8 +61,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for RemoveAttribute
-        ///</summary>
+        /// A test for RemoveAttribute
+        /// </summary>
         [Fact]
         public void RemoveAttributeTest()
         {
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Null(target.Type);
             Assert.Null(target.Id);
 
-            //  2 predefined attributes
+            // 2 predefined attributes
             target.Type = HeaderFooterValues.Default;
             target.Id = "1";
 
@@ -136,8 +136,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for Descendants, Ancestors, ElementsBefore, ElementsAfter, IsBefore, IsAfter
-        ///</summary>
+        /// A test for Descendants, Ancestors, ElementsBefore, ElementsAfter, IsBefore, IsAfter
+        /// </summary>
         [Fact]
         public void OpenXmlElementTraversingMethodsTest()
         {
@@ -242,8 +242,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for OpenXmlElement.InnerXml
-        ///</summary>
+        /// A test for OpenXmlElement.InnerXml
+        /// </summary>
         [Fact]
         public void InnerXmlTest()
         {
@@ -294,8 +294,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for OpenXmlElement.RemoveAllChildren
-        ///</summary>
+        /// A test for OpenXmlElement.RemoveAllChildren
+        /// </summary>
         [Fact]
         public void RemoveElementTest()
         {
@@ -340,8 +340,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for OpenXmlElement.RemoveAllChildren
-        ///</summary>
+        /// A test for OpenXmlElement.RemoveAllChildren
+        /// </summary>
         [Fact]
         public void InsertElementTest()
         {
@@ -372,8 +372,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for OpenXmlElement.RemoveAllChildren
-        ///</summary>
+        /// A test for OpenXmlElement.RemoveAllChildren
+        /// </summary>
         [Fact]
         public void SiblingTest()
         {
@@ -407,8 +407,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for OpenXmlElement
-        ///</summary>
+        /// A test for OpenXmlElement
+        /// </summary>
         [Fact]
         public void PrefixTest()
         {
@@ -422,8 +422,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DefaultOpenXmlAttributeTest()
         {
-            var target = new OpenXmlAttribute();
-            var other = new OpenXmlAttribute();
+            var target = default(OpenXmlAttribute);
+            var other = default(OpenXmlAttribute);
 
             Assert.Equal(target, other);
             Assert.True(target == other);
@@ -482,8 +482,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for OpenXmlLeafElement.InnerXml
-        ///</summary>
+        /// A test for OpenXmlLeafElement.InnerXml
+        /// </summary>
         [Fact]
         public void LeafElementInnerXmlTest()
         {
@@ -507,8 +507,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for OpenXmlLeafTextElement.InnerXml
-        ///</summary>
+        /// A test for OpenXmlLeafTextElement.InnerXml
+        /// </summary>
         [Fact]
         public void LeafTextElementInnerXmlTest()
         {
@@ -542,14 +542,14 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ElementCloneTest()
         {
-            using (var stream = GetStream(TestFiles.mcdoc))
+            using (var stream = GetStream(TestFiles.Mcdoc))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 // Shallow clone the body, which doesn't have attributes
                 var body = doc.MainDocumentPart.Document.Body;
                 var clonedBody = body.CloneNode(false);
                 Assert.False(clonedBody.HasChildren);
-                Assert.Equal(body.HasAttributes, clonedBody.HasAttributes); //Cloned Body has no attributes.
+                Assert.Equal(body.HasAttributes, clonedBody.HasAttributes); // Cloned Body has no attributes.
                 Assert.Equal(body.ExtendedAttributes.Count(), clonedBody.ExtendedAttributes.Count());
 
                 // Shallow clone the first paragraph, which has attributes
@@ -759,7 +759,7 @@ namespace DocumentFormat.OpenXml.Tests
             var p = new Paragraph();
             p.ParagraphId = "123";
 
-            //NamespaceDeclarations is not null
+            // NamespaceDeclarations is not null
             Assert.Empty(p.NamespaceDeclarations);
 
             p.AddNamespaceDeclaration("a", "http://b");
@@ -792,7 +792,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ReaderWithNsTest()
         {
-            using (var stream = GetStream(TestFiles.mcdoc))
+            using (var stream = GetStream(TestFiles.Mcdoc))
             using (var doc = WordprocessingDocument.Open(stream, false))
             using (var reader = OpenXmlPartReader.Create(doc.MainDocumentPart))
             {
@@ -858,20 +858,20 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (var reader = new OpenXmlPartReader(memStream))
                 {
-                    //<w:document>
+                    // <w:document>
                     reader.Read();
                     Assert.Single(reader.NamespaceDeclarations);
 
-                    //<w:body>
+                    // <w:body>
                     reader.Read();
                     Assert.Single(reader.NamespaceDeclarations);
 
-                    //<w:p>
+                    // <w:p>
                     reader.ReadFirstChild();
                     Assert.EndsWith("Paragraph", reader.ElementType.Name);
                     Assert.Empty(reader.NamespaceDeclarations);
 
-                    //<w:p>
+                    // <w:p>
                     reader.ReadNextSibling();
                     Assert.EndsWith("Table", reader.ElementType.Name);
                     Assert.Single(reader.NamespaceDeclarations);

@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml
         public static TElement With<TElement>(this TElement element, params object[] content)
             where TElement : OpenXmlElement
         {
-            return element.With((object) content);
+            return element.With((object)content);
         }
 
         /// <summary>
@@ -48,46 +48,46 @@ namespace DocumentFormat.OpenXml
             switch (content)
             {
                 case null:
-                {
-                    return;
-                }
+                    {
+                        return;
+                    }
 
                 case OpenXmlElement child:
-                {
-                    if (child.Parent is not null)
                     {
-                        child = child.CloneNode(true);
-                    }
+                        if (child.Parent is not null)
+                        {
+                            child = child.CloneNode(true);
+                        }
 
-                    element.AppendChild(child);
-                    break;
-                }
+                        element.AppendChild(child);
+                        break;
+                    }
 
                 case OpenXmlAttribute attribute:
-                {
-                    element.SetAttribute(attribute);
-                    break;
-                }
+                    {
+                        element.SetAttribute(attribute);
+                        break;
+                    }
 
                 case object[] array:
-                {
-                    foreach (object o in array)
                     {
-                        AddContent(element, o);
-                    }
+                        foreach (object o in array)
+                        {
+                            AddContent(element, o);
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case IEnumerable enumerable:
-                {
-                    foreach (object o in enumerable)
                     {
-                        AddContent(element, o);
-                    }
+                        foreach (object o in enumerable)
+                        {
+                            AddContent(element, o);
+                        }
 
-                    break;
-                }
+                        break;
+                    }
             }
         }
     }

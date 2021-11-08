@@ -32,7 +32,7 @@ namespace CreatePresentationDocument
 
             CreatePresentationParts(presentationPart);
 
-            //Close the presentation handle
+            // Close the presentation handle
             presentationDoc.Close();
         }
 
@@ -85,59 +85,59 @@ namespace CreatePresentationDocument
             chartSpace1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 
             var chartdata1 = new C16.ChartData();
-            var externalData1 = new C16.ExternalData(){ Id = "rId3", AutoUpdate = false};
+            var externalData1 = new C16.ExternalData() { Id = "rId3", AutoUpdate = false };
             chartdata1.Append(externalData1);
             var data1 = new C16.Data { Id = 0 };
             var strDim1 = new C16.StringDimension { Type = C16.StringDimensionType.Cat };
             var lvl1 = new C16.NumericLevel { PtCount = 16 };
             lvl1.AppendChild(new C16.ChartStringValue("Leaf 1") { Index = 0 });
-            lvl1.AppendChild(new C16.ChartStringValue ("Leaf 2"){ Index = 1 });
-            lvl1.AppendChild(new C16.ChartStringValue ("Leaf 3"){ Index = 2 });
-            lvl1.AppendChild(new C16.ChartStringValue ("Leaf 4"){ Index = 3 });
-            lvl1.AppendChild(new C16.ChartStringValue ("Leaf 5"){ Index = 4 });
-            lvl1.AppendChild(new C16.ChartStringValue ("Leaf 8"){ Index = 7 });
-            lvl1.AppendChild(new C16.ChartStringValue ("Leaf 10"){ Index = 9 });
-            lvl1.AppendChild(new C16.ChartStringValue ("Leaf 11"){ Index = 10 });
-            lvl1.AppendChild(new C16.ChartStringValue ("Leaf 12"){ Index = 11 });
-            lvl1.AppendChild(new C16.ChartStringValue ("Leaf 13"){ Index = 12 });
-            lvl1.AppendChild(new C16.ChartStringValue ("Leaf 14"){ Index = 13 });
-            lvl1.AppendChild(new C16.ChartStringValue ("Leaf 15"){ Index = 14 });
+            lvl1.AppendChild(new C16.ChartStringValue("Leaf 2") { Index = 1 });
+            lvl1.AppendChild(new C16.ChartStringValue("Leaf 3") { Index = 2 });
+            lvl1.AppendChild(new C16.ChartStringValue("Leaf 4") { Index = 3 });
+            lvl1.AppendChild(new C16.ChartStringValue("Leaf 5") { Index = 4 });
+            lvl1.AppendChild(new C16.ChartStringValue("Leaf 8") { Index = 7 });
+            lvl1.AppendChild(new C16.ChartStringValue("Leaf 10") { Index = 9 });
+            lvl1.AppendChild(new C16.ChartStringValue("Leaf 11") { Index = 10 });
+            lvl1.AppendChild(new C16.ChartStringValue("Leaf 12") { Index = 11 });
+            lvl1.AppendChild(new C16.ChartStringValue("Leaf 13") { Index = 12 });
+            lvl1.AppendChild(new C16.ChartStringValue("Leaf 14") { Index = 13 });
+            lvl1.AppendChild(new C16.ChartStringValue("Leaf 15") { Index = 14 });
 
             var lvl2 = new C16.NumericLevel { PtCount = 16 };
             lvl2.AppendChild(new C16.ChartStringValue("Stem 1") { Index = 0 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 1"){ Index = 1 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 1"){ Index = 2 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 2"){ Index = 3 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 2"){ Index = 4 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 6"){ Index = 5 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 7"){ Index = 6 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 3"){ Index = 7 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 9"){ Index = 8 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 4"){ Index = 9 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 4"){ Index = 10 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 5"){ Index = 11 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 5"){ Index = 12 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 6"){ Index = 13 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 6"){ Index = 14 });
-            lvl2.AppendChild(new C16.ChartStringValue ("Stem 16"){ Index = 15 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 1") { Index = 1 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 1") { Index = 2 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 2") { Index = 3 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 2") { Index = 4 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 6") { Index = 5 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 7") { Index = 6 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 3") { Index = 7 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 9") { Index = 8 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 4") { Index = 9 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 4") { Index = 10 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 5") { Index = 11 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 5") { Index = 12 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 6") { Index = 13 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 6") { Index = 14 });
+            lvl2.AppendChild(new C16.ChartStringValue("Stem 16") { Index = 15 });
 
             var lvl3 = new C16.NumericLevel { PtCount = 16 };
             lvl3.AppendChild(new C16.ChartStringValue("Branch 1") { Index = 0 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 1"){ Index = 1 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 1"){ Index = 2 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 1"){ Index = 3 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 1"){ Index = 4 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 1"){ Index = 5 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 1"){ Index = 6 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 2"){ Index = 7 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 2"){ Index = 8 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 2"){ Index = 9 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 2"){ Index = 10 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 3"){ Index = 11 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 3"){ Index = 12 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 3"){ Index = 13 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 3"){ Index = 14 });
-            lvl3.AppendChild(new C16.ChartStringValue ("Branch 5"){ Index = 15 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 1") { Index = 1 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 1") { Index = 2 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 1") { Index = 3 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 1") { Index = 4 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 1") { Index = 5 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 1") { Index = 6 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 2") { Index = 7 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 2") { Index = 8 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 2") { Index = 9 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 2") { Index = 10 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 3") { Index = 11 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 3") { Index = 12 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 3") { Index = 13 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 3") { Index = 14 });
+            lvl3.AppendChild(new C16.ChartStringValue("Branch 5") { Index = 15 });
             strDim1.AppendChild(new C16.Formula("Sheet1!$A$2:$C$17"));
             strDim1.AppendChild(lvl1);
             strDim1.AppendChild(lvl2);
@@ -146,21 +146,21 @@ namespace CreatePresentationDocument
             var numDim1 = new C16.NumericDimension { Type = C16.NumericDimensionType.Size };
             var lvl4 = new C16.NumericLevel { PtCount = 16, FormatCode = "General" };
             lvl4.AppendChild(new C16.ChartStringValue("22") { Index = 0 });
-            lvl4.AppendChild(new C16.ChartStringValue ("12"){ Index = 1 });
-            lvl4.AppendChild(new C16.ChartStringValue ("18"){ Index = 2 });
-            lvl4.AppendChild(new C16.ChartStringValue ("87"){ Index = 3 });
-            lvl4.AppendChild(new C16.ChartStringValue ("88"){ Index = 4 });
-            lvl4.AppendChild(new C16.ChartStringValue ("17"){ Index = 5 });
-            lvl4.AppendChild(new C16.ChartStringValue ("14"){ Index = 6 });
-            lvl4.AppendChild(new C16.ChartStringValue ("25"){ Index = 7 });
-            lvl4.AppendChild(new C16.ChartStringValue ("16"){ Index = 8 });
-            lvl4.AppendChild(new C16.ChartStringValue ("24"){ Index = 9 });
-            lvl4.AppendChild(new C16.ChartStringValue ("89"){ Index = 10 });
-            lvl4.AppendChild(new C16.ChartStringValue ("16"){ Index = 11 });
-            lvl4.AppendChild(new C16.ChartStringValue ("19"){ Index = 12 });
-            lvl4.AppendChild(new C16.ChartStringValue ("86"){ Index = 13 });
-            lvl4.AppendChild(new C16.ChartStringValue ("23"){ Index = 14 });
-            lvl4.AppendChild(new C16.ChartStringValue ("21"){ Index = 15 });
+            lvl4.AppendChild(new C16.ChartStringValue("12") { Index = 1 });
+            lvl4.AppendChild(new C16.ChartStringValue("18") { Index = 2 });
+            lvl4.AppendChild(new C16.ChartStringValue("87") { Index = 3 });
+            lvl4.AppendChild(new C16.ChartStringValue("88") { Index = 4 });
+            lvl4.AppendChild(new C16.ChartStringValue("17") { Index = 5 });
+            lvl4.AppendChild(new C16.ChartStringValue("14") { Index = 6 });
+            lvl4.AppendChild(new C16.ChartStringValue("25") { Index = 7 });
+            lvl4.AppendChild(new C16.ChartStringValue("16") { Index = 8 });
+            lvl4.AppendChild(new C16.ChartStringValue("24") { Index = 9 });
+            lvl4.AppendChild(new C16.ChartStringValue("89") { Index = 10 });
+            lvl4.AppendChild(new C16.ChartStringValue("16") { Index = 11 });
+            lvl4.AppendChild(new C16.ChartStringValue("19") { Index = 12 });
+            lvl4.AppendChild(new C16.ChartStringValue("86") { Index = 13 });
+            lvl4.AppendChild(new C16.ChartStringValue("23") { Index = 14 });
+            lvl4.AppendChild(new C16.ChartStringValue("21") { Index = 15 });
             numDim1.AppendChild(new C16.Formula("Sheet1!$D$2:$D$17"));
             numDim1.AppendChild(lvl4);
             data1.AppendChild(strDim1);
@@ -169,7 +169,7 @@ namespace CreatePresentationDocument
 
             var chart1 = new C16.Chart();
 
-            var title1 = new C16.ChartTitle {  Overlay = false, Align = C16.PosAlign.Ctr, Pos = C16.SidePos.T };
+            var title1 = new C16.ChartTitle { Overlay = false, Align = C16.PosAlign.Ctr, Pos = C16.SidePos.T };
             chart1.AppendChild(title1);
 
             var plotArea1 = new C16.PlotArea();
@@ -202,35 +202,35 @@ namespace CreatePresentationDocument
         // Generates content of embeddedPackagePart1.
         private static void GenerateEmbeddedPackagePart1Content(EmbeddedPackagePart embeddedPackagePart1)
         {
-            using(var data = GetBinaryDataStream(embeddedPackagePart1Data))
+            using (var data = GetBinaryDataStream(embeddedPackagePart1Data))
             {
-              embeddedPackagePart1.FeedData(data);
+                embeddedPackagePart1.FeedData(data);
             }
         }
 
         // Generates content of chartStylePart1.
         private static void GenerateChartStylePart1Content(ChartStylePart chartStylePart1)
         {
-            var chartStyle1 = new Cs.ChartStyle(){ Id = (UInt32Value)381U };
+            var chartStyle1 = new Cs.ChartStyle() { Id = (UInt32Value)381U };
             chartStyle1.AddNamespaceDeclaration("cs", "http://schemas.microsoft.com/office/drawing/2012/chartStyle");
             chartStyle1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
 
             var axisTitle1 = new Cs.AxisTitle();
-            var lineReference1 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference1 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference1 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference1 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference1 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference1 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference1 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
+            var fontReference1 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
 
-            var schemeColor25 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation15 = new A.LuminanceModulation(){ Val = 65000 };
-            var luminanceOffset11 = new A.LuminanceOffset(){ Val = 35000 };
+            var schemeColor25 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation15 = new A.LuminanceModulation() { Val = 65000 };
+            var luminanceOffset11 = new A.LuminanceOffset() { Val = 35000 };
 
             schemeColor25.Append(luminanceModulation15);
             schemeColor25.Append(luminanceOffset11);
 
             fontReference1.Append(schemeColor25);
-            var textCharacterPropertiesType1 = new Cs.TextCharacterPropertiesType(){ FontSize = 1197 };
+            var textCharacterPropertiesType1 = new Cs.TextCharacterPropertiesType() { FontSize = 1197 };
 
             axisTitle1.Append(lineReference1);
             axisTitle1.Append(fillReference1);
@@ -239,15 +239,15 @@ namespace CreatePresentationDocument
             axisTitle1.Append(textCharacterPropertiesType1);
 
             var categoryAxis2 = new Cs.CategoryAxis();
-            var lineReference2 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference2 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference2 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference2 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference2 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference2 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference2 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
+            var fontReference2 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
 
-            var schemeColor26 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation16 = new A.LuminanceModulation(){ Val = 65000 };
-            var luminanceOffset12 = new A.LuminanceOffset(){ Val = 35000 };
+            var schemeColor26 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation16 = new A.LuminanceModulation() { Val = 65000 };
+            var luminanceOffset12 = new A.LuminanceOffset() { Val = 35000 };
 
             schemeColor26.Append(luminanceModulation16);
             schemeColor26.Append(luminanceOffset12);
@@ -256,13 +256,13 @@ namespace CreatePresentationDocument
 
             var shapeProperties3 = new Cs.ShapeProperties();
 
-            var outline10 = new A.Outline(){ Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
+            var outline10 = new A.Outline() { Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
 
             var solidFill19 = new A.SolidFill();
 
-            var schemeColor27 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation17 = new A.LuminanceModulation(){ Val = 15000 };
-            var luminanceOffset13 = new A.LuminanceOffset(){ Val = 85000 };
+            var schemeColor27 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation17 = new A.LuminanceModulation() { Val = 15000 };
+            var luminanceOffset13 = new A.LuminanceOffset() { Val = 85000 };
 
             schemeColor27.Append(luminanceModulation17);
             schemeColor27.Append(luminanceOffset13);
@@ -274,7 +274,7 @@ namespace CreatePresentationDocument
             outline10.Append(round4);
 
             shapeProperties3.Append(outline10);
-            var textCharacterPropertiesType2 = new Cs.TextCharacterPropertiesType(){ FontSize = 1197 };
+            var textCharacterPropertiesType2 = new Cs.TextCharacterPropertiesType() { FontSize = 1197 };
 
             categoryAxis2.Append(lineReference2);
             categoryAxis2.Append(fillReference2);
@@ -283,30 +283,30 @@ namespace CreatePresentationDocument
             categoryAxis2.Append(shapeProperties3);
             categoryAxis2.Append(textCharacterPropertiesType2);
 
-            var chartArea1 = new Cs.ChartArea(){ Modifiers = new ListValue<StringValue>() { InnerText = "allowNoFillOverride allowNoLineOverride" } };
-            var lineReference3 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference3 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference3 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var chartArea1 = new Cs.ChartArea() { Modifiers = new ListValue<StringValue>() { InnerText = "allowNoFillOverride allowNoLineOverride" } };
+            var lineReference3 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference3 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference3 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference3 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor28 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference3 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor28 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference3.Append(schemeColor28);
 
             var shapeProperties4 = new Cs.ShapeProperties();
 
             var solidFill20 = new A.SolidFill();
-            var schemeColor29 = new A.SchemeColor(){ Val = A.SchemeColorValues.Background1 };
+            var schemeColor29 = new A.SchemeColor() { Val = A.SchemeColorValues.Background1 };
 
             solidFill20.Append(schemeColor29);
 
-            var outline11 = new A.Outline(){ Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
+            var outline11 = new A.Outline() { Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
 
             var solidFill21 = new A.SolidFill();
 
-            var schemeColor30 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation18 = new A.LuminanceModulation(){ Val = 15000 };
-            var luminanceOffset14 = new A.LuminanceOffset(){ Val = 85000 };
+            var schemeColor30 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation18 = new A.LuminanceModulation() { Val = 15000 };
+            var luminanceOffset14 = new A.LuminanceOffset() { Val = 85000 };
 
             schemeColor30.Append(luminanceModulation18);
             schemeColor30.Append(luminanceOffset14);
@@ -319,7 +319,7 @@ namespace CreatePresentationDocument
 
             shapeProperties4.Append(solidFill20);
             shapeProperties4.Append(outline11);
-            var textCharacterPropertiesType3 = new Cs.TextCharacterPropertiesType(){ FontSize = 1330 };
+            var textCharacterPropertiesType3 = new Cs.TextCharacterPropertiesType() { FontSize = 1330 };
 
             chartArea1.Append(lineReference3);
             chartArea1.Append(fillReference3);
@@ -329,15 +329,15 @@ namespace CreatePresentationDocument
             chartArea1.Append(textCharacterPropertiesType3);
 
             var dataLabel1 = new Cs.DataLabel();
-            var lineReference4 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference4 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference4 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference4 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference4 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference4 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference4 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor31 = new A.SchemeColor(){ Val = A.SchemeColorValues.Light1 };
+            var fontReference4 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor31 = new A.SchemeColor() { Val = A.SchemeColorValues.Light1 };
 
             fontReference4.Append(schemeColor31);
-            var textCharacterPropertiesType4 = new Cs.TextCharacterPropertiesType(){ FontSize = 1197 };
+            var textCharacterPropertiesType4 = new Cs.TextCharacterPropertiesType() { FontSize = 1197 };
 
             dataLabel1.Append(lineReference4);
             dataLabel1.Append(fillReference4);
@@ -346,15 +346,15 @@ namespace CreatePresentationDocument
             dataLabel1.Append(textCharacterPropertiesType4);
 
             var dataLabelCallout1 = new Cs.DataLabelCallout();
-            var lineReference5 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference5 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference5 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference5 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference5 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference5 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference5 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
+            var fontReference5 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
 
-            var schemeColor32 = new A.SchemeColor(){ Val = A.SchemeColorValues.Dark1 };
-            var luminanceModulation19 = new A.LuminanceModulation(){ Val = 65000 };
-            var luminanceOffset15 = new A.LuminanceOffset(){ Val = 35000 };
+            var schemeColor32 = new A.SchemeColor() { Val = A.SchemeColorValues.Dark1 };
+            var luminanceModulation19 = new A.LuminanceModulation() { Val = 65000 };
+            var luminanceOffset15 = new A.LuminanceOffset() { Val = 35000 };
 
             schemeColor32.Append(luminanceModulation19);
             schemeColor32.Append(luminanceOffset15);
@@ -364,7 +364,7 @@ namespace CreatePresentationDocument
             var shapeProperties5 = new Cs.ShapeProperties();
 
             var solidFill22 = new A.SolidFill();
-            var schemeColor33 = new A.SchemeColor(){ Val = A.SchemeColorValues.Light1 };
+            var schemeColor33 = new A.SchemeColor() { Val = A.SchemeColorValues.Light1 };
 
             solidFill22.Append(schemeColor33);
 
@@ -372,9 +372,9 @@ namespace CreatePresentationDocument
 
             var solidFill23 = new A.SolidFill();
 
-            var schemeColor34 = new A.SchemeColor(){ Val = A.SchemeColorValues.Dark1 };
-            var luminanceModulation20 = new A.LuminanceModulation(){ Val = 25000 };
-            var luminanceOffset16 = new A.LuminanceOffset(){ Val = 75000 };
+            var schemeColor34 = new A.SchemeColor() { Val = A.SchemeColorValues.Dark1 };
+            var luminanceModulation20 = new A.LuminanceModulation() { Val = 25000 };
+            var luminanceOffset16 = new A.LuminanceOffset() { Val = 75000 };
 
             schemeColor34.Append(luminanceModulation20);
             schemeColor34.Append(luminanceOffset16);
@@ -385,9 +385,9 @@ namespace CreatePresentationDocument
 
             shapeProperties5.Append(solidFill22);
             shapeProperties5.Append(outline12);
-            var textCharacterPropertiesType5 = new Cs.TextCharacterPropertiesType(){ FontSize = 1197 };
+            var textCharacterPropertiesType5 = new Cs.TextCharacterPropertiesType() { FontSize = 1197 };
 
-            var textBodyProperties1 = new Cs.TextBodyProperties(){ Rotation = 0, UseParagraphSpacing = true, VerticalOverflow = A.TextVerticalOverflowValues.Clip, HorizontalOverflow = A.TextHorizontalOverflowValues.Clip, Vertical = A.TextVerticalValues.Horizontal, Wrap = A.TextWrappingValues.Square, LeftInset = 36576, TopInset = 18288, RightInset = 36576, BottomInset = 18288, Anchor = A.TextAnchoringTypeValues.Center, AnchorCenter = true };
+            var textBodyProperties1 = new Cs.TextBodyProperties() { Rotation = 0, UseParagraphSpacing = true, VerticalOverflow = A.TextVerticalOverflowValues.Clip, HorizontalOverflow = A.TextHorizontalOverflowValues.Clip, Vertical = A.TextVerticalValues.Horizontal, Wrap = A.TextWrappingValues.Square, LeftInset = 36576, TopInset = 18288, RightInset = 36576, BottomInset = 18288, Anchor = A.TextAnchoringTypeValues.Center, AnchorCenter = true };
             var shapeAutoFit2 = new A.ShapeAutoFit();
 
             textBodyProperties1.Append(shapeAutoFit2);
@@ -401,30 +401,30 @@ namespace CreatePresentationDocument
             dataLabelCallout1.Append(textBodyProperties1);
 
             var dataPoint1 = new Cs.DataPoint();
-            var lineReference6 = new Cs.LineReference(){ Index = (UInt32Value)0U };
+            var lineReference6 = new Cs.LineReference() { Index = (UInt32Value)0U };
 
-            var fillReference6 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var styleColor1 = new Cs.StyleColor(){ Val = "auto" };
+            var fillReference6 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var styleColor1 = new Cs.StyleColor() { Val = "auto" };
 
             fillReference6.Append(styleColor1);
-            var effectReference6 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var effectReference6 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference6 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor35 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference6 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor35 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference6.Append(schemeColor35);
 
             var shapeProperties6 = new Cs.ShapeProperties();
 
             var solidFill24 = new A.SolidFill();
-            var schemeColor36 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
+            var schemeColor36 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
 
             solidFill24.Append(schemeColor36);
 
-            var outline13 = new A.Outline(){ Width = 19050 };
+            var outline13 = new A.Outline() { Width = 19050 };
 
             var solidFill25 = new A.SolidFill();
-            var schemeColor37 = new A.SchemeColor(){ Val = A.SchemeColorValues.Light1 };
+            var schemeColor37 = new A.SchemeColor() { Val = A.SchemeColorValues.Light1 };
 
             solidFill25.Append(schemeColor37);
 
@@ -440,23 +440,23 @@ namespace CreatePresentationDocument
             dataPoint1.Append(shapeProperties6);
 
             var dataPoint3D1 = new Cs.DataPoint3D();
-            var lineReference7 = new Cs.LineReference(){ Index = (UInt32Value)0U };
+            var lineReference7 = new Cs.LineReference() { Index = (UInt32Value)0U };
 
-            var fillReference7 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var styleColor2 = new Cs.StyleColor(){ Val = "auto" };
+            var fillReference7 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var styleColor2 = new Cs.StyleColor() { Val = "auto" };
 
             fillReference7.Append(styleColor2);
-            var effectReference7 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var effectReference7 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference7 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor38 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference7 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor38 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference7.Append(schemeColor38);
 
             var shapeProperties7 = new Cs.ShapeProperties();
 
             var solidFill26 = new A.SolidFill();
-            var schemeColor39 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
+            var schemeColor39 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
 
             solidFill26.Append(schemeColor39);
 
@@ -470,24 +470,24 @@ namespace CreatePresentationDocument
 
             var dataPointLine1 = new Cs.DataPointLine();
 
-            var lineReference8 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var styleColor3 = new Cs.StyleColor(){ Val = "auto" };
+            var lineReference8 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var styleColor3 = new Cs.StyleColor() { Val = "auto" };
 
             lineReference8.Append(styleColor3);
-            var fillReference8 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference8 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var fillReference8 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference8 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference8 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor40 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference8 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor40 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference8.Append(schemeColor40);
 
             var shapeProperties8 = new Cs.ShapeProperties();
 
-            var outline14 = new A.Outline(){ Width = 28575, CapType = A.LineCapValues.Round };
+            var outline14 = new A.Outline() { Width = 28575, CapType = A.LineCapValues.Round };
 
             var solidFill27 = new A.SolidFill();
-            var schemeColor41 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
+            var schemeColor41 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
 
             solidFill27.Append(schemeColor41);
             var round6 = new A.Round();
@@ -504,30 +504,30 @@ namespace CreatePresentationDocument
             dataPointLine1.Append(shapeProperties8);
 
             var dataPointMarker1 = new Cs.DataPointMarker();
-            var lineReference9 = new Cs.LineReference(){ Index = (UInt32Value)0U };
+            var lineReference9 = new Cs.LineReference() { Index = (UInt32Value)0U };
 
-            var fillReference9 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var styleColor4 = new Cs.StyleColor(){ Val = "auto" };
+            var fillReference9 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var styleColor4 = new Cs.StyleColor() { Val = "auto" };
 
             fillReference9.Append(styleColor4);
-            var effectReference9 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var effectReference9 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference9 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor42 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference9 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor42 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference9.Append(schemeColor42);
 
             var shapeProperties9 = new Cs.ShapeProperties();
 
             var solidFill28 = new A.SolidFill();
-            var schemeColor43 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
+            var schemeColor43 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
 
             solidFill28.Append(schemeColor43);
 
-            var outline15 = new A.Outline(){ Width = 9525 };
+            var outline15 = new A.Outline() { Width = 9525 };
 
             var solidFill29 = new A.SolidFill();
-            var schemeColor44 = new A.SchemeColor(){ Val = A.SchemeColorValues.Light1 };
+            var schemeColor44 = new A.SchemeColor() { Val = A.SchemeColorValues.Light1 };
 
             solidFill29.Append(schemeColor44);
 
@@ -541,28 +541,28 @@ namespace CreatePresentationDocument
             dataPointMarker1.Append(effectReference9);
             dataPointMarker1.Append(fontReference9);
             dataPointMarker1.Append(shapeProperties9);
-            var markerLayoutProperties1 = new Cs.MarkerLayoutProperties(){ Symbol = Cs.MarkerStyle.Circle, Size = 5 };
+            var markerLayoutProperties1 = new Cs.MarkerLayoutProperties() { Symbol = Cs.MarkerStyle.Circle, Size = 5 };
 
             var dataPointWireframe1 = new Cs.DataPointWireframe();
 
-            var lineReference10 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var styleColor5 = new Cs.StyleColor(){ Val = "auto" };
+            var lineReference10 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var styleColor5 = new Cs.StyleColor() { Val = "auto" };
 
             lineReference10.Append(styleColor5);
-            var fillReference10 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference10 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var fillReference10 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference10 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference10 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor45 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference10 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor45 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference10.Append(schemeColor45);
 
             var shapeProperties10 = new Cs.ShapeProperties();
 
-            var outline16 = new A.Outline(){ Width = 28575, CapType = A.LineCapValues.Round };
+            var outline16 = new A.Outline() { Width = 28575, CapType = A.LineCapValues.Round };
 
             var solidFill30 = new A.SolidFill();
-            var schemeColor46 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
+            var schemeColor46 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
 
             solidFill30.Append(schemeColor46);
             var round7 = new A.Round();
@@ -579,15 +579,15 @@ namespace CreatePresentationDocument
             dataPointWireframe1.Append(shapeProperties10);
 
             var dataTableStyle1 = new Cs.DataTableStyle();
-            var lineReference11 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference11 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference11 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference11 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference11 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference11 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference11 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
+            var fontReference11 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
 
-            var schemeColor47 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation21 = new A.LuminanceModulation(){ Val = 65000 };
-            var luminanceOffset17 = new A.LuminanceOffset(){ Val = 35000 };
+            var schemeColor47 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation21 = new A.LuminanceModulation() { Val = 65000 };
+            var luminanceOffset17 = new A.LuminanceOffset() { Val = 35000 };
 
             schemeColor47.Append(luminanceModulation21);
             schemeColor47.Append(luminanceOffset17);
@@ -596,13 +596,13 @@ namespace CreatePresentationDocument
 
             var shapeProperties11 = new Cs.ShapeProperties();
 
-            var outline17 = new A.Outline(){ Width = 9525 };
+            var outline17 = new A.Outline() { Width = 9525 };
 
             var solidFill31 = new A.SolidFill();
 
-            var schemeColor48 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation22 = new A.LuminanceModulation(){ Val = 15000 };
-            var luminanceOffset18 = new A.LuminanceOffset(){ Val = 85000 };
+            var schemeColor48 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation22 = new A.LuminanceModulation() { Val = 15000 };
+            var luminanceOffset18 = new A.LuminanceOffset() { Val = 85000 };
 
             schemeColor48.Append(luminanceModulation22);
             schemeColor48.Append(luminanceOffset18);
@@ -612,7 +612,7 @@ namespace CreatePresentationDocument
             outline17.Append(solidFill31);
 
             shapeProperties11.Append(outline17);
-            var textCharacterPropertiesType6 = new Cs.TextCharacterPropertiesType(){ FontSize = 1197 };
+            var textCharacterPropertiesType6 = new Cs.TextCharacterPropertiesType() { FontSize = 1197 };
 
             dataTableStyle1.Append(lineReference11);
             dataTableStyle1.Append(fillReference11);
@@ -622,12 +622,12 @@ namespace CreatePresentationDocument
             dataTableStyle1.Append(textCharacterPropertiesType6);
 
             var downBar1 = new Cs.DownBar();
-            var lineReference12 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference12 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference12 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference12 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference12 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference12 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference12 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor49 = new A.SchemeColor(){ Val = A.SchemeColorValues.Dark1 };
+            var fontReference12 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor49 = new A.SchemeColor() { Val = A.SchemeColorValues.Dark1 };
 
             fontReference12.Append(schemeColor49);
 
@@ -635,22 +635,22 @@ namespace CreatePresentationDocument
 
             var solidFill32 = new A.SolidFill();
 
-            var schemeColor50 = new A.SchemeColor(){ Val = A.SchemeColorValues.Dark1 };
-            var luminanceModulation23 = new A.LuminanceModulation(){ Val = 65000 };
-            var luminanceOffset19 = new A.LuminanceOffset(){ Val = 35000 };
+            var schemeColor50 = new A.SchemeColor() { Val = A.SchemeColorValues.Dark1 };
+            var luminanceModulation23 = new A.LuminanceModulation() { Val = 65000 };
+            var luminanceOffset19 = new A.LuminanceOffset() { Val = 35000 };
 
             schemeColor50.Append(luminanceModulation23);
             schemeColor50.Append(luminanceOffset19);
 
             solidFill32.Append(schemeColor50);
 
-            var outline18 = new A.Outline(){ Width = 9525 };
+            var outline18 = new A.Outline() { Width = 9525 };
 
             var solidFill33 = new A.SolidFill();
 
-            var schemeColor51 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation24 = new A.LuminanceModulation(){ Val = 65000 };
-            var luminanceOffset20 = new A.LuminanceOffset(){ Val = 35000 };
+            var schemeColor51 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation24 = new A.LuminanceModulation() { Val = 65000 };
+            var luminanceOffset20 = new A.LuminanceOffset() { Val = 35000 };
 
             schemeColor51.Append(luminanceModulation24);
             schemeColor51.Append(luminanceOffset20);
@@ -669,24 +669,24 @@ namespace CreatePresentationDocument
             downBar1.Append(shapeProperties12);
 
             var dropLine1 = new Cs.DropLine();
-            var lineReference13 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference13 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference13 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference13 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference13 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference13 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference13 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor52 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference13 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor52 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference13.Append(schemeColor52);
 
             var shapeProperties13 = new Cs.ShapeProperties();
 
-            var outline19 = new A.Outline(){ Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
+            var outline19 = new A.Outline() { Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
 
             var solidFill34 = new A.SolidFill();
 
-            var schemeColor53 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation25 = new A.LuminanceModulation(){ Val = 35000 };
-            var luminanceOffset21 = new A.LuminanceOffset(){ Val = 65000 };
+            var schemeColor53 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation25 = new A.LuminanceModulation() { Val = 35000 };
+            var luminanceOffset21 = new A.LuminanceOffset() { Val = 65000 };
 
             schemeColor53.Append(luminanceModulation25);
             schemeColor53.Append(luminanceOffset21);
@@ -706,24 +706,24 @@ namespace CreatePresentationDocument
             dropLine1.Append(shapeProperties13);
 
             var errorBar1 = new Cs.ErrorBar();
-            var lineReference14 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference14 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference14 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference14 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference14 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference14 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference14 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor54 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference14 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor54 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference14.Append(schemeColor54);
 
             var shapeProperties14 = new Cs.ShapeProperties();
 
-            var outline20 = new A.Outline(){ Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
+            var outline20 = new A.Outline() { Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
 
             var solidFill35 = new A.SolidFill();
 
-            var schemeColor55 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation26 = new A.LuminanceModulation(){ Val = 65000 };
-            var luminanceOffset22 = new A.LuminanceOffset(){ Val = 35000 };
+            var schemeColor55 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation26 = new A.LuminanceModulation() { Val = 65000 };
+            var luminanceOffset22 = new A.LuminanceOffset() { Val = 35000 };
 
             schemeColor55.Append(luminanceModulation26);
             schemeColor55.Append(luminanceOffset22);
@@ -743,12 +743,12 @@ namespace CreatePresentationDocument
             errorBar1.Append(shapeProperties14);
 
             var floor1 = new Cs.Floor();
-            var lineReference15 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference15 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference15 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference15 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference15 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference15 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference15 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor56 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference15 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor56 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference15.Append(schemeColor56);
 
@@ -758,24 +758,24 @@ namespace CreatePresentationDocument
             floor1.Append(fontReference15);
 
             var gridlineMajor1 = new Cs.GridlineMajor();
-            var lineReference16 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference16 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference16 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference16 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference16 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference16 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference16 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor57 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference16 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor57 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference16.Append(schemeColor57);
 
             var shapeProperties15 = new Cs.ShapeProperties();
 
-            var outline21 = new A.Outline(){ Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
+            var outline21 = new A.Outline() { Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
 
             var solidFill36 = new A.SolidFill();
 
-            var schemeColor58 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation27 = new A.LuminanceModulation(){ Val = 15000 };
-            var luminanceOffset23 = new A.LuminanceOffset(){ Val = 85000 };
+            var schemeColor58 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation27 = new A.LuminanceModulation() { Val = 15000 };
+            var luminanceOffset23 = new A.LuminanceOffset() { Val = 85000 };
 
             schemeColor58.Append(luminanceModulation27);
             schemeColor58.Append(luminanceOffset23);
@@ -795,24 +795,24 @@ namespace CreatePresentationDocument
             gridlineMajor1.Append(shapeProperties15);
 
             var gridlineMinor1 = new Cs.GridlineMinor();
-            var lineReference17 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference17 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference17 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference17 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference17 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference17 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference17 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor59 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference17 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor59 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference17.Append(schemeColor59);
 
             var shapeProperties16 = new Cs.ShapeProperties();
 
-            var outline22 = new A.Outline(){ Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
+            var outline22 = new A.Outline() { Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
 
             var solidFill37 = new A.SolidFill();
 
-            var schemeColor60 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation28 = new A.LuminanceModulation(){ Val = 15000 };
-            var luminanceOffset24 = new A.LuminanceOffset(){ Val = 85000 };
+            var schemeColor60 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation28 = new A.LuminanceModulation() { Val = 15000 };
+            var luminanceOffset24 = new A.LuminanceOffset() { Val = 85000 };
 
             schemeColor60.Append(luminanceModulation28);
             schemeColor60.Append(luminanceOffset24);
@@ -832,24 +832,24 @@ namespace CreatePresentationDocument
             gridlineMinor1.Append(shapeProperties16);
 
             var hiLoLine1 = new Cs.HiLoLine();
-            var lineReference18 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference18 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference18 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference18 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference18 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference18 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference18 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor61 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference18 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor61 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference18.Append(schemeColor61);
 
             var shapeProperties17 = new Cs.ShapeProperties();
 
-            var outline23 = new A.Outline(){ Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
+            var outline23 = new A.Outline() { Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
 
             var solidFill38 = new A.SolidFill();
 
-            var schemeColor62 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation29 = new A.LuminanceModulation(){ Val = 75000 };
-            var luminanceOffset25 = new A.LuminanceOffset(){ Val = 25000 };
+            var schemeColor62 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation29 = new A.LuminanceModulation() { Val = 75000 };
+            var luminanceOffset25 = new A.LuminanceOffset() { Val = 25000 };
 
             schemeColor62.Append(luminanceModulation29);
             schemeColor62.Append(luminanceOffset25);
@@ -869,24 +869,24 @@ namespace CreatePresentationDocument
             hiLoLine1.Append(shapeProperties17);
 
             var leaderLine1 = new Cs.LeaderLine();
-            var lineReference19 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference19 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference19 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference19 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference19 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference19 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference19 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor63 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference19 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor63 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference19.Append(schemeColor63);
 
             var shapeProperties18 = new Cs.ShapeProperties();
 
-            var outline24 = new A.Outline(){ Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
+            var outline24 = new A.Outline() { Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
 
             var solidFill39 = new A.SolidFill();
 
-            var schemeColor64 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation30 = new A.LuminanceModulation(){ Val = 35000 };
-            var luminanceOffset26 = new A.LuminanceOffset(){ Val = 65000 };
+            var schemeColor64 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation30 = new A.LuminanceModulation() { Val = 35000 };
+            var luminanceOffset26 = new A.LuminanceOffset() { Val = 65000 };
 
             schemeColor64.Append(luminanceModulation30);
             schemeColor64.Append(luminanceOffset26);
@@ -906,21 +906,21 @@ namespace CreatePresentationDocument
             leaderLine1.Append(shapeProperties18);
 
             var legendStyle1 = new Cs.LegendStyle();
-            var lineReference20 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference20 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference20 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference20 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference20 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference20 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference20 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
+            var fontReference20 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
 
-            var schemeColor65 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation31 = new A.LuminanceModulation(){ Val = 65000 };
-            var luminanceOffset27 = new A.LuminanceOffset(){ Val = 35000 };
+            var schemeColor65 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation31 = new A.LuminanceModulation() { Val = 65000 };
+            var luminanceOffset27 = new A.LuminanceOffset() { Val = 35000 };
 
             schemeColor65.Append(luminanceModulation31);
             schemeColor65.Append(luminanceOffset27);
 
             fontReference20.Append(schemeColor65);
-            var textCharacterPropertiesType7 = new Cs.TextCharacterPropertiesType(){ FontSize = 1197 };
+            var textCharacterPropertiesType7 = new Cs.TextCharacterPropertiesType() { FontSize = 1197 };
 
             legendStyle1.Append(lineReference20);
             legendStyle1.Append(fillReference20);
@@ -928,13 +928,13 @@ namespace CreatePresentationDocument
             legendStyle1.Append(fontReference20);
             legendStyle1.Append(textCharacterPropertiesType7);
 
-            var plotArea2 = new Cs.PlotArea(){ Modifiers = new ListValue<StringValue>() { InnerText = "allowNoFillOverride allowNoLineOverride" } };
-            var lineReference21 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference21 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference21 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var plotArea2 = new Cs.PlotArea() { Modifiers = new ListValue<StringValue>() { InnerText = "allowNoFillOverride allowNoLineOverride" } };
+            var lineReference21 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference21 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference21 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference21 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor66 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference21 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor66 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference21.Append(schemeColor66);
 
@@ -943,13 +943,13 @@ namespace CreatePresentationDocument
             plotArea2.Append(effectReference21);
             plotArea2.Append(fontReference21);
 
-            var plotArea3D1 = new Cs.PlotArea3D(){ Modifiers = new ListValue<StringValue>() { InnerText = "allowNoFillOverride allowNoLineOverride" } };
-            var lineReference22 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference22 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference22 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var plotArea3D1 = new Cs.PlotArea3D() { Modifiers = new ListValue<StringValue>() { InnerText = "allowNoFillOverride allowNoLineOverride" } };
+            var lineReference22 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference22 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference22 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference22 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor67 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference22 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor67 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference22.Append(schemeColor67);
 
@@ -959,15 +959,15 @@ namespace CreatePresentationDocument
             plotArea3D1.Append(fontReference22);
 
             var seriesAxis1 = new Cs.SeriesAxis();
-            var lineReference23 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference23 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference23 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference23 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference23 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference23 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference23 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
+            var fontReference23 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
 
-            var schemeColor68 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation32 = new A.LuminanceModulation(){ Val = 65000 };
-            var luminanceOffset28 = new A.LuminanceOffset(){ Val = 35000 };
+            var schemeColor68 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation32 = new A.LuminanceModulation() { Val = 65000 };
+            var luminanceOffset28 = new A.LuminanceOffset() { Val = 35000 };
 
             schemeColor68.Append(luminanceModulation32);
             schemeColor68.Append(luminanceOffset28);
@@ -976,13 +976,13 @@ namespace CreatePresentationDocument
 
             var shapeProperties19 = new Cs.ShapeProperties();
 
-            var outline25 = new A.Outline(){ Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
+            var outline25 = new A.Outline() { Width = 9525, CapType = A.LineCapValues.Flat, CompoundLineType = A.CompoundLineValues.Single, Alignment = A.PenAlignmentValues.Center };
 
             var solidFill40 = new A.SolidFill();
 
-            var schemeColor69 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation33 = new A.LuminanceModulation(){ Val = 15000 };
-            var luminanceOffset29 = new A.LuminanceOffset(){ Val = 85000 };
+            var schemeColor69 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation33 = new A.LuminanceModulation() { Val = 15000 };
+            var luminanceOffset29 = new A.LuminanceOffset() { Val = 85000 };
 
             schemeColor69.Append(luminanceModulation33);
             schemeColor69.Append(luminanceOffset29);
@@ -994,7 +994,7 @@ namespace CreatePresentationDocument
             outline25.Append(round14);
 
             shapeProperties19.Append(outline25);
-            var textCharacterPropertiesType8 = new Cs.TextCharacterPropertiesType(){ FontSize = 1197 };
+            var textCharacterPropertiesType8 = new Cs.TextCharacterPropertiesType() { FontSize = 1197 };
 
             seriesAxis1.Append(lineReference23);
             seriesAxis1.Append(fillReference23);
@@ -1004,21 +1004,21 @@ namespace CreatePresentationDocument
             seriesAxis1.Append(textCharacterPropertiesType8);
 
             var seriesLine1 = new Cs.SeriesLine();
-            var lineReference24 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference24 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference24 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference24 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference24 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference24 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference24 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor70 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference24 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor70 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference24.Append(schemeColor70);
 
             var shapeProperties20 = new Cs.ShapeProperties();
 
-            var outline26 = new A.Outline(){ Width = 9525, CapType = A.LineCapValues.Flat };
+            var outline26 = new A.Outline() { Width = 9525, CapType = A.LineCapValues.Flat };
 
             var solidFill41 = new A.SolidFill();
-            var rgbColorModelHex1 = new A.RgbColorModelHex(){ Val = "D9D9D9" };
+            var rgbColorModelHex1 = new A.RgbColorModelHex() { Val = "D9D9D9" };
 
             solidFill41.Append(rgbColorModelHex1);
             var round15 = new A.Round();
@@ -1035,21 +1035,21 @@ namespace CreatePresentationDocument
             seriesLine1.Append(shapeProperties20);
 
             var titleStyle1 = new Cs.TitleStyle();
-            var lineReference25 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference25 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference25 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference25 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference25 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference25 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference25 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
+            var fontReference25 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
 
-            var schemeColor71 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation34 = new A.LuminanceModulation(){ Val = 65000 };
-            var luminanceOffset30 = new A.LuminanceOffset(){ Val = 35000 };
+            var schemeColor71 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation34 = new A.LuminanceModulation() { Val = 65000 };
+            var luminanceOffset30 = new A.LuminanceOffset() { Val = 35000 };
 
             schemeColor71.Append(luminanceModulation34);
             schemeColor71.Append(luminanceOffset30);
 
             fontReference25.Append(schemeColor71);
-            var textCharacterPropertiesType9 = new Cs.TextCharacterPropertiesType(){ FontSize = 1862 };
+            var textCharacterPropertiesType9 = new Cs.TextCharacterPropertiesType() { FontSize = 1862 };
 
             titleStyle1.Append(lineReference25);
             titleStyle1.Append(fillReference25);
@@ -1059,27 +1059,27 @@ namespace CreatePresentationDocument
 
             var trendlineStyle1 = new Cs.TrendlineStyle();
 
-            var lineReference26 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var styleColor6 = new Cs.StyleColor(){ Val = "auto" };
+            var lineReference26 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var styleColor6 = new Cs.StyleColor() { Val = "auto" };
 
             lineReference26.Append(styleColor6);
-            var fillReference26 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference26 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var fillReference26 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference26 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference26 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor72 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference26 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor72 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference26.Append(schemeColor72);
 
             var shapeProperties21 = new Cs.ShapeProperties();
 
-            var outline27 = new A.Outline(){ Width = 19050, CapType = A.LineCapValues.Round };
+            var outline27 = new A.Outline() { Width = 19050, CapType = A.LineCapValues.Round };
 
             var solidFill42 = new A.SolidFill();
-            var schemeColor73 = new A.SchemeColor(){ Val = A.SchemeColorValues.PhColor };
+            var schemeColor73 = new A.SchemeColor() { Val = A.SchemeColorValues.PhColor };
 
             solidFill42.Append(schemeColor73);
-            var presetDash1 = new A.PresetDash(){ Val = A.PresetLineDashValues.SystemDash };
+            var presetDash1 = new A.PresetDash() { Val = A.PresetLineDashValues.SystemDash };
 
             outline27.Append(solidFill42);
             outline27.Append(presetDash1);
@@ -1093,21 +1093,21 @@ namespace CreatePresentationDocument
             trendlineStyle1.Append(shapeProperties21);
 
             var trendlineLabel1 = new Cs.TrendlineLabel();
-            var lineReference27 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference27 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference27 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference27 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference27 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference27 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference27 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
+            var fontReference27 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
 
-            var schemeColor74 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation35 = new A.LuminanceModulation(){ Val = 65000 };
-            var luminanceOffset31 = new A.LuminanceOffset(){ Val = 35000 };
+            var schemeColor74 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation35 = new A.LuminanceModulation() { Val = 65000 };
+            var luminanceOffset31 = new A.LuminanceOffset() { Val = 35000 };
 
             schemeColor74.Append(luminanceModulation35);
             schemeColor74.Append(luminanceOffset31);
 
             fontReference27.Append(schemeColor74);
-            var textCharacterPropertiesType10 = new Cs.TextCharacterPropertiesType(){ FontSize = 1197 };
+            var textCharacterPropertiesType10 = new Cs.TextCharacterPropertiesType() { FontSize = 1197 };
 
             trendlineLabel1.Append(lineReference27);
             trendlineLabel1.Append(fillReference27);
@@ -1116,29 +1116,29 @@ namespace CreatePresentationDocument
             trendlineLabel1.Append(textCharacterPropertiesType10);
 
             var upBar1 = new Cs.UpBar();
-            var lineReference28 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference28 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference28 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference28 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference28 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference28 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference28 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor75 = new A.SchemeColor(){ Val = A.SchemeColorValues.Dark1 };
+            var fontReference28 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor75 = new A.SchemeColor() { Val = A.SchemeColorValues.Dark1 };
 
             fontReference28.Append(schemeColor75);
 
             var shapeProperties22 = new Cs.ShapeProperties();
 
             var solidFill43 = new A.SolidFill();
-            var schemeColor76 = new A.SchemeColor(){ Val = A.SchemeColorValues.Light1 };
+            var schemeColor76 = new A.SchemeColor() { Val = A.SchemeColorValues.Light1 };
 
             solidFill43.Append(schemeColor76);
 
-            var outline28 = new A.Outline(){ Width = 9525 };
+            var outline28 = new A.Outline() { Width = 9525 };
 
             var solidFill44 = new A.SolidFill();
 
-            var schemeColor77 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation36 = new A.LuminanceModulation(){ Val = 15000 };
-            var luminanceOffset32 = new A.LuminanceOffset(){ Val = 85000 };
+            var schemeColor77 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation36 = new A.LuminanceModulation() { Val = 15000 };
+            var luminanceOffset32 = new A.LuminanceOffset() { Val = 85000 };
 
             schemeColor77.Append(luminanceModulation36);
             schemeColor77.Append(luminanceOffset32);
@@ -1157,21 +1157,21 @@ namespace CreatePresentationDocument
             upBar1.Append(shapeProperties22);
 
             var valueAxis2 = new Cs.ValueAxis();
-            var lineReference29 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference29 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference29 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference29 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference29 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference29 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference29 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
+            var fontReference29 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
 
-            var schemeColor78 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
-            var luminanceModulation37 = new A.LuminanceModulation(){ Val = 65000 };
-            var luminanceOffset33 = new A.LuminanceOffset(){ Val = 35000 };
+            var schemeColor78 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
+            var luminanceModulation37 = new A.LuminanceModulation() { Val = 65000 };
+            var luminanceOffset33 = new A.LuminanceOffset() { Val = 35000 };
 
             schemeColor78.Append(luminanceModulation37);
             schemeColor78.Append(luminanceOffset33);
 
             fontReference29.Append(schemeColor78);
-            var textCharacterPropertiesType11 = new Cs.TextCharacterPropertiesType(){ FontSize = 1197 };
+            var textCharacterPropertiesType11 = new Cs.TextCharacterPropertiesType() { FontSize = 1197 };
 
             valueAxis2.Append(lineReference29);
             valueAxis2.Append(fillReference29);
@@ -1180,12 +1180,12 @@ namespace CreatePresentationDocument
             valueAxis2.Append(textCharacterPropertiesType11);
 
             var wall1 = new Cs.Wall();
-            var lineReference30 = new Cs.LineReference(){ Index = (UInt32Value)0U };
-            var fillReference30 = new Cs.FillReference(){ Index = (UInt32Value)0U };
-            var effectReference30 = new Cs.EffectReference(){ Index = (UInt32Value)0U };
+            var lineReference30 = new Cs.LineReference() { Index = (UInt32Value)0U };
+            var fillReference30 = new Cs.FillReference() { Index = (UInt32Value)0U };
+            var effectReference30 = new Cs.EffectReference() { Index = (UInt32Value)0U };
 
-            var fontReference30 = new Cs.FontReference(){ Index = A.FontCollectionIndexValues.Minor };
-            var schemeColor79 = new A.SchemeColor(){ Val = A.SchemeColorValues.Text1 };
+            var fontReference30 = new Cs.FontReference() { Index = A.FontCollectionIndexValues.Minor };
+            var schemeColor79 = new A.SchemeColor() { Val = A.SchemeColorValues.Text1 };
 
             fontReference30.Append(schemeColor79);
 
@@ -1232,61 +1232,61 @@ namespace CreatePresentationDocument
         // Generates content of chartColorStylePart1.
         private static void GenerateChartColorStylePart1Content(ChartColorStylePart chartColorStylePart1)
         {
-            var colorStyle1 = new Cs.ColorStyle(){ Method = "cycle", Id = (UInt32Value)10U };
+            var colorStyle1 = new Cs.ColorStyle() { Method = "cycle", Id = (UInt32Value)10U };
             colorStyle1.AddNamespaceDeclaration("cs", "http://schemas.microsoft.com/office/drawing/2012/chartStyle");
             colorStyle1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
-            var schemeColor19 = new A.SchemeColor(){ Val = A.SchemeColorValues.Accent1 };
-            var schemeColor20 = new A.SchemeColor(){ Val = A.SchemeColorValues.Accent2 };
-            var schemeColor21 = new A.SchemeColor(){ Val = A.SchemeColorValues.Accent3 };
-            var schemeColor22 = new A.SchemeColor(){ Val = A.SchemeColorValues.Accent4 };
-            var schemeColor23 = new A.SchemeColor(){ Val = A.SchemeColorValues.Accent5 };
-            var schemeColor24 = new A.SchemeColor(){ Val = A.SchemeColorValues.Accent6 };
+            var schemeColor19 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
+            var schemeColor20 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent2 };
+            var schemeColor21 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent3 };
+            var schemeColor22 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent4 };
+            var schemeColor23 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent5 };
+            var schemeColor24 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent6 };
             var colorStyleVariation1 = new Cs.ColorStyleVariation();
 
             var colorStyleVariation2 = new Cs.ColorStyleVariation();
-            var luminanceModulation7 = new A.LuminanceModulation(){ Val = 60000 };
+            var luminanceModulation7 = new A.LuminanceModulation() { Val = 60000 };
 
             colorStyleVariation2.Append(luminanceModulation7);
 
             var colorStyleVariation3 = new Cs.ColorStyleVariation();
-            var luminanceModulation8 = new A.LuminanceModulation(){ Val = 80000 };
-            var luminanceOffset7 = new A.LuminanceOffset(){ Val = 20000 };
+            var luminanceModulation8 = new A.LuminanceModulation() { Val = 80000 };
+            var luminanceOffset7 = new A.LuminanceOffset() { Val = 20000 };
 
             colorStyleVariation3.Append(luminanceModulation8);
             colorStyleVariation3.Append(luminanceOffset7);
 
             var colorStyleVariation4 = new Cs.ColorStyleVariation();
-            var luminanceModulation9 = new A.LuminanceModulation(){ Val = 80000 };
+            var luminanceModulation9 = new A.LuminanceModulation() { Val = 80000 };
 
             colorStyleVariation4.Append(luminanceModulation9);
 
             var colorStyleVariation5 = new Cs.ColorStyleVariation();
-            var luminanceModulation10 = new A.LuminanceModulation(){ Val = 60000 };
-            var luminanceOffset8 = new A.LuminanceOffset(){ Val = 40000 };
+            var luminanceModulation10 = new A.LuminanceModulation() { Val = 60000 };
+            var luminanceOffset8 = new A.LuminanceOffset() { Val = 40000 };
 
             colorStyleVariation5.Append(luminanceModulation10);
             colorStyleVariation5.Append(luminanceOffset8);
 
             var colorStyleVariation6 = new Cs.ColorStyleVariation();
-            var luminanceModulation11 = new A.LuminanceModulation(){ Val = 50000 };
+            var luminanceModulation11 = new A.LuminanceModulation() { Val = 50000 };
 
             colorStyleVariation6.Append(luminanceModulation11);
 
             var colorStyleVariation7 = new Cs.ColorStyleVariation();
-            var luminanceModulation12 = new A.LuminanceModulation(){ Val = 70000 };
-            var luminanceOffset9 = new A.LuminanceOffset(){ Val = 30000 };
+            var luminanceModulation12 = new A.LuminanceModulation() { Val = 70000 };
+            var luminanceOffset9 = new A.LuminanceOffset() { Val = 30000 };
 
             colorStyleVariation7.Append(luminanceModulation12);
             colorStyleVariation7.Append(luminanceOffset9);
 
             var colorStyleVariation8 = new Cs.ColorStyleVariation();
-            var luminanceModulation13 = new A.LuminanceModulation(){ Val = 70000 };
+            var luminanceModulation13 = new A.LuminanceModulation() { Val = 70000 };
 
             colorStyleVariation8.Append(luminanceModulation13);
 
             var colorStyleVariation9 = new Cs.ColorStyleVariation();
-            var luminanceModulation14 = new A.LuminanceModulation(){ Val = 50000 };
-            var luminanceOffset10 = new A.LuminanceOffset(){ Val = 50000 };
+            var luminanceModulation14 = new A.LuminanceModulation() { Val = 50000 };
+            var luminanceOffset10 = new A.LuminanceOffset() { Val = 50000 };
 
             colorStyleVariation9.Append(luminanceModulation14);
             colorStyleVariation9.Append(luminanceOffset10);
@@ -1313,9 +1313,9 @@ namespace CreatePresentationDocument
         // Generates the content of imagePart1
         private static void GenerateImagePart1Content(ImagePart imagePart1)
         {
-            using(var data = GetBinaryDataStream(imagePart1Data))
+            using (var data = GetBinaryDataStream(imagePart1Data))
             {
-              imagePart1.FeedData(data);
+                imagePart1.FeedData(data);
             }
         }
 
@@ -1351,7 +1351,7 @@ namespace CreatePresentationDocument
             var shapeTree1 = new ShapeTree();
 
             var nonVisualGroupShapeProperties1 = new NonVisualGroupShapeProperties();
-            var nonVisualDrawingProperties1 = new NonVisualDrawingProperties(){ Id = (UInt32Value)1U, Name = string.Empty};
+            var nonVisualDrawingProperties1 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = string.Empty };
             var nonVisualGroupShapeDrawingProperties1 = new NonVisualGroupShapeDrawingProperties();
             var applicationNonVisualDrawingProperties1 = new ApplicationNonVisualDrawingProperties();
 
@@ -1362,10 +1362,10 @@ namespace CreatePresentationDocument
             var groupShapeProperties1 = new GroupShapeProperties();
 
             var transformGroup1 = new A.TransformGroup();
-            var offset1 = new A.Offset(){ X = 0L, Y = 0L };
-            var extents1 = new A.Extents(){ Cx = 0L, Cy = 0L };
-            var childOffset1 = new A.ChildOffset(){ X = 0L, Y = 0L };
-            var childExtents1 = new A.ChildExtents(){ Cx = 0L, Cy = 0L };
+            var offset1 = new A.Offset() { X = 0L, Y = 0L };
+            var extents1 = new A.Extents() { Cx = 0L, Cy = 0L };
+            var childOffset1 = new A.ChildOffset() { X = 0L, Y = 0L };
+            var childExtents1 = new A.ChildExtents() { Cx = 0L, Cy = 0L };
 
             transformGroup1.Append(offset1);
             transformGroup1.Append(extents1);
@@ -1385,11 +1385,11 @@ namespace CreatePresentationDocument
 
             var nonVisualGraphicFrameProperties1 = new NonVisualGraphicFrameProperties();
 
-            var nonVisualDrawingProperties2 = new NonVisualDrawingProperties(){ Id = (UInt32Value)6U, Name = "Chart 5" };
+            var nonVisualDrawingProperties2 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Chart 5" };
 
             var nonVisualDrawingPropertiesExtensionList1 = new A.NonVisualDrawingPropertiesExtensionList();
 
-            var nonVisualDrawingPropertiesExtension1 = new A.NonVisualDrawingPropertiesExtension(){ Uri = "{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}" };
+            var nonVisualDrawingPropertiesExtension1 = new A.NonVisualDrawingPropertiesExtension() { Uri = "{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}" };
 
             var openXmlUnknownElement1 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement("<a16:creationId xmlns:a16=\"http://schemas.microsoft.com/office/drawing/2014/main\" id=\"{B96E1E96-E2AE-4140-AF58-A89F56E09DD3}\" />");
 
@@ -1404,9 +1404,9 @@ namespace CreatePresentationDocument
 
             var applicationNonVisualDrawingPropertiesExtensionList1 = new ApplicationNonVisualDrawingPropertiesExtensionList();
 
-            var applicationNonVisualDrawingPropertiesExtension1 = new ApplicationNonVisualDrawingPropertiesExtension(){ Uri = "{D42A27DB-BD31-4B8C-83A1-F6EECF244321}" };
+            var applicationNonVisualDrawingPropertiesExtension1 = new ApplicationNonVisualDrawingPropertiesExtension() { Uri = "{D42A27DB-BD31-4B8C-83A1-F6EECF244321}" };
 
-            var modificationId1 = new P14.ModificationId(){ Val = (UInt32Value)4121318566U };
+            var modificationId1 = new P14.ModificationId() { Val = (UInt32Value)4121318566U };
             modificationId1.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             applicationNonVisualDrawingPropertiesExtension1.Append(modificationId1);
@@ -1420,18 +1420,18 @@ namespace CreatePresentationDocument
             nonVisualGraphicFrameProperties1.Append(applicationNonVisualDrawingProperties2);
 
             var transform1 = new Transform();
-            var offset2 = new A.Offset(){ X = 2032000L, Y = 719666L };
-            var extents2 = new A.Extents(){ Cx = 8128000L, Cy = 5418667L };
+            var offset2 = new A.Offset() { X = 2032000L, Y = 719666L };
+            var extents2 = new A.Extents() { Cx = 8128000L, Cy = 5418667L };
 
             transform1.Append(offset2);
             transform1.Append(extents2);
 
             var graphic1 = new A.Graphic();
 
-            //A.GraphicData graphicData1 = new A.GraphicData(){ Uri = "http://schemas.openxmlformats.org/drawingml/2006/chart" };
-            var graphicData1 = new A.GraphicData(){ Uri = "http://schemas.microsoft.com/office/drawing/2014/chartex" };
+            // A.GraphicData graphicData1 = new A.GraphicData(){ Uri = "http://schemas.openxmlformats.org/drawingml/2006/chart" };
+            var graphicData1 = new A.GraphicData() { Uri = "http://schemas.microsoft.com/office/drawing/2014/chartex" };
 
-            var chartReference1 = new C.ChartReference(){ Id = "rId2" };
+            var chartReference1 = new C.ChartReference() { Id = "rId2" };
             chartReference1.AddNamespaceDeclaration("cx", "http://schemas.microsoft.com/office/drawing/2014/chartex");
             chartReference1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 
@@ -1447,11 +1447,11 @@ namespace CreatePresentationDocument
             // This section is for the AlternateContent:Fallback block
             var pic = new Picture();
             var nvPicPr1 = new NonVisualPictureProperties();
-            var nonVisualDrawingProperties3 = new NonVisualDrawingProperties(){ Id = (UInt32Value)6U, Name = "Chart 5" };
+            var nonVisualDrawingProperties3 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Chart 5" };
 
             var nonVisualDrawingPropertiesExtensionList2 = new A.NonVisualDrawingPropertiesExtensionList();
 
-            var nonVisualDrawingPropertiesExtension2 = new A.NonVisualDrawingPropertiesExtension(){ Uri = "{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}" };
+            var nonVisualDrawingPropertiesExtension2 = new A.NonVisualDrawingPropertiesExtension() { Uri = "{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}" };
 
             var openXmlUnknownElement2 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement("<a16:creationId xmlns:a16=\"http://schemas.microsoft.com/office/drawing/2014/main\" id=\"{B96E1E96-E2AE-4140-AF58-A89F56E09DD3}\" />");
 
@@ -1512,9 +1512,9 @@ namespace CreatePresentationDocument
 
             var commonSlideDataExtensionList1 = new CommonSlideDataExtensionList();
 
-            var commonSlideDataExtension1 = new CommonSlideDataExtension(){ Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
+            var commonSlideDataExtension1 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            var creationId1 = new P14.CreationId(){ Val = (UInt32Value)2744850084U };
+            var creationId1 = new P14.CreationId() { Val = (UInt32Value)2744850084U };
             creationId1.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension1.Append(creationId1);
@@ -1617,7 +1617,7 @@ namespace CreatePresentationDocument
               new A.LatinFont() { Typeface = "Calibri" },
               new A.EastAsianFont() { Typeface = string.Empty },
               new A.ComplexScriptFont() { Typeface = string.Empty }))
-              { Name = "Office" },
+            { Name = "Office" },
             new A.FormatScheme(
               new A.FillStyleList(
               new A.SolidFill(new A.SchemeColor() { Val = A.SchemeColorValues.PhColor }),
@@ -1637,8 +1637,7 @@ namespace CreatePresentationDocument
                     new A.Tint() { Val = 15000 },
                     new A.SaturationModulation() { Val = 350000 })
                 { Val = A.SchemeColorValues.PhColor })
-                { Position = 100000 }
-                ),
+                { Position = 100000 }),
                 new A.LinearGradientFill() { Angle = 16200000, Scaled = true }),
               new A.NoFill(),
               new A.PatternFill(),
@@ -1743,7 +1742,7 @@ namespace CreatePresentationDocument
                   { Val = A.SchemeColorValues.PhColor })
                 { Position = 0 }),
                 new A.LinearGradientFill() { Angle = 16200000, Scaled = true })))
-              { Name = "Office" });
+            { Name = "Office" });
 
             theme1.Append(themeElements1);
             theme1.Append(new A.ObjectDefaults());

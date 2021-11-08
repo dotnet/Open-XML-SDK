@@ -8,7 +8,7 @@ using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    //   DocumentFormat.OpenXml.OpenXmlSimpleValue<T>
+    // DocumentFormat.OpenXml.OpenXmlSimpleValue<T>
     //       DocumentFormat.OpenXml.BooleanValue
     //       DocumentFormat.OpenXml.ByteValue
     //       DocumentFormat.OpenXml.DateTimeValue
@@ -55,24 +55,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(BooleanValue) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new BooleanValue(maxValue), maxValue, maxValue == true ? "1" : "0");
+            SimpleValueValidTest(new BooleanValue(maxValue), maxValue, maxValue == true ? "1" : "0");
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new BooleanValue(maxValue).Clone() as BooleanValue, maxValue, maxValue == true ? "1" : "0");
+            SimpleValueValidTest(new BooleanValue(maxValue).Clone() as BooleanValue, maxValue, maxValue == true ? "1" : "0");
 
             Log.Comment("Set Value with Min value and testing...");
             BooleanValue objA = new BooleanValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue == true ? "1" : "0");
+            SimpleValueValidTest(objA, minValue, minValue == true ? "1" : "0");
 
             Log.Comment("Set InnerText with Min value and testing...");
             BooleanValue objB = new BooleanValue();
             objB.InnerText = minValue.ToString().ToLower(); // True -> true, False -> false
-            simpleValueValidTest(objB, minValue, minValue.ToString().ToLower());
+            SimpleValueValidTest(objB, minValue, minValue.ToString().ToLower());
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue == true ? "1" : "0");
+            SimpleValueValidTest(objB, minValue, minValue == true ? "1" : "0");
 
             Log.Comment("Explicit bool conversion with value {0} and testing", validValue);
             objB = BooleanValue.FromBoolean(validValue);
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new BooleanValue(validValue);
-            simpleValueValidTest(new BooleanValue(objA), validValue, validValue == true ? "1" : "0");
+            SimpleValueValidTest(new BooleanValue(objA), validValue, validValue == true ? "1" : "0");
 
             Log.Comment("Verifying equality...");
             objA = new BooleanValue(validValue);
@@ -95,13 +95,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Setting InnerText as special value and testing...");
             objA = new BooleanValue();
             objA.InnerText = specialValue0;
-            simpleValueValidTest(objA, false, specialValue0);
+            SimpleValueValidTest(objA, false, specialValue0);
             objA.InnerText = specialValue1;
-            simpleValueValidTest(objA, true, specialValue1);
+            SimpleValueValidTest(objA, true, specialValue1);
             objA.InnerText = specialValuefalse;
-            simpleValueValidTest(objA, false, specialValuefalse);
+            SimpleValueValidTest(objA, false, specialValuefalse);
             objA.InnerText = specialValuetrue;
-            simpleValueValidTest(objA, true, specialValuetrue);
+            SimpleValueValidTest(objA, true, specialValuetrue);
 
             Log.Comment("ErrorHandling: Constructing with another instance of null...");
             objA = null;
@@ -116,37 +116,37 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueFalse);
             objA = new BooleanValue();
             objA.InnerText = invalidValueFalse;
-            InvalidOperation(objA, invalidValueFalse, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValueFalse, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueTrue);
             objA = new BooleanValue();
             objA.InnerText = invalidValueTrue;
-            InvalidOperation(objA, invalidValueTrue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValueTrue, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueOff);
             objA = new BooleanValue();
             objA.InnerText = invalidValueOff;
-            InvalidOperation(objA, invalidValueOff, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValueOff, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValueOn);
             objA = new BooleanValue();
             objA.InnerText = invalidValueOn;
-            InvalidOperation(objA, invalidValueOn, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValueOn, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValue);
             objA = new BooleanValue();
             objA.InnerText = invalidValue;
-            InvalidOperation(objA, invalidValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValue2);
             objA = new BooleanValue();
             objA.InnerText = invalidValue2;
-            InvalidOperation(objA, invalidValue2, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue2, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidValue3);
             objA = new BooleanValue();
             objA.InnerText = invalidValue3;
-            InvalidOperation(objA, invalidValue3, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue3, (a, b) => ActionOfCompare(a, b));
         }
 
         [Fact]
@@ -164,24 +164,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(Int32Value) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new ByteValue(maxValue), maxValue, maxValue.ToString());
+            SimpleValueValidTest(new ByteValue(maxValue), maxValue, maxValue.ToString());
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new ByteValue(maxValue).Clone() as ByteValue, maxValue, maxValue.ToString());
+            SimpleValueValidTest(new ByteValue(maxValue).Clone() as ByteValue, maxValue, maxValue.ToString());
 
             Log.Comment("Set Value with Min value and testing...");
             ByteValue objA = new ByteValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString());
+            SimpleValueValidTest(objA, minValue, minValue.ToString());
 
             Log.Comment("Set InnerText with Min value and testing...");
             ByteValue objB = new ByteValue();
             objB.InnerText = minValue.ToString();
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Explicit byte conversion with value {0} and testing", validValue);
             objB = ByteValue.FromByte(validValue);
@@ -189,7 +189,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new ByteValue(validValue);
-            simpleValueValidTest(new ByteValue(objA), validValue, validValue.ToString());
+            SimpleValueValidTest(new ByteValue(objA), validValue, validValue.ToString());
 
             Log.Comment("Verifying equality...");
             objA = new ByteValue(validValue);
@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
             objA = new ByteValue();
             objA.InnerText = invalidValue;
-            InvalidOperation(objA, invalidValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue, (a, b) => ActionOfCompare(a, b));
         }
 
         [Fact]
@@ -232,24 +232,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(SByteValue) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new SByteValue(maxValue), maxValue, maxValue.ToString());
+            SimpleValueValidTest(new SByteValue(maxValue), maxValue, maxValue.ToString());
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new SByteValue(maxValue).Clone() as SByteValue, maxValue, maxValue.ToString());
+            SimpleValueValidTest(new SByteValue(maxValue).Clone() as SByteValue, maxValue, maxValue.ToString());
 
             Log.Comment("Set Value with Min value and testing...");
             SByteValue objA = new SByteValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString());
+            SimpleValueValidTest(objA, minValue, minValue.ToString());
 
             Log.Comment("Set InnerText with Min value and testing...");
             SByteValue objB = new SByteValue();
             objB.InnerText = minValue.ToString();
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Explicit SByteValue conversion with value {0} and testing", validValue);
             objB = SByteValue.FromSByte(validValue);
@@ -257,7 +257,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new SByteValue(validValue);
-            simpleValueValidTest(new SByteValue(objA), validValue, validValue.ToString());
+            SimpleValueValidTest(new SByteValue(objA), validValue, validValue.ToString());
 
             Log.Comment("Verifying equality...");
             objA = new SByteValue(validValue);
@@ -282,7 +282,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
             objA = new SByteValue();
             objA.InnerText = invalidValue;
-            InvalidOperation(objA, invalidValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue, (a, b) => ActionOfCompare(a, b));
         }
 
         [Fact]
@@ -300,24 +300,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(UInt16Value) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new UInt16Value(maxValue), maxValue, maxValue.ToString());
+            SimpleValueValidTest(new UInt16Value(maxValue), maxValue, maxValue.ToString());
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new UInt16Value(maxValue).Clone() as UInt16Value, maxValue, maxValue.ToString());
+            SimpleValueValidTest(new UInt16Value(maxValue).Clone() as UInt16Value, maxValue, maxValue.ToString());
 
             Log.Comment("Set Value with Min value and testing...");
             UInt16Value objA = new UInt16Value();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString());
+            SimpleValueValidTest(objA, minValue, minValue.ToString());
 
             Log.Comment("Set InnerText with Min value and testing...");
             UInt16Value objB = new UInt16Value();
             objB.InnerText = minValue.ToString();
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Explicit conversion with value {0} and testing", validValue);
             objB = UInt16Value.FromUInt16(validValue);
@@ -325,7 +325,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new UInt16Value(validValue);
-            simpleValueValidTest(new UInt16Value(objA), validValue, validValue.ToString());
+            SimpleValueValidTest(new UInt16Value(objA), validValue, validValue.ToString());
 
             Log.Comment("Verifying equality...");
             objA = new UInt16Value(validValue);
@@ -350,7 +350,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
             objA = new UInt16Value();
             objA.InnerText = invalidValue;
-            InvalidOperation(objA, invalidValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue, (a, b) => ActionOfCompare(a, b));
         }
 
         [Fact]
@@ -368,24 +368,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(UInt32Value) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new UInt32Value(maxValue), maxValue, maxValue.ToString());
+            SimpleValueValidTest(new UInt32Value(maxValue), maxValue, maxValue.ToString());
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new UInt32Value(maxValue).Clone() as UInt32Value, maxValue, maxValue.ToString());
+            SimpleValueValidTest(new UInt32Value(maxValue).Clone() as UInt32Value, maxValue, maxValue.ToString());
 
             Log.Comment("Set Value with Min value and testing...");
             UInt32Value objA = new UInt32Value();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString());
+            SimpleValueValidTest(objA, minValue, minValue.ToString());
 
             Log.Comment("Set InnerText with Min value and testing...");
             UInt32Value objB = new UInt32Value();
             objB.InnerText = minValue.ToString();
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Explicit conversion with value {0} and testing", validValue);
             objB = UInt32Value.FromUInt32(validValue);
@@ -393,7 +393,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new UInt32Value(validValue);
-            simpleValueValidTest(new UInt32Value(objA), validValue, validValue.ToString());
+            SimpleValueValidTest(new UInt32Value(objA), validValue, validValue.ToString());
 
             Log.Comment("Verifying equality...");
             objA = new UInt32Value(validValue);
@@ -418,7 +418,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
             objA = new UInt32Value();
             objA.InnerText = invalidValue;
-            InvalidOperation(objA, invalidValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue, (a, b) => ActionOfCompare(a, b));
         }
 
         [Fact]
@@ -436,24 +436,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(Int32Value) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new Int32Value(maxValue), maxValue, maxValue.ToString());
+            SimpleValueValidTest(new Int32Value(maxValue), maxValue, maxValue.ToString());
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new Int32Value(maxValue).Clone() as Int32Value, maxValue, maxValue.ToString());
+            SimpleValueValidTest(new Int32Value(maxValue).Clone() as Int32Value, maxValue, maxValue.ToString());
 
             Log.Comment("Set Value with Min value and testing...");
             Int32Value objA = new Int32Value();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString());
+            SimpleValueValidTest(objA, minValue, minValue.ToString());
 
             Log.Comment("Set InnerText with Min value and testing...");
             Int32Value objB = new Int32Value();
             objB.InnerText = minValue.ToString();
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Explicit conversion with value {0} and testing", validValue);
             objB = Int32Value.FromInt32(validValue);
@@ -461,7 +461,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new Int32Value(validValue);
-            simpleValueValidTest(new Int32Value(objA), validValue, validValue.ToString());
+            SimpleValueValidTest(new Int32Value(objA), validValue, validValue.ToString());
 
             Log.Comment("Verifying equality...");
             objA = new Int32Value(validValue);
@@ -486,7 +486,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
             objA = new Int32Value();
             objA.InnerText = invalidValue;
-            InvalidOperation(objA, invalidValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue, (a, b) => ActionOfCompare(a, b));
         }
 
         [Fact]
@@ -504,24 +504,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(UInt64Value) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new UInt64Value(maxValue), maxValue, maxValue.ToString());
+            SimpleValueValidTest(new UInt64Value(maxValue), maxValue, maxValue.ToString());
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new UInt64Value(maxValue).Clone() as UInt64Value, maxValue, maxValue.ToString());
+            SimpleValueValidTest(new UInt64Value(maxValue).Clone() as UInt64Value, maxValue, maxValue.ToString());
 
             Log.Comment("Set Value with Min value and testing...");
             UInt64Value objA = new UInt64Value();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString());
+            SimpleValueValidTest(objA, minValue, minValue.ToString());
 
             Log.Comment("Set InnerText with Min value and testing...");
             UInt64Value objB = new UInt64Value();
             objB.InnerText = minValue.ToString();
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Explicit UInt64Value conversion with value {0} and testing", validValue);
             objB = UInt64Value.FromUInt64(validValue);
@@ -529,7 +529,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new UInt64Value(validValue);
-            simpleValueValidTest(new UInt64Value(objA), validValue, validValue.ToString());
+            SimpleValueValidTest(new UInt64Value(objA), validValue, validValue.ToString());
 
             Log.Comment("Verifying equality...");
             objA = new UInt64Value(validValue);
@@ -554,7 +554,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
             objA = new UInt64Value();
             objA.InnerText = invalidValue;
-            InvalidOperation(objA, invalidValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue, (a, b) => ActionOfCompare(a, b));
         }
 
         [Fact]
@@ -572,24 +572,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(Int64Value) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new Int64Value(maxValue), maxValue, maxValue.ToString());
+            SimpleValueValidTest(new Int64Value(maxValue), maxValue, maxValue.ToString());
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new Int64Value(maxValue).Clone() as Int64Value, maxValue, maxValue.ToString());
+            SimpleValueValidTest(new Int64Value(maxValue).Clone() as Int64Value, maxValue, maxValue.ToString());
 
             Log.Comment("Set Value with Min value and testing...");
             Int64Value objA = new Int64Value();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString());
+            SimpleValueValidTest(objA, minValue, minValue.ToString());
 
             Log.Comment("Set InnerText with Min value and testing...");
             Int64Value objB = new Int64Value();
             objB.InnerText = minValue.ToString();
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             foreach (var testValue in testValues)
             {
@@ -599,7 +599,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 Log.Comment("Constructing with another instance with valid value...");
                 objA = new Int64Value(testValue);
-                simpleValueValidTest(new Int64Value(objA), testValue, testValue.ToString());
+                SimpleValueValidTest(new Int64Value(objA), testValue, testValue.ToString());
 
                 Log.Comment("Verifying equality...");
                 objA = new Int64Value(testValue);
@@ -625,7 +625,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
             objA = new Int64Value();
             objA.InnerText = invalidValue;
-            InvalidOperation(objA, invalidValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue, (a, b) => ActionOfCompare(a, b));
         }
 
         [Fact]
@@ -643,24 +643,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(Int64Value) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new IntegerValue(maxValue), maxValue, maxValue.ToString());
+            SimpleValueValidTest(new IntegerValue(maxValue), maxValue, maxValue.ToString());
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new IntegerValue(maxValue).Clone() as IntegerValue, maxValue, maxValue.ToString());
+            SimpleValueValidTest(new IntegerValue(maxValue).Clone() as IntegerValue, maxValue, maxValue.ToString());
 
             Log.Comment("Set Value with Min value and testing...");
             IntegerValue objA = new IntegerValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString());
+            SimpleValueValidTest(objA, minValue, minValue.ToString());
 
             Log.Comment("Set InnerText with Min value and testing...");
             IntegerValue objB = new IntegerValue();
             objB.InnerText = minValue.ToString();
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            SimpleValueValidTest(objB, minValue, minValue.ToString());
 
             foreach (var testValue in testValues)
             {
@@ -670,7 +670,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 Log.Comment("Constructing with another instance with valid value...");
                 objA = new IntegerValue(testValue);
-                simpleValueValidTest(new IntegerValue(objA), testValue, testValue.ToString());
+                SimpleValueValidTest(new IntegerValue(objA), testValue, testValue.ToString());
 
                 Log.Comment("Verifying equality...");
                 objA = new IntegerValue(testValue);
@@ -696,7 +696,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
             objA = new IntegerValue();
             objA.InnerText = invalidValue;
-            InvalidOperation(objA, invalidValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue, (a, b) => ActionOfCompare(a, b));
         }
 
         [Fact]
@@ -719,24 +719,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(DecimalValue) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new DecimalValue(maxValue), maxValue, maxValue.ToString(CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new DecimalValue(maxValue), maxValue, maxValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new DecimalValue(maxValue).Clone() as DecimalValue, maxValue, maxValue.ToString(CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new DecimalValue(maxValue).Clone() as DecimalValue, maxValue, maxValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Set Value with Min value and testing...");
             DecimalValue objA = new DecimalValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString(CultureInfo.InvariantCulture));
+            SimpleValueValidTest(objA, minValue, minValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Set InnerText with Min value and testing...");
             DecimalValue objB = new DecimalValue();
             objB.InnerText = minValue.ToString();
-            simpleValueValidTest(objB, minValue, minValue.ToString(CultureInfo.InvariantCulture));
+            SimpleValueValidTest(objB, minValue, minValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString(CultureInfo.InvariantCulture));
+            SimpleValueValidTest(objB, minValue, minValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Explicit decimal conversion with value {0} and testing", validValue);
             objB = DecimalValue.FromDecimal(validValue);
@@ -744,16 +744,16 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new DecimalValue(validValue);
-            simpleValueValidTest(new DecimalValue(objA), validValue, validValue.ToString(CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new DecimalValue(objA), validValue, validValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialValue1);
-            simpleValueValidTest(new DecimalValue(specialValue1), specialValue1, specialValue1.ToString(CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new DecimalValue(specialValue1), specialValue1, specialValue1.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialValue2);
-            simpleValueValidTest(new DecimalValue(specialValue2), specialValue2, specialValue2.ToString(CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new DecimalValue(specialValue2), specialValue2, specialValue2.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialValue3);
-            simpleValueValidTest(new DecimalValue(specialValue3), specialValue3, specialValue3.ToString(CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new DecimalValue(specialValue3), specialValue3, specialValue3.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Verifying equality...");
             objA = new DecimalValue(validValue);
@@ -778,7 +778,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
             objA = new DecimalValue();
             objA.InnerText = invalidValue;
-            InvalidOperation(objA, invalidValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue, (a, b) => ActionOfCompare(a, b));
         }
 
         [Fact]
@@ -810,24 +810,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(SingleValue) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new SingleValue(maxValue), maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new SingleValue(maxValue), maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new SingleValue(maxValue).Clone() as SingleValue, maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new SingleValue(maxValue).Clone() as SingleValue, maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set Value with Min value and testing...");
             SingleValue objA = new SingleValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(objA, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set InnerText with Min value and testing...");
             SingleValue objB = new SingleValue();
             objB.InnerText = minValue.ToString("R", CultureInfo.InvariantCulture);
-            simpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Explicit SingleValue conversion with value {0} and testing", validValue);
             objB = SingleValue.FromSingle(validValue);
@@ -835,39 +835,39 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new SingleValue(validValue);
-            simpleValueValidTest(new SingleValue(objA), validValue, validValue.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new SingleValue(objA), validValue, validValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialEpsilon);
-            simpleValueValidTest(new SingleValue(specialEpsilon), specialEpsilon, specialEpsilon.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new SingleValue(specialEpsilon), specialEpsilon, specialEpsilon.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialPositiveInfinity);
-            simpleValueValidTest(new SingleValue(specialPositiveInfinity), specialPositiveInfinity, PositiveInfinity);
+            SimpleValueValidTest(new SingleValue(specialPositiveInfinity), specialPositiveInfinity, PositiveInfinity);
 
             Log.Comment("Constructing with special value {0} and testing...", specialNegativeInfinity);
-            simpleValueValidTest(new SingleValue(specialNegativeInfinity), specialNegativeInfinity, NegativeInfinity);
+            SimpleValueValidTest(new SingleValue(specialNegativeInfinity), specialNegativeInfinity, NegativeInfinity);
 
             Log.Comment("Constructing with special value {0} and testing...", specialNaN);
-            simpleValueValidTest(new SingleValue(specialNaN), specialNaN, specialNaN.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new SingleValue(specialNaN), specialNaN, specialNaN.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringINF);
             objA = new SingleValue();
             objA.InnerText = specialStringINF;
-            simpleValueValidTest(objA, float.PositiveInfinity, specialStringINF);
+            SimpleValueValidTest(objA, float.PositiveInfinity, specialStringINF);
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringNINF);
             objA = new SingleValue();
             objA.InnerText = specialStringNINF;
-            simpleValueValidTest(objA, float.NegativeInfinity, specialStringNINF);
+            SimpleValueValidTest(objA, float.NegativeInfinity, specialStringNINF);
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringInfinity);
             objA = new SingleValue();
             objA.InnerText = specialStringInfinity;
-            simpleValueValidTest(objA, float.PositiveInfinity, specialStringInfinity);
+            SimpleValueValidTest(objA, float.PositiveInfinity, specialStringInfinity);
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringNInfinity);
             objA = new SingleValue();
             objA.InnerText = specialStringNInfinity;
-            simpleValueValidTest(objA, float.NegativeInfinity, specialStringNInfinity);
+            SimpleValueValidTest(objA, float.NegativeInfinity, specialStringNInfinity);
 
             Log.Comment("Verifying equality...");
             objA = new SingleValue(validValue);
@@ -892,27 +892,27 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidStringValue);
             objA = new SingleValue();
             objA.InnerText = invalidStringValue;
-            InvalidOperation(objA, invalidStringValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidStringValue, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidStringINF);
             objA = new SingleValue();
             objA.InnerText = invalidStringINF;
-            InvalidOperation(objA, invalidStringINF, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidStringINF, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidStringNINF);
             objA = new SingleValue();
             objA.InnerText = invalidStringNINF;
-            InvalidOperation(objA, invalidStringNINF, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidStringNINF, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidStringInfinity);
             objA = new SingleValue();
             objA.InnerText = invalidStringInfinity;
-            InvalidOperation(objA, invalidStringInfinity, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidStringInfinity, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidStringNInfinity);
             objA = new SingleValue();
             objA.InnerText = invalidStringNInfinity;
-            InvalidOperation(objA, invalidStringNInfinity, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidStringNInfinity, (a, b) => ActionOfCompare(a, b));
         }
 
         [Fact]
@@ -944,24 +944,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(DoubleValue) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new DoubleValue(maxValue), maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new DoubleValue(maxValue), maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new DoubleValue(maxValue).Clone() as DoubleValue, maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new DoubleValue(maxValue).Clone() as DoubleValue, maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set Value with Min value and testing...");
             DoubleValue objA = new DoubleValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(objA, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set InnerText with Min value and testing...");
             DoubleValue objB = new DoubleValue();
             objB.InnerText = minValue.ToString("R", CultureInfo.InvariantCulture);
-            simpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Explicit Double conversion with value {0} and testing", validValue);
             objB = DoubleValue.FromDouble(validValue);
@@ -969,39 +969,39 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new DoubleValue(validValue);
-            simpleValueValidTest(new DoubleValue(objA), validValue, validValue.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new DoubleValue(objA), validValue, validValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialEpsilon);
-            simpleValueValidTest(new DoubleValue(specialEpsilon), specialEpsilon, specialEpsilon.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new DoubleValue(specialEpsilon), specialEpsilon, specialEpsilon.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialPositiveInfinity);
-            simpleValueValidTest(new DoubleValue(specialPositiveInfinity), specialPositiveInfinity, positiveInfinity);
+            SimpleValueValidTest(new DoubleValue(specialPositiveInfinity), specialPositiveInfinity, positiveInfinity);
 
             Log.Comment("Constructing with special value {0} and testing...", specialNegativeInfinity);
-            simpleValueValidTest(new DoubleValue(specialNegativeInfinity), specialNegativeInfinity, negativeInfinity);
+            SimpleValueValidTest(new DoubleValue(specialNegativeInfinity), specialNegativeInfinity, negativeInfinity);
 
             Log.Comment("Constructing with special value {0} and testing...", specialNaN);
-            simpleValueValidTest(new DoubleValue(specialNaN), specialNaN, specialNaN.ToString("R", CultureInfo.InvariantCulture));
+            SimpleValueValidTest(new DoubleValue(specialNaN), specialNaN, specialNaN.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringINF);
             objA = new DoubleValue();
             objA.InnerText = specialStringINF;
-            simpleValueValidTest(objA, double.PositiveInfinity, specialStringINF);
+            SimpleValueValidTest(objA, double.PositiveInfinity, specialStringINF);
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringNINF);
             objA = new DoubleValue();
             objA.InnerText = specialStringNINF;
-            simpleValueValidTest(objA, double.NegativeInfinity, specialStringNINF);
+            SimpleValueValidTest(objA, double.NegativeInfinity, specialStringNINF);
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringInfinity);
             objA = new DoubleValue();
             objA.InnerText = specialStringInfinity;
-            simpleValueValidTest(objA, double.PositiveInfinity, specialStringInfinity);
+            SimpleValueValidTest(objA, double.PositiveInfinity, specialStringInfinity);
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringNInfinity);
             objA = new DoubleValue();
             objA.InnerText = specialStringNInfinity;
-            simpleValueValidTest(objA, double.NegativeInfinity, specialStringNInfinity);
+            SimpleValueValidTest(objA, double.NegativeInfinity, specialStringNInfinity);
 
             Log.Comment("Verifying equality...");
             objA = new DoubleValue(validValue);
@@ -1026,27 +1026,27 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidStringValue);
             objA = new DoubleValue();
             objA.InnerText = invalidStringValue;
-            InvalidOperation(objA, invalidStringValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidStringValue, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidStringINF);
             objA = new DoubleValue();
             objA.InnerText = invalidStringINF;
-            InvalidOperation(objA, invalidStringINF, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidStringINF, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidStringNINF);
             objA = new DoubleValue();
             objA.InnerText = invalidStringNINF;
-            InvalidOperation(objA, invalidStringNINF, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidStringNINF, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidStringInfinity);
             objA = new DoubleValue();
             objA.InnerText = invalidStringInfinity;
-            InvalidOperation(objA, invalidStringInfinity, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidStringInfinity, (a, b) => ActionOfCompare(a, b));
 
             Log.Comment("ErrorHandling: Set InnerText with invalid value {0}...", invalidStringNInfinity);
             objA = new DoubleValue();
             objA.InnerText = invalidStringNInfinity;
-            InvalidOperation(objA, invalidStringNInfinity, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidStringNInfinity, (a, b) => ActionOfCompare(a, b));
         }
 
         [Fact]
@@ -1056,9 +1056,9 @@ namespace DocumentFormat.OpenXml.Tests
             DateTime maxValue = DateTime.MaxValue;
             DateTime minValue = DateTime.MinValue;
 
-            //var ratio = (decimal)new Random ().Next(0, 100) / 100;
+            // var ratio = (decimal)new Random ().Next(0, 100) / 100;
             var ratio = 0.5M;
-            DateTime validValue = new DateTime((long)(ratio * maxValue.Ticks + (1 - ratio) * minValue.Ticks));
+            DateTime validValue = new DateTime((long)((ratio * maxValue.Ticks) + ((1 - ratio) * minValue.Ticks)));
             string invalidValue = DateTime.Now.ToString();
 
             string datatimePattern = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'FFFFFFF";
@@ -1069,24 +1069,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(DateTimeValue) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new DateTimeValue(maxValue), maxValue, maxValue.ToString(datatimePattern));
+            SimpleValueValidTest(new DateTimeValue(maxValue), maxValue, maxValue.ToString(datatimePattern));
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new DateTimeValue(maxValue).Clone() as DateTimeValue, maxValue, maxValue.ToString(datatimePattern));
+            SimpleValueValidTest(new DateTimeValue(maxValue).Clone() as DateTimeValue, maxValue, maxValue.ToString(datatimePattern));
 
             Log.Comment("Set Value with Min value and testing...");
             DateTimeValue objA = new DateTimeValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString(datatimePattern));
+            SimpleValueValidTest(objA, minValue, minValue.ToString(datatimePattern));
 
             Log.Comment("Set InnerText with Min value and testing...");
             DateTimeValue objB = new DateTimeValue();
             objB.InnerText = minValue.ToString(datatimePattern);
-            simpleValueValidTest(objB, minValue, minValue.ToString(datatimePattern));
+            SimpleValueValidTest(objB, minValue, minValue.ToString(datatimePattern));
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString(datatimePattern));
+            SimpleValueValidTest(objB, minValue, minValue.ToString(datatimePattern));
 
             Log.Comment("Explicit conversion with value {0} and testing", validValue);
             objB = DateTimeValue.FromDateTime(validValue);
@@ -1094,7 +1094,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new DateTimeValue(validValue);
-            simpleValueValidTest(new DateTimeValue(objA), validValue, validValue.ToString(datatimePattern));
+            SimpleValueValidTest(new DateTimeValue(objA), validValue, validValue.ToString(datatimePattern));
 
             Log.Comment("Verifying equality...");
             objA = new DateTimeValue(validValue);
@@ -1119,7 +1119,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("ErrorHandling: Set InnerText with invalid value...");
             objA = new DateTimeValue();
             objA.InnerText = invalidValue;
-            InvalidOperation(objA, invalidValue, (a, b) => actionOfCompare(a, b));
+            InvalidOperation(objA, invalidValue, (a, b) => ActionOfCompare(a, b));
         }
 
         #region Common Functions
@@ -1157,7 +1157,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private void actionOfCompare<T>(OpenXmlSimpleValue<T> a, OpenXmlSimpleValue<T> b)
+        private void ActionOfCompare<T>(OpenXmlSimpleValue<T> a, OpenXmlSimpleValue<T> b)
             where T : struct
         {
             Log.Comment(string.Format("ObjectA {0} value.", a.HasValue ? "HAS" : "has NO"));
@@ -1166,7 +1166,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Verify(b.Equals(a.Value), "Instance constructed with invalid value CAN parse without error!");
         }
 
-        private void actionOfCompare<T1, T2>(OpenXmlSimpleValue<T1> a, T2 b)
+        private void ActionOfCompare<T1, T2>(OpenXmlSimpleValue<T1> a, T2 b)
             where T1 : struct
         {
             Log.Comment(string.Format("ObjectA {0} value.", a.HasValue ? "HAS" : "has NO"));
@@ -1174,7 +1174,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Verify(b.Equals(a.Value), "Instance constructed with invalid value CAN parse without error!");
         }
 
-        private void simpleValueValidTest<T>(OpenXmlSimpleValue<T> oxObj, T expectedValue, string expectedText)
+        private void SimpleValueValidTest<T>(OpenXmlSimpleValue<T> oxObj, T expectedValue, string expectedText)
             where T : struct
         {
             Log.Comment("Entering Generic Test Method...");
@@ -1209,7 +1209,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Leaving Generic Test Method...");
         }
 
-        private void simpleValueValidTestNonGeneric(Int32Value oxObj, int expectedValue, string expectedText)
+        private void SimpleValueValidTestNonGeneric(Int32Value oxObj, int expectedValue, string expectedText)
         {
             Log.Comment("Entering Non-Generic Test Method...");
 

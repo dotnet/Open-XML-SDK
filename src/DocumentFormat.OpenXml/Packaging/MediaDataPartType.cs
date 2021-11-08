@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// <summary>
         ///// AU Audio File (.au)
         ///// </summary>
-        //Basic,
+        // Basic,
 
         /// <summary>
         /// MIDI Audio (.mid)
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// <summary>
         ///// Windows Media Audio Redirector (.wax)
         ///// </summary>
-        //Wax,
+        // Wax,
 
         /// <summary>
         /// Windows Media Audio File (.wma)
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// <summary>
         ///// Advanced Streaming Format (.asf)
         ///// </summary>
-        //Asf,
+        // Asf,
 
         /// <summary>
         /// Advanced Stream Redirector File (.asx)
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// <summary>
         ///// Indeo Video File (.ivf)
         ///// </summary>
-        //Ivf,
+        // Ivf,
 
         /// <summary>
         /// MPEG 1 System Stream (.mpg)
@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// <summary>
         ///// Windows Media A/V File (.wm)
         ///// </summary>
-        //WM,
+        // WM,
 
         /// <summary>
         /// Windows Media File (.wmv)

@@ -24,6 +24,6 @@ namespace DocumentFormat.OpenXml
         ///// <summary>
         ///// Full populate the top N layers, and then lazy load others.
         ///// </summary>
-        //TopLayers
+        // TopLayers
     }
 }

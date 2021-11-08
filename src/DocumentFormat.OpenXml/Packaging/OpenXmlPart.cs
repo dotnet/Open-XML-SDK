@@ -22,6 +22,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract class OpenXmlPart : OpenXmlPartContainer
     {
+        private const string DefaultTargetExt = ".xml";
+
         private OpenXmlPackage? _openXmlPackage;
         private PackagePart? _packagePart;
         private Uri? _uri;
@@ -184,7 +186,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             Uri parentUri = parent is not null ? parent.Uri : new Uri("/", UriKind.Relative);
 
-            //OpenXmlPart parentPart = this._ownerPart;
+            // OpenXmlPart parentPart = this._ownerPart;
 
             // Uri is auto generated to make sure it's unique
             var targetPath = GetTargetPath(openXmlPackage, TargetPath) ?? ".";
@@ -461,14 +463,14 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// <summary>
         ///// Gets the parent part of the current part.
         ///// </summary>
-        //internal OpenXmlPart ParentPart
-        //{
+        // internal OpenXmlPart ParentPart
+        // {
         //    get
         //    {
         //        ThrowIfObjectDisposed();
         //        return this._ownerPart;
         //    }
-        //}
+        // }
 
         /// <summary>
         /// Gets a value that indicates the maximum allowable number of characters in an Open XML part. A zero (0) value specifies that the part can have an unlimited number of characters. A non-zero value specifies the maximum allowable number of characters in the part.
@@ -538,8 +540,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the file base name to be used for the part name in the package.
         /// </summary>
         internal abstract string TargetName { get; }
-
-        private const string DefaultTargetExt = ".xml";
 
         /// <summary>
         /// Gets the file extension to be used for the part in the package.
@@ -673,8 +673,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Only used for generated part classes which derive from this OpenXmlBasePart.
         /// </summary>
         /// <param name="partRootElement">The given partRootElement. Can be null.</param>
-        /// <remarks>
-        /// </remarks>
         /// <exception cref="ArgumentException">Thrown when the part's root element has already be associated with another OpenXmlPart.</exception>
         internal void SetDomTree(OpenXmlPartRootElement partRootElement)
         {
@@ -714,7 +712,7 @@ namespace DocumentFormat.OpenXml.Packaging
             _packagePart = null;
             _uri = null;
 
-            //this._ownerPart = null;
+            // this._ownerPart = null;
             if (InternalRootElement is not null)
             {
                 InternalRootElement.OpenXmlPart = null;
@@ -789,7 +787,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #region MC Staffs
 
-        internal MarkupCompatibilityProcessSettings? MCSettings;
+        internal MarkupCompatibilityProcessSettings? MCSettings { get; set; }
 
         #endregion
     }

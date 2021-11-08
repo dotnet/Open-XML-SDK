@@ -13,9 +13,9 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class OpenXmlElementTest2
     {
-        ///<summary>
-        ///TestGetPartRootElement.
-        ///</summary>
+        /// <summary>
+        /// TestGetPartRootElement.
+        /// </summary>
         [Fact]
         public void TestGetPartRootElement()
         {
@@ -31,9 +31,9 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(document, target);
         }
 
-        ///<summary>
-        ///TestGetNextNonMiscElementSibling.
-        ///</summary>
+        /// <summary>
+        /// TestGetNextNonMiscElementSibling.
+        /// </summary>
         [Fact]
         public void TestGetNextNonMiscElementSibling()
         {
@@ -53,9 +53,9 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(p.LastChild, target);
         }
 
-        ///<summary>
-        ///TestGetFirstNonMiscElementChild.
-        ///</summary>
+        /// <summary>
+        /// TestGetFirstNonMiscElementChild.
+        /// </summary>
         [Fact]
         public void TestGetFirstNonMiscElementChild()
         {
@@ -74,9 +74,9 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Null(target);
         }
 
-        ///<summary>
-        ///TestGetPartUri.
-        ///</summary>
+        /// <summary>
+        /// TestGetPartUri.
+        /// </summary>
         [Fact]
         public void TestGetPartUri()
         {
@@ -104,9 +104,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///TestGetXPathIndex.
-        ///</summary>
+        /// <summary>
+        /// TestGetXPathIndex.
+        /// </summary>
         [Fact]
         public void TestGetXPathIndex()
         {

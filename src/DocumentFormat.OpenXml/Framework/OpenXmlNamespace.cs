@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public override int GetHashCode()
         {
-            var hashcode = new HashCode();
+            var hashcode = default(HashCode);
 
             hashcode.Add(Uri, StringComparer.Ordinal);
 
@@ -282,25 +282,25 @@ namespace DocumentFormat.OpenXml.Framework
             { "http://schemas.microsoft.com/office/drawing/2016/SVG/main", "asvg", FileFormatVersions.Office2019 },
 
             // O21
-            { "http://schemas.microsoft.com/office/2020/mipLabelMetadata" , "clbl", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/drawing/2020/classificationShape"  , "aclsh", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/drawing/2018/sketchyshapes"  , "ask", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/drawing/2021/livefeed"  , "alf", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/2019/extlst"  , "oel", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/powerpoint/2018/8/main"  , "p188", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/powerpoint/2020/02/main"  , "p202", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/tasks/2019/documenttasks"  , "t", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/word/2018/wordml"  , "w16cur", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/word/2018/wordml/cex"  , "w16cex", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash"  , "w16sdtdh", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews"  , "xnsv", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage"  , "xlrdwi", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2"  , "xltc2", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/spreadsheetml/2018/08/main"  , "x16r3", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/spreadsheetml/2019/extlinksprops"  , "xxlnp", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh"  , "xlrvr", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020"  , "xxpim", FileFormatVersions.Office2021 },
-            { "http://schemas.microsoft.com/office/powerpoint/2019/12/main"  , "ppt1912SchemaUri", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/2020/mipLabelMetadata", "clbl", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/drawing/2020/classificationShape", "aclsh", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "ask", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/drawing/2021/livefeed", "alf", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/2019/extlst", "oel", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/powerpoint/2018/8/main", "p188", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/powerpoint/2020/02/main", "p202", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/tasks/2019/documenttasks", "t", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/word/2018/wordml", "w16cur", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/word/2018/wordml/cex", "w16cex", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash", "w16sdtdh", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "xnsv", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "xlrdwi", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2", "xltc2", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2018/08/main", "x16r3", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2019/extlinksprops", "xxlnp", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh", "xlrvr", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020", "xxpim", FileFormatVersions.Office2021 },
+            { "http://schemas.microsoft.com/office/powerpoint/2019/12/main", "ppt1912SchemaUri", FileFormatVersions.Office2021 },
         };
 
         internal static int Count => _namespaceResolver.Count;

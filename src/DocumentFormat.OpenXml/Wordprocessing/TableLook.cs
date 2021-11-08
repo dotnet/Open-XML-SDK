@@ -11,14 +11,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     {
         private const string StrictTranslationLocalName = "val";
 
-        private static readonly Dictionary<string, long> s_attributeMap = new Dictionary<string, long>(StringComparer.Ordinal)
+        private static readonly Dictionary<string, long> AttributeMap = new Dictionary<string, long>(StringComparer.Ordinal)
         {
-            { "firstRow", 0x0020},
-            { "lastRow", 0x040},
-            { "firstColumn", 0x080},
-            { "lastColumn", 0x100},
-            { "noHBand", 0x200},
-            { "noVBand", 0x400},
+            { "firstRow", 0x0020 },
+            { "lastRow", 0x040 },
+            { "firstColumn", 0x080 },
+            { "lastColumn", 0x100 },
+            { "noHBand", 0x200 },
+            { "noVBand", 0x400 },
         };
 
         /// <remarks>
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </remarks>
         private protected override bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string? value)
         {
-            if (!s_attributeMap.TryGetValue(qname.Name, out var result))
+            if (!AttributeMap.TryGetValue(qname.Name, out var result))
             {
                 return base.StrictTranslateAttribute(qname, value);
             }

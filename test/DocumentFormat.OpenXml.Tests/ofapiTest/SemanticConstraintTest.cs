@@ -19,19 +19,19 @@ namespace DocumentFormat.OpenXml.Tests
             var context = new ValidationContext();
             context.Stack.Push(element: column);
 
-            var constraint = new AttributeMinMaxConstraint(string.Empty, "min", string.Empty, "max") ;
+            var constraint = new AttributeMinMaxConstraint(string.Empty, "min", string.Empty, "max");
 
             column.Max = 2;
             column.Min = 1;
-            Assert.Null(constraint.ValidateCore(context)); //max > min, should pass validation
+            Assert.Null(constraint.ValidateCore(context)); // max > min, should pass validation
 
             column.Max = 2;
             column.Min = 2;
-            Assert.Null(constraint.ValidateCore(context)); //max == min, should pass validation
+            Assert.Null(constraint.ValidateCore(context)); // max == min, should pass validation
 
             column.Max = 2;
             column.Min = 3;
-            Assert.NotNull(constraint.ValidateCore(context)); //max < min, validation should be failed.
+            Assert.NotNull(constraint.ValidateCore(context)); // max < min, validation should be failed.
         }
 
         [Fact]

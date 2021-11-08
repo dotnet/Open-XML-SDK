@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
 
-            using (var stream = GetStream(TestFiles.complex0docx))
+            using (var stream = GetStream(TestFiles.Complex0docx))
             {
                 var dataBefore = GetBytes(stream);
 
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Tests
                 return input;
             }
 
-            using (var stream = GetStream(TestFiles.complex0docx, true))
+            using (var stream = GetStream(TestFiles.Complex0docx, true))
             {
                 NormalizeDocument(stream);
 
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal("000000", heading1Style.Descendants<Color>().First().Val.Value);
                 }
 
-                using (var originalStream = GetStream(TestFiles.complex0docx))
+                using (var originalStream = GetStream(TestFiles.Complex0docx))
                 using (var originalDoc = WordprocessingDocument.Open(originalStream, false))
                 using (var changedDoc = WordprocessingDocument.Open(stream, false))
                 {
@@ -116,9 +116,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///AutoSaveTestCreate.
-        ///</summary>
+        /// <summary>
+        /// AutoSaveTestCreate.
+        /// </summary>
         [Fact]
         public void AutoSaveTestCreate()
         {
@@ -178,24 +178,18 @@ namespace DocumentFormat.OpenXml.Tests
                                                                 new a.Offset() { X = 0L, Y = 0L },
                                                                 new a.Extents() { Cx = 2145665L, Cy = 2177415L }),
                                                             new a.PresetGeometry(
-                                                                new a.AdjustValueList()
-                                                            )
+                                                                new a.AdjustValueList())
                                                             { Preset = a.ShapeTypeValues.Rectangle },
                                                             new a.NoFill(),
                                                             new a.Outline(
                                                                 new a.NoFill(),
                                                                 new a.Miter() { Limit = 800000 },
                                                                 new a.HeadEnd(),
-                                                                new a.TailEnd()
-                                                            )
-                                                            { Width = 9525 }
-                                                        )
-                                                        { BlackWhiteMode = a.BlackWhiteModeValues.Auto })
-                                                )
-                                                { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" })
-                                        )
-                                        { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 0U, DistanceFromRight = 0U }))
-                                 ));
+                                                                new a.TailEnd())
+                                                            { Width = 9525 })
+                                                        { BlackWhiteMode = a.BlackWhiteModeValues.Auto }))
+                                                { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" }))
+                                        { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 0U, DistanceFromRight = 0U }))));
                 }
 
                 // validate created
@@ -209,16 +203,16 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///AutoSaveTestPptx.
-        ///</summary>
+        /// <summary>
+        /// AutoSaveTestPptx.
+        /// </summary>
         [Fact]
         public void AutoSaveTestPptx()
         {
             // Change something in the master part.
             var textCount = 0;
 
-            using (var stream = GetStream(TestFiles.autosave, true))
+            using (var stream = GetStream(TestFiles.Autosave, true))
             {
                 using (var doc = PresentationDocument.Open(stream, true))
                 {
@@ -259,7 +253,7 @@ namespace DocumentFormat.OpenXml.Tests
                 AutoSave = false,
             };
 
-            using (var stream = GetStream(TestFiles.complex0docx, true))
+            using (var stream = GetStream(TestFiles.Complex0docx, true))
             {
                 using (var doc = WordprocessingDocument.Open(stream, true, s))
                 {
@@ -321,7 +315,7 @@ namespace DocumentFormat.OpenXml.Tests
                 AutoSave = false,
             };
 
-            using (var stream = GetStream(TestFiles.autosave, true))
+            using (var stream = GetStream(TestFiles.Autosave, true))
             {
                 using (var doc = PresentationDocument.Open(stream, true, s))
                 {
@@ -409,7 +403,7 @@ namespace DocumentFormat.OpenXml.Tests
                 AutoSave = false,
             };
 
-            using (var stream = GetStream(TestFiles.basicspreadsheet, true))
+            using (var stream = GetStream(TestFiles.Basicspreadsheet, true))
             {
                 using (var doc = SpreadsheetDocument.Open(stream, true, s))
                 {
@@ -478,13 +472,13 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///OpenXmlPackagePartIteraterTest.
-        ///</summary>
+        /// <summary>
+        /// OpenXmlPackagePartIteraterTest.
+        /// </summary>
         [Fact]
         public void OpenXmlPackageGetAllPartsTestWord()
         {
-            using (var stream = GetStream(TestFiles.complex0docx))
+            using (var stream = GetStream(TestFiles.Complex0docx))
             using (var document = WordprocessingDocument.Open(stream, false))
             {
                 var parts = document.GetAllParts();
@@ -499,7 +493,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OpenXmlPackageGetAllPartsTestPowerPoint()
         {
-            using (var stream = GetStream(TestFiles.o09_Performance_typical_pptx))
+            using (var stream = GetStream(TestFiles.O09_Performance_typical_pptx))
             using (var document = PresentationDocument.Open(stream, false))
             {
                 Assert.Equal(65, document.GetAllParts().Count());
@@ -515,7 +509,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CreateRelationshipToPartTest()
         {
-            using (var stream = GetStream(TestFiles.autosave, true))
+            using (var stream = GetStream(TestFiles.Autosave, true))
             using (var doc = PresentationDocument.Open(stream, true))
             {
                 var slide1 = doc.PresentationPart.GetPartById("rId2");
@@ -547,9 +541,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///ChangeDocumentTypeInternalTest.
-        ///</summary>
+        /// <summary>
+        /// ChangeDocumentTypeInternalTest.
+        /// </summary>
         [Fact]
         public void ChangeDocumentTypeInternalTest()
         {
@@ -582,9 +576,9 @@ namespace DocumentFormat.OpenXml.Tests
 
 #pragma warning disable 0618 // CS0618: A class member was marked with the Obsolete attribute, such that a warning will be issued when the class member is referenced.
 
-        ///<summary>
-        ///PackageValidateTest.
-        ///</summary>
+        /// <summary>
+        /// PackageValidateTest.
+        /// </summary>
         [Fact]
         public void PackageValidateTest()
         {
@@ -625,9 +619,9 @@ namespace DocumentFormat.OpenXml.Tests
 
 #pragma warning restore 0618
 
-        ///<summary>
-        ///AutoSaveCreateTest.
-        ///</summary>
+        /// <summary>
+        /// AutoSaveCreateTest.
+        /// </summary>
         [Fact]
         public void AutoSaveCreateTestDefault()
         {
@@ -639,7 +633,7 @@ namespace DocumentFormat.OpenXml.Tests
                     doc.MainDocumentPart.Document = new Document();
                 }
 
-                //should be autosaved
+                // should be autosaved
                 using (var doc = WordprocessingDocument.Open(stream, false))
                 {
                     Assert.NotNull(doc.MainDocumentPart.Document);
@@ -658,7 +652,7 @@ namespace DocumentFormat.OpenXml.Tests
                     doc.MainDocumentPart.Document = new Document();
                 }
 
-                //should not be autosaved
+                // should not be autosaved
                 using (var doc = WordprocessingDocument.Open(stream, false))
                 {
                     Assert.Null(doc.MainDocumentPart.Document);
@@ -666,13 +660,13 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///LoadPackageWithMediaReferenceTest.
-        ///</summary>
+        /// <summary>
+        /// LoadPackageWithMediaReferenceTest.
+        /// </summary>
         [Fact]
         public void LoadPackageWithMediaReferenceTest()
         {
-            using (var stream = GetStream(TestFiles.mediareference, true))
+            using (var stream = GetStream(TestFiles.Mediareference, true))
             {
                 using (var testDocument = PresentationDocument.Open(stream, true))
                 {
@@ -763,9 +757,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
-        ///MediaDataPartReferenceTest.
-        ///</summary>
+        /// <summary>
+        /// MediaDataPartReferenceTest.
+        /// </summary>
         [Fact]
         public void MediaDataPartReferenceTest()
         {

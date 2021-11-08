@@ -26,90 +26,90 @@ namespace DocumentFormat.OpenXml.Tests
         /// <typeparam name="T">the PartRootElement</typeparam>
         /// <param name="part">the openXmlPart which the root element existed on</param>
         /// <param name="root">the loaded part root element to be traversed</param>
-        private void TestTraverseUp<U>(OpenXmlPart part, OpenXmlElement root)
-            where U : OpenXmlElement
+        private void TestTraverseUp<T>(OpenXmlPart part, OpenXmlElement root)
+            where T : OpenXmlElement
         {
-            string UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
+            string uTagName = (Activator.CreateInstance(typeof(T)) as OpenXmlElement).LocalName;
 
             Log.Comment("retrieve last child of the root element in XElement");
-            XElement Xroot = ConvertToXElement(part, root);
+            XElement xroot = ConvertToXElement(part, root);
 
             Log.Comment("Check if the parent returns correctly");
-            VerifyEqual(Xroot.Parent, root.Parent, part);
+            VerifyEqual(xroot.Parent, root.Parent, part);
 
             Log.Comment("check if Ancestors returns correctly");
-            VerifyEqual(Xroot.Ancestors(), root.Ancestors(), part);
+            VerifyEqual(xroot.Ancestors(), root.Ancestors(), part);
 
             Log.Comment("Check if the Ancestors<T> returns correctly");
             Log.Comment("check if the Ancestors<OpenXmlElement> returns correctly");
-            VerifyEqual(Xroot.Ancestors(), root.Ancestors<OpenXmlElement>(), part);
+            VerifyEqual(xroot.Ancestors(), root.Ancestors<OpenXmlElement>(), part);
 
-            Log.Comment("check if the Ancestors<{0}> returns correctly", typeof(U).Name);
-            VerifyEqual(Xroot.Ancestors().Where(x => x.Name.LocalName == UTagName), root.Ancestors<U>(), part);
+            Log.Comment("check if the Ancestors<{0}> returns correctly", typeof(T).Name);
+            VerifyEqual(xroot.Ancestors().Where(x => x.Name.LocalName == uTagName), root.Ancestors<T>(), part);
         }
 
         /// <summary>
         /// Traversing down the specified element using HasChildren, FirstChild, LastChild, ChildElements(), Descendants(), Elements()
         /// GetFirstChildOfType, and GetEnumerator methods
         /// </summary>
-        /// <typeparam name="U">The specified child type need to be traversed</typeparam>
+        /// <typeparam name="T">The specified child type need to be traversed</typeparam>
         /// <param name="part">the OpenXmlPart in which the element exists</param>
         /// <param name="root">the OpenXmlElement need to be traversed</param>
-        private void TestTraverseDown<U>(OpenXmlPart part, OpenXmlElement root)
-            where U : OpenXmlElement
+        private void TestTraverseDown<T>(OpenXmlPart part, OpenXmlElement root)
+            where T : OpenXmlElement
         {
-            string UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
-            XElement Xroot = ConvertToXElement(part, root);
+            string uTagName = (Activator.CreateInstance(typeof(T)) as OpenXmlElement).LocalName;
+            XElement xroot = ConvertToXElement(part, root);
 
             Log.Comment(" ****** test HasChildren ******");
             Log.Comment("check if the hasChildren is correct");
-            Log.VerifyTrue(Xroot.HasElements == root.HasChildren, "hasChildren is not correct");
+            Log.VerifyTrue(xroot.HasElements == root.HasChildren, "hasChildren is not correct");
 
             if (root.HasChildren)
             {
                 OpenXmlElement firstChild = root.FirstChild;
-                XElement XfirstChild = Xroot.Elements().ElementAt(0);
+                XElement xfirstChild = xroot.Elements().ElementAt(0);
 
                 Log.Comment(" ****** test FirstChild ******");
                 Log.Comment("check if the first child retrieved is correct");
-                VerifyEqual(XfirstChild, ConvertToXElement(part, firstChild), null);
+                VerifyEqual(xfirstChild, ConvertToXElement(part, firstChild), null);
 
                 Log.Comment(" ****** test LastChild ******");
                 Log.Comment("check if the last child retrieved is correct");
-                VerifyEqual(Xroot.Elements().Last(), ConvertToXElement(part, root.LastChild), null);
+                VerifyEqual(xroot.Elements().Last(), ConvertToXElement(part, root.LastChild), null);
 
                 Log.Comment(" ****** test ChildElements ******");
                 Log.Comment("check if the children is returned correct");
-                VerifyEqual(Xroot.Elements(), root.ChildElements, part);
+                VerifyEqual(xroot.Elements(), root.ChildElements, part);
 
                 Log.Comment(" ****** test Descendants ******");
                 Log.Comment("check if the descendants if the first child returned are correct");
-                VerifyEqual(Xroot.Descendants(), root.Descendants(), part);
+                VerifyEqual(xroot.Descendants(), root.Descendants(), part);
 
                 Log.Comment(" ******test Elements<T> ******");
                 Log.Comment("check if the Element<OpenXmlElement> returned are correct");
-                VerifyEqual(Xroot.Elements(), root.Elements<OpenXmlElement>(), part);
+                VerifyEqual(xroot.Elements(), root.Elements<OpenXmlElement>(), part);
 
-                Log.Comment("check if the Element<{0}> returned are correct", typeof(U).Name);
-                VerifyEqual(Xroot.Elements().Where(x => x.Name.LocalName == UTagName), root.Elements<U>(), part);
+                Log.Comment("check if the Element<{0}> returned are correct", typeof(T).Name);
+                VerifyEqual(xroot.Elements().Where(x => x.Name.LocalName == uTagName), root.Elements<T>(), part);
 
                 Log.Comment(" ****** test Descendants<T> ******");
                 Log.Comment("check if the Descendants<OpenXmlElement> of the first child are returned correctly");
-                VerifyEqual(Xroot.Descendants(), root.Descendants<OpenXmlElement>(), part);
+                VerifyEqual(xroot.Descendants(), root.Descendants<OpenXmlElement>(), part);
 
-                Log.Comment("check if the Descendants<{0}> returned are correct", typeof(U).Name);
-                VerifyEqual(Xroot.Descendants().Where(x => x.Name.LocalName == UTagName), root.Descendants<U>(), part);
+                Log.Comment("check if the Descendants<{0}> returned are correct", typeof(T).Name);
+                VerifyEqual(xroot.Descendants().Where(x => x.Name.LocalName == uTagName), root.Descendants<T>(), part);
 
                 Log.Comment(" ****** test GetFirstChildOfType<T> ******");
                 Log.Comment("check if the GetFirstChild<OpenXmlElement> returns the first child element");
-                VerifyEqual(Xroot.Elements().First(), ConvertToXElement(part, root.GetFirstChild<OpenXmlElement>()), null);
+                VerifyEqual(xroot.Elements().First(), ConvertToXElement(part, root.GetFirstChild<OpenXmlElement>()), null);
 
-                Log.Comment("check if the GetFirstChild<{0}> returns the correct result", typeof(U).Name);
-                VerifyEqual(Xroot.Elements().Where(x => x.Name.LocalName == UTagName).First(), ConvertToXElement(part, root.GetFirstChild<U>()), null);
+                Log.Comment("check if the GetFirstChild<{0}> returns the correct result", typeof(T).Name);
+                VerifyEqual(xroot.Elements().Where(x => x.Name.LocalName == uTagName).First(), ConvertToXElement(part, root.GetFirstChild<T>()), null);
 
                 Log.Comment(" ****** test GetEnumerator() ******");
                 Log.Comment("check if the GetEnumerator returns the correct result");
-                VerifyEqual(Xroot.Elements(), root, part);
+                VerifyEqual(xroot.Elements(), root, part);
 
                 Log.Comment("***** test IsBefore() ******");
                 foreach (var element in root.Descendants())
@@ -151,36 +151,36 @@ namespace DocumentFormat.OpenXml.Tests
         /// Traversing siblings of the specified element using PreviousSibling, PreviousSibling &lt T &gt
         /// NextSibling, NextSibling&ltT&gt, ElementsBefore, ElementsAfter, IsBefore, IsAfter"/>
         /// </summary>
-        /// <typeparam name="U">Type of the sibling used by generic traversing method</typeparam>
+        /// <typeparam name="T">Type of the sibling used by generic traversing method</typeparam>
         /// <param name="part">the OpenXmlPart in which the element exists</param>
-        /// <param name="Element">the OpenXmlElement need to be traversed</param>
-        private void TestTraverseSibling<U>(OpenXmlPart part, OpenXmlElement Element)
-            where U : OpenXmlElement
+        /// <param name="element">the OpenXmlElement need to be traversed</param>
+        private void TestTraverseSibling<T>(OpenXmlPart part, OpenXmlElement element)
+            where T : OpenXmlElement
         {
-            string UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
+            string uTagName = (Activator.CreateInstance(typeof(T)) as OpenXmlElement).LocalName;
 
-            OpenXmlElement walker = Element;
-            XElement Xele = ConvertToXElement(part, Element);
-            XElement Xwalker = Xele;
+            OpenXmlElement walker = element;
+            XElement xele = ConvertToXElement(part, element);
+            XElement xwalker = xele;
 
             Log.Comment("****** test ElementsAfter ******");
-            VerifyEqual(Xwalker.ElementsAfterSelf(), walker.ElementsAfter(), part);
+            VerifyEqual(xwalker.ElementsAfterSelf(), walker.ElementsAfter(), part);
 
             Log.Comment("****** test NextSibling ******");
             Log.Comment("check if the nextSibling returns correctly");
 
-            while (Xwalker.NextNode is not null && walker.NextSibling() is not null)
+            while (xwalker.NextNode is not null && walker.NextSibling() is not null)
             {
-                Xwalker = Xwalker.ElementsAfterSelf().First();
+                xwalker = xwalker.ElementsAfterSelf().First();
                 walker = walker.NextSibling();
 
-                VerifyEqual(Xwalker, walker, part);
+                VerifyEqual(xwalker, walker, part);
             }
 
-            if (Xwalker.NextNode is null && walker.NextSibling() is null)
+            if (xwalker.NextNode is null && walker.NextSibling() is null)
             {
                 Log.Comment("check if the current element is the last sibling of the original element");
-                VerifyEqual(Xele.Parent.Elements().Last(), walker, part);
+                VerifyEqual(xele.Parent.Elements().Last(), walker, part);
 
                 Log.Pass("All next siblings have been retrieved correctly");
             }
@@ -190,20 +190,20 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Log.Comment("****** test ElementsBefore ******");
-            VerifyEqual(Xwalker.ElementsBeforeSelf(), walker.ElementsBefore(), part);
+            VerifyEqual(xwalker.ElementsBeforeSelf(), walker.ElementsBefore(), part);
 
             Log.Comment("****** test PreviousSibling ******");
-            while (Xwalker.PreviousNode is not null && walker.PreviousSibling() is not null)
+            while (xwalker.PreviousNode is not null && walker.PreviousSibling() is not null)
             {
-                Xwalker = Xwalker.ElementsBeforeSelf().Last();
+                xwalker = xwalker.ElementsBeforeSelf().Last();
                 walker = walker.PreviousSibling();
-                VerifyEqual(Xwalker, walker, part);
+                VerifyEqual(xwalker, walker, part);
             }
 
-            if (Xwalker.PreviousNode is null && walker.PreviousSibling() is null)
+            if (xwalker.PreviousNode is null && walker.PreviousSibling() is null)
             {
                 Log.Comment("check if the current element is the first sibling of the original element");
-                VerifyEqual(Xele.Parent.Elements().First(), walker, part);
+                VerifyEqual(xele.Parent.Elements().First(), walker, part);
 
                 Log.Pass("All Previous siblings have been retrieved correctly");
             }
@@ -214,18 +214,18 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("****** test NextSibling<OpenXmlElement> ******");
 
-            while (Xwalker.NextNode is not null && walker.NextSibling() is not null)
+            while (xwalker.NextNode is not null && walker.NextSibling() is not null)
             {
-                Xwalker = Xwalker.ElementsAfterSelf().First();
+                xwalker = xwalker.ElementsAfterSelf().First();
                 walker = walker.NextSibling<OpenXmlElement>();
 
-                VerifyEqual(Xwalker, walker, part);
+                VerifyEqual(xwalker, walker, part);
             }
 
-            if (Xwalker.NextNode is null && walker.NextSibling() is null)
+            if (xwalker.NextNode is null && walker.NextSibling() is null)
             {
                 Log.Comment("check if the current element is the last sibling of the original element");
-                VerifyEqual(Xele.Parent.Elements().Last(), walker, part);
+                VerifyEqual(xele.Parent.Elements().Last(), walker, part);
 
                 Log.Pass("All next siblings have been retrieved correctly");
             }
@@ -235,17 +235,17 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Log.Comment("****** test PreviousSibling<OpenXmlElement>() ******");
-            while (Xwalker.PreviousNode is not null && walker.PreviousSibling<OpenXmlElement>() is not null)
+            while (xwalker.PreviousNode is not null && walker.PreviousSibling<OpenXmlElement>() is not null)
             {
-                Xwalker = Xwalker.ElementsBeforeSelf().Last();
+                xwalker = xwalker.ElementsBeforeSelf().Last();
                 walker = walker.PreviousSibling<OpenXmlElement>();
-                VerifyEqual(Xwalker, walker, part);
+                VerifyEqual(xwalker, walker, part);
             }
 
-            if (Xwalker.PreviousNode is null && walker.PreviousSibling<OpenXmlElement>() is null)
+            if (xwalker.PreviousNode is null && walker.PreviousSibling<OpenXmlElement>() is null)
             {
                 Log.Comment("check if the current element is the first sibling of the original element");
-                VerifyEqual(Xele.Parent.Elements().First(), walker, part);
+                VerifyEqual(xele.Parent.Elements().First(), walker, part);
 
                 Log.Pass("All Previous siblings have been retrieved correctly");
             }
@@ -254,31 +254,31 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Fail("PreviousSibling doesn't return correctly");
             }
 
-            Log.Comment("****** test NextSibling<{0}> ******", typeof(U).Name);
-            while (Xwalker.ElementsAfterSelf().Where(x => x.Name.LocalName == UTagName).Any() && walker.NextSibling<U>() is not null)
+            Log.Comment("****** test NextSibling<{0}> ******", typeof(T).Name);
+            while (xwalker.ElementsAfterSelf().Where(x => x.Name.LocalName == uTagName).Any() && walker.NextSibling<T>() is not null)
             {
-                Xwalker = Xwalker.ElementsAfterSelf().Where(x => x.Name.LocalName == UTagName).First();
-                walker = walker.NextSibling<U>();
+                xwalker = xwalker.ElementsAfterSelf().Where(x => x.Name.LocalName == uTagName).First();
+                walker = walker.NextSibling<T>();
 
-                VerifyEqual(Xwalker, walker, part);
+                VerifyEqual(xwalker, walker, part);
             }
 
-            Log.Comment("****** test PreviousSibling<{0}>() ******", typeof(U).Name);
-            while (Xwalker.ElementsBeforeSelf().Where(x => x.Name.LocalName == UTagName).Any() && walker.PreviousSibling<U>() is not null)
+            Log.Comment("****** test PreviousSibling<{0}>() ******", typeof(T).Name);
+            while (xwalker.ElementsBeforeSelf().Where(x => x.Name.LocalName == uTagName).Any() && walker.PreviousSibling<T>() is not null)
             {
-                Xwalker = Xwalker.ElementsBeforeSelf().Where(x => x.Name.LocalName == UTagName).Last();
-                walker = walker.PreviousSibling<U>();
-                VerifyEqual(Xwalker, walker, part);
+                xwalker = xwalker.ElementsBeforeSelf().Where(x => x.Name.LocalName == uTagName).Last();
+                walker = walker.PreviousSibling<T>();
+                VerifyEqual(xwalker, walker, part);
             }
         }
 
         [Theory]
         [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
         [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AutoSpaceDE)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.empty)]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.Empty)]
         public void TraverseWordDocument(string path)
         {
-            //description = " Case ID: 75567, 75568, 75505, 75506, 76083, 76084";
+            // description = " Case ID: 75567, 75568, 75505, 75506, 76083, 76084";
             using (var file = TestAssets.GetStream(path))
             using (var doc = WordprocessingDocument.Open(file, false))
             {
@@ -351,9 +351,9 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Theory]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charsAnimationFlyInbyletterpptx)]
-        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.smallset.Text_withExtrusion_200charspptx)]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.Smallset.Text_withExtrusion_200charsAnimationFlyInallatoncepptx)]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.Smallset.Text_withExtrusion_200charsAnimationFlyInbyletterpptx)]
+        [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Presentation.Smallset.Text_withExtrusion_200charspptx)]
         public void TraversePPTDocument(string path)
         {
             using (var file = TestAssets.GetStream(path))

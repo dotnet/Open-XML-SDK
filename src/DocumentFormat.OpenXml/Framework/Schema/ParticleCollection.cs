@@ -299,7 +299,8 @@ namespace DocumentFormat.OpenXml.Framework.Schema
                     }
 
                     Path = _collection._compiled.Find(Current)!;
-                } while (Path is null);
+                }
+                while (Path is null);
             }
         }
     }

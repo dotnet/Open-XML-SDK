@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml
             {
                 byte b = bytes[i];
                 chars[i * 2] = ToCharUpper(b >> 4);
-                chars[i * 2 + 1] = ToCharUpper(b);
+                chars[(i * 2) + 1] = ToCharUpper(b);
             }
 
             return new string(chars);

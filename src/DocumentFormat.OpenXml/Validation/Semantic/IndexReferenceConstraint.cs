@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var attribute = element.ParsedState.Attributes[_attribute];
 
-            //if the attribute is omitted, semantic validation will do nothing
+            // if the attribute is omitted, semantic validation will do nothing
             if (attribute.Value is null || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             if (!int.TryParse(attribute.Value, out var index))
             {
-                return null; //if attribute is not int, schema validation will cover this error.
+                return null; // if attribute is not int, schema validation will cover this error.
             }
 
             var result = GetRefElementCount(context);

@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 case XsdAny.Other:
                     // Elements from any namespace that is not the target namespace of the parent element containing this element can be present.
                     if (string.IsNullOrEmpty(element.NamespaceUri) ||
-                        element.Parent is not null && element.NamespaceUri != element.Parent.NamespaceUri)
+                        (element.Parent is not null && element.NamespaceUri != element.Parent.NamespaceUri))
                     {
                         particleMatchInfo.Match = ParticleMatch.Matched;
                         particleMatchInfo.LastMatchedElement = element;

@@ -19,9 +19,9 @@ namespace DocumentFormat.OpenXml.Benchmarks
         {
             _particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0 , 1),
-                new ElementParticle(typeof(T2), 0 , 10),
-                new ElementParticle(typeof(T3), 0 , 1),
+                new ElementParticle(typeof(T1), 0, 1),
+                new ElementParticle(typeof(T2), 0, 10),
+                new ElementParticle(typeof(T3), 0, 1),
             }.Compile();
         }
 

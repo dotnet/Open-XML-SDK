@@ -180,118 +180,118 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Find Part
 
-        /// <summary> get any reflectable part in given package. </summary>
-        internal GetTargetPart getAnyOpenXmlPart =
+        /// <summary>Gets any reflectable part in given package. </summary>
+        internal GetTargetPart GetAnyOpenXmlPart =>
             p => p.DescendantParts()
                 .Where(pa => pa.IsReflectable() && pa.ContentType != "application/xml")
                 .PickSecond();
 
-        /// <summary> get main part of given package. </summary>
-        internal GetTargetPart getMainPart = p => p.MainPart();
+        /// <summary>Gets main part of given package. </summary>
+        internal GetTargetPart GetMainPart => p => p.MainPart();
 
-        /// <summary> get non-main part of given Package. </summary>
-        internal GetTargetPart getNonMainPart =
+        /// <summary>Gets non-main part of given Package. </summary>
+        internal GetTargetPart GetNonMainPart =>
             p => p.NonMainParts()
                 .Where(pa => pa.IsReflectable() && pa.ContentType != "application/xml")
                 .PickSecond();
 
-        /// <summary> get the first slide part of given package. </summary>
-        internal GetTargetPart getSlidePart =
+        /// <summary>Gets the first slide part of given package. </summary>
+        internal GetTargetPart GetSlidePart =>
             p => p.MainPart().GetPartsOfType<SlidePart>().FirstOrDefault();
 
-        /// <summary> get the first worksheet part of given package. </summary>
-        internal GetTargetPart getFirstSheetPart =
+        /// <summary>Gets the first worksheet part of given package. </summary>
+        internal GetTargetPart GetFirstSheetPart =>
             p => p.MainPart().GetPartsOfType<WorksheetPart>().FirstOrDefault();
 
-        /// <summary> get the last worksheet part of given package. </summary>
-        internal GetTargetPart getLastSheetPart =
+        /// <summary>Gets the last worksheet part of given package. </summary>
+        internal GetTargetPart GetLastSheetPart =>
             p => p.MainPart().GetPartsOfType<WorksheetPart>().LastOrDefault();
 
         #endregion Find Part
 
         #region Find Element
 
-        /// <summary>Get body element of the document.</summary>
-        internal GetTargetElement getBody =
+        /// <summary>Gets body element of the document.</summary>
+        internal GetTargetElement GetBody =>
              e => e.Descendants().OfType<Body>().FirstOrDefault();
 
-        /// <summary> Get part root of current element.</summary>
-        internal GetTargetElement getPartRoot =
+        /// <summary>Gets part root of current element.</summary>
+        internal GetTargetElement GetPartRoot =>
             e => e.Parent is null ? (e is OpenXmlPartRootElement ? e : null) : e.Ancestors<OpenXmlPartRootElement>().FirstOrDefault();
 
-        /// <summary> Get parent of current element.</summary>
-        internal GetTargetElement getAnyAncestor =
+        /// <summary>Gets parent of current element.</summary>
+        internal GetTargetElement GetAnyAncestor =>
             e => e.Ancestors().PickSecond();
 
-        /// <summary> Get root element of current one.</summary>
-        internal GetTargetElement getRootElement =
+        /// <summary>Gets root element of current one.</summary>
+        internal GetTargetElement GetRootElement =>
             e => e.Parent is null ? e : e.Ancestors().LastOrDefault();
 
-        /// <summary> Get parent of current element.</summary>
-        internal GetTargetElement getParent =
+        /// <summary>Gets parent of current element.</summary>
+        internal GetTargetElement GetParent =>
             e => e.Parent;
 
-        /// <summary> Get current element itself.</summary>
-        internal GetTargetElement getSelf =
+        /// <summary>Gets current element itself.</summary>
+        internal GetTargetElement GetSelf =>
             e => e;
 
-        /// <summary> Get null as return vlaue. Useful for invalid cases.</summary>
-        internal GetTargetElement getNull =
+        /// <summary>Gets null as return vlaue. Useful for invalid cases.</summary>
+        internal GetTargetElement GetNull =>
             e => null;
 
-        /// <summary> Get descendant of OpenXmlUnknownElement</summary>
-        internal GetTargetElement getUnknownElement =
+        /// <summary>Gets descendant of OpenXmlUnknownElement</summary>
+        internal GetTargetElement GetUnknownElement =>
             e => e.Descendants<OpenXmlUnknownElement>().FirstOrDefault();
 
-        /// <summary> Get descendant of OpenXmlMiscNode</summary>
-        internal GetTargetElement getMiscNode =
+        /// <summary>Gets descendant of OpenXmlMiscNode</summary>
+        internal GetTargetElement GetMiscNode =>
             e => e.Descendants<OpenXmlMiscNode>().FirstOrDefault();
 
-        /// <summary>Get element with parent and sibling. </summary>
-        internal GetTargetElement getElementWithParentAndSibling =
+        /// <summary>Gets element with parent and sibling. </summary>
+        internal GetTargetElement GetElementWithParentAndSibling =>
             e => e.Descendants().Where(d => d.Parent is not null && d.Parent.ChildElements.Count > 1).First();
 
-        /// <summary>Get element without children</summary>
-        internal GetTargetElement getElementWithoutChildren =
+        /// <summary>Gets element without children</summary>
+        internal GetTargetElement GetElementWithoutChildren =>
             e => e.Descendants<OpenXmlCompositeElement>().Where(d => d.ChildElements.Count == 0).FirstOrDefault();
 
-        /// <summary>Get element with ONE child</summary>
-        internal GetTargetElement getElementWithChild =
+        /// <summary>Gets element with ONE child</summary>
+        internal GetTargetElement GetElementWithChild =>
             e => e.Descendants().Where(d => d.ChildElements.Count == 1).FirstOrDefault();
 
-        /// <summary>Get element with children</summary>
-        internal GetTargetElement getElementWithChildren =
+        /// <summary>Gets element with children</summary>
+        internal GetTargetElement GetElementWithChildren =>
             e => e.Descendants().Where(d => d.ChildElements.Count > 1).FirstOrDefault();
 
-        /// <summary>Get element with children</summary>
-        internal GetTargetElement getElementWithAttributesOnly =
+        /// <summary>Gets element with children</summary>
+        internal GetTargetElement GetElementWithAttributesOnly =>
             e => e.Descendants<OpenXmlCompositeElement>().Where(d => d.GetAttributes().Count > 0 && d.ChildElements.Count == 0).FirstOrDefault();
 
-        /// <summary>Get element with children</summary>
-        internal GetTargetElement getElementWithAttributesAndChildren =
+        /// <summary>Gets element with children</summary>
+        internal GetTargetElement GetElementWithAttributesAndChildren =>
             e => e.Descendants().Where(d => d.GetAttributes().Count > 0 && d.ChildElements.Count > 0).FirstOrDefault();
 
-        /// <summary>Get any leaf element in descendants.</summary>
-        internal GetTargetElement getAnyElement =
+        /// <summary>Gets any leaf element in descendants.</summary>
+        internal GetTargetElement GetAnyElement =>
             e => e.Descendants<OpenXmlElement>().PickSecond();
 
-        /// <summary>Get any leaf element in descendants.</summary>
-        internal GetTargetElement getAnyLeaf =
+        /// <summary>Gets any leaf element in descendants.</summary>
+        internal GetTargetElement GetAnyLeaf =>
             e => e.Descendants<OpenXmlLeafElement>().PickSecond();
 
-        /// <summary>Get any composite element in descendant.</summary>
-        internal GetTargetElement getAnyComposite =
+        /// <summary>Gets any composite element in descendant.</summary>
+        internal GetTargetElement GetAnyComposite =>
             e => e.Descendants<OpenXmlCompositeElement>().PickSecond();
 
-        /// <summary>Get paragraph with text run only.</summary>
-        internal GetTargetElement getTextParagraph =
+        /// <summary>Gets paragraph with text run only.</summary>
+        internal GetTargetElement GetTextParagraph =>
             e => e.Descendants<DocumentFormat.OpenXml.Wordprocessing.Paragraph>()
                 .Where(p => p.ChildElements.Count(c => !(c is DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties)) == 1)
                 .Where(p => p.Descendants<DocumentFormat.OpenXml.Wordprocessing.Text>().Count() == 1)
                 .PickSecond();
 
-        /// <summary>Get descendant element of pass-in OpenXmlElement that has both leaf and composite child elements</summary>
-        internal GetTargetElement getAnyWithLeafAndCompositeChild =
+        /// <summary>Gets descendant element of pass-in OpenXmlElement that has both leaf and composite child elements</summary>
+        internal GetTargetElement GetAnyWithLeafAndCompositeChild =>
             e =>
             {
                 return e.Descendants()
@@ -300,8 +300,8 @@ namespace DocumentFormat.OpenXml.Tests
                     .PickSecond();
             };
 
-        /// <summary>Get descendant element of pass-in OpenXmlElement that has composite child elements</summary>
-        internal GetTargetElement getAnyWithCompositeChild =
+        /// <summary>Gets descendant element of pass-in OpenXmlElement that has composite child elements</summary>
+        internal GetTargetElement GetAnyWithCompositeChild =>
             e =>
             {
                 return e.Descendants()
@@ -309,8 +309,8 @@ namespace DocumentFormat.OpenXml.Tests
                     .PickSecond();
             };
 
-        /// <summary>Get descendant element of pass-in OpenXmlElement that has leaf child elements</summary>
-        internal GetTargetElement getAnyWithLeafChild =
+        /// <summary>Gets descendant element of pass-in OpenXmlElement that has leaf child elements</summary>
+        internal GetTargetElement GetAnyWithLeafChild =>
             e =>
             {
                 return e.Descendants()
@@ -318,66 +318,66 @@ namespace DocumentFormat.OpenXml.Tests
                     .PickSecond();
             };
 
-        /// <summary>Get grand child of pass-in OpenXmlElement</summary>
-        internal GetTargetElement getGrandChild =
+        /// <summary>Gets grand child of pass-in OpenXmlElement</summary>
+        internal GetTargetElement GetGrandChild =>
             e => e.ChildElements
                 .Where(c => c.ChildElements.Count > 0)
                 .SelectMany(c => c.ChildElements)
                 .PickSecond();
 
-        /// <summary>Get first child of pass-in OpenXmlElement</summary>
-        internal GetTargetElement getFirstChild =
+        /// <summary>Gets first child of pass-in OpenXmlElement</summary>
+        internal GetTargetElement GetFirstChild =>
             e => e.ChildElements.FirstOrDefault();
 
-        /// <summary>Get last child of pass-in OpenXmlElement</summary>
-        internal GetTargetElement getLastChild =
+        /// <summary>Gets last child of pass-in OpenXmlElement</summary>
+        internal GetTargetElement GetLastChild =>
             e => e.ChildElements.LastOrDefault();
 
-        /// <summary>Get first child of pass-in OpenXmlElement</summary>
-        internal GetTargetElement getAnyChild =
+        /// <summary>Gets first child of pass-in OpenXmlElement</summary>
+        internal GetTargetElement GetAnyChild =>
             e => e.ChildElements.PickSecond();
 
-        /// <summary>Get any leaf element in child element.</summary>
-        internal GetTargetElement getAnyLeafChild =
+        /// <summary>Gets any leaf element in child element.</summary>
+        internal GetTargetElement GetAnyLeafChild =>
             e => e.ChildElements.OfType<OpenXmlLeafElement>().PickSecond();
 
-        /// <summary>Get any composite element in child element.</summary>
-        internal GetTargetElement getAnyCompositeChild =
+        /// <summary>Gets any composite element in child element.</summary>
+        internal GetTargetElement GetAnyCompositeChild =>
             e => e.ChildElements.OfType<OpenXmlCompositeElement>().PickSecond();
 
-        /// <summary>Get first child element which contains OpenXmlLeafTextElement only.</summary>
-        internal GetTargetElement getChildWithLeafTextOnly =
+        /// <summary>Gets first child element which contains OpenXmlLeafTextElement only.</summary>
+        internal GetTargetElement GetChildWithLeafTextOnly =>
             e => e.ChildElements
                 .Where(c => c.ChildElements.All(cc => cc is OpenXmlLeafTextElement))
                 .First();
 
-        /// <summary>Get first sibling of pass-in OpenXmlElement.</summary>
-        internal GetTargetElement getFirstSibling =
+        /// <summary>Gets first sibling of pass-in OpenXmlElement.</summary>
+        internal GetTargetElement GetFirstSibling =>
             e => e.Parent is null ? null : e == e.Parent.First() ? e.NextSibling() : e.Parent.First();
 
-        /// <summary>Get last sibling of pass-in OpenXmlElement.</summary>
-        internal GetTargetElement getLastSibling =
+        /// <summary>Gets last sibling of pass-in OpenXmlElement.</summary>
+        internal GetTargetElement GetLastSibling =>
             e => e.Parent is null ? null : e == e.Parent.Last() ? e.PreviousSibling() : e.Parent.Last();
 
-        /// <summary>Get any sibling of pass-in OpenXmlElement.</summary>
-        internal GetTargetElement getAnySibling =
+        /// <summary>Gets any sibling of pass-in OpenXmlElement.</summary>
+        internal GetTargetElement GetAnySibling =>
             e => e.Parent?.ChildElements.Where(s => s != e).PickSecond();
 
-        /// <summary>Get any TextBody of given slide.</summary>
-        internal GetTargetElement getSlideTextBody =
+        /// <summary>Gets any TextBody of given slide.</summary>
+        internal GetTargetElement GetSlideTextBody =>
             e => e.Descendants<DocumentFormat.OpenXml.Presentation.TextBody>().PickSecond();
 
-        /// <summary>Get any Paragraph of any TextBody.</summary>
-        internal GetTargetElement getSlideTextParagraph =
+        /// <summary>Gets any Paragraph of any TextBody.</summary>
+        internal GetTargetElement GetSlideTextParagraph =>
             e => e.Descendants<DocumentFormat.OpenXml.Presentation.TextBody>().PickSecond()
             .Descendants<DocumentFormat.OpenXml.Drawing.Paragraph>().PickSecond();
 
-        /// <summary>Get any SheetData of given worksheet.</summary>
-        internal GetTargetElement getSheetData =
+        /// <summary>Gets any SheetData of given worksheet.</summary>
+        internal GetTargetElement GetSheetData =>
             e => e.Descendants<SheetData>().PickSecond();
 
-        /// <summary>Get any SheetData Row of first worksheet.</summary>
-        internal GetTargetElement getSheetDataRow =
+        /// <summary>Gets any SheetData Row of first worksheet.</summary>
+        internal GetTargetElement GetSheetDataRow =>
             e => e.Descendants<SheetData>().FirstOrDefault()
                 .Descendants<Row>().PickSecond();
 
@@ -429,7 +429,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     Log.Comment("Importing element found: {0}", importHost.Path());
 
-                    XElement XBefore = ConvertToXElement(hostPart, hostElement);
+                    XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
                     Log.Comment("Importing {0} elements...", importHost.ChildElements.Count);
                     var originalElementCount = hostElement.ChildElements.Count;
@@ -452,15 +452,15 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Comment("Saving changes...");
                     main.Save();
 
-                    XElement XAfter = ConvertToXElement(hostPart, hostElement);
+                    XElement xAfter = ConvertToXElement(hostPart, hostElement);
 
                     Log.Comment("Checking if children of current element increased by {0}...", importElementsCount);
-                    Log.VerifyTrue(XBefore.Elements().Count() == XAfter.Elements().Count() - importElementsCount, "Children element NOT increased as expected!");
+                    Log.VerifyTrue(xBefore.Elements().Count() == xAfter.Elements().Count() - importElementsCount, "Children element NOT increased as expected!");
 
                     for (int i = 0; i < importElementsCount; i++)
                     {
                         importElementOuterXml = importHost.ChildElements[i].OuterXml;
-                        VerifyEqual(XAfter, XElement.Parse(importElementOuterXml), childPosition++);
+                        VerifyEqual(xAfter, XElement.Parse(importElementOuterXml), childPosition++);
                     }
                 }
                 else
@@ -530,7 +530,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     Log.Comment("Importing element found: {0}", importElement.Path());
 
-                    XElement XBefore = ConvertToXElement(hostPart, hostElement);
+                    XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
                     int? childPosition = null;
                     OpenXmlElement result = null;
@@ -553,12 +553,12 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Comment("Saving changes...");
                     main.Save();
 
-                    XElement XAfter = ConvertToXElement(hostPart, hostElement);
+                    XElement xAfter = ConvertToXElement(hostPart, hostElement);
 
                     Log.Comment("Checking if children of current element increased by ONE...");
-                    Log.VerifyTrue(XBefore.Elements().Count() == XAfter.Elements().Count() - 1, "Children element NOT increased by ONE!");
+                    Log.VerifyTrue(xBefore.Elements().Count() == xAfter.Elements().Count() - 1, "Children element NOT increased by ONE!");
 
-                    VerifyEqual(XAfter, XElement.Parse(importElementOuterXml), childPosition);
+                    VerifyEqual(xAfter, XElement.Parse(importElementOuterXml), childPosition);
                 }
                 else
                 {
@@ -655,11 +655,11 @@ namespace DocumentFormat.OpenXml.Tests
                     {
                         Log.Comment("Importing element found: {0}", importElement.Path());
 
-                        XElement Xbefore = ConvertToXElement(hostPart, hostElement);
+                        XElement xbefore = ConvertToXElement(hostPart, hostElement);
 
                         OpenXmlElement result = null;
                         int? expectPos = null;
-                        string InsertElement = importElement.OuterXml;
+                        string insertElement = importElement.OuterXml;
 
                         switch (type)
                         {
@@ -680,13 +680,13 @@ namespace DocumentFormat.OpenXml.Tests
                         Log.Comment("Saving changes...");
                         main.Save();
 
-                        XElement Xafter = ConvertToXElement(hostPart, hostElement);
+                        XElement xafter = ConvertToXElement(hostPart, hostElement);
 
                         Log.Comment("Check if the child of  current element increased by ONE...");
-                        Log.VerifyTrue(Xbefore.Elements().Count() == Xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
+                        Log.VerifyTrue(xbefore.Elements().Count() == xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
 
                         Log.Comment("Check if specified child inserted as expected...");
-                        VerifyEqual(Xafter, XElement.Parse(InsertElement), expectPos);
+                        VerifyEqual(xafter, XElement.Parse(insertElement), expectPos);
                     }
                     else
                     {
@@ -704,7 +704,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        ///<summary>
+        /// <summary>
         /// Perform InsertBefore/After operation.
         /// </summary>
         /// <param name="insertOp">Delegate to InsertBefore/After method on OpenXmlElement</param>
@@ -778,11 +778,11 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     Log.Comment("Importing element found: {0}", importElement.Path());
 
-                    XElement Xbefore = ConvertToXElement(hostPart, hostElement);
+                    XElement xbefore = ConvertToXElement(hostPart, hostElement);
 
                     int expectPos;
                     OpenXmlElement result = null;
-                    string InsertElement = importElement.OuterXml;
+                    string insertElement = importElement.OuterXml;
 
                     switch (posType)
                     {
@@ -811,13 +811,13 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Comment("Saving changes...");
                     main.Save();
 
-                    XElement Xafter = ConvertToXElement(hostPart, hostElement);
+                    XElement xafter = ConvertToXElement(hostPart, hostElement);
 
                     Log.Comment("Check if the child of  current element increased by ONE...");
-                    Log.VerifyTrue(Xbefore.Elements().Count() == Xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
+                    Log.VerifyTrue(xbefore.Elements().Count() == xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
 
                     Log.Comment("Check if specified child inserted as expected...");
-                    VerifyEqual(Xafter, XElement.Parse(InsertElement), expectPos);
+                    VerifyEqual(xafter, XElement.Parse(insertElement), expectPos);
                 }
                 else
                 {
@@ -882,7 +882,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     int expectPos;
                     OpenXmlElement result = null;
-                    string InsertElement = importElement.OuterXml;
+                    string insertElement = importElement.OuterXml;
 
                     switch (posType)
                     {
@@ -907,7 +907,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.VerifyTrue(xBefore.Elements().Count() == xAfter.Elements().Count() - 1, "Child element NOT increased by ONE!");
 
                     Log.Comment("Check if specified element inserted as expected...");
-                    VerifyEqual(xAfter, XElement.Parse(InsertElement), expectPos);
+                    VerifyEqual(xAfter, XElement.Parse(insertElement), expectPos);
                 }
                 else
                 {
@@ -958,8 +958,8 @@ namespace DocumentFormat.OpenXml.Tests
                 main.Save();
 
                 Log.Comment("Verifying host element has no children any more...");
-                XElement Xbefore = ConvertToXElement(hostPart, hostElement);
-                VerifyNoChildren(Xbefore);
+                XElement xbefore = ConvertToXElement(hostPart, hostElement);
+                VerifyNoChildren(xbefore);
             }
             else
             {
@@ -990,15 +990,15 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (hostElement.ChildElements.Count != 0)
                 {
-                    Func<Type, Type, bool> IsOfType =
+                    Func<Type, Type, bool> isOfType =
                         (t, rt) => t == rt || t.IsSubclassOf(rt);
 
                     var childrenOfType = hostElement.ChildElements
-                        .Where(c => IsOfType(c.GetType(), deleteType)).ToArray();
+                        .Where(c => isOfType(c.GetType(), deleteType)).ToArray();
                     Log.Comment("Host element have {0} children of type {1}.", childrenOfType.Length, deleteType.Name);
                     var childrenPosition = childrenOfType.Select(c => c.Index()).ToArray();
 
-                    XElement Xbefore = ConvertToXElement(hostPart, hostElement);
+                    XElement xbefore = ConvertToXElement(hostPart, hostElement);
 
                     Log.Comment("Looking for RemoveAllChildren<T>() by reflecting...");
                     var flag = BindingFlags.Public | BindingFlags.Instance | BindingFlags.FlattenHierarchy;
@@ -1014,12 +1014,12 @@ namespace DocumentFormat.OpenXml.Tests
 
                     Log.Comment("Verifying host element has no specified children element any more...");
                     var childrenOfTypeAfter = hostElement.ChildElements
-                        .Where(c => IsOfType(c.GetType(), deleteType));
+                        .Where(c => isOfType(c.GetType(), deleteType));
                     Log.VerifyTrue(!childrenOfTypeAfter.Any(), "Children of specified {0} still exists.", deleteType);
 
                     Log.Comment("Verifing children of specified type removed...");
-                    XElement XAfter = ConvertToXElement(hostPart, hostElement);
-                    VerifyRemove(XAfter, Xbefore, childrenPosition);
+                    XElement xAfter = ConvertToXElement(hostPart, hostElement);
+                    VerifyRemove(xAfter, xbefore, childrenPosition);
                 }
                 else
                 {
@@ -1234,38 +1234,38 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Find Element with condition on attributes
 
-        internal GetTargetElement getElementWithMixedAttribute =
+        internal GetTargetElement GetElementWithMixedAttribute =>
             e => e.Descendants()
                 .Where(d => d.ExtendedAttributes.Any())
                 .Where(d => d.GetAttributes().Count > d.ExtendedAttributes.Count())
                 .FirstOrDefault();
 
-        internal GetTargetElement getElementWithFixedAttributeOnly =
+        internal GetTargetElement GetElementWithFixedAttributeOnly =>
             e => e.Descendants()
                 .Where(d => !d.ExtendedAttributes.Any() && d.GetAttributes().Count > 0)
                 .FirstOrDefault();
 
-        internal GetTargetElement getElementWithExtendedAttributeOnly =
+        internal GetTargetElement GetElementWithExtendedAttributeOnly =>
             e => e.Descendants()
                 .Where(d => d.ExtendedAttributes.Any() && d.GetAttributes().Count == 0)
                 .FirstOrDefault();
 
-        internal GetTargetElement getElementWithAttributes =
+        internal GetTargetElement GetElementWithAttributes =>
             e => e.Descendants()
                 .Where(d => d.GetAttributes().Count > 0)
                 .FirstOrDefault();
 
-        internal GetTargetElement getElementWithoutAttributes =
+        internal GetTargetElement GetElementWithoutAttributes =>
             e => e.Descendants()
                 .Where(d => d.GetAttributes().Count == 0)
                 .FirstOrDefault();
 
-        internal GetTargetElement getElementWithNamespaceDeclarations =
+        internal GetTargetElement GetElementWithNamespaceDeclarations =>
             e => e.Descendants().Union(new OpenXmlElement[] { e })
                 .Where(d => d.NamespaceDeclarations.Any())
                 .FirstOrDefault();
 
-        internal GetTargetElement getElementWithoutNamespaceDeclarations =
+        internal GetTargetElement GetElementWithoutNamespaceDeclarations =>
             e => e.Descendants()
                 .Where(d => !d.NamespaceDeclarations.Any())
                 .FirstOrDefault();
@@ -1273,21 +1273,21 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Find Attribute
 
-        internal GetTargetAttribute getFixedAttribute =
+        internal GetTargetAttribute GetFixedAttribute =>
             e => e.GetFixedAttributes().PickSecond();
 
-        internal GetTargetAttribute getNonExistingFixedAttribute =
+        internal GetTargetAttribute GetNonExistingFixedAttribute =>
             e => e.GetFixedAttributes()
                 .Where(fa => e.GetAttributes().All(ea => ea.NamespaceUri != fa.NamespaceUri || ea.LocalName != fa.LocalName))
                 .FirstOrDefault();
 
-        internal GetTargetAttribute getExistingAttribute =
+        internal GetTargetAttribute GetExistingAttribute =>
             e => e.GetAttributes().PickSecond();
 
-        internal GetTargetAttribute getExistingExtendedAttribute =
+        internal GetTargetAttribute GetExistingExtendedAttribute =>
             e => e.ExtendedAttributes.PickSecond();
 
-        internal GetTargetAttribute getExistingFixedAttribute =
+        internal GetTargetAttribute GetExistingFixedAttribute =>
             e =>
             {
                 var attributes = e.GetAttributes()
@@ -1296,12 +1296,12 @@ namespace DocumentFormat.OpenXml.Tests
                 return attributes.PickSecond();
             };
 
-        internal GetTargetNamespaceDeclaration getNonExistingNamespaceDeclaration =
+        internal GetTargetNamespaceDeclaration GetNonExistingNamespaceDeclaration =>
             e => e.Ancestors()
                 .SelectMany(a => a.NamespaceDeclarations)
                 .FirstOrDefault(an => !e.NamespaceDeclarations.Select(en => en.Key).Contains(an.Key));
 
-        internal GetTargetNamespaceDeclaration getExistingNamespaceDeclaration =
+        internal GetTargetNamespaceDeclaration GetExistingNamespaceDeclaration =>
             e => e.NamespaceDeclarations.PickSecond();
 
         #endregion Find Attribute
@@ -1443,7 +1443,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Log.Comment("Host element found: {0}", hostElement.Path());
 
-                XElement XBefore = ConvertToXElement(hostPart, hostElement);
+                XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
                 Log.Comment("Looking for importing element in {0}...", srcPart.GetType().Name);
                 var importElement = getImportee(srcMain);
@@ -1461,10 +1461,10 @@ namespace DocumentFormat.OpenXml.Tests
                         Log.Comment("Saving changes...");
                         main.Save();
 
-                        XElement XAfter = ConvertToXElement(hostPart, hostElement);
+                        XElement xAfter = ConvertToXElement(hostPart, hostElement);
                         Log.Comment("Verifying element: {0} was set to expected value: {1}", attribute.GetFullName(), attribute.Value);
-                        Log.VerifyValue(XAfter.Attribute(attribute.GetXName()).Value, attribute.Value,
-                            "Attribute {0} was set to {1} instead of expected value: {2}", attribute.GetFullName(), XAfter.Attribute(attribute.GetXName()).Value, attribute.Value);
+                        Log.VerifyValue(xAfter.Attribute(attribute.GetXName()).Value, attribute.Value,
+                            "Attribute {0} was set to {1} instead of expected value: {2}", attribute.GetFullName(), xAfter.Attribute(attribute.GetXName()).Value, attribute.Value);
                     }
                     else
                     {
@@ -2175,7 +2175,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     Log.Comment("Importing element found: {0}.", importHost.Path());
 
-                    XElement XBefore = ConvertToXElement(hostPart, hostElement);
+                    XElement xBefore = ConvertToXElement(hostPart, hostElement);
                     var fullName = hostElement.GetFullName();
                     var attributes = hostElement.GetAttributes();
 
@@ -2189,7 +2189,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Comment("Saving changes...");
                     main.Save();
 
-                    XElement XAfter = ConvertToXElement(hostPart, hostElement);
+                    XElement xAfter = ConvertToXElement(hostPart, hostElement);
 
                     Log.VerifyValue(hostElement.GetFullName(), fullName,
                         "Tag Name change from {0} to {1}", fullName, hostElement.GetFullName());
@@ -2208,12 +2208,12 @@ namespace DocumentFormat.OpenXml.Tests
                     }
 
                     Log.Comment("Checking if children element are set onto host...");
-                    Log.VerifyValue(XAfter.Elements().Count(), importHost.ChildElements.Count,
-                        "Children element count {0} is different from expected {1}!", XAfter.Elements().Count(), importHost.ChildElements.Count);
+                    Log.VerifyValue(xAfter.Elements().Count(), importHost.ChildElements.Count,
+                        "Children element count {0} is different from expected {1}!", xAfter.Elements().Count(), importHost.ChildElements.Count);
                     for (int i = 0; i < importHost.ChildElements.Count; i++)
                     {
                         var importElementOuterXml = importHost.ChildElements[i].OuterXml;
-                        VerifyEqual(XAfter, XElement.Parse(importElementOuterXml), i);
+                        VerifyEqual(xAfter, XElement.Parse(importElementOuterXml), i);
                     }
                 }
                 else
@@ -2288,43 +2288,43 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region EventHandlers
 
-        internal OpenXmlElement validReplaceEventHandler(OpenXmlElement hostElement)
+        internal OpenXmlElement ValidReplaceEventHandler(OpenXmlElement hostElement)
         {
-            hostElement.OpenXmlElementContext.ElementInserting += new EventHandler<ElementEventArgs>(expectedElementInserting);
-            hostElement.OpenXmlElementContext.ElementInserted += new EventHandler<ElementEventArgs>(expectedElementInserted);
-            hostElement.OpenXmlElementContext.ElementRemoving += new EventHandler<ElementEventArgs>(expectedElementRemoving);
-            hostElement.OpenXmlElementContext.ElementRemoved += new EventHandler<ElementEventArgs>(expectedElementRemoved);
+            hostElement.OpenXmlElementContext.ElementInserting += new EventHandler<ElementEventArgs>(ExpectedElementInserting);
+            hostElement.OpenXmlElementContext.ElementInserted += new EventHandler<ElementEventArgs>(ExpectedElementInserted);
+            hostElement.OpenXmlElementContext.ElementRemoving += new EventHandler<ElementEventArgs>(ExpectedElementRemoving);
+            hostElement.OpenXmlElementContext.ElementRemoved += new EventHandler<ElementEventArgs>(ExpectedElementRemoved);
             return hostElement;
         }
 
-        internal OpenXmlElement validInsertEventHandler(OpenXmlElement hostElement)
+        internal OpenXmlElement ValidInsertEventHandler(OpenXmlElement hostElement)
         {
-            hostElement.OpenXmlElementContext.ElementInserting += new EventHandler<ElementEventArgs>(expectedElementInserting);
-            hostElement.OpenXmlElementContext.ElementInserted += new EventHandler<ElementEventArgs>(expectedElementInserted);
-            hostElement.OpenXmlElementContext.ElementRemoving += new EventHandler<ElementEventArgs>(surprisingElementRemoving);
-            hostElement.OpenXmlElementContext.ElementRemoved += new EventHandler<ElementEventArgs>(surprisingElementRemoved);
+            hostElement.OpenXmlElementContext.ElementInserting += new EventHandler<ElementEventArgs>(ExpectedElementInserting);
+            hostElement.OpenXmlElementContext.ElementInserted += new EventHandler<ElementEventArgs>(ExpectedElementInserted);
+            hostElement.OpenXmlElementContext.ElementRemoving += new EventHandler<ElementEventArgs>(SurprisingElementRemoving);
+            hostElement.OpenXmlElementContext.ElementRemoved += new EventHandler<ElementEventArgs>(SurprisingElementRemoved);
             return hostElement;
         }
 
-        internal OpenXmlElement validRemoveEventHandler(OpenXmlElement hostElement)
+        internal OpenXmlElement ValidRemoveEventHandler(OpenXmlElement hostElement)
         {
-            hostElement.OpenXmlElementContext.ElementInserting += new EventHandler<ElementEventArgs>(surprisingElementInserting);
-            hostElement.OpenXmlElementContext.ElementInserted += new EventHandler<ElementEventArgs>(surprisingElementInserted);
-            hostElement.OpenXmlElementContext.ElementRemoving += new EventHandler<ElementEventArgs>(expectedElementRemoving);
-            hostElement.OpenXmlElementContext.ElementRemoved += new EventHandler<ElementEventArgs>(expectedElementRemoved);
+            hostElement.OpenXmlElementContext.ElementInserting += new EventHandler<ElementEventArgs>(SurprisingElementInserting);
+            hostElement.OpenXmlElementContext.ElementInserted += new EventHandler<ElementEventArgs>(SurprisingElementInserted);
+            hostElement.OpenXmlElementContext.ElementRemoving += new EventHandler<ElementEventArgs>(ExpectedElementRemoving);
+            hostElement.OpenXmlElementContext.ElementRemoved += new EventHandler<ElementEventArgs>(ExpectedElementRemoved);
             return hostElement;
         }
 
-        internal OpenXmlElement invalidEventHandler(OpenXmlElement hostElement)
+        internal OpenXmlElement InvalidEventHandler(OpenXmlElement hostElement)
         {
-            hostElement.OpenXmlElementContext.ElementInserting += new EventHandler<ElementEventArgs>(surprisingElementInserting);
-            hostElement.OpenXmlElementContext.ElementInserted += new EventHandler<ElementEventArgs>(surprisingElementInserted);
-            hostElement.OpenXmlElementContext.ElementRemoving += new EventHandler<ElementEventArgs>(surprisingElementRemoving);
-            hostElement.OpenXmlElementContext.ElementRemoved += new EventHandler<ElementEventArgs>(surprisingElementRemoved);
+            hostElement.OpenXmlElementContext.ElementInserting += new EventHandler<ElementEventArgs>(SurprisingElementInserting);
+            hostElement.OpenXmlElementContext.ElementInserted += new EventHandler<ElementEventArgs>(SurprisingElementInserted);
+            hostElement.OpenXmlElementContext.ElementRemoving += new EventHandler<ElementEventArgs>(SurprisingElementRemoving);
+            hostElement.OpenXmlElementContext.ElementRemoved += new EventHandler<ElementEventArgs>(SurprisingElementRemoved);
             return hostElement;
         }
 
-        private void expectedElementInserting(object sender, ElementEventArgs args)
+        private void ExpectedElementInserting(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementInserting event caught.");
             Log.Comment("[ElementInserting] Inserting {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2336,7 +2336,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "New element has same OpenXmlElementContext before inserting!");
         }
 
-        private void surprisingElementInserting(object sender, ElementEventArgs args)
+        private void SurprisingElementInserting(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementInserting event caught.");
             Log.Comment("[ElementInserting] Inserting {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2348,7 +2348,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "New element has same OpenXmlElementContext before inserting!");
         }
 
-        private void expectedElementInserted(object sender, ElementEventArgs args)
+        private void ExpectedElementInserted(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementInserted event caught.");
             Log.Comment("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2362,7 +2362,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "New child element still has different OpenXmlElementContext after been inserted!");
         }
 
-        private void surprisingElementInserted(object sender, ElementEventArgs args)
+        private void SurprisingElementInserted(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementInserted event caught.");
             Log.Comment("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2376,7 +2376,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "New child element still has different OpenXmlElementContext after been inserted!");
         }
 
-        private void expectedElementRemoving(object sender, ElementEventArgs args)
+        private void ExpectedElementRemoving(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementRemoving event caught.");
             Log.Comment("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2391,7 +2391,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "Child element has different OpenXmlElementContext before removing!");
         }
 
-        private void surprisingElementRemoving(object sender, ElementEventArgs args)
+        private void SurprisingElementRemoving(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementRemoving event caught.");
             Log.Comment("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2406,7 +2406,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "Child element has different OpenXmlElementContext before removing!");
         }
 
-        private void expectedElementRemoved(object sender, ElementEventArgs args)
+        private void ExpectedElementRemoved(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementRemoved event caught.");
             Log.Comment("[ElementRemoved] Removed {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2418,7 +2418,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "Child element still has same OpenXmlElementContext after removing!");
         }
 
-        private void surprisingElementRemoved(object sender, ElementEventArgs args)
+        private void SurprisingElementRemoved(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementRemoved event caught.");
             Log.Comment("[ElementRemoved] Removed {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
@@ -2734,36 +2734,36 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyTrue(targetElement.Compare(originalElement), "Two elements are not same");
         }
 
-        internal void VerifyEqual(XElement Xelement, OpenXmlElement Oelement, OpenXmlPart part)
+        internal void VerifyEqual(XElement xelement, OpenXmlElement oelement, OpenXmlPart part)
         {
-            VerifyEqual(Xelement, ConvertToXElement(part, Oelement), null);
+            VerifyEqual(xelement, ConvertToXElement(part, oelement), null);
         }
 
-        internal void VerifyEqual<T>(IEnumerable<XElement> XElement, IEnumerable<T> OElement, OpenXmlPart part)
+        internal void VerifyEqual<T>(IEnumerable<XElement> xElement, IEnumerable<T> oElement, OpenXmlPart part)
             where T : OpenXmlElement
         {
-            if (XElement is null || OElement is null)
+            if (xElement is null || oElement is null)
             {
                 throw new ArgumentNullException("one of the arguments passed in is NULL");
             }
 
             bool pass = true;
 
-            if (XElement.Count() != OElement.Count())
+            if (xElement.Count() != oElement.Count())
             {
                 Log.Fail("Two List of elements have different count");
                 pass = false;
             }
-            else if (!XElement.Any())
+            else if (!xElement.Any())
             {
                 Log.Warning("0 element is encountered");
             }
 
             if (pass)
             {
-                for (int i = 0; i < OElement.Count(); i++)
+                for (int i = 0; i < oElement.Count(); i++)
                 {
-                    if (!XElement.ElementAt(i).Compare(ConvertToXElement(part, OElement.ElementAt(i))))
+                    if (!xElement.ElementAt(i).Compare(ConvertToXElement(part, oElement.ElementAt(i))))
                     {
                         Log.Fail("the Elements at position {0} are different", i);
                         pass = false;

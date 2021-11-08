@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(ParticleTests), 1, 1),
-                new AnyParticle( 1, 1, version: FileFormatVersions.Office2010),
+                new AnyParticle(1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1, 1),
             }.Build();
 
@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(ParticleTests), 1, 1),
-                new AnyParticle( 1, 1),
+                new AnyParticle(1, 1),
                 new AnyParticle(0, 1, 1),
             }.Build();
 

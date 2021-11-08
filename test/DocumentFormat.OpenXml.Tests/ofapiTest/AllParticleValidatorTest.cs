@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Stack.Push(element: properties);
             var expected = properties;
 
-            //<xsd:complexType name="CT_Properties">
+            // <xsd:complexType name="CT_Properties">
             //  <xsd:all>
             //    <xsd:element name="Template" minOccurs="0" maxOccurs="1" type="xsd:string">
             //    <xsd:element name="Manager" minOccurs="0" maxOccurs="1" type="xsd:string">
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:element name="AppVersion" minOccurs="0" maxOccurs="1" type="xsd:string">
             //    <xsd:element name="DocSecurity" minOccurs="0" maxOccurs="1" type="xsd:int">
             //  </xsd:all>
-            //</xsd:complexType>
+            // </xsd:complexType>
 
             // ***** good case ******
 
@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             validationContext.Clear();
 
-            //invalid child in middle
+            // invalid child in middle
             errorChild = properties.InsertBefore(new Properties(), properties.LastChild);
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -125,7 +125,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_AllElement", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
             properties.RemoveChild(errorChild);
         }
 
@@ -141,14 +141,14 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Stack.Push(element: shapeLayout);
             var expected = shapeLayout;
 
-            //<xsd:complexType name="CT_ShapeLayout">
+            // <xsd:complexType name="CT_ShapeLayout">
             //  <xsd:all>
             //    <xsd:element name="idmap" type="CT_IdMap" minOccurs="0">
             //    <xsd:element name="regrouptable" type="CT_RegroupTable" minOccurs="0">
             //    <xsd:element name="rules" type="CT_Rules" minOccurs="0">
             //  </xsd:all>
             //  <xsd:attributeGroup ref="v:AG_Ext" />
-            //</xsd:complexType>
+            // </xsd:complexType>
 
             // ***** good case ******
 
@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             validationContext.Clear();
 
-            //invalid child in middle
+            // invalid child in middle
             errorChild = shapeLayout.InsertBefore(new Paragraphs(), shapeLayout.LastChild);
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);

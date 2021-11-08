@@ -30,8 +30,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                     context.CreateError(
                         id: "Sem_CellValue",
                         errorType: ValidationErrorType.Semantic,
-                        description: string.Format(ValidationResources.Sem_CellValue, value.InnerText, DataType.Value)
-                    );
+                        description: string.Format(ValidationResources.Sem_CellValue, value.InnerText, DataType.Value));
                 }
             }
         }

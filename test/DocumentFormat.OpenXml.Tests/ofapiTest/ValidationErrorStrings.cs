@@ -8,6 +8,6 @@ namespace DocumentFormat.OpenXml.Tests
         /// <summary>
         /// ="List of possible elements expected:"
         /// </summary>
-        internal static readonly string Fmt_ListOfPossibleElements = "List of possible elements expected:";
+        internal const string FmtListOfPossibleElements = "List of possible elements expected:";
     }
 }

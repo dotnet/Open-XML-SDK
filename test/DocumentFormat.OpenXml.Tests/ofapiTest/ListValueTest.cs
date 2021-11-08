@@ -7,14 +7,14 @@ using Xunit;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for ListValueTest and is intended
-    ///to contain all ListValueTest Unit Tests
-    ///</summary>
+    /// This is a test class for ListValueTest and is intended
+    /// to contain all ListValueTest Unit Tests
+    /// </summary>
     public class ListValueTest
     {
-        ///<summary>
-        ///ListValueSanityTest.
-        ///</summary>
+        /// <summary>
+        /// ListValueSanityTest.
+        /// </summary>
         [Fact]
         public void ListValueSanityTest()
         {

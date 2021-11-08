@@ -11,9 +11,9 @@ using Xunit;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for ChoiceParticleValidatorTest and is intended
-    ///to contain all ChoiceParticleValidatorTest Unit Tests
-    ///</summary>
+    /// This is a test class for ChoiceParticleValidatorTest and is intended
+    /// to contain all ChoiceParticleValidatorTest Unit Tests
+    /// </summary>
     public class ChoiceParticleValidatorTest
     {
         private const FileFormatVersions Version = FileFormatVersions.Office2007;
@@ -30,13 +30,13 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Stack.Push(element: rRowColumn);
             var expected = rRowColumn;
 
-            //<xsd:complexType name="CT_RevisionRowColumn">
+            // <xsd:complexType name="CT_RevisionRowColumn">
             //  <xsd:choice minOccurs="0" maxOccurs="unbounded">
             //    <xsd:element name="undo" type="CT_UndoInfo" minOccurs="0" maxOccurs="unbounded">
             //    <xsd:element name="rcc" type="CT_RevisionCellChange" minOccurs="0" maxOccurs="unbounded">
             //    <xsd:element name="rfmt" type="CT_RevisionFormatting" minOccurs="0" maxOccurs="unbounded">
             //  </xsd:choice>
-            //</xsd:complexType>
+            // </xsd:complexType>
 
             // ***** good case ******
 
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** error case ******
 
-            //first is invalid
+            // first is invalid
             errorChild = rRowColumn.PrependChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             validationContext.Clear();
 
-            //invalid child in middle
+            // invalid child in middle
             rRowColumn.RemoveChild(errorChild);
             errorChild = rRowColumn.InsertBefore(new Paragraph(), rRowColumn.LastChild);
             target.Validate(validationContext);
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             validationContext.Clear();
 
-            //invalid child in last
+            // invalid child in last
             rRowColumn.RemoveChild(errorChild);
             errorChild = rRowColumn.AppendChild(new Paragraph());
             target.Validate(validationContext);
@@ -120,7 +120,7 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Stack.Push(element: ffData);
             var expected = ffData;
 
-            //<xs:complexType name="CT_FFData">
+            // <xs:complexType name="CT_FFData">
             //  <xs:choice maxOccurs="unbounded">
             //    <xs:element name="name" type="CT_FFName">
             //    <xs:element name="enabled" type="CT_OnOff">
@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Tests
             //      <xs:element name="textInput" type="CT_FFTextInput">
             //    </xs:choice>
             //  </xs:choice>
-            //</xs:complexType>
+            // </xs:complexType>
 
             // ***** good case ******
 
@@ -187,7 +187,7 @@ namespace DocumentFormat.OpenXml.Tests
             ffData.AppendChild(new HelpText());
             ffData.AppendChild(new CheckBox());
 
-            //first is invalid
+            // first is invalid
             errorChild = ffData.PrependChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -201,7 +201,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             validationContext.Clear();
 
-            //invalid child in middle
+            // invalid child in middle
             ffData.RemoveChild(errorChild);
             errorChild = ffData.InsertBefore(new Paragraph(), ffData.LastChild);
             target.Validate(validationContext);
@@ -216,7 +216,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             validationContext.Clear();
 
-            //invalid child in last
+            // invalid child in last
             ffData.RemoveChild(errorChild);
             errorChild = ffData.AppendChild(new Paragraph());
             target.Validate(validationContext);
@@ -242,12 +242,12 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Stack.Push(element: bldSub);
             var expected = bldSub;
 
-            //<xsd:complexType name="CT_AnimationGraphicalObjectBuildProperties">
+            // <xsd:complexType name="CT_AnimationGraphicalObjectBuildProperties">
             //  <xsd:choice>
             //    <xsd:element name="bldDgm" type="CT_AnimationDgmBuildProperties">
             //    <xsd:element name="bldChart" type="CT_AnimationChartBuildProperties">
             //  </xsd:choice>
-            //</xsd:complexType>
+            // </xsd:complexType>
 
             // ***** good case ******
             bldSub.AppendChild(new Drawing.BuildChart());
@@ -284,11 +284,11 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
 
-            //first is invalid
+            // first is invalid
             errorChild = bldSub.PrependChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -313,13 +313,13 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Stack.Push(element: fldChar);
             var expected = fldChar;
 
-            //<xsd:complexType name="CT_FldChar">
+            // <xsd:complexType name="CT_FldChar">
             //  <xsd:choice>
             //    <xsd:element name="fldData" type="CT_Text" minOccurs="0" maxOccurs="1">
             //    <xsd:element name="ffData" type="CT_FFData" minOccurs="0" maxOccurs="1">
             //    <xsd:element name="numberingChange" type="CT_TrackChangeNumbering" minOccurs="0">
             //  </xsd:choice>
-            //</xsd:complexType>
+            // </xsd:complexType>
 
             // ***** good case ******
             target.Validate(validationContext);
@@ -366,7 +366,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
 
@@ -381,7 +381,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
 
@@ -396,7 +396,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
 
@@ -411,7 +411,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
         }
     }
 }

@@ -19,9 +19,6 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         // Type of WordprocessingDocuments to be created for unit tests.
         private const WordprocessingDocumentType Document = WordprocessingDocumentType.Document;
 
-        // XML namespace of Flat OPC documents.
-        private static readonly XNamespace Pkg = "http://schemas.microsoft.com/office/2006/xmlPackage";
-
         // The following are some of the content types of AlternativeFormatInputParts.
         // Note that all of those end in "xml" or even "+xml". And note that the content
         // type of AlternativeFormatInputParts containing WordprocessingML documents is
@@ -47,6 +44,9 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         // Contents of the application/xml altChunk part.
         private const string XmlString =
             @"<?xml version=""1.0"" encoding=""UTF-8"" standalone=""yes""?><root><element>Some text</element></root>";
+
+        // XML namespace of Flat OPC documents.
+        private static readonly XNamespace Pkg = "http://schemas.microsoft.com/office/2006/xmlPackage";
 
         // Contents of the WordprocessingML altChunk part.
         private static readonly byte[] WordprocessingMLBytes = CreateWordprocessingMLBytes();

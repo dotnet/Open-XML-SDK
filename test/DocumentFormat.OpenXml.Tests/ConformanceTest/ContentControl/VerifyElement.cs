@@ -27,13 +27,13 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                 foreach (Tag tag in package.MainDocumentPart.Document.Descendants<Tag>())
                 {
                     SdtBlock sdtBlock;
-                    SdtCell SdtCell;
+                    SdtCell sdtCell;
                     W15.SdtRepeatedSection sdtRepeatedSection;
                     int elementNum;
 
                     switch (tag.Val.Value)
                     {
-                        //Tag is "Test1.1.1"
+                        // Tag is "Test1.1.1"
                         case ConstStr.TestTagStrings.TagContent01:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             log.Verify(sdtBlock.SdtContentBlock.InnerText == ConstStr.TestStrings.ContentControlString2, "In the text is not expected.");
                             break;
 
-                        //Tag is "Test1.1.2"
+                        // Tag is "Test1.1.2"
                         case ConstStr.TestTagStrings.TagContent02:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             log.Verify(sdtBlock.SdtContentBlock.InnerText == ConstStr.TestStrings.ContentControlString1, "In the text is not expected.");
                             break;
 
-                        //Tag is "Test1.2.1"
+                        // Tag is "Test1.2.1"
                         case ConstStr.TestTagStrings.TagContent03:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             break;
 
-                        //Tag is "Test1.2.2"
+                        // Tag is "Test1.2.2"
                         case ConstStr.TestTagStrings.TagContent04:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             break;
 
-                        //Tag is "Test1.2.3"
+                        // Tag is "Test1.2.3"
                         case ConstStr.TestTagStrings.TagContent05:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             break;
 
-                        //Tag is "Test1.3.1"
+                        // Tag is "Test1.3.1"
                         case ConstStr.TestTagStrings.TagContent06:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             log.Verify(sdtBlock.SdtProperties.Descendants<W15.Color>().First().Val.Value == ConstStr.TestColorValues.TestColor, string.Format("Do not have the expected value element.Its values is \"{0}\".", ConstStr.TestColorValues.TestColor));
                             break;
 
-                        //Tag is "Test1.3.2"
+                        // Tag is "Test1.3.2"
                         case ConstStr.TestTagStrings.TagContent07:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             log.Verify(elementNum == 0, "Element does not appear as expected. Its elements are \"color\".");
                             break;
 
-                        //Tag is "Test1.4.1"
+                        // Tag is "Test1.4.1"
                         case ConstStr.TestTagStrings.TagContent08:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             log.Verify(elementNum != 0, "Element does not appear as expected. Its elements are \"SdtRepeatedSection\".");
                             break;
 
-                        //Tag is "Test1.4.2"
+                        // Tag is "Test1.4.2"
                         case ConstStr.TestTagStrings.TagContent09:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             log.Verify(elementNum != 0, "Element does not appear as expected. Its elements are \"SdtRepeatedSectionItem\".");
                             break;
 
-                        //Tag is "Test1.4.3"
+                        // Tag is "Test1.4.3"
                         case ConstStr.TestTagStrings.TagContent10:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
 
@@ -146,7 +146,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             log.Verify(sdtRepeatedSection.DoNotAllowInsertDeleteSection.Val.Value == false, "Do not have the expected value element. Its values is \"0\" or \"false\".");
                             break;
 
-                        //Tag is "Test1.4.4"
+                        // Tag is "Test1.4.4"
                         case ConstStr.TestTagStrings.TagContent11:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
                             var sectionTitles = sdtBlock.Descendants<W15.SectionTitle>();
@@ -164,32 +164,32 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             break;
 
-                        //Tag is "Test1.5.1_1"
+                        // Tag is "Test1.5.1_1"
                         case ConstStr.TestTagStrings.TagContent12:
-                            SdtCell = tag.Ancestors<SdtCell>().First();
+                            sdtCell = tag.Ancestors<SdtCell>().First();
 
-                            log.Verify(SdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString1, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString1));
+                            log.Verify(sdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString1, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString1));
                             break;
 
-                        //Tag is "Test1.5.1_2"
+                        // Tag is "Test1.5.1_2"
                         case ConstStr.TestTagStrings.TagContent13:
-                            SdtCell = tag.Ancestors<SdtCell>().First();
+                            sdtCell = tag.Ancestors<SdtCell>().First();
 
-                            log.Verify(SdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString2, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString2));
+                            log.Verify(sdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString2, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString2));
                             break;
 
-                        //Tag is "Test1.5.1_3"
+                        // Tag is "Test1.5.1_3"
                         case ConstStr.TestTagStrings.TagContent14:
-                            SdtCell = tag.Ancestors<SdtCell>().First();
+                            sdtCell = tag.Ancestors<SdtCell>().First();
 
-                            log.Verify(SdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString3, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString3));
+                            log.Verify(sdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString3, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString3));
                             break;
 
-                        //Tag is "Test1.5.1_4"
+                        // Tag is "Test1.5.1_4"
                         case ConstStr.TestTagStrings.TagContent15:
-                            SdtCell = tag.Ancestors<SdtCell>().First();
+                            sdtCell = tag.Ancestors<SdtCell>().First();
 
-                            log.Verify(SdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString4, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString4));
+                            log.Verify(sdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString4, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString4));
                             break;
 
                         default:

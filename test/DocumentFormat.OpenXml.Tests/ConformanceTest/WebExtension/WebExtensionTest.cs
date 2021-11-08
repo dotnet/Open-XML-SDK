@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Tests.WebExtension
             Int32Value Int32ValueFixer(Int32Value iv)
             {
                 int modulo = seed + 13;
-                return iv + (modulo - iv % modulo);
+                return iv + (modulo - (iv % modulo));
             }
 
             Int32Value Int32ValueChecker(Int32Value iv)

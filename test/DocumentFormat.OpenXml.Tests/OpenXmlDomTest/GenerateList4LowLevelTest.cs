@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void TestAutosaveAfterSettingNullRootElement()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var doc = WordprocessingDocument.Open(stream, true))
                 {
@@ -212,7 +212,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ChangeRelationshipId()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             using (var package = WordprocessingDocument.Open(stream, true))
             {
                 var container = package.DescendantParts().PickFirst(pc => pc.Parts.Count() > 1);
@@ -229,7 +229,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Throws<ArgumentOutOfRangeException>(() => container.ChangeIdOfPart(container, "newId"));
 
                 // TODO: Should throw ArgumentException and not ArgumentNullException
-                //Assert.Throws<ArgumentException>(() => container.ChangeIdOfPart(part, string.Empty));
+                // Assert.Throws<ArgumentException>(() => container.ChangeIdOfPart(part, string.Empty));
                 Assert.Throws<ArgumentNullException>(() => container.ChangeIdOfPart(part, string.Empty));
 
                 var oldId1 = container.GetIdOfPart(part);
@@ -250,7 +250,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadCurrentElementTest()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             using (var package = WordprocessingDocument.Open(stream, true))
             {
                 var part = package.DescendantParts().PickFirst(p => p.IsReflectable());
@@ -291,7 +291,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("OuterXml of Paragraph:\n{0}", para.OuterXml);
         }
 
-        [InlineData(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm)]
+        [InlineData(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm)]
         [InlineData(TestDataStorage.V2FxTestFiles.Bvt.O12Typical)]
         [InlineData(TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng)]
         [Theory]

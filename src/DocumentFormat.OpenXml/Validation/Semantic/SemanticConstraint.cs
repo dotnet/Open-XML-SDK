@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             if (string.IsNullOrEmpty(parts[0]))
             {
-                return GetPartThroughPartPath(current.Package.Parts, parts.Skip(1).ToArray()); //absolute path
+                return GetPartThroughPartPath(current.Package.Parts, parts.Skip(1).ToArray()); // absolute path
             }
             else if (parts[0] == "..")
             {
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
             else
             {
-                return GetPartThroughPartPath(current.Part.Parts, parts); //relative path
+                return GetPartThroughPartPath(current.Part.Parts, parts); // relative path
             }
         }
 

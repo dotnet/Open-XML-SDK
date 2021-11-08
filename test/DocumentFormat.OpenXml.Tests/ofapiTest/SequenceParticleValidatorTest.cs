@@ -10,9 +10,9 @@ using Xunit;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for SequenceParticleValidatorTest and is intended
-    ///to contain all SequenceParticleValidatorTest Unit Tests
-    ///</summary>
+    /// This is a test class for SequenceParticleValidatorTest and is intended
+    /// to contain all SequenceParticleValidatorTest Unit Tests
+    /// </summary>
     public class SequenceParticleValidatorTest
     {
         private const FileFormatVersions Version = FileFormatVersions.Office2007;
@@ -28,11 +28,11 @@ namespace DocumentFormat.OpenXml.Tests
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Stack.Push(element: categories);
 
-            //<xsd:complexType name="CT_CTCategories">
+            // <xsd:complexType name="CT_CTCategories">
             //  <xsd:sequence minOccurs="0" maxOccurs="unbounded">
             //    <xsd:element name="cat" type="CT_CTCategory" minOccurs="0" maxOccurs="unbounded">
             //  </xsd:sequence>
-            //</xsd:complexType>
+            // </xsd:complexType>
 
             // ***** good case ******
 
@@ -134,11 +134,11 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Stack.Push(element: divs);
             var expected = divs;
 
-            //<xsd:complexType name="CT_Divs">
+            // <xsd:complexType name="CT_Divs">
             //  <xsd:sequence minOccurs="1" maxOccurs="unbounded">
             //    <xsd:element name="div" type="CT_Div">
             //  </xsd:sequence>
-            //</xsd:complexType
+            // </xsd:complexType
 
             // ***** good case ******
             divs.AppendChild(new Div());
@@ -246,13 +246,13 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Stack.Push(element: ruby);
             var expected = ruby;
 
-            //<xsd:complexType name="CT_Ruby">
+            // <xsd:complexType name="CT_Ruby">
             //  <xsd:sequence>
             //    <xsd:element name="rubyPr" type="CT_RubyPr">
             //    <xsd:element name="rt" type="CT_RubyContent">
             //    <xsd:element name="rubyBase" type="CT_RubyContent">
             //  </xsd:sequence>
-            //</xsd:complexType>}
+            // </xsd:complexType>}
 
             // ***** good case ******
             ruby.Append(new RubyProperties(), new RubyContent(), new RubyBase());
@@ -358,13 +358,13 @@ namespace DocumentFormat.OpenXml.Tests
         {
             ValidationContext validationContext = new ValidationContext();
 
-            //<xsd:complexType name="CT_FFDDList">
+            // <xsd:complexType name="CT_FFDDList">
             //  <xsd:sequence>
             //    <xsd:element name="result" type="CT_DecimalNumber" minOccurs="0">
             //    <xsd:element name="default" type="CT_DecimalNumber" minOccurs="0">
             //    <xsd:element name="listEntry" type="CT_String" minOccurs="0" maxOccurs="unbounded">
             //  </xsd:sequence>
-            //</xsd:complexType>
+            // </xsd:complexType>
             DropDownListFormField ddList = new DropDownListFormField();
             var particleConstraint = ddList.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
@@ -418,7 +418,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
 
@@ -432,7 +432,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
 
@@ -446,7 +446,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
 
@@ -459,7 +459,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
 
@@ -472,7 +472,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(errorChild, validationContext.Errors[0].RelatedNode);
             Assert.Equal(ValidationErrorType.Schema, validationContext.Errors[0].ErrorType);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", validationContext.Errors[0].Id);
-            Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
+            Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, validationContext.Errors[0].Description);
         }
     }
 }

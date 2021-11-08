@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         }
                         else
                         {
-                            //Debug.Assert(result.Valid == true);
+                            // Debug.Assert(result.Valid == true);
                         }
                     }
 

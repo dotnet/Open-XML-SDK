@@ -12,14 +12,14 @@ using xvml = DocumentFormat.OpenXml.Vml.Spreadsheet;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    ///This is a test class for BooleanValueTest and is intended
-    ///to contain all BooleanValueTest Unit Tests
-    ///</summary>
+    /// This is a test class for BooleanValueTest and is intended
+    /// to contain all BooleanValueTest Unit Tests
+    /// </summary>
     public class OpenXmlSimpleValueTest2
     {
         /// <summary>
-        ///A test for BooleanValue Constructor
-        ///</summary>
+        /// A test for BooleanValue Constructor
+        /// </summary>
         [Fact]
         public void BooleanValueTest()
         {
@@ -73,8 +73,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for EnumValue
-        ///</summary>
+        /// A test for EnumValue
+        /// </summary>
         [Fact]
         public void EnumValueTest()
         {
@@ -158,8 +158,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for StringValue
-        ///</summary>
+        /// A test for StringValue
+        /// </summary>
         [Fact]
         public void StringValueTest()
         {
@@ -188,8 +188,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for DateTimeValue
-        ///</summary>
+        /// A test for DateTimeValue
+        /// </summary>
         [Fact]
         public void DateTimeValueTest()
         {
@@ -211,8 +211,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for DateTimeValue
-        ///</summary>
+        /// A test for DateTimeValue
+        /// </summary>
         [Fact]
         public void DoubleValueTest()
         {
@@ -306,8 +306,8 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        ///A test for DateTimeValue
-        ///</summary>
+        /// A test for DateTimeValue
+        /// </summary>
         [Fact]
         public void SingleValueTest()
         {

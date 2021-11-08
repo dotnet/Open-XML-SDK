@@ -24,35 +24,22 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         #region Private Fields
-        internal static string xmlNS = "http://www.w3.org/XML/1998/namespace";
-        private OpenXmlAttribute xmlSpace = new OpenXmlAttribute("xml", "space", xmlNS, "default"); // two valid value: default, preserve
-        private OpenXmlAttribute xmlLang = new OpenXmlAttribute("xml", "lang", xmlNS, "en-US");
+        private static string xmlNS = "http://www.w3.org/XML/1998/namespace";
 
-        internal static string nsUnknown1 = "http://test.openxmlsdk.microsoft.com/unknownns1";
-        internal static string prefixUnknown1 = "uns1";
-        internal static string a1Unknown1 = "a1uk1";
-        internal static string a2Unknown1 = "a2uk1";
+        private static string nsUnknown1 = "http://test.openxmlsdk.microsoft.com/unknownns1";
+        private static string prefixUnknown1 = "uns1";
+        private static string a1Unknown1 = "a1uk1";
+        private static string a2Unknown1 = "a2uk1";
         private OpenXmlAttribute unknownAttribute11 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
         private OpenXmlAttribute unknownAttribute12 = new OpenXmlAttribute(prefixUnknown1, a2Unknown1, nsUnknown1, "attribute2 from unknown namespace1.");
-        internal static string e1Unknown1 = "e1uk1";
-        internal static string e2Unknown1 = "e2uk1";
+        private static string e1Unknown1 = "e1uk1";
+        private static string e2Unknown1 = "e2uk1";
         private OpenXmlElement unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
         private OpenXmlElement unknownElement12 = new OpenXmlUnknownElement(prefixUnknown1, e2Unknown1, nsUnknown1);
 
-        internal static string nsUnknown2 = "http://test.openxmlsdk.microsoft.com/unknownns2";
-        internal static string prefixUnknown2 = "uns2";
-        internal static string a1Unknown2 = "a1uk2";
-        internal static string a2Unknown2 = "a2uk2";
-        private OpenXmlAttribute unknownAttribute21 = new OpenXmlAttribute(prefixUnknown2, a1Unknown2, nsUnknown2, "attribute1 from unknown namespace2.");
-        private OpenXmlAttribute unknownAttribute22 = new OpenXmlAttribute(prefixUnknown2, a2Unknown2, nsUnknown2, "attribute2 from unknown namespace2.");
-        internal static string e1Unknown2 = "e1uk2";
-        internal static string e2Unknown2 = "e2uk2";
-        private OpenXmlElement unknownElement21 = new OpenXmlUnknownElement(prefixUnknown2, e1Unknown2, nsUnknown2);
-        private OpenXmlElement unknownElement22 = new OpenXmlUnknownElement(prefixUnknown2, e2Unknown2, nsUnknown2);
-
         private OpenXmlAttribute unprefixedAttribute = new OpenXmlAttribute(string.Empty, "name", null, "unprefixed attributes");
 
-        private delegate void actionOnElement(OpenXmlElement e);
+        private delegate void ActionOnElement(OpenXmlElement e);
 
         #endregion Private Fields
 
@@ -65,7 +52,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string a1Unknown1 = "a1uk1";
             var unknownAttribute11 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string) Setup()
                 {
@@ -110,7 +97,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string a1Unknown1 = "a1uk1";
             var unknownAttribute11 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string) Setup()
                 {
@@ -150,7 +137,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_NonIgnored_UnknownAttribute()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 string Setup()
                 {
@@ -188,7 +175,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string e1Unknown1 = "e1uk1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string) Setup()
                 {
@@ -233,7 +220,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string e1Unknown1 = "e1uk1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string) Setup()
                 {
@@ -273,7 +260,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_NonIgnored_UnknownElement()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             {
                 using (var package = WordprocessingDocument.Open(stream, false))
                 {
@@ -303,7 +290,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string a1Unknown1 = "a1uk1";
             var unknownAttribute11 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string) Setup()
                 {
@@ -352,7 +339,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string a1Unknown1 = "a1uk1";
             var unknownAttribute11 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string) Setup()
                 {
@@ -395,7 +382,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Ignored_UnknownAttribute()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
@@ -420,7 +407,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_KnownAttribute_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (OpenXmlAttribute, Uri, string) Setup()
                 {
@@ -459,7 +446,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_KnownAttribute_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlAttribute) Setup()
                 {
@@ -497,7 +484,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Ignored_KnownAttribute()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
@@ -521,7 +508,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string nsUnknown1 = "http://test.openxmlsdk.microsoft.com/unknownns1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string) Setup()
                 {
@@ -570,7 +557,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string nsUnknown1 = "http://test.openxmlsdk.microsoft.com/unknownns1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string) Setup()
                 {
@@ -613,7 +600,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Ignored_UnknownElement()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
@@ -638,7 +625,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_KnownElement_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, OpenXmlElement) Setup()
                 {
@@ -680,7 +667,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignored_KnownElement_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, OpenXmlElement) Setup()
                 {
@@ -721,7 +708,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Ignored_KnownElement()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
@@ -742,7 +729,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Ignore_Whitespaces_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string) Setup()
                 {
@@ -777,7 +764,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Ignore_Whitespaces()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
@@ -813,7 +800,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string nsUnknown1 = "http://test.openxmlsdk.microsoft.com/unknownns1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -866,7 +853,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string nsUnknown1 = "http://test.openxmlsdk.microsoft.com/unknownns1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -912,7 +899,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_ProcessContent_Ignored_UnknownElement()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
@@ -945,7 +932,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string nsUnknown1 = "http://test.openxmlsdk.microsoft.com/unknownns1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -998,7 +985,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string nsUnknown1 = "http://test.openxmlsdk.microsoft.com/unknownns1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -1050,7 +1037,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string nsUnknown1 = "http://test.openxmlsdk.microsoft.com/unknownns1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -1096,7 +1083,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_ProcessContent_NonIgnored_UnknownElement()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -1128,7 +1115,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ProcessContent_Ignored_KnownElement_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, OpenXmlElement) Setup()
                 {
@@ -1171,7 +1158,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ProcessContent_Ignored_KnownElement_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, OpenXmlElement) Setup()
                 {
@@ -1208,7 +1195,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_ProcessContent_Ignored_KnownElement()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
@@ -1236,7 +1223,7 @@ namespace DocumentFormat.OpenXml.Tests
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
             var xmlSpace = new OpenXmlAttribute("xml", "space", xmlNS, "default");
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -1292,7 +1279,7 @@ namespace DocumentFormat.OpenXml.Tests
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
             var xmlLang = new OpenXmlAttribute("xml", "lang", xmlNS, "en-US");
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -1342,7 +1329,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_ProcessContent_xmlLang()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -1386,7 +1373,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string nsUnknown1 = "http://test.openxmlsdk.microsoft.com/unknownns1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -1450,7 +1437,7 @@ namespace DocumentFormat.OpenXml.Tests
             var unknownAttribute2 = new OpenXmlAttribute(prefixUnknown1, a2Unknown1, nsUnknown1, "attribute2 from unknown namespace1.");
             var unprefixedAttribute = new OpenXmlAttribute(string.Empty, "name", null, "unprefixed attributes");
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri Part, string Host, string Target, List<OpenXmlElement> Children, OpenXmlElement Expected) Setup()
                 {
@@ -1511,7 +1498,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Preserve_Ignored_UnknownElement()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -1550,7 +1537,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_Ignored_UnknownElement_InnerIgnorable_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -1618,7 +1605,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_Ignored_UnknownElement_InnerIgnorable_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>, OpenXmlElement) Setup()
                 {
@@ -1689,7 +1676,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Preserve_Ignored_UnknownElement_InnerIgnorable()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -1731,7 +1718,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_Ignored_UnknownElement_Wildcard_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -1791,7 +1778,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact(Skip = "Currently failing")]
         public void Preserve_Ignored_UnknownElement_Wildcard_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>, OpenXmlElement) Setup()
                 {
@@ -1853,7 +1840,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact(Skip = "Found two unexpected validation errors")]
         public void Validate_Preserve_Ignored_UnknownElement_Wildcard()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -1892,7 +1879,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NonIgnored_UnknownElement_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -1950,7 +1937,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NonIgnored_UnknownElement_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri Part, string Host, string Target) Setup()
                 {
@@ -2002,7 +1989,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Preserve_NonIgnored_UnknownElement()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             {
                 using (var package = WordprocessingDocument.Open(stream, false))
                 {
@@ -2040,7 +2027,7 @@ namespace DocumentFormat.OpenXml.Tests
             var unknownElement = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
             var unknownAttribute = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
@@ -2073,7 +2060,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NonIgnored_UnknownAttribute_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -2130,7 +2117,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Preserve_NonIgnored_UnknownAttribute()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -2167,7 +2154,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NoElement_UnknownAttribute_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, List<OpenXmlElement>) Setup()
                 {
@@ -2225,7 +2212,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Preserve_NoElement_UnknownAttribute_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             {
                 (Uri Part, string Host, string Target) Setup()
                 {
@@ -2277,7 +2264,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_Preserve_NoElement_UnknownAttribute()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
@@ -2314,7 +2301,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MustUnderstand_Ignored_UnknownElement_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, string) Setup()
                 {
@@ -2365,7 +2352,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MustUnderstand_Ignored_UnknownElement_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, string) Setup()
                 {
@@ -2416,7 +2403,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MustUnderstand_Ignored_UnknownElement()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 string Setup()
                 {
@@ -2458,7 +2445,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MustUnderstand_NonIgnored_UnknownElement_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, string, string) Setup()
                 {
@@ -2507,7 +2494,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MustUnderstand_NonIgnored_UnknownElement_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 Uri Setup()
                 {
@@ -2556,7 +2543,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MustUnderstand_NonIgnored_UnknownElement()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             {
                 string hostPath = null;
 
@@ -2595,7 +2582,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void NoChoice_NoFallback_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, AlternateContent, List<OpenXmlElement>) Setup()
                 {
@@ -2608,7 +2595,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
                         var children = new List<OpenXmlElement>();
-                        var alternativeContent = appendEmptyChildACB(host, children).CloneNode(true) as AlternateContent;
+                        var alternativeContent = AppendEmptyChildACB(host, children).CloneNode(true) as AlternateContent;
 
                         return (part.Uri, host.Path(), alternativeContent, children);
                     }
@@ -2634,7 +2621,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void NoChoice_NoFallback_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, AlternateContent, List<OpenXmlElement>) Setup()
                 {
@@ -2647,7 +2634,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
                         var children = new List<OpenXmlElement>();
-                        var alternativeContent = appendEmptyChildACB(host, children).CloneNode(true) as AlternateContent;
+                        var alternativeContent = AppendEmptyChildACB(host, children).CloneNode(true) as AlternateContent;
 
                         return (part.Uri, host.Path(), alternativeContent, children);
                     }
@@ -2672,7 +2659,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_NoChoice_NoFallback()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -2683,7 +2670,7 @@ namespace DocumentFormat.OpenXml.Tests
                         .PickFirst(d => d is OpenXmlCompositeElement && !d.ChildElements.Any(c => c is OpenXmlUnknownElement));
 
                     var children = new List<OpenXmlElement>();
-                    appendEmptyChildACB(host, children);
+                    AppendEmptyChildACB(host, children);
                 }
 
                 using (var package = WordprocessingDocument.Open(stream, false))
@@ -2696,7 +2683,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OneChoice_NoFallback_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement, List<OpenXmlElement>) Setup()
                 {
@@ -2709,7 +2696,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
 
                         var children = new List<OpenXmlElement>();
-                        var alternateContent = wrapWithChoice(host, children).CloneNode(true);
+                        var alternateContent = WrapWithChoice(host, children).CloneNode(true);
 
                         return (part.Uri, host.Path(), alternateContent, children);
                     }
@@ -2735,7 +2722,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OneChoice_NoFallback_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, List<OpenXmlElement>) Setup()
                 {
@@ -2748,7 +2735,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
 
                         var children = new List<OpenXmlElement>();
-                        wrapWithChoice(host, children);
+                        WrapWithChoice(host, children);
 
                         return (part.Uri, host.Path(), children);
                     }
@@ -2773,7 +2760,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_OneChoice_NoFallback()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -2784,7 +2771,7 @@ namespace DocumentFormat.OpenXml.Tests
                         .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
 
                     var children = new List<OpenXmlElement>();
-                    wrapWithChoice(host, children);
+                    WrapWithChoice(host, children);
                 }
 
                 using (var package = WordprocessingDocument.Open(stream, true))
@@ -2797,7 +2784,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_NoMatches_NoFallback_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -2810,7 +2797,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1);
 
                         var children = new List<OpenXmlElement>();
-                        var acb = wrapEachChildWithUnselectableChoice_NoFallback(host, children).CloneNode(true);
+                        var acb = WrapEachChildWithUnselectableChoice_NoFallback(host, children).CloneNode(true);
 
                         return (part.Uri, host.Path(), acb);
                     }
@@ -2835,7 +2822,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_NoMatches_NoFallback_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -2848,7 +2835,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1);
 
                         var children = new List<OpenXmlElement>();
-                        wrapEachChildWithUnselectableChoice_NoFallback(host, children);
+                        WrapEachChildWithUnselectableChoice_NoFallback(host, children);
 
                         return (part.Uri, host.Path(), host.CloneNode(false));
                     }
@@ -2873,7 +2860,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_NoMatches_NoFallback()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -2884,7 +2871,7 @@ namespace DocumentFormat.OpenXml.Tests
                         .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1);
 
                     var children = new List<OpenXmlElement>();
-                    wrapEachChildWithUnselectableChoice_NoFallback(host, children);
+                    WrapEachChildWithUnselectableChoice_NoFallback(host, children);
                 }
 
                 using (var package = WordprocessingDocument.Open(stream, false))
@@ -2897,7 +2884,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_NoMatches_OneFallback_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -2910,7 +2897,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1);
 
                         var children = new List<OpenXmlElement>();
-                        var acb = wrapEachChildWithUnselectableChoice_OneFallback(host, children).CloneNode(true);
+                        var acb = WrapEachChildWithUnselectableChoice_OneFallback(host, children).CloneNode(true);
 
                         return (part.Uri, host.Path(), acb);
                     }
@@ -2935,7 +2922,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_NoMatches_OneFallback_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, List<OpenXmlElement>) Setup()
                 {
@@ -2948,7 +2935,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1);
 
                         var children = new List<OpenXmlElement>();
-                        wrapEachChildWithUnselectableChoice_OneFallback(host, children).CloneNode(true);
+                        WrapEachChildWithUnselectableChoice_OneFallback(host, children).CloneNode(true);
 
                         return (part.Uri, host.Path(), children);
                     }
@@ -2973,7 +2960,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_NoMatches_OneFallback()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -2984,7 +2971,7 @@ namespace DocumentFormat.OpenXml.Tests
                         .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1);
 
                     var children = new List<OpenXmlElement>();
-                    wrapEachChildWithUnselectableChoice_OneFallback(host, children);
+                    WrapEachChildWithUnselectableChoice_OneFallback(host, children);
                 }
 
                 using (var package = WordprocessingDocument.Open(stream, false))
@@ -2997,7 +2984,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_OneFallback_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -3010,7 +2997,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
 
                         var children = new List<OpenXmlElement>();
-                        var acb = wrapEachChildWithChoice_OneFallback(host, children).CloneNode(true);
+                        var acb = WrapEachChildWithChoice_OneFallback(host, children).CloneNode(true);
 
                         return (part.Uri, host.Path(), acb);
                     }
@@ -3035,7 +3022,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_OneFallback_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri Part, string Host, OpenXmlElement Expected) Setup()
                 {
@@ -3048,7 +3035,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
 
                         var children = new List<OpenXmlElement>();
-                        wrapEachChildWithChoice_OneFallback(host, children);
+                        WrapEachChildWithChoice_OneFallback(host, children);
 
                         return (part.Uri, host.Path(), children[0]);
                     }
@@ -3073,7 +3060,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_OneFallback()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -3084,7 +3071,7 @@ namespace DocumentFormat.OpenXml.Tests
                         .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
 
                     var children = new List<OpenXmlElement>();
-                    wrapEachChildWithChoice_OneFallback(host, children);
+                    WrapEachChildWithChoice_OneFallback(host, children);
                 }
 
                 using (var package = WordprocessingDocument.Open(stream, false))
@@ -3097,7 +3084,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_LeadingFallback_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -3110,7 +3097,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is Wordprocessing.Run && d.HasChildren && d.ChildElements.Count == 1);
 
                         var children = new List<OpenXmlElement>();
-                        var acb = wrapEachChildWithChoice_LeadingFallback(host, children).CloneNode(true);
+                        var acb = WrapEachChildWithChoice_LeadingFallback(host, children).CloneNode(true);
 
                         return (part.Uri, host.Path(), acb);
                     }
@@ -3135,7 +3122,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void MultipleChoice_LeadingFallback_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement, List<OpenXmlElement>) Setup()
                 {
@@ -3148,7 +3135,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is Wordprocessing.Run && d.HasChildren && d.ChildElements.Count == 1);
 
                         var childrenList = new List<OpenXmlElement>();
-                        var acb = wrapEachChildWithChoice_LeadingFallback(host, childrenList).CloneNode(true);
+                        var acb = WrapEachChildWithChoice_LeadingFallback(host, childrenList).CloneNode(true);
 
                         return (part.Uri, host.Path(), acb, childrenList);
                     }
@@ -3174,7 +3161,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_LeadingFallback()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
@@ -3185,7 +3172,7 @@ namespace DocumentFormat.OpenXml.Tests
                     .FirstOrDefault(d => d.HasChildren && d.ChildElements.Count == 1);
                 var children = new List<OpenXmlElement>();
 
-                wrapEachChildWithChoice_LeadingFallback(host, children);
+                WrapEachChildWithChoice_LeadingFallback(host, children);
 
                 ValidateMarkupCompatibility(package, FileFormatVersions.Office2007, 1);
             }
@@ -3194,7 +3181,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OneChoice_MultipleFallback_FullMode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -3226,7 +3213,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OneChoice_MultipleFallback_O12Mode()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -3264,7 +3251,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_OneChoice_MultipleFallback()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var host = package
@@ -3286,7 +3273,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string e1Unknown1 = "e1uk1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -3299,7 +3286,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1);
 
                         var children = new List<OpenXmlElement>();
-                        var acb = wrapEachChildWithChoice_NoFallback(host, children);
+                        var acb = WrapEachChildWithChoice_NoFallback(host, children);
                         var firstChoice = acb.FirstOrDefault(c => c is AlternateContentChoice) as AlternateContentChoice;
                         firstChoice.Requires = string.Empty;
                         firstChoice.SetRequires(unknownElement11.Prefix);
@@ -3334,7 +3321,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string e1Unknown1 = "e1uk1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -3347,7 +3334,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren && d.ChildElements.Count > 1);
 
                         var children = new List<OpenXmlElement>();
-                        var acb = wrapEachChildWithChoice_NoFallback(host, children);
+                        var acb = WrapEachChildWithChoice_NoFallback(host, children);
                         var firstChoice = acb.FirstOrDefault(c => c is AlternateContentChoice) as AlternateContentChoice;
                         firstChoice.Requires = string.Empty;
                         firstChoice.SetRequires(unknownElement11.Prefix);
@@ -3383,7 +3370,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string prefixUnknown1 = "uns1";
             const string e1Unknown1 = "e1uk1";
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 string hostPath = null;
 
@@ -3400,7 +3387,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
                     var children = new List<OpenXmlElement>();
-                    var acb = wrapEachChildWithChoice_NoFallback(host, children);
+                    var acb = WrapEachChildWithChoice_NoFallback(host, children);
                     var firstChoice = acb.OfType<AlternateContentChoice>().First();
 
                     firstChoice.Requires = string.Empty;
@@ -3424,7 +3411,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string e1Unknown1 = "e1uk1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -3437,7 +3424,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
 
                         var children = new List<OpenXmlElement>();
-                        var acb = wrapEachChildWithChoice_OneFallback(host, children);
+                        var acb = WrapEachChildWithChoice_OneFallback(host, children);
 
                         acb.SetIgnorable(unknownElement11.Prefix);
                         acb.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -3472,7 +3459,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string e1Unknown1 = "e1uk1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -3485,7 +3472,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .PickFirst(d => d is OpenXmlCompositeElement && d.HasChildren);
 
                         var children = new List<OpenXmlElement>();
-                        var acb = wrapEachChildWithChoice_OneFallback(host, children);
+                        var acb = WrapEachChildWithChoice_OneFallback(host, children);
 
                         acb.SetIgnorable(unknownElement11.Prefix);
                         acb.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -3515,7 +3502,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Validate_MultipleChoice_OneFallback_Ignorable()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 using (var package = WordprocessingDocument.Open(stream, true))
                 {
@@ -3529,7 +3516,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var unknownAttribute11 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
 
                     var children = new List<OpenXmlElement>();
-                    var acb = wrapEachChildWithChoice_OneFallback(host, children);
+                    var acb = WrapEachChildWithChoice_OneFallback(host, children);
                     Log.Comment("Setting mc:Ignorable = {0} @{1}...", unknownElement11.Prefix, acb.Path());
                     acb.SetIgnorable(unknownElement11.Prefix);
                     acb.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -3552,7 +3539,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string e1Unknown1 = "e1uk1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -3567,7 +3554,7 @@ namespace DocumentFormat.OpenXml.Tests
                         var unPrefixedIgnorable = new OpenXmlAttribute(string.Empty, "Ignorable", string.Empty, unknownElement11.Prefix);
 
                         var children = new List<OpenXmlElement>();
-                        var acb = wrapEachChildWithChoice_OneFallback(host, children);
+                        var acb = WrapEachChildWithChoice_OneFallback(host, children);
 
                         acb.SetAttribute(unPrefixedIgnorable);
                         acb.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -3602,7 +3589,7 @@ namespace DocumentFormat.OpenXml.Tests
             const string e1Unknown1 = "e1uk1";
             var unknownElement11 = new OpenXmlUnknownElement(prefixUnknown1, e1Unknown1, nsUnknown1);
 
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm, true))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm, true))
             {
                 (Uri, string, OpenXmlElement) Setup()
                 {
@@ -3617,7 +3604,7 @@ namespace DocumentFormat.OpenXml.Tests
                         var unPrefixedIgnorable = new OpenXmlAttribute(string.Empty, "Ignorable", string.Empty, unknownElement11.Prefix);
 
                         var children = new List<OpenXmlElement>();
-                        var acb = wrapEachChildWithChoice_OneFallback(host, children);
+                        var acb = WrapEachChildWithChoice_OneFallback(host, children);
 
                         acb.SetAttribute(unPrefixedIgnorable);
                         acb.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
@@ -3647,7 +3634,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact(Skip = "Fails with an argument null in schema validator")]
         public void Validate_MultipleChoice_OneFallback_UnPrefixedMCAttributes()
         {
-            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.complex2005_12rtm))
+            using (var stream = GetStream(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm))
             using (var package = WordprocessingDocument.Open(stream, false))
             {
                 var part = package.MainPart();
@@ -3661,7 +3648,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var unknownAttribute11 = new OpenXmlAttribute(prefixUnknown1, a1Unknown1, nsUnknown1, "attribute1 from unknown namespace1.");
 
                 var children = new List<OpenXmlElement>();
-                var acb = wrapEachChildWithChoice_OneFallback(host, children);
+                var acb = WrapEachChildWithChoice_OneFallback(host, children);
                 acb.SetAttribute(unPrefixedIgnorable);
                 acb.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
                 acb.SetAttribute(unknownAttribute11);
@@ -3671,7 +3658,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private AlternateContent appendEmptyChildACB(OpenXmlElement e, List<OpenXmlElement> children)
+        private AlternateContent AppendEmptyChildACB(OpenXmlElement e, List<OpenXmlElement> children)
         {
             foreach (var c in e.ChildElements)
             {
@@ -3683,7 +3670,7 @@ namespace DocumentFormat.OpenXml.Tests
             return e.AppendChild(acb);
         }
 
-        private AlternateContent wrapWithChoice(OpenXmlElement e, List<OpenXmlElement> children)
+        private AlternateContent WrapWithChoice(OpenXmlElement e, List<OpenXmlElement> children)
         {
             Log.Comment("Appending child elements to Choice...");
             var choice = new AlternateContentChoice();
@@ -3706,7 +3693,7 @@ namespace DocumentFormat.OpenXml.Tests
             return e.AppendChild(acb);
         }
 
-        private AlternateContent wrapEachChildWithChoice_NoFallback(OpenXmlElement e, List<OpenXmlElement> children)
+        private AlternateContent WrapEachChildWithChoice_NoFallback(OpenXmlElement e, List<OpenXmlElement> children)
         {
             var acb = new AlternateContent();
             foreach (var c in e.ChildElements)
@@ -3725,7 +3712,7 @@ namespace DocumentFormat.OpenXml.Tests
             return e.AppendChild(acb);
         }
 
-        private AlternateContent wrapEachChildWithUnselectableChoice_NoFallback(OpenXmlElement e, List<OpenXmlElement> children)
+        private AlternateContent WrapEachChildWithUnselectableChoice_NoFallback(OpenXmlElement e, List<OpenXmlElement> children)
         {
             var acb = new AlternateContent();
             foreach (var c in e.ChildElements)
@@ -3746,7 +3733,7 @@ namespace DocumentFormat.OpenXml.Tests
             return e.AppendChild(acb);
         }
 
-        private AlternateContent wrapEachChildWithChoice_OneFallback(OpenXmlElement e, List<OpenXmlElement> children)
+        private AlternateContent WrapEachChildWithChoice_OneFallback(OpenXmlElement e, List<OpenXmlElement> children)
         {
             var acb = new AlternateContent();
             var fallback = new AlternateContentFallback();
@@ -3771,7 +3758,7 @@ namespace DocumentFormat.OpenXml.Tests
             return e.AppendChild(acb);
         }
 
-        private AlternateContent wrapEachChildWithUnselectableChoice_OneFallback(OpenXmlElement e, List<OpenXmlElement> children)
+        private AlternateContent WrapEachChildWithUnselectableChoice_OneFallback(OpenXmlElement e, List<OpenXmlElement> children)
         {
             var acb = new AlternateContent();
             var fallback = new AlternateContentFallback();
@@ -3798,7 +3785,7 @@ namespace DocumentFormat.OpenXml.Tests
             return e.AppendChild(acb);
         }
 
-        private AlternateContent wrapEachChildWithChoice_LeadingFallback(OpenXmlElement e, List<OpenXmlElement> children)
+        private AlternateContent WrapEachChildWithChoice_LeadingFallback(OpenXmlElement e, List<OpenXmlElement> children)
         {
             var acb = new AlternateContent();
             Log.Comment("Appending fallback to Alternate Content element...");

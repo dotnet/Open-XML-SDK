@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 {
     public partial class Justification
     {
-        private static readonly Dictionary<string, string> s_attributeMap = new Dictionary<string, string>(StringComparer.Ordinal)
+        private static readonly Dictionary<string, string> AttributeMap = new Dictionary<string, string>(StringComparer.Ordinal)
         {
             { "start", "left" },
             { "end", "right" },
@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </remarks>
         private protected override bool StrictTranslateAttribute(in OpenXmlQualifiedName qname, string? value)
         {
-            if (value is not null && s_attributeMap.TryGetValue(value, out var result))
+            if (value is not null && AttributeMap.TryGetValue(value, out var result))
             {
                 value = result;
             }

@@ -20,11 +20,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         private static readonly HashSet<string> _numberedContentTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
         {
-            //11.3 WordprocessingML Parts
+            // 11.3 WordprocessingML Parts
             "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml",
             "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml",
 
-            //12.3 SpreadsheetML Parts
+            // 12.3 SpreadsheetML Parts
             "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml",
             "application/vnd.openxmlformats-officedocument.spreadsheetml.comments+xml",
             "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml",
@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Packaging
             "application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml",
             "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml",
 
-            //13.3 PresentationML Parts
+            // 13.3 PresentationML Parts
             "application/vnd.openxmlformats-officedocument.presentationml.comments+xml",
             "application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml",
             "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml",
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Packaging
             "application/vnd.openxmlformats-officedocument.presentationml.slideUpdateInfo+xml",
             "application/vnd.openxmlformats-officedocument.presentationml.tags+xml",
 
-            //14.2 DrawingML Parts
+            // 14.2 DrawingML Parts
             "application/vnd.openxmlformats-officedocument.drawingml.chart+xml",
             "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml",
             "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml",
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Packaging
             "application/vnd.openxmlformats-officedocument.theme+xml",
             "application/vnd.openxmlformats-officedocument.themeOverride+xml",
 
-            //15.2 Shared Parts
+            // 15.2 Shared Parts
             "application/vnd.openxmlformats-officedocument.customXmlProperties+xml",
             "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings",
             "application/vnd.openxmlformats-officedocument.wordprocessingml.printerSettings",
@@ -86,7 +86,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 var path = Path.Combine(targetPath, string.Concat(targetName, sequenceNumber, targetExt));
 
                 partUri = PackUriHelper.ResolvePartUri(parentUri, new Uri(path, UriHelper.RelativeOrAbsolute));
-            } while (_reservedUri.ContainsKey(partUri));
+            }
+            while (_reservedUri.ContainsKey(partUri));
 
             AddToReserveUri(partUri);
 

@@ -28,9 +28,9 @@ namespace DocumentFormat.OpenXml.Tests
             return errShowsUp;
         }
 
-        ///<summary>
-        ///Category1_14Test.
-        ///</summary>
+        /// <summary>
+        /// Category1_14Test.
+        /// </summary>
         [Fact]
         public void Category1_14Test()
         {
@@ -48,9 +48,9 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(ErrorShowsUp(o14Validator.Validate(column), "Attribute 'totalsRowLabel' should be absent when the value of attribute 'totalsRowFunction' is 'custom'."));
         }
 
-        ///<summary>
-        ///UT4Bug683087.
-        ///</summary>
+        /// <summary>
+        /// UT4Bug683087.
+        /// </summary>
         [Fact]
         public void UT4Bug683087()
         {

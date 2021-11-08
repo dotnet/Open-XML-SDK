@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// <summary>
         ///// X Bitmap Graphic (.xbm).
         ///// </summary>
-        //Xbm,
+        // Xbm,
 
         /// <summary>
         /// Windows Icon (.ico).
@@ -66,13 +66,13 @@ namespace DocumentFormat.OpenXml.Packaging
         ///// <summary>
         ///// Compressed Macintosh PICT (.pcz).
         ///// </summary>
-        //Pcz,
-        //Emz,
-        //Wmz,
+        // Pcz,
+        // Emz,
+        // Wmz,
         ///// <summary>
         ///// Macintosh Quickdraw/PICT Drawing (.pict).
         ///// </summary>
-        //Pict,
+        // Pict,
 
         /// <summary>
         /// JPEG/JIFF Image (.jpeg).

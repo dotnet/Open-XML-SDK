@@ -14,10 +14,10 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
 {
     public class TestEntities
     {
-        //Slicer names
-        private readonly string Slicer1 = "Slicer_1";
-        private readonly string Slicer2 = "Slicer_2";
-        private readonly string Slicer3 = "Slicer_3";
+        // Slicer names
+        private const string Slicer1 = "Slicer_1";
+        private const string Slicer2 = "Slicer_2";
+        private const string Slicer3 = "Slicer_3";
 
         /// <summary>
         /// Edit Slicer element
@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true))
             {
-                //Getting of SlicerCacheParts.
+                // Getting of SlicerCacheParts.
                 SlicerCachePart slicerCachePart1 = GetSlicerCachePart(package.WorkbookPart, Slicer1);
                 SlicerCachePart slicerCachePart2 = GetSlicerCachePart(package.WorkbookPart, Slicer2);
                 SlicerCachePart slicerCachePart3 = GetSlicerCachePart(package.WorkbookPart, Slicer3);
@@ -37,47 +37,47 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                 X15.TableSlicerCache tableSlicerCache2 = slicerCachePart2.RootElement.Descendants<X15.TableSlicerCache>().Single();
                 X15.TableSlicerCache tableSlicerCache3 = slicerCachePart3.RootElement.Descendants<X15.TableSlicerCache>().Single();
 
-                //Change TableId attribute value of TableSlicerCache.
+                // Change TableId attribute value of TableSlicerCache.
                 tableSlicerCache1.TableId.Value = 2;
                 log.Pass("Edited TableSlicerCache attribute of TableId.");
 
-                //Change Column attribute value.
+                // Change Column attribute value.
 
-                //Change Column attribute value of TableSlicerCache.
+                // Change Column attribute value of TableSlicerCache.
                 tableSlicerCache1.Column.Value = 2;
                 log.Pass("Edited TableSlicerCache attribute of Column.");
 
-                //Change SortOrder attribute value.
+                // Change SortOrder attribute value.
 
-                //Change SortOrder attribute value of TableSlicerCache. Set value is Descending.
+                // Change SortOrder attribute value of TableSlicerCache. Set value is Descending.
                 tableSlicerCache1.SortOrder = X14.TabularSlicerCacheSortOrderValues.Descending;
                 log.Pass("Edited TableSlicerCache attribute of SortOrder. Set value is Descending.");
 
-                //Change SortOrder attribute value of TableSlicerCache. Set value is Ascending.
+                // Change SortOrder attribute value of TableSlicerCache. Set value is Ascending.
                 tableSlicerCache2.SortOrder = X14.TabularSlicerCacheSortOrderValues.Ascending;
                 log.Pass("Edited TableSlicerCache attribute of SortOrder. Set value is Ascending.");
 
-                //Change CustomListSort attribute value.
+                // Change CustomListSort attribute value.
 
-                //Change CustomListSort attribute value of TableSlicerCache. Set value is false.
+                // Change CustomListSort attribute value of TableSlicerCache. Set value is false.
                 tableSlicerCache1.CustomListSort = false;
                 log.Pass("Edited TableSlicerCache attribute of CustomListSort. Set value is false.");
 
-                //Change CustomListSort attribute value of TableSlicerCache. Set value is true.
+                // Change CustomListSort attribute value of TableSlicerCache. Set value is true.
                 tableSlicerCache2.CustomListSort = true;
                 log.Pass("Edited TableSlicerCache attribute of CustomListSort. Set value is true.");
 
-                //Change CrossFilter attribute value.
+                // Change CrossFilter attribute value.
 
-                //Change CrossFilter attribute value of TableSlicerCache. Set value is None.
+                // Change CrossFilter attribute value of TableSlicerCache. Set value is None.
                 tableSlicerCache1.CrossFilter = X14.SlicerCacheCrossFilterValues.None;
                 log.Pass("Edited TableSlicerCache attribute of CrossFilter. Set value is None.");
 
-                //Change CrossFilter attribute value of TableSlicerCache. Set value is ShowItemsWithDataAtTop.
+                // Change CrossFilter attribute value of TableSlicerCache. Set value is ShowItemsWithDataAtTop.
                 tableSlicerCache2.CrossFilter = X14.SlicerCacheCrossFilterValues.ShowItemsWithDataAtTop;
                 log.Pass("Edited TableSlicerCache attribute of CrossFilter. Set value is ShowItemsWithDataAtTop.");
 
-                //Change CrossFilter attribute value of TableSlicerCache. Set value is ShowItemsWithNoData.
+                // Change CrossFilter attribute value of TableSlicerCache. Set value is ShowItemsWithNoData.
                 tableSlicerCache3.CrossFilter = X14.SlicerCacheCrossFilterValues.ShowItemsWithNoData;
                 log.Pass("Edited TableSlicerCache attribute of CrossFilter. Set value is ShowItemsWithNoData.");
 
@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                 X15.TableSlicerCache newTableSlicerCache2 = tableSlicerCache2.Clone() as X15.TableSlicerCache;
                 X15.TableSlicerCache newTableSlicerCache3 = tableSlicerCache3.Clone() as X15.TableSlicerCache;
 
-                //Remove the existing Extension, to set the new Extension.
+                // Remove the existing Extension, to set the new Extension.
                 slicerCachePart1.RootElement.Descendants<SlicerCacheDefinitionExtension>().Single().Remove();
                 slicerCachePart2.RootElement.Descendants<SlicerCacheDefinitionExtension>().Single().Remove();
                 slicerCachePart3.RootElement.Descendants<SlicerCacheDefinitionExtension>().Single().Remove();
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                 extension3.Append(newTableSlicerCache3);
                 slicerCachePart3.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.AppendChild(extension3);
 
-                //Append SlicerCacheHideItemsWithNoData element.
+                // Append SlicerCacheHideItemsWithNoData element.
                 Extension extension = new Extension() { Uri = "{470722E0-AACD-4C17-9CDC-17EF765DBC7E}" };
                 extension.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
                 extension.AppendChild<X15.SlicerCacheHideItemsWithNoData>(new X15.SlicerCacheHideItemsWithNoData());
@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false))
             {
-                //Getting of SlicerCacheParts.
+                // Getting of SlicerCacheParts.
                 SlicerCachePart slicerCachePart1 = GetSlicerCachePart(package.WorkbookPart, Slicer1);
                 SlicerCachePart slicerCachePart2 = GetSlicerCachePart(package.WorkbookPart, Slicer2);
                 SlicerCachePart slicerCachePart3 = GetSlicerCachePart(package.WorkbookPart, Slicer3);
@@ -132,42 +132,42 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                 X15.TableSlicerCache tableSlicerCache2 = slicerCachePart2.RootElement.Descendants<X15.TableSlicerCache>().Single();
                 X15.TableSlicerCache tableSlicerCache3 = slicerCachePart3.RootElement.Descendants<X15.TableSlicerCache>().Single();
 
-                //Verify TableId attribute value.
+                // Verify TableId attribute value.
 
-                //Verify TableId attribute value of TableSlicerCache.
+                // Verify TableId attribute value of TableSlicerCache.
                 log.Verify(tableSlicerCache1.TableId.Value == 2, "Verify TableSlicerCache attribute of TableId.");
 
-                //Verify Column attribute value.
+                // Verify Column attribute value.
 
-                //Verify Column attribute value of TableSlicerCache.
+                // Verify Column attribute value of TableSlicerCache.
                 log.Verify(tableSlicerCache1.Column.Value == 2, "Verify TableSlicerCache attribute of Column.");
 
-                //Verify SortOrder attribute value.
+                // Verify SortOrder attribute value.
 
-                //Verify SortOrder attribute value of TableSlicerCache. Value is Descending.
+                // Verify SortOrder attribute value of TableSlicerCache. Value is Descending.
                 log.Verify(tableSlicerCache1.SortOrder.Value == X14.TabularSlicerCacheSortOrderValues.Descending, "Verify TableSlicerCache attribute of SortOrder. Value is not Descending.");
 
-                //Verify SortOrder attribute value of TableSlicerCache. Value is Ascending.
+                // Verify SortOrder attribute value of TableSlicerCache. Value is Ascending.
                 log.Verify(tableSlicerCache2.SortOrder.Value == X14.TabularSlicerCacheSortOrderValues.Ascending, "Verify TableSlicerCache attribute of SortOrder. Value is not Ascending.");
 
-                //Verify CustomListSort attribute value.
-                //Verify CustomListSort attribute value of TableSlicerCache. Value is false.
+                // Verify CustomListSort attribute value.
+                // Verify CustomListSort attribute value of TableSlicerCache. Value is false.
                 log.Verify(tableSlicerCache1.CustomListSort.Value == false, "Verify TableSlicerCache attribute of CustomListSort. Value is not false.");
 
-                //Verify CustomListSort attribute value of TableSlicerCache. Value is true.
+                // Verify CustomListSort attribute value of TableSlicerCache. Value is true.
                 log.Verify(tableSlicerCache2.CustomListSort.Value == true, "Verify TableSlicerCache attribute of CustomListSort. Value is not true.");
 
-                //Verify CrossFilter attribute value.
-                //Verify CrossFilter attribute value of TableSlicerCache. Value is None.
+                // Verify CrossFilter attribute value.
+                // Verify CrossFilter attribute value of TableSlicerCache. Value is None.
                 log.Verify(tableSlicerCache1.CrossFilter == X14.SlicerCacheCrossFilterValues.None, "Verify TableSlicerCache attribute of CrossFilter. Value is not None");
 
-                //Verify CrossFilter attribute value of TableSlicerCache. Value is ShowItemsWithDataAtTop.
+                // Verify CrossFilter attribute value of TableSlicerCache. Value is ShowItemsWithDataAtTop.
                 log.Verify(tableSlicerCache2.CrossFilter == X14.SlicerCacheCrossFilterValues.ShowItemsWithDataAtTop, "Verify TableSlicerCache attribute of CrossFilter. Value is ShowItemsWithDataAtTop.");
 
-                //Verify CrossFilter attribute value of TableSlicerCache. Value is ShowItemsWithNoData.
+                // Verify CrossFilter attribute value of TableSlicerCache. Value is ShowItemsWithNoData.
                 log.Verify(tableSlicerCache3.CrossFilter == X14.SlicerCacheCrossFilterValues.ShowItemsWithNoData, "Verify TableSlicerCache attribute of CrossFilter. Value is ShowItemsWithNoData.");
 
-                //Verify SlicerCacheHideItemsWithNoData element exist.
+                // Verify SlicerCacheHideItemsWithNoData element exist.
                 log.Verify(slicerCachePart2.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.Descendants<X15.SlicerCacheHideItemsWithNoData>().Count() == 1, "Verify SlicerCacheHideItemsWithNoData exist.");
             }
         }
@@ -183,7 +183,7 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
             SlicerCachePart returnSlicerCachePart = null;
             string slicerCacheName = null;
 
-            //Get SlicerCache Name
+            // Get SlicerCache Name
             foreach (WorksheetPart worksheetPart in workbookPart.WorksheetParts)
             {
                 foreach (SlicersPart slicersPart in worksheetPart.SlicersParts)
@@ -209,7 +209,7 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                 }
             }
 
-            //Getting name match SlicerCachePart.
+            // Getting name match SlicerCachePart.
             if (slicerCacheName is not null)
             {
                 foreach (SlicerCachePart slicerCachePart in workbookPart.SlicerCacheParts)

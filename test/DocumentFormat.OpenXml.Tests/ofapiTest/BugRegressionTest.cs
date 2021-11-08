@@ -28,12 +28,12 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            //<xsd:complexType name="CT_ColorScale">
+            // <xsd:complexType name="CT_ColorScale">
             //  <xsd:sequence>
             //    <xsd:element name="cfvo" type="CT_Cfvo" minOccurs="2" maxOccurs="unbounded">
             //    <xsd:element name="color" type="x:CT_Color" minOccurs="2" maxOccurs="unbounded">
             //  </xsd:sequence>
-            //</xsd:complexType>
+            // </xsd:complexType>
             DocumentFormat.OpenXml.Spreadsheet.ColorScale colorScale = new DocumentFormat.OpenXml.Spreadsheet.ColorScale(
 "<x:colorScale xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\">" +
 "    <x:cfvo type=\"min\" val=\"0\" />" +
@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            //<w:p>
+            // <w:p>
             //    <ve:AlternateContent />
             //    <w:r>
             //        <w:t>Acb</w:t>
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Tests
             //            <w:rFonts w:hint="eastAsia"/>
             //        </w:rPr>
             //    </w:r>
-            //</w:p>
+            // </w:p>
             Paragraph p = new Paragraph();
             AlternateContent acb = p.AppendChild(new AlternateContent());
 
@@ -656,7 +656,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug396358()
         {
-            using (var stream = GetStream(TestFiles.mailmerge, true))
+            using (var stream = GetStream(TestFiles.Mailmerge, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var part = doc.MainDocumentPart.DocumentSettingsPart.MailMergeRecipientDataPart;
@@ -680,7 +680,7 @@ namespace DocumentFormat.OpenXml.Tests
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
             };
 
-            using (var stream = GetStream(TestFiles.animation, true))
+            using (var stream = GetStream(TestFiles.Animation, true))
             using (var doc = PresentationDocument.Open(stream, true, s))
             {
                 var sp = doc.PresentationPart.GetPartById("rId4") as SlidePart;

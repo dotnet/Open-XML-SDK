@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
 
-            //verify Child Elements
+            // verify Child Elements
             if (left.HasElements != right.HasElements)
             {
                 return false;

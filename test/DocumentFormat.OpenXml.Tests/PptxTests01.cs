@@ -265,8 +265,7 @@ namespace DocumentFormat.OpenXml.Tests
                     new D.Tint() { Val = 15000 },
                     new D.SaturationModulation() { Val = 350000 })
                 { Val = D.SchemeColorValues.PhColor })
-                { Position = 100000 }
-                ),
+                { Position = 100000 }),
                 new D.LinearGradientFill() { Angle = 16200000, Scaled = true }),
               new D.NoFill(),
               new D.PatternFill(),

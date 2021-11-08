@@ -699,7 +699,7 @@ namespace DocumentFormat.OpenXml
 #endif
         }
 
-        private static XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, bool ignoreWhitespace, out bool? _standalone, out string? _encoding)
+        private static XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, bool ignoreWhitespace, out bool? standalone, out string? encoding)
         {
             var settings = new XmlReaderSettings
             {
@@ -719,27 +719,27 @@ namespace DocumentFormat.OpenXml
 
             if (xmlReader.NodeType == XmlNodeType.XmlDeclaration)
             {
-                _encoding = xmlReader["encoding"];
+                encoding = xmlReader["encoding"];
 
-                var standalone = xmlReader["standalone"];
+                var standaloneRaw = xmlReader["standalone"];
 
-                if (string.Equals("yes", standalone, StringComparison.Ordinal))
+                if (string.Equals("yes", standaloneRaw, StringComparison.Ordinal))
                 {
-                    _standalone = true;
+                    standalone = true;
                 }
-                else if (string.Equals("no", standalone, StringComparison.Ordinal))
+                else if (string.Equals("no", standaloneRaw, StringComparison.Ordinal))
                 {
-                    _standalone = false;
+                    standalone = false;
                 }
                 else
                 {
-                    _standalone = null;
+                    standalone = null;
                 }
             }
             else
             {
-                _encoding = null;
-                _standalone = null;
+                encoding = null;
+                standalone = null;
             }
 
             return xmlReader;
@@ -810,7 +810,7 @@ namespace DocumentFormat.OpenXml
             {
                 while (_xmlReader.MoveToNextAttribute())
                 {
-                    if (_xmlReader.Prefix == OpenXmlElementContext.xmlnsPrefix)
+                    if (_xmlReader.Prefix == OpenXmlElementContext.XmlnsPrefix)
                     {
                         _nsDecls.Add(new KeyValuePair<string, string>(_xmlReader.LocalName, _xmlReader.Value));
                     }
@@ -820,7 +820,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                //  Moves the reader back to the element node.
+                // Moves the reader back to the element node.
                 _xmlReader.MoveToElement();
             }
         }

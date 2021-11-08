@@ -18,14 +18,14 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPackage
     {
-        private static readonly XNamespace Pkg = "http://schemas.microsoft.com/office/2006/xmlPackage";
-        private static readonly XNamespace Rel = "http://schemas.openxmlformats.org/package/2006/relationships";
-
         private const string RelationshipContentType =
             "application/vnd.openxmlformats-package.relationships+xml";
 
         private const string AltChunkRelationshipType =
             "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk";
+
+        private static readonly XNamespace Pkg = "http://schemas.microsoft.com/office/2006/xmlPackage";
+        private static readonly XNamespace Rel = "http://schemas.openxmlformats.org/package/2006/relationships";
 
         /// <summary>
         /// Converts an OpenXml package in OPC format to string in Flat OPC format.

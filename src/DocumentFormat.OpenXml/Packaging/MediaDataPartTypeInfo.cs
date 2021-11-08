@@ -12,27 +12,27 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 MediaDataPartType.Aiff => "audio/aiff",
 
-                //MediaDataPartType.Basic => "audio/basic",
+                // MediaDataPartType.Basic => "audio/basic",
                 MediaDataPartType.Midi => "audio/midi",
                 MediaDataPartType.Mp3 => "audio/mp3",
                 MediaDataPartType.MpegUrl => "audio/mpegurl",
                 MediaDataPartType.Wav => "audio/wav",
 
-                //MediaDataPartType.Wax => "audio/x-ms-wax",
+                // MediaDataPartType.Wax => "audio/x-ms-wax",
                 MediaDataPartType.Wma => "audio/x-ms-wma",
                 MediaDataPartType.MpegAudio => "audio/mpeg",
                 MediaDataPartType.OggAudio => "audio/ogg",
 
                 // *** Video types.
-                //MediaDataPartType.Asf => "video/x-ms-asf",
+                // MediaDataPartType.Asf => "video/x-ms-asf",
                 MediaDataPartType.Asx => "video/x-ms-asf-plugin",
                 MediaDataPartType.Avi => "video/avi",
 
-                //MediaDataPartType.Ivf => "video/x-ivf",
+                // MediaDataPartType.Ivf => "video/x-ivf",
                 MediaDataPartType.Mpg => "video/mpg",
                 MediaDataPartType.MpegVideo => "video/mpeg",
 
-                //MediaDataPartType.WM => "video/x-ms-wm",
+                // MediaDataPartType.WM => "video/x-ms-wm",
                 MediaDataPartType.Wmv => "video/x-ms-wmv",
                 MediaDataPartType.Wmx => "video/x-ms-wmx",
                 MediaDataPartType.Wvx => "video/x-ms-wvx",
@@ -47,27 +47,27 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 MediaDataPartType.Aiff => ".aiff",
 
-                //MediaDataPartType.Basic => ".au",
+                // MediaDataPartType.Basic => ".au",
                 MediaDataPartType.Midi => ".midi",
                 MediaDataPartType.Mp3 => ".mp3",
                 MediaDataPartType.MpegUrl => ".m3u",
                 MediaDataPartType.Wav => ".wav",
 
-                //MediaDataPartType.Wax => ".wax",
+                // MediaDataPartType.Wax => ".wax",
                 MediaDataPartType.Wma => ".wma",
                 MediaDataPartType.MpegAudio => ".mpeg",
                 MediaDataPartType.OggAudio => ".ogg",
 
                 // Video types.
-                //MediaDataPartType.Asf => ".asf",
+                // MediaDataPartType.Asf => ".asf",
                 MediaDataPartType.Asx => ".asx",
                 MediaDataPartType.Avi => ".avi",
 
-                //MediaDataPartType.Ivf => ".ivf",
+                // MediaDataPartType.Ivf => ".ivf",
                 MediaDataPartType.Mpg => ".mpg",
                 MediaDataPartType.MpegVideo => ".mpeg",
 
-                //MediaDataPartType.WM => ".wm",
+                // MediaDataPartType.WM => ".wm",
                 MediaDataPartType.Wmv => ".wmv",
                 MediaDataPartType.Wmx => ".wmx",
                 MediaDataPartType.Wvx => ".wvx",

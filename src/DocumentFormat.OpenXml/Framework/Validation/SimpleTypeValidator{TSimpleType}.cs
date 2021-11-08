@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public void Validate(ValidationContext context)
         {
-            if(context.Stack.Current is not ValidationElement current)
+            if (context.Stack.Current is not ValidationElement current)
             {
                 return;
             }

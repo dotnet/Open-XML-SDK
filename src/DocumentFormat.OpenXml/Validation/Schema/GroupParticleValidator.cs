@@ -21,10 +21,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         // ***********************************************************
-        //<xsd:group ref="..." /> is valid under <xsd:complexType>
-        //<xsd:complexType name="CT_HdrFtr">
+        // <xsd:group ref="..." /> is valid under <xsd:complexType>
+        // <xsd:complexType name="CT_HdrFtr">
         //  <xsd:group ref="EG_BlockLevelElts" minOccurs="1" maxOccurs="unbounded" />
-        //</xsd:complexType>
+        // </xsd:complexType>
         // ***********************************************************
 
         ///// <summary>
@@ -32,10 +32,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         ///// </summary>
         ///// <param name="validationContext"></param>
         ///// <returns></returns>
-        //internal override SchemaValidationResult Validate(ValidationContext validationContext)
-        //{
+        // internal override SchemaValidationResult Validate(ValidationContext validationContext)
+        // {
         //    throw new InvalidOperationException();
-        //}
+        // }
 
         /// <summary>
         /// Try match the particle once.
