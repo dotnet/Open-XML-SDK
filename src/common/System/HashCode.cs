@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public static int Combine<T1, T2>(T1 t1, T2 t2)
         {
-            var hashcode = new HashCode();
+            var hashcode = default(HashCode);
 
             hashcode.Add(t1);
             hashcode.Add(t2);
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public static int Combine<T1, T2, T3>(T1 t1, T2 t2, T3 t3)
         {
-            var hashcode = new HashCode();
+            var hashcode = default(HashCode);
 
             hashcode.Add(t1);
             hashcode.Add(t2);
@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Framework
 
         public static int Combine<T1, T2, T3, T4>(T1 t1, T2 t2, T3 t3, T4 t4)
         {
-            var hashcode = new HashCode();
+            var hashcode = default(HashCode);
 
             hashcode.Add(t1);
             hashcode.Add(t2);
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Framework
                     code = Seed;
                 }
 
-                _code = code * Combinator + value;
+                _code = (code * Combinator) + value;
             }
         }
     }

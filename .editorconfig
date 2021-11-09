@@ -32,7 +32,6 @@ dotnet_diagnostic.SA1204.severity = none
 
 # SA1308: Variable names should not be prefixed
 dotnet_diagnostic.SA1308.severity = none
-dotnet_diagnostic.SA0001.severity=silent
 
 # SA1614: Element parameter documentation should have text
 dotnet_diagnostic.SA1614.severity = none

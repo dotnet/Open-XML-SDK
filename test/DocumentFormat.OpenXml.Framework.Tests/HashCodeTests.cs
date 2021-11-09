@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void NoValue()
         {
-            Assert.Equal(0, new HashCode().ToHashCode());
+            Assert.Equal(0, default(HashCode).ToHashCode());
         }
 
         [Fact]
@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var input = 123456;
             var expected = Seed * Combinator + input.GetHashCode();
 
-            var hashCode = new HashCode();
+            var hashCode = default(HashCode);
             hashCode.Add(input);
 
             Assert.Equal(expected, hashCode.ToHashCode());
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var input1 = 123456;
             var input2 = 123456.1234;
 
-            var hashCode = new HashCode();
+            var hashCode = default(HashCode);
             hashCode.Add(input1);
             hashCode.Add(input2);
             var result = hashCode.ToHashCode();
@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var input2 = 123456.1234;
             var input3 = true;
 
-            var hashCode = new HashCode();
+            var hashCode = default(HashCode);
             hashCode.Add(input1);
             hashCode.Add(input2);
             hashCode.Add(input3);
@@ -68,9 +68,9 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var comparer = System.StringComparer.Ordinal;
             var input = "DocumentFormat.OpenXml";
 
-            var expected = Seed * Combinator + comparer.GetHashCode(input);
+            var expected = (Seed * Combinator) + comparer.GetHashCode(input);
 
-            var hashCode = new HashCode();
+            var hashCode = default(HashCode);
             hashCode.Add(input, comparer);
             var result = hashCode.ToHashCode();
 
