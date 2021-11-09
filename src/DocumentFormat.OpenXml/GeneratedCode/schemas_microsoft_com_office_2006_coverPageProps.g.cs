@@ -94,9 +94,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public PublishDate? PublishDate
+        public DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate? PublishDate
         {
-            get => GetElement<PublishDate>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate>();
             set => SetElement(value);
         }
 
@@ -107,9 +107,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public DocumentAbstract? DocumentAbstract
+        public DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract? DocumentAbstract
         {
-            get => GetElement<DocumentAbstract>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract>();
             set => SetElement(value);
         }
 
@@ -120,9 +120,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public CompanyAddress? CompanyAddress
+        public DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress? CompanyAddress
         {
-            get => GetElement<CompanyAddress>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress>();
             set => SetElement(value);
         }
 
@@ -133,9 +133,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public CompanyPhoneNumber? CompanyPhoneNumber
+        public DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber? CompanyPhoneNumber
         {
-            get => GetElement<CompanyPhoneNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber>();
             set => SetElement(value);
         }
 
@@ -146,9 +146,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public CompanyFaxNumber? CompanyFaxNumber
+        public DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber? CompanyFaxNumber
         {
-            get => GetElement<CompanyFaxNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber>();
             set => SetElement(value);
         }
 
@@ -159,9 +159,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public CompanyEmailAddress? CompanyEmailAddress
+        public DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress? CompanyEmailAddress
         {
-            get => GetElement<CompanyEmailAddress>();
+            get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress>();
             set => SetElement(value);
         }
 

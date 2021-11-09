@@ -587,9 +587,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public DataValidation? DataValidation
+        public DocumentFormat.OpenXml.Office2016.Excel.DataValidation? DataValidation
         {
-            get => GetElement<DataValidation>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.DataValidation>();
             set => SetElement(value);
         }
 
@@ -600,9 +600,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public Hyperlink? Hyperlink
+        public DocumentFormat.OpenXml.Office2016.Excel.Hyperlink? Hyperlink
         {
-            get => GetElement<Hyperlink>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Hyperlink>();
             set => SetElement(value);
         }
 
@@ -613,9 +613,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public SparklineGroup? SparklineGroup
+        public DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup? SparklineGroup
         {
-            get => GetElement<SparklineGroup>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup>();
             set => SetElement(value);
         }
 
@@ -626,9 +626,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public Comments? Comments
+        public DocumentFormat.OpenXml.Office2016.Excel.Comments? Comments
         {
-            get => GetElement<Comments>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Comments>();
             set => SetElement(value);
         }
 
@@ -639,9 +639,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public AutoFilter? AutoFilter
+        public DocumentFormat.OpenXml.Office2016.Excel.AutoFilter? AutoFilter
         {
-            get => GetElement<AutoFilter>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.AutoFilter>();
             set => SetElement(value);
         }
 
@@ -652,9 +652,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public pivotTableDefinition? pivotTableDefinition
+        public DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition? pivotTableDefinition
         {
-            get => GetElement<pivotTableDefinition>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition>();
             set => SetElement(value);
         }
 
@@ -2247,9 +2247,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public DifferentialFormatType? DifferentialFormatType
+        public DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType? DifferentialFormatType
         {
-            get => GetElement<DifferentialFormatType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType>();
             set => SetElement(value);
         }
 
@@ -2260,9 +2260,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2629,9 +2629,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public FormulaFormula? FormulaFormula
+        public DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula? FormulaFormula
         {
-            get => GetElement<FormulaFormula>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula>();
             set => SetElement(value);
         }
 
@@ -2642,9 +2642,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2016.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -2818,9 +2818,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public StateBasedHeader? StateBasedHeader
+        public DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader? StateBasedHeader
         {
-            get => GetElement<StateBasedHeader>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
             set => SetElement(value);
         }
 
@@ -3003,9 +3003,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public StateBasedHeader? StateBasedHeader
+        public DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader? StateBasedHeader
         {
-            get => GetElement<StateBasedHeader>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
             set => SetElement(value);
         }
 
@@ -4019,9 +4019,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public FFormula? FFormula
+        public DocumentFormat.OpenXml.Office2016.Excel.FFormula? FFormula
         {
-            get => GetElement<FFormula>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FFormula>();
             set => SetElement(value);
         }
 
@@ -4032,9 +4032,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public Xstring? Xstring
+        public DocumentFormat.OpenXml.Office2016.Excel.Xstring? Xstring
         {
-            get => GetElement<Xstring>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Xstring>();
             set => SetElement(value);
         }
 
@@ -4045,9 +4045,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public RstType? RstType
+        public DocumentFormat.OpenXml.Office2016.Excel.RstType? RstType
         {
-            get => GetElement<RstType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RstType>();
             set => SetElement(value);
         }
 
@@ -4500,9 +4500,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public RefMap? RefMap
+        public DocumentFormat.OpenXml.Office2016.Excel.RefMap? RefMap
         {
-            get => GetElement<RefMap>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RefMap>();
             set => SetElement(value);
         }
 
@@ -4640,9 +4640,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public RowColVisualOps? RowColVisualOps
+        public DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps? RowColVisualOps
         {
-            get => GetElement<RowColVisualOps>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps>();
             set => SetElement(value);
         }
 
@@ -4653,9 +4653,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public HideUnhideSheet? HideUnhideSheet
+        public DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet? HideUnhideSheet
         {
-            get => GetElement<HideUnhideSheet>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet>();
             set => SetElement(value);
         }
 
@@ -4666,9 +4666,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public ShowGridlinesHeadings? ShowGridlinesHeadings
+        public DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings? ShowGridlinesHeadings
         {
-            get => GetElement<ShowGridlinesHeadings>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings>();
             set => SetElement(value);
         }
 
@@ -4679,9 +4679,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public FreezePanes? FreezePanes
+        public DocumentFormat.OpenXml.Office2016.Excel.FreezePanes? FreezePanes
         {
-            get => GetElement<FreezePanes>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FreezePanes>();
             set => SetElement(value);
         }
 
@@ -4692,9 +4692,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
         /// </remark>
-        public Outlines? Outlines
+        public DocumentFormat.OpenXml.Office2016.Excel.Outlines? Outlines
         {
-            get => GetElement<Outlines>();
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Outlines>();
             set => SetElement(value);
         }
 

@@ -130,9 +130,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// <remark>
         /// xmlns:wps = http://schemas.microsoft.com/office/word/2010/wordprocessingShape
         /// </remark>
-        public NonVisualDrawingProperties? NonVisualDrawingProperties
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<NonVisualDrawingProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties>();
             set => SetElement(value);
         }
 
@@ -1024,9 +1024,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:wps = http://schemas.microsoft.com/office/word/2010/wordprocessingShape
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
@@ -1141,9 +1141,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:wps = http://schemas.microsoft.com/office/word/2010/wordprocessingShape
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 

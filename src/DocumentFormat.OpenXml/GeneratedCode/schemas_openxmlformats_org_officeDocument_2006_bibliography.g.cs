@@ -3392,9 +3392,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public NameList? NameList
+        public DocumentFormat.OpenXml.Bibliography.NameList? NameList
         {
-            get => GetElement<NameList>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>();
             set => SetElement(value);
         }
     }
@@ -3590,9 +3590,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public NameList? NameList
+        public DocumentFormat.OpenXml.Bibliography.NameList? NameList
         {
-            get => GetElement<NameList>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>();
             set => SetElement(value);
         }
 
@@ -3603,9 +3603,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Corporate? Corporate
+        public DocumentFormat.OpenXml.Bibliography.Corporate? Corporate
         {
-            get => GetElement<Corporate>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Corporate>();
             set => SetElement(value);
         }
     }
@@ -3723,9 +3723,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Artist? Artist
+        public DocumentFormat.OpenXml.Bibliography.Artist? Artist
         {
-            get => GetElement<Artist>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Artist>();
             set => SetElement(value);
         }
 
@@ -3736,9 +3736,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Author? Author
+        public DocumentFormat.OpenXml.Bibliography.Author? Author
         {
-            get => GetElement<Author>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Author>();
             set => SetElement(value);
         }
 
@@ -3749,9 +3749,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public BookAuthor? BookAuthor
+        public DocumentFormat.OpenXml.Bibliography.BookAuthor? BookAuthor
         {
-            get => GetElement<BookAuthor>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.BookAuthor>();
             set => SetElement(value);
         }
 
@@ -3762,9 +3762,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Compiler? Compiler
+        public DocumentFormat.OpenXml.Bibliography.Compiler? Compiler
         {
-            get => GetElement<Compiler>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Compiler>();
             set => SetElement(value);
         }
 
@@ -3775,9 +3775,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Composer? Composer
+        public DocumentFormat.OpenXml.Bibliography.Composer? Composer
         {
-            get => GetElement<Composer>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Composer>();
             set => SetElement(value);
         }
 
@@ -3788,9 +3788,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Conductor? Conductor
+        public DocumentFormat.OpenXml.Bibliography.Conductor? Conductor
         {
-            get => GetElement<Conductor>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Conductor>();
             set => SetElement(value);
         }
 
@@ -3801,9 +3801,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Counsel? Counsel
+        public DocumentFormat.OpenXml.Bibliography.Counsel? Counsel
         {
-            get => GetElement<Counsel>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Counsel>();
             set => SetElement(value);
         }
 
@@ -3814,9 +3814,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Director? Director
+        public DocumentFormat.OpenXml.Bibliography.Director? Director
         {
-            get => GetElement<Director>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Director>();
             set => SetElement(value);
         }
 
@@ -3827,9 +3827,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Editor? Editor
+        public DocumentFormat.OpenXml.Bibliography.Editor? Editor
         {
-            get => GetElement<Editor>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Editor>();
             set => SetElement(value);
         }
 
@@ -3840,9 +3840,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Interviewee? Interviewee
+        public DocumentFormat.OpenXml.Bibliography.Interviewee? Interviewee
         {
-            get => GetElement<Interviewee>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewee>();
             set => SetElement(value);
         }
 
@@ -3853,9 +3853,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Interviewer? Interviewer
+        public DocumentFormat.OpenXml.Bibliography.Interviewer? Interviewer
         {
-            get => GetElement<Interviewer>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewer>();
             set => SetElement(value);
         }
 
@@ -3866,9 +3866,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Inventor? Inventor
+        public DocumentFormat.OpenXml.Bibliography.Inventor? Inventor
         {
-            get => GetElement<Inventor>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Inventor>();
             set => SetElement(value);
         }
 
@@ -3879,9 +3879,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Performer? Performer
+        public DocumentFormat.OpenXml.Bibliography.Performer? Performer
         {
-            get => GetElement<Performer>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Performer>();
             set => SetElement(value);
         }
 
@@ -3892,9 +3892,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ProducerName? ProducerName
+        public DocumentFormat.OpenXml.Bibliography.ProducerName? ProducerName
         {
-            get => GetElement<ProducerName>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ProducerName>();
             set => SetElement(value);
         }
 
@@ -3905,9 +3905,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Translator? Translator
+        public DocumentFormat.OpenXml.Bibliography.Translator? Translator
         {
-            get => GetElement<Translator>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Translator>();
             set => SetElement(value);
         }
 
@@ -3918,9 +3918,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Writer? Writer
+        public DocumentFormat.OpenXml.Bibliography.Writer? Writer
         {
-            get => GetElement<Writer>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Writer>();
             set => SetElement(value);
         }
 
@@ -4190,9 +4190,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public AbbreviatedCaseNumber? AbbreviatedCaseNumber
+        public DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber? AbbreviatedCaseNumber
         {
-            get => GetElement<AbbreviatedCaseNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>();
             set => SetElement(value);
         }
 
@@ -4203,9 +4203,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public AlbumTitle? AlbumTitle
+        public DocumentFormat.OpenXml.Bibliography.AlbumTitle? AlbumTitle
         {
-            get => GetElement<AlbumTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.AlbumTitle>();
             set => SetElement(value);
         }
 
@@ -4216,9 +4216,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public AuthorList? AuthorList
+        public DocumentFormat.OpenXml.Bibliography.AuthorList? AuthorList
         {
-            get => GetElement<AuthorList>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.AuthorList>();
             set => SetElement(value);
         }
 
@@ -4229,9 +4229,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public BookTitle? BookTitle
+        public DocumentFormat.OpenXml.Bibliography.BookTitle? BookTitle
         {
-            get => GetElement<BookTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.BookTitle>();
             set => SetElement(value);
         }
 
@@ -4242,9 +4242,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Broadcaster? Broadcaster
+        public DocumentFormat.OpenXml.Bibliography.Broadcaster? Broadcaster
         {
-            get => GetElement<Broadcaster>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Broadcaster>();
             set => SetElement(value);
         }
 
@@ -4255,9 +4255,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public BroadcastTitle? BroadcastTitle
+        public DocumentFormat.OpenXml.Bibliography.BroadcastTitle? BroadcastTitle
         {
-            get => GetElement<BroadcastTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.BroadcastTitle>();
             set => SetElement(value);
         }
 
@@ -4268,9 +4268,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public CaseNumber? CaseNumber
+        public DocumentFormat.OpenXml.Bibliography.CaseNumber? CaseNumber
         {
-            get => GetElement<CaseNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.CaseNumber>();
             set => SetElement(value);
         }
 
@@ -4281,9 +4281,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ChapterNumber? ChapterNumber
+        public DocumentFormat.OpenXml.Bibliography.ChapterNumber? ChapterNumber
         {
-            get => GetElement<ChapterNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ChapterNumber>();
             set => SetElement(value);
         }
 
@@ -4294,9 +4294,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public City? City
+        public DocumentFormat.OpenXml.Bibliography.City? City
         {
-            get => GetElement<City>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.City>();
             set => SetElement(value);
         }
 
@@ -4307,9 +4307,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Comments? Comments
+        public DocumentFormat.OpenXml.Bibliography.Comments? Comments
         {
-            get => GetElement<Comments>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Comments>();
             set => SetElement(value);
         }
 
@@ -4320,9 +4320,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ConferenceName? ConferenceName
+        public DocumentFormat.OpenXml.Bibliography.ConferenceName? ConferenceName
         {
-            get => GetElement<ConferenceName>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ConferenceName>();
             set => SetElement(value);
         }
 
@@ -4333,9 +4333,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public CountryRegion? CountryRegion
+        public DocumentFormat.OpenXml.Bibliography.CountryRegion? CountryRegion
         {
-            get => GetElement<CountryRegion>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.CountryRegion>();
             set => SetElement(value);
         }
 
@@ -4346,9 +4346,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Court? Court
+        public DocumentFormat.OpenXml.Bibliography.Court? Court
         {
-            get => GetElement<Court>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Court>();
             set => SetElement(value);
         }
 
@@ -4359,9 +4359,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Day? Day
+        public DocumentFormat.OpenXml.Bibliography.Day? Day
         {
-            get => GetElement<Day>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Day>();
             set => SetElement(value);
         }
 
@@ -4372,9 +4372,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DayAccessed? DayAccessed
+        public DocumentFormat.OpenXml.Bibliography.DayAccessed? DayAccessed
         {
-            get => GetElement<DayAccessed>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.DayAccessed>();
             set => SetElement(value);
         }
 
@@ -4385,9 +4385,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Department? Department
+        public DocumentFormat.OpenXml.Bibliography.Department? Department
         {
-            get => GetElement<Department>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Department>();
             set => SetElement(value);
         }
 
@@ -4398,9 +4398,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Distributor? Distributor
+        public DocumentFormat.OpenXml.Bibliography.Distributor? Distributor
         {
-            get => GetElement<Distributor>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Distributor>();
             set => SetElement(value);
         }
 
@@ -4411,9 +4411,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Edition? Edition
+        public DocumentFormat.OpenXml.Bibliography.Edition? Edition
         {
-            get => GetElement<Edition>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Edition>();
             set => SetElement(value);
         }
 
@@ -4424,9 +4424,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public GuidString? GuidString
+        public DocumentFormat.OpenXml.Bibliography.GuidString? GuidString
         {
-            get => GetElement<GuidString>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.GuidString>();
             set => SetElement(value);
         }
 
@@ -4437,9 +4437,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Institution? Institution
+        public DocumentFormat.OpenXml.Bibliography.Institution? Institution
         {
-            get => GetElement<Institution>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Institution>();
             set => SetElement(value);
         }
 
@@ -4450,9 +4450,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public InternetSiteTitle? InternetSiteTitle
+        public DocumentFormat.OpenXml.Bibliography.InternetSiteTitle? InternetSiteTitle
         {
-            get => GetElement<InternetSiteTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.InternetSiteTitle>();
             set => SetElement(value);
         }
 
@@ -4463,9 +4463,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Issue? Issue
+        public DocumentFormat.OpenXml.Bibliography.Issue? Issue
         {
-            get => GetElement<Issue>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Issue>();
             set => SetElement(value);
         }
 
@@ -4476,9 +4476,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public JournalName? JournalName
+        public DocumentFormat.OpenXml.Bibliography.JournalName? JournalName
         {
-            get => GetElement<JournalName>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.JournalName>();
             set => SetElement(value);
         }
 
@@ -4489,9 +4489,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public LcId? LcId
+        public DocumentFormat.OpenXml.Bibliography.LcId? LcId
         {
-            get => GetElement<LcId>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.LcId>();
             set => SetElement(value);
         }
 
@@ -4502,9 +4502,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Medium? Medium
+        public DocumentFormat.OpenXml.Bibliography.Medium? Medium
         {
-            get => GetElement<Medium>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Medium>();
             set => SetElement(value);
         }
 
@@ -4515,9 +4515,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Month? Month
+        public DocumentFormat.OpenXml.Bibliography.Month? Month
         {
-            get => GetElement<Month>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Month>();
             set => SetElement(value);
         }
 
@@ -4528,9 +4528,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public MonthAccessed? MonthAccessed
+        public DocumentFormat.OpenXml.Bibliography.MonthAccessed? MonthAccessed
         {
-            get => GetElement<MonthAccessed>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.MonthAccessed>();
             set => SetElement(value);
         }
 
@@ -4541,9 +4541,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public NumberVolumes? NumberVolumes
+        public DocumentFormat.OpenXml.Bibliography.NumberVolumes? NumberVolumes
         {
-            get => GetElement<NumberVolumes>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.NumberVolumes>();
             set => SetElement(value);
         }
 
@@ -4554,9 +4554,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Pages? Pages
+        public DocumentFormat.OpenXml.Bibliography.Pages? Pages
         {
-            get => GetElement<Pages>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Pages>();
             set => SetElement(value);
         }
 
@@ -4567,9 +4567,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PatentNumber? PatentNumber
+        public DocumentFormat.OpenXml.Bibliography.PatentNumber? PatentNumber
         {
-            get => GetElement<PatentNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentNumber>();
             set => SetElement(value);
         }
 
@@ -4580,9 +4580,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PeriodicalTitle? PeriodicalTitle
+        public DocumentFormat.OpenXml.Bibliography.PeriodicalTitle? PeriodicalTitle
         {
-            get => GetElement<PeriodicalTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.PeriodicalTitle>();
             set => SetElement(value);
         }
 
@@ -4593,9 +4593,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ProductionCompany? ProductionCompany
+        public DocumentFormat.OpenXml.Bibliography.ProductionCompany? ProductionCompany
         {
-            get => GetElement<ProductionCompany>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ProductionCompany>();
             set => SetElement(value);
         }
 
@@ -4606,9 +4606,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PublicationTitle? PublicationTitle
+        public DocumentFormat.OpenXml.Bibliography.PublicationTitle? PublicationTitle
         {
-            get => GetElement<PublicationTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.PublicationTitle>();
             set => SetElement(value);
         }
 
@@ -4619,9 +4619,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Publisher? Publisher
+        public DocumentFormat.OpenXml.Bibliography.Publisher? Publisher
         {
-            get => GetElement<Publisher>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Publisher>();
             set => SetElement(value);
         }
 
@@ -4632,9 +4632,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public RecordingNumber? RecordingNumber
+        public DocumentFormat.OpenXml.Bibliography.RecordingNumber? RecordingNumber
         {
-            get => GetElement<RecordingNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.RecordingNumber>();
             set => SetElement(value);
         }
 
@@ -4645,9 +4645,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ReferenceOrder? ReferenceOrder
+        public DocumentFormat.OpenXml.Bibliography.ReferenceOrder? ReferenceOrder
         {
-            get => GetElement<ReferenceOrder>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ReferenceOrder>();
             set => SetElement(value);
         }
 
@@ -4658,9 +4658,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Reporter? Reporter
+        public DocumentFormat.OpenXml.Bibliography.Reporter? Reporter
         {
-            get => GetElement<Reporter>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Reporter>();
             set => SetElement(value);
         }
 
@@ -4671,9 +4671,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public SourceType? SourceType
+        public DocumentFormat.OpenXml.Bibliography.SourceType? SourceType
         {
-            get => GetElement<SourceType>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.SourceType>();
             set => SetElement(value);
         }
 
@@ -4684,9 +4684,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ShortTitle? ShortTitle
+        public DocumentFormat.OpenXml.Bibliography.ShortTitle? ShortTitle
         {
-            get => GetElement<ShortTitle>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ShortTitle>();
             set => SetElement(value);
         }
 
@@ -4697,9 +4697,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public StandardNumber? StandardNumber
+        public DocumentFormat.OpenXml.Bibliography.StandardNumber? StandardNumber
         {
-            get => GetElement<StandardNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.StandardNumber>();
             set => SetElement(value);
         }
 
@@ -4710,9 +4710,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public StateProvince? StateProvince
+        public DocumentFormat.OpenXml.Bibliography.StateProvince? StateProvince
         {
-            get => GetElement<StateProvince>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.StateProvince>();
             set => SetElement(value);
         }
 
@@ -4723,9 +4723,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Station? Station
+        public DocumentFormat.OpenXml.Bibliography.Station? Station
         {
-            get => GetElement<Station>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Station>();
             set => SetElement(value);
         }
 
@@ -4736,9 +4736,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Tag? Tag
+        public DocumentFormat.OpenXml.Bibliography.Tag? Tag
         {
-            get => GetElement<Tag>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Tag>();
             set => SetElement(value);
         }
 
@@ -4749,9 +4749,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Theater? Theater
+        public DocumentFormat.OpenXml.Bibliography.Theater? Theater
         {
-            get => GetElement<Theater>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Theater>();
             set => SetElement(value);
         }
 
@@ -4762,9 +4762,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public ThesisType? ThesisType
+        public DocumentFormat.OpenXml.Bibliography.ThesisType? ThesisType
         {
-            get => GetElement<ThesisType>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ThesisType>();
             set => SetElement(value);
         }
 
@@ -4775,9 +4775,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Title? Title
+        public DocumentFormat.OpenXml.Bibliography.Title? Title
         {
-            get => GetElement<Title>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Title>();
             set => SetElement(value);
         }
 
@@ -4788,9 +4788,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public PatentType? PatentType
+        public DocumentFormat.OpenXml.Bibliography.PatentType? PatentType
         {
-            get => GetElement<PatentType>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentType>();
             set => SetElement(value);
         }
 
@@ -4801,9 +4801,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public UrlString? UrlString
+        public DocumentFormat.OpenXml.Bibliography.UrlString? UrlString
         {
-            get => GetElement<UrlString>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.UrlString>();
             set => SetElement(value);
         }
 
@@ -4814,9 +4814,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Version? Version
+        public DocumentFormat.OpenXml.Bibliography.Version? Version
         {
-            get => GetElement<Version>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Version>();
             set => SetElement(value);
         }
 
@@ -4827,9 +4827,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Volume? Volume
+        public DocumentFormat.OpenXml.Bibliography.Volume? Volume
         {
-            get => GetElement<Volume>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Volume>();
             set => SetElement(value);
         }
 
@@ -4840,9 +4840,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public Year? Year
+        public DocumentFormat.OpenXml.Bibliography.Year? Year
         {
-            get => GetElement<Year>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Year>();
             set => SetElement(value);
         }
 
@@ -4853,9 +4853,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public YearAccessed? YearAccessed
+        public DocumentFormat.OpenXml.Bibliography.YearAccessed? YearAccessed
         {
-            get => GetElement<YearAccessed>();
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.YearAccessed>();
             set => SetElement(value);
         }
 

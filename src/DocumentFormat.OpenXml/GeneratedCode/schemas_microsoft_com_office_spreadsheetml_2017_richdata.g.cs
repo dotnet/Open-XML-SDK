@@ -390,9 +390,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata
         /// </remark>
-        public RichValueFallback? RichValueFallback
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback? RichValueFallback
         {
-            get => GetElement<RichValueFallback>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback>();
             set => SetElement(value);
         }
 

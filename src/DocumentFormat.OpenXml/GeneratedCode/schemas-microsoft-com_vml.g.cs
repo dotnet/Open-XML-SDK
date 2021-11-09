@@ -5844,9 +5844,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), MaxLength = (255
         /// <remark>
         /// xmlns:v = urn:schemas-microsoft-com:vml
         /// </remark>
-        public Fill? Fill
+        public DocumentFormat.OpenXml.Vml.Fill? Fill
         {
-            get => GetElement<Fill>();
+            get => GetElement<DocumentFormat.OpenXml.Vml.Fill>();
             set => SetElement(value);
         }
 

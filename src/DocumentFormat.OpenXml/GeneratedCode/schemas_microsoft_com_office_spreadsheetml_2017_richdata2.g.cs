@@ -94,9 +94,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichFilters? RichFilters
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters? RichFilters
         {
-            get => GetElement<RichFilters>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters>();
             set => SetElement(value);
         }
 
@@ -107,9 +107,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichTop10? RichTop10
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10? RichTop10
         {
-            get => GetElement<RichTop10>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10>();
             set => SetElement(value);
         }
 
@@ -120,9 +120,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public CustomRichFilters? CustomRichFilters
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters? CustomRichFilters
         {
-            get => GetElement<CustomRichFilters>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters>();
             set => SetElement(value);
         }
 
@@ -133,9 +133,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public DynamicRichFilter? DynamicRichFilter
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter? DynamicRichFilter
         {
-            get => GetElement<DynamicRichFilter>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter>();
             set => SetElement(value);
         }
 
@@ -146,9 +146,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -393,9 +393,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public SupportingPropertyBagArrayData? SupportingPropertyBagArrayData
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData? SupportingPropertyBagArrayData
         {
-            get => GetElement<SupportingPropertyBagArrayData>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData>();
             set => SetElement(value);
         }
 
@@ -406,9 +406,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public SupportingPropertyBagData? SupportingPropertyBagData
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData? SupportingPropertyBagData
         {
-            get => GetElement<SupportingPropertyBagData>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData>();
             set => SetElement(value);
         }
 
@@ -758,9 +758,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public Dxfs? Dxfs
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs? Dxfs
         {
-            get => GetElement<Dxfs>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs>();
             set => SetElement(value);
         }
 
@@ -771,9 +771,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichFormatProperties? RichFormatProperties
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties? RichFormatProperties
         {
-            get => GetElement<RichFormatProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties>();
             set => SetElement(value);
         }
 
@@ -784,9 +784,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichStyles? RichStyles
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles? RichStyles
         {
-            get => GetElement<RichStyles>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles>();
             set => SetElement(value);
         }
 
@@ -797,9 +797,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -910,9 +910,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichValueGlobalType? RichValueGlobalType
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType? RichValueGlobalType
         {
-            get => GetElement<RichValueGlobalType>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType>();
             set => SetElement(value);
         }
 
@@ -923,9 +923,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichValueTypes? RichValueTypes
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes? RichValueTypes
         {
-            get => GetElement<RichValueTypes>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes>();
             set => SetElement(value);
         }
 
@@ -936,9 +936,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3026,9 +3026,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichValueTypeKeyFlags? RichValueTypeKeyFlags
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags? RichValueTypeKeyFlags
         {
-            get => GetElement<RichValueTypeKeyFlags>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags>();
             set => SetElement(value);
         }
 
@@ -3039,9 +3039,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3202,9 +3202,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public RichValueTypeKeyFlags? RichValueTypeKeyFlags
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags? RichValueTypeKeyFlags
         {
-            get => GetElement<RichValueTypeKeyFlags>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags>();
             set => SetElement(value);
         }
 
@@ -3215,9 +3215,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:xlrd2 = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
             set => SetElement(value);
         }
 

@@ -893,9 +893,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TupleSet? TupleSet
+        public DocumentFormat.OpenXml.Office2010.Excel.TupleSet? TupleSet
         {
-            get => GetElement<TupleSet>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleSet>();
             set => SetElement(value);
         }
 
@@ -1041,9 +1041,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public SetLevels? SetLevels
+        public DocumentFormat.OpenXml.Office2010.Excel.SetLevels? SetLevels
         {
-            get => GetElement<SetLevels>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SetLevels>();
             set => SetElement(value);
         }
 
@@ -1442,9 +1442,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotEdits? PivotEdits
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotEdits? PivotEdits
         {
-            get => GetElement<PivotEdits>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotEdits>();
             set => SetElement(value);
         }
 
@@ -1455,9 +1455,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotChanges? PivotChanges
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotChanges? PivotChanges
         {
-            get => GetElement<PivotChanges>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotChanges>();
             set => SetElement(value);
         }
 
@@ -1468,9 +1468,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ConditionalFormats? ConditionalFormats
+        public DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats? ConditionalFormats
         {
-            get => GetElement<ConditionalFormats>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats>();
             set => SetElement(value);
         }
 
@@ -1695,9 +1695,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public CalculatedMembers? CalculatedMembers
+        public DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers? CalculatedMembers
         {
-            get => GetElement<CalculatedMembers>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers>();
             set => SetElement(value);
         }
 
@@ -2074,9 +2074,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public DdeValues? DdeValues
+        public DocumentFormat.OpenXml.Office2010.Excel.DdeValues? DdeValues
         {
-            get => GetElement<DdeValues>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.DdeValues>();
             set => SetElement(value);
         }
 
@@ -2705,9 +2705,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3363,9 +3363,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ListItems? ListItems
+        public DocumentFormat.OpenXml.Office2010.Excel.ListItems? ListItems
         {
-            get => GetElement<ListItems>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ListItems>();
             set => SetElement(value);
         }
 
@@ -3376,9 +3376,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3624,9 +3624,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public SlicerCachePivotTables? SlicerCachePivotTables
+        public DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables? SlicerCachePivotTables
         {
-            get => GetElement<SlicerCachePivotTables>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables>();
             set => SetElement(value);
         }
 
@@ -3637,9 +3637,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public SlicerCacheData? SlicerCacheData
+        public DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData? SlicerCacheData
         {
-            get => GetElement<SlicerCacheData>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData>();
             set => SetElement(value);
         }
 
@@ -3650,9 +3650,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public SlicerCacheDefinitionExtensionList? SlicerCacheDefinitionExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList? SlicerCacheDefinitionExtensionList
         {
-            get => GetElement<SlicerCacheDefinitionExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList>();
             set => SetElement(value);
         }
 
@@ -4456,9 +4456,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public DataValidationForumla1? DataValidationForumla1
+        public DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1? DataValidationForumla1
         {
-            get => GetElement<DataValidationForumla1>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1>();
             set => SetElement(value);
         }
 
@@ -4469,9 +4469,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public DataValidationForumla2? DataValidationForumla2
+        public DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2? DataValidationForumla2
         {
-            get => GetElement<DataValidationForumla2>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2>();
             set => SetElement(value);
         }
 
@@ -5065,9 +5065,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public SeriesColor? SeriesColor
+        public DocumentFormat.OpenXml.Office2010.Excel.SeriesColor? SeriesColor
         {
-            get => GetElement<SeriesColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
             set => SetElement(value);
         }
 
@@ -5078,9 +5078,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public NegativeColor? NegativeColor
+        public DocumentFormat.OpenXml.Office2010.Excel.NegativeColor? NegativeColor
         {
-            get => GetElement<NegativeColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
             set => SetElement(value);
         }
 
@@ -5091,9 +5091,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public AxisColor? AxisColor
+        public DocumentFormat.OpenXml.Office2010.Excel.AxisColor? AxisColor
         {
-            get => GetElement<AxisColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>();
             set => SetElement(value);
         }
 
@@ -5104,9 +5104,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public MarkersColor? MarkersColor
+        public DocumentFormat.OpenXml.Office2010.Excel.MarkersColor? MarkersColor
         {
-            get => GetElement<MarkersColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>();
             set => SetElement(value);
         }
 
@@ -5117,9 +5117,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public FirstMarkerColor? FirstMarkerColor
+        public DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor? FirstMarkerColor
         {
-            get => GetElement<FirstMarkerColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>();
             set => SetElement(value);
         }
 
@@ -5130,9 +5130,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public LastMarkerColor? LastMarkerColor
+        public DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor? LastMarkerColor
         {
-            get => GetElement<LastMarkerColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>();
             set => SetElement(value);
         }
 
@@ -5143,9 +5143,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public HighMarkerColor? HighMarkerColor
+        public DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor? HighMarkerColor
         {
-            get => GetElement<HighMarkerColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>();
             set => SetElement(value);
         }
 
@@ -5156,9 +5156,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public LowMarkerColor? LowMarkerColor
+        public DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor? LowMarkerColor
         {
-            get => GetElement<LowMarkerColor>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>();
             set => SetElement(value);
         }
 
@@ -5182,9 +5182,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public Sparklines? Sparklines
+        public DocumentFormat.OpenXml.Office2010.Excel.Sparklines? Sparklines
         {
-            get => GetElement<Sparklines>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>();
             set => SetElement(value);
         }
 
@@ -6049,9 +6049,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ArgumentDescriptions? ArgumentDescriptions
+        public DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions? ArgumentDescriptions
         {
-            get => GetElement<ArgumentDescriptions>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions>();
             set => SetElement(value);
         }
 
@@ -6307,9 +6307,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TupleSetHeaders? TupleSetHeaders
+        public DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders? TupleSetHeaders
         {
-            get => GetElement<TupleSetHeaders>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders>();
             set => SetElement(value);
         }
 
@@ -6320,9 +6320,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TupleSetRows? TupleSetRows
+        public DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows? TupleSetRows
         {
-            get => GetElement<TupleSetRows>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows>();
             set => SetElement(value);
         }
 
@@ -7524,9 +7524,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -7966,9 +7966,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotUserEdit? PivotUserEdit
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit? PivotUserEdit
         {
-            get => GetElement<PivotUserEdit>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit>();
             set => SetElement(value);
         }
 
@@ -7979,9 +7979,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TupleItems? TupleItems
+        public DocumentFormat.OpenXml.Office2010.Excel.TupleItems? TupleItems
         {
-            get => GetElement<TupleItems>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleItems>();
             set => SetElement(value);
         }
 
@@ -7992,9 +7992,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotArea? PivotArea
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotArea? PivotArea
         {
-            get => GetElement<PivotArea>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotArea>();
             set => SetElement(value);
         }
 
@@ -8005,9 +8005,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -8097,9 +8097,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotEditValue? PivotEditValue
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue? PivotEditValue
         {
-            get => GetElement<PivotEditValue>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue>();
             set => SetElement(value);
         }
 
@@ -8575,9 +8575,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotEditValue? PivotEditValue
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue? PivotEditValue
         {
-            get => GetElement<PivotEditValue>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue>();
             set => SetElement(value);
         }
 
@@ -8588,9 +8588,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TupleItems? TupleItems
+        public DocumentFormat.OpenXml.Office2010.Excel.TupleItems? TupleItems
         {
-            get => GetElement<TupleItems>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleItems>();
             set => SetElement(value);
         }
 
@@ -8601,9 +8601,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -9021,9 +9021,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public PivotAreas? PivotAreas
+        public DocumentFormat.OpenXml.Office2010.Excel.PivotAreas? PivotAreas
         {
-            get => GetElement<PivotAreas>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotAreas>();
             set => SetElement(value);
         }
 
@@ -9034,9 +9034,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -9215,9 +9215,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public SlicerStyleElements? SlicerStyleElements
+        public DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements? SlicerStyleElements
         {
-            get => GetElement<SlicerStyleElements>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements>();
             set => SetElement(value);
         }
 
@@ -10156,9 +10156,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -10259,9 +10259,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public OlapSlicerCacheLevelsData? OlapSlicerCacheLevelsData
+        public DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData? OlapSlicerCacheLevelsData
         {
-            get => GetElement<OlapSlicerCacheLevelsData>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData>();
             set => SetElement(value);
         }
 
@@ -10272,9 +10272,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public OlapSlicerCacheSelections? OlapSlicerCacheSelections
+        public DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections? OlapSlicerCacheSelections
         {
-            get => GetElement<OlapSlicerCacheSelections>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections>();
             set => SetElement(value);
         }
 
@@ -10285,9 +10285,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -10453,9 +10453,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TabularSlicerCacheItems? TabularSlicerCacheItems
+        public DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems? TabularSlicerCacheItems
         {
-            get => GetElement<TabularSlicerCacheItems>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems>();
             set => SetElement(value);
         }
 
@@ -10466,9 +10466,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -11020,9 +11020,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public OlapSlicerCacheRanges? OlapSlicerCacheRanges
+        public DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges? OlapSlicerCacheRanges
         {
-            get => GetElement<OlapSlicerCacheRanges>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges>();
             set => SetElement(value);
         }
 
@@ -11573,9 +11573,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public OlapSlicerCache? OlapSlicerCache
+        public DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache? OlapSlicerCache
         {
-            get => GetElement<OlapSlicerCache>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache>();
             set => SetElement(value);
         }
 
@@ -11586,9 +11586,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
         /// </remark>
-        public TabularSlicerCache? TabularSlicerCache
+        public DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache? TabularSlicerCache
         {
-            get => GetElement<TabularSlicerCache>();
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache>();
             set => SetElement(value);
         }
 

@@ -106,9 +106,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a3danim = http://schemas.microsoft.com/office/drawing/2018/animation/model3d
         /// </remark>
-        public AnimationProperties? AnimationProperties
+        public DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties? AnimationProperties
         {
-            get => GetElement<AnimationProperties>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties>();
             set => SetElement(value);
         }
 
@@ -119,9 +119,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         /// <remark>
         /// xmlns:a3danim = http://schemas.microsoft.com/office/drawing/2018/animation/model3d
         /// </remark>
-        public OfficeArtExtensionList? OfficeArtExtensionList
+        public DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<OfficeArtExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList>();
             set => SetElement(value);
         }
 
