@@ -365,10 +365,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim" /> <c>&lt;p14:trim></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade" /> <c>&lt;p14:fade></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList" /> <c>&lt;p14:bmkLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList" /> <c>&lt;p14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList" /> <c>&lt;p14:bmkLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade" /> <c>&lt;p14:fade></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim" /> <c>&lt;p14:trim></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -450,10 +450,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "media");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim>();
             builder.AddElement<Media>()
 .AddAttribute(19, "embed", a => a.Embed)
 .AddAttribute(19, "link", a => a.Link);
@@ -1725,12 +1725,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1774,12 +1774,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "laserClr");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -2194,13 +2194,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord" /> <c>&lt;p14:triggerEvt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord" /> <c>&lt;p14:playEvt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord" /> <c>&lt;p14:stopEvt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord" /> <c>&lt;p14:pauseEvt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord" /> <c>&lt;p14:resumeEvt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord" /> <c>&lt;p14:seekEvt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord" /> <c>&lt;p14:nullEvt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord" /> <c>&lt;p14:triggerEvt></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2244,13 +2244,13 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "showEvtLst");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
@@ -2569,8 +2569,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2630,8 +2630,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "cNvContentPartPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
             builder.AddElement<NonVisualInkContentPartProperties>()
 .AddAttribute(0, "isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2679,14 +2679,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PlaceholderShape" /> <c>&lt;p:ph></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AudioFromCD" /> <c>&lt;a:audioCd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.WaveAudioFile" /> <c>&lt;a:wavAudioFile></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AudioFromFile" /> <c>&lt;a:audioFile></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.VideoFromFile" /> <c>&lt;a:videoFile></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.WaveAudioFile" /> <c>&lt;a:wavAudioFile></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.QuickTimeFromFile" /> <c>&lt;a:quickTimeFile></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.VideoFromFile" /> <c>&lt;a:videoFile></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PlaceholderShape" /> <c>&lt;p:ph></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2762,14 +2762,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "nvPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromCD>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.WaveAudioFile>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.VideoFromFile>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.WaveAudioFile>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.QuickTimeFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.VideoFromFile>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
             builder.AddElement<ApplicationNonVisualDrawingProperties>()
 .AddAttribute(0, "isPhoto", a => a.IsPhoto)
 .AddAttribute(0, "userDrawn", a => a.UserDrawn);
@@ -3387,8 +3387,8 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList" /> <c>&lt;p14:sldIdLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList" /> <c>&lt;p14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList" /> <c>&lt;p14:sldIdLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3464,8 +3464,8 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
             base.ConfigureMetadata(builder);
             builder.SetSchema(49, "section");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList>();
             builder.AddElement<Section>()
 .AddAttribute(0, "name", a => a.Name)
 .AddAttribute(0, "id", a => a.Id, aBuilder =>

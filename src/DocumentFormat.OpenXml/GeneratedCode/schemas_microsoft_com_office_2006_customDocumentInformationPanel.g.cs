@@ -22,9 +22,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen" /> <c>&lt;cdip:showOnOpen></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace" /> <c>&lt;cdip:defaultPropertyEditorNamespace></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor" /> <c>&lt;cdip:customPropertyEditor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace" /> <c>&lt;cdip:defaultPropertyEditorNamespace></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen" /> <c>&lt;cdip:showOnOpen></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -67,9 +67,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(37, "customPropertyEditors");
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen), 1, 1),

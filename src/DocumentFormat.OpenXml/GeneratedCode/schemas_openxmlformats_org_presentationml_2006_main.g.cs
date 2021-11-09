@@ -1085,8 +1085,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.MasterColorMapping" /> <c>&lt;a:masterClrMapping></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.OverrideColorMapping" /> <c>&lt;a:overrideClrMapping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.MasterColorMapping" /> <c>&lt;a:masterClrMapping></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1129,8 +1129,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "clrMapOvr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.MasterColorMapping>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.OverrideColorMapping>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.MasterColorMapping>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -1179,13 +1179,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
@@ -1245,13 +1245,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "bgPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<BackgroundProperties>()
 .AddAttribute(0, "shadeToTitle", a => a.ShadeToTitle);
@@ -1292,12 +1292,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1356,12 +1356,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "bgRef");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
             builder.AddElement<BackgroundStyleReference>()
 .AddAttribute(0, "idx", a => a.Index, aBuilder =>
 {
@@ -1864,20 +1864,20 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideMasterIdList" /> <c>&lt;p:sldMasterIdLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesMasterIdList" /> <c>&lt;p:notesMasterIdLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HandoutMasterIdList" /> <c>&lt;p:handoutMasterIdLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideIdList" /> <c>&lt;p:sldIdLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideSize" /> <c>&lt;p:sldSz></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesSize" /> <c>&lt;p:notesSz></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.EmbeddedFontList" /> <c>&lt;p:embeddedFontLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomShowList" /> <c>&lt;p:custShowLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PhotoAlbum" /> <c>&lt;p:photoAlbum></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Kinsoku" /> <c>&lt;p:kinsoku></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.DefaultTextStyle" /> <c>&lt;p:defaultTextStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomShowList" /> <c>&lt;p:custShowLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.EmbeddedFontList" /> <c>&lt;p:embeddedFontLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HandoutMasterIdList" /> <c>&lt;p:handoutMasterIdLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Kinsoku" /> <c>&lt;p:kinsoku></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ModificationVerifier" /> <c>&lt;p:modifyVerifier></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesMasterIdList" /> <c>&lt;p:notesMasterIdLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PhotoAlbum" /> <c>&lt;p:photoAlbum></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PresentationExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideIdList" /> <c>&lt;p:sldIdLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideMasterIdList" /> <c>&lt;p:sldMasterIdLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideSize" /> <c>&lt;p:sldSz></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2112,20 +2112,20 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "presentation");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideMasterIdList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesMasterIdList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HandoutMasterIdList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideIdList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideSize>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.EmbeddedFontList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomShowList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PhotoAlbum>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Kinsoku>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.DefaultTextStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomShowList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.EmbeddedFontList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.HandoutMasterIdList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Kinsoku>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ModificationVerifier>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesMasterIdList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.PhotoAlbum>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.PresentationExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideIdList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideMasterIdList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideSize>();
             builder.AddElement<Presentation>()
 .AddAttribute(0, "serverZoom", a => a.ServerZoom)
 .AddAttribute(0, "firstSlideNum", a => a.FirstSlideNum)
@@ -2387,12 +2387,12 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed" /> <c>&lt;p:clrMru></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HtmlPublishProperties" /> <c>&lt;p:htmlPubPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.WebProperties" /> <c>&lt;p:webPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PrintingProperties" /> <c>&lt;p:prnPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShowProperties" /> <c>&lt;p:showPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed" /> <c>&lt;p:clrMru></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.WebProperties" /> <c>&lt;p:webPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2435,12 +2435,12 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "presentationPr");
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.HtmlPublishProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.WebProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.PrintingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ShowProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.WebProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HtmlPublishProperties), 0, 1),
@@ -2573,11 +2573,11 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMapOverride" /> <c>&lt;p:clrMapOvr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Timing" /> <c>&lt;p:timing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Timing" /> <c>&lt;p:timing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2668,11 +2668,11 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "sld");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Transition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Timing>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Timing>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Transition>();
             builder.AddElement<Slide>()
 .AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
 .AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
@@ -2801,12 +2801,12 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMapOverride" /> <c>&lt;p:clrMapOvr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Timing" /> <c>&lt;p:timing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HeaderFooter" /> <c>&lt;p:hf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Timing" /> <c>&lt;p:timing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2945,12 +2945,12 @@ aBuilder.AddValidator(new NumberValidator() { MaxExclusive = (2147483648L), MinI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "sldLayout");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Transition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Timing>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Timing>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Transition>();
             builder.AddElement<SlideLayout>()
 .AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
 .AddAttribute(0, "showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
@@ -3099,14 +3099,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMap" /> <c>&lt;p:clrMap></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideLayoutIdList" /> <c>&lt;p:sldLayoutIdLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Timing" /> <c>&lt;p:timing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HeaderFooter" /> <c>&lt;p:hf></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TextStyles" /> <c>&lt;p:txStyles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideLayoutIdList" /> <c>&lt;p:sldLayoutIdLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TextStyles" /> <c>&lt;p:txStyles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Timing" /> <c>&lt;p:timing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3165,14 +3165,14 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "sldMaster");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMap>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideLayoutIdList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Transition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Timing>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TextStyles>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideLayoutIdList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.TextStyles>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Timing>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Transition>();
             builder.AddElement<SlideMaster>()
 .AddAttribute(0, "preserve", a => a.Preserve);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3341,10 +3341,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMap" /> <c>&lt;p:clrMap></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HeaderFooter" /> <c>&lt;p:hf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HeaderFooter" /> <c>&lt;p:hf></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3387,10 +3387,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "handoutMaster");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMap>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
@@ -3501,10 +3501,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMap" /> <c>&lt;p:clrMap></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HeaderFooter" /> <c>&lt;p:hf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesStyle" /> <c>&lt;p:notesStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HeaderFooter" /> <c>&lt;p:hf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
@@ -3548,10 +3548,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "notesMaster");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMap>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -3677,8 +3677,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMapOverride" /> <c>&lt;p:clrMapOvr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
@@ -3754,8 +3754,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "notes");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
             builder.AddElement<NotesSlide>()
 .AddAttribute(0, "showMasterSp", a => a.ShowMasterShapes)
@@ -4116,14 +4116,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NormalViewProperties" /> <c>&lt;p:normalViewPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideViewProperties" /> <c>&lt;p:slideViewPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OutlineViewProperties" /> <c>&lt;p:outlineViewPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesTextViewProperties" /> <c>&lt;p:notesTextViewPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SorterViewProperties" /> <c>&lt;p:sorterViewPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesViewProperties" /> <c>&lt;p:notesViewPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GridSpacing" /> <c>&lt;p:gridSpacing></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NormalViewProperties" /> <c>&lt;p:normalViewPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesTextViewProperties" /> <c>&lt;p:notesTextViewPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesViewProperties" /> <c>&lt;p:notesViewPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OutlineViewProperties" /> <c>&lt;p:outlineViewPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SorterViewProperties" /> <c>&lt;p:sorterViewPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideViewProperties" /> <c>&lt;p:slideViewPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4198,14 +4198,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "viewPr");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NormalViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.OutlineViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesTextViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SorterViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesViewProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.GridSpacing>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.NormalViewProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesTextViewProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesViewProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.OutlineViewProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SorterViewProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideViewProperties>();
             builder.AddElement<ViewProperties>()
 .AddAttribute(0, "lastView", a => a.LastView, aBuilder =>
 {
@@ -4372,9 +4372,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties" /> <c>&lt;p14:nvContentPartPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D" /> <c>&lt;p14:xfrm></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify" /> <c>&lt;p14:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties" /> <c>&lt;p14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4456,9 +4456,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "contentPart");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties>();
             builder.AddElement<ContentPart>()
 .AddAttribute(49, "bwMode", a => a.BwMode, aBuilder =>
 {
@@ -4861,8 +4861,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideTarget" /> <c>&lt;p:sldTgt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SoundTarget" /> <c>&lt;p:sndTgt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideTarget" /> <c>&lt;p:sldTgt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeTarget" /> <c>&lt;p:spTgt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.InkTarget" /> <c>&lt;p:inkTgt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget" /> <c>&lt;p14:bmkTgt></c></description></item>
@@ -4908,8 +4908,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "tgtEl");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideTarget>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SoundTarget>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideTarget>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeTarget>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.InkTarget>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget>();
@@ -5098,8 +5098,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TargetElement" /> <c>&lt;p:tgtEl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNode" /> <c>&lt;p:tn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger" /> <c>&lt;p:rtn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNode" /> <c>&lt;p:tn></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5142,9 +5142,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cond");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TargetElement>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeNode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
@@ -5166,8 +5163,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TargetElement" /> <c>&lt;p:tgtEl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNode" /> <c>&lt;p:tn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger" /> <c>&lt;p:rtn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNode" /> <c>&lt;p:tn></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5210,9 +5207,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "endSync");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TargetElement>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeNode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
@@ -5230,6 +5224,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TargetElement" /> <c>&lt;p:tgtEl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger" /> <c>&lt;p:rtn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNode" /> <c>&lt;p:tn></c></description></item>
+    /// </list>
+    /// </remark>
     public abstract partial class TimeListConditionalType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5298,24 +5300,27 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.TargetElement>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeNode>();
             builder.AddElement<TimeListConditionalType>()
-                           .AddAttribute(0, "evt", a => a.Event, aBuilder =>
-                           {
-                               aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                           })
-                           .AddAttribute(0, "delay", a => a.Delay, aBuilder =>
-                           {
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
-                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { Version = (FileFormatVersions.Office2007) });
-                               });
-                               aBuilder.AddUnion(union =>
-                               {
-                                   union.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-                                   union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
-                               });
-                           });
+.AddAttribute(0, "evt", a => a.Event, aBuilder =>
+{
+aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+})
+.AddAttribute(0, "delay", a => a.Delay, aBuilder =>
+{
+aBuilder.AddUnion(union =>
+{
+union.AddValidator<UInt32Value>(new NumberValidator() { Version = (FileFormatVersions.Office2007) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { Version = (FileFormatVersions.Office2007) });
+});
+aBuilder.AddUnion(union =>
+{
+union.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeDeclarationValues>>(new EnumValidator() { InitialVersion = (FileFormatVersions.Office2010) });
+});
+});
         }
 
         /// <summary>
@@ -5888,10 +5893,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ByColor" /> <c>&lt;p:by></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.FromColor" /> <c>&lt;p:from></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ToColor" /> <c>&lt;p:to></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ByColor" /> <c>&lt;p:by></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5966,10 +5971,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "animClr");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ByColor>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.FromColor>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ToColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ByColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
             builder.AddElement<AnimateColor>()
 .AddAttribute(0, "clrSpc", a => a.ColorSpace, aBuilder =>
 {
@@ -6052,8 +6057,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Progress" /> <c>&lt;p:progress></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6144,8 +6149,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "animEffect");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Progress>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
             builder.AddElement<AnimateEffect>()
 .AddAttribute(0, "transition", a => a.Transition, aBuilder =>
 {
@@ -6886,8 +6891,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ToVariantValue" /> <c>&lt;p:to></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6930,8 +6935,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "set");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ToVariantValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
@@ -7163,12 +7168,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StartConditionList" /> <c>&lt;p:stCondLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.EndConditionList" /> <c>&lt;p:endCondLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.EndSync" /> <c>&lt;p:endSync></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Iterate" /> <c>&lt;p:iterate></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ChildTimeNodeList" /> <c>&lt;p:childTnLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SubTimeNodeList" /> <c>&lt;p:subTnLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Iterate" /> <c>&lt;p:iterate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.EndSync" /> <c>&lt;p:endSync></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StartConditionList" /> <c>&lt;p:stCondLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.EndConditionList" /> <c>&lt;p:endCondLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -7598,12 +7603,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cTn");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.StartConditionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.EndConditionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.EndSync>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Iterate>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ChildTimeNodeList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SubTimeNodeList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Iterate>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.EndSync>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.StartConditionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.EndConditionList>();
             builder.AddElement<CommonTimeNode>()
 .AddAttribute(0, "id", a => a.Id)
 .AddAttribute(0, "presetID", a => a.PresetId)
@@ -7802,7 +7807,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "prevCondLst");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Condition>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
@@ -7864,7 +7868,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "nextCondLst");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Condition>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
@@ -7926,7 +7929,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "stCondLst");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Condition>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
@@ -7988,7 +7990,6 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "endCondLst");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Condition>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
@@ -8004,6 +8005,12 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Condition" /> <c>&lt;p:cond></c></description></item>
+    /// </list>
+    /// </remark>
     public abstract partial class TimeListTimeConditionalListType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8040,6 +8047,7 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Condition>();
         }
     }
 
@@ -8385,12 +8393,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8433,12 +8441,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "clrVal");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -8468,12 +8470,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -8516,12 +8518,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "penClr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -8548,6 +8544,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
+    /// </list>
+    /// </remark>
     public abstract partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8584,6 +8591,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
         }
 
         /// <summary>
@@ -8971,9 +8984,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AttributeNameList" /> <c>&lt;p:attrNameLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonTimeNode" /> <c>&lt;p:cTn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TargetElement" /> <c>&lt;p:tgtEl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AttributeNameList" /> <c>&lt;p:attrNameLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9144,9 +9157,9 @@ union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.IndefiniteTimeD
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cBhvr");
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.AttributeNameList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TargetElement>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AttributeNameList>();
             builder.AddElement<CommonBehavior>()
 .AddAttribute(0, "additive", a => a.Additive, aBuilder =>
 {
@@ -9302,11 +9315,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BooleanVariantValue" /> <c>&lt;p:boolVal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.IntegerVariantValue" /> <c>&lt;p:intVal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.FloatVariantValue" /> <c>&lt;p:fltVal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StringVariantValue" /> <c>&lt;p:strVal></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorValue" /> <c>&lt;p:clrVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BooleanVariantValue" /> <c>&lt;p:boolVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.FloatVariantValue" /> <c>&lt;p:fltVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.IntegerVariantValue" /> <c>&lt;p:intVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StringVariantValue" /> <c>&lt;p:strVal></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9349,11 +9362,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "to");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BooleanVariantValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.IntegerVariantValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.FloatVariantValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.StringVariantValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorValue>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BooleanVariantValue), 1, 1),
@@ -9376,11 +9384,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BooleanVariantValue" /> <c>&lt;p:boolVal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.IntegerVariantValue" /> <c>&lt;p:intVal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.FloatVariantValue" /> <c>&lt;p:fltVal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StringVariantValue" /> <c>&lt;p:strVal></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorValue" /> <c>&lt;p:clrVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BooleanVariantValue" /> <c>&lt;p:boolVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.FloatVariantValue" /> <c>&lt;p:fltVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.IntegerVariantValue" /> <c>&lt;p:intVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StringVariantValue" /> <c>&lt;p:strVal></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9423,11 +9431,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "val");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BooleanVariantValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.IntegerVariantValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.FloatVariantValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.StringVariantValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorValue>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BooleanVariantValue), 1, 1),
@@ -9447,6 +9450,16 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorValue" /> <c>&lt;p:clrVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BooleanVariantValue" /> <c>&lt;p:boolVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.FloatVariantValue" /> <c>&lt;p:fltVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.IntegerVariantValue" /> <c>&lt;p:intVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StringVariantValue" /> <c>&lt;p:strVal></c></description></item>
+    /// </list>
+    /// </remark>
     public abstract partial class TimeListAnimationVariantType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9483,6 +9496,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.BooleanVariantValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.FloatVariantValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.IntegerVariantValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.StringVariantValue>();
         }
 
         /// <summary>
@@ -9954,8 +9972,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BuildDiagram" /> <c>&lt;a:bldDgm></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BuildChart" /> <c>&lt;a:bldChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BuildDiagram" /> <c>&lt;a:bldDgm></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -9998,8 +10016,8 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "bldSub");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BuildDiagram>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BuildChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BuildDiagram>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BuildDiagram), 1, 1),
@@ -10536,8 +10554,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildAsOne" /> <c>&lt;p:bldAsOne></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildSubElement" /> <c>&lt;p:bldSub></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildAsOne" /> <c>&lt;p:bldAsOne></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10628,8 +10646,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "bldGraphic");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildAsOne>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildSubElement>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildAsOne>();
             builder.AddElement<BuildGraphics>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {
@@ -10690,10 +10708,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildParagraph" /> <c>&lt;p:bldP></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildDiagram" /> <c>&lt;p:bldDgm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildOleChart" /> <c>&lt;p:bldOleChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildParagraph" /> <c>&lt;p:bldP></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildGraphics" /> <c>&lt;p:bldGraphic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildOleChart" /> <c>&lt;p:bldOleChart></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10736,10 +10754,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "bldLst");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildParagraph>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildDiagram>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildOleChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildParagraph>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildGraphics>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildOleChart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildParagraph), 1, 1),
@@ -10847,8 +10865,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RgbColor" /> <c>&lt;p:rgb></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HslColor" /> <c>&lt;p:hsl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RgbColor" /> <c>&lt;p:rgb></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10891,8 +10909,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "by");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.RgbColor>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.RgbColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RgbColor), 1, 1),
@@ -10938,12 +10956,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -10986,12 +11004,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "from");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1, version: FileFormatVersions.Office2010),
@@ -11015,12 +11027,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11063,12 +11075,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "to");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1, version: FileFormatVersions.Office2010),
@@ -11089,6 +11095,17 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
+    /// </list>
+    /// </remark>
     public abstract partial class Color3Type : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11125,6 +11142,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
         }
 
         /// <summary>
@@ -11548,8 +11571,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Position" /> <c>&lt;p:pos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Text" /> <c>&lt;p:text></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Text" /> <c>&lt;p:text></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11641,8 +11664,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cm");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Position>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Text>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Text>();
             builder.AddElement<Comment>()
 .AddAttribute(0, "authorId", a => a.AuthorId, aBuilder =>
 {
@@ -12881,8 +12904,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideList" /> <c>&lt;p:sldLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideList" /> <c>&lt;p:sldLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -12957,8 +12980,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "custShow");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideList>();
             builder.AddElement<CustomShow>()
 .AddAttribute(0, "name", a => a.Name, aBuilder =>
 {
@@ -13212,8 +13235,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13272,8 +13295,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cNvSpPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
             builder.AddElement<NonVisualShapeDrawingProperties>()
 .AddAttribute(0, "txBox", a => a.TextBox);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -13321,14 +13344,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PlaceholderShape" /> <c>&lt;p:ph></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AudioFromCD" /> <c>&lt;a:audioCd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.WaveAudioFile" /> <c>&lt;a:wavAudioFile></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AudioFromFile" /> <c>&lt;a:audioFile></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.VideoFromFile" /> <c>&lt;a:videoFile></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.WaveAudioFile" /> <c>&lt;a:wavAudioFile></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.QuickTimeFromFile" /> <c>&lt;a:quickTimeFile></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.VideoFromFile" /> <c>&lt;a:videoFile></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PlaceholderShape" /> <c>&lt;p:ph></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13403,14 +13426,14 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "nvPr");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromCD>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.WaveAudioFile>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.VideoFromFile>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.WaveAudioFile>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.QuickTimeFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.VideoFromFile>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
             builder.AddElement<ApplicationNonVisualDrawingProperties>()
 .AddAttribute(0, "isPhoto", a => a.IsPhoto)
 .AddAttribute(0, "userDrawn", a => a.UserDrawn);
@@ -13565,21 +13588,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13638,21 +13661,21 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "spPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
             builder.AddElement<ShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -13721,10 +13744,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FontReference" /> <c>&lt;a:fontRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LineReference" /> <c>&lt;a:lnRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FillReference" /> <c>&lt;a:fillRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FontReference" /> <c>&lt;a:fontRef></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13767,10 +13790,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "style");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
@@ -13938,9 +13961,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks" /> <c>&lt;a:cxnSpLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.StartConnection" /> <c>&lt;a:stCxn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EndConnection" /> <c>&lt;a:endCxn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks" /> <c>&lt;a:cxnSpLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
@@ -13984,9 +14007,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cNvCxnSpPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -14061,8 +14084,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties" /> <c>&lt;p:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties" /> <c>&lt;p:cNvCxnSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties" /> <c>&lt;p:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties" /> <c>&lt;p:nvPr></c></description></item>
     /// </list>
     /// </remark>
@@ -14106,8 +14129,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "nvCxnSpPr");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -14168,8 +14191,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -14228,8 +14251,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cNvPicPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
             builder.AddElement<NonVisualPictureDrawingProperties>()
 .AddAttribute(0, "preferRelativeResize", a => a.PreferRelativeResize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -14386,8 +14409,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Blip" /> <c>&lt;a:blip></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SourceRectangle" /> <c>&lt;a:srcRect></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Stretch" /> <c>&lt;a:stretch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -14464,8 +14487,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             builder.SetSchema(24, "blipFill");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
             builder.AddElement<BlipFill>()
 .AddAttribute(0, "dpi", a => a.Dpi)
 .AddAttribute(0, "rotWithShape", a => a.RotateWithShape);
@@ -14954,6 +14977,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties" /> <c>&lt;a:defPPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties" /> <c>&lt;a:lvl1pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties" /> <c>&lt;a:lvl2pPr></c></description></item>
@@ -14964,7 +14988,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties" /> <c>&lt;a:lvl7pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15007,17 +15030,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "titleStyle");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
@@ -15046,6 +15058,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties" /> <c>&lt;a:defPPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties" /> <c>&lt;a:lvl1pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties" /> <c>&lt;a:lvl2pPr></c></description></item>
@@ -15056,7 +15069,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties" /> <c>&lt;a:lvl7pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15099,17 +15111,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "bodyStyle");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
@@ -15138,6 +15139,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties" /> <c>&lt;a:defPPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties" /> <c>&lt;a:lvl1pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties" /> <c>&lt;a:lvl2pPr></c></description></item>
@@ -15148,7 +15150,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties" /> <c>&lt;a:lvl7pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15191,17 +15192,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "otherStyle");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
@@ -15230,6 +15220,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties" /> <c>&lt;a:defPPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties" /> <c>&lt;a:lvl1pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties" /> <c>&lt;a:lvl2pPr></c></description></item>
@@ -15240,7 +15231,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties" /> <c>&lt;a:lvl7pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15283,17 +15273,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "defaultTextStyle");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
@@ -15322,6 +15301,7 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties" /> <c>&lt;a:defPPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties" /> <c>&lt;a:lvl1pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties" /> <c>&lt;a:lvl2pPr></c></description></item>
@@ -15332,7 +15312,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties" /> <c>&lt;a:lvl7pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15375,17 +15354,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "notesStyle");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
@@ -15411,6 +15379,22 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties" /> <c>&lt;a:defPPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties" /> <c>&lt;a:lvl1pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties" /> <c>&lt;a:lvl2pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties" /> <c>&lt;a:lvl3pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties" /> <c>&lt;a:lvl4pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties" /> <c>&lt;a:lvl5pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties" /> <c>&lt;a:lvl6pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties" /> <c>&lt;a:lvl7pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
+    /// </list>
+    /// </remark>
     public abstract partial class TextListStyleType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15447,6 +15431,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
         }
 
         /// <summary>
@@ -15723,10 +15718,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Background" /> <c>&lt;p:bg></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeTree" /> <c>&lt;p:spTree></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ControlList" /> <c>&lt;p:controls></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ControlList" /> <c>&lt;p:controls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeTree" /> <c>&lt;p:spTree></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -15786,10 +15781,10 @@ aBuilder.AddValidator(RequiredValidator.Instance);
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cSld");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Background>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeTree>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ControlList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ControlList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeTree>();
             builder.AddElement<CommonSlideData>()
 .AddAttribute(0, "name", a => a.Name);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -16269,8 +16264,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ScaleFactor" /> <c>&lt;p:scale></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Origin" /> <c>&lt;p:origin></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ScaleFactor" /> <c>&lt;p:scale></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -16329,8 +16324,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cViewPr");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ScaleFactor>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Origin>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ScaleFactor>();
             builder.AddElement<CommonViewProperties>()
 .AddAttribute(0, "varScale", a => a.VariableScale);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -16778,9 +16773,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RestoredLeft" /> <c>&lt;p:restoredLeft></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RestoredTop" /> <c>&lt;p:restoredTop></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -16903,9 +16898,9 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "normalViewPr");
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.RestoredLeft>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.RestoredTop>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.AddElement<NormalViewProperties>()
 .AddAttribute(0, "showOutlineIcons", a => a.ShowOutlineIcons)
 .AddAttribute(0, "snapVertSplitter", a => a.SnapVerticalSplitter)
@@ -17069,8 +17064,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonViewProperties" /> <c>&lt;p:cViewPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OutlineViewSlideList" /> <c>&lt;p:sldLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OutlineViewSlideList" /> <c>&lt;p:sldLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -17114,8 +17109,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "outlineViewPr");
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.OutlineViewSlideList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.OutlineViewSlideList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
@@ -17756,8 +17751,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode" /> <c>&lt;p14:browseMode></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor" /> <c>&lt;p14:laserClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode" /> <c>&lt;p14:browseMode></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls" /> <c>&lt;p14:showMediaCtrls></c></description></item>
     /// </list>
     /// </remark>
@@ -17817,8 +17812,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls>();
             builder.AddElement<ShowPropertiesExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
@@ -17847,11 +17842,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties" /> <c>&lt;p:nvPicPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BlipFill" /> <c>&lt;p:blipFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeProperties" /> <c>&lt;p:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeStyle" /> <c>&lt;p:style></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties" /> <c>&lt;p:nvPicPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -17894,11 +17889,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "pic");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties), 1, 1),
@@ -18175,49 +18170,49 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BlindsTransition" /> <c>&lt;p:blinds></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CheckerTransition" /> <c>&lt;p:checker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StripsTransition" /> <c>&lt;p:strips></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CoverTransition" /> <c>&lt;p:cover></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PullTransition" /> <c>&lt;p:pull></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CircleTransition" /> <c>&lt;p:circle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.DissolveTransition" /> <c>&lt;p:dissolve></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CombTransition" /> <c>&lt;p:comb></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CoverTransition" /> <c>&lt;p:cover></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CutTransition" /> <c>&lt;p:cut></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.DiamondTransition" /> <c>&lt;p:diamond></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.FadeTransition" /> <c>&lt;p:fade></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NewsflashTransition" /> <c>&lt;p:newsflash></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PlusTransition" /> <c>&lt;p:plus></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PullTransition" /> <c>&lt;p:pull></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PushTransition" /> <c>&lt;p:push></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RandomTransition" /> <c>&lt;p:random></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RandomBarTransition" /> <c>&lt;p:randomBar></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SplitTransition" /> <c>&lt;p:split></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StripsTransition" /> <c>&lt;p:strips></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.WedgeTransition" /> <c>&lt;p:wedge></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.WheelTransition" /> <c>&lt;p:wheel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.WipeTransition" /> <c>&lt;p:wipe></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ZoomTransition" /> <c>&lt;p:zoom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.FlashTransition" /> <c>&lt;p14:flash></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.VortexTransition" /> <c>&lt;p14:vortex></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SwitchTransition" /> <c>&lt;p14:switch></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.FlipTransition" /> <c>&lt;p14:flip></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition" /> <c>&lt;p14:ripple></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.GlitterTransition" /> <c>&lt;p14:glitter></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.HoneycombTransition" /> <c>&lt;p14:honeycomb></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.PrismTransition" /> <c>&lt;p14:prism></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ZoomTransition" /> <c>&lt;p:zoom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.WarpTransition" /> <c>&lt;p14:warp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CutTransition" /> <c>&lt;p:cut></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.FadeTransition" /> <c>&lt;p:fade></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BlindsTransition" /> <c>&lt;p:blinds></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CheckerTransition" /> <c>&lt;p:checker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CombTransition" /> <c>&lt;p:comb></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RandomBarTransition" /> <c>&lt;p:randomBar></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.DoorsTransition" /> <c>&lt;p14:doors></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.WindowTransition" /> <c>&lt;p14:window></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition" /> <c>&lt;p14:shred></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.FerrisTransition" /> <c>&lt;p14:ferris></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PushTransition" /> <c>&lt;p:push></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.WipeTransition" /> <c>&lt;p:wipe></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.VortexTransition" /> <c>&lt;p14:vortex></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.PanTransition" /> <c>&lt;p14:pan></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SplitTransition" /> <c>&lt;p:split></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SoundAction" /> <c>&lt;p:sndAc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.WheelTransition" /> <c>&lt;p:wheel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.WheelReverseTransition" /> <c>&lt;p14:wheelReverse></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.FlythroughTransition" /> <c>&lt;p14:flythrough></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.WarpTransition" /> <c>&lt;p14:warp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.GlitterTransition" /> <c>&lt;p14:glitter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SwitchTransition" /> <c>&lt;p14:switch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.FlipTransition" /> <c>&lt;p14:flip></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.FerrisTransition" /> <c>&lt;p14:ferris></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.GalleryTransition" /> <c>&lt;p14:gallery></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ConveyorTransition" /> <c>&lt;p14:conveyor></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.PanTransition" /> <c>&lt;p14:pan></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.PrismTransition" /> <c>&lt;p14:prism></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.RevealTransition" /> <c>&lt;p14:reveal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.WheelReverseTransition" /> <c>&lt;p14:wheelReverse></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition" /> <c>&lt;p14:ripple></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition" /> <c>&lt;p14:shred></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition" /> <c>&lt;p15:prstTrans></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SoundAction" /> <c>&lt;p:sndAc></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -18327,49 +18322,49 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "transition");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BlindsTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CheckerTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.StripsTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CoverTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.PullTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CircleTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.DissolveTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CombTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CoverTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CutTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.DiamondTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.FadeTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.NewsflashTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.PlusTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PullTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PushTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.RandomTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.RandomBarTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SplitTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.StripsTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.WedgeTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.WheelTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.WipeTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ZoomTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FlashTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.VortexTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SwitchTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FlipTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.GlitterTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.HoneycombTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PrismTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ZoomTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.WarpTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CutTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.FadeTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.BlindsTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CheckerTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CombTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.RandomBarTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.DoorsTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.WindowTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FerrisTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.PushTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.WipeTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.VortexTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PanTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SplitTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SoundAction>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.WheelTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.WheelReverseTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FlythroughTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.WarpTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.GlitterTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SwitchTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FlipTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FerrisTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.GalleryTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ConveyorTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PanTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PrismTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.RevealTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.WheelReverseTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SoundAction>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
             builder.AddElement<Transition>()
 .AddAttribute(0, "spd", a => a.Speed, aBuilder =>
 {
@@ -18450,9 +18445,9 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNodeList" /> <c>&lt;p:tnLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildList" /> <c>&lt;p:bldLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNodeList" /> <c>&lt;p:tnLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -18495,9 +18490,9 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "timing");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeNodeList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildList>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeNodeList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNodeList), 0, 1),
@@ -18619,8 +18614,8 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BackgroundProperties" /> <c>&lt;p:bgPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BackgroundStyleReference" /> <c>&lt;p:bgRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BackgroundProperties" /> <c>&lt;p:bgPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -18679,8 +18674,8 @@ aBuilder.AddValidator(new StringValidator() { InitialVersion = (FileFormatVersio
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "bg");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BackgroundProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.BackgroundStyleReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.BackgroundProperties>();
             builder.AddElement<Background>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -18737,15 +18732,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties" /> <c>&lt;p:nvGrpSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GroupShapeProperties" /> <c>&lt;p:grpSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Shape" /> <c>&lt;p:sp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GroupShape" /> <c>&lt;p:grpSp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GraphicFrame" /> <c>&lt;p:graphicFrame></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ConnectionShape" /> <c>&lt;p:cxnSp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ContentPart" /> <c>&lt;p:contentPart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GraphicFrame" /> <c>&lt;p:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GroupShape" /> <c>&lt;p:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties" /> <c>&lt;p:nvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Shape" /> <c>&lt;p:sp></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -18788,15 +18783,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "spTree");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.GroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.GroupShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.GraphicFrame>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ConnectionShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties), 1, 1),
@@ -18826,15 +18812,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties" /> <c>&lt;p:nvGrpSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GroupShapeProperties" /> <c>&lt;p:grpSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Shape" /> <c>&lt;p:sp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GroupShape" /> <c>&lt;p:grpSp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GraphicFrame" /> <c>&lt;p:graphicFrame></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ConnectionShape" /> <c>&lt;p:cxnSp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ContentPart" /> <c>&lt;p:contentPart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GraphicFrame" /> <c>&lt;p:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GroupShape" /> <c>&lt;p:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties" /> <c>&lt;p:nvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Shape" /> <c>&lt;p:sp></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -18877,15 +18863,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "grpSp");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.GroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.GroupShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.GraphicFrame>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ConnectionShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties), 1, 1),
@@ -18912,6 +18889,20 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GroupShapeProperties" /> <c>&lt;p:grpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ConnectionShape" /> <c>&lt;p:cxnSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ContentPart" /> <c>&lt;p:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GraphicFrame" /> <c>&lt;p:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GroupShape" /> <c>&lt;p:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties" /> <c>&lt;p:nvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Shape" /> <c>&lt;p:sp></c></description></item>
+    /// </list>
+    /// </remark>
     public abstract partial class GroupShapeType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18948,6 +18939,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.GroupShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ConnectionShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.GraphicFrame>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.GroupShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Shape>();
         }
 
         /// <summary>
@@ -19281,17 +19281,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TransformGroup" /> <c>&lt;a:xfrm></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -19350,17 +19350,17 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "grpSpPr");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TransformGroup>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
             builder.AddElement<GroupShapeProperties>()
 .AddAttribute(0, "bwMode", a => a.BlackWhiteMode, aBuilder =>
 {
@@ -19419,11 +19419,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties" /> <c>&lt;p:nvSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeProperties" /> <c>&lt;p:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeStyle" /> <c>&lt;p:style></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TextBody" /> <c>&lt;p:txBody></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties" /> <c>&lt;p:nvSpPr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -19482,11 +19482,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "sp");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TextBody>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties>();
             builder.AddElement<Shape>()
 .AddAttribute(0, "useBgFill", a => a.UseBackgroundFill);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -19576,10 +19576,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties" /> <c>&lt;p:nvGraphicFramePr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transform" /> <c>&lt;p:xfrm></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Graphic" /> <c>&lt;a:graphic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transform" /> <c>&lt;p:xfrm></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties" /> <c>&lt;p:nvGraphicFramePr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -19622,10 +19622,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "graphicFrame");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Transform>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Transform>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties), 1, 1),
@@ -19699,9 +19699,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties" /> <c>&lt;p:nvCxnSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeProperties" /> <c>&lt;p:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeStyle" /> <c>&lt;p:style></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties" /> <c>&lt;p:nvCxnSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
@@ -19745,9 +19745,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "cxnSp");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -19884,11 +19884,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BackgroundAnimation" /> <c>&lt;p:bg></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SubShape" /> <c>&lt;p:subSp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OleChartElement" /> <c>&lt;p:oleChartEl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TextElement" /> <c>&lt;p:txEl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GraphicElement" /> <c>&lt;p:graphicEl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BackgroundAnimation" /> <c>&lt;p:bg></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OleChartElement" /> <c>&lt;p:oleChartEl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SubShape" /> <c>&lt;p:subSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TextElement" /> <c>&lt;p:txEl></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -19947,11 +19947,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "spTgt");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BackgroundAnimation>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SubShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.OleChartElement>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TextElement>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.GraphicElement>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.BackgroundAnimation>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.OleChartElement>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SubShape>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.TextElement>();
             builder.AddElement<ShapeTarget>()
 .AddAttribute(0, "spid", a => a.ShapeId, aBuilder =>
 {
@@ -20973,8 +20973,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeAbsolute" /> <c>&lt;p:tmAbs></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimePercentage" /> <c>&lt;p:tmPct></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeAbsolute" /> <c>&lt;p:tmAbs></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -21049,8 +21049,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "iterate");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeAbsolute>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TimePercentage>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeAbsolute>();
             builder.AddElement<Iterate>()
 .AddAttribute(0, "type", a => a.Type, aBuilder =>
 {
@@ -21102,9 +21102,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ParallelTimeNode" /> <c>&lt;p:par></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SequenceTimeNode" /> <c>&lt;p:seq></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode" /> <c>&lt;p:excl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Animate" /> <c>&lt;p:anim></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateColor" /> <c>&lt;p:animClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateEffect" /> <c>&lt;p:animEffect></c></description></item>
@@ -21112,9 +21109,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateRotation" /> <c>&lt;p:animRot></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateScale" /> <c>&lt;p:animScale></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Command" /> <c>&lt;p:cmd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SetBehavior" /> <c>&lt;p:set></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Audio" /> <c>&lt;p:audio></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Video" /> <c>&lt;p:video></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SetBehavior" /> <c>&lt;p:set></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode" /> <c>&lt;p:excl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ParallelTimeNode" /> <c>&lt;p:par></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SequenceTimeNode" /> <c>&lt;p:seq></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -21157,19 +21157,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "childTnLst");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ParallelTimeNode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SequenceTimeNode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Animate>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateMotion>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateRotation>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateScale>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Command>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SetBehavior>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Audio>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Video>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1),
@@ -21200,9 +21187,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ParallelTimeNode" /> <c>&lt;p:par></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SequenceTimeNode" /> <c>&lt;p:seq></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode" /> <c>&lt;p:excl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Animate" /> <c>&lt;p:anim></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateColor" /> <c>&lt;p:animClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateEffect" /> <c>&lt;p:animEffect></c></description></item>
@@ -21210,9 +21194,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateRotation" /> <c>&lt;p:animRot></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateScale" /> <c>&lt;p:animScale></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Command" /> <c>&lt;p:cmd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SetBehavior" /> <c>&lt;p:set></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Audio" /> <c>&lt;p:audio></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Video" /> <c>&lt;p:video></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SetBehavior" /> <c>&lt;p:set></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode" /> <c>&lt;p:excl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ParallelTimeNode" /> <c>&lt;p:par></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SequenceTimeNode" /> <c>&lt;p:seq></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -21255,19 +21242,6 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "subTnLst");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ParallelTimeNode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SequenceTimeNode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Animate>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateMotion>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateRotation>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateScale>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Command>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SetBehavior>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Audio>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Video>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1),
@@ -21295,6 +21269,24 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Animate" /> <c>&lt;p:anim></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateColor" /> <c>&lt;p:animClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateEffect" /> <c>&lt;p:animEffect></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateMotion" /> <c>&lt;p:animMotion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateRotation" /> <c>&lt;p:animRot></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AnimateScale" /> <c>&lt;p:animScale></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Command" /> <c>&lt;p:cmd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Audio" /> <c>&lt;p:audio></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Video" /> <c>&lt;p:video></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SetBehavior" /> <c>&lt;p:set></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode" /> <c>&lt;p:excl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ParallelTimeNode" /> <c>&lt;p:par></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SequenceTimeNode" /> <c>&lt;p:seq></c></description></item>
+    /// </list>
+    /// </remark>
     public abstract partial class TimeTypeListType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21331,6 +21323,19 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Animate>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateEffect>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateMotion>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateRotation>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.AnimateScale>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Command>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Audio>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.Video>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SetBehavior>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.ParallelTimeNode>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SequenceTimeNode>();
         }
     }
 
@@ -22826,8 +22831,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties" /> <c>&lt;p14:sectionPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList" /> <c>&lt;p14:sectionLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties" /> <c>&lt;p14:sectionPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList" /> <c>&lt;p15:sldGuideLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList" /> <c>&lt;p15:notesGuideLst></c></description></item>
     /// </list>
@@ -22888,8 +22893,8 @@ aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010))
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList>();
             builder.AddElement<PresentationExtension>()
@@ -22920,10 +22925,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideAll" /> <c>&lt;p:sldAll></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideRange" /> <c>&lt;p:sldRg></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomShowReference" /> <c>&lt;p:custShow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideAll" /> <c>&lt;p:sldAll></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideRange" /> <c>&lt;p:sldRg></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -23017,10 +23022,10 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "htmlPubPr");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideAll>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideRange>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomShowReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideAll>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideRange>();
             builder.AddElement<HtmlPublishProperties>()
 .AddAttribute(0, "showSpeakerNotes", a => a.ShowSpeakerNotes)
 .AddAttribute(0, "pubBrowser", a => a.TargetBrowser, aBuilder =>
@@ -23460,13 +23465,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PenColor" /> <c>&lt;p:penClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomShowReference" /> <c>&lt;p:custShow></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PresenterSlideMode" /> <c>&lt;p:present></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BrowseSlideMode" /> <c>&lt;p:browse></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.KioskSlideMode" /> <c>&lt;p:kiosk></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideAll" /> <c>&lt;p:sldAll></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideRange" /> <c>&lt;p:sldRg></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomShowReference" /> <c>&lt;p:custShow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PenColor" /> <c>&lt;p:penClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BrowseSlideMode" /> <c>&lt;p:browse></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.KioskSlideMode" /> <c>&lt;p:kiosk></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShowPropertiesExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
@@ -23574,13 +23579,13 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "showPr");
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.PenColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomShowReference>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.PresenterSlideMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BrowseSlideMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.KioskSlideMode>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideAll>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideRange>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomShowReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PenColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.BrowseSlideMode>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.KioskSlideMode>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ShowPropertiesExtensionList>();
             builder.AddElement<ShowProperties>()
 .AddAttribute(0, "loop", a => a.Loop)
@@ -23624,12 +23629,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -23672,12 +23677,12 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "clrMru");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1, requireFilter: true)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 10, version: FileFormatVersions.Office2007)
@@ -23781,9 +23786,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData" /> <c>&lt;p14:discardImageEditData></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi" /> <c>&lt;p14:defaultImageDpi></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.TextMath" /> <c>&lt;a14:m></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi" /> <c>&lt;p14:defaultImageDpi></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData" /> <c>&lt;p14:discardImageEditData></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased" /> <c>&lt;p15:chartTrackingRefBased></c></description></item>
     /// </list>
     /// </remark>
@@ -23843,9 +23848,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.TextMath>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased>();
             builder.AddElement<PresentationPropertiesExtension>()
 .AddAttribute(0, "uri", a => a.Uri, aBuilder =>
@@ -24609,8 +24614,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagram" /> <c>&lt;a:dgm></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Chart" /> <c>&lt;a:chart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagram" /> <c>&lt;a:dgm></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -24653,8 +24658,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "graphicEl");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagram>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Chart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagram>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagram), 1, 1),
@@ -25344,8 +25349,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StartSoundAction" /> <c>&lt;p:stSnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.EndSoundAction" /> <c>&lt;p:endSnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StartSoundAction" /> <c>&lt;p:stSnd></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -25388,8 +25393,8 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(24, "sndAc");
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.StartSoundAction>();
             builder.AddChild<DocumentFormat.OpenXml.Presentation.EndSoundAction>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.StartSoundAction>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StartSoundAction), 1, 1),

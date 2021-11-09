@@ -23,10 +23,10 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommands" /> <c>&lt;wne:acds></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations" /> <c>&lt;wne:keymaps></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization" /> <c>&lt;wne:keymapsBad></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Toolbars" /> <c>&lt;wne:toolbars></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommands" /> <c>&lt;wne:acds></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -69,10 +69,10 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "tcg");
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommands>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Toolbars>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommands>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations), 0, 0),
@@ -707,11 +707,11 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization" /> <c>&lt;wne:fci></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization" /> <c>&lt;wne:macro></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization" /> <c>&lt;wne:acd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization" /> <c>&lt;wne:wll></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization" /> <c>&lt;wne:fci></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.CharacterInsertion" /> <c>&lt;wne:wch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization" /> <c>&lt;wne:macro></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization" /> <c>&lt;wne:wll></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -849,11 +849,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymap");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.CharacterInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization>();
             builder.AddElement<KeyMapEntry>()
 .AddAttribute(33, "chmPrimary", a => a.CharacterMapPrimary, aBuilder =>
 {
@@ -2150,7 +2150,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymaps");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.KeyMapEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
@@ -2212,7 +2211,6 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "keymapsBad");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.KeyMapEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
@@ -2228,6 +2226,12 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
+    /// </list>
+    /// </remark>
     public abstract partial class KeymapsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2264,6 +2268,7 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.KeyMapEntry>();
         }
     }
 
@@ -2501,8 +2506,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.RecordIncluded" /> <c>&lt;wne:active></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.RecordHashCode" /> <c>&lt;wne:hash></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.RecordIncluded" /> <c>&lt;wne:active></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2545,8 +2550,8 @@ aBuilder.AddValidator(RequiredValidator.Instance);
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(33, "recipientData");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.RecordIncluded>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.RecordHashCode>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.RecordIncluded>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordIncluded), 0, 1),

@@ -589,11 +589,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent" /> <c>&lt;wp:extent></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent" /> <c>&lt;wp:effectExtent></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Graphic" /> <c>&lt;a:graphic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties" /> <c>&lt;wp:docPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties" /> <c>&lt;wp:cNvGraphicFramePr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Graphic" /> <c>&lt;a:graphic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent" /> <c>&lt;wp:extent></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent" /> <c>&lt;wp:effectExtent></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -738,11 +738,11 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "inline");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
             builder.AddElement<Inline>()
 .AddAttribute(0, "distT", a => a.DistanceFromTop)
 .AddAttribute(0, "distB", a => a.DistanceFromBottom)
@@ -845,19 +845,19 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition" /> <c>&lt;wp:simplePos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition" /> <c>&lt;wp:positionH></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition" /> <c>&lt;wp:positionV></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent" /> <c>&lt;wp:extent></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent" /> <c>&lt;wp:effectExtent></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone" /> <c>&lt;wp:wrapNone></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare" /> <c>&lt;wp:wrapSquare></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight" /> <c>&lt;wp:wrapTight></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough" /> <c>&lt;wp:wrapThrough></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom" /> <c>&lt;wp:wrapTopAndBottom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Graphic" /> <c>&lt;a:graphic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties" /> <c>&lt;wp:docPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties" /> <c>&lt;wp:cNvGraphicFramePr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Graphic" /> <c>&lt;a:graphic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition" /> <c>&lt;wp:simplePos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent" /> <c>&lt;wp:extent></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent" /> <c>&lt;wp:effectExtent></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition" /> <c>&lt;wp:positionH></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition" /> <c>&lt;wp:positionV></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone" /> <c>&lt;wp:wrapNone></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare" /> <c>&lt;wp:wrapSquare></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough" /> <c>&lt;wp:wrapThrough></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight" /> <c>&lt;wp:wrapTight></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom" /> <c>&lt;wp:wrapTopAndBottom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth" /> <c>&lt;wp14:sizeRelH></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight" /> <c>&lt;wp14:sizeRelV></c></description></item>
     /// </list>
@@ -1116,19 +1116,19 @@ aBuilder.AddValidator(new StringValidator() { Length = (4L) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "anchor");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight>();
             builder.AddElement<Anchor>()
@@ -1626,9 +1626,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset" /> <c>&lt;wp14:pctPosHOffset></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment" /> <c>&lt;wp:align></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset" /> <c>&lt;wp:posOffset></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset" /> <c>&lt;wp14:pctPosHOffset></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1687,9 +1687,9 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "positionH");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>();
             builder.AddElement<HorizontalPosition>()
 .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
 {
@@ -1758,9 +1758,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset" /> <c>&lt;wp14:pctPosVOffset></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment" /> <c>&lt;wp:align></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset" /> <c>&lt;wp:posOffset></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset" /> <c>&lt;wp14:pctPosVOffset></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1819,9 +1819,9 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(16, "positionV");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>();
             builder.AddElement<VerticalPosition>()
 .AddAttribute(0, "relativeFrom", a => a.RelativeFrom, aBuilder =>
 {

@@ -961,10 +961,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.DerivedFrom" /> <c>&lt;emma:derived-from></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
@@ -1478,10 +1478,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "one-of");
             builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
+            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
             builder.AddElement<OneOf>()
 .AddAttribute(0, "disjunction-type", a => a.DisjunctionType)
@@ -1547,11 +1547,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.DerivedFrom" /> <c>&lt;emma:derived-from></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.GroupInfo" /> <c>&lt;emma:group-info></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
@@ -2049,11 +2049,11 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "group");
             builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
+            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.GroupInfo>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
             builder.AddElement<Group>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -2118,10 +2118,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.DerivedFrom" /> <c>&lt;emma:derived-from></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
@@ -2619,10 +2619,10 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "sequence");
             builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
+            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
             builder.AddElement<Sequence>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
@@ -2761,10 +2761,10 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2807,10 +2807,10 @@ aBuilder.AddValidator(new StringValidator() { IsUri = (true) });
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "derivation");
+            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
@@ -3802,13 +3802,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Derivation" /> <c>&lt;emma:derivation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Grammar" /> <c>&lt;emma:grammar></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Model" /> <c>&lt;emma:model></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.EndPointInfo" /> <c>&lt;emma:endpoint-info></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Grammar" /> <c>&lt;emma:grammar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Interpretation" /> <c>&lt;emma:interpretation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Model" /> <c>&lt;emma:model></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.OneOf" /> <c>&lt;emma:one-of></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Group" /> <c>&lt;emma:group></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
@@ -3869,13 +3869,13 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (0L), MaxInclusive 
             base.ConfigureMetadata(builder);
             builder.SetSchema(44, "emma");
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Derivation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Grammar>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Model>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.EndPointInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.EMMA.Grammar>();
+            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
+            builder.AddChild<DocumentFormat.OpenXml.EMMA.Model>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
             builder.AddElement<Emma>()
 .AddAttribute(0, "version", a => a.Version, aBuilder =>

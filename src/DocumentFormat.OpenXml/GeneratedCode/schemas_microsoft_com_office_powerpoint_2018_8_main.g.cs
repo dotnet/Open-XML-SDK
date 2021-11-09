@@ -983,20 +983,20 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList" /> <c>&lt;pc:sldMkLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideLayoutMonikerList" /> <c>&lt;pc:sldLayoutMkLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.MainMasterMonikerList" /> <c>&lt;pc:sldMasterMkLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Point2DType" /> <c>&lt;p188:pos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType" /> <c>&lt;p188:txBody></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.DeMkLstDrawingElementMonikerList" /> <c>&lt;oac:deMkLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.TableCellMonikerList" /> <c>&lt;oac:tcMkLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.TableColumnMonikerList" /> <c>&lt;oac:gridColMkLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.TableRowMonikerList" /> <c>&lt;oac:trMkLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.TextBodyMonikerList" /> <c>&lt;oac:txBodyMkLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.TextCharRangeMonikerList" /> <c>&lt;oac:txMkLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.TableCellMonikerList" /> <c>&lt;oac:tcMkLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.TableRowMonikerList" /> <c>&lt;oac:trMkLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.TableColumnMonikerList" /> <c>&lt;oac:gridColMkLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentUnknownAnchor" /> <c>&lt;p188:unknownAnchor></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Point2DType" /> <c>&lt;p188:pos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReplyList" /> <c>&lt;p188:replyLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType" /> <c>&lt;p188:txBody></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList" /> <c>&lt;p188:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReplyList" /> <c>&lt;p188:replyLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentUnknownAnchor" /> <c>&lt;p188:unknownAnchor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.MainMasterMonikerList" /> <c>&lt;pc:sldMasterMkLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideLayoutMonikerList" /> <c>&lt;pc:sldLayoutMkLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList" /> <c>&lt;pc:sldMkLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -1232,20 +1232,20 @@ aBuilder.AddValidator(new NumberValidator() { MinInclusive = (-27273042329600L),
             base.ConfigureMetadata(builder);
             builder.SetSchema(123, "cm");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideLayoutMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.MainMasterMonikerList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Point2DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.DeMkLstDrawingElementMonikerList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TableCellMonikerList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TableColumnMonikerList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TableRowMonikerList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TextBodyMonikerList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TextCharRangeMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TableCellMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TableRowMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TableColumnMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentUnknownAnchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Point2DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReplyList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReplyList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentUnknownAnchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.MainMasterMonikerList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideLayoutMonikerList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList>();
             builder.AddElement<Comment>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {

@@ -87,8 +87,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList" /> <c>&lt;p202:designTagLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList" /> <c>&lt;p202:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList" /> <c>&lt;p202:designTagLst></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -148,8 +148,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
             base.ConfigureMetadata(builder);
             builder.SetSchema(124, "designPr");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList>();
             builder.AddElement<DesignerDrawingProps>()
 .AddAttribute(0, "edtDesignElem", a => a.EdtDesignElem);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

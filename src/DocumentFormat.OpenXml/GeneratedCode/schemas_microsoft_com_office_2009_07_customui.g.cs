@@ -1681,8 +1681,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -2510,8 +2510,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "gallery");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Item>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Item>();
             builder.AddElement<GalleryRegular>()
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
 {
@@ -3556,9 +3556,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -3858,9 +3858,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "splitButton");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
             builder.AddElement<SplitButtonRegular>()
 .AddAttribute(0, "enabled", a => a.Enabled)
 .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
@@ -3943,15 +3943,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular" /> <c>&lt;mso14:control></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular" /> <c>&lt;mso14:dynamicMenu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular" /> <c>&lt;mso14:gallery></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator" /> <c>&lt;mso14:menuSeparator></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular" /> <c>&lt;mso14:splitButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular" /> <c>&lt;mso14:dynamicMenu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -4475,15 +4475,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
             builder.AddElement<MenuRegular>()
 .AddAttribute(0, "itemSize", a => a.ItemSize)
 .AddAttribute(0, "description", a => a.Description, aBuilder =>
@@ -5269,9 +5269,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle" /> <c>&lt;mso14:menu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle" /> <c>&lt;mso14:menu></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -5571,9 +5571,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "splitButton");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle>();
             builder.AddElement<SplitButtonWithTitle>()
 .AddAttribute(0, "enabled", a => a.Enabled)
 .AddAttribute(0, "getEnabled", a => a.GetEnabled, aBuilder =>
@@ -5656,15 +5656,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular" /> <c>&lt;mso14:gallery></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator" /> <c>&lt;mso14:menuSeparator></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonWithTitle" /> <c>&lt;mso14:splitButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle" /> <c>&lt;mso14:menu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular" /> <c>&lt;mso14:dynamicMenu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular" /> <c>&lt;mso14:gallery></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator" /> <c>&lt;mso14:menuSeparator></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle" /> <c>&lt;mso14:menu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonWithTitle" /> <c>&lt;mso14:splitButton></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -6188,15 +6188,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonWithTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonWithTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
             builder.AddElement<MenuWithTitle>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -10346,8 +10346,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -11015,8 +11015,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "dropDown");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Item>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Item>();
             builder.AddElement<DropDownRegular>()
 .AddAttribute(0, "onAction", a => a.OnAction, aBuilder =>
 {
@@ -11178,8 +11178,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -12039,8 +12039,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "gallery");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Item>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Item>();
             builder.AddElement<Gallery>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -12247,15 +12247,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular" /> <c>&lt;mso14:control></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular" /> <c>&lt;mso14:dynamicMenu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular" /> <c>&lt;mso14:gallery></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator" /> <c>&lt;mso14:menuSeparator></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular" /> <c>&lt;mso14:splitButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular" /> <c>&lt;mso14:dynamicMenu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -12811,15 +12811,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
             builder.AddElement<Menu>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -13650,9 +13650,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -13984,9 +13984,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "splitButton");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
             builder.AddElement<SplitButton>()
 .AddAttribute(0, "size", a => a.Size)
 .AddAttribute(0, "getSize", a => a.GetSize, aBuilder =>
@@ -14077,20 +14077,20 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone" /> <c>&lt;mso14:control></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl" /> <c>&lt;mso14:labelControl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Button" /> <c>&lt;mso14:button></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.EditBox" /> <c>&lt;mso14:editBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox" /> <c>&lt;mso14:comboBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular" /> <c>&lt;mso14:dropDown></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Gallery" /> <c>&lt;mso14:gallery></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Menu" /> <c>&lt;mso14:menu></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu" /> <c>&lt;mso14:dynamicMenu></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton" /> <c>&lt;mso14:splitButton></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Box" /> <c>&lt;mso14:box></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Button" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup" /> <c>&lt;mso14:buttonGroup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox" /> <c>&lt;mso14:comboBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone" /> <c>&lt;mso14:control></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular" /> <c>&lt;mso14:dropDown></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu" /> <c>&lt;mso14:dynamicMenu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.EditBox" /> <c>&lt;mso14:editBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Gallery" /> <c>&lt;mso14:gallery></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl" /> <c>&lt;mso14:labelControl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Menu" /> <c>&lt;mso14:menu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton" /> <c>&lt;mso14:splitButton></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -14294,20 +14294,20 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "box");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Button>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.EditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Gallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Menu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Button>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.EditBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Gallery>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Menu>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton>();
             builder.AddElement<Box>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -14377,14 +14377,14 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular" /> <c>&lt;mso14:control></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular" /> <c>&lt;mso14:dynamicMenu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular" /> <c>&lt;mso14:gallery></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular" /> <c>&lt;mso14:dynamicMenu></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular" /> <c>&lt;mso14:splitButton></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Separator" /> <c>&lt;mso14:separator></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular" /> <c>&lt;mso14:splitButton></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -14572,14 +14572,14 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "buttonGroup");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Separator>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
             builder.AddElement<ButtonGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -19430,17 +19430,17 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox" /> <c>&lt;mso14:editBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown" /> <c>&lt;mso14:dropDown></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox" /> <c>&lt;mso14:comboBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink" /> <c>&lt;mso14:hyperlink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown" /> <c>&lt;mso14:dropDown></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox" /> <c>&lt;mso14:editBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl" /> <c>&lt;mso14:labelControl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox" /> <c>&lt;mso14:groupBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink" /> <c>&lt;mso14:hyperlink></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl" /> <c>&lt;mso14:imageControl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -19580,17 +19580,17 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "groupBox");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup>();
             builder.AddElement<GroupBox>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -19647,17 +19647,17 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox" /> <c>&lt;mso14:editBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown" /> <c>&lt;mso14:dropDown></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox" /> <c>&lt;mso14:comboBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink" /> <c>&lt;mso14:hyperlink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown" /> <c>&lt;mso14:dropDown></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox" /> <c>&lt;mso14:editBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl" /> <c>&lt;mso14:labelControl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox" /> <c>&lt;mso14:groupBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink" /> <c>&lt;mso14:hyperlink></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl" /> <c>&lt;mso14:imageControl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -19797,17 +19797,17 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "layoutContainer");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup>();
             builder.AddElement<LayoutContainer>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -20121,9 +20121,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem" /> <c>&lt;mso14:primaryItem></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TopItemsGroupControls" /> <c>&lt;mso14:topItems></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BottomItemsGroupControls" /> <c>&lt;mso14:bottomItems></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem" /> <c>&lt;mso14:primaryItem></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -20455,9 +20455,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "group");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TopItemsGroupControls>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BottomItemsGroupControls>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem>();
             builder.AddElement<BackstageGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -20940,15 +20940,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular" /> <c>&lt;mso14:control></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular" /> <c>&lt;mso14:dynamicMenu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular" /> <c>&lt;mso14:gallery></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator" /> <c>&lt;mso14:menuSeparator></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular" /> <c>&lt;mso14:splitButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular" /> <c>&lt;mso14:dynamicMenu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -21040,15 +21040,15 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "menu");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
             builder.AddElement<MenuRoot>()
 .AddAttribute(0, "title", a => a.Title, aBuilder =>
 {
@@ -21100,10 +21100,10 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Commands" /> <c>&lt;mso14:commands></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon" /> <c>&lt;mso14:ribbon></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Backstage" /> <c>&lt;mso14:backstage></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Commands" /> <c>&lt;mso14:commands></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus" /> <c>&lt;mso14:contextMenus></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon" /> <c>&lt;mso14:ribbon></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -21179,10 +21179,10 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "customUI");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Commands>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Backstage>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Commands>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon>();
             builder.AddElement<CustomUI>()
 .AddAttribute(0, "onLoad", a => a.OnLoad, aBuilder =>
 {
@@ -22907,22 +22907,22 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone" /> <c>&lt;mso14:control></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl" /> <c>&lt;mso14:labelControl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Button" /> <c>&lt;mso14:button></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.EditBox" /> <c>&lt;mso14:editBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox" /> <c>&lt;mso14:comboBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular" /> <c>&lt;mso14:dropDown></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Gallery" /> <c>&lt;mso14:gallery></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Menu" /> <c>&lt;mso14:menu></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu" /> <c>&lt;mso14:dynamicMenu></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton" /> <c>&lt;mso14:splitButton></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Box" /> <c>&lt;mso14:box></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Button" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup" /> <c>&lt;mso14:buttonGroup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Separator" /> <c>&lt;mso14:separator></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox" /> <c>&lt;mso14:comboBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DialogBoxLauncher" /> <c>&lt;mso14:dialogBoxLauncher></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular" /> <c>&lt;mso14:dropDown></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu" /> <c>&lt;mso14:dynamicMenu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.EditBox" /> <c>&lt;mso14:editBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Gallery" /> <c>&lt;mso14:gallery></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl" /> <c>&lt;mso14:labelControl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Menu" /> <c>&lt;mso14:menu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Separator" /> <c>&lt;mso14:separator></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton" /> <c>&lt;mso14:splitButton></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -23334,22 +23334,22 @@ aBuilder.AddValidator(new StringValidator() { IsQName = (true), MinLength = (1L)
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "group");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Button>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.EditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Gallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Menu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Button>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Separator>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DialogBoxLauncher>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.EditBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Gallery>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Menu>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Separator>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton>();
             builder.AddElement<Group>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -24094,8 +24094,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Separator" /> <c>&lt;mso14:separator></c></description></item>
     /// </list>
     /// </remark>
@@ -24140,9 +24140,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "sharedControls");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Separator>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
@@ -24166,8 +24163,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Separator" /> <c>&lt;mso14:separator></c></description></item>
     /// </list>
     /// </remark>
@@ -24212,9 +24209,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "documentControls");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Separator>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
@@ -24235,6 +24229,14 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat" /> <c>&lt;mso14:control></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Separator" /> <c>&lt;mso14:separator></c></description></item>
+    /// </list>
+    /// </remark>
     public abstract partial class QatItemsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24271,6 +24273,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Separator>();
         }
     }
 
@@ -25072,15 +25077,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular" /> <c>&lt;mso14:gallery></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular" /> <c>&lt;mso14:splitButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular" /> <c>&lt;mso14:dynamicMenu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular" /> <c>&lt;mso14:gallery></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparatorNoTitle" /> <c>&lt;mso14:menuSeparator></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular" /> <c>&lt;mso14:splitButton></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -25140,15 +25145,15 @@ aBuilder.AddValidator(new StringValidator() { IsToken = (true), IsNcName = (true
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "contextMenu");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparatorNoTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
             builder.AddElement<ContextMenu>()
 .AddAttribute(0, "idMso", a => a.IdMso, aBuilder =>
 {
@@ -26172,8 +26177,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuCheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageSubMenu" /> <c>&lt;mso14:menu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageSubMenu" /> <c>&lt;mso14:menu></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -26315,8 +26320,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuCheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageSubMenu>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuToggleButton>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageSubMenu>();
             builder.AddElement<BackstageMenuGroup>()
 .AddAttribute(0, "id", a => a.Id, aBuilder =>
 {
@@ -26369,8 +26374,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu" /> <c>&lt;mso14:menu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton" /> <c>&lt;mso14:button></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -26414,8 +26419,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "primaryItem");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton), 0, 1, version: FileFormatVersions.Office2010),
@@ -26461,17 +26466,17 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox" /> <c>&lt;mso14:editBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown" /> <c>&lt;mso14:dropDown></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox" /> <c>&lt;mso14:comboBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink" /> <c>&lt;mso14:hyperlink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown" /> <c>&lt;mso14:dropDown></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox" /> <c>&lt;mso14:editBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl" /> <c>&lt;mso14:labelControl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox" /> <c>&lt;mso14:groupBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink" /> <c>&lt;mso14:hyperlink></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl" /> <c>&lt;mso14:imageControl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -26515,17 +26520,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "topItems");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
@@ -26560,17 +26554,17 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox" /> <c>&lt;mso14:editBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown" /> <c>&lt;mso14:dropDown></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox" /> <c>&lt;mso14:comboBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink" /> <c>&lt;mso14:hyperlink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown" /> <c>&lt;mso14:dropDown></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox" /> <c>&lt;mso14:editBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl" /> <c>&lt;mso14:labelControl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox" /> <c>&lt;mso14:groupBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink" /> <c>&lt;mso14:hyperlink></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl" /> <c>&lt;mso14:imageControl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -26614,17 +26608,6 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "bottomItems");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1000, version: FileFormatVersions.Office2010)
@@ -26656,6 +26639,22 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox" /> <c>&lt;mso14:comboBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown" /> <c>&lt;mso14:dropDown></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox" /> <c>&lt;mso14:editBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton" /> <c>&lt;mso14:button></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl" /> <c>&lt;mso14:labelControl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox" /> <c>&lt;mso14:groupBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink" /> <c>&lt;mso14:hyperlink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl" /> <c>&lt;mso14:imageControl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
+    /// </list>
+    /// </remark>
     public abstract partial class GroupControlsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26692,6 +26691,17 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup>();
         }
     }
 
@@ -28578,8 +28588,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroup" /> <c>&lt;mso14:taskFormGroup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup" /> <c>&lt;mso14:group></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroup" /> <c>&lt;mso14:taskFormGroup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup" /> <c>&lt;mso14:taskGroup></c></description></item>
     /// </list>
     /// </remark>
@@ -28624,8 +28634,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "firstColumn");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroup>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroup>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
@@ -29781,9 +29791,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs" /> <c>&lt;mso14:contextualTabs></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar" /> <c>&lt;mso14:qat></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Tabs" /> <c>&lt;mso14:tabs></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs" /> <c>&lt;mso14:contextualTabs></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -29843,9 +29853,9 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "ribbon");
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Tabs>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs>();
             builder.AddElement<Ribbon>()
 .AddAttribute(0, "startFromScratch", a => a.StartFromScratch);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
@@ -29907,8 +29917,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab" /> <c>&lt;mso14:tab></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageFastCommandButton" /> <c>&lt;mso14:button></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab" /> <c>&lt;mso14:tab></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -29984,8 +29994,8 @@ aBuilder.AddValidator(new StringValidator() { MinLength = (1L), MaxLength = (102
             base.ConfigureMetadata(builder);
             builder.SetSchema(57, "backstage");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageFastCommandButton>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab>();
             builder.AddElement<Backstage>()
 .AddAttribute(0, "onShow", a => a.OnShow, aBuilder =>
 {

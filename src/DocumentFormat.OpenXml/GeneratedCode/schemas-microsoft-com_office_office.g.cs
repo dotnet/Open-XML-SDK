@@ -24,17 +24,17 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ColorMenu" /> <c>&lt;o:colormenu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed" /> <c>&lt;o:colormru></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed" /> <c>&lt;o:colormru></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ColorMenu" /> <c>&lt;o:colormenu></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -249,17 +249,17 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(27, "shapedefaults");
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColorMenu>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColorMenu>();
             builder.AddElement<ShapeDefaults>()
 .AddAttribute(26, "ext", a => a.Extension)
 .AddAttribute(0, "spidmax", a => a.MaxShapeId)

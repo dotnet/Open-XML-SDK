@@ -117,40 +117,40 @@ namespace DocumentFormat.OpenXml.CustomProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTArray" /> <c>&lt;vt:array></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBlob" /> <c>&lt;vt:blob></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTOBlob" /> <c>&lt;vt:oblob></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTClipboardData" /> <c>&lt;vt:cf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTEmpty" /> <c>&lt;vt:empty></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTNull" /> <c>&lt;vt:null></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTByte" /> <c>&lt;vt:i1></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTShort" /> <c>&lt;vt:i2></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInt32" /> <c>&lt;vt:i4></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInt64" /> <c>&lt;vt:i8></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInteger" /> <c>&lt;vt:int></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte" /> <c>&lt;vt:ui1></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32" /> <c>&lt;vt:ui4></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64" /> <c>&lt;vt:ui8></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger" /> <c>&lt;vt:uint></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTFloat" /> <c>&lt;vt:r4></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDouble" /> <c>&lt;vt:r8></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDecimal" /> <c>&lt;vt:decimal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTLPSTR" /> <c>&lt;vt:lpstr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTLPWSTR" /> <c>&lt;vt:lpwstr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBString" /> <c>&lt;vt:bstr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDate" /> <c>&lt;vt:date></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTFileTime" /> <c>&lt;vt:filetime></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBool" /> <c>&lt;vt:bool></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVStreamData" /> <c>&lt;vt:vstream></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTClassId" /> <c>&lt;vt:clsid></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTCurrency" /> <c>&lt;vt:cy></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTError" /> <c>&lt;vt:error></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBlob" /> <c>&lt;vt:blob></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTOBlob" /> <c>&lt;vt:oblob></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTStreamData" /> <c>&lt;vt:stream></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTOStreamData" /> <c>&lt;vt:ostream></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTStorage" /> <c>&lt;vt:storage></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTOStorage" /> <c>&lt;vt:ostorage></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVStreamData" /> <c>&lt;vt:vstream></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTClassId" /> <c>&lt;vt:clsid></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTClipboardData" /> <c>&lt;vt:cf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBool" /> <c>&lt;vt:bool></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTByte" /> <c>&lt;vt:i1></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDate" /> <c>&lt;vt:date></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTFileTime" /> <c>&lt;vt:filetime></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDecimal" /> <c>&lt;vt:decimal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTDouble" /> <c>&lt;vt:r8></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTFloat" /> <c>&lt;vt:r4></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInt32" /> <c>&lt;vt:i4></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInteger" /> <c>&lt;vt:int></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTInt64" /> <c>&lt;vt:i8></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTShort" /> <c>&lt;vt:i2></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTLPSTR" /> <c>&lt;vt:lpstr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTLPWSTR" /> <c>&lt;vt:lpwstr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBString" /> <c>&lt;vt:bstr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte" /> <c>&lt;vt:ui1></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32" /> <c>&lt;vt:ui4></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger" /> <c>&lt;vt:uint></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64" /> <c>&lt;vt:ui8></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -257,40 +257,40 @@ namespace DocumentFormat.OpenXml.CustomProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(4, "property");
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTArray>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTOBlob>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTNull>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTByte>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTShort>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt64>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInteger>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDecimal>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBString>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDate>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFileTime>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBool>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClassId>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTError>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTOBlob>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTStreamData>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTStorage>();
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTOStorage>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClassId>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBool>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTByte>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDate>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFileTime>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDecimal>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInteger>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt64>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTShort>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBString>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
+            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
             builder.AddElement<CustomDocumentProperty>()
 .AddAttribute(0, "fmtid", a => a.FormatId, aBuilder =>
 {

@@ -87,10 +87,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoBullet" /> <c>&lt;a:buNone></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AutoNumberedBullet" /> <c>&lt;a:buAutoNum></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CharacterBullet" /> <c>&lt;a:buChar></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureBullet" /> <c>&lt;a:buBlip></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CharacterBullet" /> <c>&lt;a:buChar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoBullet" /> <c>&lt;a:buNone></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -166,10 +166,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
             base.ConfigureMetadata(builder);
             builder.SetSchema(108, "buPr");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoBullet>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AutoNumberedBullet>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CharacterBullet>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureBullet>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CharacterBullet>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoBullet>();
             builder.AddElement<DiagramAutoBullet>()
 .AddAttribute(0, "prefix", a => a.AutoBulletPrefix)
 .AddAttribute(0, "leadZeros", a => a.LeadZeros);

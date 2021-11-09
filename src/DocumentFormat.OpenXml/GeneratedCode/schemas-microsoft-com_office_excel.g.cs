@@ -23,9 +23,42 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget" /> <c>&lt;xvml:Row></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget" /> <c>&lt;xvml:Column></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType" /> <c>&lt;xvml:VTEdit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.MinDropDownWidth" /> <c>&lt;xvml:WidthMin></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionEntry" /> <c>&lt;xvml:Sel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DropLines" /> <c>&lt;xvml:DropLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Checked" /> <c>&lt;xvml:Checked></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPosition" /> <c>&lt;xvml:Val></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMin" /> <c>&lt;xvml:Min></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMax" /> <c>&lt;xvml:Max></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarIncrement" /> <c>&lt;xvml:Inc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPageIncrement" /> <c>&lt;xvml:Page></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarWidth" /> <c>&lt;xvml:Dx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage" /> <c>&lt;xvml:ScriptLanguage></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation" /> <c>&lt;xvml:ScriptLocation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Anchor" /> <c>&lt;xvml:Anchor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalTextAlignment" /> <c>&lt;xvml:TextHAlign></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalTextAlignment" /> <c>&lt;xvml:TextVAlign></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaRange" /> <c>&lt;xvml:FmlaRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionType" /> <c>&lt;xvml:SelType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.MultiSelections" /> <c>&lt;xvml:MultiSel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ListBoxCallbackType" /> <c>&lt;xvml:LCT></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ListItem" /> <c>&lt;xvml:ListItem></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DropStyle" /> <c>&lt;xvml:DropStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaLink" /> <c>&lt;xvml:FmlaLink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaPicture" /> <c>&lt;xvml:FmlaPict></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaGroup" /> <c>&lt;xvml:FmlaGroup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptText" /> <c>&lt;xvml:ScriptText></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptExtended" /> <c>&lt;xvml:ScriptExtended></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox" /> <c>&lt;xvml:FmlaTxbx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorPrimary" /> <c>&lt;xvml:Accel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorSecondary" /> <c>&lt;xvml:Accel2></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormat" /> <c>&lt;xvml:CF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaMacro" /> <c>&lt;xvml:FmlaMacro></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.MoveWithCells" /> <c>&lt;xvml:MoveWithCells></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ResizeWithCells" /> <c>&lt;xvml:SizeWithCells></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Anchor" /> <c>&lt;xvml:Anchor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Locked" /> <c>&lt;xvml:Locked></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultSize" /> <c>&lt;xvml:DefaultSize></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.PrintObject" /> <c>&lt;xvml:PrintObject></c></description></item>
@@ -33,9 +66,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AutoFill" /> <c>&lt;xvml:AutoFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AutoLine" /> <c>&lt;xvml:AutoLine></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AutoSizePicture" /> <c>&lt;xvml:AutoPict></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaMacro" /> <c>&lt;xvml:FmlaMacro></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalTextAlignment" /> <c>&lt;xvml:TextHAlign></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalTextAlignment" /> <c>&lt;xvml:TextVAlign></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.LockText" /> <c>&lt;xvml:LockText></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.JustifyLastLine" /> <c>&lt;xvml:JustLastX></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.SecretEdit" /> <c>&lt;xvml:SecretEdit></c></description></item>
@@ -43,53 +73,23 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.HelpButton" /> <c>&lt;xvml:Help></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.CancelButton" /> <c>&lt;xvml:Cancel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DismissButton" /> <c>&lt;xvml:Dismiss></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorPrimary" /> <c>&lt;xvml:Accel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorSecondary" /> <c>&lt;xvml:Accel2></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget" /> <c>&lt;xvml:Row></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget" /> <c>&lt;xvml:Column></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Visible" /> <c>&lt;xvml:Visible></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.RowHidden" /> <c>&lt;xvml:RowHidden></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ColumnHidden" /> <c>&lt;xvml:ColHidden></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType" /> <c>&lt;xvml:VTEdit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.MultiLine" /> <c>&lt;xvml:MultiLine></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalScrollBar" /> <c>&lt;xvml:VScroll></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ValidIds" /> <c>&lt;xvml:ValidIds></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaRange" /> <c>&lt;xvml:FmlaRange></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.MinDropDownWidth" /> <c>&lt;xvml:WidthMin></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionEntry" /> <c>&lt;xvml:Sel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3DForListBoxAndDropDown" /> <c>&lt;xvml:NoThreeD2></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionType" /> <c>&lt;xvml:SelType></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.MultiSelections" /> <c>&lt;xvml:MultiSel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ListBoxCallbackType" /> <c>&lt;xvml:LCT></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ListItem" /> <c>&lt;xvml:ListItem></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DropStyle" /> <c>&lt;xvml:DropStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Colored" /> <c>&lt;xvml:Colored></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DropLines" /> <c>&lt;xvml:DropLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Checked" /> <c>&lt;xvml:Checked></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaLink" /> <c>&lt;xvml:FmlaLink></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaPicture" /> <c>&lt;xvml:FmlaPict></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3D" /> <c>&lt;xvml:NoThreeD></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FirstButton" /> <c>&lt;xvml:FirstButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaGroup" /> <c>&lt;xvml:FmlaGroup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPosition" /> <c>&lt;xvml:Val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMin" /> <c>&lt;xvml:Min></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMax" /> <c>&lt;xvml:Max></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarIncrement" /> <c>&lt;xvml:Inc></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPageIncrement" /> <c>&lt;xvml:Page></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalScrollBar" /> <c>&lt;xvml:Horiz></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarWidth" /> <c>&lt;xvml:Dx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.MapOcxControl" /> <c>&lt;xvml:MapOCX></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormat" /> <c>&lt;xvml:CF></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.CameraObject" /> <c>&lt;xvml:Camera></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.RecalculateAlways" /> <c>&lt;xvml:RecalcAlways></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AutoScaleFont" /> <c>&lt;xvml:AutoScale></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject" /> <c>&lt;xvml:DDE></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject" /> <c>&lt;xvml:UIObj></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptText" /> <c>&lt;xvml:ScriptText></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptExtended" /> <c>&lt;xvml:ScriptExtended></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage" /> <c>&lt;xvml:ScriptLanguage></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation" /> <c>&lt;xvml:ScriptLocation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox" /> <c>&lt;xvml:FmlaTxbx></c></description></item>
     /// </list>
     /// </remark>
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -148,9 +148,42 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(29, "ClientData");
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MinDropDownWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionEntry>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DropLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Checked>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMin>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMax>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarIncrement>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPageIncrement>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Anchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalTextAlignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalTextAlignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionType>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MultiSelections>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ListBoxCallbackType>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ListItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DropStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaPicture>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptText>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptExtended>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorPrimary>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorSecondary>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaMacro>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MoveWithCells>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ResizeWithCells>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Anchor>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Locked>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultSize>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.PrintObject>();
@@ -158,9 +191,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AutoFill>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AutoLine>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AutoSizePicture>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaMacro>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalTextAlignment>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.LockText>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.JustifyLastLine>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.SecretEdit>();
@@ -168,53 +198,23 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.HelpButton>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CancelButton>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DismissButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorPrimary>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorSecondary>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Visible>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.RowHidden>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ColumnHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MultiLine>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalScrollBar>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ValidIds>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaRange>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MinDropDownWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionEntry>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3DForListBoxAndDropDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionType>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MultiSelections>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ListBoxCallbackType>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ListItem>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DropStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Colored>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DropLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Checked>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaLink>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaPicture>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3D>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FirstButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMin>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMax>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarIncrement>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPageIncrement>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalScrollBar>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarWidth>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MapOcxControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormat>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CameraObject>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.RecalculateAlways>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AutoScaleFont>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptText>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptExtended>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox>();
             builder.AddElement<ClientData>()
 .AddAttribute(0, "ObjectType", a => a.ObjectType, aBuilder =>
 {
