@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         public void SingleValue()
         {
             var input = 123456;
-            var expected = Seed * Combinator + input.GetHashCode();
+            var expected = (Seed * Combinator) + input.GetHashCode();
 
             var hashCode = default(HashCode);
             hashCode.Add(input);
